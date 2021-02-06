@@ -1,14 +1,14 @@
 {
-  "name": "@pancakeswap-libs/uikit",
-  "version": "0.10.2",
-  "description": "Set of UI components for pancake projects",
+  "name": "@apeswapfinance/uikit",
+  "version": "0.10.3",
+  "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pancakeswap/pancake-uikit",
+  "repository": "https://github.com/ApeSwapFinance/apeswap-uikit",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
@@ -21,8 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "yarn format"
     }
   },
   "jest": {

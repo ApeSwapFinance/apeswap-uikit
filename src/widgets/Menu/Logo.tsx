@@ -31,12 +31,12 @@ const StyledLink = styled(Link)`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      <h1>ApeSwap</h1>
     </>
   );
 
