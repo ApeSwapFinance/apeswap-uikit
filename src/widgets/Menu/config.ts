@@ -120,18 +120,18 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/ApeSwapFinance",
+        href: "https://t.me/ape_swap",
       },
       {
         label: "Announcements",
-        href: "https://t.me/ApeSwapFinanceAnn",
+        href: "https://t.me/ape_swap_ann",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/ApeSwapFinance",
+    href: "https://twitter.com/ape_swap",
   },
 ];
 

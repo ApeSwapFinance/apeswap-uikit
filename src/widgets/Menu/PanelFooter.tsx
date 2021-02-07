@@ -120,7 +120,7 @@ const PanelFooter: React.FC<Props> = ({
             <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
           </Flex>
         </Button>
-        {langs &&
+        {langs && (
           <Dropdown
             position="top-right"
             target={
@@ -141,7 +141,7 @@ const PanelFooter: React.FC<Props> = ({
               </MenuButton>
             ))}
           </Dropdown>
-        }
+        )}
       </SettingsEntry>
     </Container>
   );
