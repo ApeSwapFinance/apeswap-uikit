@@ -124,7 +124,7 @@ export const socials = [
       },
       {
         label: "Announcements",
-        href: "https://t.me/ape_swap_ann",
+        href: "https://t.me/ape_swap_news",
       },
     ],
   },
