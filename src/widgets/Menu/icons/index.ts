@@ -8,6 +8,7 @@ export { default as InfoIcon } from "./Info";
 export { default as LanguageIcon } from "./Language";
 export { default as LogoIcon } from "./Logo";
 export { default as ApeLogo } from "./ApeLogo";
+export { default as FullLogo } from "./FullLogo";
 export { default as ApeIcon } from "./ApeIcon";
 export { default as MoonIcon } from "./Moon";
 export { default as MoreIcon } from "./More";
