@@ -1,6 +1,6 @@
 {
   "name": "@apeswapfinance/uikit",
-  "version": "0.10.13",
+  "version": "0.10.14",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
