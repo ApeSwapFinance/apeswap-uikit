@@ -1,6 +1,6 @@
 {
   "name": "@apeswapfinance/uikit",
-  "version": "0.10.15",
+  "version": "0.10.17",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -30,6 +30,7 @@
     ]
   },
   "devDependencies": {
+    "@binance-chain/bsc-use-wallet": "^0.8.1",
     "@babel/core": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
