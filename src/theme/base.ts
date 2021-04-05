@@ -1,4 +1,4 @@
-import { MediaQueries, Breakpoints, Spacing } from "./types";
+import { MediaQueries, Breakpoints, Spacing, Font } from "./types";
 
 export const breakpointMap: { [key: string]: number } = {
   xs: 370,
@@ -30,6 +30,11 @@ export const shadows = {
 
 const spacing: Spacing = [0, 4, 8, 16, 24, 32, 48, 64];
 
+const font: Font = {
+  titan: "Titan One",
+  poppins: "Poppins",
+};
+
 const radii = {
   small: "4px",
   default: "16px",
@@ -47,6 +52,7 @@ export default {
   breakpoints,
   mediaQueries,
   spacing,
+  font,
   shadows,
   radii,
   zIndices,

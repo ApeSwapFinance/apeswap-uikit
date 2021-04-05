@@ -62,3 +62,8 @@ export type ZIndices = {
   dropdown: number;
   modal: number;
 };
+
+export type FontFamily = {
+  titan: string;
+  poppins: string;
+}

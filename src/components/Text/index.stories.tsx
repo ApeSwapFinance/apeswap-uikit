@@ -44,6 +44,7 @@ export const Default: React.FC = () => {
       <Text>Default</Text>
       <Text bold>Bold text</Text>
       <Text small>Small text</Text>
+      <Text fontFamily="Poppins">Poppins text</Text>
       <Text fontSize="24px">Custom fontsize</Text>
       <Text color="red">Custom color</Text>
       <Text color="primary">Custom color from theme</Text>
