@@ -1,15 +1,15 @@
 import React from "react";
-import styled, { DefaultTheme }  from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import getThemeValue from "../../util/getThemeValue";
 import Text from "../Text/Text";
 import { LinkProps } from "./types";
 
-interface ThemedProps extends TextProps {
+interface ThemedProps extends LinkProps {
   theme: DefaultTheme;
 }
 const getFontFamily = ({ fontFamily, theme }: ThemedProps) => {
-  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme): 'Titan One';
+  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme) : "Titan One";
 };
 
 const StyledLink = styled(Text)<LinkProps>`

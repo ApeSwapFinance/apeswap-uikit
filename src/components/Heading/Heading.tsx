@@ -3,7 +3,7 @@ import Text from "../Text/Text";
 import getThemeValue from "../../util/getThemeValue";
 import { tags, sizes, HeadingProps } from "./types";
 
-interface ThemedProps extends TextProps {
+interface ThemedProps extends HeadingProps {
   theme: DefaultTheme;
 }
 
@@ -23,13 +23,13 @@ const style = {
 };
 
 const getFontFamily = ({ fontFamily, theme }: ThemedProps) => {
-  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme): 'Titan One';
+  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme) : "Titan One";
 };
 
 const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`
   ${({ size }) => style[size || sizes.MD]}
   font-family: ${getFontFamily};
-  font-weight:400;
+  font-weight: 400;
   line-height: 1.1;
 `;
 

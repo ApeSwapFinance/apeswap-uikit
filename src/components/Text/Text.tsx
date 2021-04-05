@@ -16,7 +16,7 @@ const getFontSize = ({ fontSize, small }: TextProps) => {
 };
 
 const getFontFamily = ({ fontFamily, theme }: ThemedProps) => {
-  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme): 'Titan One';
+  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme) : "Titan One";
 };
 
 const Text = styled.div<TextProps>`
