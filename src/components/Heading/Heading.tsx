@@ -20,7 +20,7 @@ const style = {
 
 const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`
   ${({ size }) => style[size || sizes.MD]}
-  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
+  font-family: ${({ fontFamily, theme }) => getFontFamily(fontFamily, theme)};
   font-weight: 400;
   line-height: 1.1;
 `;
