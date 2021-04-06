@@ -26,7 +26,9 @@ export const Default: React.FC = () => {
         <Link href="/">Default</Link>
       </div>
       <div>
-        <Link href="/" fontFamily="poppins">Poppins</Link>
+        <Link href="/" fontFamily="poppins">
+          Poppins
+        </Link>
       </div>
       <div>
         <Link href="/" color="text">

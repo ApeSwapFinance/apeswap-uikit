@@ -1,11 +1,7 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 import Text from "../Text/Text";
 import getFontFamily from "../../util/getFontFamily";
 import { tags, sizes, HeadingProps } from "./types";
-
-interface ThemedProps extends HeadingProps {
-  theme: DefaultTheme;
-}
 
 const style = {
   [sizes.MD]: {
