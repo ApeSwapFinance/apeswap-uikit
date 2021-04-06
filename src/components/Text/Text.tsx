@@ -1,6 +1,7 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
 import getThemeValue from "../../util/getThemeValue";
+import getFontFamily from "../../util/getFontFamily";
 import { TextProps } from "./types";
 
 interface ThemedProps extends TextProps {
@@ -15,14 +16,10 @@ const getFontSize = ({ fontSize, small }: TextProps) => {
   return small ? "14px" : fontSize || "16px";
 };
 
-const getFontFamily = ({ fontFamily, theme }: ThemedProps) => {
-  return fontFamily ? getThemeValue(`fontFamily.${fontFamily}`, fontFamily)(theme) : "Titan One";
-};
-
 const Text = styled.div<TextProps>`
   color: ${getColor};
   font-size: ${getFontSize};
-  font-family: ${getFontFamily};
+  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   font-weight: ${({ bold }) => (bold ? 400 : 300)};
   line-height: 1.5;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
