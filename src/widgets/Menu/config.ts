@@ -122,17 +122,16 @@ export const socials = [
   {
     label: "Discord",
     icon: "DiscordIcon",
-    items: [
-      {
-        label: "English",
-        href: "https://discord.gg/AbVxfGRCSd",
-      },
-    ],
+    href: "https://discord.gg/AbVxfGRCSd",
   },
   {
     label: "Telegram",
     icon: "TelegramIcon",
     items: [
+      {
+        label: "Spanish",
+        href: "https://t.me/ape_swap_spanish",
+      },
       {
         label: "English",
         href: "https://t.me/ape_swap",
