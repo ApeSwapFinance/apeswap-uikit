@@ -40,7 +40,7 @@ export const links = [
   },
   {
     label: "NFT",
-    icon: "apeNFT",
+    icon: "apeNFTIcon",
     href: "/nft",
   },
   {
