@@ -38,7 +38,7 @@ const Avatar: React.FC<AvatarProps> = ({ profile }) => {
   const icon = image ? (
     <img src={image} alt="profile avatar" height="32px" width="32px" />
   ) : (
-    <MonkeyDark width="32px" height="32px" />
+    <MonkeyLight width="32px" height="32px" />
   );
 
   if (isExternal) {
