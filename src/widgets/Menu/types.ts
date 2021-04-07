@@ -6,7 +6,7 @@ export interface LangType {
 }
 
 export interface Profile {
-  username?: string;
+  name?: string;
   image?: string;
   profileLink: string;
   noProfileLink: string;
