@@ -6,7 +6,6 @@ import NoProfileAvatar from "./icons/NoProfileAvatar";
 import MonkeyDark from "./icons/MonkeyDark";
 import MonkeyLight from "./icons/MonkeyLight";
 
-
 interface AvatarProps {
   profile: Profile;
 }
