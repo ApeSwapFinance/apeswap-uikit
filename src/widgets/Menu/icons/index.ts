@@ -14,6 +14,7 @@ export { default as ApeIcon } from "./ApeIcon";
 export { default as MoonIcon } from "./Moon";
 export { default as MoreIcon } from "./More";
 export { default as NftIcon } from "./Nft";
+export { default as apeNFTIcon } from "./apeNFT";
 export { default as PoolIcon } from "./Pool";
 export { default as SunIcon } from "./Sun";
 export { default as TelegramIcon } from "./Telegram";
