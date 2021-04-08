@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Text from "../Text/Text";
+import getFontFamily from "../../util/getFontFamily";
 import { tags, sizes, HeadingProps } from "./types";
 
 const style = {
@@ -19,7 +20,8 @@ const style = {
 
 const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`
   ${({ size }) => style[size || sizes.MD]}
-  font-weight:400;
+  font-family: ${({ fontFamily, theme }) => getFontFamily(fontFamily, theme)};
+  font-weight: 400;
   line-height: 1.1;
 `;
 

@@ -42,6 +42,7 @@ export const Default: React.FC = () => {
   return (
     <div>
       <Text>Default</Text>
+      <Text fontFamily="poppins">Poppins</Text>
       <Text bold>Bold text</Text>
       <Text small>Small text</Text>
       <Text fontSize="24px">Custom fontsize</Text>

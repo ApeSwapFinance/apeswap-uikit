@@ -29,13 +29,13 @@ it("renders correctly", () => {
           class="sc-gKsewC bkaskd"
         >
           <div
-            class="sc-gsTCUz cOiVSL"
+            class="sc-gsTCUz bSxKon"
             color="text"
           >
             Alert title
           </div>
           <p
-            class="sc-gsTCUz dNkCjU"
+            class="sc-gsTCUz btAFqY"
             color="text"
           >
             Description

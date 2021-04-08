@@ -11,6 +11,7 @@ export const Sizes: React.FC = () => {
   return (
     <div>
       <Heading>Default</Heading>
+      <Heading fontFamily="poppins">Poppins</Heading>
       <Heading size="md">Size md</Heading>
       <Heading size="lg">Size lg</Heading>
       <Heading size="xl">Size xl</Heading>
