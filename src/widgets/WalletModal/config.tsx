@@ -4,6 +4,7 @@ import TokenPocket from "./icons/TokenPocket";
 import TrustWallet from "./icons/TrustWallet";
 import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
+import OntoWallet from "./icons/OntoWallet";
 import { Config } from "./types";
 
 const connectors: Config[] = [
@@ -36,6 +37,11 @@ const connectors: Config[] = [
     title: "Binance Chain Wallet",
     icon: BinanceChain,
     connectorId: "bsc",
+  },
+  {
+    title: "Onto Wallet",
+    icon: OntoWallet,
+    connectorId: "injected",
   },
 ];
 
