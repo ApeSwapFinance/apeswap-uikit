@@ -6,6 +6,7 @@ export type MediaQueries = {
   md: string;
   lg: string;
   xl: string;
+  xxl: string;
   nav: string;
 };
 
@@ -56,6 +57,8 @@ export type Colors = {
 
   // Brand colors
   binance: string;
+
+  green: string;
 };
 
 export type ZIndices = {
