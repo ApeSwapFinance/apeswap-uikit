@@ -330,7 +330,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgupP gOHfdi"
+            class="sc-jSgupP gOBZva"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
             type="button"
@@ -392,6 +392,58 @@ it("renders ConnectModal correctly", () => {
                 d="M6 14.6302L8.32183 15.9883V20.6244L12.3154 22.9424V25.6585L6 21.9824V14.6302Z"
                 fill="#F0B90B"
               />
+            </svg>
+          </button>
+          <button
+            class="sc-jSgupP gOHfdi"
+            id="wallet-connect-onto wallet"
+            style="justify-content: space-between;"
+            type="button"
+          >
+            <div
+              class="sc-bdfBwQ iEZZwd"
+              color="primary"
+            >
+              Onto Wallet
+            </div>
+            <svg
+              class="sc-dlfnbm ebGwQg"
+              color="text"
+              viewBox="0 0 32 32"
+              width="32px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                编组
+              </title>
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                id="\\\\u9875\\\\u9762-1"
+                stroke="none"
+                stroke-width="1"
+              >
+                <g
+                  id="ONTO-Landing-Page"
+                  stroke="#000000"
+                  stroke-width="3"
+                  transform="translate(-48.000000, -53.000000)"
+                >
+                  <g
+                    id="\\\\u7F16\\\\u7EC4"
+                    transform="translate(50.000000, 57.000000)"
+                  >
+                    <path
+                      d="M3.14572653,3.565339 L3.14572653,3.565339 L0,0.420257608 L0,11.1571295 C0,13.9054947 1.04857551,16.6532371 3.14572653,18.7495428 C7.3406516,22.9427771 14.141751,22.9427771 18.336676,18.7495428 L3.14572653,3.565339 Z"
+                      id="Fill-11\\\\u5907\\\\u4EFD"
+                    />
+                    <path
+                      d="M18.1336247,18.3291295 L18.1336247,18.3291295 L21.2793512,21.4735881 L21.2793512,10.7367162 C21.2793512,7.98897381 20.2307757,5.24123142 18.1336247,3.14492569 C13.9386996,-1.04830856 7.13760023,-1.04830856 2.94267516,3.14492569 L18.1336247,18.3291295 Z"
+                      id="Fill-12\\\\u5907\\\\u4EFD"
+                    />
+                  </g>
+                </g>
+              </g>
             </svg>
           </button>
           <a
