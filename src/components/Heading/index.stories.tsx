@@ -12,6 +12,7 @@ export const Sizes: React.FC = () => {
     <div>
       <Heading>Default</Heading>
       <Heading fontFamily="poppins">Poppins</Heading>
+      <Heading textAlign="center">text align center</Heading>
       <Heading size="md">Size md</Heading>
       <Heading size="lg">Size lg</Heading>
       <Heading size="xl">Size xl</Heading>

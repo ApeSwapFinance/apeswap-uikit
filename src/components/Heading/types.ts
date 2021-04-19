@@ -21,4 +21,5 @@ export interface HeadingProps {
   as?: Tags;
   size?: Sizes;
   fontFamily?: string;
+  textAlign?: string;
 }
