@@ -23,6 +23,7 @@ const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`
   font-family: ${({ fontFamily, theme }) => getFontFamily(fontFamily, theme)};
   font-weight: 400;
   line-height: 1.1;
+  text-align: ${({ textAlign }) => textAlign};
 `;
 
 Heading.defaultProps = {
