@@ -20,7 +20,7 @@ const Text = styled.div<TextProps>`
   color: ${getColor};
   font-size: ${getFontSize};
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
-  font-weight: ${({ bold, fontWeight }) => (fontWeight ? fontWeight : bold ? 400 : 300)};
+  font-weight: ${({ bold }) => (bold ? 400 : 300)};
   line-height: 1.5;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
   text-align: ${({ textAlign }) => textAlign};
