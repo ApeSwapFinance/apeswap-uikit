@@ -8,7 +8,7 @@ export const sizes = {
 } as const;
 
 export const variants = {
-  PRIMARY: "primary"
+  PRIMARY: "primary",
 } as const;
 
 export type Sizes = typeof sizes[keyof typeof sizes];
