@@ -4,8 +4,8 @@ import { BrowserRouter, Link } from "react-router-dom";
 import capitalize from "lodash/capitalize";
 import Flex from "../Flex/Flex";
 import { LogoIcon, AddIcon, AutoRenewIcon } from "../Svg";
-import Button from "./ButtonSquare";
-import IconButton from "./IconButton";
+import ButtonSquare from "./ButtonSquare";
+import IconButtonSquare from "./IconButtonSquare";
 import { variants } from "./types";
 
 const Row = styled(Flex)`
@@ -18,7 +18,7 @@ const Row = styled(Flex)`
 
 export default {
   title: "Components/ButtonSquare",
-  component: Button,
+  component: ButtonSquare,
   argTypes: {},
 };
 
@@ -27,13 +27,13 @@ export const Default: React.FC = () => {
     <>
       {Object.values(variants).map((variant) => (
         <Row key={variant}>
-          <Button variant={variant}>{capitalize(variant)}</Button>
-          <Button variant={variant} disabled>
+          <ButtonSquare variant={variant}>{capitalize(variant)}</ButtonSquare>
+          <ButtonSquare variant={variant} disabled>
             Disabled
-          </Button>
-          <Button variant={variant} size="sm">
+          </ButtonSquare>
+          <ButtonSquare variant={variant} size="sm">
             Small
-          </Button>
+          </ButtonSquare>
         </Row>
       ))}
     </>
@@ -44,49 +44,49 @@ export const Variants: React.FC = () => {
   return (
     <BrowserRouter>
       <Row>
-        <Button as="a" href="https://pancakeswap.finance" target="_blank" rel="noreferrer">
+        <ButtonSquare as="a" href="https://pancakeswap.finance" target="_blank" rel="noreferrer">
           As an anchor
-        </Button>
-        <Button as={Link} to="/router-link" variant="secondary">
+        </ButtonSquare>
+        <ButtonSquare as={Link} to="/router-link" variant="secondary">
           As an React Router link
-        </Button>
-        <Button as="a" href="https://pancakeswap.finance" disabled>
+        </ButtonSquare>
+        <ButtonSquare as="a" href="https://pancakeswap.finance" disabled>
           As an anchor (disabled)
-        </Button>
+        </ButtonSquare>
       </Row>
       <Row>
-        <Button fullWidth>Full size</Button>
+        <ButtonSquare fullWidth>Full size</ButtonSquare>
       </Row>
       <Row>
-        <Button isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
+        <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
           Approving
-        </Button>
-        <Button isLoading variant="success">
+        </ButtonSquare>
+        <ButtonSquare isLoading variant="success">
           Approving
-        </Button>
+        </ButtonSquare>
       </Row>
       <Row>
-        <Button startIcon={<LogoIcon />}>Start Icon</Button>
-        <Button endIcon={<LogoIcon />}>End Icon</Button>
-        <Button startIcon={<LogoIcon />} endIcon={<LogoIcon />}>
+        <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
+        <ButtonSquare endIcon={<LogoIcon />}>End Icon</ButtonSquare>
+        <ButtonSquare startIcon={<LogoIcon />} endIcon={<LogoIcon />}>
           Start & End Icon
-        </Button>
+        </ButtonSquare>
       </Row>
       <Row>
-        <IconButton>
+        <IconButtonSquare>
           <LogoIcon />
-        </IconButton>
-        <IconButton variant="secondary">
+        </IconButtonSquare>
+        <IconButtonSquare variant="secondary">
           <AddIcon />
-        </IconButton>
+        </IconButtonSquare>
       </Row>
       <Row>
-        <IconButton size="sm" variant="danger">
+        <IconButtonSquare size="sm" variant="danger">
           <LogoIcon />
-        </IconButton>
-        <IconButton size="sm" variant="success">
+        </IconButtonSquare>
+        <IconButtonSquare size="sm" variant="success">
           <AddIcon />
-        </IconButton>
+        </IconButtonSquare>
       </Row>
     </BrowserRouter>
   );

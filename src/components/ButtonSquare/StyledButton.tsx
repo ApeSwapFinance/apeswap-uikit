@@ -1,10 +1,10 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
-import { ButtonProps, ButtonThemeVariant, variants } from "./types";
+import { ButtonSquareProps, ButtonSquareThemeVariant, variants } from "./types";
 
 type ThemedProps = {
   theme: DefaultTheme;
-} & ButtonProps;
+} & ButtonSquareProps;
 
 const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   if (isLoading === true) {
@@ -38,14 +38,14 @@ const removePointerEvents = ({ disabled, as }: ThemedProps) => {
   return "";
 };
 
-const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
+const getButtonVariantProp = (prop: keyof ButtonSquareThemeVariant) => ({
   theme,
   variant = variants.PRIMARY,
 }: ThemedProps) => {
   return theme.button[variant][prop];
 };
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
   background-color: #ffb300;
   border-radius: 5px;
@@ -84,9 +84,9 @@ const StyledButton = styled.button<ButtonProps>`
   ${space}
 `;
 
-StyledButton.defaultProps = {
+StyledButtonSquare.defaultProps = {
   fullWidth: false,
   type: "button",
 };
 
-export default StyledButton;
+export default StyledButtonSquare;

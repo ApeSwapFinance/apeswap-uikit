@@ -1,9 +1,9 @@
-import { ButtonTheme, variants } from "./types";
+import { ButtonSquareTheme, variants } from "./types";
 import { lightColors } from "../../theme/colors";
 
 const { PRIMARY } = variants;
 
-export const light: ButtonTheme = {
+export const light: ButtonSquareTheme = {
   [PRIMARY]: {
     background: "#FFB300",
     backgroundActive: lightColors.primaryDark,
@@ -16,7 +16,7 @@ export const light: ButtonTheme = {
   },
 };
 
-export const dark: ButtonTheme = {
+export const dark: ButtonSquareTheme = {
   [PRIMARY]: {
     ...light.primary,
   },

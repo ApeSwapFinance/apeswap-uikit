@@ -44,6 +44,7 @@ export { default as Won } from "./Icons/Won";
 export { default as Ticket } from "./Icons/Ticket";
 export { default as TicketRound } from "./Icons/TicketRound";
 export { default as SearchIcon } from "./Icons/Search";
+export { default as SearchIcon2 } from "./Icons/Search2";
 export { default as SwapVertIcon } from "./Icons/SwapVert";
 export { default as SyncAltIcon } from "./Icons/SyncAlt";
 export { default as WarningIcon } from "./Icons/Warning";

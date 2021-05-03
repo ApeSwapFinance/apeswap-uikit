@@ -14,9 +14,9 @@ export const variants = {
 export type Sizes = typeof sizes[keyof typeof sizes];
 export type Variants = typeof variants[keyof typeof variants];
 
-type ButtonTypes = ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement> | LinkProps;
+type ButtonSquareTypes = ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement> | LinkProps;
 
-export type ButtonProps = {
+export type ButtonSquareProps = {
   variant?: Variants;
   size?: Sizes;
   startIcon?: ReactNode;
@@ -27,10 +27,10 @@ export type ButtonProps = {
   external?: boolean;
   isLoading?: boolean;
   disabled?: boolean;
-} & ButtonTypes &
+} & ButtonSquareTypes &
   SpaceProps;
 
-export type ButtonThemeVariant = {
+export type ButtonSquareThemeVariant = {
   background: string;
   backgroundActive: string;
   backgroundHover: string;
@@ -41,6 +41,6 @@ export type ButtonThemeVariant = {
   color: string;
 };
 
-export type ButtonTheme = {
-  [key in Variants]: ButtonThemeVariant;
+export type ButtonSquareTheme = {
+  [key in Variants]: ButtonSquareThemeVariant;
 };

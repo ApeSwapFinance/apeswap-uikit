@@ -1,9 +1,9 @@
 import React from "react";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
-import { ButtonProps, variants, sizes } from "./types";
+import { ButtonSquareProps, variants, sizes } from "./types";
 
-const ButtonSquare: React.FC<ButtonProps> = ({
+const ButtonSquare: React.FC<ButtonSquareProps> = ({
   startIcon,
   endIcon,
   children,
