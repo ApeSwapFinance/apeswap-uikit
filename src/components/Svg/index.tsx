@@ -16,6 +16,7 @@ export { default as BunnyPlaceholderIcon } from "./Icons/BunnyPlaceholder";
 export { default as CardViewIcon } from "./Icons/CardView";
 export { default as CalculateIcon } from "./Icons/Calculate";
 export { default as CheckmarkIcon } from "./Icons/Checkmark";
+export { default as Checkmark2Icon } from "./Icons/Checkmark2";
 export { default as CheckmarkCircleIcon } from "./Icons/CheckmarkCircle";
 export { default as ChevronDownIcon } from "./Icons/ChevronDown";
 export { default as ChevronLeftIcon } from "./Icons/ChevronLeft";

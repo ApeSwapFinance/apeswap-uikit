@@ -24,6 +24,7 @@ export type Shadows = {
   success: string;
   warning: string;
   focus: string;
+  yellow: string;
   inset: string;
 };
 
