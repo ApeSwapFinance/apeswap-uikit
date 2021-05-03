@@ -10,8 +10,8 @@ type InactiveButtonProps = {
 
 const InactiveButton = styled(Button)<InactiveButtonProps>`
   background-color: transparent;
-  color: ${({ theme, colorKey }) => theme.colors[colorKey]};
-
+  color: ${({ theme, colorKey }) => theme.colors[colorKey]};  
+  font-family: ${(fontFamily) => fontFamily !== "undefined" ? fontFamily : "inherit"};
   &:hover:not(:disabled):not(:active) {
     background-color: transparent;
   }
@@ -22,6 +22,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
   size = sizes.MD,
   variant = variants.PRIMARY,
   as,
+  fontFamily,
   ...props
 }) => {
   if (!isActive) {
@@ -30,13 +31,14 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
         forwardedAs={as}
         size={size}
         variant="tertiary"
-        colorKey={variant === variants.PRIMARY ? "primary" : "textSubtle"}
+        colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "textSubtle"}
+        fontFamily={fontFamily}
         {...props}
       />
     );
   }
 
-  return <Button as={as} size={size} variant={variant} {...props} />;
+  return <Button as={as} size={size} variant={variant} fontFamily={fontFamily} {...props} />;
 };
 
 export default ButtonMenuItem;
