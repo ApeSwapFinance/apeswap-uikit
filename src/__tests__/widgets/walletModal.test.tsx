@@ -404,7 +404,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bdfBwQ iEZZwd"
               color="primary"
             >
-              Onto Wallet
+              ONTO Wallet
             </div>
             <svg
               class="sc-dlfnbm ebGwQg"
