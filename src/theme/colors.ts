@@ -9,7 +9,7 @@ export const baseColors = {
   success: "#31D0AA",
   warning: "#FFB237",
   green: "#009859ff",
-  yellow: "#FFB300"
+  yellow: "#FFB300",
 };
 
 export const brandColors = {

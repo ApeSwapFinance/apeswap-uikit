@@ -10,8 +10,8 @@ type InactiveButtonProps = {
 
 const InactiveButton = styled(Button)<InactiveButtonProps>`
   background-color: transparent;
-  color: ${({ theme, colorKey }) => theme.colors[colorKey]};  
-  font-family: ${(fontFamily) => fontFamily !== "undefined" ? fontFamily : "inherit"};
+  color: ${({ theme, colorKey }) => theme.colors[colorKey]};
+  font-family: ${(fontFamily) => (fontFamily !== "undefined" ? fontFamily : "inherit")};
   &:hover:not(:disabled):not(:active) {
     background-color: transparent;
   }

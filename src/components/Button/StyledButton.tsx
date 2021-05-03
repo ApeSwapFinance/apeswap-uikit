@@ -55,7 +55,7 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
-  font-family: ${(fontFamily) => fontFamily !== "undefined" ? fontFamily : "inherit"};
+  font-family: ${(fontFamily) => (fontFamily !== "undefined" ? fontFamily : "inherit")};
   font-size: 16px;
   font-weight: 400;
   /* max-content instead of auto for Safari fix */

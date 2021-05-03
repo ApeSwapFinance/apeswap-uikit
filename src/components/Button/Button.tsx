@@ -3,7 +3,16 @@ import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
 import { ButtonProps, variants, sizes } from "./types";
 
-const Button: React.FC<ButtonProps> = ({ startIcon, endIcon, children, external, isLoading, disabled, fontFamily, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  startIcon,
+  endIcon,
+  children,
+  external,
+  isLoading,
+  disabled,
+  fontFamily,
+  ...props
+}) => {
   const internalProps = external ? getExternalLinkProps() : {};
   const isDisabled = isLoading || disabled;
 
