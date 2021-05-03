@@ -31,11 +31,11 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
     border-bottom: 2px solid;
     border-left: 2px solid;
     border-color: transparent;
-    top: 15%;
-    left: 0;
+    top: 22%;
+    left: 5%;
     right: 10%;
-    width: 95%;
-    height: 95%;
+    width: 75%;
+    height: 75%;
     margin: auto;
     transform: rotate(-5deg);
     transition: border-color 0.2s ease-in-out;
