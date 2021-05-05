@@ -21,7 +21,7 @@ it("renders correctly", () => {
             class="sc-dlfnbm sc-fubCfw fcyuqz kApDsK"
           >
             <h2
-              class="sc-bdfBwQ sc-gsTCUz aQhBb kBsgSb"
+              class="sc-bdfBwQ sc-gsTCUz cHPxha ixZTCk"
               color="text"
             >
               Title
@@ -29,7 +29,7 @@ it("renders correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-eCssSg inMuAC sc-jSgupP gPZlLR"
+            class="sc-eCssSg jNqjco sc-jSgupP gPZlLR"
             type="button"
           >
             <svg
