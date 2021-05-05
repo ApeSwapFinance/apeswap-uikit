@@ -2,6 +2,7 @@
 export * from "./components/Alert";
 export * from "./components/Breadcrumbs";
 export * from "./components/Button";
+export * from "./components/ButtonSquare";
 export * from "./components/ButtonMenu";
 export * from "./components/Card";
 export * from "./components/Checkbox";

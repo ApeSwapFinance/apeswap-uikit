@@ -23,6 +23,7 @@ const Text = styled.div<TextProps>`
   font-weight: ${({ bold }) => (bold ? 400 : 300)};
   line-height: 1.5;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
+  text-align: ${({ textAlign }) => textAlign};
   ${space}
 `;
 

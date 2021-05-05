@@ -24,6 +24,7 @@ export type Shadows = {
   success: string;
   warning: string;
   focus: string;
+  yellow: string;
   inset: string;
 };
 
@@ -50,6 +51,7 @@ export type Colors = {
   textSubtle: string;
   borderColor: string;
   card: string;
+  yellow: string;
 
   // Gradients
   gradients: Gradients;

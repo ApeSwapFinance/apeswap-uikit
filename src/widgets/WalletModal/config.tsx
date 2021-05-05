@@ -39,7 +39,7 @@ const connectors: Config[] = [
     connectorId: "bsc",
   },
   {
-    title: "Onto Wallet",
+    title: "ONTO Wallet",
     icon: OntoWallet,
     connectorId: "injected",
   },

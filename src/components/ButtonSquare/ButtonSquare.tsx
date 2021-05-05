@@ -1,23 +1,22 @@
 import React from "react";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
-import { ButtonProps, variants, sizes } from "./types";
+import { ButtonSquareProps, variants, sizes } from "./types";
 
-const Button: React.FC<ButtonProps> = ({
+const ButtonSquare: React.FC<ButtonSquareProps> = ({
   startIcon,
   endIcon,
   children,
   external,
   isLoading,
   disabled,
-  fontFamily,
   ...props
 }) => {
   const internalProps = external ? getExternalLinkProps() : {};
   const isDisabled = isLoading || disabled;
 
   return (
-    <StyledButton {...internalProps} {...props} isLoading={isLoading} disabled={isDisabled} fontFamily={fontFamily}>
+    <StyledButton {...internalProps} {...props} isLoading={isLoading} disabled={isDisabled}>
       {React.isValidElement(startIcon) &&
         React.cloneElement(startIcon, {
           mr: "0.5rem",
@@ -31,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-Button.defaultProps = {
+ButtonSquare.defaultProps = {
   variant: variants.PRIMARY,
   size: sizes.MD,
   external: false,
@@ -39,4 +38,4 @@ Button.defaultProps = {
   disabled: false,
 };
 
-export default Button;
+export default ButtonSquare;

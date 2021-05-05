@@ -1,11 +1,10 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
-import getFontFamily from "../../util/getFontFamily";
-import { ButtonProps, ButtonThemeVariant, variants } from "./types";
+import { ButtonSquareProps, ButtonSquareThemeVariant, variants } from "./types";
 
 type ThemedProps = {
   theme: DefaultTheme;
-} & ButtonProps;
+} & ButtonSquareProps;
 
 const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   if (isLoading === true) {
@@ -39,28 +38,27 @@ const removePointerEvents = ({ disabled, as }: ThemedProps) => {
   return "";
 };
 
-const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
+const getButtonVariantProp = (prop: keyof ButtonSquareThemeVariant) => ({
   theme,
   variant = variants.PRIMARY,
 }: ThemedProps) => {
   return theme.button[variant][prop];
 };
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
-  background-color: ${getButtonVariantProp("background")};
-  border: ${getButtonVariantProp("border")};
-  border-radius: 16px;
-  box-shadow: ${getButtonVariantProp("boxShadow")};
-  color: ${getButtonVariantProp("color")};
+  background-color: #ffb300;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  color: white;
   cursor: pointer;
   display: inline-flex;
-  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
-  height: ${({ size }) => (size === "sm" ? "32px" : "48px")};
+  height: ${({ size }) => (size === "sm" ? "36px" : "36px")};
   line-height: 1;
   letter-spacing: 0.03em;
   justify-content: center;
@@ -71,7 +69,6 @@ const StyledButton = styled.button<ButtonProps>`
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background-color: ${getButtonVariantProp("backgroundHover")};
-    border-color: ${getButtonVariantProp("borderColorHover")};
   }
 
   &:focus:not(:active) {
@@ -79,7 +76,6 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:active {
-    background-color: ${getButtonVariantProp("backgroundActive")};
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 
@@ -88,9 +84,9 @@ const StyledButton = styled.button<ButtonProps>`
   ${space}
 `;
 
-StyledButton.defaultProps = {
+StyledButtonSquare.defaultProps = {
   fullWidth: false,
   type: "button",
 };
 
-export default StyledButton;
+export default StyledButtonSquare;
