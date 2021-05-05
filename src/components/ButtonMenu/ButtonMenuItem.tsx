@@ -10,8 +10,6 @@ type InactiveButtonProps = {
   fontFamily?: string;
 } & ButtonMenuItemProps;
 
-// font-family: ${(fontFamily) => (fontFamily !== undefined ? fontFamily : "inherit")};
-
 const InactiveButton = styled(Button)<InactiveButtonProps>`
   background-color: transparent;
   color: ${({ theme, colorKey }) => theme.colors[colorKey]};
@@ -42,9 +40,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
     );
   }
 
-  return <Button as={as} size={size} variant={variant} 
-  fontFamily={fontFamily} 
-  {...props} />;
+  return <Button as={as} size={size} variant={variant} fontFamily={fontFamily} {...props} />;
 };
 
 export default ButtonMenuItem;
