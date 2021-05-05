@@ -36,7 +36,7 @@ Button.defaultProps = {
   size: sizes.MD,
   external: false,
   isLoading: false,
-  disabled: false,
+  disabled: false
 };
 
 export default Button;

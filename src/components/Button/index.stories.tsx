@@ -36,6 +36,7 @@ export const Default: React.FC = () => {
           </Button>
         </Row>
       ))}
+      <Button fontFamily="poppins">Poppins</Button>
     </>
   );
 };

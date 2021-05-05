@@ -1,5 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
+import getFontFamily from "../../util/getFontFamily";
 import { ButtonProps, ButtonThemeVariant, variants } from "./types";
 
 type ThemedProps = {
@@ -54,8 +55,7 @@ const StyledButton = styled.button<ButtonProps>`
   color: ${getButtonVariantProp("color")};
   cursor: pointer;
   display: inline-flex;
-  font-family: inherit;
-  font-family: ${(fontFamily) => (fontFamily !== "undefined" ? fontFamily : "inherit")};
+  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   font-size: 16px;
   font-weight: 400;
   /* max-content instead of auto for Safari fix */
@@ -90,7 +90,7 @@ const StyledButton = styled.button<ButtonProps>`
 
 StyledButton.defaultProps = {
   fullWidth: false,
-  type: "button",
+  type: "button"
 };
 
 export default StyledButton;
