@@ -1,4 +1,4 @@
-# 🥞 ApeSwap UIkit
+# ApeSwap UIkit
 
 
 ApeSwap UIkit is a set of React components and hooks used to build pages on ApeSwap's apps. It also contains a theme file for dark and light mode.
