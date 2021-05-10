@@ -29,7 +29,7 @@ it("renders correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-eCssSg jNqjco sc-jSgupP gPZlLR"
+            class="sc-eCssSg mvswn sc-jSgupP gPZlLR"
             type="button"
           >
             <svg

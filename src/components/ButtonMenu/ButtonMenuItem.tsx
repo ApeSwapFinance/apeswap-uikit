@@ -8,6 +8,7 @@ import { ButtonMenuItemProps } from "./types";
 type InactiveButtonProps = {
   colorKey: "primary" | "textSubtle";
   fontFamily?: string;
+  fontSize?: string;
 } & ButtonMenuItemProps;
 
 const InactiveButton = styled(Button)<InactiveButtonProps>`
@@ -17,6 +18,7 @@ const InactiveButton = styled(Button)<InactiveButtonProps>`
     background-color: transparent;
   }
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
+  font-size: ${({ fontSize }) => fontSize || '16px'};
 `;
 
 const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
@@ -25,6 +27,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
   variant = variants.PRIMARY,
   as,
   fontFamily,
+  fontSize,
   ...props
 }) => {
   if (!isActive) {
@@ -35,12 +38,13 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
         variant="tertiary"
         colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "textSubtle"}
         fontFamily={fontFamily}
+        fontSize={fontSize}
         {...props}
       />
     );
   }
 
-  return <Button as={as} size={size} variant={variant} fontFamily={fontFamily} {...props} />;
+  return <Button as={as} size={size} variant={variant} fontFamily={fontFamily} fontSize={fontSize} {...props} />;
 };
 
 export default ButtonMenuItem;
