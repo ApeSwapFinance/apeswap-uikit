@@ -4,6 +4,7 @@ export type ButtonMenuItemProps = {
   isActive?: boolean;
   size?: Sizes;
   fontFamily?: string;
+  fontSize?: string;
 } & ButtonProps;
 
 export interface ButtonMenuProps {

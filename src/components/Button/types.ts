@@ -35,6 +35,7 @@ export type ButtonProps = {
   isLoading?: boolean;
   disabled?: boolean;
   fontFamily?: string;
+  fontSize?: string;
 } & ButtonTypes &
   SpaceProps;
 

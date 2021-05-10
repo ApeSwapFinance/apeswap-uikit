@@ -52,6 +52,7 @@ export type Colors = {
   borderColor: string;
   card: string;
   yellow: string;
+  white: string;
 
   // Gradients
   gradients: Gradients;

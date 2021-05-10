@@ -31,6 +31,7 @@ export const lightColors: Colors = {
   borderColor: "#965a50ff",
   card: "#FFFFFF",
   yellow: "#FFB300",
+  white: "#FFFFFF",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
   },
@@ -53,6 +54,7 @@ export const darkColors: Colors = {
   borderColor: "#524B63",
   card: "#27262c",
   yellow: "#FFB300",
+  white: "#FFFFFF",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
   },
