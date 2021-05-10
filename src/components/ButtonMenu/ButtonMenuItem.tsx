@@ -18,7 +18,7 @@ const InactiveButton = styled(Button)<InactiveButtonProps>`
     background-color: transparent;
   }
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
-  font-size: ${({ fontSize }) => fontSize || '16px'};
+  font-size: ${({ fontSize }) => fontSize || "16px"};
 `;
 
 const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
