@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Flex from "../../components/Flex/Flex";
-import { HamburgerIcon, HamburgerCloseIcon, FullLogo } from "./icons";
+import { HamburgerIcon, HamburgerCloseIcon, FullLogoRebrand } from "./icons";
 import MenuButton from "./MenuButton";
 
 interface Props {
@@ -35,7 +35,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <FullLogo width="160px" />
+      <FullLogoRebrand width="160px" />
     </>
   );
 
