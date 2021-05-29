@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MENU_ENTRY_HEIGHT } from "./config";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import { PushedProps } from "./types";
-import { ArrowDropDownIcon, ArrowDropUpIcon } from "../../components/Svg";
+import { ArrowDropUpSmallIcon, ArrowDropDownSmallIcon } from "../../components/Svg";
 
 interface Props extends PushedProps {
   label: string;
@@ -53,7 +53,7 @@ const Accordion: React.FC<Props> = ({
       <MenuEntry onClick={handleClick} className={className}>
         {icon}
         <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
-        {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        {isOpen ? <ArrowDropUpSmallIcon /> : <ArrowDropDownSmallIcon />}
       </MenuEntry>
       <AccordionContent
         isOpen={isOpen}
