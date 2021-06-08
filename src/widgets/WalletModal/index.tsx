@@ -1,2 +1,3 @@
 export { default as useWalletModal } from "./useWalletModal";
-export type { ConnectorNames, Login } from "./types";
+export { ConnectorNames } from "./types";
+export type { Login } from "./types";
