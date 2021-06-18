@@ -44,6 +44,7 @@ export interface PanelProps {
   cakePriceUsd?: number;
   currentLang: string;
   langs?: LangType[];
+  toggleNotPossible?: boolean;
   setLang: (lang: LangType) => void;
   links: Array<MenuEntry>;
 }
@@ -53,4 +54,6 @@ export interface NavProps extends PanelProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
+  navbarRight?: boolean;
+  childrenNavBar?: React.ReactNode;
 }
