@@ -194,11 +194,7 @@ export const RightExtra: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         navbarRight
-        childrenNavBar={
-          <div>
-            navbarRight = true AND childrenNavBar
-          </div>
-        }
+        childrenNavBar={<div>navbarRight = true AND childrenNavBar</div>}
       >
         <div>
           <Heading as="h1" mb="8px">
