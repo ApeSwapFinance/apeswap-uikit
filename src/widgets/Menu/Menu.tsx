@@ -66,14 +66,14 @@ const Menu: React.FC<NavProps> = ({
   toggleTheme,
   langs,
   setLang,
-  toggleNotPossible,
+  disableTheme,
   currentLang,
   cakePriceUsd,
   links,
   profile,
   children,
   childrenNavBar,
-  navbarRight
+  navbarRight,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -122,15 +122,14 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        {!navbarRight ? 
-        <Flex>
-          <UserBlock account={account === undefined ? "" : account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
-        </Flex>:
-        <Flex>
-          {childrenNavBar}
-        </Flex>
-      }
+        {!navbarRight ? (
+          <Flex>
+            <UserBlock account={account === undefined ? "" : account} login={login} logout={logout} />
+            {profile && <Avatar profile={profile} />}
+          </Flex>
+        ) : (
+          <Flex>{childrenNavBar}</Flex>
+        )}
       </StyledNav>
       <BodyWrapper>
         <Panel
@@ -140,7 +139,7 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           toggleTheme={toggleTheme}
           langs={langs}
-          toggleNotPossible={toggleNotPossible !== undefined && true}
+          disableTheme={disableTheme !== undefined && true}
           setLang={setLang}
           currentLang={currentLang}
           cakePriceUsd={cakePriceUsd}

@@ -44,7 +44,7 @@ export interface PanelProps {
   cakePriceUsd?: number;
   currentLang: string;
   langs?: LangType[];
-  toggleNotPossible?: boolean;
+  disableTheme?: boolean;
   setLang: (lang: LangType) => void;
   links: Array<MenuEntry>;
 }
