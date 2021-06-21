@@ -31,7 +31,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledFlex = styled(Flex)`
-  z-index: 100
+  z-index: 100;
 `;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
