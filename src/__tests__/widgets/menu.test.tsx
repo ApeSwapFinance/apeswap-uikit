@@ -51,7 +51,7 @@ it("renders correctly", () => {
           class="sc-hiSbYr cKMVAJ"
         >
           <div
-            class="sc-gsTCUz sc-iBPRYJ dwpdGQ kJxEaM"
+            class="sc-gsTCUz sc-iBPRYJ dwpdGQ MIOST"
           >
             <button
               aria-label="Toggle menu"
@@ -223,7 +223,7 @@ it("renders correctly", () => {
           class="sc-gWHgXt gKIFCh"
         >
           <div
-            class="sc-fKFyDc ctBYOq"
+            class="sc-fKFyDc cIaJWB"
           >
             <div
               class="sc-iqHYGH bfddDE"
