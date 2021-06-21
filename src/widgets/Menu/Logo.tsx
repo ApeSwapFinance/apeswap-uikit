@@ -30,6 +30,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledFlex = styled(Flex)`
+  z-index: 100
+`;
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
@@ -40,7 +44,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   );
 
   return (
-    <Flex>
+    <StyledFlex>
       <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
@@ -57,7 +61,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </Flex>
+    </StyledFlex>
   );
 };
 
