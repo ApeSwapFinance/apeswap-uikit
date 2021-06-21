@@ -22,6 +22,10 @@ const Container = styled.div`
   height: 100%;
 `;
 
+const StyledMenuLink = styled(MenuLink)`
+  font-family: "Titan One";
+`;
+
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
 
@@ -49,7 +53,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               {isPushed &&
                 entry.items.map((item) => (
                   <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <MenuLink href={item.href}>{item.label}</MenuLink>
+                    <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
                   </MenuEntry>
                 ))}
             </Accordion>
@@ -57,10 +61,10 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         }
         return (
           <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
-            <MenuLink href={entry.href} onClick={handleClick}>
+            <StyledMenuLink href={entry.href} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
-            </MenuLink>
+            </StyledMenuLink>
           </MenuEntry>
         );
       })}
