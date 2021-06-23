@@ -24,3 +24,4 @@ export { default as TradeIcon } from "./Trade";
 export { default as TwitterIcon } from "./Twitter";
 export { default as DiscordIcon } from "./Discord";
 export { default as ApeZone } from "./ApeZone";
+export { default as MonkeyLight } from "./MonkeyLight";

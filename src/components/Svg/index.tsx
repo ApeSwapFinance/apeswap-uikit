@@ -10,6 +10,7 @@ export { default as ArrowForwardIcon } from "./Icons/ArrowForward";
 export { default as AutoRenewIcon } from "./Icons/AutoRenew";
 export { default as BananaIcon } from "./Icons/Banana";
 export { default as BananaGoldenIcon } from "./Icons/BananaGolden";
+export { default as MonkeyLight } from "./Icons/MonkeyLight";
 export { default as BananaPairIcon } from "./Icons/BananaPair";
 export { default as BananaGoldenPairIcon } from "./Icons/BananaPairGolden";
 export { default as BinanceIcon } from "./Icons/Binance";
