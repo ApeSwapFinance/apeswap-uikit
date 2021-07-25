@@ -134,16 +134,16 @@ export const socials = [
     icon: "TelegramIcon",
     items: [
       {
-        label: "Spanish",
-        href: "https://t.me/ape_swap_spanish",
-      },
-      {
         label: "English",
         href: "https://t.me/ape_swap",
       },
       {
         label: "Announcements",
         href: "https://t.me/ape_swap_news",
+      },
+      {
+        label: "Regional",
+        href: "https://apeswap.gitbook.io/apeswap-finance/social-media-and-resources/international-telegram-groups",
       },
     ],
   },
