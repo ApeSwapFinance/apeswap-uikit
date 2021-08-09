@@ -5,7 +5,7 @@ import { SvgProps } from "../../../components/Svg/types";
 const Icon: React.FC<SvgProps> = (props) => {
   return (
     <Svg viewBox="0 0 200.17 228.32" {...props}>
-       <defs>
+      <defs>
         <style>{".prefix__cls-1{fill:#2ac98b;fill-rule:evenodd}"}</style>
       </defs>
       <title>Nabox</title>
