@@ -49,6 +49,11 @@ export const links = [
     href: "/apezone",
   },
   {
+    label: "Vaults",
+    icon: "Vaults",
+    href: "/vaults",
+  },
+  {
     label: "Profile & Teams",
     icon: "GroupsIcon",
     items: [
