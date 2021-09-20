@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@apeswapfinance/eslint-config-apeswap@../eslint-config-apeswap":
+  version "1.0.0"
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^4.7.0"
+    "@typescript-eslint/parser" "^4.7.0"
+    eslint-config-airbnb "^18.2.1"
+    eslint-config-prettier "^6.15.0"
+    eslint-plugin-import "^2.22.1"
+    eslint-plugin-jsx-a11y "^6.4.1"
+    eslint-plugin-react "^7.21.5"
+    eslint-plugin-react-hooks "^4.0.0"
+
 "@aragon/provided-connector@^6.0.7":
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/@aragon/provided-connector/-/provided-connector-6.0.8.tgz#5d22ccb2a0ff599fbe6c23fdf96cb06d59ff2716"
@@ -1940,20 +1952,6 @@
   dependencies:
     mkdirp "^1.0.4"
     rimraf "^2.7.1"
-
-"@pancakeswap-libs/eslint-config-pancake@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/eslint-config-pancake/-/eslint-config-pancake-0.1.0.tgz#109863752b77106bf2721d639c9a17e89002879d"
-  integrity sha512-wJBZike/rd2f/9Vep6yNyA8qqRl7UBW55ppYvPaJa61HjethJ113hcUxWzgbQ35OfnLO5beuTBFqR/rypJ5V/A==
-  dependencies:
-    "@typescript-eslint/eslint-plugin" "^4.7.0"
-    "@typescript-eslint/parser" "^4.7.0"
-    eslint-config-airbnb "^18.2.1"
-    eslint-config-prettier "^6.15.0"
-    eslint-plugin-import "^2.22.1"
-    eslint-plugin-jsx-a11y "^6.4.1"
-    eslint-plugin-react "^7.21.5"
-    eslint-plugin-react-hooks "^4.0.0"
 
 "@pedrouid/iso-crypto@^1.0.0":
   version "1.1.0"
@@ -14101,10 +14099,6 @@ read-pkg@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-2.0.0.tgz#8ef1c0623c6a6db0dc6713c4bfac46332b2368f8"
   integrity sha1-jvHAYjxqbbDcZxPEv6xGMysjaPg=
-  dependencies:
-    load-json-file "^2.0.0"
-    normalize-package-data "^2.3.2"
-    path-type "^2.0.0"
 
 read-pkg@^3.0.0:
   version "3.0.0"

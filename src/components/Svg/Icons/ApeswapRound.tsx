@@ -7,7 +7,7 @@ const Icon: React.FC<SvgProps> = (props) => {
     <Svg viewBox="0 0 512 512" {...props}>
       <defs>
         <clipPath id="clip0">
-          <rect x="87" y="109" width="100%" height="100%" />
+          <rect x="87" y="109" width="502" height="502" />
         </clipPath>
         <clipPath id="clip1">
           <rect x="154" y="180" width="331" height="331" />
