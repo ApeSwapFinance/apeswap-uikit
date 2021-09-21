@@ -35,7 +35,7 @@
     "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@pancakeswap-libs/eslint-config-pancake": "0.1.0",
+    "@apeswapfinance/eslint-config-apeswap": "../eslint-config-apeswap",
     "@rollup/plugin-typescript": "^8.1.1",
     "@storybook/addon-a11y": "^6.1.16",
     "@storybook/addon-actions": "^6.1.16",

@@ -10,11 +10,11 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://exchange.pancakeswap.finance",
+        href: "https://exchange.apeswap.finance",
       },
       {
         label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
+        href: "https://exchange.apeswap.finance/#/pool",
       },
     ],
   },
@@ -74,19 +74,19 @@ export const links = [
     items: [
       {
         label: "Overview",
-        href: "https://pancakeswap.info",
+        href: "https://apeswap.info",
       },
       {
         label: "Tokens",
-        href: "https://pancakeswap.info/tokens",
+        href: "https://apeswap.info/tokens",
       },
       {
         label: "Pairs",
-        href: "https://pancakeswap.info/pairs",
+        href: "https://apeswap.info/pairs",
       },
       {
         label: "Accounts",
-        href: "https://pancakeswap.info/accounts",
+        href: "https://apeswap.info/accounts",
       },
     ],
   },
@@ -110,19 +110,19 @@ export const links = [
     items: [
       {
         label: "Voting",
-        href: "https://voting.pancakeswap.finance",
+        href: "https://voting.apeswap.finance",
       },
       {
         label: "Github",
-        href: "https://github.com/pancakeswap",
+        href: "https://github.com/apeswap",
       },
       {
         label: "Docs",
-        href: "https://docs.pancakeswap.finance",
+        href: "https://docs.apeswap.finance",
       },
       {
         label: "Blog",
-        href: "https://pancakeswap.medium.com",
+        href: "https://apeswap.medium.com",
       },
     ],
   },
