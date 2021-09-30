@@ -18,6 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+        env: 
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Run ESLint
         run: yarn lint
+        env: 
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
