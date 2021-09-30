@@ -38,12 +38,11 @@ const removePointerEvents = ({ disabled, as }: ThemedProps) => {
   return "";
 };
 
-const getButtonVariantProp = (prop: keyof ButtonSquareThemeVariant) => ({
-  theme,
-  variant = variants.PRIMARY,
-}: ThemedProps) => {
-  return theme.button[variant][prop];
-};
+const getButtonVariantProp =
+  (prop: keyof ButtonSquareThemeVariant) =>
+  ({ theme, variant = variants.PRIMARY }: ThemedProps) => {
+    return theme.button[variant][prop];
+  };
 
 const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
