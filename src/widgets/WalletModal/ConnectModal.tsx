@@ -38,7 +38,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
 );
 
 ConnectModal.defaultProps = {
-  onDismiss: () => null
-}
+  onDismiss: () => null,
+};
 
 export default ConnectModal;
