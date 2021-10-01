@@ -39,7 +39,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
 };
 
 UserBlock.defaultProps = {
-  account: '',
+  account: "",
 };
 
 export default UserBlock;
