@@ -46,7 +46,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
 );
 
 AccountModal.defaultProps = {
-  account: "",
+  account: undefined,
   onDismiss: () => null,
 };
 
