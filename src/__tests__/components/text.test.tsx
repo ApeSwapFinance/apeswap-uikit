@@ -3,14 +3,14 @@ import { renderWithTheme } from "../../testHelpers";
 import Text from "../../components/Text/Text";
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithTheme(<Text>pancake</Text>);
+  const { asFragment } = renderWithTheme(<Text>apeswap</Text>);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-bdfBwQ fdecKR"
+        class="sc-bdfBQB cxYCkh"
         color="text"
       >
-        pancake
+        apeswap
       </div>
     </DocumentFragment>
   `);

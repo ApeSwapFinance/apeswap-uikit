@@ -7,7 +7,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-bdfBwQ iUGWfo"
+        class="sc-bdfBQB cMepTY"
       >
         flex
       </div>

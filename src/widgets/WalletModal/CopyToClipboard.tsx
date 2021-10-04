@@ -50,4 +50,8 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
   );
 };
 
+CopyToClipboard.defaultProps = {
+  toCopy: "",
+};
+
 export default CopyToClipboard;
