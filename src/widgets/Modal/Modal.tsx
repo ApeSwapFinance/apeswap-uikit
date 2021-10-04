@@ -74,7 +74,7 @@ const Modal: React.FC<Props> = ({
 Modal.defaultProps = {
   hideCloseButton: false,
   onBack: undefined,
-  bodyPadding: "24px"
-}
+  bodyPadding: "24px",
+};
 
 export default Modal;
