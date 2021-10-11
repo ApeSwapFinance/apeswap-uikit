@@ -19,7 +19,6 @@ const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNet
 );
 
 SelectNetworkModal.defaultProps = {
-  chainId: 56,
   onDismiss: () => null,
 };
 

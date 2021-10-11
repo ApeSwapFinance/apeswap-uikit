@@ -1,5 +1,5 @@
 import React from "react";
-import { useMatchBreakpoints } from "../..";
+import { useMatchBreakpoints } from "../../hooks";
 import Button from "../../components/Button/Button";
 import { useWalletModal } from "../WalletModal";
 import { Login } from "../WalletModal/types";
@@ -15,10 +15,10 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { isXs } = useMatchBreakpoints();
 
-  return (
-    <div>
-      {account ? (
-        isXs ? (
+  const loadButton = () => {
+    if (account) {
+      if (isXs) {
+        return (
           <Button
             size="sm"
             fontSize="14px"
@@ -29,29 +29,33 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           >
             {accountEllipsis}
           </Button>
-        ) : (
-          <Button
-            size="sm"
-            variant="tertiary"
-            onClick={() => {
-              onPresentAccountModal();
-            }}
-          >
-            {accountEllipsis}
-          </Button>
-        )
-      ) : (
+        );
+      }
+      return (
         <Button
           size="sm"
+          variant="tertiary"
           onClick={() => {
-            onPresentConnectModal();
+            onPresentAccountModal();
           }}
         >
-          Connect
+          {accountEllipsis}
         </Button>
-      )}
-    </div>
-  );
+      );
+    }
+    return (
+      <Button
+        size="sm"
+        onClick={() => {
+          onPresentConnectModal();
+        }}
+      >
+        Connect
+      </Button>
+    );
+  };
+
+  return <div>{loadButton()}</div>;
 };
 
 UserBlock.defaultProps = {

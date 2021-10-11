@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Flex from "../../components/Flex/Flex";
 import { HamburgerIcon, HamburgerCloseIcon, FullLogo, MobileIcon } from "./icons";
 import MenuButton from "./MenuButton";
-import { useMatchBreakpoints } from "../..";
+import { useMatchBreakpoints } from "../../hooks";
 
 interface Props {
   isPushed: boolean;

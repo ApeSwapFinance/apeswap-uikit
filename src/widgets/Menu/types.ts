@@ -1,4 +1,3 @@
-import { ChainId } from "../NetworkModal/config";
 import { SwitchNetwork } from "../NetworkModal/types";
 import { Login } from "../WalletModal/types";
 

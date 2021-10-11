@@ -12,7 +12,7 @@ import MenuButton from "./MenuButton";
 import * as IconModule from "./icons";
 import { socials, MENU_ENTRY_HEIGHT } from "./config";
 import { PanelProps, PushedProps } from "./types";
-import { useMatchBreakpoints } from "../..";
+import { useMatchBreakpoints } from "../../hooks";
 
 interface Props extends PanelProps, PushedProps {}
 

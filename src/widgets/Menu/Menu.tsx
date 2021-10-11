@@ -11,7 +11,8 @@ import Text from "../../components/Text/Text";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import Avatar from "./Avatar";
-import { ApeSwapRoundIcon, Skeleton } from "../..";
+import Skeleton from "../../components/Skeleton/Skeleton";
+import { ApeSwapRoundIcon } from "../../components/Svg";
 import NetworkButton from "./NetworkButton";
 
 const Wrapper = styled.div`
@@ -112,7 +113,6 @@ const Menu: React.FC<NavProps> = ({
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
-  console.log(chainId);
 
   useEffect(() => {
     const handleScroll = () => {
