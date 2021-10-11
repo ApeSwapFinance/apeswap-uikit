@@ -1,3 +1,5 @@
+import { ChainId } from "../NetworkModal/config";
+import { SwitchNetwork } from "../NetworkModal/types";
 import { Login } from "../WalletModal/types";
 
 export interface LangType {
@@ -41,7 +43,7 @@ export interface MenuEntry {
 export interface PanelProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
-  cakePriceUsd?: number;
+  bananaPriceUsd?: number;
   currentLang: string;
   langs?: LangType[];
   setLang: (lang: LangType) => void;
@@ -53,4 +55,6 @@ export interface NavProps extends PanelProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
+  chainId: number;
+  switchNetwork: SwitchNetwork;
 }

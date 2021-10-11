@@ -59,12 +59,12 @@ const StyledButton = styled.button<ButtonProps>`
   font-weight: 400;
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
-  height: ${({ size }) => (size === "sm" ? "28px" : "48px")};
+  height: ${({ size }) => (size === "sm" ? "28px" : size === "xs" ? "20px" : "48px")};
   line-height: 1;
   letter-spacing: 0.03em;
   justify-content: center;
   outline: 0;
-  padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
+  padding: ${({ size }) => (size === "sm" ? "0 16px" : size === "xs" ? "0 12px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 

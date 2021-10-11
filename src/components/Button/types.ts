@@ -3,6 +3,7 @@ import { Link, LinkProps } from "react-router-dom";
 import { SpaceProps } from "styled-system";
 
 export const sizes = {
+  XS: "xs",
   SM: "sm",
   MD: "md",
 } as const;

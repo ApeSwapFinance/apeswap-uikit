@@ -7,13 +7,29 @@ import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./Logo";
 import Panel from "./Panel";
 import UserBlock from "./UserBlock";
+import Text from "../../components/Text/Text";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import Avatar from "./Avatar";
+import { ApeSwapRoundIcon, Skeleton } from "../..";
+import NetworkButton from "./NetworkButton";
 
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+`;
+
+const PriceLink = styled.a`
+  display: flex;
+  align-items: center;
+  svg {
+    transition: transform 0.3s;
+  }
+  :hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
 `;
 
 const StyledNav = styled.nav<{ showMenu: boolean }>`
@@ -32,6 +48,22 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
+`;
+
+const StyledFooter = styled.nav`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 16px;
+  width: 100%;
+  height: ${MENU_HEIGHT}px;
+  background-color: ${({ theme }) => theme.nav.background};
+  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  z-index: 20;
 `;
 
 const BodyWrapper = styled.div`
@@ -67,16 +99,20 @@ const Menu: React.FC<NavProps> = ({
   langs,
   setLang,
   currentLang,
-  cakePriceUsd,
+  bananaPriceUsd,
   links,
   profile,
   children,
+  chainId,
+  switchNetwork,
 }) => {
-  const { isXl } = useMatchBreakpoints();
+  const { isXl, isSm, isXs } = useMatchBreakpoints();
   const isMobile = isXl === false;
+  const isTrueMobile = isSm || isXs === true;
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
+  console.log(chainId)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -120,6 +156,11 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
+          {!isTrueMobile && (
+            <Flex marginRight="10px">
+              <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+            </Flex>
+          )}
           <UserBlock account={account} login={login} logout={logout} />
           {profile && <Avatar profile={profile} />}
         </Flex>
@@ -134,7 +175,7 @@ const Menu: React.FC<NavProps> = ({
           langs={langs}
           setLang={setLang}
           currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
+          bananaPriceUsd={bananaPriceUsd}
           pushNav={setIsPushed}
           links={links}
         />
@@ -143,6 +184,26 @@ const Menu: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
+      {(isSm || isXs) && (
+        <StyledFooter>
+          <Flex paddingLeft="10px">
+            {bananaPriceUsd ? (
+              <PriceLink
+                href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+                target="_blank"
+              >
+                <ApeSwapRoundIcon width="24px" mr="8px" />
+                <Text color="textSubtle" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+              </PriceLink>
+            ) : (
+              <Skeleton width={80} height={24} />
+            )}
+          </Flex>
+          <Flex>
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+          </Flex>
+        </StyledFooter>
+      )}
     </Wrapper>
   );
 };
