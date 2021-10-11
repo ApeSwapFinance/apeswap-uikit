@@ -84,7 +84,6 @@ const MobileIcon: React.FC<SvgProps> = (props) => {
         d="M261.39,178.87v21.28a9.64,9.64,0,0,0,19.25,0v-3C280.64,187,272,178.87,261.39,178.87Z"
       />
       <ellipse className="cls-6" cx={261.39} cy={191.03} rx={6.42} ry={6.08} />
-     
     </Svg>
   );
 };

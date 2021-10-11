@@ -12,6 +12,7 @@ import MenuButton from "./MenuButton";
 import * as IconModule from "./icons";
 import { socials, MENU_ENTRY_HEIGHT } from "./config";
 import { PanelProps, PushedProps } from "./types";
+import { useMatchBreakpoints } from "../..";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -64,6 +65,8 @@ const PanelFooter: React.FC<Props> = ({
   langs,
   setLang,
 }) => {
+  const { isSm, isXs } = useMatchBreakpoints();
+  const isTrueMobile = isSm || isXs === true;
   if (!isPushed) {
     return (
       <Container>
@@ -77,16 +80,20 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        {bananaPriceUsd ? (
-          <PriceLink
-            href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
-            target="_blank"
-          >
-            <ApeSwapRoundIcon width="24px" mr="8px" />
-            <Text color="textSubtle" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
-          </PriceLink>
-        ) : (
-          <Skeleton width={80} height={24} />
+        {!isTrueMobile && (
+          <div>
+            {bananaPriceUsd ? (
+              <PriceLink
+                href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+                target="_blank"
+              >
+                <ApeSwapRoundIcon width="24px" mr="8px" />
+                <Text color="textSubtle" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+              </PriceLink>
+            ) : (
+              <Skeleton width={80} height={24} />
+            )}
+          </div>
         )}
         <Flex>
           {socials.map((social, index) => {
