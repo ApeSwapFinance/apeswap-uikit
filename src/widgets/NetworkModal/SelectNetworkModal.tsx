@@ -5,9 +5,9 @@ import NetworkCard from "./NetworkCard";
 import { SwitchNetwork } from "./types";
 
 interface Props {
-  chainId: number;
   switchNetwork: SwitchNetwork;
   onDismiss?: () => void;
+  chainId: number;
 }
 
 const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNetwork, chainId }) => (
