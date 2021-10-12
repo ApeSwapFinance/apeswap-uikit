@@ -16,7 +16,6 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
   return (
     <Button
       fullWidth
-      disabled
       variant="tertiary"
       onClick={() => {
         login(walletConfig.connectorId);

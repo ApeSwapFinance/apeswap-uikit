@@ -47,7 +47,6 @@ it("renders ConnectModal correctly", () => {
         >
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
             type="button"
@@ -191,7 +190,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
             type="button"
@@ -236,7 +234,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
             type="button"
@@ -270,7 +267,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
             type="button"
@@ -306,7 +302,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
             type="button"
@@ -336,7 +331,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
             type="button"
@@ -402,7 +396,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
             type="button"
@@ -455,7 +448,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq uFUwK"
-            disabled=""
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
             type="button"
@@ -503,7 +495,6 @@ it("renders ConnectModal correctly", () => {
           </button>
           <button
             class="sc-jSgvzq bNyMWC"
-            disabled=""
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
             type="button"
