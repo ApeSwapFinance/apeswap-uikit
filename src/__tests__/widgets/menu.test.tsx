@@ -35,7 +35,9 @@ it("renders correctly", () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        bananaPriceUsd={0.23158668932877668}
+        chainId={56}
+        switchNetwork={noop}
         links={menuConfig}
       >
         body
@@ -48,14 +50,14 @@ it("renders correctly", () => {
         class="sc-kLgnNl jlqcE"
       >
         <nav
-          class="sc-iktFfs OPesC"
+          class="sc-jJEKmz jwoDne"
         >
           <div
             class="sc-gsTEea jHgWlA"
           >
             <button
               aria-label="Toggle menu"
-              class="sc-eCstlR cbACI sc-jSgvzq kOEnVh"
+              class="sc-eCstlR fbBgQj sc-jSgvzq kOEnVh"
               type="button"
             >
               <svg
@@ -209,6 +211,34 @@ it("renders correctly", () => {
           <div
             class="sc-gsTEea jHgWlA"
           >
+            <div
+              class="sc-gsTEea kxDIKD"
+            >
+              <button
+                class="sc-eCstlR ectBUg"
+                type="button"
+              >
+                <svg
+                  class="sc-dlfnuX kbMNw"
+                  color="text"
+                  viewBox="0 0 16 16"
+                  width="18px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="8"
+                    cy="8"
+                    fill="#F0B90B"
+                    r="8"
+                  />
+                  <path
+                    d="M5.01656 8.00006L3.79256 9.23256L2.56006 8.00006L3.79256 6.76756L5.01656 8.00006ZM8.00006 5.01656L10.1081 7.12456L11.3406 5.89206L9.23256 3.79256L8.00006 2.56006L6.76756 3.79256L4.66806 5.89206L5.90056 7.12456L8.00006 5.01656ZM12.2076 6.76756L10.9836 8.00006L12.2161 9.23256L13.4401 8.00006L12.2076 6.76756ZM8.00006 10.9836L5.89206 8.87556L4.66806 10.1081L6.77606 12.2161L8.00006 13.4401L9.23256 12.2076L11.3406 10.0996L10.1081 8.87556L8.00006 10.9836ZM8.00006 9.23256L9.23256 8.00006L8.00006 6.76756L6.76756 8.00006L8.00006 9.23256Z"
+                    fill="#FFFDFA"
+                  />
+                </svg>
+                 BSC
+              </button>
+            </div>
             <div>
               <button
                 class="sc-eCstlR ectBUg"
@@ -220,10 +250,10 @@ it("renders correctly", () => {
           </div>
         </nav>
         <div
-          class="sc-jJEKmz kUXSFa"
+          class="sc-gWHigU juwgco"
         >
           <div
-            class="sc-dmlqKv khJTBH"
+            class="sc-dmlqKv kehYwc"
           >
             <div
               class="sc-kEjbQP jaMnKs"
@@ -769,12 +799,12 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-hiSbEG gpaZqi"
+            class="sc-cBNeex kldbAf"
           >
             body
           </div>
           <div
-            class="sc-bdfBQB sc-gWHigU kFZzJL eaJlTm"
+            class="sc-bdfBQB sc-citxvW kFZzJL frCvty"
             role="presentation"
           />
         </div>

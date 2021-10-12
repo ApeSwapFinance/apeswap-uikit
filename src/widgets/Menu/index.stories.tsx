@@ -29,9 +29,11 @@ export const Connected: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        bananaPriceUsd={0.23158668932877668}
         links={links}
         profile={null}
+        chainId={137}
+        switchNetwork={noop}
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -69,6 +71,8 @@ export const NotConnected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         links={links}
+        chainId={56}
+        switchNetwork={noop}
       >
         <div>
           <h1>Page body</h1>
@@ -99,8 +103,10 @@ export const WithNoProfile: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        bananaPriceUsd={0.23158668932877668}
         links={links}
+        chainId={56}
+        switchNetwork={noop}
         profile={{
           profileLink: "/profile",
           noProfileLink: "/no-profile",
@@ -141,8 +147,10 @@ export const WithProfile: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        bananaPriceUsd={0.23158668932877668}
         links={links}
+        chainId={56}
+        switchNetwork={noop}
         profile={{
           name: "apeswap",
           image: "https://apeswap.finance/images/nfts/blueberries-preview.png",

@@ -26,3 +26,5 @@ export { default as DiscordIcon } from "./Discord";
 export { default as ApeZone } from "./ApeZone";
 export { default as Vaults } from "./Vaults";
 export { default as MonkeyLight } from "./MonkeyLight";
+export { default as MobileIcon } from "./MobileIcon";
+export { default as Binance } from "./Binance";
