@@ -18,7 +18,9 @@ const rainbowAnimation = keyframes`
 `;
 
 const LinkLabel = styled.div<{ isPushed: boolean }>`
-  color: ${({ isPushed, theme }) => (isPushed ? theme.colors.textSubtle : "transparent")};
+  color: ${({ isPushed, theme }) => (isPushed ? theme.colors.text : "transparent")};
+  font-family: Poppins;
+  font-weight: 700;
   transition: color 0.4s;
   flex-grow: 1;
 `;
@@ -27,11 +29,12 @@ const MenuEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-family: Poppins;
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: ${({ theme }) => theme.colors.text};
   box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
 
   a {
@@ -39,10 +42,12 @@ const MenuEntry = styled.div<Props>`
     align-items: center;
     width: 100%;
     height: 100%;
+    font-family: Poppins;
+    font-weight: 700;
   }
 
   svg {
-    fill: ${({ theme }) => theme.colors.textSubtle};
+    fill: ${({ theme }) => theme.colors.text};
   }
 
   &:hover {
@@ -57,7 +62,6 @@ const MenuEntry = styled.div<Props>`
     animation: ${rainbowAnimation} 3s ease-in-out infinite;
     background: ${({ theme }) => theme.colors.gradients.bubblegum};
     background-size: 200% 100%;
-    font-weight: 400;
   }
 `;
 MenuEntry.defaultProps = {

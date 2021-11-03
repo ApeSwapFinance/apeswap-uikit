@@ -21,6 +21,8 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   right: 0;
   left: 0;
   text-align: center;
+  font-family: poppins;
+  font-weight: 700;
   background-color: ${({ theme }) => theme.colors.contrast};
   color: ${({ theme }) => theme.colors.invertedContrast};
   border-radius: 16px;
@@ -34,6 +36,7 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
     <StyleButton
       small
       bold
+      fontFamily="poppins"
       onClick={() => {
         navigator.clipboard.writeText(JSON.stringify(toCopy));
         setIsTooltipDisplayed(true);

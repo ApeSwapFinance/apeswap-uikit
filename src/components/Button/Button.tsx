@@ -11,13 +11,21 @@ const Button: React.FC<ButtonProps> = ({
   isLoading,
   disabled,
   fontFamily,
+  color,
   ...props
 }) => {
   const internalProps = external ? getExternalLinkProps() : {};
   const isDisabled = isLoading || disabled;
 
   return (
-    <StyledButton {...internalProps} {...props} isLoading={isLoading} disabled={isDisabled} fontFamily={fontFamily}>
+    <StyledButton
+      {...internalProps}
+      {...props}
+      isLoading={isLoading}
+      disabled={isDisabled}
+      fontFamily={fontFamily}
+      color={color}
+    >
       {React.isValidElement(startIcon) &&
         React.cloneElement(startIcon, {
           mr: "0.5rem",

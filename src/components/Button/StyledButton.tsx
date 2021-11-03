@@ -1,6 +1,7 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
 import getFontFamily from "../../util/getFontFamily";
+import getColor from "../../util/getColor";
 import { ButtonProps, ButtonThemeVariant, variants } from "./types";
 
 type ThemedProps = {
@@ -50,13 +51,14 @@ const StyledButton = styled.button<ButtonProps>`
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
   border-radius: 16px;
+  font-family: Poppins;
+  font-weight: 700;
   box-shadow: ${getButtonVariantProp("boxShadow")};
-  color: ${getButtonVariantProp("color")};
+  color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
   cursor: pointer;
   display: inline-flex;
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   font-size: ${({ fontSize }) => fontSize || "16px"};
-  font-weight: 400;
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
   height: ${({ size }) => (size === "sm" ? "28px" : "48px")};
@@ -74,7 +76,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:focus:not(:active) {
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.text};
   }
 
   &:active {
