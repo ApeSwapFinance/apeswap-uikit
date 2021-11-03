@@ -14,6 +14,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
   padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
   padding-bottom: 60px;
+  font-family: Poppins;
   top: 0;
   left: 0;
   display: flex;

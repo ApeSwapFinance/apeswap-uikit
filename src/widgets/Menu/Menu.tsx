@@ -77,6 +77,8 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s;
   transform: translate3d(0, 0, 0);
+  font-family: Poppins;
+  font-weight: 700;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
   }
@@ -193,7 +195,7 @@ const Menu: React.FC<NavProps> = ({
                 target="_blank"
               >
                 <ApeSwapRoundIcon width="24px" mr="8px" />
-                <Text color="textSubtle" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+                <Text color="text" fontFamily="poppins" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
               </PriceLink>
             ) : (
               <Skeleton width={80} height={24} />

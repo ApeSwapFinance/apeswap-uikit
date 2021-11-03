@@ -13,7 +13,13 @@ interface Props {
 const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNetwork, chainId }) => (
   <Modal title="Select a Network" onDismiss={onDismiss}>
     {networks.map((network) => (
-      <NetworkCard networkConfig={network} chainId={chainId} switchNetwork={switchNetwork} onDismiss={onDismiss} />
+      <NetworkCard
+        networkConfig={network}
+        chainId={chainId}
+        switchNetwork={switchNetwork}
+        onDismiss={onDismiss}
+        key={network.chainId}
+      />
     ))}
   </Modal>
 );

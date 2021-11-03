@@ -18,13 +18,14 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switc
       disabled={networkConfig.chainId === chainId}
       marginBottom="10px"
       variant="secondary"
+      fontFamily="poppins"
       onClick={() => {
         switchNetwork(networkConfig.chainId);
         onDismiss();
       }}
     >
       <Icon width="22px" mr="10px" alignmentBaseline="baseline" />
-      <Text bold color="primary" mr="16px" textAlign="start">
+      <Text bold color="text" mr="16px" fontFamily="poppins" textAlign="start">
         {symbol}
       </Text>
     </Button>

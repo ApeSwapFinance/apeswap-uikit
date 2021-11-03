@@ -34,6 +34,8 @@ const ModalHeader = styled.div`
   border-bottom: 1px solid #e9eaeb;
   align-items: center;
   padding: 12px 24px;
+  font-family: Poppins;
+  font-weight: 700;
 `;
 
 const ModalTitle = styled(Flex)`
