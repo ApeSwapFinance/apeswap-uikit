@@ -15,6 +15,4 @@ Default.args = {
   visible: true,
   title: "Welcome to ApeSwap’s Farms",
   description: "Start earning passive income with your cryptocurrency!",
-  ImageUrl: "",
-  ImageDesc: "Farm Monkey",
 };
