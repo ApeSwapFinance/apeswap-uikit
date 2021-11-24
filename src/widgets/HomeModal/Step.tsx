@@ -6,6 +6,10 @@ import { StepProps } from "./types";
 const StepCon = styled.div`
   width: 100%;
   margin-top: 30px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 48%;
+  }
 `;
 
 const Number = styled.div`
@@ -14,6 +18,10 @@ const Number = styled.div`
   font-weight: 700;
   text-transform: uppercase;
   color: #ffb300;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 12px;
+  }
 `;
 
 const HeadText = styled.div`
@@ -21,6 +29,11 @@ const HeadText = styled.div`
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 22px;
+    margin-top: 5px;
+  }
 `;
 
 const Step: React.FC<StepProps> = ({ stepNumber, headerText, thirdText }) => (

@@ -10,6 +10,11 @@ import Step from "./Step";
 const ModalBackground = styled.div`
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const StyledModal = styled.div`
@@ -21,31 +26,25 @@ const StyledModal = styled.div`
   background: ${({ theme }) => (theme.isDark ? "#212121" : "#FFF")};
   color: ${({ theme }) => (theme.isDark ? "#FFFFFF" : theme.colors.primary)};
 
-  /* ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
     max-width: 900px;
     height: 500px;
     max-height: 500px;
     border-radius: 20px;
-    margin: 4rem auto;
+    margin: auto;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: ${({ theme }) => theme.zIndices.modal};
-  } */
+  }
 `;
 
 const ModalHeader = styled.div`
   display: flex;
   flex-direction: column-reverse;
-
-  /* ${({ theme }) => theme.mediaQueries.lg} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
 
   .left-header-con {
     display: flex;
@@ -53,6 +52,7 @@ const ModalHeader = styled.div`
     align-items: center;
     position: relative;
     font-family: Poppins;
+    align-self: center;
   }
 `;
 
@@ -61,7 +61,10 @@ const LeftHeader = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 1.5em; */
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    margin-top: 1.5em;
+  }
 `;
 
 const Title = styled.h5`
@@ -72,8 +75,14 @@ const Title = styled.h5`
   text-align: center;
   line-height: 24px;
 
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.md} {
     font-size: 30px;
+    line-height: 30px;
   }
 `;
 
@@ -84,6 +93,11 @@ const Description = styled.p`
   text-align: center;
   font-size: 12px;
   line-height: 18px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -98,7 +112,7 @@ const CloseButton = styled.button`
     cursor: pointer;
   }
 
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.md} {
     position: absolute;
     right: 0;
     top: 0;
@@ -116,6 +130,15 @@ const ModalBody = styled.div`
   padding-bottom: 20px;
   padding-top: 100px;
 
+  ${({ theme }) => theme.mediaQueries.md} {
+    height: 100%;
+    overflow-y: unset;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -123,10 +146,14 @@ const ModalBody = styled.div`
 
 const Action = styled.p`
   font-family: Poppins;
-  /* margin-top: 0.5em; */
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    font-size: 16px;
+    margin-top: 0.5em;
+  }
 
   button {
     &.action-link {
@@ -151,12 +178,16 @@ const Upstep = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    flex-direction: row;
+  }
 `;
 
 const FarmApeWrapper = styled.div`
   display: none;
 
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.md} {
     width: 100px;
     height: 150px;
     margin-top: -30px;
@@ -194,10 +225,21 @@ const ModalFooter = styled.div`
   }
 `;
 
+const Read = styled.a`
+  ${({ theme }) => theme.mediaQueries.md} {
+    display: none;
+  }
+`;
+
 const Transparent = styled.div`
   background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 30px;
+  display: none;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    display: none;
+  }
 `;
 
 const HomeModal: React.FC<HomeModalProps> = ({
@@ -293,7 +335,7 @@ const HomeModal: React.FC<HomeModalProps> = ({
         </ModalBody>
 
         <ModalFooter>
-          <a href="#4">Continue reading</a>
+          <Read href="#4">Continue reading</Read>
           <Button variant="yellow" onClick={startEarning}>
             Start Earning
           </Button>
