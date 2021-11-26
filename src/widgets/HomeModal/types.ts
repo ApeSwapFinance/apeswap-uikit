@@ -1,11 +1,12 @@
 import React from "react";
 
+export type FuncType = () => void;
 export interface HomeModalProps {
-  closeHandler: () => void;
-  goToFarms: () => void;
-  connectWallet: () => void;
-  goToLiquidity: () => void;
-  startEarning: () => void;
+  onDismiss: FuncType;
+  goToFarms: FuncType;
+  connectWallet: FuncType;
+  goToLiquidity: FuncType;
+  startEarning: FuncType;
   visible: boolean;
   title: string;
   description: string;

@@ -7,16 +7,6 @@ import { Button, FarmApe } from "../..";
 
 import Step from "./Step";
 
-const ModalBackground = styled.div`
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
 const StyledModal = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,6 +15,7 @@ const StyledModal = styled.div`
   justify-content: space-between;
   background: ${({ theme }) => (theme.isDark ? "#212121" : "#FFF")};
   color: ${({ theme }) => (theme.isDark ? "#FFFFFF" : theme.colors.primary)};
+  z-index: ${({ theme }) => theme.zIndices.modal};
 
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
@@ -38,7 +29,6 @@ const StyledModal = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: ${({ theme }) => theme.zIndices.modal};
   }
 `;
 
@@ -243,10 +233,9 @@ const Transparent = styled.div`
 `;
 
 const HomeModal: React.FC<HomeModalProps> = ({
-  visible,
+  onDismiss,
   title,
   description,
-  closeHandler,
   goToFarms,
   connectWallet,
   goToLiquidity,
@@ -255,93 +244,87 @@ const HomeModal: React.FC<HomeModalProps> = ({
   const theme = useTheme();
 
   return (
-    <ModalBackground
-      style={{
-        display: visible ? "unset" : "none",
-      }}
-    >
-      <StyledModal>
-        <ModalHeader>
-          <div className="left-header-con">
-            <LeftHeader>
-              <Title>{title}</Title>
-              <Description>{description}</Description>
-            </LeftHeader>
+    <StyledModal>
+      <ModalHeader>
+        <div className="left-header-con">
+          <LeftHeader>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
+          </LeftHeader>
 
-            <FarmApeWrapper>
-              <FarmApe />
-            </FarmApeWrapper>
-          </div>
+          <FarmApeWrapper>
+            <FarmApe />
+          </FarmApeWrapper>
+        </div>
 
-          <CloseButton onClick={closeHandler}>
-            <CloseIcon color={theme.isDark ? "#FFF" : "primary"} width="30px" fontWeight="bold" />
-          </CloseButton>
-        </ModalHeader>
+        <CloseButton onClick={onDismiss}>
+          <CloseIcon color={theme.isDark ? "#FFF" : "primary"} width="30px" fontWeight="bold" />
+        </CloseButton>
+      </ModalHeader>
 
-        <ModalBody>
-          <Upstep>
-            <Step
-              stepNumber="Step 1"
-              headerText="Connect Your Wallet"
-              thirdText={
-                <Action>
-                  <button type="button" onClick={connectWallet} className="action-link">
-                    Click here
-                  </button>{" "}
-                  to connect your wallet to ApeSwap.
-                </Action>
-              }
-            />
-            <Step
-              stepNumber="Step 2"
-              headerText="Add Liquidity"
-              thirdText={
-                <Action>
-                  Go to Trade &gt;{" "}
-                  <button type="button" onClick={goToLiquidity} className="action-link">
-                    Liquidity
-                  </button>{" "}
-                  and obtain the LP(s) you want to Stake.
-                </Action>
-              }
-            />
-          </Upstep>
+      <ModalBody>
+        <Upstep>
+          <Step
+            stepNumber="Step 1"
+            headerText="Connect Your Wallet"
+            thirdText={
+              <Action>
+                <button type="button" onClick={connectWallet} className="action-link">
+                  Click here
+                </button>{" "}
+                to connect your wallet to ApeSwap.
+              </Action>
+            }
+          />
+          <Step
+            stepNumber="Step 2"
+            headerText="Add Liquidity"
+            thirdText={
+              <Action>
+                Go to Trade &gt;{" "}
+                <button type="button" onClick={goToLiquidity} className="action-link">
+                  Liquidity
+                </button>{" "}
+                and obtain the LP(s) you want to Stake.
+              </Action>
+            }
+          />
+        </Upstep>
 
-          <Upstep>
-            <Step
-              stepNumber="Step 3"
-              headerText="Stake"
-              thirdText={
-                <Action>
-                  Head over to{" "}
-                  <button type="button" onClick={goToFarms} className="action-link">
-                    Farms
-                  </button>
-                  , Enable your favorites and start Staking.
-                </Action>
-              }
-            />
-            <Step
-              stepNumber="Step 4"
-              headerText="Collect"
-              thirdText={
-                <Action>
-                  Don’t forget to Harvest your earnings periodically. You can reinvest them or cash out at any time!
-                </Action>
-              }
-            />
-          </Upstep>
-          <Transparent />
-        </ModalBody>
+        <Upstep>
+          <Step
+            stepNumber="Step 3"
+            headerText="Stake"
+            thirdText={
+              <Action>
+                Head over to{" "}
+                <button type="button" onClick={goToFarms} className="action-link">
+                  Farms
+                </button>
+                , Enable your favorites and start Staking.
+              </Action>
+            }
+          />
+          <Step
+            stepNumber="Step 4"
+            headerText="Collect"
+            thirdText={
+              <Action>
+                Don’t forget to Harvest your earnings periodically. You can reinvest them or cash out at any time!
+              </Action>
+            }
+          />
+        </Upstep>
+        <Transparent />
+      </ModalBody>
 
-        <ModalFooter>
-          <Read href="#4">Continue reading</Read>
-          <Button variant="yellow" onClick={startEarning}>
-            Start Earning
-          </Button>
-        </ModalFooter>
-      </StyledModal>
-    </ModalBackground>
+      <ModalFooter>
+        <Read href="#4">Continue reading</Read>
+        <Button variant="yellow" onClick={startEarning}>
+          Start Earning
+        </Button>
+      </ModalFooter>
+    </StyledModal>
   );
 };
 

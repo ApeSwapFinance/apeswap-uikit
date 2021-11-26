@@ -1,1 +1,2 @@
-export { default as HomeModal } from "./HomeModal";
+export { default as useHomeModal } from "./useHomeModal";
+export type { FuncType } from "./types";
