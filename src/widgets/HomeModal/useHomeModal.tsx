@@ -8,7 +8,6 @@ interface ReturnType {
 }
 
 const useHomeModal = (
-  visible: boolean,
   title: string,
   description: string,
   onDismiss: FuncType,
@@ -19,7 +18,6 @@ const useHomeModal = (
 ): ReturnType => {
   const [onPresentHomeModal] = useModal(
     <HomeModal
-      visible={visible}
       title={title}
       description={description}
       onDismiss={onDismiss}

@@ -7,7 +7,6 @@ export interface HomeModalProps {
   connectWallet: FuncType;
   goToLiquidity: FuncType;
   startEarning: FuncType;
-  visible: boolean;
   title: string;
   description: string;
 }
