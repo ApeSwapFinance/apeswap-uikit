@@ -328,4 +328,8 @@ const HomeModal: React.FC<HomeModalProps> = ({
   );
 };
 
+HomeModal.defaultProps = {
+  onDismiss: () => null,
+};
+
 export default HomeModal;

@@ -11,10 +11,8 @@ export default {
 
 export const Default: React.FC<HomeModalProps> = () => {
   const { onPresentHomeModal } = useHomeModal(
-    true,
     "Welcome to ApeSwap's Farms",
     "Start earning passive income with your cryptocurrency!",
-    () => null,
     () => null,
     () => null,
     () => null,

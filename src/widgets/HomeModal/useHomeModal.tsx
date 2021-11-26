@@ -10,7 +10,6 @@ interface ReturnType {
 const useHomeModal = (
   title: string,
   description: string,
-  onDismiss: FuncType,
   goToFarms: FuncType,
   connectWallet: FuncType,
   goToLiquidity: FuncType,
@@ -20,7 +19,7 @@ const useHomeModal = (
     <HomeModal
       title={title}
       description={description}
-      onDismiss={onDismiss}
+      onDismiss={() => null}
       goToFarms={goToFarms}
       goToLiquidity={goToLiquidity}
       connectWallet={connectWallet}
