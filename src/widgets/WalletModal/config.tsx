@@ -21,9 +21,9 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: "MathWallet",
-    icon: MathWallet,
-    connectorId: ConnectorNames.Injected,
+    title: "WalletConnect",
+    icon: WalletConnect,
+    connectorId: ConnectorNames.WalletConnect,
   },
   {
     title: "TokenPocket",
@@ -31,14 +31,19 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: "WalletConnect",
-    icon: WalletConnect,
-    connectorId: ConnectorNames.WalletConnect,
+    title: "SafePal Wallet",
+    icon: SafePalWallet,
+    connectorId: ConnectorNames.Injected,
   },
   {
     title: "Binance Chain Wallet",
     icon: BinanceChain,
     connectorId: ConnectorNames.BSC,
+  },
+  {
+    title: "MathWallet",
+    icon: MathWallet,
+    connectorId: ConnectorNames.Injected,
   },
   {
     title: "ONTO Wallet",
@@ -48,11 +53,6 @@ const connectors: Config[] = [
   {
     title: "NABOX Wallet",
     icon: Nabox,
-    connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "SafePal Wallet",
-    icon: SafePalWallet,
     connectorId: ConnectorNames.Injected,
   },
 ];
