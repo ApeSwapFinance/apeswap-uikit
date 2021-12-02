@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { MktModalProps } from ".";
 import MarketingModal from "./MarketingModal";
 
 export default {
@@ -13,10 +14,29 @@ export default {
   },
 };
 
-const Template = (args) => <MarketingModal {...args} />;
+export const Default: React.FC<MktModalProps> = ({
+  title = "Welcome to ApeSwap's Farms",
+  description = "Start earning passive income with your cryptocurrency!",
+  connectWallet,
+  goToFarms,
+  goToLiquidity,
+  startEarning,
+}) => {
+  const [visible, setVisible] = useState(true);
 
-export const Default = Template.bind({});
-Default.args = {
-  title: "Welcome to ApeSwap's Farms",
-  description: "Start earning passive income with your cryptocurrency!",
+  return (
+    <>
+      {visible && (
+        <MarketingModal
+          title={title}
+          description={description}
+          connectWallet={connectWallet}
+          goToFarms={goToFarms}
+          goToLiquidity={goToLiquidity}
+          startEarning={startEarning}
+          onDismiss={() => setVisible(false)}
+        />
+      )}
+    </>
+  );
 };
