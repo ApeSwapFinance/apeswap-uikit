@@ -1,1 +1,2 @@
-export type { FuncType, StepProps, MktModalProps } from "./types";
+export { default as MarketingModal } from "./MarketingModal";
+export type { Handler, StepProps, MktModalProps } from "./types";

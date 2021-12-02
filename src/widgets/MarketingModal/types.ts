@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-export type FuncType = () => void;
+export type Handler = () => void;
 export interface MktModalProps {
-  onDismiss: FuncType;
-  goToFarms: FuncType;
-  connectWallet: FuncType;
-  goToLiquidity: FuncType;
-  startEarning: FuncType;
+  onDismiss: Handler;
+  goToFarms: Handler;
+  connectWallet: Handler;
+  goToLiquidity: Handler;
+  startEarning: Handler;
   title: string;
   description: string;
 }
