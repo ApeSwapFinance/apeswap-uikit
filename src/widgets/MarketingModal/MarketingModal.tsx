@@ -245,9 +245,7 @@ const MarketingModal: React.FC<MktModalProps> = ({
   const theme = useTheme();
   const [readMore, setReadMore] = useState(false);
 
-  const changeReadMore = () => {
-    setReadMore(!readMore);
-  };
+  const changeReadMore = () => setReadMore(!readMore);
 
   return (
     <Container>
