@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
-
 import { MktModalProps } from "./types";
 import { CloseIcon } from "../../components/Svg";
 import { Button, FarmApe } from "../..";
 
 import Step from "./Step";
 
+export interface ReadProps {
+  readMore: boolean;
+}
+
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  color: ${({ theme }) => theme.colors.primary};
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: ${({ theme }) => theme.zIndices.modal - 1};
 `;
 
 const StyledModal = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -119,7 +128,7 @@ const ModalBody = styled.div`
   height: 60%;
   overflow-y: scroll;
   padding-bottom: 20px;
-  padding-top: 100px;
+  padding-top: 50px;
   ${({ theme }) => theme.mediaQueries.md} {
     height: 100%;
     overflow-y: unset;
@@ -206,7 +215,9 @@ const ModalFooter = styled.div`
   }
 `;
 
-const Read = styled.a`
+const Read = styled.a<ReadProps>`
+  display: ${(props) => (props.readMore ? "none" : "unset")};
+
   ${({ theme }) => theme.mediaQueries.md} {
     display: none;
   }
@@ -232,6 +243,11 @@ const MarketingModal: React.FC<MktModalProps> = ({
   startEarning,
 }) => {
   const theme = useTheme();
+  const [readMore, setReadMore] = useState(false);
+
+  const changeReadMore = () => {
+    setReadMore(!readMore);
+  };
 
   return (
     <Container>
@@ -310,7 +326,9 @@ const MarketingModal: React.FC<MktModalProps> = ({
         </ModalBody>
 
         <ModalFooter>
-          <Read href="#4">Continue reading</Read>
+          <Read href="#4" onClick={changeReadMore} readMore={readMore}>
+            Continue reading
+          </Read>
           <Button variant="yellow" onClick={startEarning}>
             Start Earning
           </Button>
