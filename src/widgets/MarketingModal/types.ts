@@ -4,7 +4,7 @@ export type Handler = () => void;
 export interface MktModalProps {
   onDismiss: Handler;
   goToFarms: Handler;
-  connectWallet: Handler;
+  connectWallet: () => void;
   goToLiquidity: Handler;
   startEarning: Handler;
   title: string;
