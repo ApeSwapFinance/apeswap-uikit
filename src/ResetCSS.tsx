@@ -64,7 +64,8 @@ const ResetCSS = createGlobalStyle`
     box-sizing: border-box;
   }
   * {
-    font-family: 'Titan One', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Titan One', sans-serif; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
