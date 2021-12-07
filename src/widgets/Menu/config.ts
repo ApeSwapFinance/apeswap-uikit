@@ -54,6 +54,11 @@ export const links = [
     href: "/vaults",
   },
   {
+    label: "Burn",
+    icon: "GameBurnIcon",
+    href: "/burn",
+  },
+  {
     label: "Profile & Teams",
     icon: "GroupsIcon",
     items: [
