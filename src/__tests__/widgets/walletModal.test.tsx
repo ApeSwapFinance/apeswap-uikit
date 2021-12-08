@@ -18,11 +18,7 @@ it("renders ConnectModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-<<<<<<< HEAD
               class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
-=======
-              class="sc-bdfBQB sc-hKgJUU exQCXx MotwG"
->>>>>>> ce669727216ef854f09da8d91647e08f35596c7e
               color="text"
               font-family="Titan One"
             >
@@ -587,11 +583,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-<<<<<<< HEAD
               class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
-=======
-              class="sc-bdfBQB sc-hKgJUU exQCXx MotwG"
->>>>>>> ce669727216ef854f09da8d91647e08f35596c7e
               color="text"
               font-family="Titan One"
             >
