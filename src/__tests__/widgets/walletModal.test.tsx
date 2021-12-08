@@ -18,8 +18,9 @@ it("renders ConnectModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-              class="sc-bdfBQB sc-hKgJUU exQCXx dBexIX"
+              class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
               color="text"
+              font-family="Titan One"
             >
               Connect to a wallet
             </h2>
@@ -543,7 +544,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <a
-            class="sc-bdfBQB sc-gsTEea jkqVLC hPJgBR sc-iqHYmW caHWYL"
+            class="sc-bdfBQB sc-gsTEea jkqVLC jRwQzX sc-iqHYmW caHWYL"
             color="primary"
             href="https://docs.binance.org/smart-chain/wallet/metamask.html"
             rel="noreferrer noopener"
@@ -582,8 +583,9 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-              class="sc-bdfBQB sc-hKgJUU exQCXx dBexIX"
+              class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
               color="text"
+              font-family="Titan One"
             >
               Your wallet
             </h2>
@@ -620,7 +622,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR hmvUZa"
           >
             <a
-              class="sc-bdfBQB sc-gsTEea jolVty bCxsBY"
+              class="sc-bdfBQB sc-gsTEea jolVty jRwQzX"
               color="primary"
               font-family="poppins"
               href="https://bscscan.com/address/undefined"
