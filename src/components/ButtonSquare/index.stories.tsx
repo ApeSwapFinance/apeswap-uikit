@@ -27,11 +27,13 @@ export const Default: React.FC = () => {
     <>
       {Object.values(variants).map((variant) => (
         <Row key={variant}>
-          <ButtonSquare variant={variant}>{capitalize(variant)}</ButtonSquare>
-          <ButtonSquare variant={variant} disabled>
+          <ButtonSquare variant={variant} fontFamily="Titan One">
+            {capitalize(variant)}
+          </ButtonSquare>
+          <ButtonSquare variant={variant} fontFamily="Titan One" disabled>
             Disabled
           </ButtonSquare>
-          <ButtonSquare variant={variant} size="sm">
+          <ButtonSquare variant={variant} fontFamily="Titan One" size="sm">
             Small
           </ButtonSquare>
         </Row>
@@ -44,31 +46,37 @@ export const Variants: React.FC = () => {
   return (
     <BrowserRouter>
       <Row>
-        <ButtonSquare as="a" href="https://apeswap.finance" target="_blank" rel="noreferrer">
+        <ButtonSquare as="a" href="https://apeswap.finance" target="_blank" rel="noreferrer" fontFamily="Titan One">
           As an anchor
         </ButtonSquare>
-        <ButtonSquare as={Link} to="/router-link" variant="secondary">
+        <ButtonSquare as={Link} to="/router-link" variant="secondary" fontFamily="Titan One">
           As an React Router link
         </ButtonSquare>
-        <ButtonSquare as="a" href="https://apeswap.finance" disabled>
+        <ButtonSquare as="a" href="https://apeswap.finance" disabled fontFamily="Titan One">
           As an anchor (disabled)
         </ButtonSquare>
       </Row>
       <Row>
-        <ButtonSquare fullWidth>Full size</ButtonSquare>
-      </Row>
-      <Row>
-        <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
-          Approving
-        </ButtonSquare>
-        <ButtonSquare isLoading variant="success">
-          Approving
+        <ButtonSquare fullWidth fontFamily="Titan One">
+          Full size
         </ButtonSquare>
       </Row>
       <Row>
-        <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
-        <ButtonSquare endIcon={<LogoIcon />}>End Icon</ButtonSquare>
-        <ButtonSquare startIcon={<LogoIcon />} endIcon={<LogoIcon />}>
+        <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />} fontFamily="Titan One">
+          Approving
+        </ButtonSquare>
+        <ButtonSquare isLoading variant="success" fontFamily="Titan One">
+          Approving
+        </ButtonSquare>
+      </Row>
+      <Row>
+        <ButtonSquare startIcon={<LogoIcon />} fontFamily="Titan One">
+          Start Icon
+        </ButtonSquare>
+        <ButtonSquare endIcon={<LogoIcon />} fontFamily="Titan One">
+          End Icon
+        </ButtonSquare>
+        <ButtonSquare startIcon={<LogoIcon />} endIcon={<LogoIcon />} fontFamily="Titan One">
           Start & End Icon
         </ButtonSquare>
       </Row>
