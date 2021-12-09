@@ -161,6 +161,11 @@ const Action = styled.p`
       background: transparent;
       padding: 0;
       font-weight: 500;
+
+      ${({ theme }) => theme.mediaQueries.md} {
+        font-size: 16px;
+      }
+
       &:hover {
         cursor: pointer;
       }
