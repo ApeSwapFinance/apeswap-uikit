@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { MktModalProps } from ".";
-import MarketingModal from "./MarketingModal";
+import { MktModalProps, MarketingModal } from ".";
 import { Connected } from "../Menu/index.stories";
 
 export default {
