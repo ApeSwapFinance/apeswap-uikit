@@ -104,7 +104,14 @@ const PanelFooter: React.FC<Props> = ({
               return (
                 <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
                   {social.items.map((item) => (
-                    <Link external key={item.label} href={item.href} aria-label={item.label} color="text">
+                    <Link
+                      external
+                      key={item.label}
+                      href={item.href}
+                      aria-label={item.label}
+                      color="text"
+                      fontFamily="Titan One"
+                    >
                       {item.label}
                     </Link>
                   ))}
@@ -134,8 +141,10 @@ const PanelFooter: React.FC<Props> = ({
           <Dropdown
             position="top-right"
             target={
-              <Button variant="text" startIcon={<LanguageIcon color="text" width="24px" fontFamily="poppins" />}>
-                <Text color="text">{currentLang?.toUpperCase()}</Text>
+              <Button variant="text" startIcon={<LanguageIcon color="text" width="24px" />}>
+                <Text color="text" fontFamily="Titan One">
+                  {currentLang?.toUpperCase()}
+                </Text>
               </Button>
             }
           >
