@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
-import { MktModalProps } from "./types";
 import { CloseIcon } from "../../components/Svg";
-import { Button, FarmApe } from "../..";
+import { Button } from "../../components/Button";
+import { FarmApe } from "../../components/Image";
+import { MktModalProps } from "./types";
 
 import Step from "./Step";
 
