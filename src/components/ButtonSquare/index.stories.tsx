@@ -5,7 +5,6 @@ import capitalize from "lodash/capitalize";
 import Flex from "../Flex/Flex";
 import { LogoIcon, AddIcon, AutoRenewIcon } from "../Svg";
 import ButtonSquare from "./ButtonSquare";
-import Text from "../Text/Text";
 import IconButtonSquare from "./IconButtonSquare";
 import { variants } from "./types";
 

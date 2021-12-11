@@ -1,7 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
 import getFontFamily from "../../util/getFontFamily";
-import getColor from "../../util/getColor";
 import { ButtonSquareProps, ButtonSquareThemeVariant, variants } from "./types";
 
 type ThemedProps = {
@@ -48,7 +47,6 @@ const getButtonVariantProp =
 
 const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
-  /* background-color: ${getButtonVariantProp("background")}; */
   background-color: #ffb300;
   border-radius: 5px;
   border: none;
