@@ -5,6 +5,7 @@ import capitalize from "lodash/capitalize";
 import Flex from "../Flex/Flex";
 import { LogoIcon, AddIcon, AutoRenewIcon } from "../Svg";
 import ButtonSquare from "./ButtonSquare";
+import Text from "../Text/Text";
 import IconButtonSquare from "./IconButtonSquare";
 import { variants } from "./types";
 
@@ -25,19 +26,17 @@ export default {
 export const Default: React.FC = () => {
   return (
     <>
-      {Object.values(variants).map((variant) => (
-        <Row key={variant}>
-          <ButtonSquare variant={variant} fontFamily="Titan One">
-            {capitalize(variant)}
-          </ButtonSquare>
-          <ButtonSquare variant={variant} fontFamily="Titan One" disabled>
-            Disabled
-          </ButtonSquare>
-          <ButtonSquare variant={variant} fontFamily="Titan One" size="sm">
-            Small
-          </ButtonSquare>
-        </Row>
-      ))}
+      {/* {Object.values(variants).map((variant) => ( */}
+      <Row>
+        <ButtonSquare variant={variants.PRIMARY}>{capitalize(variants.PRIMARY)}</ButtonSquare>
+        <ButtonSquare variant={variants.PRIMARY} disabled>
+          Disabled
+        </ButtonSquare>
+        <ButtonSquare variant={variants.PRIMARY} size="sm">
+          Small
+        </ButtonSquare>
+      </Row>
+      {/* ))} */}
     </>
   );
 };
@@ -46,37 +45,31 @@ export const Variants: React.FC = () => {
   return (
     <BrowserRouter>
       <Row>
-        <ButtonSquare as="a" href="https://apeswap.finance" target="_blank" rel="noreferrer" fontFamily="Titan One">
+        <ButtonSquare as="a" href="https://apeswap.finance" target="_blank" rel="noreferrer">
           As an anchor
         </ButtonSquare>
-        <ButtonSquare as={Link} to="/router-link" variant="secondary" fontFamily="Titan One">
+        <ButtonSquare as={Link} to="/router-link" variant="secondary">
           As an React Router link
         </ButtonSquare>
-        <ButtonSquare as="a" href="https://apeswap.finance" disabled fontFamily="Titan One">
+        <ButtonSquare as="a" href="https://apeswap.finance" disabled>
           As an anchor (disabled)
         </ButtonSquare>
       </Row>
       <Row>
-        <ButtonSquare fullWidth fontFamily="Titan One">
-          Full size
+        <ButtonSquare fullWidth>Full size</ButtonSquare>
+      </Row>
+      <Row>
+        <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
+          Approving
+        </ButtonSquare>
+        <ButtonSquare isLoading variant="success">
+          Approving
         </ButtonSquare>
       </Row>
       <Row>
-        <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />} fontFamily="Titan One">
-          Approving
-        </ButtonSquare>
-        <ButtonSquare isLoading variant="success" fontFamily="Titan One">
-          Approving
-        </ButtonSquare>
-      </Row>
-      <Row>
-        <ButtonSquare startIcon={<LogoIcon />} fontFamily="Titan One">
-          Start Icon
-        </ButtonSquare>
-        <ButtonSquare endIcon={<LogoIcon />} fontFamily="Titan One">
-          End Icon
-        </ButtonSquare>
-        <ButtonSquare startIcon={<LogoIcon />} endIcon={<LogoIcon />} fontFamily="Titan One">
+        <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
+        <ButtonSquare endIcon={<LogoIcon />}>End Icon</ButtonSquare>
+        <ButtonSquare startIcon={<LogoIcon />} endIcon={<LogoIcon />}>
           Start & End Icon
         </ButtonSquare>
       </Row>

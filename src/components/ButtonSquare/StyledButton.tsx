@@ -1,6 +1,7 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
 import getFontFamily from "../../util/getFontFamily";
+import getColor from "../../util/getColor";
 import { ButtonSquareProps, ButtonSquareThemeVariant, variants } from "./types";
 
 type ThemedProps = {
@@ -47,6 +48,7 @@ const getButtonVariantProp =
 
 const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
+  /* background-color: ${getButtonVariantProp("background")}; */
   background-color: #ffb300;
   border-radius: 5px;
   border: none;
@@ -54,8 +56,8 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   color: white;
   cursor: pointer;
   display: inline-flex;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: ${({ fontSize }) => fontSize || "14px"};
+  font-weight: 700;
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
