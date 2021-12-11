@@ -54,7 +54,7 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   color: white;
   cursor: pointer;
   display: inline-flex;
-  font-size: ${({ fontSize }) => fontSize || "14px"};
+  font-size: ${({ fontSize }) => fontSize || "12px"};
   font-weight: 700;
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   /* max-content instead of auto for Safari fix */
