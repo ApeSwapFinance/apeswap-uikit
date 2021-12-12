@@ -27,6 +27,9 @@ export type ButtonSquareProps = {
   external?: boolean;
   isLoading?: boolean;
   disabled?: boolean;
+  fontFamily?: string;
+  fontSize?: string;
+  color?: string;
 } & ButtonSquareTypes &
   SpaceProps;
 

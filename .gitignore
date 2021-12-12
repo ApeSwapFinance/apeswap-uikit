@@ -18,5 +18,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# iCloud generated
+
+#VSCode Files
+# vs code
+.vscode/launch.json
+.vscode/settings.json
+
+#iCloud
 *.icloud
+.icloud/

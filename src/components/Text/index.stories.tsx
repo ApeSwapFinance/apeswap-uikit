@@ -42,7 +42,7 @@ export const Default: React.FC = () => {
   return (
     <div>
       <Text>Default</Text>
-      <Text fontFamily="poppins">fontFamily poppins</Text>
+      <Text fontFamily="Titan One">fontFamily Titan One</Text>
       <Text textAlign="center">textAlign Center</Text>
       <Text fontWeight={700}>fontWeight 700</Text>
       <Text mb="1" mt="1" ml="1" mr="1">

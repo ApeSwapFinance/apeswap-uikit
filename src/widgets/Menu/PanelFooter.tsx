@@ -88,7 +88,7 @@ const PanelFooter: React.FC<Props> = ({
                 target="_blank"
               >
                 <ApeSwapRoundIcon width="24px" mr="8px" />
-                <Text color="text" fontFamily="poppins" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+                <Text color="text" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
               </PriceLink>
             ) : (
               <Skeleton width={80} height={24} />
@@ -124,7 +124,7 @@ const PanelFooter: React.FC<Props> = ({
           {/* alignItems center is a Safari fix */}
           <Flex alignItems="center">
             <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
-            <Text color="textDisabled" mx="4px" fontFamily="poppins" bold>
+            <Text color="textDisabled" mx="4px" bold>
               /
             </Text>
             <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
@@ -134,8 +134,10 @@ const PanelFooter: React.FC<Props> = ({
           <Dropdown
             position="top-right"
             target={
-              <Button variant="text" startIcon={<LanguageIcon color="text" width="24px" fontFamily="poppins" />}>
-                <Text color="text">{currentLang?.toUpperCase()}</Text>
+              <Button variant="text" startIcon={<LanguageIcon color="text" width="24px" />}>
+                <Text color="text" bold>
+                  {currentLang?.toUpperCase()}
+                </Text>
               </Button>
             }
           >

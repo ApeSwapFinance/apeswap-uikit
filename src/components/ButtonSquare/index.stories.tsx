@@ -25,17 +25,17 @@ export default {
 export const Default: React.FC = () => {
   return (
     <>
-      {Object.values(variants).map((variant) => (
-        <Row key={variant}>
-          <ButtonSquare variant={variant}>{capitalize(variant)}</ButtonSquare>
-          <ButtonSquare variant={variant} disabled>
-            Disabled
-          </ButtonSquare>
-          <ButtonSquare variant={variant} size="sm">
-            Small
-          </ButtonSquare>
-        </Row>
-      ))}
+      {/* {Object.values(variants).map((variant) => ( */}
+      <Row>
+        <ButtonSquare variant={variants.PRIMARY}>{capitalize(variants.PRIMARY)}</ButtonSquare>
+        <ButtonSquare variant={variants.PRIMARY} disabled>
+          Disabled
+        </ButtonSquare>
+        <ButtonSquare variant={variants.PRIMARY} size="sm">
+          Small
+        </ButtonSquare>
+      </Row>
+      {/* ))} */}
     </>
   );
 };

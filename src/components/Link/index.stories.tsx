@@ -1,5 +1,5 @@
 import React from "react";
-import { ApeswapsIcon } from "../Svg";
+import { ApeSwapIcon } from "../Svg";
 import { Link, LinkExternal } from "./index";
 
 export default {
@@ -26,8 +26,8 @@ export const Default: React.FC = () => {
         <Link href="/">Default</Link>
       </div>
       <div>
-        <Link href="/" fontFamily="poppins">
-          Poppins
+        <Link href="/" fontFamily="Titan One">
+          Titan One
         </Link>
       </div>
       <div>
@@ -43,11 +43,11 @@ export const Default: React.FC = () => {
       <div>
         <Link href="/">
           With icon
-          <ApeswapsIcon />
+          <ApeSwapIcon />
         </Link>
       </div>
       <div>
-        <LinkExternal href="/">LinkExternal</LinkExternal>
+        <LinkExternal href="/">Link External</LinkExternal>
       </div>
     </div>
   );

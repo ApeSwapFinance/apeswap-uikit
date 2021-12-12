@@ -54,6 +54,11 @@ export const links = [
     href: "/vaults",
   },
   {
+    label: "Burn",
+    icon: "GameBurnIcon",
+    href: "/burn",
+  },
+  {
     label: "Profile & Teams",
     icon: "GroupsIcon",
     items: [
@@ -148,7 +153,7 @@ export const socials = [
       },
       {
         label: "Regional",
-        href: "https://apeswap.gitbook.io/apeswap-finance/social-media-and-resources/international-telegram-groups",
+        href: "https://apeswap.gitbook.io/apeswap-finance/contact-us/social-media-and-resources",
       },
     ],
   },

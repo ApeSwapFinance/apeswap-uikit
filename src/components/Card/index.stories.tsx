@@ -61,7 +61,9 @@ export const CardHeader: React.FC = () => {
     <div style={{ padding: "32px", width: "500px" }}>
       <Card>
         <UIKitCardHeader>
-          <Heading size="xl">Card Header</Heading>
+          <Heading size="xl" fontFamily="Titan One">
+            Card Header
+          </Heading>
         </UIKitCardHeader>
         <CardBody>Body</CardBody>
         <CardFooter>Footer</CardFooter>
@@ -73,23 +75,23 @@ export const Ribbon: React.FC = () => {
   return (
     <div style={{ padding: "32px", width: "500px" }}>
       <Row>
-        <Card ribbon={<CardRibbon text="Ribbon" />}>
+        <Card ribbon={<CardRibbon text="Ribbon" fontFamily="Titan One" />}>
           <div style={{ height: "112px", backgroundColor: "#191326" }} />
           <CardBody style={{ height: "150px" }}>Body</CardBody>
         </Card>
       </Row>
       <Row>
-        <Card ribbon={<CardRibbon variantColor="textDisabled" text="Ribbon with Long Text" />}>
+        <Card ribbon={<CardRibbon variantColor="textDisabled" text="Ribbon with Long Text" fontFamily="Titan One" />}>
           <CardBody style={{ height: "150px" }}>Ribbons will truncate when text is too long</CardBody>
         </Card>
       </Row>
       <Row>
-        <Card ribbon={<CardRibbon variantColor="success" text="Success" />}>
+        <Card ribbon={<CardRibbon variantColor="success" text="Success" fontFamily="Titan One" />}>
           <CardBody style={{ height: "150px" }}>Card</CardBody>
         </Card>
       </Row>
       <Row>
-        <Card ribbon={<CardRibbon variantColor="failure" text="Failure" />}>
+        <Card ribbon={<CardRibbon variantColor="failure" text="Failure" fontFamily="Titan One" />}>
           <CardBody style={{ height: "150px" }}>Any Color in the theme</CardBody>
         </Card>
       </Row>
