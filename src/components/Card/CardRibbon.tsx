@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
+import getFontFamily from "../../util/getFontFamily";
+import { Text } from "../Text";
 import { CardRibbonProps } from "./types";
 
 interface StyledCardRibbonProps extends CardRibbonProps {
@@ -19,6 +21,7 @@ const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
   transform: translateX(30%) translateY(0%) rotate(45deg);
   transform-origin: top left;
   width: 96px;
+  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
 
   &:before,
   &:after {
@@ -39,7 +42,7 @@ const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
     left: 100%;
   }
 
-  & > div {
+  & > p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -47,10 +50,12 @@ const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
   }
 `;
 
-const CardRibbon: React.FC<CardRibbonProps> = ({ variantColor, text }) => {
+const CardRibbon: React.FC<CardRibbonProps> = ({ variantColor, text, fontFamily }) => {
   return (
     <StyledCardRibbon variantColor={variantColor}>
-      <div title={text}>{text}</div>
+      <Text as="p" fontFamily={fontFamily} color="white">
+        {text}
+      </Text>
     </StyledCardRibbon>
   );
 };

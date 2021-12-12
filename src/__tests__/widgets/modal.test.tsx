@@ -21,15 +21,16 @@ it("renders correctly", () => {
             class="sc-dlfnuX sc-fubCzh jdoaqA uWqIw"
           >
             <h2
-              class="sc-bdfBQB sc-gsTEea exQCXx eiAoJQ"
+              class="sc-bdfBQB sc-gsTEea lmXylT jXxUvG"
               color="text"
+              font-family="Titan One"
             >
               Title
             </h2>
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-eCstlR hZuufJ sc-jSgvzq jBWhsE"
+            class="sc-eCstlR VUGRZ sc-jSgvzq jBWhsE"
             type="button"
           >
             <svg

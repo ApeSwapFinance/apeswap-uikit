@@ -18,15 +18,16 @@ it("renders ConnectModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-              class="sc-bdfBQB sc-hKgJUU exQCXx dBexIX"
+              class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
               color="text"
+              font-family="Titan One"
             >
               Connect to a wallet
             </h2>
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jSgvzq dLHEzh sc-gKseQn eDJfmq"
+            class="sc-jSgvzq YnMfp sc-gKseQn eDJfmq"
             type="button"
           >
             <svg
@@ -46,7 +47,7 @@ it("renders ConnectModal correctly", () => {
           class="sc-eCstlR lhrxDk"
         >
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
@@ -191,7 +192,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
@@ -237,7 +238,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
@@ -268,7 +269,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
@@ -305,7 +306,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
@@ -338,7 +339,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
@@ -405,7 +406,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
@@ -440,7 +441,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq Ernzv"
+            class="sc-jSgvzq bPTOyr"
             font-family="poppins"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
@@ -494,7 +495,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq iCMhOP"
+            class="sc-jSgvzq iwlUfn"
             font-family="poppins"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
@@ -543,7 +544,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <a
-            class="sc-bdfBQB sc-gsTEea jkqVLC hPJgBR sc-iqHYmW caHWYL"
+            class="sc-bdfBQB sc-gsTEea jkqVLC jRwQzX sc-iqHYmW caHWYL"
             color="primary"
             href="https://docs.binance.org/smart-chain/wallet/metamask.html"
             rel="noreferrer noopener"
@@ -582,15 +583,16 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-              class="sc-bdfBQB sc-hKgJUU exQCXx dBexIX"
+              class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
               color="text"
+              font-family="Titan One"
             >
               Your wallet
             </h2>
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jSgvzq dLHEzh sc-gKseQn eDJfmq"
+            class="sc-jSgvzq YnMfp sc-gKseQn eDJfmq"
             type="button"
           >
             <svg
@@ -620,7 +622,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR hmvUZa"
           >
             <a
-              class="sc-bdfBQB sc-gsTEea jolVty bCxsBY"
+              class="sc-bdfBQB sc-gsTEea jolVty jRwQzX"
               color="primary"
               font-family="poppins"
               href="https://bscscan.com/address/undefined"
@@ -669,7 +671,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR erPcLK"
           >
             <button
-              class="sc-jSgvzq fZIhHS"
+              class="sc-jSgvzq bpjloq"
               font-family="poppins"
               type="button"
             >

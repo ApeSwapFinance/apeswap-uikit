@@ -51,7 +51,6 @@ const StyledButton = styled.button<ButtonProps>`
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
   border-radius: 16px;
-  font-family: Poppins;
   font-weight: 700;
   box-shadow: ${getButtonVariantProp("boxShadow")};
   color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
