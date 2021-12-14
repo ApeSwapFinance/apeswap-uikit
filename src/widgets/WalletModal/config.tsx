@@ -3,6 +3,7 @@ import MathWallet from "./icons/MathWallet";
 import TokenPocket from "./icons/TokenPocket";
 import TrustWallet from "./icons/TrustWallet";
 import WalletConnect from "./icons/WalletConnect";
+import BlankWallet from "./icons/BlankWallet";
 import BinanceChain from "./icons/BinanceChain";
 import OntoWallet from "./icons/OntoWallet";
 import Nabox from "./icons/Nabox";
@@ -24,6 +25,11 @@ const connectors: Config[] = [
     title: "WalletConnect",
     icon: WalletConnect,
     connectorId: ConnectorNames.WalletConnect,
+  },
+  {
+    title: "BlankWallet",
+    icon: BlankWallet,
+    connectorId: ConnectorNames.Injected,
   },
   {
     title: "TokenPocket",
