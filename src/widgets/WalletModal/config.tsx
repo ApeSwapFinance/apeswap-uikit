@@ -7,7 +7,8 @@ import BinanceChain from "./icons/BinanceChain";
 import OntoWallet from "./icons/OntoWallet";
 import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
-import { Config, ConnectorNames } from "./types";
+import Coinbase from "./icons/Coinbase";
+import {Config, ConnectorNames} from "./types";
 
 const connectors: Config[] = [
   {
@@ -55,6 +56,11 @@ const connectors: Config[] = [
     icon: Nabox,
     connectorId: ConnectorNames.Injected,
   },
+  {
+    title: "Coinbase Wallet",
+    icon: Coinbase,
+    connectorId: ConnectorNames.Walletlink
+  }
 ];
 
 export default connectors;
