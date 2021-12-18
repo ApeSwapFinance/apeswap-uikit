@@ -15,16 +15,16 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-bdfBQB ekFJNm"
+        class="sc-bdvvtL jiXccD"
       >
         <button
-          class="sc-gsTEea ksdvNL"
+          class="sc-gsDKAQ gWSpMb"
           type="button"
         >
           Item 1
         </button>
         <button
-          class="sc-gsTEea gFYYir sc-dlfnuX dDXqlA"
+          class="sc-gsDKAQ kMVFnf sc-dkPtRN iTFqBY"
           type="button"
         >
           Item 2
