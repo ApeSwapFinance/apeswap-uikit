@@ -7,7 +7,7 @@ it("renders link correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <a
-        class="sc-bdvvtL sc-gsDKAQ iCKKXP kuhloL"
+        class="sc-bdfBQB sc-gsTEea jkqVLC jRwQzX"
         color="primary"
         href="https://apeswap.finance"
       >
@@ -22,7 +22,7 @@ it("renders link external link correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <a
-        class="sc-bdvvtL sc-gsDKAQ iCKKXP kuhloL"
+        class="sc-bdfBQB sc-gsTEea jkqVLC jRwQzX"
         color="primary"
         href="https://apeswap.finance"
         rel="noreferrer noopener"
@@ -30,7 +30,7 @@ it("renders link external link correctly", () => {
       >
         Link
         <svg
-          class="sc-dkPtRN fjJMkt"
+          class="sc-dlfnuX biLxKd"
           color="primary"
           viewBox="0 0 24 24"
           width="20px"
