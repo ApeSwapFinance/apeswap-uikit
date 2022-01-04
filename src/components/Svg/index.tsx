@@ -1,3 +1,7 @@
+export { default as PFarmingIcon } from "./Icons/PFarming";
+export { default as GovernanceIcon } from "./Icons/Governance";
+export { default as XPoolsIcon } from "./Icons/XPools";
+export { default as IaoIcon } from "./Icons/Iao";
 export { default as AddIcon } from "./Icons/Add";
 export { default as ApeIcon } from "./Icons/Ape";
 export { default as ArrowBackIcon } from "./Icons/ArrowBack";
