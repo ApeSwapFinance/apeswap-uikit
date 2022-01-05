@@ -4,5 +4,7 @@ import { SpaceProps } from "styled-system";
 
 export interface SvgProps extends SVGAttributes<HTMLOrSVGElement>, SpaceProps {
   theme?: DefaultTheme;
+  color?: string;
+  bgColor?: string;
   spin?: boolean;
 }
