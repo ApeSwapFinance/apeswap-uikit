@@ -1,4 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
+import postcss from 'rollup-plugin-postcss';
 import pkg from "./package.json";
 
 export default {
@@ -7,5 +8,11 @@ export default {
     { file: pkg.main, format: "cjs" },
     { file: pkg.module, format: "es" },
   ],
-  plugins: [typescript()],
+  plugins: [
+    postcss({
+      modules: true,
+      minimize: true
+    }),
+    typescript()
+  ]
 };

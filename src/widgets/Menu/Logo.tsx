@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Flex from "../../components/Flex/Flex";
 import { HamburgerIcon, HamburgerCloseIcon, FullLogo, MobileIcon } from "./icons";
 import MenuButton from "./MenuButton";
-import { useMatchBreakpoints } from "../../hooks";
+import styles from "./css/menu.module.css";
 
 interface Props {
   isPushed: boolean;
@@ -31,20 +31,23 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledMobileIcon = styled(MobileIcon).attrs({
+  className: styles.mobileIcon,
+})``;
+
+const StyledFullLogo = styled(FullLogo).attrs({
+  className: styles.fullLogo,
+})``;
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
-  const { isSm, isXs } = useMatchBreakpoints();
-  const innerLogo =
-    isSm || isXs ? (
-      <>
-        <MobileIcon width="40px" />
-      </>
-    ) : (
-      <>
-        <FullLogo width="160px" />
-      </>
-    );
+  const innerLogo = (
+    <>
+      <StyledMobileIcon width="40px" />
+      <StyledFullLogo width="160px" />
+    </>
+  );
 
   return (
     <Flex>

@@ -1,5 +1,6 @@
 {
   "extends": "@apeswapfinance/eslint-config-apeswap",
+  "plugins": ["@innovationupstream/styled-components"],
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
@@ -11,6 +12,8 @@
           "rollup.config.js"
         ]
       }
-    ]
+    ],
+    "@innovationupstream/styled-components/no-media-query": 1,
+    "@innovationupstream/styled-components/no-expression": 1
   }
 }

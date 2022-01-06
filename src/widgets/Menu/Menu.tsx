@@ -9,11 +9,12 @@ import Panel from "./Panel";
 import UserBlock from "./UserBlock";
 import Text from "../../components/Text/Text";
 import { NavProps } from "./types";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { MENU_HEIGHT } from "./config";
 import Avatar from "./Avatar";
 import Skeleton from "../../components/Skeleton/Skeleton";
 import { ApeSwapRoundIcon } from "../../components/Svg";
 import NetworkButton from "./NetworkButton";
+import styles from "./css/menu.module.css";
 
 const Wrapper = styled.div`
   position: relative;
@@ -51,11 +52,12 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   transform: translate3d(0, 0, 0);
 `;
 
-const StyledFooter = styled.nav`
+const StyledFooter = styled.nav.attrs({
+  className: styles.footer,
+})`
   position: fixed;
   bottom: 0;
   left: 0;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 8px;
@@ -72,26 +74,32 @@ const BodyWrapper = styled.div`
   display: flex;
 `;
 
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+interface InnerProps {
+  isPushed: boolean;
+  showMenu: boolean;
+}
+
+const Inner = styled.div.attrs<InnerProps>((props) => ({
+  className: props.isPushed ? styles.innerPushed : styles.inner,
+}))<InnerProps>`
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
   transition: margin-top 0.2s;
   transform: translate3d(0, 0, 0);
   font-family: Poppins;
   font-weight: 700;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-  }
 `;
 
-const MobileOnlyOverlay = styled(Overlay)`
+const MobileOnlyOverlay = styled(Overlay).attrs({
+  className: styles.mobileOnlyOverlay,
+})`
   position: fixed;
   height: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    display: none;
-  }
 `;
+
+const StyledFlex = styled(Flex).attrs({
+  className: styles.networkIcon,
+})``;
 
 const Menu: React.FC<NavProps> = ({
   account,
@@ -109,9 +117,8 @@ const Menu: React.FC<NavProps> = ({
   chainId,
   switchNetwork,
 }) => {
-  const { isXl, isSm, isXs } = useMatchBreakpoints();
+  const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
-  const isTrueMobile = isSm || isXs === true;
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
@@ -158,11 +165,9 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
-          {!isTrueMobile && (
-            <Flex marginRight="10px">
-              <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
-            </Flex>
-          )}
+          <StyledFlex marginRight="10px">
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+          </StyledFlex>
           <UserBlock account={account} login={login} logout={logout} />
           {profile && <Avatar profile={profile} />}
         </Flex>
@@ -186,26 +191,24 @@ const Menu: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
-      {(isSm || isXs) && (
-        <StyledFooter>
-          <Flex paddingLeft="10px">
-            {bananaPriceUsd ? (
-              <PriceLink
-                href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
-                target="_blank"
-              >
-                <ApeSwapRoundIcon width="24px" mr="8px" />
-                <Text color="text" fontFamily="poppins" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
-              </PriceLink>
-            ) : (
-              <Skeleton width={80} height={24} />
-            )}
-          </Flex>
-          <Flex>
-            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
-          </Flex>
-        </StyledFooter>
-      )}
+      <StyledFooter>
+        <Flex paddingLeft="10px">
+          {bananaPriceUsd ? (
+            <PriceLink
+              href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+              target="_blank"
+            >
+              <ApeSwapRoundIcon width="24px" mr="8px" />
+              <Text color="text" fontFamily="poppins" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+            </PriceLink>
+          ) : (
+            <Skeleton width={80} height={24} />
+          )}
+        </Flex>
+        <Flex>
+          <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+        </Flex>
+      </StyledFooter>
     </Wrapper>
   );
 };

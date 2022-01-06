@@ -1,0 +1,40 @@
+@value xs, sm, md, lg, nav, sidebar_width_full, sidebar_width_reduced from "../../../theme/vars.module.css";
+
+@media nav {
+  .inner {
+    margin-left: sidebar_width_reduced;
+  }
+  .innerPushed {
+    margin-left: sidebar_width_full;
+  }
+  .mobileOnlyOverlay {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .mobileIcon {
+    display: initial;
+  }
+  .fullLogo {
+    display: none;
+  }
+  .footer {
+    display: flex;
+  }
+  .networkIcon {
+    display: none !important;
+  }
+}
+
+@media sm {
+  .mobileIcon {
+    display: none;
+  }
+  .fullLogo {
+    display: initial;
+  }
+  .footer {
+    display: none;
+  }
+}

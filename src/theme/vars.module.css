@@ -1,0 +1,9 @@
+@value lg: screen and (min-width: 968px);
+@value md: screen and (min-width: 852px);
+@value nav: screen and (min-width: 968px);
+@value sm: screen and (min-width: 576px);
+@value xl: screen and (min-width: 1080px);
+@value xs: screen and (min-width: 370px);
+
+@value sidebar_width_full: 240px;
+@value sidebar_width_reduced: 56px;
