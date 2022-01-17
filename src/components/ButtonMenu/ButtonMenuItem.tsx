@@ -47,7 +47,17 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
     );
   }
 
-  return <Button as={as} size={size} variant={variant} isMobile={isMobile} fontFamily={fontFamily} fontSize={fontSize} {...props} />;
+  return (
+    <Button
+      as={as}
+      size={size}
+      variant={variant}
+      isMobile={isMobile}
+      fontFamily={fontFamily}
+      fontSize={fontSize}
+      {...props}
+    />
+  );
 };
 
 export default ButtonMenuItem;

@@ -63,7 +63,7 @@ const StyledButton = styled.button<ButtonProps>`
   align-items: center;
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
-  border-radius: 10px;  
+  border-radius: 10px;
   font-weight: 700;
   box-shadow: ${getButtonVariantProp("boxShadow")};
   color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
