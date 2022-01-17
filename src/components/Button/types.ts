@@ -5,6 +5,7 @@ import { SpaceProps } from "styled-system";
 export const sizes = {
   XS: "xs",
   SM: "sm",
+  MDS: 'mds',
   MD: "md",
 } as const;
 
@@ -30,6 +31,7 @@ export type ButtonProps = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   fullWidth?: boolean;
+  isMobile?: boolean
   as?: "a" | "button" | typeof Link;
   href?: string;
   external?: boolean;

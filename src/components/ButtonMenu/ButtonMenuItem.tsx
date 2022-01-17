@@ -9,11 +9,12 @@ type InactiveButtonProps = {
   colorKey: "primary" | "textSubtle";
   fontFamily?: string;
   fontSize?: string;
+  isMobile?: boolean;
 } & ButtonMenuItemProps;
 
 const InactiveButton = styled(Button)<InactiveButtonProps>`
   background-color: transparent;
-  color: ${({ theme, colorKey }) => theme.colors[colorKey]};
+  color: rgba(122, 122, 122, 1);
   &:hover:not(:disabled):not(:active) {
     background-color: transparent;
   }
@@ -28,6 +29,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
   as,
   fontFamily,
   fontSize,
+  isMobile,
   ...props
 }) => {
   if (!isActive) {
@@ -39,12 +41,13 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
         colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "textSubtle"}
         fontFamily={fontFamily}
         fontSize={fontSize}
+        isMobile={isMobile}
         {...props}
       />
     );
   }
 
-  return <Button as={as} size={size} variant={variant} fontFamily={fontFamily} fontSize={fontSize} {...props} />;
+  return <Button as={as} size={size} variant={variant} isMobile={isMobile} fontFamily={fontFamily} fontSize={fontSize} {...props} />;
 };
 
 export default ButtonMenuItem;
