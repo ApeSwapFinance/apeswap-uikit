@@ -51,7 +51,7 @@ const StyledButton = styled.button<ButtonProps>`
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
   border-radius: 16px;
-  font-weight: 700;
+  font-weight: ${({ fontWeight = 600 }) => fontWeight};
   box-shadow: ${getButtonVariantProp("boxShadow")};
   color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
   cursor: pointer;

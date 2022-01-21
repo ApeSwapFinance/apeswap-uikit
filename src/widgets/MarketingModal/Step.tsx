@@ -12,7 +12,6 @@ const StepCon = styled.div`
 `;
 
 const Number = styled.div`
-  font-family: Poppins;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -23,7 +22,6 @@ const Number = styled.div`
 `;
 
 const HeadText = styled.div`
-  font-family: Poppins;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
