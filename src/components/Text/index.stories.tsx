@@ -42,13 +42,12 @@ export const Default: React.FC = () => {
   return (
     <div>
       <Text>Default</Text>
-      <Text fontFamily="Titan One">fontFamily Titan One</Text>
       <Text textAlign="center">textAlign Center</Text>
-      <Text fontWeight={700}>fontWeight 700</Text>
+      <Text fontWeight={800}>Extra bold (fontWeight 800)</Text>
       <Text mb="1" mt="1" ml="1" mr="1">
         Margins- mb, mt, ml, mr 1
       </Text>
-      <Text bold>Bold text</Text>
+      <Text bold>Bold text (fontWeight 700)</Text>
       <Text small>Small text</Text>
       <Text fontSize="24px">Custom fontsize</Text>
       <Text color="red">Custom color</Text>

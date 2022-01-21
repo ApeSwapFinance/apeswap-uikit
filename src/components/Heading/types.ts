@@ -22,4 +22,5 @@ export interface HeadingProps {
   size?: Sizes;
   fontFamily?: string;
   textAlign?: string;
+  fontWeight?: number;
 }
