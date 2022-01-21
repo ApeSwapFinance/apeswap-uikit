@@ -18,9 +18,9 @@ it("renders ConnectModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-              class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
+              class="sc-bdfBQB sc-hKgJUU exQCXx bqBMLG"
               color="text"
-              font-family="Titan One"
+              font-weight="800"
             >
               Connect to a wallet
             </h2>
@@ -630,9 +630,9 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR sc-pGacB lhqYzu ckseIH"
           >
             <h2
-              class="sc-bdfBQB sc-hKgJUU lmXylT cfXpzN"
+              class="sc-bdfBQB sc-hKgJUU exQCXx bqBMLG"
               color="text"
-              font-family="Titan One"
+              font-weight="800"
             >
               Your wallet
             </h2>

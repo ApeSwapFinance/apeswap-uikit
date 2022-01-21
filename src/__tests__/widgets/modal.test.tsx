@@ -21,9 +21,9 @@ it("renders correctly", () => {
             class="sc-dlfnuX sc-fubCzh jdoaqA uWqIw"
           >
             <h2
-              class="sc-bdfBQB sc-gsTEea lmXylT jXxUvG"
+              class="sc-bdfBQB sc-gsTEea exQCXx eOALXN"
               color="text"
-              font-family="Titan One"
+              font-weight="800"
             >
               Title
             </h2>
