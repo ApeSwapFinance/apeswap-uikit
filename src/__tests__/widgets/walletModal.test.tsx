@@ -27,7 +27,7 @@ it("renders ConnectModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jSgvzq dyojKv sc-gKseQn eDJfmq"
+            class="sc-jSgvzq IIcKf sc-gKseQn eDJfmq"
             type="button"
           >
             <svg
@@ -47,7 +47,7 @@ it("renders ConnectModal correctly", () => {
           class="sc-eCstlR lhrxDk"
         >
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
@@ -192,7 +192,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
@@ -238,7 +238,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
@@ -269,7 +269,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
@@ -306,7 +306,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
@@ -339,7 +339,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
@@ -406,7 +406,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
@@ -441,7 +441,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
@@ -495,7 +495,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq dNrzWN"
+            class="sc-jSgvzq ezJRRl"
             font-family="poppins"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
@@ -544,7 +544,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jSgvzq blWJUV"
+            class="sc-jSgvzq dfFxfd"
             font-family="poppins"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
@@ -639,7 +639,7 @@ it("renders AccountModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jSgvzq dyojKv sc-gKseQn eDJfmq"
+            class="sc-jSgvzq IIcKf sc-gKseQn eDJfmq"
             type="button"
           >
             <svg
@@ -718,7 +718,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCstlR erPcLK"
           >
             <button
-              class="sc-jSgvzq bmyKxt"
+              class="sc-jSgvzq iEhsNZ"
               font-family="poppins"
               type="button"
             >
