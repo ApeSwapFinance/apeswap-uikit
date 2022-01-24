@@ -29,16 +29,14 @@ it("renders correctly", () => {
           class="sc-gKseQn lluEaH"
         >
           <div
-            class="sc-gsTEea gMLdvf"
+            class="sc-gsTEea ixYKcZ"
             color="text"
-            font-family="Titan One"
           >
             Alert title
           </div>
           <p
-            class="sc-gsTEea psapW"
+            class="sc-gsTEea fdVZWU"
             color="text"
-            font-family="Titan One"
           >
             Description
           </p>

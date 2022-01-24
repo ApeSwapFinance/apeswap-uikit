@@ -67,9 +67,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
         <Alert title={title} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
-              <Text as="p" mb="8px" fontFamily="Titan One">
-                {description}
-              </Text>
+              {description}
               <ToastAction action={action} />
             </>
           ) : (

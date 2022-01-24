@@ -46,11 +46,24 @@ const getButtonVariantProp =
     return theme.button[variant][prop];
   };
 
+const getButtonHeight = (size: string | undefined) => {
+  if (size === "sm") {
+    return "28px";
+  }
+  if (size === "mds") {
+    return "36px";
+  }
+  if (size === "md") {
+    return "48px";
+  }
+  return "30px";
+};
+
 const StyledButton = styled.button<ButtonProps>`
   align-items: center;
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
-  border-radius: 16px;
+  border-radius: 10px;
   font-weight: 700;
   box-shadow: ${getButtonVariantProp("boxShadow")};
   color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
@@ -60,12 +73,12 @@ const StyledButton = styled.button<ButtonProps>`
   font-size: ${({ fontSize }) => fontSize || "16px"};
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
-  height: ${({ size }) => (size === "sm" ? "28px" : "48px")};
+  height: ${({ size }) => getButtonHeight(size)};
   line-height: 1;
   letter-spacing: 0.03em;
   justify-content: center;
   outline: 0;
-  padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
+  padding: ${({ isMobile }) => (isMobile ? "0 10px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 
