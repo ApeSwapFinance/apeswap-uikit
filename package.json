@@ -83,7 +83,6 @@
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
     "react-transition-group": "^4.4.1",
-    "styled-system": "^5.1.5",
-    "yalc": "^1.0.0-pre.53"
+    "styled-system": "^5.1.5"
   }
 }
