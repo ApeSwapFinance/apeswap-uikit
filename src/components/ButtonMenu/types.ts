@@ -5,7 +5,7 @@ export type ButtonMenuItemProps = {
   size?: Sizes;
   fontFamily?: string;
   fontSize?: string;
-  isMobile?: boolean
+  isMobile?: boolean;
 } & ButtonProps;
 
 export interface ButtonMenuProps {

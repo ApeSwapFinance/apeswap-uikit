@@ -41,7 +41,7 @@ export const Icons: React.FC = () => {
         const Icon = components[file].default;
         return (
           <Flex key={file} flexDirection="column" alignItems="center" py="4px" px="8px" mb="32px">
-            <Icon size="32px" />
+            <Icon width="32px" height="32px" bgColor="#FFF" color="#af6e5aff" />
             <Text color="text" fontSize="12px">
               {file}
             </Text>
