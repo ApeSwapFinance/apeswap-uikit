@@ -18,7 +18,7 @@ export interface Toast {
   id: string;
   type: Types;
   title: string;
-  description?: string | ReactNode;
+  description?: ReactNode;
   action?: ToastAction;
 }
 
