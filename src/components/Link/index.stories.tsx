@@ -26,12 +26,7 @@ export const Default: React.FC = () => {
         <Link href="/">Default</Link>
       </div>
       <div>
-        <Link href="/" fontFamily="Titan One">
-          Titan One
-        </Link>
-      </div>
-      <div>
-        <Link href="/" color="text">
+        <Link href="/" color="success">
           Custom color
         </Link>
       </div>

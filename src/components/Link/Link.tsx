@@ -5,6 +5,7 @@ import Text from "../Text/Text";
 import { LinkProps } from "./types";
 
 const StyledLink = styled(Text)<LinkProps>`
+  font-weight: ${({ bold, fontWeight }) => (bold ? 600 : fontWeight)};
   display: flex;
   align-items: center;
   width: fit-content;

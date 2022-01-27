@@ -16,7 +16,6 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
   return (
     <Button
       fullWidth
-      fontFamily="poppins"
       variant="tertiary"
       onClick={() => {
         login(walletConfig.connectorId);
@@ -27,7 +26,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Text bold fontFamily="poppins" color="text" mr="16px">
+      <Text fontWeight={600} color="text" mr="16px">
         {title}
       </Text>
       <Icon width="32px" />

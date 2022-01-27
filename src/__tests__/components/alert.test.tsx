@@ -35,7 +35,7 @@ it("renders correctly", () => {
             Alert title
           </div>
           <p
-            class="sc-gsTEea fdVZWU"
+            class="sc-gsTEea kzvUbe"
             color="text"
           >
             Description

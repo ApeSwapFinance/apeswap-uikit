@@ -6,6 +6,7 @@ export interface CardRibbonProps {
   variantColor?: keyof Colors;
   text: string;
   fontFamily?: string;
+  fontWeight?: number;
 }
 
 export type CardTheme = {

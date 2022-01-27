@@ -17,8 +17,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
   <Modal title="Your wallet" onDismiss={onDismiss}>
     <Text
       fontSize="20px"
-      fontFamily="poppins"
-      bold
+      fontWeight={600}
       style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" }}
     >
       {account}
@@ -33,7 +32,6 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       <Button
         size="sm"
         variant="secondary"
-        fontFamily="poppins"
         onClick={() => {
           logout();
           window.localStorage.removeItem(localStorageKey);
