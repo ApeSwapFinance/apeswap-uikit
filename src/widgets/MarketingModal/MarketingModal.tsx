@@ -58,7 +58,7 @@ const ModalHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
-    font-family: Poppins;
+
     align-self: center;
   }
 `;
@@ -74,7 +74,6 @@ const LeftHeader = styled.div`
 `;
 
 const Title = styled.h5`
-  font-family: Poppins;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -91,7 +90,6 @@ const Title = styled.h5`
 `;
 
 const Description = styled.p`
-  font-family: Poppins;
   margin-top: 1em;
   font-weight: 500;
   text-align: center;
@@ -144,7 +142,6 @@ const ModalBody = styled.div`
 `;
 
 const Action = styled.p`
-  font-family: Poppins;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -154,7 +151,6 @@ const Action = styled.p`
   }
   button {
     &.action-link {
-      font-family: Poppins;
       color: #ffb300;
       text-decoration: underline;
       font-size: 14px;
@@ -202,7 +198,6 @@ const ModalFooter = styled.div`
   align-items: center;
   margin-bottom: 40px;
   a {
-    font-family: Poppins;
     color: #ffb300;
     text-decoration: underline;
     font-size: 14px;

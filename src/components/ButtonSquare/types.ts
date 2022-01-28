@@ -29,6 +29,7 @@ export type ButtonSquareProps = {
   disabled?: boolean;
   fontFamily?: string;
   fontSize?: string;
+  fontWeight?: number;
   color?: string;
 } & ButtonSquareTypes &
   SpaceProps;

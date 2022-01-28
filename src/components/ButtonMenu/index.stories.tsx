@@ -70,12 +70,10 @@ export const Default: React.FC = () => {
       </Row>
       <Row>
         <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm" variant="yellow">
-          <ButtonMenuItem fontFamily="poppins" fontSize="12px">
-            Button Font Size
-          </ButtonMenuItem>
-          <ButtonMenuItem fontFamily="poppins">Button 2</ButtonMenuItem>
-          <ButtonMenuItem fontFamily="poppins">Button 3</ButtonMenuItem>
-          <ButtonMenuItem fontFamily="poppins">Button 4</ButtonMenuItem>
+          <ButtonMenuItem fontSize="12px">Button Font Size</ButtonMenuItem>
+          <ButtonMenuItem>Button 2</ButtonMenuItem>
+          <ButtonMenuItem>Button 3</ButtonMenuItem>
+          <ButtonMenuItem>Button 4</ButtonMenuItem>
         </ButtonMenu>
       </Row>
     </>

@@ -12,6 +12,7 @@ const StyleButton = styled(Text).attrs({ role: "button" })`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.primary};
+  font-weight: ${({ fontWeight = 600 }) => fontWeight};
 `;
 
 const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
@@ -35,8 +36,6 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
   return (
     <StyleButton
       small
-      bold
-      fontFamily="poppins"
       onClick={() => {
         navigator.clipboard.writeText(JSON.stringify(toCopy));
         setIsTooltipDisplayed(true);

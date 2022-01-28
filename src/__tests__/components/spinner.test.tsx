@@ -7,10 +7,10 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-gsTEea gaGkuc"
+        class="sc-gsDKAQ dFzOKQ"
       >
         <svg
-          class="sc-bdfBQB kMDCNf sc-hKgJUU flGmPz"
+          class="sc-bdvvtL beYaIu sc-hKwDye TDenj"
           color="text"
           viewBox="0 0 1512 1512"
           width="128px"
@@ -111,7 +111,7 @@ it("renders correctly", () => {
           />
         </svg>
         <svg
-          class="sc-bdfBQB kMDCNf sc-dlfnuX bwXcx"
+          class="sc-bdvvtL beYaIu sc-dkPtRN bbUAIV"
           color="text"
           viewBox="0 0 512 512"
           width="64px"

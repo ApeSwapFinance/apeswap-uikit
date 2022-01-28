@@ -88,7 +88,7 @@ const PanelFooter: React.FC<Props> = ({
                 target="_blank"
               >
                 <ApeSwapRoundIcon width="24px" mr="8px" />
-                <Text color="text" bold>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+                <Text color="text" fontWeight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
               </PriceLink>
             ) : (
               <Skeleton width={80} height={24} />
@@ -135,7 +135,7 @@ const PanelFooter: React.FC<Props> = ({
             position="top-right"
             target={
               <Button variant="text" startIcon={<LanguageIcon color="text" width="24px" />}>
-                <Text color="text" bold>
+                <Text color="text" fontWeight={600}>
                   {currentLang?.toUpperCase()}
                 </Text>
               </Button>

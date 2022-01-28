@@ -11,7 +11,7 @@ export const Sizes: React.FC = () => {
   return (
     <div>
       <Heading>Default</Heading>
-      <Heading fontFamily="Titan One">Titan One</Heading>
+      <Heading fontWeight={800}>Extra bold</Heading>
       <Heading textAlign="center">text align center</Heading>
       <Heading size="md">Size md</Heading>
       <Heading size="lg">Size lg</Heading>
