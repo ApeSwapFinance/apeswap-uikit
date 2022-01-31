@@ -9,15 +9,15 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-dlfnuX evNIql"
+        class="sc-dkPtRN fWyFut"
       >
         <input
           checked=""
-          class="sc-gsTEea juHXKA"
+          class="sc-gsDKAQ hSJhvP"
           type="checkbox"
         />
         <div
-          class="sc-bdfBQB thdVX"
+          class="sc-bdvvtL eTJQde"
         />
       </div>
     </DocumentFragment>
