@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import ApeswapIcon from "./ApeswapIcon";
+import ApeSpinner from "./ApeSpinner";
 import { SpinnerProps } from "./types";
 
-const Container = styled.div`
+const Container = styled.div<{ size: number }>`
   position: relative;
+  width: ${(props) => props.size}px;
 `;
 
 const Spinner: React.FC<SpinnerProps> = ({ size = 300 }) => {
   return (
-    <Container>
-      <ApeswapIcon width={`${size * 0.5}px`} />
+    <Container size={size}>
+      <ApeSpinner />
     </Container>
   );
 };

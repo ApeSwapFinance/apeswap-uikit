@@ -8,5 +8,5 @@ export default {
 };
 
 export const Default: React.FC = () => {
-  return <Spinner size={500} />;
+  return <Spinner size={300} />;
 };
