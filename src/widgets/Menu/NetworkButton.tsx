@@ -24,7 +24,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
     <Button
       size="sm"
       fontFamily="poppins"
-      variant="tertiary"
+      variant="secondary"
       color="text"
       onClick={() => {
         onPresentNetworkModal();

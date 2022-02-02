@@ -1,59 +1,33 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
-import { Link, LinkProps } from "react-router-dom";
-import { SpaceProps } from "styled-system";
+import { ButtonProps as ThemeUIButtonProps } from "theme-ui";
 
-export const sizes = {
-  XS: "xs",
-  SM: "sm",
-  MDS: "mds",
-  MD: "md",
-} as const;
+export enum sizes {
+  SMALL = "sm",
+  MEDIUM = "md",
+  LARGE = "lg",
+}
 
-export const variants = {
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  TERTIARY: "tertiary",
-  TEXT: "text",
-  DANGER: "danger",
-  SUBTLE: "subtle",
-  SUCCESS: "success",
-  YELLOW: "yellow",
-} as const;
-
-export type Sizes = typeof sizes[keyof typeof sizes];
-export type Variants = typeof variants[keyof typeof variants];
-
-type ButtonTypes = ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement> | LinkProps;
-
-export type ButtonProps = {
-  variant?: Variants;
-  size?: Sizes;
-  startIcon?: ReactNode;
-  endIcon?: ReactNode;
-  fullWidth?: boolean;
-  isMobile?: boolean;
-  as?: "a" | "button" | typeof Link;
-  href?: string;
-  external?: boolean;
-  isLoading?: boolean;
-  disabled?: boolean;
-  fontFamily?: string;
-  fontSize?: string;
-  color?: string;
-} & ButtonTypes &
-  SpaceProps;
-
-export type ButtonThemeVariant = {
-  background: string;
-  backgroundActive: string;
-  backgroundHover: string;
-  border: string | number;
-  borderColorHover: string;
-  boxShadow: string;
-  boxShadowActive: string;
-  color: string;
+export const buttonFontSizes = {
+  [sizes.SMALL]: 1,
+  [sizes.MEDIUM]: 3,
+  [sizes.LARGE]: 6,
 };
 
-export type ButtonTheme = {
-  [key in Variants]: ButtonThemeVariant;
+export const buttonPadding = {
+  [sizes.SMALL]: { x: 7, y: 1 },
+  [sizes.MEDIUM]: { x: 15, y: 4 },
+  [sizes.LARGE]: { x: 16, y: 6 },
 };
+
+export enum variants {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+}
+
+export type sizeProps = `${sizes}`;
+export type variantProps = `${variants}`;
+
+export interface ButtonProps extends ThemeUIButtonProps {
+  variant?: variantProps;
+  size?: sizeProps;
+  [key: string]: any;
+}

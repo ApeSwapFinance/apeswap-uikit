@@ -1,6 +1,4 @@
 import { AlertTheme } from "../components/Alert/types";
-import { ButtonTheme } from "../components/Button/types";
-import { CardTheme } from "../components/Card/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { NavTheme } from "../widgets/Menu/types";
@@ -12,9 +10,7 @@ export interface ApeSwapTheme {
   isDark: boolean;
   alert: AlertTheme;
   colors: Colors;
-  button: ButtonTheme;
   fontFamily: FontFamily;
-  card: CardTheme;
   nav: NavTheme;
   modal: ModalTheme;
   radio: RadioTheme;
@@ -32,3 +28,5 @@ export { default as light } from "./light";
 
 export { lightColors } from "./colors";
 export { darkColors } from "./colors";
+
+export { default as Apeswap } from "./Apeswap";

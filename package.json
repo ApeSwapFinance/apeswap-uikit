@@ -66,6 +66,7 @@
     "react-is": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.38.4",
+    "storybook-addon-theme-ui": "^0.1.5",
     "styled-components": "^5.2.0",
     "themeprovider-storybook": "^1.6.4",
     "ts-jest": "^26.5.0",
@@ -79,11 +80,13 @@
     "styled-components": "^5.2.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
     "react-transition-group": "^4.4.1",
     "styled-system": "^5.1.5",
-    "yalc": "^1.0.0-pre.53"
+    "yalc": "^1.0.0-pre.53",
+    "theme-ui": "^0.13.1"
   }
 }

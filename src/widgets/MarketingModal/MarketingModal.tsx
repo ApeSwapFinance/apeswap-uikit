@@ -333,7 +333,7 @@ const MarketingModal: React.FC<MktModalProps> = ({
           <Read href="#4" onClick={changeReadMore} readMore={readMore}>
             Continue reading
           </Read>
-          <Button variant="yellow" onClick={startEarning}>
+          <Button variant="primary" onClick={startEarning}>
             Start Earning
           </Button>
         </ModalFooter>

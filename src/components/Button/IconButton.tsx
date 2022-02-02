@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import Button from "./Button";
-import { ButtonProps } from "./types";
+// TODO: to implement
 
-const IconButton = styled(Button)<ButtonProps>`
-  padding: 0;
-  width: ${({ size }) => (size === "sm" ? "32px" : "48px")};
-`;
+import React from "react";
+
+const IconButton: React.FC<any> = ({ children, ...props }) => (
+  <button type="button" {...props}>
+    {children}
+  </button>
+);
 
 export default IconButton;
