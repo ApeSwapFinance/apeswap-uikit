@@ -32,8 +32,8 @@ const StyledModal = styled.div`
   width: 100%;
   height: 100vh;
   justify-content: space-between;
-  background: ${({ theme }) => (theme.isDark ? "#212121" : "#FFF")};
-  color: ${({ theme }) => (theme.isDark ? "#FFFFFF" : theme.colors.primary)};
+  background: ${({ theme }) => theme.colors.white2};
+  color: ${({ theme }) => theme.colors.text};
   z-index: ${({ theme }) => theme.zIndices.modal};
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
@@ -107,7 +107,7 @@ const CloseButton = styled.button`
   align-self: flex-end;
   border: none;
   background: transparent;
-  font-weight: bold;
+  font-weight: 600;
   &:hover {
     cursor: pointer;
   }
@@ -145,6 +145,7 @@ const Action = styled.p`
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
+
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 16px;
     margin-top: 0.5em;
@@ -204,7 +205,6 @@ const ModalFooter = styled.div`
     border: none;
     background: transparent;
     padding: 0;
-    font-weight: 500;
     text-transform: uppercase;
     &:hover {
       cursor: pointer;
@@ -328,7 +328,7 @@ const MarketingModal: React.FC<MktModalProps> = ({
           <Read href="#4" onClick={changeReadMore} readMore={readMore}>
             Continue reading
           </Read>
-          <Button variant="yellow" onClick={startEarning}>
+          <Button variant="yellow" onClick={startEarning} fontWeight="700">
             Start Earning
           </Button>
         </ModalFooter>
