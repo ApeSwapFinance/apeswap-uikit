@@ -5,7 +5,7 @@ const { PRIMARY } = variants;
 
 export const light: ButtonSquareTheme = {
   [PRIMARY]: {
-    background: "#FFB300",
+    background: lightColors.yellow,
     backgroundActive: lightColors.primaryDark,
     backgroundHover: lightColors.primaryBright,
     border: 0,

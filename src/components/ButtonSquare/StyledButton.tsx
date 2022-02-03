@@ -20,10 +20,10 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   return `
     &:disabled,
     &.button--disabled {
-      background-color: ${theme.colors.backgroundDisabled};
-      border-color: ${theme.colors.backgroundDisabled};
+      background-color: ${theme.colors.white3};
+      border-color: ${variants.PRIMARY ? "transparent" : theme.colors.background};
       box-shadow: none;
-      color: ${theme.colors.textDisabled};
+      color: ${variants.PRIMARY ? theme.colors.primaryButtonDisable : theme.colors.secondaryButtonDisableColor};
       cursor: not-allowed;
     }
   `;

@@ -7,6 +7,7 @@ export const baseColors = {
   yellow: "#FFB300",
   primaryBright: "#FAFAFA",
   primaryDark: "#0B0B0B",
+  gray: "#7A7A7A",
 };
 
 export const brandColors = {

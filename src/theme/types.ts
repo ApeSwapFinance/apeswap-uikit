@@ -55,6 +55,7 @@ export type Colors = {
   white4: string;
   text: string;
   primary: string;
+  gray: string;
   // secondary: string;
   // tertiary: string;
   // warning: string;

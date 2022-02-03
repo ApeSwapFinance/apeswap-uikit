@@ -1,42 +1,7 @@
 import { ButtonTheme, variants } from "./types";
 import { lightColors, darkColors } from "../../theme/colors";
 
-const { PRIMARY, SECONDARY, TEXT, DANGER, SUCCESS, YELLOW } = variants;
-
-// buttons: {
-//   primary: {
-//     &:disabled: {
-//       background: 'white3',
-//       border: 'primaryBtnDisable',
-//       color: 'primaryButtonDisable',
-//       cursor: 'not-allowed',
-//     },
-//     background: 'yellow',
-//     border: 'primaryButton',
-//     borderRadius: 'normal',
-//     color: 'primaryBright',
-//     cursor: 'pointer',
-//     fontSize: 2,
-//     fontWeight: 'bold',
-//     padding: '10px 20px 10px 19px',
-//   },
-//   secondary: {
-//     &:disabled: {
-//       background: 'white3',
-//       border: 'secondaryButtonDisable',
-//       color: 'secondaryButtonDisableColor',
-//       cursor: 'not-allowed',
-//     },
-//     background: 'white2',
-//     border: 'secondaryButton',
-//     borderRadius: 'normal',
-//     color: 'yellow',
-//     cursor: 'pointer',
-//     fontSize: 2,
-//     fontWeight: 'bold',
-//     padding: '10px 20px 10px 19px',
-//   },
-// },
+const { PRIMARY, SECONDARY, TEXT, DANGER, SUCCESS, YELLOW, SUBTLE, TERTIARY } = variants;
 
 export const light: ButtonTheme = {
   [PRIMARY]: {
@@ -99,26 +64,26 @@ export const light: ButtonTheme = {
     boxShadowActive: "none",
     color: lightColors.primaryBright,
   },
-  // [TERTIARY]: {
-  //   background: lightColors.tertiary,
-  //   backgroundActive: lightColors.tertiary,
-  //   backgroundHover: lightColors.tertiary,
-  //   border: 0,
-  //   borderColorHover: "currentColor",
-  //   boxShadow: "none",
-  //   boxShadowActive: "none",
-  //   color: lightColors.primary,
-  // },
-  // [SUBTLE]: {
-  //   background: lightColors.textSubtle,
-  //   backgroundActive: `${lightColors.textSubtle}D9`, // 70% opacity
-  //   backgroundHover: `${lightColors.textSubtle}B3`, // 85% opacity
-  //   border: 0,
-  //   borderColorHover: "currentColor",
-  //   boxShadow: "none",
-  //   boxShadowActive: "none",
-  //   color: "#FFFFFF",
-  // },
+  [TERTIARY]: {
+    background: lightColors.gray,
+    backgroundActive: lightColors.gray,
+    backgroundHover: lightColors.background,
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.primary,
+  },
+  [SUBTLE]: {
+    background: lightColors.gray,
+    backgroundActive: lightColors.gray,
+    backgroundHover: lightColors.gray,
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.primaryBright,
+  },
 };
 
 export const dark: ButtonTheme = {
@@ -143,14 +108,14 @@ export const dark: ButtonTheme = {
   [YELLOW]: {
     ...light.yellow,
   },
-  // [TERTIARY]: {
-  //   ...light.tertiary,
-  //   background: darkColors.tertiary,
-  //   backgroundActive: darkColors.tertiary,
-  //   backgroundHover: darkColors.tertiary,
-  //   color: darkColors.primary,
-  // },
-  // [SUBTLE]: {
-  //   ...light.subtle,
-  // },
+  [TERTIARY]: {
+    ...light.tertiary,
+    background: darkColors.gray,
+    backgroundActive: darkColors.gray,
+    backgroundHover: darkColors.gray,
+    color: darkColors.primary,
+  },
+  [SUBTLE]: {
+    ...light.subtle,
+  },
 };
