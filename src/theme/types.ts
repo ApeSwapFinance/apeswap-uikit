@@ -40,7 +40,6 @@ export type Colors = {
   error: string; // replaces failure
   yellow: string;
   black?: string;
-  brown?: string;
   dividerColor: string;
   lvl1: string;
   lvl2: string;
@@ -56,6 +55,7 @@ export type Colors = {
   text: string;
   primary: string;
   gray: string;
+  inputBorder: string;
   // secondary: string;
   // tertiary: string;
   // warning: string;

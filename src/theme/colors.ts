@@ -8,6 +8,7 @@ export const baseColors = {
   primaryBright: "#FAFAFA",
   primaryDark: "#0B0B0B",
   gray: "#7A7A7A",
+  inputBorder: "#E6DECB",
 };
 
 export const brandColors = {
@@ -20,7 +21,6 @@ export const lightColors: Colors = {
   background: "#FDFBF5",
   backgroundDisabled: "#E9EAEB",
   black: "#000000",
-  brown: "#4D4040",
   dividerColor: "#E2E2E2",
   navbar: "#F9F4E7",
   gradients: {
