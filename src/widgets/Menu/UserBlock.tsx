@@ -24,7 +24,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
             fontSize="14px"
             color="text"
             fontFamily="poppins"
-            variant="tertiary"
+            variant="secondary"
             onClick={() => {
               onPresentAccountModal();
             }}
@@ -36,7 +36,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
       return (
         <Button
           size="sm"
-          variant="tertiary"
+          variant="secondary"
           color="text"
           fontFamily="poppins"
           onClick={() => {

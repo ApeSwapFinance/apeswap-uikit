@@ -24,7 +24,7 @@ const InactiveButton = styled(Button)<InactiveButtonProps>`
 
 const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
   isActive = false,
-  size = sizes.MD,
+  size = sizes.MEDIUM,
   variant = variants.PRIMARY,
   as,
   fontFamily,
@@ -38,7 +38,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
         forwardedAs={as}
         size={size}
         variant="tertiary"
-        colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "textSubtle"}
+        colorKey={variant === variants.PRIMARY || variants.PRIMARY ? "primary" : "textSubtle"}
         fontFamily={fontFamily}
         fontSize={fontSize}
         isMobile={isMobile}

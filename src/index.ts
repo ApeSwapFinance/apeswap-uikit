@@ -22,6 +22,8 @@ export * from "./components/Spinner";
 export * from "./components/Skeleton";
 export * from "./components/Toggle";
 export * from "./components/Table";
+export * from "./components/Textarea";
+export * from "./components/Carousel";
 
 // Hooks
 export * from "./hooks";

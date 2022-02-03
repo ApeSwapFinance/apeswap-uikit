@@ -17,18 +17,16 @@ it("renders correctly", () => {
       <div
         class="sc-bdfBQB ekFJNm"
       >
-        <button
-          class="sc-gsTEea jOwYnJ"
-          type="button"
+        <div
+          class="css-1tg9lki"
         >
           Item 1
-        </button>
-        <button
-          class="sc-gsTEea hrNiCN sc-dlfnuX itCiFH"
-          type="button"
+        </div>
+        <div
+          class="sc-gsTEea cgJgWb css-1tg9lki"
         >
           Item 2
-        </button>
+        </div>
       </div>
     </DocumentFragment>
   `);

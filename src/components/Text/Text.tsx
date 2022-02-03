@@ -1,35 +1,20 @@
-import styled, { DefaultTheme } from "styled-components";
-import { space } from "styled-system";
-import getThemeValue from "../../util/getThemeValue";
-import getFontFamily from "../../util/getFontFamily";
-import { TextProps } from "./types";
+import React from "react";
+import { Text as ThemeUIText } from "theme-ui";
+import { TextProps, weights, variants } from "./types";
 
-interface ThemedProps extends TextProps {
-  theme: DefaultTheme;
-}
-
-const getColor = ({ color, theme }: ThemedProps) => {
-  return getThemeValue(`colors.${color}`, color)(theme);
-};
-
-const getFontSize = ({ fontSize, small }: TextProps) => {
-  return small ? "14px" : fontSize || "16px";
-};
-
-const Text = styled.div<TextProps>`
-  color: ${getColor};
-  font-size: ${getFontSize};
-  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
-  font-weight: ${({ bold, fontWeight = 200 }) => (bold ? 700 : fontWeight)};
-  line-height: 1.5;
-  ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
-  text-align: ${({ textAlign }) => textAlign};
-  ${space}
-`;
-
-Text.defaultProps = {
-  color: "text",
-  small: false,
+const Text: React.FC<TextProps> = ({
+  variant = variants.NORMAL,
+  weight = weights.NORMAL,
+  children,
+  color,
+  sx,
+  ...props
+}) => {
+  return (
+    <ThemeUIText {...props} sx={{ ...sx, variant: `text.${variant}`, color, fontWeight: weight }}>
+      {children}
+    </ThemeUIText>
+  );
 };
 
 export default Text;

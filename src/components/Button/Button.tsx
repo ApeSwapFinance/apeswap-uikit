@@ -1,50 +1,22 @@
 import React from "react";
-import getExternalLinkProps from "../../util/getExternalLinkProps";
-import StyledButton from "./StyledButton";
-import { ButtonProps, variants, sizes } from "./types";
+import { Button as ThemeUIButton } from "theme-ui";
+import { ButtonProps, variants, buttonFontSizes, buttonPadding, sizes } from "./types";
 
-const Button: React.FC<ButtonProps> = ({
-  startIcon,
-  endIcon,
-  children,
-  external,
-  isLoading,
-  disabled,
-  fontFamily,
-  color,
-  ...props
-}) => {
-  const internalProps = external ? getExternalLinkProps() : {};
-  const isDisabled = isLoading || disabled;
-
+const Button: React.FC<ButtonProps> = ({ variant = variants.PRIMARY, sx, size = sizes.MEDIUM, children, ...props }) => {
   return (
-    <StyledButton
-      {...internalProps}
+    <ThemeUIButton
       {...props}
-      isLoading={isLoading}
-      disabled={isDisabled}
-      fontFamily={fontFamily}
-      color={color}
+      sx={{
+        ...sx,
+        variant: `buttons.${variant}`,
+        fontSize: buttonFontSizes[size],
+        px: buttonPadding[size].x,
+        py: buttonPadding[size].y,
+      }}
     >
-      {React.isValidElement(startIcon) &&
-        React.cloneElement(startIcon, {
-          mr: "0.5rem",
-        })}
       {children}
-      {React.isValidElement(endIcon) &&
-        React.cloneElement(endIcon, {
-          ml: "0.5rem",
-        })}
-    </StyledButton>
+    </ThemeUIButton>
   );
-};
-
-Button.defaultProps = {
-  variant: variants.PRIMARY,
-  size: sizes.MD,
-  external: false,
-  isLoading: false,
-  disabled: false,
 };
 
 export default Button;
