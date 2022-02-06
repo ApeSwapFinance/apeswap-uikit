@@ -707,7 +707,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCImPb bdSAQD"
           >
             <button
-              class="sc-crHmcD izfxIJ"
+              class="sc-crHmcD fNABiT"
               type="button"
             >
               Logout
