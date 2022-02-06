@@ -65,14 +65,14 @@ export const light: ButtonTheme = {
     color: lightColors.primaryBright,
   },
   [TERTIARY]: {
-    background: lightColors.gray,
-    backgroundActive: lightColors.gray,
-    backgroundHover: lightColors.background,
+    background: lightColors.white4,
+    backgroundActive: lightColors.white4,
+    backgroundHover: lightColors.white4,
     border: 0,
     borderColorHover: "currentColor",
     boxShadow: "none",
     boxShadowActive: "none",
-    color: lightColors.primary,
+    color: lightColors.text,
   },
   [SUBTLE]: {
     background: lightColors.gray,
@@ -110,10 +110,10 @@ export const dark: ButtonTheme = {
   },
   [TERTIARY]: {
     ...light.tertiary,
-    background: darkColors.gray,
-    backgroundActive: darkColors.gray,
-    backgroundHover: darkColors.gray,
-    color: darkColors.primary,
+    background: darkColors.white4,
+    backgroundActive: darkColors.white4,
+    backgroundHover: darkColors.white4,
+    color: darkColors.text,
   },
   [SUBTLE]: {
     ...light.subtle,

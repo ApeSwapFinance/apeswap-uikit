@@ -23,7 +23,7 @@ const Container = styled.div`
   flex: none;
   padding: 8px 4px;
   background-color: ${({ theme }) => theme.nav.background};
-  border-top: solid 2px rgba(133, 133, 133, 0.1);
+  border-top: solid 1px ${({ theme }) => theme.colors.dividerColor};
 `;
 
 const PriceLink = styled.a`
@@ -104,7 +104,14 @@ const PanelFooter: React.FC<Props> = ({
               return (
                 <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
                   {social.items.map((item) => (
-                    <Link external key={item.label} href={item.href} aria-label={item.label} color="text">
+                    <Link
+                      external
+                      key={item.label}
+                      href={item.href}
+                      aria-label={item.label}
+                      color="text"
+                      fontWeight={400}
+                    >
                       {item.label}
                     </Link>
                   ))}
@@ -124,10 +131,10 @@ const PanelFooter: React.FC<Props> = ({
           {/* alignItems center is a Safari fix */}
           <Flex alignItems="center">
             <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
-            <Text color="textDisabled" mx="4px" bold>
+            <Text color="gray" mx="4px" bold>
               /
             </Text>
-            <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
+            <MoonIcon color={isDark ? "text" : "gray"} width="24px" />
           </Flex>
         </Button>
         {langs && (
@@ -149,6 +156,7 @@ const PanelFooter: React.FC<Props> = ({
                 onClick={() => setLang(lang)}
                 // Safari fix
                 style={{ minHeight: "32px", height: "auto" }}
+                fontWeight="400"
               >
                 {lang.language}
               </MenuButton>

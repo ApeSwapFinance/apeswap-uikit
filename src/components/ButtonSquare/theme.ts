@@ -1,23 +1,81 @@
 import { ButtonSquareTheme, variants } from "./types";
-import { lightColors } from "../../theme/colors";
+import { lightColors, darkColors } from "../../theme/colors";
 
-const { PRIMARY } = variants;
+const { PRIMARY, SECONDARY, DANGER, SUCCESS, TERTIARY } = variants;
 
 export const light: ButtonSquareTheme = {
   [PRIMARY]: {
     background: lightColors.yellow,
-    backgroundActive: lightColors.primaryDark,
-    backgroundHover: lightColors.primaryBright,
+    backgroundActive: lightColors.primaryBright,
+    backgroundHover: lightColors.yellow,
     border: 0,
     borderColorHover: "currentColor",
-    boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-    boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-    color: "#FFFFFF",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.primaryBright,
+  },
+  [SECONDARY]: {
+    background: lightColors.white2,
+    backgroundActive: lightColors.primaryBright,
+    backgroundHover: lightColors.white2,
+    border: `2px solid ${lightColors.yellow}`,
+    borderColorHover: "transparent",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.yellow,
+  },
+  [DANGER]: {
+    background: lightColors.error,
+    backgroundActive: lightColors.error,
+    backgroundHover: lightColors.error,
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.primaryBright,
+  },
+  [SUCCESS]: {
+    background: lightColors.success,
+    backgroundActive: `${lightColors.success}D9`, // 70% opacity
+    backgroundHover: `${lightColors.success}B3`, // 85% opacity
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.primaryBright,
+  },
+  [TERTIARY]: {
+    background: lightColors.white4,
+    backgroundActive: lightColors.white4,
+    backgroundHover: lightColors.white4,
+    border: 0,
+    borderColorHover: "currentColor",
+    boxShadow: "none",
+    boxShadowActive: "none",
+    color: lightColors.text,
   },
 };
 
 export const dark: ButtonSquareTheme = {
   [PRIMARY]: {
     ...light.primary,
+  },
+  [SECONDARY]: {
+    ...light.secondary,
+    background: darkColors.white2,
+    backgroundHover: darkColors.white2,
+  },
+  [DANGER]: {
+    ...light.danger,
+  },
+  [SUCCESS]: {
+    ...light.success,
+  },
+  [TERTIARY]: {
+    ...light.tertiary,
+    background: darkColors.white4,
+    backgroundActive: darkColors.white4,
+    backgroundHover: darkColors.white4,
+    color: darkColors.text,
   },
 };

@@ -16,7 +16,7 @@ const StyledLink = styled(Text)<LinkProps>`
 
 const Link: React.FC<LinkProps> = ({ external, ...props }) => {
   const internalProps = external ? getExternalLinkProps() : {};
-  return <StyledLink as="a" bold {...internalProps} {...props} />;
+  return <StyledLink as="a" {...internalProps} {...props} />;
 };
 
 Link.defaultProps = {

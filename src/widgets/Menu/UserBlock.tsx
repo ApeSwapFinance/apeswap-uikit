@@ -1,6 +1,6 @@
 import React from "react";
 import { useMatchBreakpoints } from "../../hooks";
-import Button from "../../components/Button/Button";
+import ButtonSquare from "../../components/ButtonSquare/ButtonSquare";
 import { useWalletModal } from "../WalletModal";
 import { Login } from "../WalletModal/types";
 
@@ -13,50 +13,47 @@ interface Props {
 const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
-  const { isXs } = useMatchBreakpoints();
+  const { isXs, isMd, isXl } = useMatchBreakpoints();
 
   const loadButton = () => {
     if (account) {
       if (isXs) {
         return (
-          <Button
+          <ButtonSquare
             size="sm"
             fontSize="14px"
-            color="text"
-            fontFamily="poppins"
             variant="tertiary"
             onClick={() => {
               onPresentAccountModal();
             }}
           >
             {accountEllipsis}
-          </Button>
+          </ButtonSquare>
         );
       }
       return (
-        <Button
+        <ButtonSquare
           size="sm"
-          variant="tertiary"
-          color="text"
-          fontFamily="poppins"
+          fontSize="16px"
           onClick={() => {
             onPresentAccountModal();
           }}
+          variant="tertiary"
         >
           {accountEllipsis}
-        </Button>
+        </ButtonSquare>
       );
     }
     return (
-      <Button
+      <ButtonSquare
         size="sm"
-        fontFamily="poppins"
+        fontSize={isMd || isXl ? "16px" : "14px"}
         onClick={() => {
           onPresentConnectModal();
         }}
       >
         Connect
-      </Button>
+      </ButtonSquare>
     );
   };
 

@@ -1,9 +1,11 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import { useMatchBreakpoints } from "../../hooks";
+import ButtonSquare from "../../components/ButtonSquare/ButtonSquare";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
 import { ChainId, NETWORK_LABEL } from "../NetworkModal/config";
 import BinanceChain from "../NetworkModal/icons/BinanceChain";
 import PolygonChain from "../NetworkModal/icons/PolygonChain";
+import ArrowDropDownSmall from "../../components/Svg/Icons/ArrowDropDownSmall";
 
 interface Props {
   chainId: number;
@@ -18,19 +20,21 @@ export const NETWORK_ICON: { [key: number]: any } = {
 };
 
 const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
+  const { isXl, isMd } = useMatchBreakpoints();
   const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId);
 
   return (
-    <Button
+    <ButtonSquare
       size="sm"
-      variant="tertiary"
-      color="text"
+      fontSize={isMd || isXl ? "16px" : "14px"}
       onClick={() => {
         onPresentNetworkModal();
       }}
+      variant="tertiary"
     >
       {NETWORK_ICON[chainId]} {NETWORK_LABEL[chainId]}
-    </Button>
+      <ArrowDropDownSmall />
+    </ButtonSquare>
   );
 };
 

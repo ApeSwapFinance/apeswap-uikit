@@ -19,7 +19,7 @@ const rainbowAnimation = keyframes`
 
 const LinkLabel = styled.div<{ isPushed: boolean }>`
   color: ${({ isPushed, theme }) => (isPushed ? theme.colors.text : "transparent")};
-  font-weight: 600;
+  font-weight: 400;
   transition: color 0.4s;
   flex-grow: 1;
 `;
@@ -40,7 +40,7 @@ const MenuEntry = styled.div<Props>`
     align-items: center;
     width: 100%;
     height: 100%;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   svg {
@@ -48,18 +48,18 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    background-color: ${({ theme }) => theme.colors.white3};
   }
 
   // Safari fix
   flex-shrink: 0;
 
-  &.rainbow {
+  /* &.rainbow {
     -webkit-background-clip: text;
     animation: ${rainbowAnimation} 3s ease-in-out infinite;
-    background: ${({ theme }) => theme.colors.gradients.bubblegum};
+    background: ${({ theme }) => theme.colors.gradients?.bubblegum};
     background-size: 200% 100%;
-  }
+  } */
 `;
 MenuEntry.defaultProps = {
   secondary: false,

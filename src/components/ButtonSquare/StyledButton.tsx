@@ -47,11 +47,11 @@ const getButtonVariantProp =
 
 const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
-  background-color: #ffb300;
-  border-radius: 5px;
+  background-color: ${({ bgColor }) => (!bgColor ? getButtonVariantProp("background") : bgColor)};
+  border-radius: 10px;
   border: none;
   box-shadow: none;
-  color: white;
+  color: ${({ color }) => (!color ? getButtonVariantProp("color") : color)};
   cursor: pointer;
   display: inline-flex;
   font-size: ${({ fontSize }) => fontSize || "12px"};
@@ -69,7 +69,7 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background-color: ${getButtonVariantProp("backgroundHover")};
+    background-color: ${({ bgHover }) => (!bgHover ? getButtonVariantProp("backgroundHover") : bgHover)};
   }
 
   &:focus:not(:active) {

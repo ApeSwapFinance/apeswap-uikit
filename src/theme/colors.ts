@@ -25,6 +25,7 @@ export const lightColors: Colors = {
   navbar: "#F9F4E7",
   gradients: {
     newGradient: "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
+    bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
   },
   primaryButtonDisable: "rgba(66, 66, 66, 0.5)",
   secondaryButtonDisableBg: "#F1EADA",
@@ -44,6 +45,9 @@ export const darkColors: Colors = {
   backgroundDisabled: "#3c3742",
   dividerColor: "#333333",
   navbar: "#212121",
+  gradients: {
+    bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
+  },
   primaryButtonDisable: "rgba(241, 234, 218, 0.5)",
   secondaryButtonDisableBg: "rgba(33, 33, 33, 0.5)",
   secondaryButtonDisableColor: "#F1EADA",
