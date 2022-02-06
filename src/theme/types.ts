@@ -56,8 +56,8 @@ export type Colors = {
   primary: string;
   gray: string;
   inputBorder: string;
+  tertiary: string;
   // secondary: string;
-  // tertiary: string;
   // warning: string;
   // contrast: string;
   // invertedContrast: string;
