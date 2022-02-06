@@ -63,10 +63,10 @@ const StyledButton = styled.button<ButtonProps>`
   align-items: center;
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
+  color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
   border-radius: 16px;
   font-weight: ${({ fontWeight = 600 }) => fontWeight};
   box-shadow: ${getButtonVariantProp("boxShadow")};
-  color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
   cursor: pointer;
   display: inline-flex;
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
@@ -85,6 +85,7 @@ const StyledButton = styled.button<ButtonProps>`
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background-color: ${getButtonVariantProp("backgroundHover")};
     border-color: ${getButtonVariantProp("borderColorHover")};
+    color: ${({ theme, variant }) => (variant === "secondary" ? theme.colors.yellow : getButtonVariantProp("color"))};
   }
 
   &:focus:not(:active) {

@@ -49,12 +49,12 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
   background-color: ${({ bgColor }) => (!bgColor ? getButtonVariantProp("background") : bgColor)};
   border-radius: 10px;
-  border: none;
+  border: ${getButtonVariantProp("border")};
   box-shadow: none;
   color: ${({ color }) => (!color ? getButtonVariantProp("color") : color)};
   cursor: pointer;
   display: inline-flex;
-  font-size: ${({ fontSize }) => fontSize || "12px"};
+  font-size: ${({ fontSize }) => fontSize || "14px"};
   font-weight: ${({ fontWeight = 600 }) => fontWeight};
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   /* max-content instead of auto for Safari fix */
@@ -69,7 +69,9 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background-color: ${({ bgHover }) => (!bgHover ? getButtonVariantProp("backgroundHover") : bgHover)};
+    background-color: ${getButtonVariantProp("backgroundHover")};
+    border-color: ${getButtonVariantProp("borderColorHover")};
+    color: ${({ theme, variant }) => (variant === "secondary" ? theme.colors.yellow : getButtonVariantProp("color"))};
   }
 
   &:focus:not(:active) {
@@ -77,6 +79,7 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   }
 
   &:active {
+    background-color: ${getButtonVariantProp("backgroundActive")};
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 

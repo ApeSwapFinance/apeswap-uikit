@@ -28,7 +28,7 @@ const getBoxShadow = ({ isActive, isSuccess, isWarning, theme }: StyledCardProps
 const StyledCard = styled.div<StyledCardProps>`
   background-color: ${({ theme }) => theme.card.background};
   border: ${({ theme }) => theme.card.boxShadow};
-  border-radius: 32px;
+  border-radius: 10px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme, isDisabled }) => theme.colors[isDisabled ? "gray" : "text"]};
   overflow: hidden;

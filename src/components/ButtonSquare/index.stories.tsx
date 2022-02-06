@@ -34,7 +34,6 @@ export const Default: React.FC = () => {
         <ButtonSquare variant={variants.PRIMARY} size="sm">
           Small
         </ButtonSquare>
-        <ButtonSquare variant={variants.TERTIARY}>Tertiary</ButtonSquare>
       </Row>
       {/* ))} */}
     </>
@@ -65,6 +64,8 @@ export const Variants: React.FC = () => {
           Approving
         </ButtonSquare>
         <ButtonSquare isLoading>Approving</ButtonSquare>
+        <ButtonSquare variant="tertiary">Tertiary</ButtonSquare>
+        <ButtonSquare variant="secondary">Secondary</ButtonSquare>
       </Row>
       <Row>
         <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
