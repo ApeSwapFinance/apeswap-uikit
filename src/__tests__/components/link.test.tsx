@@ -7,8 +7,8 @@ it("renders link correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <a
-        class="sc-bdvvtL sc-gsDKAQ iCKKXP cokdGD"
-        color="primary"
+        class="sc-bdvvtL sc-gsDKAQ foxtoM eisOmR"
+        color="text"
         href="https://apeswap.finance"
       >
         Link
@@ -22,16 +22,16 @@ it("renders link external link correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <a
-        class="sc-bdvvtL sc-gsDKAQ iCKKXP cokdGD"
-        color="primary"
+        class="sc-bdvvtL sc-gsDKAQ foxtoM eisOmR"
+        color="text"
         href="https://apeswap.finance"
         rel="noreferrer noopener"
         target="_blank"
       >
         Link
         <svg
-          class="sc-dkPtRN fjJMkt"
-          color="primary"
+          class="sc-dkPtRN kGqtAt"
+          color="text"
           viewBox="0 0 24 24"
           width="20px"
           xmlns="http://www.w3.org/2000/svg"
