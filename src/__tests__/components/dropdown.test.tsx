@@ -5,7 +5,7 @@ import DropdownItem from "../../components/Dropdown/DropdownItem";
 
 it("renders correctly", () => {
   const { asFragment } = renderWithTheme(
-    <ThemeUIDropdown component={() => <></>}>
+    <ThemeUIDropdown component={<></>}>
       <DropdownItem>Dropdown</DropdownItem>
     </ThemeUIDropdown>
   );

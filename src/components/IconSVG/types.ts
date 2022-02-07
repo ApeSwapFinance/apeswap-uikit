@@ -1,6 +1,12 @@
+import { colorProps } from "../../theme/Apeswap/types";
+
 export enum icons {
   CARET = "caret",
   EXTERNAL = "external",
+  TWITTER = "twitter",
+  SEND = "send",
+  ERROR = "error",
+  CLOSE = "close",
 }
 
 export enum directions {
@@ -16,6 +22,6 @@ type directionTypes = `${directions}`;
 export interface IconSVGProps {
   icon?: iconTypes;
   direction?: directionTypes;
-  color?: string;
+  color?: colorProps;
   width?: string | number;
 }

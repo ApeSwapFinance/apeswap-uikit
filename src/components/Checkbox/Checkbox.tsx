@@ -1,78 +1,39 @@
-import styled from "styled-components";
+/** @jsxImportSource theme-ui */
+import React from "react";
 import { CheckboxProps, scales } from "./types";
 
 const getScale = ({ scale }: CheckboxProps) => {
   switch (scale) {
     case scales.SM:
-      return "24px";
+      return "21px";
     case scales.MD:
     default:
       return "32px";
   }
 };
 
-const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
-  appearance: none;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  height: ${getScale};
-  width: ${getScale};
-  vertical-align: middle;
-  transition: background-color 0.2s ease-in-out;
-  border: 0;
-  border-radius: 8px;
-  background-color: ${({ theme }) => theme.colors.input};
+const Checkbox: React.FC<CheckboxProps> = ({ scale = scales.SM, onChange, display = "block" }) => {
+  const scaleSize = getScale({ scale });
+  const svgScale = scale === "sm" ? 13 : 21;
 
-  &:after {
-    content: "";
-    position: absolute;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
-    border-color: transparent;
-    top: 22%;
-    left: 5%;
-    right: 10%;
-    width: 75%;
-    height: 75%;
-    margin: auto;
-    transform: rotate(-5deg);
-    transition: border-color 0.2s ease-in-out;
-    background-repeat: no-repeat, no-repeat;
-  }
-
-  &:hover:not(:disabled):not(:checked) {
-    box-shadow: ${({ theme }) => theme.shadows.yellow};
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: ${({ theme }) => theme.shadows.yellow};
-  }
-
-  &:checked {
-    background-color: ${({ theme }) => theme.colors.yellow};
-    &:after {
-  
-      background-image: url('data:image/svg+xml, <svg viewBox="0 0 14 12" fill="white" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.7415 0.205895C13.4024 -0.0740428 12.8839 -0.0553803 12.5648 0.261883L4.9466 8.1188L1.35686 5.35675C1.07766 5.1328 0.658854 5.11414 0.359709 5.31943C-0.0192087 5.56204 -0.0989808 6.04726 0.160278 6.40185L3.88962 11.3847C3.98934 11.5154 4.12894 11.646 4.26854 11.7393C4.96655 12.1872 5.92381 12.0193 6.40244 11.3661L6.46227 11.2914L13.8611 1.21367C14.1004 0.896408 14.0406 0.46717 13.7415 0.205895Z" fill="white"/>
-</svg>
-')};
-      background-repeat: no-repeat, no-repeat;
-
-
-    }
-  }
-
-  &:disabled {
-    cursor: default;
-    opacity: 0.6;
-  }
-`;
-
-Checkbox.defaultProps = {
-  scale: scales.MD,
+  return (
+    <span
+      sx={{
+        display,
+        width: scaleSize,
+        height: scaleSize,
+        position: "relative",
+      }}
+    >
+      <input type="checkbox" sx={{ variant: "forms.checkbox" }} onChange={(e) => onChange?.(e.target.checked)} />
+      <svg width={svgScale || "13"} height="auto" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M11.8132 0.171594C11.522 -0.0616871 11.0766 -0.046135 10.8025 0.218251L4.25899 6.76569L1.17566 4.46397C0.93585 4.27735 0.576128 4.2618 0.319184 4.43287C-0.00627898 4.63505 -0.0747974 5.0394 0.147888 5.33489L3.35113 9.4873C3.43677 9.59617 3.55668 9.70503 3.67659 9.78279C4.27612 10.156 5.09835 10.0161 5.50946 9.47175L5.56085 9.40954L11.9159 1.01141C12.1215 0.747022 12.0701 0.389324 11.8132 0.171594Z"
+          fill="#FAFAFA"
+        />
+      </svg>
+    </span>
+  );
 };
 
 export default Checkbox;

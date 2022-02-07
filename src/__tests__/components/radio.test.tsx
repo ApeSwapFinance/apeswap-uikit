@@ -6,13 +6,19 @@ it("renders correctly", () => {
   const { asFragment } = renderWithTheme(<Radio name="radio" value="1" />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
-      <input
-        class="sc-bdfBQB kcEBGs"
-        name="radio"
-        scale="md"
-        type="radio"
-        value="1"
-      />
+      <span
+        class="css-xaw09b-Radio"
+      >
+        <input
+          class="css-zj7zjo-Radio"
+          name="radio"
+          type="radio"
+          value="1"
+        />
+        <span
+          class="css-1837bog-Radio"
+        />
+      </span>
     </DocumentFragment>
   `);
 });

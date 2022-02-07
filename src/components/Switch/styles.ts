@@ -4,7 +4,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
   switch: {
     overflow: "auto",
     display: "inline-flex",
-    "flex-direction": "row",
+    flexDirection: "row",
     borderRadius: "10px",
   },
   button: {

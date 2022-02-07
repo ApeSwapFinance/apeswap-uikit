@@ -24,6 +24,7 @@ const Colors = {
   white2: "#F9F4E7",
   white3: "#F1EADA",
   white4: "#EADFC7",
+  radioChecked: "#FAFAFA",
   modes: {
     dark: {
       background: "#0B0B0B",
@@ -44,6 +45,7 @@ const Colors = {
       white2: "#212121",
       white3: "#383838",
       white4: "#424242",
+      radioChecked: "#0B0B0B",
     },
   },
 };

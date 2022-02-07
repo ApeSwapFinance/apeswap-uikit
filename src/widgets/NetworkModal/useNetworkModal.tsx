@@ -1,5 +1,5 @@
 import React from "react";
-import { useModal } from "../Modal";
+import { useModal } from "./Modal";
 import { SwitchNetwork } from "./types";
 import SelectNetworkModal from "./SelectNetworkModal";
 

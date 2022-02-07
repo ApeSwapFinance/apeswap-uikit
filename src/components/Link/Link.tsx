@@ -3,6 +3,7 @@ import styled from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import Text from "../Text/Text";
 import { LinkProps } from "./types";
+import LinkExternal from "./LinkExternal";
 
 const StyledLink = styled(Text)<LinkProps>`
   display: flex;
@@ -13,8 +14,11 @@ const StyledLink = styled(Text)<LinkProps>`
   }
 `;
 
-const Link: React.FC<LinkProps> = ({ external, ...props }) => {
+const Link: React.FC<LinkProps> = ({ external, children, ...props }) => {
   const internalProps = external ? getExternalLinkProps() : {};
+  if (external) {
+    return <LinkExternal>{children}</LinkExternal>;
+  }
   return <StyledLink as="a" bold {...internalProps} {...props} />;
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "../../components/Link";
 import { HelpIcon } from "../../components/Svg";
-import { Modal } from "../Modal";
+import Modal from "../NetworkModal/Modal";
 import WalletCard from "./WalletCard";
 import config from "./config";
 import { Login } from "./types";

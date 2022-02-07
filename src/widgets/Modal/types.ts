@@ -1,9 +1,9 @@
-export interface ModalTheme {
-  background: string;
+export interface InternalProps {
+  handleClose?: () => void;
 }
 
-export type Handler = () => void;
-
-export interface InjectedProps {
-  onDismiss?: Handler;
+export interface ModalProps extends InternalProps {
+  open?: boolean;
+  minWidth?: string;
+  maxWidth?: string;
 }

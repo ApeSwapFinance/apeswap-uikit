@@ -1,13 +1,28 @@
+/* eslint-disable react/require-default-props */
 import React from "react";
-import Link from "./Link";
-import { LinkProps } from "./types";
-import OpenNewIcon from "../Svg/Icons/OpenNew";
+import { Box, LinkProps, Link, ThemeUICSSObject } from "theme-ui";
+import { IconSVG } from "../IconSVG";
 
-const LinkExternal: React.FC<LinkProps> = ({ children, ...props }) => {
+interface Props extends LinkProps {
+  display?: ThemeUICSSObject["display"];
+  textAlign?: ThemeUICSSObject["textAlign"];
+}
+
+const LinkExternal: React.FC<Props> = ({ display, textAlign, children, ...props }) => {
   return (
-    <Link external {...props}>
+    <Link
+      sx={{
+        color: "brown",
+        display,
+        textAlign,
+      }}
+      {...props}
+      target="_blank"
+    >
       {children}
-      <OpenNewIcon color="primary" ml="4px" />
+      <Box as="span" sx={{ marginLeft: 2, verticalAlign: "middle" }}>
+        <IconSVG icon="external" color="brown" />
+      </Box>
     </Link>
   );
 };
