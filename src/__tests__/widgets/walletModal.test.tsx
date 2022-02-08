@@ -9,7 +9,7 @@ it("renders ConnectModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iCfMLu kEQxLF"
+        class="sc-iCfMLu ciqHOC"
       >
         <div
           class="sc-furwcr hTjrUw"
@@ -18,7 +18,7 @@ it("renders ConnectModal correctly", () => {
             class="sc-eCImPb sc-pVTFL jpuLQT jNeVHa"
           >
             <h2
-              class="sc-bdvvtL sc-hKwDye kDUgTI hapjyu"
+              class="sc-bdvvtL sc-hKwDye kJsIyu hapjyu"
               color="text"
               font-weight="800"
             >
@@ -27,7 +27,7 @@ it("renders ConnectModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jRQBWg xJPFR sc-gKclnd bGsNxc"
+            class="sc-jRQBWg ikYYTr sc-gKclnd bGsNxc"
             type="button"
           >
             <svg
@@ -47,20 +47,20 @@ it("renders ConnectModal correctly", () => {
           class="sc-eCImPb fFZhuZ"
         >
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               Metamask
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -191,20 +191,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               TrustWallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -236,20 +236,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               WalletConnect
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -266,20 +266,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               TokenPocket
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -302,20 +302,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               SafePal Wallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -334,20 +334,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               Binance Chain Wallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 32 32"
               width="32px"
@@ -400,20 +400,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               MathWallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 96 96"
               width="32px"
@@ -434,20 +434,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               ONTO Wallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 32 32"
               width="32px"
@@ -487,20 +487,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gcFjPQ"
+            class="sc-jRQBWg cTthlq"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               NABOX Wallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 200.17 228.32"
               width="32px"
@@ -535,20 +535,20 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg fVwgvQ"
+            class="sc-jRQBWg gJPwPi"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
             type="button"
           >
             <div
-              class="sc-bdvvtL hzwuYY"
+              class="sc-bdvvtL jelnKi"
               color="text"
               font-weight="600"
             >
               Coinbase Wallet
             </div>
             <svg
-              class="sc-dkPtRN dSuFLH"
+              class="sc-dkPtRN kDyzyx"
               color="text"
               viewBox="0 0 24 24"
               width="32px"
@@ -611,7 +611,7 @@ it("renders AccountModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iCfMLu kEQxLF"
+        class="sc-iCfMLu ciqHOC"
       >
         <div
           class="sc-furwcr hTjrUw"
@@ -620,7 +620,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCImPb sc-pVTFL jpuLQT jNeVHa"
           >
             <h2
-              class="sc-bdvvtL sc-hKwDye kDUgTI hapjyu"
+              class="sc-bdvvtL sc-hKwDye kJsIyu hapjyu"
               color="text"
               font-weight="800"
             >
@@ -629,7 +629,7 @@ it("renders AccountModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jRQBWg xJPFR sc-gKclnd bGsNxc"
+            class="sc-jRQBWg ikYYTr sc-gKclnd bGsNxc"
             type="button"
           >
             <svg
@@ -649,7 +649,7 @@ it("renders AccountModal correctly", () => {
           class="sc-eCImPb fFZhuZ"
         >
           <div
-            class="sc-bdvvtL cEbEXU"
+            class="sc-bdvvtL dpMmDm"
             color="text"
             font-size="20px"
             font-weight="600"
@@ -680,7 +680,7 @@ it("renders AccountModal correctly", () => {
               </svg>
             </a>
             <div
-              class="sc-bdvvtL sc-crHmcD fJmXZ kXOzcy"
+              class="sc-bdvvtL sc-crHmcD czIbhz kXOzcy"
               color="text"
               role="button"
             >
@@ -707,7 +707,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCImPb bdSAQD"
           >
             <button
-              class="sc-jRQBWg eQFUFA"
+              class="sc-jRQBWg bWOMKe"
               type="button"
             >
               Logout

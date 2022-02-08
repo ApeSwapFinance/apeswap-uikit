@@ -17,7 +17,7 @@ it("renders correctly", () => {
           type="checkbox"
         />
         <div
-          class="sc-bdvvtL eTJQde"
+          class="sc-bdvvtL eKVubR"
         />
       </div>
     </DocumentFragment>
