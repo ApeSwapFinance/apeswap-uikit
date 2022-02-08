@@ -24,7 +24,7 @@ it("renders correctly", () => {
           Item 1
         </button>
         <button
-          class="sc-gsDKAQ fTKRIF sc-dkPtRN bVvEtz"
+          class="sc-gsDKAQ fTKRIF sc-dkPtRN fHvpBm"
           type="button"
         >
           Item 2
