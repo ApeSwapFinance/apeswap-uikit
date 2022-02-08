@@ -30,4 +30,3 @@ export { default as MobileIcon } from "./MobileIcon";
 export { default as Binance } from "./Binance";
 export { default as GameBurnIcon } from "./GameBurn";
 export { default as LendingIcon } from "./Lending";
-
