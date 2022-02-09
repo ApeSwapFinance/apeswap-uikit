@@ -22,7 +22,7 @@ Bar.defaultProps = {
 
 const StyledProgress = styled.div`
   position: relative;
-  background-color: ${({theme}) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white4};
   border-radius: 32px;
   height: 16px;
   overflow: hidden;
