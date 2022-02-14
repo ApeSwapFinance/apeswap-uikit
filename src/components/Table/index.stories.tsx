@@ -43,7 +43,7 @@ const TableComponent: React.FunctionComponent = () => {
 };
 
 export default {
-  title: "Components/Table",
+  title: "Components/TableComponent",
   component: TableComponent,
   argTypes: {},
 };

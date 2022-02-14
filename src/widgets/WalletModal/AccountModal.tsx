@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
 import Flex from "../../components/Flex/Flex";
-import { Modal } from "../Modal";
+import Modal from "../NetworkModal/Modal";
 import CopyToClipboard from "./CopyToClipboard";
 import { localStorageKey } from "./config";
 
@@ -24,7 +24,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       {account}
     </Text>
     <Flex mb="32px">
-      <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px" fontFamily="poppins">
+      <LinkExternal href={`https://bscscan.com/address/${account}`} mr="16px">
         View on BscScan
       </LinkExternal>
       <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>

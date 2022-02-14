@@ -7,4 +7,5 @@ export interface CarouselProps extends BoxProps {
   interval?: number;
   hideIndicator?: boolean;
   defaultSlide?: number;
+  maxHeight?: string;
 }

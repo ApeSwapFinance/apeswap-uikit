@@ -1,19 +1,13 @@
-import { AlertTheme } from "../components/Alert/types";
-import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { NavTheme } from "../widgets/Menu/types";
-import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices, FontFamily } from "./types";
 
 export interface ApeSwapTheme {
   siteWidth: number;
   isDark: boolean;
-  alert: AlertTheme;
   colors: Colors;
   fontFamily: FontFamily;
   nav: NavTheme;
-  modal: ModalTheme;
-  radio: RadioTheme;
   toggle: ToggleTheme;
   breakpoints: Breakpoints;
   mediaQueries: MediaQueries;

@@ -1,6 +1,6 @@
 import React from "react";
 import networks from "./config";
-import { Modal } from "../Modal";
+import Modal from "./Modal";
 import NetworkCard from "./NetworkCard";
 import { SwitchNetwork } from "./types";
 

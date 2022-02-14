@@ -13,6 +13,7 @@ const Carousel: React.FC<CarouselProps> = ({
   interval = 1000,
   hideIndicator,
   defaultSlide,
+  maxHeight = "300px",
   ...props
 }) => {
   const [currentSlide, setCurrentSlide] = useState(defaultSlide || 0);
@@ -36,7 +37,7 @@ const Carousel: React.FC<CarouselProps> = ({
   }, [autoPlay, currentSlide, interval, slides.length]);
 
   return (
-    <Box {...props} sx={styles.carousel}>
+    <Box {...props} sx={{ ...styles.carousel, maxHeight }}>
       {controls && (
         <Box sx={styles.chevronContainer}>
           <Button sx={styles.chevronWrapper} onClick={prevSlide}>

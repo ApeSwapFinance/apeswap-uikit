@@ -9,3 +9,9 @@ export interface Config {
   symbol: string;
   icon: FC<SvgProps>;
 }
+
+export type Handler = () => void;
+
+export interface InjectedProps {
+  onDismiss?: Handler;
+}

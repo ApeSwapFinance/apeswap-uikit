@@ -9,13 +9,13 @@ it("renders ConnectModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-dlfnuX kFFsXW"
+        class="sc-eCstlR SuRTc"
       >
         <div
-          class="sc-hKgJUU guScGv"
+          class="sc-jSgvzq esGMQW"
         >
           <div
-            class="sc-eCstlR hLYqZL css-4cffwv"
+            class="sc-gKseQn kcOswJ css-4cffwv"
           >
             <h3
               class="css-1wf7gym"
@@ -25,18 +25,21 @@ it("renders ConnectModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            type="button"
-            variant="text"
+            class="css-ej7vhs"
           >
             <svg
-              class="sc-gsTEea foxkmQ"
-              color="primary"
-              viewBox="0 0 24 24"
-              width="20px"
+              class="css-zmuhgg-Close"
+              fill="none"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M18.3 5.70997C17.91 5.31997 17.28 5.31997 16.89 5.70997L12 10.59L7.10997 5.69997C6.71997 5.30997 6.08997 5.30997 5.69997 5.69997C5.30997 6.08997 5.30997 6.71997 5.69997 7.10997L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10997C18.68 6.72997 18.68 6.08997 18.3 5.70997Z"
+                clip-rule="evenodd"
+                d="M10.9497 10.9497C11.3403 10.5592 11.3403 9.92602 10.9497 9.5355L7.41424 5.99999L10.9497 2.46451C11.3402 2.07399 11.3402 1.44082 10.9497 1.0503C10.5592 0.659775 9.92602 0.659775 9.5355 1.0503L6.00002 4.58578L2.46446 1.05022C2.07394 0.659693 1.44077 0.659693 1.05025 1.05022C0.659726 1.44074 0.659726 2.07391 1.05025 2.46443L4.58581 5.99999L1.05022 9.53558C0.659693 9.9261 0.659693 10.5593 1.05022 10.9498C1.44074 11.3403 2.07391 11.3403 2.46443 10.9498L6.00002 7.4142L9.53553 10.9497C9.92605 11.3402 10.5592 11.3402 10.9497 10.9497Z"
+                fill="#FAFAFA"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -569,10 +572,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <a
-            class="sc-bdfBQB hRfLZj sc-iBPTik fPTavp"
-            color="primary"
-            href="https://docs.binance.org/smart-chain/wallet/metamask.html"
-            rel="noreferrer noopener"
+            class="css-7k93qw"
             target="_blank"
           >
             <svg
@@ -587,6 +587,23 @@ it("renders ConnectModal correctly", () => {
               />
             </svg>
             Learn how to connect
+            <span
+              class="css-w4f2ye"
+            >
+              <svg
+                class="css-yc605n-External"
+                fill="none"
+                height="auto"
+                viewBox="0 0 11 12"
+                width="11"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.16667 10.2778H1.83333C1.49722 10.2778 1.22222 10.0028 1.22222 9.66667V2.33333C1.22222 1.99722 1.49722 1.72222 1.83333 1.72222H4.88889C5.225 1.72222 5.5 1.44722 5.5 1.11111C5.5 0.775 5.225 0.5 4.88889 0.5H1.22222C0.543889 0.5 0 1.05 0 1.72222V10.2778C0 10.95 0.55 11.5 1.22222 11.5H9.77778C10.45 11.5 11 10.95 11 10.2778V6.61111C11 6.275 10.725 6 10.3889 6C10.0528 6 9.77778 6.275 9.77778 6.61111V9.66667C9.77778 10.0028 9.50278 10.2778 9.16667 10.2778ZM6.72222 1.11111C6.72222 1.44722 6.99722 1.72222 7.33333 1.72222H8.91611L3.33667 7.30167C3.09833 7.54 3.09833 7.925 3.33667 8.16333C3.575 8.40167 3.96 8.40167 4.19833 8.16333L9.77778 2.58389V4.16667C9.77778 4.50278 10.0528 4.77778 10.3889 4.77778C10.725 4.77778 11 4.50278 11 4.16667V1.11111C11 0.775 10.725 0.5 10.3889 0.5H7.33333C6.99722 0.5 6.72222 0.775 6.72222 1.11111Z"
+                  fill="#4D4040"
+                />
+              </svg>
+            </span>
           </a>
         </div>
       </div>
@@ -599,13 +616,13 @@ it("renders AccountModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-dlfnuX kFFsXW"
+        class="sc-eCstlR SuRTc"
       >
         <div
-          class="sc-hKgJUU guScGv"
+          class="sc-jSgvzq esGMQW"
         >
           <div
-            class="sc-eCstlR hLYqZL css-4cffwv"
+            class="sc-gKseQn kcOswJ css-4cffwv"
           >
             <h3
               class="css-1wf7gym"
@@ -615,18 +632,21 @@ it("renders AccountModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            type="button"
-            variant="text"
+            class="css-ej7vhs"
           >
             <svg
-              class="sc-gsTEea foxkmQ"
-              color="primary"
-              viewBox="0 0 24 24"
-              width="20px"
+              class="css-zmuhgg-Close"
+              fill="none"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M18.3 5.70997C17.91 5.31997 17.28 5.31997 16.89 5.70997L12 10.59L7.10997 5.69997C6.71997 5.30997 6.08997 5.30997 5.69997 5.69997C5.30997 6.08997 5.30997 6.71997 5.69997 7.10997L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10997C18.68 6.72997 18.68 6.08997 18.3 5.70997Z"
+                clip-rule="evenodd"
+                d="M10.9497 10.9497C11.3403 10.5592 11.3403 9.92602 10.9497 9.5355L7.41424 5.99999L10.9497 2.46451C11.3402 2.07399 11.3402 1.44082 10.9497 1.0503C10.5592 0.659775 9.92602 0.659775 9.5355 1.0503L6.00002 4.58578L2.46446 1.05022C2.07394 0.659693 1.44077 0.659693 1.05025 1.05022C0.659726 1.44074 0.659726 2.07391 1.05025 2.46443L4.58581 5.99999L1.05022 9.53558C0.659693 9.9261 0.659693 10.5593 1.05022 10.9498C1.44074 11.3403 2.07391 11.3403 2.46443 10.9498L6.00002 7.4142L9.53553 10.9497C9.92605 11.3402 10.5592 11.3402 10.9497 10.9497Z"
+                fill="#FAFAFA"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -644,25 +664,28 @@ it("renders AccountModal correctly", () => {
             class="css-1m77ulh"
           >
             <a
-              class="sc-bdfBQB hRfLZj"
-              color="primary"
-              font-family="poppins"
+              class="css-jq5pa1"
               href="https://bscscan.com/address/undefined"
-              rel="noreferrer noopener"
               target="_blank"
             >
               View on BscScan
-              <svg
-                class="sc-gsTEea eMWnEN"
-                color="primary"
-                viewBox="0 0 24 24"
-                width="20px"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="css-w4f2ye"
               >
-                <path
-                  d="M18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H11C11.55 5 12 4.55 12 4C12 3.45 11.55 3 11 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V13C21 12.45 20.55 12 20 12C19.45 12 19 12.45 19 13V18C19 18.55 18.55 19 18 19ZM14 4C14 4.55 14.45 5 15 5H17.59L8.46 14.13C8.07 14.52 8.07 15.15 8.46 15.54C8.85 15.93 9.48 15.93 9.87 15.54L19 6.41V9C19 9.55 19.45 10 20 10C20.55 10 21 9.55 21 9V4C21 3.45 20.55 3 20 3H15C14.45 3 14 3.45 14 4Z"
-                />
-              </svg>
+                <svg
+                  class="css-yc605n-External"
+                  fill="none"
+                  height="auto"
+                  viewBox="0 0 11 12"
+                  width="11"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.16667 10.2778H1.83333C1.49722 10.2778 1.22222 10.0028 1.22222 9.66667V2.33333C1.22222 1.99722 1.49722 1.72222 1.83333 1.72222H4.88889C5.225 1.72222 5.5 1.44722 5.5 1.11111C5.5 0.775 5.225 0.5 4.88889 0.5H1.22222C0.543889 0.5 0 1.05 0 1.72222V10.2778C0 10.95 0.55 11.5 1.22222 11.5H9.77778C10.45 11.5 11 10.95 11 10.2778V6.61111C11 6.275 10.725 6 10.3889 6C10.0528 6 9.77778 6.275 9.77778 6.61111V9.66667C9.77778 10.0028 9.50278 10.2778 9.16667 10.2778ZM6.72222 1.11111C6.72222 1.44722 6.99722 1.72222 7.33333 1.72222H8.91611L3.33667 7.30167C3.09833 7.54 3.09833 7.925 3.33667 8.16333C3.575 8.40167 3.96 8.40167 4.19833 8.16333L9.77778 2.58389V4.16667C9.77778 4.50278 10.0528 4.77778 10.3889 4.77778C10.725 4.77778 11 4.50278 11 4.16667V1.11111C11 0.775 10.725 0.5 10.3889 0.5H7.33333C6.99722 0.5 6.72222 0.775 6.72222 1.11111Z"
+                    fill="#4D4040"
+                  />
+                </svg>
+              </span>
             </a>
             <span
               class="sc-fubCzh jznnmf css-18xsidq"

@@ -1,5 +1,5 @@
 import React from "react";
-import { useModal } from "../Modal";
+import { useModal } from "../NetworkModal/Modal";
 import ConnectModal from "./ConnectModal";
 import AccountModal from "./AccountModal";
 import { Login } from "./types";

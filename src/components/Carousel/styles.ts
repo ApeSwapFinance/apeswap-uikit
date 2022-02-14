@@ -14,10 +14,11 @@ export const slideOut = keyframes({
 const styles: Record<string, ThemeUIStyleObject> = {
   carousel: {
     width: "100%",
-    height: "100vh",
-    background: "#fff",
+    height: "100%",
+    background: "gradient",
     margin: "auto",
     position: "relative",
+    borderRadius: "normal",
     overflow: "hidden",
     display: "block",
   },
@@ -26,7 +27,9 @@ const styles: Record<string, ThemeUIStyleObject> = {
     display: "flex",
     justifyContent: "space-between",
     position: "absolute",
-    top: "50%",
+    top: 0,
+    bottom: 0,
+    margin: "auto",
   },
   chevronWrapper: {
     padding: "3px",
@@ -36,11 +39,12 @@ const styles: Record<string, ThemeUIStyleObject> = {
     "&:hover": {
       cursor: "pointer",
       svg: {
-        fill: "grey",
+        fill: "brown",
       },
     },
     svg: {
       width: "40px",
+      fill: "primaryBright",
     },
   },
   imageWrapper: {
@@ -51,39 +55,56 @@ const styles: Record<string, ThemeUIStyleObject> = {
   slider: {
     height: "100%",
     width: "100%",
+    opacity: 0,
     position: "absolute",
-    animation: `${slideOut} 1.2s forwards`,
+    animation: `${slideOut} 1.8s forwards`,
+    transition: "all 2s ease-in-out",
+    objectFit: "cover",
   },
   activeSlider: {
     height: "100%",
     width: "100%",
-    position: "absolute",
-    animation: `${slideIn} 1s forwards`,
+    position: "relative",
+    display: "block",
+    animation: `${slideIn} .5s forwards`,
+    opacity: 1,
+    zIndex: 2,
+    objectFit: "cover",
   },
-  indicatorContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+  indicatorMainWrapper: {
     position: "absolute",
     bottom: 10,
     left: 0,
     right: 0,
+    zIndex: 3,
+    display: "flex",
+    justifyContent: "center",
+  },
+  indicatorContainer: {
+    display: "inline-flex",
+    flexWrap: "wrap",
+    flexBasis: "auto",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "rgba(0, 0, 0, 0.2)",
+    whiteSpace: "nowrap",
+    gap: 4,
+    padding: "4px 5px",
+    borderRadius: "11px",
   },
   indicatorOff: {
     display: "none",
   },
   indicatorItem: {
-    padding: "5px",
-    backgroundColor: "black",
-    margin: "0 5px",
+    padding: "7px",
+    backgroundColor: "rgba(255, 255, 255, 0.38)",
     borderRadius: "50%",
     cursor: "pointer",
   },
   indicatorItemActive: {
-    margin: "0 5px",
     borderRadius: "50%",
-    padding: "5px",
-    backgroundColor: "grey",
+    padding: "7px",
+    backgroundColor: "primaryBright",
   },
 };
 
