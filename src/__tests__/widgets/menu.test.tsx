@@ -239,7 +239,7 @@ it("renders correctly", () => {
                     fill="white"
                   />
                 </svg>
-                 BSC
+                 BNB
               </button>
             </div>
             <div>

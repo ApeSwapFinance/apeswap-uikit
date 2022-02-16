@@ -17,8 +17,8 @@ export const NETWORK_ICON: { [key: number]: any } = {
 };
 
 export const NETWORK_LABEL: { [key: number]: any } = {
-  [ChainId.BSC]: "BSC",
-  [ChainId.BSC_TESTNET]: "BSC Testnet",
+  [ChainId.BSC]: "BNB",
+  [ChainId.BSC_TESTNET]: "BNB Testnet",
   [ChainId.MATIC]: "Polygon",
   [ChainId.MATIC_TESTNET]: "Matic Testnet",
 };
@@ -26,7 +26,7 @@ export const NETWORK_LABEL: { [key: number]: any } = {
 const networks: Config[] = [
   {
     chainId: ChainId.BSC,
-    networkName: "Binance Smart Chain",
+    networkName: "Build and Build",
     symbol: NETWORK_LABEL[ChainId.BSC],
     icon: NETWORK_ICON[ChainId.BSC],
   },
