@@ -7,7 +7,6 @@ import ButtonMenuItem from "./ButtonMenuItem";
 
 const Row = styled.div`
   margin-bottom: 10px;
-  background-color: ${({ theme }) => theme.colors.white2};
   padding: 1em;
 
   & > button + button {

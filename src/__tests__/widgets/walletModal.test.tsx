@@ -9,7 +9,7 @@ it("renders ConnectModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iCfMLu jbCtfo"
+        class="sc-iCfMLu iFaiCa"
       >
         <div
           class="sc-furwcr hTjrUw"
@@ -611,7 +611,7 @@ it("renders AccountModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iCfMLu jbCtfo"
+        class="sc-iCfMLu iFaiCa"
       >
         <div
           class="sc-furwcr hTjrUw"
@@ -697,7 +697,7 @@ it("renders AccountModal correctly", () => {
                 />
               </svg>
               <div
-                class="sc-bqiRlB dLYDyD"
+                class="sc-bqiRlB hgKvlw"
               >
                 Copied
               </div>
