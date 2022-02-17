@@ -24,8 +24,8 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   text-align: center;
   font-family: poppins;
   font-weight: 700;
-  background-color: ${({ theme }) => theme.colors.white2};
-  color: ${({ theme }) => theme.colors.white4};
+  background-color: ${({ theme }) => theme.colors.white4};
+  color: ${({ theme }) => theme.colors.primary};
   border-radius: 16px;
   opacity: 0.7;
 `;

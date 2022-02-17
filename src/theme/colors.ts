@@ -19,6 +19,8 @@ export const brandColors = {
 // white2, navbar,
 // white3, lvl1,
 // white4, lvl2,
+// contrast: "#965a50ff",
+// invertedContrast: "#FFFFFF",
 
 export const lightColors: Colors = {
   ...baseColors,
@@ -35,8 +37,6 @@ export const lightColors: Colors = {
   primaryButtonDisable: "rgba(66, 66, 66, 0.5)",
   secondaryButtonDisableBg: "#F1EADA",
   secondaryButtonDisableColor: "rgba(66, 66, 66, 0.5)",
-  lvl1: "#F1EADA",
-  lvl2: "#EADFC7",
   text: "#4D4040",
   white2: "#F9F4E7",
   white3: "#F1EADA",
@@ -57,8 +57,6 @@ export const darkColors: Colors = {
   primaryButtonDisable: "rgba(241, 234, 218, 0.5)",
   secondaryButtonDisableBg: "rgba(33, 33, 33, 0.5)",
   secondaryButtonDisableColor: "#F1EADA",
-  lvl1: "#383838",
-  lvl2: "#424242",
   text: "#FAFAFA",
   white2: "#212121",
   white3: "#383838",

@@ -41,8 +41,6 @@ export type Colors = {
   yellow: string;
   black?: string;
   dividerColor: string;
-  lvl1: string;
-  lvl2: string;
   navbar: string;
   primaryButtonDisable: string;
   secondaryButtonDisableBg: string;
