@@ -23,7 +23,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   transition: background-color 0.2s ease-in-out;
   border: 2px solid ${({ theme }) => (theme.isDark ? 0 : theme.colors.inputBorder)};
   border-radius: 5px;
-  background-color: ${({ theme }) => theme.colors.primaryBright};
+  background-color: ${({ theme }) => theme.colors.white3};
 
   &:after {
     content: "";

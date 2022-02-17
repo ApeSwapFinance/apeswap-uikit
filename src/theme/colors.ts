@@ -9,6 +9,7 @@ export const baseColors = {
   primaryDark: "#0B0B0B",
   gray: "#7A7A7A",
   inputBorder: "#E6DECB",
+  brown: "#A16552",
 };
 
 export const brandColors = {
