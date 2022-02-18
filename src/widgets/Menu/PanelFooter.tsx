@@ -23,7 +23,7 @@ const { LanguageIcon } = Icons;
 const Container = styled.div`
   flex: none;
   padding: 8px 4px;
-  background-color: ${({ theme }) => theme.isDark ? theme.colors.background : theme.colors.primary};
+  background-color: ${({ theme }) => (theme.isDark ? theme.colors.background : theme.colors.primary)};
   border-top: solid 1px ${({ theme }) => theme.colors.dividerColor};
 `;
 
