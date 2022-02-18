@@ -1,5 +1,12 @@
 import { Colors } from "./types";
 
+// white1, background,
+// white2, navbar,
+// white3, lvl1,
+// white4, lvl2,
+// contrast: "#965a50ff",
+// invertedContrast: "#FFFFFF",
+
 export const baseColors = {
   error: "#DF4141",
   success: "#38A611",
@@ -7,6 +14,7 @@ export const baseColors = {
   yellow: "#FFB300",
   primaryBright: "#FAFAFA",
   primaryDark: "#0B0B0B",
+  primaryGray: "#4D40407F",
   gray: "#7A7A7A",
   inputBorder: "#E6DECB",
   brown: "#A16552",
@@ -15,13 +23,6 @@ export const baseColors = {
 export const brandColors = {
   binance: "#F0B90B",
 };
-
-// white1, background,
-// white2, navbar,
-// white3, lvl1,
-// white4, lvl2,
-// contrast: "#965a50ff",
-// invertedContrast: "#FFFFFF",
 
 export const lightColors: Colors = {
   ...baseColors,
