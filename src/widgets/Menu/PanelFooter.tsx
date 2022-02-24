@@ -23,7 +23,7 @@ const { LanguageIcon } = Icons;
 const Container = styled.div`
   flex: none;
   padding: 8px 4px;
-  background-color: ${({ theme }) => (theme.isDark ? theme.colors.background : theme.colors.primary)};
+  background-color: ${({ theme }) => theme.colors.navbar};
   border-top: solid 1px ${({ theme }) => theme.colors.dividerColor};
 `;
 
@@ -89,7 +89,7 @@ const PanelFooter: React.FC<Props> = ({
                 target="_blank"
               >
                 <ApeSwapRoundIcon width="24px" mr="8px" />
-                <Text color="primaryBright" fontWeight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+                <Text color="text" fontWeight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
               </PriceLink>
             ) : (
               <Skeleton width={80} height={24} />
@@ -99,7 +99,7 @@ const PanelFooter: React.FC<Props> = ({
         <Flex>
           {socials.map((social, index) => {
             const Icon = Icons[social.icon];
-            const iconProps = { width: "24px", color: "primaryBright", style: { cursor: "pointer" } };
+            const iconProps = { width: "24px", color: "text", style: { cursor: "pointer" } };
             const mr = index < socials.length - 1 ? "12px" : 0;
             if (social.items) {
               return (
@@ -133,8 +133,8 @@ const PanelFooter: React.FC<Props> = ({
           <Dropdown
             position="top-right"
             target={
-              <Button variant="text" startIcon={<LanguageIcon color="primaryBright" width="24px" />}>
-                <Text color="primaryBright" fontWeight={600}>
+              <Button variant="text" startIcon={<LanguageIcon color="text" width="24px" />}>
+                <Text color="text" fontWeight={600}>
                   {currentLang?.toUpperCase()}
                 </Text>
               </Button>

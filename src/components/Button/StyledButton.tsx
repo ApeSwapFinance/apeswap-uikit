@@ -81,6 +81,7 @@ const StyledButton = styled.button<ButtonProps>`
   padding: ${({ isMobile }) => (isMobile ? "0 10px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
+  text-transform: uppercase;
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background-color: ${getButtonVariantProp("backgroundHover")};
