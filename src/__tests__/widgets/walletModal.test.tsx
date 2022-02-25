@@ -27,7 +27,7 @@ it("renders ConnectModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jRQBWg jRPBxu sc-gKclnd bGsNxc"
+            class="sc-jRQBWg fbfoBv sc-gKclnd bGsNxc"
             type="button"
           >
             <svg
@@ -47,7 +47,7 @@ it("renders ConnectModal correctly", () => {
           class="sc-eCImPb fFZhuZ"
         >
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
             type="button"
@@ -191,7 +191,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
             type="button"
@@ -236,7 +236,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
             type="button"
@@ -266,7 +266,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
             type="button"
@@ -302,7 +302,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
             type="button"
@@ -334,7 +334,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
             type="button"
@@ -400,7 +400,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
             type="button"
@@ -434,7 +434,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
             type="button"
@@ -487,7 +487,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gZPgM"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
             type="button"
@@ -535,7 +535,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg dEyGaU"
+            class="sc-jRQBWg knbMYN"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
             type="button"
@@ -629,7 +629,7 @@ it("renders AccountModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jRQBWg jRPBxu sc-gKclnd bGsNxc"
+            class="sc-jRQBWg fbfoBv sc-gKclnd bGsNxc"
             type="button"
           >
             <svg
@@ -707,7 +707,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCImPb bdSAQD"
           >
             <button
-              class="sc-crHmcD fNABiT"
+              class="sc-crHmcD BhqdG"
               type="button"
             >
               Logout
