@@ -57,6 +57,7 @@ export type Colors = {
   inputBorder: string;
   tertiary: string;
   primaryGray: string;
+  yellowHover: string;
   // secondary: string;
   // warning: string;
   // contrast: string;

@@ -7,7 +7,7 @@ export const light: ButtonTheme = {
   [PRIMARY]: {
     background: lightColors.yellow,
     backgroundActive: lightColors.primaryBright,
-    backgroundHover: lightColors.yellow,
+    backgroundHover: lightColors.yellowHover,
     border: 0,
     borderColorHover: "currentColor",
     boxShadow: "none",

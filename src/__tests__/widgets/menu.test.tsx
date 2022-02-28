@@ -217,6 +217,7 @@ it("renders correctly", () => {
               <button
                 class="sc-bBHxTw iZrXSS"
                 font-size="14px"
+                style="text-transform: uppercase;"
                 type="button"
               >
                 <svg

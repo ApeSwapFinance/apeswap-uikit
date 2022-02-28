@@ -12,6 +12,7 @@ export const baseColors = {
   success: "#38A611",
   primary: "#4D4040",
   yellow: "#FFB300",
+  yellowHover: "#ffd54fFF",
   primaryBright: "#FAFAFA",
   primaryDark: "#0B0B0B",
   primaryGray: "#4D40407F",

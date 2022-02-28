@@ -18,7 +18,7 @@ it("renders correctly", () => {
         class="sc-bdvvtL jwayCH"
       >
         <button
-          class="sc-gsDKAQ fnDNeJ"
+          class="sc-gsDKAQ bWVmgz"
           type="button"
         >
           Item 1
