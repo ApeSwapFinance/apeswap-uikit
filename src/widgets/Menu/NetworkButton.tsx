@@ -29,7 +29,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
         onPresentNetworkModal();
       }}
       style={{
-        textTransform: NETWORK_LABEL[chainId] !== "BNB" ? 'capitalize' : 'uppercase'
+        textTransform: NETWORK_LABEL[chainId] !== "BNB" ? "capitalize" : "uppercase",
       }}
     >
       {NETWORK_ICON[chainId]} {NETWORK_LABEL[chainId]}
