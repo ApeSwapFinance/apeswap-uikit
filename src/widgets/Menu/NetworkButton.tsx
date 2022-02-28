@@ -32,7 +32,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
       }}
       variant="tertiary"
       style={{
-        textTransform: NETWORK_LABEL[chainId] === "BNB" ? 'uppercase' : 'capitalize'
+        textTransform: NETWORK_LABEL[chainId] === "BNB" ? "uppercase" : "capitalize",
       }}
     >
       {NETWORK_ICON[chainId]} {NETWORK_LABEL[chainId]}
