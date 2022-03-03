@@ -21,10 +21,10 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   return `
     &:disabled,
     &.button--disabled {
-      background-color: ${theme.colors.backgroundDisabled};
-      border-color: ${theme.colors.backgroundDisabled};
+      background-color: ${theme.colors.white3};
+      border-color: ${variants.PRIMARY ? "transparent" : theme.colors.background};
       box-shadow: none;
-      color: ${theme.colors.textDisabled};
+      color: ${variants.PRIMARY ? theme.colors.primaryButtonDisable : theme.colors.secondaryButtonDisableColor};
       cursor: not-allowed;
     }
   `;
@@ -63,10 +63,10 @@ const StyledButton = styled.button<ButtonProps>`
   align-items: center;
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
+  color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
   border-radius: 16px;
   font-weight: ${({ fontWeight = 600 }) => fontWeight};
   box-shadow: ${getButtonVariantProp("boxShadow")};
-  color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
   cursor: pointer;
   display: inline-flex;
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
@@ -81,10 +81,12 @@ const StyledButton = styled.button<ButtonProps>`
   padding: ${({ isMobile }) => (isMobile ? "0 10px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
+  text-transform: uppercase;
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background-color: ${getButtonVariantProp("backgroundHover")}ff;
+    background-color: ${getButtonVariantProp("backgroundHover")};
     border-color: ${getButtonVariantProp("borderColorHover")};
+    color: ${({ theme, variant }) => (variant === "secondary" ? theme.colors.yellow : getButtonVariantProp("color"))};
   }
 
   &:focus:not(:active) {

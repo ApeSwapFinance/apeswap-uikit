@@ -10,7 +10,7 @@ it("renders correctly", () => {
     <DocumentFragment>
       <input
         checked=""
-        class="sc-bdvvtL ienDek"
+        class="sc-bdvvtL eSNwcO"
         scale="md"
         type="checkbox"
       />

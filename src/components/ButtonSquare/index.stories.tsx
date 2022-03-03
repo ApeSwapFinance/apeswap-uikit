@@ -47,7 +47,7 @@ export const Variants: React.FC = () => {
         <ButtonSquare as="a" href="https://apeswap.finance" target="_blank" rel="noreferrer">
           As an anchor
         </ButtonSquare>
-        <ButtonSquare as={Link} to="/router-link" variant="secondary">
+        <ButtonSquare as={Link} to="/router-link">
           As an React Router link
         </ButtonSquare>
         <ButtonSquare as="a" href="https://apeswap.finance" disabled>
@@ -55,15 +55,17 @@ export const Variants: React.FC = () => {
         </ButtonSquare>
       </Row>
       <Row>
-        <ButtonSquare fullWidth>Full size</ButtonSquare>
+        <ButtonSquare fullWidth variant="success">
+          Success with Full size
+        </ButtonSquare>
       </Row>
       <Row>
         <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
           Approving
         </ButtonSquare>
-        <ButtonSquare isLoading variant="success">
-          Approving
-        </ButtonSquare>
+        <ButtonSquare isLoading>Approving</ButtonSquare>
+        <ButtonSquare variant="tertiary">Tertiary</ButtonSquare>
+        <ButtonSquare variant="secondary">Secondary</ButtonSquare>
       </Row>
       <Row>
         <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
@@ -76,16 +78,16 @@ export const Variants: React.FC = () => {
         <IconButtonSquare>
           <LogoIcon />
         </IconButtonSquare>
-        <IconButtonSquare variant="secondary">
-          <AddIcon />
+        <IconButtonSquare variant="success">
+          <AddIcon color="#FAFAFA" />
         </IconButtonSquare>
       </Row>
       <Row>
-        <IconButtonSquare size="sm" variant="danger">
+        <IconButtonSquare size="sm" variant="success">
           <LogoIcon />
         </IconButtonSquare>
-        <IconButtonSquare size="sm" variant="success">
-          <AddIcon />
+        <IconButtonSquare size="sm">
+          <AddIcon color="#FAFAFA" />
         </IconButtonSquare>
       </Row>
     </BrowserRouter>

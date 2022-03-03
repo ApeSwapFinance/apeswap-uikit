@@ -20,10 +20,10 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   return `
     &:disabled,
     &.button--disabled {
-      background-color: ${theme.colors.backgroundDisabled};
-      border-color: ${theme.colors.backgroundDisabled};
+      background-color: ${theme.colors.white3};
+      border-color: ${variants.PRIMARY ? "transparent" : theme.colors.background};
       box-shadow: none;
-      color: ${theme.colors.textDisabled};
+      color: ${variants.PRIMARY ? theme.colors.primaryButtonDisable : theme.colors.secondaryButtonDisableColor};
       cursor: not-allowed;
     }
   `;
@@ -47,11 +47,11 @@ const getButtonVariantProp =
 
 const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
-  background-color: #ffb300;
-  border-radius: 5px;
-  border: none;
+  background-color: ${({ bgColor }) => (!bgColor ? getButtonVariantProp("background") : bgColor)};
+  border-radius: 10px;
+  border: ${getButtonVariantProp("border")};
   box-shadow: none;
-  color: white;
+  color: ${({ color }) => (!color ? getButtonVariantProp("color") : color)};
   cursor: pointer;
   display: inline-flex;
   font-size: ${({ fontSize }) => fontSize || "12px"};
@@ -67,9 +67,12 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
+  text-transform: uppercase;
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background-color: ${getButtonVariantProp("backgroundHover")};
+    border-color: ${getButtonVariantProp("borderColorHover")};
+    color: ${({ theme, variant }) => (variant === "secondary" ? theme.colors.yellow : getButtonVariantProp("color"))};
   }
 
   &:focus:not(:active) {
@@ -77,6 +80,7 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   }
 
   &:active {
+    background-color: ${getButtonVariantProp("backgroundActive")};
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 

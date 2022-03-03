@@ -17,7 +17,7 @@ export { default as NftIcon } from "./Nft";
 export { default as apeNFTIcon } from "./apeNFT";
 export { default as GoldenBananaIcon } from "./GoldenBanana";
 export { default as PoolIcon } from "./Pool";
-export { default as SunIcon } from "./Sun";
+export { default as IslandIcon } from "./Island";
 export { default as TelegramIcon } from "./Telegram";
 export { default as TicketIcon } from "./Ticket";
 export { default as TradeIcon } from "./Trade";
