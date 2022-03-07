@@ -8,6 +8,8 @@ import OntoWallet from "./icons/OntoWallet";
 import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
 import Coinbase from "./icons/Coinbase";
+import HuobiWallet from "./icons/HuobiWallet";
+
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -60,6 +62,11 @@ const connectors: Config[] = [
     title: "Coinbase Wallet",
     icon: Coinbase,
     connectorId: ConnectorNames.Walletlink,
+  },
+  {
+    title: "Huobi Wallet",
+    icon: HuobiWallet,
+    connectorId: ConnectorNames.Injected,
   },
 ];
 
