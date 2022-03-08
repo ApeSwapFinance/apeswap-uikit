@@ -135,12 +135,10 @@ const StyledButton = styled(ButtonSquare)`
   height: 44px;
   padding: 10px 20px;
   font-weight: 700;
-
 `;
 
 const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
   const theme = useTheme();
-
 
   return (
     <Container>
@@ -165,9 +163,7 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
         {children}
 
         <ModalFooter>
-          <StyledButton onClick={startEarning}>
-            Start Earning
-          </StyledButton>
+          <StyledButton onClick={startEarning}>Start Earning</StyledButton>
         </ModalFooter>
       </StyledModal>
     </Container>
