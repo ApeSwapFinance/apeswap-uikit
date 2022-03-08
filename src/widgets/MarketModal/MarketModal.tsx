@@ -140,7 +140,7 @@ const SliderBtnSection = styled.div`
 const CircleDiv = styled.div`
   display: flex;
   padding: 10px;
-`
+`;
 const CircleButton = styled.div`
   width: 14px;
   height: 14px;
@@ -195,15 +195,16 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
 
             <CircleDiv>
               <CircleButton />
-              <CircleButton className={"isActive"}/>
+              <CircleButton className={"isActive"} />
               <CircleButton />
             </CircleDiv>
-
 
             <ArrowDropRightIcon width="12px" height="14px" />
           </SliderBtnSection>
 
-          <StyledButton fullWidth onClick={startEarning}>Start Earning</StyledButton>
+          <StyledButton fullWidth onClick={startEarning}>
+            Start Earning
+          </StyledButton>
         </ModalFooter>
       </StyledModal>
     </Container>
