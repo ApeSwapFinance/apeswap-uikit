@@ -3,7 +3,7 @@ import { MarketModalProps, MarketModal } from ".";
 import { Connected } from "../Menu/index.stories";
 
 export default {
-  title: "Widgets/MarketingModal",
+  title: "Widgets/MarketModal",
   component: MarketModal,
   argTypes: {
     onDismiss: { action: "onDismiss" },
@@ -12,8 +12,8 @@ export default {
 };
 
 export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
-  title = "Welcome to ApeSwap's Farms",
-  description = "Start earning passive income with your cryptocurrency!",
+  title = "Welcome to ApeSwap’s Lending Network",
+  description = "How does it work?",
   startEarning,
 }) => {
   const [visible, setVisible] = useState(true);
@@ -26,7 +26,9 @@ export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
           description={description}
           startEarning={startEarning}
           onDismiss={() => setVisible(false)}
-        />
+        >
+          <p>Text Me</p>
+        </MarketModal>
       )}
       <Connected />
     </>
