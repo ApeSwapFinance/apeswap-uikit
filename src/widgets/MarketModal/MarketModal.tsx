@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
 import { ButtonSquare } from "../../components/ButtonSquare";
-import { FarmApe } from "../../components/Image";
+// import { FarmApe } from "../../components/Image";
 import { MarketModalProps } from "./types";
 
 const Container = styled.div`
@@ -130,12 +130,20 @@ const ModalFooter = styled.div`
     margin-top: 10px;
   }
 `;
-
 const SliderBtnSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 20%;
+
+  &:last-child {
+    justify-content: flex-end;
+  }
 `;
 const CircleDiv = styled.div`
   display: flex;
@@ -156,7 +164,6 @@ const CircleButton = styled.div`
     margin-right: 0;
   }
 `;
-
 const StyledButton = styled(ButtonSquare)`
   /* width: 274px;
   height: 44px; */
@@ -164,8 +171,20 @@ const StyledButton = styled(ButtonSquare)`
   font-weight: 700;
 `;
 
-const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
+const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, contents }) => {
   const theme = useTheme();
+
+  const [step, setStep] = useState(0);
+
+  const goNext = () => {
+    if (step + 1 !== contents.length) {
+      setStep(step + 1);
+    }
+  };
+
+  const goPrev = () => {
+    return step === 0 ? () => null : setStep(step - 1);
+  };
 
   return (
     <Container>
@@ -187,19 +206,36 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
           </CloseButton>
         </ModalHeader>
 
-        {children}
+        {contents.map((element, index) => (
+          <>{step === index && element}</>
+        ))}
 
         <ModalFooter>
           <SliderBtnSection>
-            <ArrowDropLeftIcon width="12px" height="14px" />
+            <IconContainer>
+              <ArrowDropLeftIcon
+                width="12px"
+                height="14px"
+                onClick={goPrev}
+                style={{ display: step === 0 ? "none" : "unset" }}
+              />
+            </IconContainer>
 
             <CircleDiv>
-              <CircleButton />
-              <CircleButton className={"isActive"} />
-              <CircleButton />
+              {contents.map((_, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <CircleButton key={`circle-${index}`} className={step === index ? "isActive" : ""} />
+              ))}
             </CircleDiv>
 
-            <ArrowDropRightIcon width="12px" height="14px" />
+            <IconContainer>
+              <ArrowDropRightIcon
+                width="12px"
+                height="14px"
+                onClick={goNext}
+                style={{ display: step === contents.length - 1 ? "none" : "unset" }}
+              />
+            </IconContainer>
           </SliderBtnSection>
 
           <StyledButton fullWidth onClick={startEarning}>

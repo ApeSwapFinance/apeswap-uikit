@@ -17,6 +17,7 @@ export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
   startEarning,
 }) => {
   const [visible, setVisible] = useState(true);
+  const contents = [<p>body 0</p>, <p>body 1</p>, <p>body 2</p>, <p>body 3</p>];
 
   return (
     <>
@@ -26,9 +27,8 @@ export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
           description={description}
           startEarning={startEarning}
           onDismiss={() => setVisible(false)}
-        >
-          <p>Text Me</p>
-        </MarketModal>
+          contents={contents}
+        />
       )}
       <Connected />
     </>

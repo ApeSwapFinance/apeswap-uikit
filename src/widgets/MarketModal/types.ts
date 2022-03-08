@@ -1,3 +1,5 @@
+import { ReactChild } from "react";
+
 export type ActionHandler = () => void;
 
 export interface MarketModalProps {
@@ -5,4 +7,5 @@ export interface MarketModalProps {
   description: string;
   startEarning: ActionHandler;
   onDismiss: ActionHandler;
+  contents: Array<ReactChild>;
 }
