@@ -1,4 +1,3 @@
-
 export type ActionHandler = () => void;
 
 export interface MarketModalProps {

@@ -5,14 +5,7 @@ import { Button } from "../../components/Button";
 import { FarmApe } from "../../components/Image";
 import { MarketModalProps } from "./types";
 
-
-
-const MarketModal: React.FC<MarketModalProps> = ({
-  title,
-  description,
-  onDismiss,
-  startEarning,
-}) => {
+const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning }) => {
   return <></>;
 };
 
