@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
-import { CloseIcon } from "../../components/Svg";
+import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
 import { ButtonSquare } from "../../components/ButtonSquare";
 import { FarmApe } from "../../components/Image";
 import { MarketModalProps } from "./types";
@@ -112,6 +112,7 @@ const ModalFooter = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  padding: 0px 50px;
   a {
     color: ${({ theme }) => theme.colors.yellow};
     text-decoration: underline;
@@ -130,9 +131,35 @@ const ModalFooter = styled.div`
   }
 `;
 
+const SliderBtnSection = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const CircleDiv = styled.div`
+  display: flex;
+  padding: 10px;
+`
+const CircleButton = styled.div`
+  width: 14px;
+  height: 14px;
+  background: ${({ theme }) => theme.colors.white4};
+  border-radius: 50%;
+  margin-right: 10px;
+
+  &.isActive {
+    background: linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
 const StyledButton = styled(ButtonSquare)`
-  width: 274px;
-  height: 44px;
+  /* width: 274px;
+  height: 44px; */
   padding: 10px 20px;
   font-weight: 700;
 `;
@@ -163,7 +190,20 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
         {children}
 
         <ModalFooter>
-          <StyledButton onClick={startEarning}>Start Earning</StyledButton>
+          <SliderBtnSection>
+            <ArrowDropLeftIcon width="12px" height="14px" />
+
+            <CircleDiv>
+              <CircleButton />
+              <CircleButton className={"isActive"}/>
+              <CircleButton />
+            </CircleDiv>
+
+
+            <ArrowDropRightIcon width="12px" height="14px" />
+          </SliderBtnSection>
+
+          <StyledButton fullWidth onClick={startEarning}>Start Earning</StyledButton>
         </ModalFooter>
       </StyledModal>
     </Container>

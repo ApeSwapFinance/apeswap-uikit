@@ -7,6 +7,8 @@ export { default as ApeIcon } from "./Icons/Ape";
 export { default as ArrowBackIcon } from "./Icons/ArrowBack";
 export { default as ArrowDownIcon } from "./Icons/ArrowDown";
 export { default as ArrowDropDownIcon } from "./Icons/ArrowDropDown";
+export { default as ArrowDropLeftIcon } from "./Icons/ArrowDropLeft";
+export { default as ArrowDropRightIcon } from "./Icons/ArrowDropRight";
 export { default as ArrowDropDownSmallIcon } from "./Icons/ArrowDropDownSmall";
 export { default as ArrowDropUpIcon } from "./Icons/ArrowDropUp";
 export { default as ArrowDropUpSmallIcon } from "./Icons/ArrowDropUpSmall";
