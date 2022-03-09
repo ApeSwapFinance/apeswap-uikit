@@ -1,4 +1,5 @@
-import { ReactChild } from "react";
+import React from "react";
+import { SvgProps } from "../../components/Svg";
 
 export type ActionHandler = () => void;
 
@@ -7,5 +8,14 @@ export interface MarketModalProps {
   description: string;
   startEarning: ActionHandler;
   onDismiss: ActionHandler;
-  contents: Array<ReactChild>;
+  children: React.ReactNode | React.ReactNode[];
+}
+
+export interface IconProps {
+  step: number;
+  childrensLength: number;
+}
+
+export interface ModalContentProps {
+  Icon: SvgProps
 }

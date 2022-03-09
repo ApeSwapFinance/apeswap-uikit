@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import styled, { useTheme } from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
 import { ButtonSquare } from "../../components/ButtonSquare";
-// import { FarmApe } from "../../components/Image";
-import { MarketModalProps } from "./types";
+import { MarketModalProps, IconProps } from "./types";
 
 const Container = styled.div`
   display: flex;
@@ -51,7 +50,6 @@ const ModalHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
-
     align-self: center;
   }
 `;
@@ -97,6 +95,7 @@ const CloseButton = styled.button`
   border: none;
   background: transparent;
   font-weight: 600;
+
   &:hover {
     cursor: pointer;
   }
@@ -164,6 +163,20 @@ const CircleButton = styled.div`
     margin-right: 0;
   }
 `;
+const StyledLeftArrow = styled(ArrowDropLeftIcon)<IconProps>`
+  display: ${({ step }) => (step === 0 ? "none" : "unset")};
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
+  display: ${({ step, childrensLength }) => (step === childrensLength - 1 ? "none" : "unset")};
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 const StyledButton = styled(ButtonSquare)`
   /* width: 274px;
   height: 44px; */
@@ -171,13 +184,16 @@ const StyledButton = styled(ButtonSquare)`
   font-weight: 700;
 `;
 
-const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, contents }) => {
+const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
   const theme = useTheme();
+
+  const childrens = (children as React.ReactNode[]);
+  const childrensLength = childrens.length;
 
   const [step, setStep] = useState(0);
 
   const goNext = () => {
-    if (step + 1 !== contents.length) {
+    if (step + 1 !== childrensLength) {
       setStep(step + 1);
     }
   };
@@ -195,10 +211,6 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
               <Title>{title}</Title>
               <Description>{description}</Description>
             </LeftHeader>
-
-            {/* <FarmApeWrapper>
-              <FarmApe />
-            </FarmApeWrapper> */}
           </div>
 
           <CloseButton onClick={onDismiss}>
@@ -206,34 +218,35 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
           </CloseButton>
         </ModalHeader>
 
-        {contents.map((element, index) => (
-          <>{step === index && element}</>
-        ))}
+        {children && childrens.map((element, index) => <>{step === index && element}</>)}
 
         <ModalFooter>
           <SliderBtnSection>
             <IconContainer>
-              <ArrowDropLeftIcon
+              <StyledLeftArrow
                 width="12px"
                 height="14px"
                 onClick={goPrev}
-                style={{ display: step === 0 ? "none" : "unset" }}
+                step={step}
+                childrensLength={childrensLength}
               />
             </IconContainer>
 
             <CircleDiv>
-              {contents.map((_, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <CircleButton key={`circle-${index}`} className={step === index ? "isActive" : ""} />
-              ))}
+              {children &&
+                childrens.map((_, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <CircleButton key={`circle-${index}`} className={step === index ? "isActive" : ""} />
+                ))}
             </CircleDiv>
 
             <IconContainer>
-              <ArrowDropRightIcon
+              <StyledRightArrow
                 width="12px"
                 height="14px"
                 onClick={goNext}
-                style={{ display: step === contents.length - 1 ? "none" : "unset" }}
+                step={step}
+                childrensLength={childrensLength}
               />
             </IconContainer>
           </SliderBtnSection>
