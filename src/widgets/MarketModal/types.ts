@@ -17,5 +17,5 @@ export interface IconProps {
 }
 
 export interface ModalContentProps {
-  Icon: SvgProps
+  Icon: SvgProps;
 }

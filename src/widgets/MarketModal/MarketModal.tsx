@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
 import { ButtonSquare } from "../../components/ButtonSquare";
@@ -187,7 +187,7 @@ const StyledButton = styled(ButtonSquare)`
 const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
   const theme = useTheme();
 
-  const childrens = (children as React.ReactNode[]);
+  const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
   const [step, setStep] = useState(0);

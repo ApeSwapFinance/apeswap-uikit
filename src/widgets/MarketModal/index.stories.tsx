@@ -13,15 +13,13 @@ export default {
   },
 };
 
-
 const FarmContent = () => {
-
   return (
     <ModalContent Icon={<FarmApe />}>
-      <p style={{ textAlign: 'center'}}>Click here to connect your wallet to ApeSwap.</p>
+      <p style={{ textAlign: "center" }}>Click here to connect your wallet to ApeSwap.</p>
     </ModalContent>
   );
-}
+};
 
 export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
   title = "Welcome to ApeSwap’s Lending Network",
@@ -29,8 +27,7 @@ export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
   startEarning,
 }) => {
   const [visible, setVisible] = useState(true);
-  const family = [
-<FarmContent />, <p>body 1</p>, <p>body 2</p>, <p>body 3</p>];
+  const family = [<FarmContent />, <p>body 1</p>, <p>body 2</p>, <p>body 3</p>];
 
   return (
     <>
