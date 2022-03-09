@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Flex from "../../components/Flex/Flex";
 import { MobileIcon } from "./icons";
-import { useMatchBreakpoints } from "../../hooks";
 
 interface Props {
   isPushed: boolean;
@@ -34,7 +33,6 @@ const StyledLink = styled(Link)`
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
-  const { isSm, isXs } = useMatchBreakpoints();
   const innerLogo = <MobileIcon width="40px" />;
 
   return (

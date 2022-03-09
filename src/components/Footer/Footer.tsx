@@ -119,7 +119,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                 );
               })}
             </LinkColumnFlex>
-            <LinkColumnFlex style={{ width: "100px" }}>
+            <LinkColumnFlex style={{ width: "130px" }}>
               <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
                 Learn
               </Text>

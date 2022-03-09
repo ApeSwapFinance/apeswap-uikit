@@ -12,7 +12,7 @@ const Image: React.FC<SvgProps> = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <g clip-path="url(#clip0_10434_120606)">
+      <g clipPath="url(#clip0_10434_120606)">
         <path d="M222.802 0H28.8457V159.119H222.802V0Z" fill="url(#paint0_linear_10434_120606)" />
         <path
           opacity="0.5"
@@ -9710,8 +9710,8 @@ const Image: React.FC<SvgProps> = () => {
           y2="1.83841"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4595C9" />
-          <stop offset="1" stop-color="#A2FFFF" />
+          <stop stopColor="#4595C9" />
+          <stop offset="1" stopColor="#A2FFFF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_10434_120606"
@@ -9721,9 +9721,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="65.4892"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E6E6E6" />
-          <stop offset="0.4234" stop-color="#EEEEEE" stop-opacity="0.6613" />
-          <stop offset="1" stop-color="#F2F2F2" stop-opacity="0.2" />
+          <stop stopColor="#E6E6E6" />
+          <stop offset="0.4234" stopColor="#EEEEEE" stopOpacity="0.6613" />
+          <stop offset="1" stopColor="#F2F2F2" stopOpacity="0.2" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_10434_120606"
@@ -9733,9 +9733,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="90.6694"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E6E6E6" />
-          <stop offset="0.4234" stop-color="#EEEEEE" stop-opacity="0.6613" />
-          <stop offset="1" stop-color="#F2F2F2" stop-opacity="0.2" />
+          <stop stopColor="#E6E6E6" />
+          <stop offset="0.4234" stopColor="#EEEEEE" stopOpacity="0.6613" />
+          <stop offset="1" stopColor="#F2F2F2" stopOpacity="0.2" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_10434_120606"
@@ -9745,9 +9745,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="86.5157"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E6E6E6" />
-          <stop offset="0.4234" stop-color="#EEEEEE" stop-opacity="0.6613" />
-          <stop offset="1" stop-color="#F2F2F2" stop-opacity="0.2" />
+          <stop stopColor="#E6E6E6" />
+          <stop offset="0.4234" stopColor="#EEEEEE" stopOpacity="0.6613" />
+          <stop offset="1" stopColor="#F2F2F2" stopOpacity="0.2" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_10434_120606"
@@ -9757,9 +9757,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="108.17"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E6E6E6" />
-          <stop offset="0.4234" stop-color="#EEEEEE" stop-opacity="0.6613" />
-          <stop offset="1" stop-color="#F2F2F2" stop-opacity="0.2" />
+          <stop stopColor="#E6E6E6" />
+          <stop offset="0.4234" stopColor="#EEEEEE" stopOpacity="0.6613" />
+          <stop offset="1" stopColor="#F2F2F2" stopOpacity="0.2" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_10434_120606"
@@ -9769,9 +9769,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="25.7658"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E6E6E6" />
-          <stop offset="0.4234" stop-color="#EEEEEE" stop-opacity="0.6613" />
-          <stop offset="1" stop-color="#F2F2F2" stop-opacity="0.2" />
+          <stop stopColor="#E6E6E6" />
+          <stop offset="0.4234" stopColor="#EEEEEE" stopOpacity="0.6613" />
+          <stop offset="1" stopColor="#F2F2F2" stopOpacity="0.2" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_10434_120606"
@@ -9781,10 +9781,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="148.28"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.5713" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.5713" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_10434_120606"
@@ -9794,10 +9794,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="179.471"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_10434_120606"
@@ -9807,9 +9807,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="157.407"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.6899" stop-color="#BA801E" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.6899" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_10434_120606"
@@ -9819,10 +9819,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="154.281"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_10434_120606"
@@ -9832,10 +9832,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="147.919"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_10434_120606"
@@ -9845,12 +9845,12 @@ const Image: React.FC<SvgProps> = () => {
           y2="153.697"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCCCCC" />
-          <stop offset="0.00460291" stop-color="#CDCDCD" />
-          <stop offset="0.1173" stop-color="#DEDEDE" />
-          <stop offset="0.257" stop-color="#E9E9E9" />
-          <stop offset="0.4538" stop-color="#F0F0F0" />
-          <stop offset="1" stop-color="#F2F2F2" />
+          <stop stopColor="#CCCCCC" />
+          <stop offset="0.00460291" stopColor="#CDCDCD" />
+          <stop offset="0.1173" stopColor="#DEDEDE" />
+          <stop offset="0.257" stopColor="#E9E9E9" />
+          <stop offset="0.4538" stopColor="#F0F0F0" />
+          <stop offset="1" stopColor="#F2F2F2" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_10434_120606"
@@ -9860,12 +9860,12 @@ const Image: React.FC<SvgProps> = () => {
           y2="136.348"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCCCCC" />
-          <stop offset="0.00460291" stop-color="#CDCDCD" />
-          <stop offset="0.1173" stop-color="#DEDEDE" />
-          <stop offset="0.257" stop-color="#E9E9E9" />
-          <stop offset="0.4538" stop-color="#F0F0F0" />
-          <stop offset="1" stop-color="#F2F2F2" />
+          <stop stopColor="#CCCCCC" />
+          <stop offset="0.00460291" stopColor="#CDCDCD" />
+          <stop offset="0.1173" stopColor="#DEDEDE" />
+          <stop offset="0.257" stopColor="#E9E9E9" />
+          <stop offset="0.4538" stopColor="#F0F0F0" />
+          <stop offset="1" stopColor="#F2F2F2" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_10434_120606"
@@ -9875,12 +9875,12 @@ const Image: React.FC<SvgProps> = () => {
           y2="253.772"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCCCCC" />
-          <stop offset="0.00460291" stop-color="#CDCDCD" />
-          <stop offset="0.1173" stop-color="#DEDEDE" />
-          <stop offset="0.257" stop-color="#E9E9E9" />
-          <stop offset="0.4538" stop-color="#F0F0F0" />
-          <stop offset="1" stop-color="#F2F2F2" />
+          <stop stopColor="#CCCCCC" />
+          <stop offset="0.00460291" stopColor="#CDCDCD" />
+          <stop offset="0.1173" stopColor="#DEDEDE" />
+          <stop offset="0.257" stopColor="#E9E9E9" />
+          <stop offset="0.4538" stopColor="#F0F0F0" />
+          <stop offset="1" stopColor="#F2F2F2" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_10434_120606"
@@ -9890,9 +9890,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="8.03257"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3502" stop-color="white" />
-          <stop offset="0.523" stop-color="#E5E5E5" />
-          <stop offset="0.616" stop-color="white" />
+          <stop offset="0.3502" stopColor="white" />
+          <stop offset="0.523" stopColor="#E5E5E5" />
+          <stop offset="0.616" stopColor="white" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_10434_120606"
@@ -9902,10 +9902,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="147.212"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_10434_120606"
@@ -9915,10 +9915,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="133.571"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_10434_120606"
@@ -9929,8 +9929,8 @@ const Image: React.FC<SvgProps> = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop offset="0.3433" />
-          <stop offset="0.5402" stop-color="#0B140B" />
-          <stop offset="0.9304" stop-color="#0B140B" />
+          <stop offset="0.5402" stopColor="#0B140B" />
+          <stop offset="0.9304" stopColor="#0B140B" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_10434_120606"
@@ -9940,9 +9940,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="122.489"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3433" stop-opacity="0.7" />
-          <stop offset="0.513" stop-color="#1A1A1A" stop-opacity="0.5" />
-          <stop offset="0.8711" stop-color="#333333" stop-opacity="0" />
+          <stop offset="0.3433" stopOpacity="0.7" />
+          <stop offset="0.513" stopColor="#1A1A1A" stopOpacity="0.5" />
+          <stop offset="0.8711" stopColor="#333333" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_10434_120606"
@@ -9952,9 +9952,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="8.0209"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3502" stop-color="white" />
-          <stop offset="0.523" stop-color="#E5E5E5" />
-          <stop offset="0.616" stop-color="white" />
+          <stop offset="0.3502" stopColor="white" />
+          <stop offset="0.523" stopColor="#E5E5E5" />
+          <stop offset="0.616" stopColor="white" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_10434_120606"
@@ -9964,10 +9964,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="147.201"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_10434_120606"
@@ -9977,10 +9977,10 @@ const Image: React.FC<SvgProps> = () => {
           y2="133.56"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0683635" stop-color="#FFE988" />
-          <stop offset="0.3433" stop-color="#BA801E" />
-          <stop offset="0.513" stop-color="#FFE988" />
-          <stop offset="0.7355" stop-color="#BA801E" />
+          <stop offset="0.0683635" stopColor="#FFE988" />
+          <stop offset="0.3433" stopColor="#BA801E" />
+          <stop offset="0.513" stopColor="#FFE988" />
+          <stop offset="0.7355" stopColor="#BA801E" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_10434_120606"
@@ -9990,9 +9990,9 @@ const Image: React.FC<SvgProps> = () => {
           y2="122.477"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.3433" stop-opacity="0.7" />
-          <stop offset="0.513" stop-color="#1A1A1A" stop-opacity="0.5" />
-          <stop offset="0.8711" stop-color="#333333" stop-opacity="0" />
+          <stop offset="0.3433" stopOpacity="0.7" />
+          <stop offset="0.513" stopColor="#1A1A1A" stopOpacity="0.5" />
+          <stop offset="0.8711" stopColor="#333333" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_10434_120606">
           <rect width="223" height="253" fill="white" />

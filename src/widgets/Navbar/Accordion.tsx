@@ -69,6 +69,7 @@ const Accordion: React.FC<Props> = ({
 Accordion.defaultProps = {
   initialOpenState: false,
   className: "",
+  icon: <></>,
 };
 
 export default Accordion;

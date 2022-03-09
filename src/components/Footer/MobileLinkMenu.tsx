@@ -33,4 +33,8 @@ const MobileLinkMenu: React.FC<{ title: string; items: { label: string; href: st
   );
 };
 
+MobileLinkMenu.defaultProps = {
+  border: false,
+};
+
 export default MobileLinkMenu;

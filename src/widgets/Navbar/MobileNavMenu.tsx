@@ -1,7 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import { Flex, SvgProps } from "../..";
+import styled from "styled-components";
+import { DiscordIcon, Flex, TelegramIcon, TwitterIcon } from "../..";
+import darkTheme from "../../theme/dark";
+import lightTheme from "../../theme/light";
 import Accordion from "./Accordion";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
 import MenuLink from "./MenuLink";
@@ -15,6 +17,12 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   chainId: number;
   switchNetwork: (chainId: number) => void;
 }
+
+const StyledLink = styled.a`
+  :hover {
+    opacity: 0.8;
+  }
+`;
 
 const Wrapper = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
@@ -47,10 +55,12 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   showMenu,
   links,
   isMobile,
+  isDark,
   pushNav,
   chainId,
   switchNetwork,
 }) => {
+  const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;
   const location = useLocation();
   return (
@@ -85,7 +95,18 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
         );
       })}
       <Flex justifyContent="center" alignItems="center" style={{ width: "100%", height: "100px" }}>
-        <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+        <Flex justifyContent="space-between" alignItems="center" style={{ width: "275px" }}>
+          <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
+            <TwitterIcon color="white3" fill={iconFillColor} />
+          </StyledLink>
+          <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+            <TelegramIcon color="white3" fill={iconFillColor} />
+          </StyledLink>
+          <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
+            <DiscordIcon color="white3" fill={iconFillColor} />
+          </StyledLink>
+          <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+        </Flex>
       </Flex>
     </Wrapper>
   );

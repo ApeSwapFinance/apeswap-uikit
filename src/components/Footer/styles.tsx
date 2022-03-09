@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { MobileIcon } from "../../widgets/Navbar/icons";
 import { Button } from "../Button";
-import { ButtonSquare } from "../ButtonSquare";
 import { Text } from "../Text";
 
 export const FlexContainer = styled.div`

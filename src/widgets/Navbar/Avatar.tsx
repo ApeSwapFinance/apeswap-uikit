@@ -10,8 +10,9 @@ interface AvatarProps {
 }
 
 const StyledAvatar = styled.div`
-  margin-left: -30px;
-  height: 25px;
+  height: 0px;
+  width: 0px;
+  transform: translate(-35px, -5px);
   img {
     border-radius: 50px;
   }
@@ -37,7 +38,7 @@ const Avatar: React.FC<AvatarProps> = ({ profile }) => {
   const icon = image ? (
     <img src={image} alt="profile avatar" height="40px" width="40px" />
   ) : !isDark ? (
-    <MonkeyLight width="40px" height="40px" />
+    <MonkeyLight width="50px" height="50px" />
   ) : (
     <MonkeyDark width="40px" height="40px" />
   );

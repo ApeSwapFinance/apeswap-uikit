@@ -3,7 +3,9 @@ import Button from "../../components/Button/Button";
 
 const MenuButton = styled(Button)`
   color: ${({ theme }) => theme.colors.text};
-  padding: 0 8px;
+  margin-left: 40px;
+  padding: 0px;
+  width: 0px;
   border-radius: 8px;
   :focus {
     box-shadow: none !important;

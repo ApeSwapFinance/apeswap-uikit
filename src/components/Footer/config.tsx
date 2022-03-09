@@ -1,7 +1,7 @@
 export const supportLinks = [
   {
     label: "FAQ",
-    href: "https://apeswap.gitbook.io/apeswap-finance/welcome/support/general-faq",
+    href: "https://apeswap.gitbook.io/apeswap-finance/welcome/master",
   },
   {
     label: "Discord",
@@ -9,7 +9,7 @@ export const supportLinks = [
   },
   {
     label: "Tokenomics",
-    href: "https://apeswap.gitbook.io/apeswap-finance/product-and-features/tokenomics",
+    href: "https://apeswap.gitbook.io/apeswap-finance/product-and-features/apeswaps-tokens/banana",
   },
   {
     label: "Audits",
@@ -46,7 +46,7 @@ export const learnLinks = [
     href: "https://www.apelabs.education/",
   },
   {
-    label: "ApeTV",
+    label: "ApeTV Podcast",
     href: "https://open.spotify.com/show/4nFre3hez2RKPCqkX7CZBa",
   },
   {

@@ -41,6 +41,7 @@ export const links = [
       },
     ],
   },
+
   {
     label: "NFA",
     lightIcon: "NfaLightImage",
@@ -63,6 +64,33 @@ export const links = [
   {
     label: "Lending",
     href: "https://app.ola.finance/apeswap/markets",
+  },
+  {
+    label: "More",
+    lightIcon: "MoreLightImage",
+    darkIcon: "MoreDarkImage",
+    items: [
+      {
+        label: "Docs",
+        href: "https://apeswap.gitbook.io/apeswap-finance/",
+      },
+      {
+        label: "Charts",
+        href: "https://apeswap.gitbook.io/apeswap-finance/",
+      },
+      {
+        label: "Leverage Trading",
+        href: "https://apemex.exchange/margin",
+      },
+      {
+        label: "Governance",
+        href: "https://vote.apeswap.finance",
+      },
+      {
+        label: "BANANA Burns",
+        href: "/burn",
+      },
+    ],
   },
 ];
 

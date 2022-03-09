@@ -1,17 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "../..";
-import { MoreDarkImage } from "./images";
+import { DiscordIcon, Flex, TelegramIcon, Text, TwitterIcon } from "../..";
 import * as ImageModule from "./images";
 import MenuLink from "./MenuLink";
 import { MenuSubEntry } from "./types";
+import darkTheme from "../../theme/dark";
+import lightTheme from "../../theme/light";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
 interface SubNavbarProps {
   items: MenuSubEntry[];
   image?: string;
+  label: string;
+  isDark: boolean;
 }
+
+const StyledLink = styled.a`
+  :hover {
+    opacity: 0.8;
+  }
+`;
 
 const StyledCard = styled.div`
   position: absolute;
@@ -50,23 +59,44 @@ const StyledText = styled(Text)`
   }
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items, image }) => {
-  const Image = Icons[image || ''];
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark }) => {
+  const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
+  const Image = Icons[image || ""];
   const imageElement = <Image />;
   return (
     <StyledCard key={1}>
       <NavHolder>
         {items.map((item) => {
           return (
-            <MenuLink href={item.href}>
+            <MenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
               <StyledText>{item.label}</StyledText>
             </MenuLink>
           );
         })}
       </NavHolder>
       <NavImage>{imageElement}</NavImage>
+      {label === "More" && (
+        <Flex
+          justifyContent="space-between"
+          style={{ position: "absolute", bottom: "5px", right: "20px", width: "150px" }}
+        >
+          <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
+            <TwitterIcon color="white3" fill={iconFillColor} />
+          </StyledLink>
+          <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+            <TelegramIcon color="white3" fill={iconFillColor} />
+          </StyledLink>
+          <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
+            <DiscordIcon color="white3" fill={iconFillColor} />
+          </StyledLink>
+        </Flex>
+      )}
     </StyledCard>
   );
+};
+
+SubNavbar.defaultProps = {
+  image: "",
 };
 
 export default SubNavbar;

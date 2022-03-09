@@ -8,13 +8,12 @@ import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./Logo";
 import UserBlock from "./UserBlock";
 import { NavProps } from "./types";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_FULL, SIDEBAR_WIDTH_REDUCED } from "./config";
+import { MENU_HEIGHT } from "./config";
 import Avatar from "./Avatar";
 import NetworkButton from "./NetworkButton";
 import MenuLink from "../Menu/MenuLink";
 import SubNavbar from "./SubNavbar";
 import { Footer } from "../../components/Footer";
-import Accordion from "./Accordion";
 import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
@@ -61,21 +60,6 @@ const StyledNav = styled.nav<{ showMenu: boolean; isMobile: boolean; isPushed: b
   }
 `;
 
-const StyledFooter = styled.nav`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
-  width: 100%;
-  height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-  z-index: 20;
-`;
 
 const BodyWrapper = styled.div`
   position: relative;
@@ -109,7 +93,6 @@ const Navbar: React.FC<NavProps> = ({
   toggleTheme,
   langs,
   setLang,
-  currentLang,
   bananaPriceUsd,
   links,
   profile,
@@ -208,7 +191,12 @@ const Navbar: React.FC<NavProps> = ({
                     </NavItem>
                   )}
                   {link.label === hoveredItem && link?.items && (
-                    <SubNavbar items={link.items} image={isDark ? link.darkIcon : link.lightIcon} />
+                    <SubNavbar
+                      items={link.items}
+                      image={isDark ? link.darkIcon : link.lightIcon}
+                      label={link.label}
+                      isDark={isDark}
+                    />
                   )}
                 </div>
               );
@@ -254,7 +242,7 @@ const Navbar: React.FC<NavProps> = ({
         <Inner isPushed={isPushed} showMenu={showMenu} isMobile={isMobile}>
           {children}
         </Inner>
-        {/* <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" /> */}
+        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
       <Footer
         chainId={chainId}
