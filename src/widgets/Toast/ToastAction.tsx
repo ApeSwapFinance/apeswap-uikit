@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
-import { Button } from "../../components/Button";
+import { ButtonSquare } from "../../components/ButtonSquare";
 import { ToastAction as Action } from "./types";
 
 interface ToastActionProps {
@@ -11,16 +11,16 @@ interface ToastActionProps {
 const ToastAction: React.FC<ToastActionProps> = ({ action }) => {
   if (action.url.startsWith("http")) {
     return (
-      <Button as="a" size="sm" href={action.url} {...getExternalLinkProps()}>
+      <ButtonSquare as="a" size="sm" href={action.url} {...getExternalLinkProps()}>
         {action.text}
-      </Button>
+      </ButtonSquare>
     );
   }
 
   return (
-    <Button as={Link} size="sm" to={action.url}>
+    <ButtonSquare as={Link} size="sm" to={action.url}>
       {action.text}
-    </Button>
+    </ButtonSquare>
   );
 };
 

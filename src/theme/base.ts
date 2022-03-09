@@ -37,11 +37,12 @@ const fontFamily: FontFamily = {
   poppins: "Poppins",
 };
 
-const radii = {
-  small: "4px",
-  default: "16px",
+export const radii = {
   card: "32px",
   circle: "50%",
+  default: "16px",
+  normal: "10px",
+  small: "4px",
 };
 
 const zIndices = {

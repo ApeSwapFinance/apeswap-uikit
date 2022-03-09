@@ -6,7 +6,7 @@ import { sizes, variants } from "../Button/types";
 import { ButtonMenuItemProps } from "./types";
 
 type InactiveButtonProps = {
-  colorKey: "primary" | "textSubtle";
+  colorKey: "primary" | "gray";
   fontFamily?: string;
   fontSize?: string;
   isMobile?: boolean;
@@ -14,11 +14,14 @@ type InactiveButtonProps = {
 
 const InactiveButton = styled(Button)<InactiveButtonProps>`
   background-color: transparent;
-  color: rgba(122, 122, 122, 1);
+  color: ${({ theme }) => (theme.isDark ? "rgba(122, 122, 122, 1)" : theme.colors.primaryButtonDisable)};
+
   &:hover:not(:disabled):not(:active) {
-    background-color: transparent;
+    background-color: transparent !important;
   }
+
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
+
   font-size: ${({ fontSize }) => fontSize || "16px"};
 `;
 
@@ -38,7 +41,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
         forwardedAs={as}
         size={size}
         variant="tertiary"
-        colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "textSubtle"}
+        colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "gray"}
         fontFamily={fontFamily}
         fontSize={fontSize}
         isMobile={isMobile}

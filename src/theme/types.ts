@@ -30,39 +30,52 @@ export type Shadows = {
 };
 
 export type Gradients = {
-  bubblegum: string;
+  bubblegum?: string;
+  newGradient?: string;
 };
 
 export type Colors = {
-  primary: string;
   primaryBright: string;
   primaryDark: string;
-  secondary: string;
-  tertiary: string;
   success: string;
-  failure: string;
-  warning: string;
-  contrast: string;
-  invertedContrast: string;
-  input: string;
+  brown: string;
+  error: string; // replaces failure
+  yellow: string;
+  black?: string;
+  dividerColor: string;
+  navbar: string;
+  primaryButtonDisable: string;
+  secondaryButtonDisableBg: string;
+  secondaryButtonDisableColor: string;
   background: string;
   backgroundDisabled: string;
-  text: string;
-  textDisabled: string;
-  textSubtle: string;
-  borderColor: string;
-  card: string;
-  yellow: string;
-  white: string;
+  white2: string;
   white3: string;
+  white4: string;
+  text: string;
+  primary: string;
+  gray: string;
+  inputBorder: string;
+  tertiary: string;
+  primaryGray: string;
+  yellowHover: string;
+  // secondary: string;
+  // warning: string;
+  // contrast: string;
+  // invertedContrast: string;
+  // input: string;
+  // textDisabled: string;
+  // textSubtle: string;
+  // borderColor: string;
+  // card: string;
+  // white: string;
+  // green: string;
 
   // Gradients
-  gradients: Gradients;
+  gradients?: Gradients;
 
   // Brand colors
   binance: string;
-
-  green: string;
 };
 
 export type ZIndices = {

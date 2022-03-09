@@ -11,7 +11,7 @@ it("renders correctly", () => {
         class="sc-eCImPb sc-furwcr jpuLQT eLWWNA"
       >
         <div
-          class="sc-jRQBWg bfOerv"
+          class="sc-jRQBWg dcrDUF"
         >
           <svg
             class="sc-bdvvtL efFeOq"
@@ -29,13 +29,13 @@ it("renders correctly", () => {
           class="sc-gKclnd fothoh"
         >
           <div
-            class="sc-gsDKAQ jzKBDT"
+            class="sc-gsDKAQ kmdbKy"
             color="text"
           >
             Alert title
           </div>
           <p
-            class="sc-gsDKAQ buzwVw"
+            class="sc-gsDKAQ dQMGxp"
             color="text"
           >
             Description

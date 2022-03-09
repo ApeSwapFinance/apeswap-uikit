@@ -9,7 +9,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-dkPtRN fWyFut"
+        class="sc-dkPtRN hbySbf"
       >
         <input
           checked=""

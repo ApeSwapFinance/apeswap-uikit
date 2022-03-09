@@ -23,6 +23,7 @@ export * from "./components/Skeleton";
 export * from "./components/Toggle";
 export * from "./components/Table";
 export * from "./components/Footer";
+export * from "./components/ThemeSwitcher";
 
 // Hooks
 export * from "./hooks";
