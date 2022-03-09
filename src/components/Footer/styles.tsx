@@ -10,7 +10,6 @@ export const FlexContainer = styled.div`
   background-color: ${({ theme }) => (theme.isDark ? theme.colors.background : "rgba(77, 64, 64, 1)")};
   flex-wrap: wrap;
   width: 250px;
-  overflow: hidden;
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 335px;
     align-items: center;

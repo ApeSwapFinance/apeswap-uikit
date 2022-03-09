@@ -60,7 +60,6 @@ const StyledNav = styled.nav<{ showMenu: boolean; isMobile: boolean; isPushed: b
   }
 `;
 
-
 const BodyWrapper = styled.div`
   position: relative;
   display: flex;
@@ -203,7 +202,7 @@ const Navbar: React.FC<NavProps> = ({
             })}
           </Flex>
         )}
-        <Flex style={{ position: "absolute", right: "30px" }}>
+        <Flex alignItems='center' style={{ position: "absolute", right: "30px" }}>
           {!isMobile && (
             <Flex marginRight="10px">
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
@@ -212,7 +211,7 @@ const Navbar: React.FC<NavProps> = ({
           <UserBlock account={account} login={login} logout={logout} />
           {profile && <Avatar profile={profile} />}
           {isMobile && (
-            <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(!isPushed)} mt="5px">
+            <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(!isPushed)}>
               {isPushed ? (
                 <HamburgerCloseIcon width="24px" color="text" />
               ) : (

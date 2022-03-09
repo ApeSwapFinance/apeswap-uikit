@@ -10,9 +10,8 @@ interface AvatarProps {
 }
 
 const StyledAvatar = styled.div`
-  height: 0px;
-  width: 0px;
-  transform: translate(-35px, -5px);
+  transform: translate(-35px, 4px);
+  width: 0;
   img {
     border-radius: 50px;
   }
@@ -29,6 +28,15 @@ const Pip = styled.div`
   width: 8px;
 `;
 
+const AvatarImage = styled.div<{ image: string }>`
+  height: 45px;
+  width: 45px;
+  transform: translate(0,-4px);
+  background-image: ${({ image }) => `url(${image})`};
+  background-size: 100% 100%;
+  border-radius: 25px;
+`;
+
 const Avatar: React.FC<AvatarProps> = ({ profile }) => {
   const { name = "Ape", image, profileLink, noProfileLink, showPip = false } = profile;
   const { isDark } = useTheme();
@@ -36,11 +44,11 @@ const Avatar: React.FC<AvatarProps> = ({ profile }) => {
   const isExternal = link.startsWith("http");
   const ariaLabel = "Link to profile";
   const icon = image ? (
-    <img src={image} alt="profile avatar" height="40px" width="40px" />
+    <AvatarImage image={image} />
   ) : !isDark ? (
     <MonkeyLight width="50px" height="50px" />
   ) : (
-    <MonkeyDark width="40px" height="40px" />
+    <MonkeyDark width="50px" height="50px" />
   );
 
   if (isExternal) {

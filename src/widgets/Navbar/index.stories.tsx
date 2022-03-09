@@ -31,7 +31,11 @@ export const Connected: React.FC = () => {
         currentLang="EN"
         bananaPriceUsd={0.23158668932877668}
         links={links}
-        profile={null}
+        profile={{
+          profileLink: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
+          noProfileLink: "",
+          image: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
+        }}
         chainId={137}
         switchNetwork={noop}
       >
@@ -194,7 +198,7 @@ export const WithProfile: React.FC = () => {
         switchNetwork={noop}
         profile={{
           name: "apeswap",
-          image: "https://apeswap.finance/images/nfts/blueberries-preview.png",
+          image: "https://raw.githubusercontent.com/ApeSwapFinance/non-fungible-apes/main/images/4.png",
           profileLink: "/profile",
           noProfileLink: "/no-profile",
         }}
