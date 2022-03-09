@@ -10,7 +10,7 @@ const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
 interface SubNavbarProps {
   items: MenuSubEntry[];
-  image: string;
+  image?: string;
 }
 
 const StyledCard = styled.div`
@@ -51,7 +51,7 @@ const StyledText = styled(Text)`
 `;
 
 const SubNavbar: React.FC<SubNavbarProps> = ({ items, image }) => {
-  const Image = Icons[image];
+  const Image = Icons[image || ''];
   const imageElement = <Image />;
   return (
     <StyledCard key={1}>

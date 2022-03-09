@@ -19,7 +19,7 @@ const MobileLinkMenu: React.FC<{ title: string; items: { label: string; href: st
         {open ? <ArrowDropUpIcon width="8px" color="white" /> : <ArrowDropDownIcon width="8px" color="white" />}
       </Dropdown>
       {open && (
-        <Flex flexDirection='column' padding='0px 10px' mb='10px'>
+        <Flex flexDirection="column" padding="0px 10px" mb="10px">
           {items.map((link) => {
             return (
               <a href={link.href} target="_blank" rel="noopener noreferrer">
