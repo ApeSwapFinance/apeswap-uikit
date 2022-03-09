@@ -32,7 +32,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   background-color: ${({ theme }) => (theme.isDark ? theme.colors.background : "rgba(77, 64, 64, 1)")};
-  border-top: 5px solid ${({ theme }) => theme.colors.card};
+  border-top: 5px solid ${({ theme }) => theme.card.background};
   padding: 20px 20px 20px 20px;
   align-items: center;
   justify-content: center;
