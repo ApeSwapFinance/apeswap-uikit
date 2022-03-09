@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MobileIcon } from "../../widgets/Navbar/icons";
 import { Button } from "../Button";
+import { ButtonSquare } from "../ButtonSquare";
 import { Text } from "../Text";
 
 export const FlexContainer = styled.div`
@@ -108,7 +109,7 @@ export const IconFlex = styled.div`
   width: 100%;
   ${({ theme }) => theme.mediaQueries.xs} {
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
   }
   ${({ theme }) => theme.mediaQueries.sm} {
     justify-content: space-between;
@@ -146,6 +147,7 @@ export const LinkColumnFlex = styled.div`
   margin-bottom: 30px;
   ${({ theme }) => theme.mediaQueries.lg} {
     align-items: flex-start;
+    margin-bottom: 0px;
   }
 `;
 
@@ -159,10 +161,10 @@ export const LogoFlex = styled.div`
   text-align: center;
   padding: 0px 5px 0px 5px;
   ${({ theme }) => theme.mediaQueries.xs} {
-    height: 325px;
+    height: 375px;
   }
   ${({ theme }) => theme.mediaQueries.sm} {
-    height: 375px;
+    height: 400px;
     width: 375px;
     align-items: center;
     padding: 0px;
@@ -180,9 +182,9 @@ export const ButtonFlex = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 120px;
+  height: 60px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-top: 10px;
   ${({ theme }) => theme.mediaQueries.sm} {
     width: 100%;
@@ -204,4 +206,36 @@ export const StyledLink = styled.a`
   :hover {
     opacity: 0.8;
   }
+`;
+
+export const BottomRowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: space-between;
+`;
+
+export const BuyBananaButton = styled.button`
+  border: 3px solid #ffb300;
+  color: #ffb300;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 700;
+  height: 35px;
+  width: 180px;
+  background-color: rgb(0, 0, 0, 0);
+  :hover {
+    border: 3px solid #ffce00;
+  }
+`;
+
+export const Dropdown = styled.div<{ border?: boolean }>`
+  display: flex;
+  justify-content: space-between;
+  border-bottom: ${({ border }) => border && "1px solid white"};
+  width: 100%;
+  padding: 10px 10px;
+  cursor: pointer;
 `;

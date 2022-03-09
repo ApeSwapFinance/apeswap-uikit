@@ -32,7 +32,8 @@ export interface MenuSubEntry {
 
 export interface MenuEntry {
   label: string;
-  icon: string;
+  darkIcon?: string;
+  lightIcon?: string;
   items?: MenuSubEntry[];
   href?: string;
   calloutClass?: string;

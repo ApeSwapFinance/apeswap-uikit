@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { Flex, SvgProps } from "../..";
 import Accordion from "./Accordion";
-import * as IconModule from "./icons";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import NetworkButton from "./NetworkButton";
@@ -32,7 +31,7 @@ const Wrapper = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   border-right: ${({ isPushed }) => (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0)};
   z-index: 11;
   transition: max-height 0.3s linear;
-  overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
+  overflow: hidden;
   transform: translate3d(0, 0, 0);
   ${({ theme }) => theme.mediaQueries.md} {
     padding-bottom: 0px;
@@ -53,15 +52,10 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   switchNetwork,
 }) => {
   const handleClick = isMobile ? () => pushNav(false) : undefined;
-  const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
   const location = useLocation();
-
-  console.log(location);
-
   return (
     <Wrapper isPushed={isPushed} showMenu={showMenu}>
       {links.map((entry) => {
-        const Icon = Icons[entry.icon];
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
         if (entry.items) {
           return (

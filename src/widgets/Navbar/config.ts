@@ -1,12 +1,12 @@
 export const links = [
   {
     label: "Exchange",
-    icon: "TradeIcon",
     href: "/swap",
   },
   {
     label: "Stake",
-    icon: "FarmIcon",
+    lightIcon: "StakeLightImage",
+    darkIcon: "StakeDarkImage",
     items: [
       {
         label: "Farms",
@@ -24,111 +24,45 @@ export const links = [
         label: "GNANA",
         href: "/gnana",
       },
-      {
-        label: "Liquidity Mining",
-        href: "/liquidity-mining",
-      },
     ],
   },
   {
     label: "Offerings",
-    icon: "StatsIcon",
-    href: "/stats",
+    lightIcon: "OfferingsLightImage",
+    darkIcon: "OfferingsDarkImage",
+    items: [
+      {
+        label: "Official",
+        href: "/iao",
+      },
+      {
+        label: "Self-Serve",
+        href: "/ss-iao",
+      },
+    ],
+  },
+  {
+    label: "NFA",
+    lightIcon: "NfaLightImage",
+    darkIcon: "NfaDarkImage",
+    items: [
+      {
+        label: "Collection",
+        href: "/nft",
+      },
+      {
+        label: "Auction",
+        href: "/auction",
+      },
+      {
+        label: "Staking",
+        href: "/staking",
+      },
+    ],
   },
   {
     label: "Lending",
-    icon: "PoolIcon",
-    href: "/syrup",
-  },
-  {
-    label: "NFTs",
-    icon: "TicketIcon",
-    href: "/lottery",
-  },
-  {
-    label: "More",
-    icon: "MoreIcon",
-    items: [
-      {
-        label: "Voting",
-        href: "https://voting.apeswap.finance",
-      },
-      {
-        label: "Github",
-        href: "https://github.com/apeswap",
-      },
-      {
-        label: "Docs",
-        href: "https://docs.apeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://apeswap.medium.com",
-      },
-      {
-        label: "Voting",
-        href: "https://voting.apeswap.finance",
-      },
-      {
-        label: "Github",
-        href: "https://github.com/apeswap",
-      },
-      {
-        label: "Docs",
-        href: "https://docs.apeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://apeswap.medium.com",
-      },
-      {
-        label: "Voting",
-        href: "https://voting.apeswap.finance",
-      },
-      {
-        label: "Github",
-        href: "https://github.com/apeswap",
-      },
-      {
-        label: "Docs",
-        href: "https://docs.apeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://apeswap.medium.com",
-      },
-    ],
-  },
-];
-
-export const socials = [
-  {
-    label: "Discord",
-    icon: "DiscordIcon",
-    href: "https://discord.gg/ApeSwap",
-  },
-  {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    items: [
-      {
-        label: "English",
-        href: "https://t.me/ape_swap",
-      },
-      {
-        label: "Announcements",
-        href: "https://t.me/ape_swap_news",
-      },
-      {
-        label: "Regional",
-        href: "https://apeswap.gitbook.io/apeswap-finance/contact-us/social-media-and-resources",
-      },
-    ],
-  },
-  {
-    label: "Twitter",
-    icon: "TwitterIcon",
-    href: "https://twitter.com/ape_swap",
+    href: "https://app.ola.finance/apeswap/markets",
   },
 ];
 

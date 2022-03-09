@@ -1,7 +1,6 @@
 import React from "react";
-import { FullLogo, MoonIcon, SunIcon } from "../../widgets/Navbar/icons";
+import { FullLogo } from "../../widgets/Navbar/icons";
 import NetworkButton from "../../widgets/Navbar/NetworkButton";
-import { Flex } from "../Flex";
 import { Skeleton } from "../Skeleton";
 import {
   ApeSwapRoundIcon,
@@ -18,7 +17,6 @@ import { supportLinks, engageLinks, learnLinks } from "./config";
 import {
   FlexContainer,
   Container,
-  StyledButton,
   PeakingMonkey,
   PriceLink,
   IconFlex,
@@ -28,12 +26,19 @@ import {
   ButtonFlex,
   LinkText,
   StyledLink,
+  BuyBananaButton,
+  BottomRowContainer,
 } from "./styles";
 import lightTheme from "../../theme/light";
 import darkTheme from "../../theme/dark";
+import { ThemeSwitcher } from "../ThemeSwitcher";
+import { useMatchBreakpoints } from "../..";
+import MobileLinks from "./MobileLinks";
 
 const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
+  const { isXxl, isLg, isXl } = useMatchBreakpoints();
+  const isMobile = isXxl === false && isXl === false && isLg === false;
   return (
     <Container>
       <FlexContainer>
@@ -44,30 +49,8 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
             premier trading experience
           </Text>
           <ButtonFlex>
-            <StyledButton variant="text" onClick={() => toggleTheme(!isDark)}>
-              {/* alignItems center is a Safari fix */}
-              <Flex alignItems="center">
-                <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
-                <Text color="textDisabled" mx="4px" bold>
-                  /
-                </Text>
-                <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
-              </Flex>
-            </StyledButton>
+            <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
-            <div>
-              {bananaPriceUsd ? (
-                <PriceLink
-                  href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
-                  target="_blank"
-                >
-                  <ApeSwapRoundIcon width="34px" mr="8px" />
-                  <Text color="white" fontSize="18px" fontWeight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
-                </PriceLink>
-              ) : (
-                <Skeleton width={90} height={35} />
-              )}
-            </div>
           </ButtonFlex>
           <IconFlex>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
@@ -89,45 +72,67 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
               <InstagramIcon color="white3" fill={iconFillColor} />
             </StyledLink>
           </IconFlex>
+          <BottomRowContainer>
+            <div>
+              {bananaPriceUsd ? (
+                <PriceLink
+                  href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+                  target="_blank"
+                >
+                  <ApeSwapRoundIcon width="34px" mr="8px" />
+                  <Text color="white" fontSize="18px" fontWeight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+                </PriceLink>
+              ) : (
+                <Skeleton width={90} height={35} />
+              )}
+            </div>
+            <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
+              <BuyBananaButton>BUY BANANA</BuyBananaButton>
+            </a>
+          </BottomRowContainer>
         </LogoFlex>
-        <LinkskWrapper>
-          <LinkColumnFlex style={{ width: "200px" }}>
-            <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
-              Support
-            </Text>
-            {supportLinks.map((link) => {
-              return (
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <LinkText>{link.label}</LinkText>
-                </a>
-              );
-            })}
-          </LinkColumnFlex>
-          <LinkColumnFlex style={{ width: "240px" }}>
-            <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
-              Engage
-            </Text>
-            {engageLinks.map((link) => {
-              return (
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <LinkText>{link.label}</LinkText>
-                </a>
-              );
-            })}
-          </LinkColumnFlex>
-          <LinkColumnFlex style={{ width: "200px" }}>
-            <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
-              Learn
-            </Text>
-            {learnLinks.map((link) => {
-              return (
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
-                  <LinkText>{link.label}</LinkText>
-                </a>
-              );
-            })}
-          </LinkColumnFlex>
-        </LinkskWrapper>
+        {isMobile ? (
+          <MobileLinks />
+        ) : (
+          <LinkskWrapper>
+            <LinkColumnFlex style={{ width: "200px" }}>
+              <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
+                Support
+              </Text>
+              {supportLinks.map((link) => {
+                return (
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <LinkText>{link.label}</LinkText>
+                  </a>
+                );
+              })}
+            </LinkColumnFlex>
+            <LinkColumnFlex style={{ width: "240px" }}>
+              <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
+                Engage
+              </Text>
+              {engageLinks.map((link) => {
+                return (
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <LinkText>{link.label}</LinkText>
+                  </a>
+                );
+              })}
+            </LinkColumnFlex>
+            <LinkColumnFlex style={{ width: "100px" }}>
+              <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
+                Learn
+              </Text>
+              {learnLinks.map((link) => {
+                return (
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <LinkText>{link.label}</LinkText>
+                  </a>
+                );
+              })}
+            </LinkColumnFlex>
+          </LinkskWrapper>
+        )}
       </FlexContainer>
       <PeakingMonkey />
     </Container>

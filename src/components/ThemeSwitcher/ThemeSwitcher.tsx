@@ -10,6 +10,7 @@ const StyledButton = styled(Button)`
   background-color: ${({ theme }) => theme.colors.white3};
   border-radius: 10px;
   padding: 3px 12px;
+  height: 35px;
 
   .island {
     fill: ${({ theme }) => (theme.isDark ? theme.colors.gray : theme.colors.primary)};

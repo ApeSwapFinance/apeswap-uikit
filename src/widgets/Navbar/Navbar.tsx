@@ -207,7 +207,9 @@ const Navbar: React.FC<NavProps> = ({
                       {link.label}
                     </NavItem>
                   )}
-                  {link.label === hoveredItem && link?.items && <SubNavbar items={link.items}>s</SubNavbar>}
+                  {link.label === hoveredItem && link?.items && (
+                    <SubNavbar items={link.items} image={isDark ? link.darkIcon : link.lightIcon} />
+                  )}
                 </div>
               );
             })}

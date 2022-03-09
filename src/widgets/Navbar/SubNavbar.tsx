@@ -2,11 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Text } from "../..";
 import { MoreDarkImage } from "./images";
-import { MenuEntry } from "./MenuEntry";
+import * as ImageModule from "./images";
 import MenuLink from "./MenuLink";
 import { MenuSubEntry } from "./types";
+
+const Icons = ImageModule as unknown as { [key: string]: React.FC };
+
 interface SubNavbarProps {
   items: MenuSubEntry[];
+  image: string;
 }
 
 const StyledCard = styled.div`
@@ -31,13 +35,9 @@ const NavHolder = styled.div`
 
 const NavImage = styled.div`
   position: absolute;
-  overflow: hidden;
   display: block;
   top: 0px;
   right: 0px;
-  width: 188px;
-  height: 253px;
-  background: rgba(196, 196, 196, 1);
   border-radius: 0px 0px 0px 30px;
 `;
 
@@ -50,7 +50,9 @@ const StyledText = styled(Text)`
   }
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items }) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image }) => {
+  const Image = Icons[image];
+  const imageElement = <Image />;
   return (
     <StyledCard key={1}>
       <NavHolder>
@@ -62,9 +64,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items }) => {
           );
         })}
       </NavHolder>
-      <NavImage>
-        <MoreDarkImage />
-      </NavImage>
+      <NavImage>{imageElement}</NavImage>
     </StyledCard>
   );
 };
