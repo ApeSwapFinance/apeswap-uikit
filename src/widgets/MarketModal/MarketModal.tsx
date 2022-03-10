@@ -178,8 +178,8 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
   }
 `;
 const StyledButton = styled(ButtonSquare)`
-  /* width: 274px;
-  height: 44px; */
+  /* width: 274px; */
+  height: 44px;
   font-size: 16px;
   padding: 10px 20px;
   font-weight: 700;
