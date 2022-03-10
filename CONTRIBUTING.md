@@ -1,9 +1,6 @@
 # 🐵 Contributing to the ApeSwap DAO
 
 Hello fellow ape! 🍌 Thanks so much for taking the time our to consider contributing to the ever-growing ApeSwap DAO.   
-
-Thanks for taking the time to contribute!  
-You can start by reading our [Contribution guidelines](https://docs.apeswap.finance/code/contributing) first.  
   
 While all contributions are appreciated & welcome, we favor & prioritize tasks/grants on our [issues backlog](https://github.com/ApeSwapFinance/apeswap-uikit/issues). There are a range of opportunities for individuals and teams across all skill levels -- most with financial incentives attached to them!  
 
