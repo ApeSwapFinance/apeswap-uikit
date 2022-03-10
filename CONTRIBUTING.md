@@ -1,22 +1,18 @@
-<<<<<<< HEAD
 # 🐵 Contributing to the ApeSwap DAO
 
-Hello fellow ape! 🍌 Thanks so much for taking the time our to consider contributing to the ever-growing ApeSwap DAO.
-=======
-# Contributing to the Apeswap ecosystem 🥞
+Hello fellow ape! 🍌 Thanks so much for taking the time our to consider contributing to the ever-growing ApeSwap DAO.   
 
-Thanks for taking the time to contribute !
-You can start by reading our [Contribution guidelines](https://docs.apeswap.finance/code/contributing) first.
->>>>>>> 70d3b182f35b7c8b0e6640eb10b5dbd4fb8412f9
+Thanks for taking the time to contribute!  
+You can start by reading our [Contribution guidelines](https://docs.apeswap.finance/code/contributing) first.  
+  
+While all contributions are appreciated & welcome, we favor & prioritize tasks/grants on our [issues backlog](https://github.com/ApeSwapFinance/apeswap-uikit/issues). There are a range of opportunities for individuals and teams across all skill levels -- most with financial incentives attached to them!  
 
-While all contributions are appreciated & welcome, we favor & prioritize tasks/grants on our [issues backlog](https://github.com/ApeSwapFinance/apeswap-uikit/issues). There are a range of opportunities for individuals and teams across all skill levels -- most with financial incentives attached to them!
-
-Additionally, if you have suggestions on contribution ideas, but don't see a grant for them, please don't hesistate to reach out to [Obie Dobo](https://t.me/obiedobo) with your ideas.
-
+Additionally, if you have suggestions on contribution ideas, but don't see a grant for them, please don't hesistate to reach out to [Obie Dobo](https://t.me/obiedobo) with your ideas.  
+  
 ## Contribution Details
 
-If you choose to take on a contribution (even more importantly a grant task or project), there are a few crucial considerations & rules to be aware of:
-
+If you choose to take on a contribution (even more importantly a grant task or project), there are a few crucial considerations & rules to be aware of:  
+  
 - We review in first come first serve basis, so long as the PRs are high quality, meet requirements, and are relevant.
 - Please tag `obiedobo` in the reviewers of your PR.
 - Ensure your code is working locally before submitting a PR.
