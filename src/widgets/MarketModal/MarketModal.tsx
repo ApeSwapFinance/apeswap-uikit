@@ -112,6 +112,11 @@ const ModalFooter = styled.div`
   align-items: center;
   margin-bottom: 30px;
   padding: 0px 50px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    padding: 0px 284px;
+  }
+
   a {
     color: ${({ theme }) => theme.colors.yellow};
     text-decoration: underline;

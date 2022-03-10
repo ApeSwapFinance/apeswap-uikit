@@ -12,6 +12,7 @@ const ModalBody = styled.div`
   padding: 0px 20px;
 
   ${({ theme }) => theme.mediaQueries.md} {
+    flex-direction: row;
     height: 100%;
     margin-top: 0;
     padding-top: 0;

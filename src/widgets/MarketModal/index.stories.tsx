@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import { MarketModalProps, MarketModal } from ".";
 import { Connected } from "../Menu/index.stories";
 import { Text } from "../../components/Text";
@@ -14,23 +15,32 @@ export default {
   },
 };
 
+const RightContent = styled.div`
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 50%;
+  }
+`;
+const StyledText = styled(Text)`
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    text-align: left;
+  }
+`;
+
 const LendingBody1: React.FC = () => {
   return (
     <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
-      <div>
-        <Text
-          style={{
-            textAlign: "center",
-            fontSize: "14px",
-            fontWeight: 500,
-            lineHeight: "24px",
-          }}
-        >
+      <RightContent>
+        <StyledText>
           Our network uses an &quot;overcollateral&quot; model. <br />
           Users can borrow any type of asset listed, as long as they supply some of their own assets as collateral
           first.
-        </Text>
-      </div>
+        </StyledText>
+      </RightContent>
     </ModalContent>
   );
 };
@@ -38,20 +48,13 @@ const LendingBody1: React.FC = () => {
 const LendingBody2: React.FC = () => {
   return (
     <ModalContent Icon={<LendingM2Icon width={240} height={120} />}>
-      <div>
-        <Text
-          style={{
-            textAlign: "center",
-            fontSize: "14px",
-            fontWeight: 500,
-            lineHeight: "24px",
-          }}
-        >
+      <RightContent>
+        <StyledText>
           Suppliers earn interest paid by borrowers. <br />
           When a supplied asset is enabled as collateral, suppliers can borrow from any of the available markets. <br />
           The borrow amount is limited to 70% of the value of supplied assets.
-        </Text>
-      </div>
+        </StyledText>
+      </RightContent>
     </ModalContent>
   );
 };
