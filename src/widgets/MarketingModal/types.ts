@@ -1,18 +1,21 @@
-import { ReactNode } from "react";
+import React from "react";
+import { SvgProps } from "../../components/Svg";
 
-export type Handler = () => void;
-export interface MktModalProps {
-  onDismiss: Handler;
-  goToFarms: Handler;
-  connectWallet: () => void;
-  goToLiquidity: Handler;
-  startEarning: Handler;
+export type ActionHandler = () => void;
+
+export interface MarketingModalProps {
   title: string;
   description: string;
+  startEarning: ActionHandler;
+  onDismiss: ActionHandler;
+  children: React.ReactNode | React.ReactNode[];
 }
 
-export interface StepProps {
-  stepNumber: string;
-  headerText: string;
-  thirdText: ReactNode;
+export interface IconProps {
+  step: number;
+  childrensLength: number;
+}
+
+export interface ModalContentProps {
+  Icon: SvgProps;
 }

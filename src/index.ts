@@ -33,7 +33,6 @@ export * from "./widgets/Menu";
 export * from "./widgets/Toast";
 export * from "./widgets/WalletModal";
 export * from "./widgets/MarketingModal";
-export * from "./widgets/MarketModal";
 
 // Theme
 export { default as ResetCSS } from "./ResetCSS";
