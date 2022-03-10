@@ -334,7 +334,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg knbMYN"
+            class="sc-jRQBWg flA-Dkx"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
             type="button"
@@ -547,7 +547,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg knbMYN"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
             type="button"
