@@ -1,3 +1,17 @@
+export { default as LendingM1Icon } from "./Icons/LendingM1";
+export { default as LendingM2Icon } from "./Icons/LendingM2";
+export { default as LendingM3Icon } from "./Icons/LendingM3";
+export { default as LendingM4Icon } from "./Icons/LendingM4";
+export { default as LendingM5Icon } from "./Icons/LendingM5";
+export { default as FarmsM1Icon } from "./Icons/FarmsM1";
+export { default as FarmsM2Icon } from "./Icons/FarmsM2";
+export { default as FarmsM3Icon } from "./Icons/FarmsM3";
+export { default as FarmsM4Icon } from "./Icons/FarmsM4";
+export { default as PoolsM1Icon } from "./Icons/PoolsM1";
+export { default as PoolsM2Icon } from "./Icons/PoolsM2";
+export { default as PoolsM3Icon } from "./Icons/PoolsM3";
+export { default as PoolsM4Icon } from "./Icons/PoolsM4";
+
 export { default as PFarmingIcon } from "./Icons/PFarming";
 export { default as GovernanceIcon } from "./Icons/Governance";
 export { default as XPoolsIcon } from "./Icons/XPools";

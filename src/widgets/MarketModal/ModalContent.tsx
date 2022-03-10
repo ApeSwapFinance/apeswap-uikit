@@ -7,7 +7,6 @@ const ModalBody = styled.div`
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  background: red;
   width: 100%;
   height: 100%;
   padding: 0px 20px;
@@ -22,6 +21,11 @@ const ModalBody = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+`;
+
+export const StyledImage = styled.img`
+  width: 240px;
+  height: 120px;
 `;
 
 const ModalContent: React.FC<ModalContentProps> = ({ Icon, children }) => {

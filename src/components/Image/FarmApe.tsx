@@ -1,8 +1,10 @@
 import * as React from "react";
+import { Svg } from "../Svg";
+import { SvgProps } from "../Svg/types";
 
-const FarmApe: React.FC = () => {
+const FarmApe: React.FC<SvgProps> = (props) => {
   return (
-    <svg width={122} height={170} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <Svg {...props} xmlns="http://www.w3.org/2000/svg">
       <path
         opacity={0.2}
         d="M55.413 166.617c10.94 0 19.81-2.128 19.81-4.752 0-2.624-8.87-4.751-19.81-4.751s-19.81 2.127-19.81 4.751c0 2.624 8.87 4.752 19.81 4.752z"
@@ -227,7 +229,7 @@ const FarmApe: React.FC = () => {
         d="M97.411 68.53c-.119 0-.238-.03-.357-.059-.684-.208-1.07-.92-.862-1.574l9.042-30.052c.208-.683.922-1.07 1.576-.861.685.207 1.071.92.863 1.573L98.631 67.61c-.149.564-.654.92-1.22.92z"
         fill="#1C171A"
       />
-    </svg>
+    </Svg>
   );
 };
 

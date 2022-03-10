@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { MarketModalProps, MarketModal } from ".";
 import { Connected } from "../Menu/index.stories";
+import { Text } from "../../components/Text";
 import ModalContent from "./ModalContent";
-import { FarmApe } from "../../components/Image";
+import { LendingM1Icon, LendingM2Icon } from "../../components/Svg/index";
 
 export default {
   title: "Widgets/MarketModal",
@@ -13,21 +14,55 @@ export default {
   },
 };
 
-const FarmContent = () => {
+const LendingBody1: React.FC = () => {
   return (
-    <ModalContent Icon={<FarmApe />}>
-      <p style={{ textAlign: "center" }}>Click here to connect your wallet to ApeSwap.</p>
+    <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
+      <div>
+        <Text
+          style={{
+            textAlign: "center",
+            fontSize: "14px",
+            fontWeight: 500,
+            lineHeight: "24px",
+          }}
+        >
+          Our network uses an &quot;overcollateral&quot; model. <br />
+          Users can borrow any type of asset listed, as long as they supply some of their own assets as collateral
+          first.
+        </Text>
+      </div>
+    </ModalContent>
+  );
+};
+
+const LendingBody2: React.FC = () => {
+  return (
+    <ModalContent Icon={<LendingM2Icon width={240} height={120} />}>
+      <div>
+        <Text
+          style={{
+            textAlign: "center",
+            fontSize: "14px",
+            fontWeight: 500,
+            lineHeight: "24px",
+          }}
+        >
+          Suppliers earn interest paid by borrowers. <br />
+          When a supplied asset is enabled as collateral, suppliers can borrow from any of the available markets. <br />
+          The borrow amount is limited to 70% of the value of supplied assets.
+        </Text>
+      </div>
     </ModalContent>
   );
 };
 
 export const ModalWithBackgroundMenu: React.FC<MarketModalProps> = ({
-  title = "Welcome to ApeSwap’s Lending Network",
+  title = "Welcome to ApeSwap's Lending Network",
   description = "How does it work?",
   startEarning,
 }) => {
   const [visible, setVisible] = useState(true);
-  const family = [<FarmContent />, <p>body 1</p>, <p>body 2</p>, <p>body 3</p>];
+  const family = [<LendingBody1 />, <LendingBody2 />];
 
   return (
     <>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
 import { ButtonSquare } from "../../components/ButtonSquare";
 import { MarketModalProps, IconProps } from "./types";
@@ -180,13 +180,12 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
 const StyledButton = styled(ButtonSquare)`
   /* width: 274px;
   height: 44px; */
+  font-size: 16px;
   padding: 10px 20px;
   font-weight: 700;
 `;
 
 const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
-  const theme = useTheme();
-
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
@@ -202,6 +201,20 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
     return step === 0 ? () => null : setStep(step - 1);
   };
 
+  const renderChildren = () => {
+    return children && childrens.map((element, index) => <>{step === index && element}</>);
+  };
+
+  const renderDots = () => {
+    return (
+      children &&
+      childrens.map((_, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <CircleButton key={`circle-${index}`} className={step === index ? "isActive" : ""} />
+      ))
+    );
+  };
+
   return (
     <Container>
       <StyledModal>
@@ -214,16 +227,17 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
           </div>
 
           <CloseButton onClick={onDismiss}>
-            <CloseIcon color={theme.isDark ? "#FFF" : "primary"} width="30px" fontWeight="bold" />
+            <CloseIcon color="text" width="30px" fontWeight="bold" />
           </CloseButton>
         </ModalHeader>
 
-        {children && childrens.map((element, index) => <>{step === index && element}</>)}
+        {renderChildren()}
 
         <ModalFooter>
           <SliderBtnSection>
             <IconContainer>
               <StyledLeftArrow
+                color="text"
                 width="12px"
                 height="14px"
                 onClick={goPrev}
@@ -232,16 +246,11 @@ const MarketModal: React.FC<MarketModalProps> = ({ title, description, onDismiss
               />
             </IconContainer>
 
-            <CircleDiv>
-              {children &&
-                childrens.map((_, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <CircleButton key={`circle-${index}`} className={step === index ? "isActive" : ""} />
-                ))}
-            </CircleDiv>
+            <CircleDiv>{renderDots()}</CircleDiv>
 
             <IconContainer>
               <StyledRightArrow
+                color="text"
                 width="12px"
                 height="14px"
                 onClick={goNext}
