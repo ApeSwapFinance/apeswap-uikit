@@ -76,7 +76,7 @@
     "react-is": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.38.4",
-    "styled-components": "^5.2.0",
+    "styled-components": "^5.3.3",
     "themeprovider-storybook": "^1.6.4",
     "ts-jest": "^26.5.0",
     "tslib": "^2.0.3",
@@ -86,7 +86,7 @@
     "react": "^17.0.1",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.3.3"
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.1.0",
