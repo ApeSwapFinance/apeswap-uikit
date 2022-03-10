@@ -31,7 +31,7 @@ const Pip = styled.div`
 const AvatarImage = styled.div<{ image: string }>`
   height: 45px;
   width: 45px;
-  transform: translate(0,-4px);
+  transform: translate(0, -4px);
   background-image: ${({ image }) => `url(${image})`};
   background-size: 100% 100%;
   border-radius: 25px;

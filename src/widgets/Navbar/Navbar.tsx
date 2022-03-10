@@ -11,7 +11,7 @@ import { NavProps } from "./types";
 import { MENU_HEIGHT } from "./config";
 import Avatar from "./Avatar";
 import NetworkButton from "./NetworkButton";
-import MenuLink from "../Menu/MenuLink";
+import MenuLink from "./MenuLink";
 import SubNavbar from "./SubNavbar";
 import { Footer } from "../../components/Footer";
 import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
@@ -202,7 +202,7 @@ const Navbar: React.FC<NavProps> = ({
             })}
           </Flex>
         )}
-        <Flex alignItems='center' style={{ position: "absolute", right: "30px" }}>
+        <Flex alignItems="center" style={{ position: "absolute", right: "30px" }}>
           {!isMobile && (
             <Flex marginRight="10px">
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />

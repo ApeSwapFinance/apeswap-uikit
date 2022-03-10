@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MktModalProps, MarketingModal } from ".";
-import { Connected } from "../Menu/index.stories";
+import { Connected } from "../Navbar/index.stories";
 
 export default {
   title: "Widgets/MarketingModal",

@@ -13,7 +13,7 @@ it("renders correctly", () => {
           target
         </div>
         <div
-          class="sc-bdvvtL bsBBin"
+          class="sc-bdvvtL hDdhB"
         />
       </div>
     </DocumentFragment>

@@ -29,10 +29,10 @@ import {
   BuyBananaButton,
   BottomRowContainer,
 } from "./styles";
+import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 import lightTheme from "../../theme/light";
 import darkTheme from "../../theme/dark";
 import { ThemeSwitcher } from "../ThemeSwitcher";
-import { useMatchBreakpoints } from "../..";
 import MobileLinks from "./MobileLinks";
 
 const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork }) => {

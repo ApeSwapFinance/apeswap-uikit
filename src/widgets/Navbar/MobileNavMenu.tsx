@@ -1,10 +1,10 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { DiscordIcon, Flex, TelegramIcon, TwitterIcon } from "../..";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
 import Accordion from "./Accordion";
+import { DiscordIcon, TelegramIcon, TwitterIcon } from "./icons";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import NetworkButton from "./NetworkButton";
@@ -94,8 +94,15 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           </MenuEntry>
         );
       })}
-      <Flex justifyContent="center" alignItems="center" style={{ width: "100%", height: "100px" }}>
-        <Flex justifyContent="space-between" alignItems="center" style={{ width: "275px" }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100px" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "275px",
+          }}
+        >
           <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
             <TwitterIcon color="white3" fill={iconFillColor} />
           </StyledLink>
@@ -106,8 +113,8 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
             <DiscordIcon color="white3" fill={iconFillColor} />
           </StyledLink>
           <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
-        </Flex>
-      </Flex>
+        </div>
+      </div>
     </Wrapper>
   );
 };

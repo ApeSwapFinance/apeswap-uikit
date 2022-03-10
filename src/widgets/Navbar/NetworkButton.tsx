@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ArrowDropDownIcon } from "../..";
+import { ArrowDropDownIcon } from "./icons";
 import Button from "../../components/Button/Button";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
 import { ChainId, NETWORK_LABEL } from "../NetworkModal/config";

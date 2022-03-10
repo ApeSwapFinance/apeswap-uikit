@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { DiscordIcon, Flex, TelegramIcon, Text, TwitterIcon } from "../..";
+import { DiscordIcon, TelegramIcon, TwitterIcon } from "./icons";
+import { Flex } from "../../components/Flex";
+import { Text } from "../../components/Text";
 import * as ImageModule from "./images";
 import MenuLink from "./MenuLink";
 import { MenuSubEntry } from "./types";
@@ -15,7 +17,6 @@ interface SubNavbarProps {
   label: string;
   isDark: boolean;
 }
-
 const StyledLink = styled.a`
   :hover {
     opacity: 0.8;
