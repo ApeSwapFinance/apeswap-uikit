@@ -3,9 +3,6 @@
   "version": "0.10.6-6.0",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
-  "resolutions": {
-    "**/ua-parser-js": "^0.7.30"
-  },
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -14,6 +11,7 @@
   "repository": "https://github.com/ApeSwapFinance/apeswap-uikit",
   "license": "MIT",
   "scripts": {
+    "postinstall": "yarn audit",
     "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
@@ -31,6 +29,19 @@
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
     ]
+  },
+  "resolutions": {
+    "**/ua-parser-js": "^0.7.30",
+    "yargs-parser": "^13.1.2",
+    "elliptic": "^6.5.3",
+    "underscore": "^1.12.1",
+    "trim": "^0.0.3",
+    "glob-parent": "^5.1.2",
+    "trim-newlines": "^3.0.1",
+    "axios": "^0.21.1",
+    "ansi-regex": "^5.0.1",
+    "node-fetch": "^2.6.1",
+    "follow-redirects": "^1.14.7"
   },
   "devDependencies": {
     "@apeswapfinance/eslint-config-apeswap": "1.0.0",
