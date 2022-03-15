@@ -31,4 +31,3 @@ export { default as Binance } from "./Binance";
 export { default as GameBurnIcon } from "./GameBurn";
 export { default as ArrowDropDownIcon } from "./ArrowDropDown";
 export { default as IslandIcon } from "./Island";
-
