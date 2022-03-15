@@ -84,10 +84,10 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark }) =>
           <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
             <TwitterIcon color="white3" fill={iconFillColor} />
           </StyledLink>
-          <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+          <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
             <TelegramIcon color="white3" fill={iconFillColor} />
           </StyledLink>
-          <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
+          <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
             <DiscordIcon color="white3" fill={iconFillColor} />
           </StyledLink>
         </Flex>

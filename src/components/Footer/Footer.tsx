@@ -45,11 +45,12 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
           <Text color="white">
-            ApeSwap is a leading decentralized exchange (DEX) on Binance Smart Chain and Polygon focused on offering a
-            premier trading experience
+            {`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
+            experience for everyone.`}
           </Text>
           <ButtonFlex>
             <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} />
+            <div style={{ margin: "0px 12.5px" }} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
           </ButtonFlex>
           <IconFlex>

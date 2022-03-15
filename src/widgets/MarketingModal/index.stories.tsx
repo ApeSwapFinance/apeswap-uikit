@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { MarketingModalProps, MarketingModal } from ".";
-import { Connected } from "../Menu/index.stories";
+import { Connected } from "../Navbar/index.stories";
 import { Text } from "../../components/Text";
 import ModalContent from "./ModalContent";
 import { LendingM1Icon, LendingM2Icon } from "../../components/Svg/index";
