@@ -26,20 +26,25 @@ const StyledLink = styled.a`
 
 const Wrapper = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
-  padding-top: 80px;
+  padding-top: 62.5px;
   top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 100px;
-  max-height: ${({ isPushed }) => (isPushed ? "800px" : "0px")};
+  max-height: ${({ isPushed }) => (isPushed ? "100vh" : "0px")};
   background-color: ${({ theme }) => theme.nav.background};
   width: ${({ isPushed }) => `${isPushed ? "100" : "0"}%`};
   border-right: ${({ isPushed }) => (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0)};
   z-index: 11;
   transition: max-height 0.3s linear;
-  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
   transform: translate3d(0, 0, 0);
   ${({ theme }) => theme.mediaQueries.md} {
     padding-bottom: 0px;
@@ -87,14 +92,28 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           );
         }
         return (
-          <MenuEntry key={entry.label} className={calloutClass} isActive={entry.href === location.pathname}>
+          <MenuEntry
+            key={entry.label}
+            className={calloutClass}
+            isActive={entry.href === location.pathname}
+            onClick={handleClick}
+          >
             <MenuLink href={entry?.href}>
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
             </MenuLink>
           </MenuEntry>
         );
       })}
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100px",
+          padding: "20px 0",
+        }}
+      >
         <div
           style={{
             display: "flex",

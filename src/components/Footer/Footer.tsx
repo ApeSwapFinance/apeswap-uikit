@@ -28,6 +28,7 @@ import {
   StyledLink,
   BuyBananaButton,
   BottomRowContainer,
+  AllRightsReserved,
 } from "./styles";
 import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 import lightTheme from "../../theme/light";
@@ -136,6 +137,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         )}
       </FlexContainer>
       <PeakingMonkey />
+      <AllRightsReserved>©2022 All rights reserved</AllRightsReserved>
     </Container>
   );
 };

@@ -237,3 +237,14 @@ export const Dropdown = styled.div<{ border?: boolean }>`
   padding: 10px 10px;
   cursor: pointer;
 `;
+
+export const AllRightsReserved = styled(Text)`
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  left: 20px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    bottom: 20px;
+    left: auto;
+  }
+`;
