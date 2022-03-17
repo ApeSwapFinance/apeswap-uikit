@@ -22,7 +22,7 @@ const HelpLink = styled(Link)`
   font-weight: 700;
 `;
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null , t}) => (
+const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => (
   <Modal title="Connect to a wallet" onDismiss={onDismiss}>
     {config.map((entry, index) => (
       <WalletCard
