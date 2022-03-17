@@ -10,6 +10,7 @@ import { Login } from "./types";
 interface Props {
   login: Login;
   onDismiss?: () => void;
+  t: (key: string) => string;
 }
 
 const HelpLink = styled(Link)`
@@ -19,7 +20,7 @@ const HelpLink = styled(Link)`
   margin-top: 24px;
 `;
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
+const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => (
   <Modal title="Connect to a wallet" onDismiss={onDismiss}>
     {config.map((entry, index) => (
       <WalletCard
@@ -32,7 +33,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
     ))}
     <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
       <HelpIcon mr="6px" />
-      Learn how to connect
+      {t("Learn how to connect")}
     </HelpLink>
   </Modal>
 );

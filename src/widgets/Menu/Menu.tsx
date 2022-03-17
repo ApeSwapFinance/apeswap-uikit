@@ -98,6 +98,7 @@ const Menu: React.FC<NavProps> = ({
   logout,
   isDark,
   toggleTheme,
+  t,
   langs,
   setLang,
   currentLang,
@@ -145,7 +146,7 @@ const Menu: React.FC<NavProps> = ({
   }, []);
 
   // Find the home link if provided
-  const homeLink = links.find((link) => link.label === "Home");
+  const homeLink = links.find((link) => link.href === "/");
 
   return (
     <Wrapper>
@@ -162,7 +163,7 @@ const Menu: React.FC<NavProps> = ({
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>
           )}
-          <UserBlock account={account} login={login} logout={logout} />
+          <UserBlock account={account} login={login} logout={logout} t={t} />
           {profile && <Avatar profile={profile} />}
         </Flex>
       </StyledNav>
