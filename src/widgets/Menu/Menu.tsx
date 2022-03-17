@@ -98,6 +98,7 @@ const Menu: React.FC<NavProps> = ({
   logout,
   isDark,
   toggleTheme,
+  t,
   langs,
   setLang,
   currentLang,
@@ -162,7 +163,7 @@ const Menu: React.FC<NavProps> = ({
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>
           )}
-          <UserBlock account={account} login={login} logout={logout} />
+          <UserBlock account={account} login={login} logout={logout} t={t} />
           {profile && <Avatar profile={profile} />}
         </Flex>
       </StyledNav>

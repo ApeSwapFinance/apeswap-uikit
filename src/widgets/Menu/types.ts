@@ -54,6 +54,7 @@ export interface NavProps extends PanelProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
+  t: (key: string) => string;
   chainId: number;
   switchNetwork: SwitchNetwork;
 }
