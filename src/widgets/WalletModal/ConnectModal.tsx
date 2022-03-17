@@ -33,7 +33,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => 
     ))}
     <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
       <HelpIcon mr="6px" />
-      {t('Learn how to connect')}
+      {t("Learn how to connect")}
     </HelpLink>
   </Modal>
 );
