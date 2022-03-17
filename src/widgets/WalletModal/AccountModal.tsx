@@ -11,6 +11,7 @@ interface Props {
   account?: string;
   logout: () => void;
   onDismiss?: () => void;
+  t: (key: string) => string;
 }
 
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
@@ -27,7 +28,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px" fontFamily="poppins">
         View on BscScan
       </LinkExternal>
-      <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
+      <CopyToClipboard toCopy={account}>t('Copy Address')</CopyToClipboard>
     </Flex>
     <Flex justifyContent="center">
       <Button
