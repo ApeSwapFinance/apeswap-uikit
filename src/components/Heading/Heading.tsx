@@ -19,7 +19,7 @@ const style = {
 
 const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`
   ${({ size }) => style[size || sizes.MD]}
-  font-weight: 400;
+  font-weight: ${({ fontWeight = 400 }) => fontWeight};
   line-height: 1.1;
   text-align: ${({ textAlign }) => textAlign};
 `;

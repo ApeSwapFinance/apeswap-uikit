@@ -8,7 +8,7 @@ export const variants = {
   TEXTDISABLED: "textDisabled",
   TEXTSUBTLE: "textSubtle",
   BINANCE: "binance",
-  FAILURE: "failure",
+  DANGER: "danger",
 } as const;
 
 export type Variants = typeof variants[keyof typeof variants];

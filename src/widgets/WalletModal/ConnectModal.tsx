@@ -18,8 +18,6 @@ const HelpLink = styled(Link)`
   align-self: center;
   align-items: center;
   margin-top: 24px;
-  font-family: Poppins;
-  font-weight: 700;
 `;
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => (
@@ -33,9 +31,9 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => 
         mb={index < config.length - 1 ? "8px" : "0"}
       />
     ))}
-    <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external>
-      <HelpIcon color="primary" mr="6px" />
-      t('Learn how to connect')
+    <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
+      <HelpIcon mr="6px" />
+      {t('Learn how to connect')}
     </HelpLink>
   </Modal>
 );

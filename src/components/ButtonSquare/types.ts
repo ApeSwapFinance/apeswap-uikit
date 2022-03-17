@@ -9,6 +9,10 @@ export const sizes = {
 
 export const variants = {
   PRIMARY: "primary",
+  SECONDARY: "secondary",
+  DANGER: "danger",
+  SUCCESS: "success",
+  TERTIARY: "tertiary",
 } as const;
 
 export type Sizes = typeof sizes[keyof typeof sizes];
@@ -29,7 +33,10 @@ export type ButtonSquareProps = {
   disabled?: boolean;
   fontFamily?: string;
   fontSize?: string;
+  fontWeight?: number;
   color?: string;
+  bgColor?: string;
+  bgHover?: string;
 } & ButtonSquareTypes &
   SpaceProps;
 

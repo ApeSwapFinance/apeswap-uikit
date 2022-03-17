@@ -50,10 +50,10 @@ const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
   }
 `;
 
-const CardRibbon: React.FC<CardRibbonProps> = ({ variantColor, text, fontFamily }) => {
+const CardRibbon: React.FC<CardRibbonProps> = ({ variantColor, text, color, fontWeight }) => {
   return (
     <StyledCardRibbon variantColor={variantColor}>
-      <Text as="p" fontFamily={fontFamily} color="white">
+      <Text as="p" fontWeight={fontWeight} color={color}>
         {text}
       </Text>
     </StyledCardRibbon>

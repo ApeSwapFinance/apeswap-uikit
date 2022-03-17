@@ -1,17 +1,8 @@
-import styled, { DefaultTheme } from "styled-components";
-import { Variants, variants } from "../Button/types";
-
-type StyledButtonMenuProps = {
-  variant: Variants;
-  theme: DefaultTheme;
-};
-
-const getBackgroundColor = ({ theme, variant }: StyledButtonMenuProps) => {
-  return theme.colors[variant === variants.SUBTLE ? "input" : "tertiary"];
-};
+import styled from "styled-components";
+import { Variants } from "../Button/types";
 
 const StyledButtonMenu = styled.div<{ variant: Variants }>`
-  background-color: ${getBackgroundColor};
+  background-color: ${({ theme }) => theme.colors.white3};
   border-radius: 16px;
   display: inline-flex;
 
