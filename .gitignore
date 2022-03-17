@@ -24,6 +24,9 @@ yarn-error.log*
 .vscode/launch.json
 .vscode/settings.json
 
+#Webstorm
+.idea/
+
 #iCloud
 *.icloud
 .icloud/

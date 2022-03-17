@@ -18,7 +18,7 @@ const StyledAvatar = styled.div`
 `;
 
 const Pip = styled.div`
-  background-color: ${({ theme }) => theme.colors.failure};
+  background-color: ${({ theme }) => theme.colors.error};
   border-radius: 50%;
   pointer-events: none;
   height: 8px;

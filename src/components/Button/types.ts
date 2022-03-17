@@ -5,15 +5,16 @@ import { SpaceProps } from "styled-system";
 export const sizes = {
   XS: "xs",
   SM: "sm",
+  MDS: "mds",
   MD: "md",
 } as const;
 
 export const variants = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
-  TERTIARY: "tertiary",
   TEXT: "text",
   DANGER: "danger",
+  TERTIARY: "tertiary",
   SUBTLE: "subtle",
   SUCCESS: "success",
   YELLOW: "yellow",
@@ -30,6 +31,7 @@ export type ButtonProps = {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   fullWidth?: boolean;
+  isMobile?: boolean;
   as?: "a" | "button" | typeof Link;
   href?: string;
   external?: boolean;
@@ -37,6 +39,7 @@ export type ButtonProps = {
   disabled?: boolean;
   fontFamily?: string;
   fontSize?: string;
+  fontWeight?: string;
   color?: string;
 } & ButtonTypes &
   SpaceProps;

@@ -14,7 +14,7 @@ const Table = <T extends DataType>({ _columns, _data }: { _columns: ColumnType<T
       <thead>
         <tr>
           {headers.map((header) => (
-            <StyledTh key={`header-${header.id}`} data-testid={`column-${header.name}`}>
+            <StyledTh key={`header-${header?.id}`} data-testid={`column-${header.name}`}>
               {header.label}
 
               {header.sorted && header.sorted.on ? <span data-testid={`sorted-${header.name}`} /> : null}

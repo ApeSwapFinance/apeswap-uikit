@@ -6,7 +6,8 @@ import ButtonMenu from "./ButtonMenu";
 import ButtonMenuItem from "./ButtonMenuItem";
 
 const Row = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 10px;
+  padding: 1em;
 
   & > button + button {
     margin-left: 16px;
@@ -30,7 +31,7 @@ export const Default: React.FC = () => {
     <>
       <Row>
         <ButtonMenu activeIndex={index} onClick={handleClick}>
-          <ButtonMenuItem>Button 1</ButtonMenuItem>
+          <ButtonMenuItem>primary</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
           <ButtonMenuItem>Button 4</ButtonMenuItem>
@@ -46,7 +47,7 @@ export const Default: React.FC = () => {
       </Row>
       <Row>
         <ButtonMenu activeIndex={index} onClick={handleClick} variant="subtle">
-          <ButtonMenuItem>Button 1</ButtonMenuItem>
+          <ButtonMenuItem>subtle</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
           <ButtonMenuItem>Button 4</ButtonMenuItem>
@@ -62,7 +63,7 @@ export const Default: React.FC = () => {
       </Row>
       <Row>
         <ButtonMenu activeIndex={index} onClick={handleClick} variant="yellow">
-          <ButtonMenuItem>Button 1</ButtonMenuItem>
+          <ButtonMenuItem>yellow</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
           <ButtonMenuItem>Button 4</ButtonMenuItem>
@@ -70,12 +71,10 @@ export const Default: React.FC = () => {
       </Row>
       <Row>
         <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm" variant="yellow">
-          <ButtonMenuItem fontFamily="poppins" fontSize="12px">
-            Button Font Size
-          </ButtonMenuItem>
-          <ButtonMenuItem fontFamily="poppins">Button 2</ButtonMenuItem>
-          <ButtonMenuItem fontFamily="poppins">Button 3</ButtonMenuItem>
-          <ButtonMenuItem fontFamily="poppins">Button 4</ButtonMenuItem>
+          <ButtonMenuItem fontSize="12px">Button Font Size</ButtonMenuItem>
+          <ButtonMenuItem>Button 2</ButtonMenuItem>
+          <ButtonMenuItem>Button 3</ButtonMenuItem>
+          <ButtonMenuItem>Button 4</ButtonMenuItem>
         </ButtonMenu>
       </Row>
     </>

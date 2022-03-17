@@ -26,12 +26,12 @@ export const Default: React.FC = () => {
         <Link href="/">Default</Link>
       </div>
       <div>
-        <Link href="/" fontFamily="Titan One">
-          Titan One
+        <Link href="/" bold>
+          Bold Link
         </Link>
       </div>
       <div>
-        <Link href="/" color="text">
+        <Link href="/" color="success">
           Custom color
         </Link>
       </div>
@@ -48,6 +48,11 @@ export const Default: React.FC = () => {
       </div>
       <div>
         <LinkExternal href="/">Link External</LinkExternal>
+      </div>
+      <div>
+        <LinkExternal href="/" bold>
+          Bold Link External
+        </LinkExternal>
       </div>
     </div>
   );

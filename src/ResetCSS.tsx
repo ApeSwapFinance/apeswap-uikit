@@ -77,7 +77,7 @@ const ResetCSS = createGlobalStyle`
     border-radius: 8px;
   }
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px ${({ theme }) => theme.colors.input}; 
+    box-shadow: inset 0 0 5px ${({ theme }) => theme.colors.inputBorder}; 
     border-radius: 10px;
   }
 `;

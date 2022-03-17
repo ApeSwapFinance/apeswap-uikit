@@ -7,6 +7,7 @@ import BinanceChain from "./icons/BinanceChain";
 import OntoWallet from "./icons/OntoWallet";
 import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
+import Coinbase from "./icons/Coinbase";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -26,14 +27,19 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.WalletConnect,
   },
   {
+    title: "SafePal Wallet",
+    icon: SafePalWallet,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
     title: "TokenPocket",
     icon: TokenPocket,
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: "SafePal Wallet",
-    icon: SafePalWallet,
-    connectorId: ConnectorNames.Injected,
+    title: "Coinbase Wallet",
+    icon: Coinbase,
+    connectorId: ConnectorNames.Walletlink,
   },
   {
     title: "Binance Chain Wallet",
@@ -41,8 +47,8 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.BSC,
   },
   {
-    title: "MathWallet",
-    icon: MathWallet,
+    title: "NABOX Wallet",
+    icon: Nabox,
     connectorId: ConnectorNames.Injected,
   },
   {
@@ -51,8 +57,8 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: "NABOX Wallet",
-    icon: Nabox,
+    title: "MathWallet",
+    icon: MathWallet,
     connectorId: ConnectorNames.Injected,
   },
 ];
