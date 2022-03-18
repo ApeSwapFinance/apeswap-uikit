@@ -1,13 +1,29 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
-import Svg from "../Svg";
-import { SvgProps } from "../types";
+import { SvgProps, rotation } from "./types";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Info: React.FC<SvgProps> = ({ direction = "right", color = "text", width, getStyles }) => {
+  const deg: rotation = {
+    left: 180,
+    up: 270,
+    right: 0,
+    down: 90,
+  };
+  const style = getStyles({
+    degree: deg[direction as keyof rotation],
+    color,
+  });
+
   return (
-    <Svg viewBox="0 0 24 24" {...props}>
-      <path d="M11 7H13V9H11V7ZM12 17C12.55 17 13 16.55 13 16V12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12V16C11 16.55 11.45 17 12 17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" />
-    </Svg>
+    <svg width={width || "24"} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" sx={style}>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15ZM6.99162 4.62598C7.13162 4.76598 7.30495 4.83598 7.51162 4.83598C7.71162 4.83598 7.88162 4.76598 8.02162 4.62598C8.16162 4.48598 8.23162 4.31264 8.23162 4.10598C8.23162 3.89931 8.16162 3.72598 8.02162 3.58598C7.88162 3.44598 7.71162 3.37598 7.51162 3.37598C7.30495 3.37598 7.13162 3.44598 6.99162 3.58598C6.85162 3.72598 6.78162 3.89931 6.78162 4.10598C6.78162 4.31264 6.85162 4.48598 6.99162 4.62598ZM8.07162 6.13598C8.07162 5.82117 7.81642 5.56598 7.50162 5.56598C7.18681 5.56598 6.93162 5.82118 6.93162 6.13598V10.506C6.93162 10.8208 7.18681 11.076 7.50162 11.076C7.81642 11.076 8.07162 10.8208 8.07162 10.506V6.13598Z"
+        fill="#4D4040"
+      />
+    </svg>
   );
 };
 
-export default Icon;
+export default Info;

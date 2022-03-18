@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Box } from "theme-ui";
 import { Text } from "../Text";
 import { Button } from "../Button";
@@ -23,15 +23,12 @@ export default {
 };
 
 export const JustText = (args: any) => {
-  const buttonRef = useRef();
   const body = <Text variant="sm">Just Text. Variant 4</Text>;
 
   return (
     <StorybookLayout {...args}>
-      <TooltipBubble ref={buttonRef} {...args} body={body}>
-        <Button ref={buttonRef} variant="secondary">
-          Just Text. Variant 4
-        </Button>
+      <TooltipBubble {...args} body={body}>
+        <Button variant="secondary">Just Text. Variant 4</Button>
       </TooltipBubble>
     </StorybookLayout>
   );

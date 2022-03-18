@@ -29,5 +29,5 @@ Default.args = {
   colorMode: "light",
   variant: "lg",
   weight: "bold",
-  color: "brown",
+  color: "text",
 };

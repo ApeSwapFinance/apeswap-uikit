@@ -21,7 +21,7 @@ export default {
 
 export const Default = (args: any) => (
   <StorybookLayout {...args}>
-    <Button {...args}>Apeswap</Button>
+    <Button {...args}>APESWAP</Button>
   </StorybookLayout>
 );
 

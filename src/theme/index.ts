@@ -1,5 +1,3 @@
-import { ToggleTheme } from "../components/Toggle/types";
-import { NavTheme } from "../widgets/Menu/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices, FontFamily } from "./types";
 
 export interface ApeSwapTheme {
@@ -7,8 +5,6 @@ export interface ApeSwapTheme {
   isDark: boolean;
   colors: Colors;
   fontFamily: FontFamily;
-  nav: NavTheme;
-  toggle: ToggleTheme;
   breakpoints: Breakpoints;
   mediaQueries: MediaQueries;
   spacing: Spacing;

@@ -1,10 +1,10 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import LegacySvg from "../../../components/Svg/LegacySvg";
+import { LegacySvgProps } from "../../../components/Svg/types";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <Svg viewBox="0 0 38.4 33.5" {...props}>
+    <LegacySvg viewBox="0 0 38.4 33.5" {...props}>
       <path
         d="M29,10.2c-0.7-0.4-1.6-0.4-2.4,0L21,13.5l-3.8,2.1l-5.5,3.3c-0.7,0.4-1.6,0.4-2.4,0L5,16.3
 		c-0.7-0.4-1.2-1.2-1.2-2.1v-5c0-0.8,0.4-1.6,1.2-2.1l4.3-2.5c0.7-0.4,1.6-0.4,2.4,0L16,7.2c0.7,0.4,1.2,1.2,1.2,2.1v3.3l3.8-2.2V7
@@ -14,7 +14,7 @@ const Icon: React.FC<SvgProps> = (props) => {
 		c0.7,0.4,1.6,0.4,2.4,0l8.1-4.7c0.7-0.4,1.2-1.2,1.2-2.1V17c0-0.8-0.4-1.6-1.2-2.1L29,10.2z"
         fill="#8247E5"
       />
-    </Svg>
+    </LegacySvg>
   );
 };
 

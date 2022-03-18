@@ -7,7 +7,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-qjrenn"
+        class="css-1fbhkvh"
       />
     </DocumentFragment>
   `);
@@ -18,7 +18,7 @@ it("renders correctly avatar", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-ulp8d3"
+        class="css-5g2tsz"
         height="50"
         width="50"
       />
@@ -31,7 +31,7 @@ it("renders correctly block", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-1q6mm8e"
+        class="css-12vhck7"
         height="50"
         width="50"
       />

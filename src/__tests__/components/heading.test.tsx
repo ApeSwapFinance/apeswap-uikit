@@ -7,7 +7,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <h1
-        class="css-1wf7gym"
+        class="css-1k7yu1x"
       >
         Heading
       </h1>

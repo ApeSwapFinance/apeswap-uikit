@@ -1,17 +1,47 @@
 import React from "react";
-import { Button as ThemeUIButton } from "theme-ui";
+import { Button as ThemeUIButton, useColorMode } from "theme-ui";
 import { ButtonProps, variants, buttonFontSizes, buttonPadding, sizes } from "./types";
 
-const Button: React.FC<ButtonProps> = ({ variant = variants.PRIMARY, sx, size = sizes.MEDIUM, children, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  variant = variants.PRIMARY,
+  sx,
+  csx,
+  size = sizes.MEDIUM,
+  children,
+  ...props
+}) => {
+  const [colorMode] = useColorMode();
+  let hoverStyle = {
+    "&:hover": {
+      "&:not([disabled])": { borderColor: "#FFDA00", background: variant === "primary" && "#FFDA00" },
+      "&:disabled": {},
+    },
+  };
+  if (variant === "secondary") {
+    hoverStyle = {
+      "&:hover": {
+        "&:not([disabled])": hoverStyle["&:hover"]["&:not([disabled])"],
+        "&:disabled": colorMode === "dark" && { color: "#AFADAA", borderColor: "#AFADAA" },
+      },
+    };
+  }
   return (
     <ThemeUIButton
       {...props}
       sx={{
-        ...sx,
         variant: `buttons.${variant}`,
         fontSize: buttonFontSizes[size],
         px: buttonPadding[size].x,
         py: buttonPadding[size].y,
+        display: "flex",
+        alignItems: "center",
+        transition: "all .3s linear",
+        ...hoverStyle,
+        "&:active": {
+          transform: "scale(0.9)",
+        },
+        ...sx,
+        ...csx,
       }}
     >
       {children}

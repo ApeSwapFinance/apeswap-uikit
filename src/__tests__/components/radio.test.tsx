@@ -10,7 +10,7 @@ it("renders correctly", () => {
         class="css-xaw09b-Radio"
       >
         <input
-          class="css-zj7zjo-Radio"
+          class="css-1p8bwfy-Radio"
           name="radio"
           type="radio"
           value="1"

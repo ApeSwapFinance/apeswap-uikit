@@ -1,34 +1,37 @@
 import React from "react";
 import Tab from "./Tab";
 import TabPanel from "./TabPanel";
-import TabsUI from "./Tabs";
+import Tabs from "./Tabs";
 import StorybookLayout from "../StorybookLayout/StorybookLayout";
 
 export default {
   title: "Components/Tabs",
-  component: TabsUI,
+  component: Tabs,
   argTypes: {
     colorMode: {
       options: ["light", "dark"],
-      control: { type: "radio" },
+      control: { type: "inline-radio" },
     },
     size: {
       options: ["sm", "md", "lg"],
       control: { type: "select" },
     },
+    variant: {
+      control: { type: "inline-radio" },
+    },
   },
 };
 
-export const Tabs = (args: any) => {
+export const Default = (args: any) => {
   const [activeTab, setActiveTab] = React.useState(0);
 
   return (
     <StorybookLayout {...args}>
-      <TabsUI {...args}>
-        <Tab index={0} activeTab={activeTab} onClick={setActiveTab} label="Tab 1" {...args} />
-        <Tab index={1} activeTab={activeTab} onClick={setActiveTab} label="Tab 2" {...args} />
-        <Tab index={2} activeTab={activeTab} onClick={setActiveTab} label="Tab 3" {...args} />
-      </TabsUI>
+      <Tabs {...args} activeTab={activeTab}>
+        <Tab index={0} onClick={setActiveTab} label="Tab 1" {...args} />
+        <Tab index={1} onClick={setActiveTab} label="Tab 2" {...args} />
+        <Tab index={2} onClick={setActiveTab} label="Tab 3" {...args} />
+      </Tabs>
 
       <div>
         <TabPanel index={0} activeTab={activeTab}>
@@ -45,7 +48,7 @@ export const Tabs = (args: any) => {
   );
 };
 
-Tabs.args = {
+Default.args = {
   colorMode: "light",
   size: "md",
   variant: "centered",

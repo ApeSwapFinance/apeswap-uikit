@@ -1,5 +1,7 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { Box } from "theme-ui";
+import { AnimatePresence, motion } from "framer-motion";
 import { ModalProps } from "./types";
 import style from "./styles";
 
@@ -13,10 +15,21 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   return (
     <Box>
-      <Box {...props} sx={open ? { minWidth, maxWidth, ...style.container } : { display: "none" }}>
-        {children}
-      </Box>
-      <Box sx={open ? style.backdrop : { display: "none" }} onClick={handleClose} />
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, transform: "translate(-50%, -50%) scale(0.1)" }}
+            animate={{ opacity: 1, transform: "translate(-50%, -50%) scale(1.0)" }}
+            transition={{ opacity: { duration: 0.2 }, transform: { duration: 0.2 } }}
+            exit={{ opacity: 0, transform: "translate(-50%, -50%) scale(0)" }}
+            {...props}
+            sx={{ minWidth, maxWidth, ...style.container }}
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {open && <Box sx={style.backdrop} onClick={handleClose} />}
     </Box>
   );
 };

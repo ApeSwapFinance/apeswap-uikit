@@ -40,32 +40,32 @@ const useMatchBreakpoints = (): State => {
   const [state, setState] = useState<State>(() => {
     return Object.keys(mediaQueries).reduce((accum, size) => {
       const key = getKey(size);
-      const mql = window.matchMedia(mediaQueries[size]);
-      return { ...accum, [key]: mql.matches };
+      const mql = typeof window === "object" ? window.matchMedia(mediaQueries[size]) : ({} as any);
+      return { ...accum, [key]: mql?.matches || false };
     }, {});
   });
 
   useEffect(() => {
     // Create listeners for each media query returning a function to unsubscribe
     const handlers = Object.keys(mediaQueries).map((size) => {
-      const mql = window.matchMedia(mediaQueries[size]);
+      const mql = typeof window === "object" ? window.matchMedia(mediaQueries[size]) : ({} as any);
 
       const handler = (matchMediaQuery: MediaQueryListEvent) => {
         const key = getKey(size);
-        setState((prevState) => ({
+        setState((prevState: any) => ({
           ...prevState,
           [key]: matchMediaQuery.matches,
         }));
       };
 
       // Safari < 14 fix
-      if (mql.addEventListener) {
+      if (mql?.addEventListener) {
         mql.addEventListener("change", handler);
       }
 
       return () => {
         // Safari < 14 fix
-        if (mql.removeEventListener) {
+        if (mql?.removeEventListener) {
           mql.removeEventListener("change", handler);
         }
       };

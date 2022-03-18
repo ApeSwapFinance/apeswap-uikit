@@ -8,16 +8,16 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-1mvallo"
+        class="css-1opymq7-Alert"
+        style="right: -250px;"
       >
         <div
           class="css-4cffwv"
         >
           <svg
             fill="none"
-            height="auto"
             viewBox="0 0 30 26"
-            width="30"
+            width="30px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -27,10 +27,10 @@ it("renders correctly", () => {
           </svg>
         </div>
         <div
-          class="css-1fseaja"
+          class="css-r6zb6k-Alert"
         >
           <p
-            class="css-1o1xutt"
+            class="css-yijyy9-Alert"
           >
             Alert title
           </p>
@@ -39,12 +39,11 @@ it("renders correctly", () => {
           class="css-vurnku"
         >
           <button
-            class="css-8aarw9"
+            class="css-1hdp9rj"
           >
             <svg
-              class="css-1upkq3l-Close"
+              class="css-1o9bukh-Close"
               fill="none"
-              height="12"
               viewBox="0 0 12 12"
               width="12"
               xmlns="http://www.w3.org/2000/svg"

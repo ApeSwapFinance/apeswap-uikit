@@ -1,6 +1,4 @@
-export * from "./hooks";
 export * from "./types";
-export * from "./utils";
 export { default as Table } from "./Table";
 export { default as TableHead } from "./TableHead";
 export { default as TableBody } from "./TableBody";
