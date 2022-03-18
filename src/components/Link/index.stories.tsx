@@ -24,9 +24,9 @@ export default {
   },
 };
 
-export const Default = () => {
+export const Default = (args) => {
   return (
-    <div>
+    <StorybookLayout {...args}>
       <div>
         <Link href="/">Default</Link>
       </div>
@@ -51,7 +51,7 @@ export const Default = () => {
           <ApeSwapIcon />
         </Link>
       </div>
-    </div>
+    </StorybookLayout>
   );
 };
 

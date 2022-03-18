@@ -22,10 +22,10 @@ export const Default = (args: any) => (
 Default.args = {
   colorMode: "light",
   slides: [
-    "https://via.placeholder.com/800x400",
-    "https://via.placeholder.com/900x500",
-    "https://via.placeholder.com/1000x600",
-    "https://via.placeholder.com/900x500",
+    "https://dummyimage.com/800x400/000000/ffffff",
+    "https://dummyimage.com/900x500/ffa0a0",
+    "https://dummyimage.com/1000x600/a0ffa0",
+    "https://dummyimage.com/900x500/a0a0ff",
   ],
   controls: true,
   autoPlay: true,

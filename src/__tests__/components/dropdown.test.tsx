@@ -1,26 +1,24 @@
 import React from "react";
 import { renderWithTheme } from "../../testHelpers";
-import { ThemeUIDropdown } from "../../components/Dropdown";
-import DropdownItem from "../../components/Dropdown/DropdownItem";
+import { Dropdown, DropdownItem } from "../../components/Dropdown";
 
 it("renders correctly", () => {
   const { asFragment } = renderWithTheme(
-    <ThemeUIDropdown component={<></>}>
+    <Dropdown component={<></>}>
       <DropdownItem>Dropdown</DropdownItem>
-    </ThemeUIDropdown>
+    </Dropdown>
   );
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-185otsa"
+        class="css-1bk7dx0-Dropdown"
       >
         <div
-          class="css-1t832xr"
+          class="css-15zwq76-Dropdown"
         >
           <svg
-            class="css-1ka1d7c-Caret"
+            class="css-1exjd22-Caret"
             fill="none"
-            height="auto"
             viewBox="0 0 10 8"
             width="10"
             xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import Alert from "./Alert";
 import StorybookLayout from "../StorybookLayout/StorybookLayout";
 
@@ -22,7 +23,11 @@ export default {
 export const Default = (args: any) => {
   const [open, setOpen] = useState(true);
 
-  return <StorybookLayout {...args}>{open && <Alert {...args} onClose={() => setOpen(false)} />}</StorybookLayout>;
+  return (
+    <StorybookLayout {...args}>
+      <AnimatePresence>{open && <Alert {...args} onClose={() => setOpen(false)} />}</AnimatePresence>
+    </StorybookLayout>
+  );
 };
 
 Default.args = {

@@ -8,8 +8,7 @@ export enum scales {
 
 export type scaleProps = `${scales}`;
 
-export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> {
+export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
   scale?: scaleProps;
-  onChange?: (checked: boolean) => void;
   display?: ThemeUICSSObject["display"];
 }

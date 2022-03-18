@@ -72,7 +72,12 @@ const TooltipBubble: React.FC<TooltipProps> = ({
           {body}
         </Box>
       </Box>
-      <Box as="span" ref={bodyRef}>
+      <Box
+        ref={bodyRef}
+        sx={{
+          width: "fit-content",
+        }}
+      >
         {children}
       </Box>
     </Box>

@@ -23,7 +23,7 @@ export default {
 
 export const Default = (args: any) => (
   <StorybookLayout {...args}>
-    <Checkbox {...args} />
+    <Checkbox {...args} onChange={(e) => console.log("====== checkbox", e)} />
   </StorybookLayout>
 );
 

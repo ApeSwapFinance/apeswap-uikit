@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "theme-ui";
-import { IconSVG } from "../IconSVG";
-import { icons } from "../IconSVG/types";
+import { Svg } from "../Svg";
+import { icons } from "../Svg/types";
 import { IconButtonProps, iconButtonVariants as variants } from "./types";
 import style from "./styles";
 import colorValues from "../../theme/Apeswap/types";
@@ -9,15 +9,22 @@ import colorValues from "../../theme/Apeswap/types";
 const IconButton: React.FC<IconButtonProps> = ({
   icon = icons.SEND,
   color = colorValues.white1,
+  background = colorValues.yellow,
   variant = variants.PRIMARY,
+  children,
   ...props
 }) => {
   return (
     <Button
       {...props}
-      sx={variant === variants.TRANSPARENT ? style.transparent : { variant: `buttons.${variant}`, ...style.default }}
+      sx={{
+        variant: `buttons.${variant}`,
+        background,
+        ...(variant === variants.PRIMARY ? style.primary : {}),
+        ...(variant === variants.TRANSPARENT ? style.transparent : {}),
+      }}
     >
-      <IconSVG color={color} icon={icon} />
+      {children || <Svg color={color} icon={icon} {...props} />}
     </Button>
   );
 };

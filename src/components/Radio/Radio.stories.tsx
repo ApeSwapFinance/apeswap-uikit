@@ -25,11 +25,11 @@ export const Default = (args: any) => {
   return (
     <StorybookLayout {...args}>
       <form>
-        <Label sx={{ variant: "forms.label.inline" }}>
+        <Label sx={{ variant: "forms.label.inline", cursor: "pointer" }}>
           <Radio {...args} name="test" value="1" />
           Option 1
         </Label>
-        <Label sx={{ variant: "forms.label.inline" }}>
+        <Label sx={{ variant: "forms.label.inline", marginTop: "15px", cursor: "pointer" }}>
           <Radio {...args} name="test" value="2" />
           Option 2
         </Label>

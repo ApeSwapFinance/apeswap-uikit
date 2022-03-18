@@ -45,7 +45,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onClick={handleClick} variant="subtle">
+        <ButtonMenu activeIndex={index} onClick={handleClick} variant="secondary">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -53,7 +53,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm" variant="subtle">
+        <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm" variant="secondary">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -61,7 +61,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onClick={handleClick} variant="yellow">
+        <ButtonMenu activeIndex={index} onClick={handleClick} variant="primary">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -69,7 +69,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm" variant="yellow">
+        <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm" variant="primary">
           <ButtonMenuItem fontFamily="poppins" fontSize="12px">
             Button Font Size
           </ButtonMenuItem>

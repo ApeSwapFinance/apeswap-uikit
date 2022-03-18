@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
-import React, { useState } from "react";
-import { Flex, Text, Box, ThemeUIStyleObject } from "theme-ui";
+import React, { useEffect, useState } from "react";
+import { Text, ThemeUIStyleObject } from "theme-ui";
 import Modal from "./Modal";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import ModalHeader from "./ModalHeader";
@@ -40,18 +40,22 @@ const styles: Record<string, ThemeUIStyleObject> = {
 };
 
 export default {
-  title: "Components/Modal",
+  title: "Widgets/Modal",
   component: Modal,
   argTypes: {
     colorMode: {
       options: ["light", "dark"],
       control: { type: "inline-radio" },
     },
+    open: {
+      control: false,
+    },
   },
 };
 
 export const Default = (args: any) => {
   const [open, setOpen] = useState(false);
+
   return (
     <StorybookLayout {...args}>
       <Button variant="secondary" onClick={() => setOpen(!open)}>

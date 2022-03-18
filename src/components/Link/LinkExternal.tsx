@@ -1,27 +1,24 @@
 /* eslint-disable react/require-default-props */
 import React from "react";
-import { Box, LinkProps, Link, ThemeUICSSObject } from "theme-ui";
-import { IconSVG } from "../IconSVG";
+import { Box, Link } from "theme-ui";
+import { Svg } from "../Svg";
+import { LinkExternalProps } from "./types";
 
-interface Props extends LinkProps {
-  display?: ThemeUICSSObject["display"];
-  textAlign?: ThemeUICSSObject["textAlign"];
-}
-
-const LinkExternal: React.FC<Props> = ({ display, textAlign, children, ...props }) => {
+const LinkExternal: React.FC<LinkExternalProps> = ({ display, textAlign, children, ...props }) => {
   return (
     <Link
       sx={{
-        color: "brown",
+        color: "text",
         display,
         textAlign,
+        cursor: "pointer",
       }}
       {...props}
       target="_blank"
     >
       {children}
       <Box as="span" sx={{ marginLeft: 2, verticalAlign: "middle" }}>
-        <IconSVG icon="external" color="brown" />
+        <Svg icon="external" color="text" />
       </Box>
     </Link>
   );

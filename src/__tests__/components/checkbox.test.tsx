@@ -12,7 +12,8 @@ it("renders correctly", () => {
         class="css-yo6cuw-Checkbox"
       >
         <input
-          class="css-13u1crr-Checkbox"
+          checked=""
+          class="css-kseaeg-Checkbox"
           type="checkbox"
         />
         <svg

@@ -10,7 +10,7 @@ const ModalHeader: React.FC<InternalProps> = ({ children, handleClose, ...props 
     <>
       <Flex {...props} sx={style.modalHead}>
         {children}
-        <IconButton icon="close" color="brown" variant="transparent" onClick={handleClose} />
+        <IconButton icon="close" color="text" variant="transparent" onClick={handleClose} />
       </Flex>
       <Divider />
     </>

@@ -12,6 +12,7 @@ const buttonBaseStyles = {
 
 const Apeswap: Theme = {
   ...baseTheme,
+  breakpoints: ["576px", "852px", "968px"],
   colors: Colors,
   text: {
     heading: {
@@ -84,6 +85,26 @@ const Apeswap: Theme = {
     },
   },
   forms: {
+    input: {
+      sm: {
+        background: "white3",
+        borderRadius: 10,
+        height: "32px",
+        width: "200px",
+      },
+      md: {
+        background: "white3",
+        borderRadius: 10,
+        height: "36px",
+        width: "200px",
+      },
+      lg: {
+        background: "white3",
+        borderRadius: 14,
+        height: "48px",
+        width: "200px",
+      },
+    },
     textarea: {
       padding: "10px 13px 10px 10px",
       borderRadius: "normal",
@@ -109,7 +130,6 @@ const Apeswap: Theme = {
       height: "inherit",
       margin: "0px",
       cursor: "pointer",
-      transition: "border-color 0.2s ease-in-out",
       "& + svg": {
         display: "none",
         position: "absolute",
@@ -127,11 +147,16 @@ const Apeswap: Theme = {
           display: "block",
         },
       },
+      "&:focus:not(:checked)": {
+        outline: "none",
+        boxShadow: "none",
+      },
       "&:focus": {
         outline: "none",
         boxShadow: "0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)",
       },
       "&:hover:not(:disabled):not(:checked)": {
+        borderColor: "yellow",
         boxShadow: "0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)",
       },
     },
@@ -148,7 +173,6 @@ const Apeswap: Theme = {
       height: "inherit",
       margin: "0px",
       cursor: "pointer",
-      transition: "border-color 0.2s ease-in-out",
       "& + span": {
         display: "none",
         position: "absolute",
@@ -170,10 +194,10 @@ const Apeswap: Theme = {
       },
       "&:focus": {
         outline: "none",
-        boxShadow: "0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)",
+        boxShadow: "0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .2)",
       },
       "&:hover:not(:disabled):not(:checked)": {
-        boxShadow: "0px 0px 0px 1px #FFB300, 0px 0px 0px 4px rgb(255, 179, 0, .4)",
+        borderColor: "yellow",
       },
     },
     label: {
@@ -220,6 +244,25 @@ const Apeswap: Theme = {
         background: "white3",
         border: "secondaryButtonDisable",
         color: "secondaryButtonDisableColor",
+      },
+    },
+    circular: {
+      width: "40px",
+      height: "40px",
+      background: "white3",
+      borderRadius: "50%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      overflow: "hidden",
+      cursor: "pointer",
+      padding: "1px",
+      transition: "all .3s linear",
+      "&:hover": {
+        filter: "brightness(85%)",
+      },
+      "&:active": {
+        transform: "scale(0.9)",
       },
     },
   },

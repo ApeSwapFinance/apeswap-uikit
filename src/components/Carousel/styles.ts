@@ -39,7 +39,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     "&:hover": {
       cursor: "pointer",
       svg: {
-        fill: "brown",
+        fill: "text",
       },
     },
     svg: {

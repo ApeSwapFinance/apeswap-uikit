@@ -47,7 +47,7 @@ export const Variants: React.FC = () => {
         <ButtonSquare as="a" href="https://apeswap.finance" target="_blank" rel="noreferrer">
           As an anchor
         </ButtonSquare>
-        <ButtonSquare as={Link} to="/router-link" variant="secondary">
+        <ButtonSquare as={Link} to="/router-link">
           As an React Router link
         </ButtonSquare>
         <ButtonSquare as="a" href="https://apeswap.finance" disabled>
@@ -61,9 +61,7 @@ export const Variants: React.FC = () => {
         <ButtonSquare isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
           Approving
         </ButtonSquare>
-        <ButtonSquare isLoading variant="success">
-          Approving
-        </ButtonSquare>
+        <ButtonSquare isLoading>Approving</ButtonSquare>
       </Row>
       <Row>
         <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
@@ -76,15 +74,15 @@ export const Variants: React.FC = () => {
         <IconButtonSquare>
           <LogoIcon />
         </IconButtonSquare>
-        <IconButtonSquare variant="secondary">
+        <IconButtonSquare>
           <AddIcon />
         </IconButtonSquare>
       </Row>
       <Row>
-        <IconButtonSquare size="sm" variant="danger">
+        <IconButtonSquare size="sm">
           <LogoIcon />
         </IconButtonSquare>
-        <IconButtonSquare size="sm" variant="success">
+        <IconButtonSquare size="sm">
           <AddIcon />
         </IconButtonSquare>
       </Row>

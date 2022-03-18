@@ -78,7 +78,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     },
   },
   default: {
-    color: "brown",
+    color: "text",
     fontSize: 0,
     lineHeight: "18px",
     fontWeight: "normal",
@@ -139,8 +139,8 @@ const styles: Record<string, ThemeUIStyleObject> = {
     fontWeight: "bold",
     textDecoration: "underline",
     svg: {
-      fill: "brown",
-      path: "brown",
+      fill: "text",
+      path: "text",
     },
   },
   flex: {
@@ -148,7 +148,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     alignItems: "center",
     fontSize: 0,
     lineHeight: "18px",
-    color: "brown",
+    color: "text",
     "span:nth-of-type(2)": {
       fontWeight: "bold",
     },

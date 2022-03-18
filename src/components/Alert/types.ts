@@ -1,5 +1,8 @@
 export enum variants {
   ERROR = "error",
+  DANGER = "danger",
+  SUCCESS = "success",
+  INFO = "info",
 }
 
 export enum sizes {

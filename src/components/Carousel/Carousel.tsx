@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Image, Button, Box } from "theme-ui";
 import { CarouselProps } from "./types";
-import ChevronRight from "../Svg/Icons/ChevronRight";
-import ChevronLeft from "../Svg/Icons/ChevronLeft";
+import ChevronRight from "../Svg/_Icons/ChevronRight";
+import ChevronLeft from "../Svg/_Icons/ChevronLeft";
 import CarouselIndicator from "./Carousel.indicator";
 import styles from "./styles";
 
@@ -49,12 +49,15 @@ const Carousel: React.FC<CarouselProps> = ({
         </Box>
       )}
 
-      <Box sx={styles.imageWrapper}>
+      <Box sx={{ ...styles.imageWrapper, maxHeight }}>
         {slides.map((image, index) => {
           return (
             <Image
               key={`${index + 2}`}
-              sx={index === currentSlide ? styles.activeSlider : styles.slider}
+              sx={{
+                maxHeight,
+                ...(index === currentSlide ? styles.activeSlider : styles.slider),
+              }}
               src={image}
               alt=""
             />

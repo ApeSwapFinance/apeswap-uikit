@@ -9,16 +9,7 @@ it("renders correctly", () => {
     <DocumentFragment>
       <div
         class="css-vurnku"
-      >
-        <div
-          class="css-1bzb8nq"
-        >
-          body
-        </div>
-        <div
-          class="css-1bzb8nq"
-        />
-      </div>
+      />
     </DocumentFragment>
   `);
 });

@@ -9,6 +9,7 @@ const StyledLink = styled(Text)<LinkProps>`
   display: flex;
   align-items: center;
   width: fit-content;
+  cursor: pointer;
   &:hover {
     text-decoration: underline;
   }
@@ -19,7 +20,11 @@ const Link: React.FC<LinkProps> = ({ external, children, ...props }) => {
   if (external) {
     return <LinkExternal>{children}</LinkExternal>;
   }
-  return <StyledLink as="a" bold {...internalProps} {...props} />;
+  return (
+    <StyledLink as="a" bold {...internalProps} {...props}>
+      {children}
+    </StyledLink>
+  );
 };
 
 Link.defaultProps = {

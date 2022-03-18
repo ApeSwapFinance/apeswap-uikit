@@ -20,6 +20,8 @@ const InactiveButton = styled(Button)<InactiveButtonProps>`
   }
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   font-size: ${({ fontSize }) => fontSize || "16px"};
+  display: flex;
+  align-items: center;
 `;
 
 const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
@@ -55,6 +57,10 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
       isMobile={isMobile}
       fontFamily={fontFamily}
       fontSize={fontSize}
+      sx={{
+        display: "flex",
+        alignItems: "center",
+      }}
       {...props}
     />
   );

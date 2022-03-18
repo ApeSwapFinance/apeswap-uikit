@@ -1,32 +1,50 @@
-import React from "react";
-import StyledProgress, { Bar } from "./StyledProgress";
-import ProgressBunnyWrapper from "./ProgressBunnyWrapper";
-import { ProgressBunny } from "../Svg";
+/** @jsxImportSource theme-ui */
+import React, { useEffect, useState } from "react";
+import { keyframes } from "@emotion/react";
 import { ProgressProps } from "./types";
 
-const stepGuard = (step: number) => {
-  if (step < 0) {
-    return 0;
-  }
+export const anim = keyframes({
+  from: { width: "0%" },
+  to: { width: "100%" },
+});
 
-  if (step > 100) {
-    return 100;
-  }
+const Progress: React.FC<ProgressProps> = ({
+  height = "15px",
+  to = 50,
+  color = "gradient",
+  background = "white4",
+  width = "100%",
+}) => {
+  const [toValue, setTo] = useState(0);
 
-  return step;
-};
+  useEffect(() => {
+    setTo(to);
+  }, [to]);
 
-const Progress: React.FC<ProgressProps> = ({ primaryStep = 0, secondaryStep = null, showProgressBunny = false }) => {
   return (
-    <StyledProgress>
-      {showProgressBunny && (
-        <ProgressBunnyWrapper style={{ left: `${stepGuard(primaryStep)}%` }}>
-          <ProgressBunny />
-        </ProgressBunnyWrapper>
-      )}
-      <Bar primary style={{ width: `${stepGuard(primaryStep)}%` }} />
-      {secondaryStep ? <Bar style={{ width: `${stepGuard(secondaryStep)}%` }} /> : null}
-    </StyledProgress>
+    <div
+      sx={{
+        height,
+        width,
+        background,
+        border: 0,
+        borderRadius: "normal",
+        position: "relative",
+      }}
+    >
+      <div
+        sx={{
+          height,
+          width: `${toValue}%`,
+          top: 0,
+          border: 0,
+          background: color,
+          position: "absolute",
+          borderRadius: "normal",
+          transition: "width 2s cubic-bezier(0.1, -0.6, 0.2, 0)",
+        }}
+      />
+    </div>
   );
 };
 
