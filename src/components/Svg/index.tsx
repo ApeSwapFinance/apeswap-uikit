@@ -72,5 +72,12 @@ export { default as SearchIcon2 } from "./Icons/Search2";
 export { default as SwapVertIcon } from "./Icons/SwapVert";
 export { default as SyncAltIcon } from "./Icons/SyncAlt";
 export { default as WarningIcon } from "./Icons/Warning";
+export { default as TwitterIcon } from "./Icons/Twitter";
+export { default as TelegramIcon } from "./Icons/Telegram";
+export { default as DiscordIcon } from "./Icons/Discord";
+export { default as RedditIcon } from "./Icons/Reddit";
+export { default as MediumIcon } from "./Icons/Medium";
+export { default as InstagramIcon } from "./Icons/Instagram";
+
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

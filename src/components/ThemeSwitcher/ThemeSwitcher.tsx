@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { Text } from "../Text";
 import { Flex } from "../Flex";
 import { Button } from "../Button";
-import { IslandIcon, MoonIcon } from "../../widgets/Menu/icons";
+import { IslandIcon, MoonIcon } from "../../widgets/Navbar/icons";
 import { ThemeSwitcherProps } from "./types";
 
 const StyledButton = styled(Button)`
   background-color: ${({ theme }) => theme.colors.white3};
   border-radius: 10px;
   padding: 3px 12px;
+  height: 35px;
 
   .island {
     fill: ${({ theme }) => (theme.isDark ? theme.colors.gray : theme.colors.primary)};
