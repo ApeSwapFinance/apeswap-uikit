@@ -11,6 +11,7 @@
           "rollup.config.js"
         ]
       }
-    ]
+    ],
+    "no-nested-ternary": 0
   }
 }
