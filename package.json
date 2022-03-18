@@ -1,6 +1,6 @@
 {
-  "name": "@apeswapfinance/uikit",
-  "version": "0.10.5-3.8",
+  "name": "@ape.swap/uikit",
+  "version": "1.0.0",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
@@ -20,7 +20,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "release": "yarn build && np"
+    "release": "yarn build && np --branch main-v-2 patch"
   },
   "husky": {
     "hooks": {
@@ -32,8 +32,12 @@
       "<rootDir>/src/setupTests.js"
     ]
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "devDependencies": {
-    "@apeswapfinance/eslint-config-apeswap": "1.0.0",
+    "@ape.swap/eslint-config-apeswap": "^1.0.1",
     "@babel/core": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@binance-chain/bsc-use-wallet": "^0.8.1",
@@ -84,8 +88,11 @@
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.8.1",
+    "@mdx-js/react": "1.6.22",
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",
+    "framer-motion": "^4.1.17",
     "lodash": "^4.17.20",
     "lottie-react": "^2.2.1",
     "react-transition-group": "^4.4.1",

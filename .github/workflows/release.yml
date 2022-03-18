@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main-v-2
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Add auth token
+        run: |
+          cat <<EOT >> .npmrc
+          //registry.npmjs.org/:_authToken=\${NPM_PUBLISH_TOKEN}
+          always-auth=true
+          EOT
+      
+      - name: release
+        run: yarn release
+        env: 
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
