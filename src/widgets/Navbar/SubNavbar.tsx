@@ -5,10 +5,10 @@ import { Flex } from "../../components/Flex";
 import { Text } from "../../components/Text";
 import * as ImageModule from "./images";
 import MenuLink from "./MenuLink";
-import { MenuSubEntry, TrackHandler } from "./types";
+import { MenuSubEntry } from "./types";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
-import trackSocialClick from "../../util/trackSocialClick";
+import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 

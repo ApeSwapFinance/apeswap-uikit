@@ -1,4 +1,11 @@
-import { TrackHandler } from "../widgets/Navbar";
+export interface TrackProps {
+  event: string;
+  chain: number | undefined | string;
+  data: any;
+  value?: number | string;
+}
+
+export type TrackHandler = ({ ...arg }: TrackProps) => void;
 
 export interface SocialClickProps {
   tracker: TrackHandler | undefined;
@@ -15,10 +22,10 @@ const trackSocialClick = (
   clickUrl: SocialClickProps["clickUrl"],
   chainId: SocialClickProps["chainId"]
 ): void => {
-  if (tracker !== undefined) {
+  if (tracker) {
     tracker({
       event: "socialClick",
-      chainId,
+      chain: chainId,
       data: {
         position,
         clickUrl,
@@ -27,7 +34,7 @@ const trackSocialClick = (
     });
   } else {
     // eslint-disable-next-line no-console
-    console.error("tracker not found");
+    console.info("tracker not found");
   }
 };
 

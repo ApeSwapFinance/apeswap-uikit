@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import { MenuEntry } from "./MenuEntry";
 import { LangType } from "./types";
 import { links } from "./config";
+import { TrackProps } from "../../util/trackSocialClick";
 
 export default {
   title: "Widgets/Navbar",
@@ -18,6 +19,11 @@ export default {
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
 export const Connected: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const track = ({ event, chain, data }: TrackProps): void => {
+    return null;
+  };
+
   return (
     <BrowserRouter>
       <Navbar
@@ -38,6 +44,7 @@ export const Connected: React.FC = () => {
         }}
         chainId={137}
         switchNetwork={noop}
+        track={track}
       >
         <div>
           <Heading as="h1" mb="8px">
