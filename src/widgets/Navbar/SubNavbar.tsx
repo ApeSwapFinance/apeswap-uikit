@@ -5,9 +5,10 @@ import { Flex } from "../../components/Flex";
 import { Text } from "../../components/Text";
 import * as ImageModule from "./images";
 import MenuLink from "./MenuLink";
-import { MenuSubEntry } from "./types";
+import { MenuSubEntry, TrackHandler } from "./types";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
+import trackSocialClick from "../../util/trackSocialClick";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
@@ -16,6 +17,8 @@ interface SubNavbarProps {
   image?: string;
   label: string;
   isDark: boolean;
+  chainId: number | string;
+  track?: TrackHandler | undefined;
 }
 const StyledLink = styled.a`
   :hover {
@@ -60,10 +63,12 @@ const StyledText = styled(Text)`
   }
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark }) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
+  const position = "More";
+
   return (
     <StyledCard key={1}>
       <NavHolder>
@@ -82,13 +87,25 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark }) =>
           style={{ position: "absolute", bottom: "5px", right: "20px", width: "150px" }}
         >
           <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
-            <TwitterIcon color="white3" fill={iconFillColor} />
+            <TwitterIcon
+              color="white3"
+              fill={iconFillColor}
+              onClick={() => trackSocialClick(track, "twitter", position, "https://twitter.com/ape_swap", chainId)}
+            />
           </StyledLink>
           <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
-            <TelegramIcon color="white3" fill={iconFillColor} />
+            <TelegramIcon
+              color="white3"
+              fill={iconFillColor}
+              onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
+            />
           </StyledLink>
           <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
-            <DiscordIcon color="white3" fill={iconFillColor} />
+            <DiscordIcon
+              color="white3"
+              fill={iconFillColor}
+              onClick={() => trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)}
+            />
           </StyledLink>
         </Flex>
       )}
@@ -98,6 +115,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark }) =>
 
 SubNavbar.defaultProps = {
   image: "",
+  track: undefined,
 };
 
 export default SubNavbar;

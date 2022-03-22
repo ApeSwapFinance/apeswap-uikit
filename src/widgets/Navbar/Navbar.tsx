@@ -98,6 +98,7 @@ const Navbar: React.FC<NavProps> = ({
   children,
   chainId,
   switchNetwork,
+  track,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -195,6 +196,8 @@ const Navbar: React.FC<NavProps> = ({
                       image={isDark ? link.darkIcon : link.lightIcon}
                       label={link.label}
                       isDark={isDark}
+                      chainId={chainId}
+                      track={track}
                     />
                   )}
                 </div>

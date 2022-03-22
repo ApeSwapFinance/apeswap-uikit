@@ -50,6 +50,8 @@ export interface PanelProps {
   links: Array<MenuEntry>;
 }
 
+export type TrackHandler = ({ ...arg }) => void;
+
 export interface NavProps extends PanelProps {
   account?: string;
   login: Login;
@@ -57,4 +59,5 @@ export interface NavProps extends PanelProps {
   logout: () => void;
   chainId: number;
   switchNetwork: SwitchNetwork;
+  track?: TrackHandler | undefined;
 }

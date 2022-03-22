@@ -1,9 +1,12 @@
+import { TrackHandler } from "../../widgets/Navbar";
+
 export interface FooterProps {
   chainId: number;
   toggleTheme: (isDark: boolean) => void;
   switchNetwork: (chainId: number) => void;
   isDark: boolean;
   bananaPriceUsd: number | undefined;
+  track?: TrackHandler | undefined;
 }
 
 export interface PushedProps {
