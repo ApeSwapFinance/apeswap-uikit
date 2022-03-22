@@ -25,10 +25,6 @@ const trackSocialClick = (
         socialName,
       },
     });
-    console.log("chainId", chainId);
-    console.log("socialName", socialName);
-    console.log("position", position);
-    console.log("clickUrl", clickUrl);
   } else {
     // eslint-disable-next-line no-console
     console.error("tracker not found");
