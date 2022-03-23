@@ -1,5 +1,5 @@
 {
-  "extends": "@apeswapfinance/eslint-config-apeswap",
+  "extends": "@ape.swap/eslint-config-apeswap",
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",

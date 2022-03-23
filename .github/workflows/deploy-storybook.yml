@@ -3,7 +3,7 @@ name: Deploy Storybook
 on:
   push:
     branches:
-      - master
+      - main-v-2
 
 jobs:
   storybook:
@@ -19,14 +19,10 @@ jobs:
           node-version: 14.x
 
       - name: Install dependencies
-        run: yarn install
-        env: 
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn install --frozen-lockfile
 
       - name: Build Storybook
         run: yarn build-storybook
-        env: 
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Deploy Storybook
         uses: peaceiris/actions-gh-pages@v3
