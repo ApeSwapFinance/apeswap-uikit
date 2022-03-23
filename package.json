@@ -1,6 +1,6 @@
 {
   "name": "@apeswapfinance/uikit",
-  "version": "0.10.8-0.2",
+  "version": "0.10.8-0.2-alhpa.0",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
@@ -33,7 +33,7 @@
     ]
   },
   "devDependencies": {
-    "@apeswapfinance/eslint-config-apeswap": "1.0.0",
+    "@ape.swap/eslint-config-apeswap": "^1.0.1",
     "@babel/core": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@binance-chain/bsc-use-wallet": "^0.8.1",
@@ -83,7 +83,6 @@
     "styled-components": "^5.2.0"
   },
   "dependencies": {
-    "@ape.swap/eslint-config-apeswap": "^1.0.1",
     "@emotion/react": "^11.7.1",
     "@rollup/plugin-json": "^4.1.0",
     "@types/lodash": "^4.14.162",
