@@ -1,15 +1,15 @@
 import React from "react";
 import { useTheme } from "styled-components";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import LegacySvg from "../../../components/Svg/LegacySvg";
+import { LegacySvgProps } from "../../../components/Svg/types";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: React.FC<LegacySvgProps> = (props) => {
   const theme = useTheme();
   const primaryColor = theme.isDark ? "#3C3742" : "#e9eaeb";
   const secondaryColor = theme.isDark ? "#666171" : "#bdc2c4";
 
   return (
-    <Svg viewBox="0 0 32 32" {...props}>
+    <LegacySvg viewBox="0 0 32 32" {...props}>
       <path d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16z" fill={primaryColor} />
       <mask id="A" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
         <path d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16z" fill="#c4c4c4" />
@@ -27,7 +27,7 @@ const Icon: React.FC<SvgProps> = (props) => {
         <ellipse cx="12.308" cy="14.846" rx="1.026" ry="1.538" fill={primaryColor} />
         <ellipse cx="19.385" cy="14.846" rx="1.026" ry="1.538" fill={primaryColor} />
       </g>
-    </Svg>
+    </LegacySvg>
   );
 };
 

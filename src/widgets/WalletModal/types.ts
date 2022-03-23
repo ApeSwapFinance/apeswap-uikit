@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { SvgProps } from "../../components/Svg/types";
+import { LegacySvgProps } from "../../components/Svg/types";
 
 export enum ConnectorNames {
   Injected = "injected",
@@ -12,6 +12,6 @@ export type Login = (connectorId: ConnectorNames) => void;
 
 export interface Config {
   title: string;
-  icon: FC<SvgProps>;
+  icon: FC<LegacySvgProps>;
   connectorId: ConnectorNames;
 }

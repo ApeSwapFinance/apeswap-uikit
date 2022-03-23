@@ -54,9 +54,9 @@ const getButtonHeight = (size: string | undefined) => {
     return "36px";
   }
   if (size === "md") {
-    return "48px";
+    return "44px";
   }
-  return "30px";
+  return "44px";
 };
 
 const StyledButton = styled.button<ButtonProps>`
@@ -64,7 +64,7 @@ const StyledButton = styled.button<ButtonProps>`
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
   color: ${({ color, theme }) => (color ? getColor(color, theme) : getButtonVariantProp("color"))};
-  border-radius: 16px;
+  border-radius: 10px;
   font-weight: ${({ fontWeight = 600 }) => fontWeight};
   box-shadow: ${getButtonVariantProp("boxShadow")};
   cursor: pointer;
@@ -79,7 +79,7 @@ const StyledButton = styled.button<ButtonProps>`
   justify-content: center;
   outline: 0;
   padding: ${({ isMobile }) => (isMobile ? "0 10px" : "0 24px")};
-  transition: background-color 0.2s;
+  transition: all 0.3s linear;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
   text-transform: uppercase;
 
@@ -89,13 +89,8 @@ const StyledButton = styled.button<ButtonProps>`
     color: ${({ theme, variant }) => (variant === "secondary" ? theme.colors.yellow : getButtonVariantProp("color"))};
   }
 
-  &:focus:not(:active) {
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.text};
-  }
-
   &:active {
-    background-color: ${getButtonVariantProp("backgroundActive")};
-    box-shadow: ${getButtonVariantProp("boxShadowActive")};
+    transform: scale(0.9);
   }
 
   ${getDisabledStyles}

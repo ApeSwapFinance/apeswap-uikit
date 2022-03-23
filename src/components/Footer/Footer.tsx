@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       <FlexContainer>
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
-          <Text color="white">
+          <Text style={{ color: "white" }}>
             {`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
             experience for everyone.`}
           </Text>
@@ -82,7 +82,9 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                   target="_blank"
                 >
                   <ApeSwapRoundIcon width="34px" mr="8px" />
-                  <Text color="white" fontSize="18px" fontWeight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
+                  <Text fontSize="18px" fontWeight={600} style={{ color: "white" }}>{`$${bananaPriceUsd.toFixed(
+                    3
+                  )}`}</Text>
                 </PriceLink>
               ) : (
                 <Skeleton width={90} height={35} />
@@ -98,7 +100,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         ) : (
           <LinkskWrapper>
             <LinkColumnFlex style={{ width: "200px" }}>
-              <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
+              <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
                 Support
               </Text>
               {supportLinks.map((link) => {
@@ -110,7 +112,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "240px" }}>
-              <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
+              <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
                 Engage
               </Text>
               {engageLinks.map((link) => {
@@ -122,7 +124,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "130px" }}>
-              <Text color="rgba(255, 179, 0, 1)" fontSize="22px" bold>
+              <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
                 Learn
               </Text>
               {learnLinks.map((link) => {

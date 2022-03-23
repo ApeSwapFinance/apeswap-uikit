@@ -8,7 +8,7 @@ interface ReturnType {
 }
 
 const useNetworkModal = (switchNetwork: SwitchNetwork, chainId: number): ReturnType => {
-  const [onPresentNetworkModal] = useModal(<SelectNetworkModal switchNetwork={switchNetwork} chainId={chainId} />);
+  const [onPresentNetworkModal] = useModal(<SelectNetworkModal switchNetwork={switchNetwork} chainId={chainId} />, true, false, 'NetworkModal');
   return { onPresentNetworkModal };
 };
 

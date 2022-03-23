@@ -1,10 +1,10 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import LegacySvg from "../../../components/Svg/LegacySvg";
+import { LegacySvgProps } from "../../../components/Svg/types";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <Svg viewBox="0 0 28 28" {...props}>
+    <LegacySvg viewBox="0 0 28 28" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -20,7 +20,7 @@ const Icon: React.FC<SvgProps> = (props) => {
       <path d="M21.3253 14.1858L21.9884 15.9282L23.7308 16.5912L21.9884 17.2542L21.3253 18.9966L20.6623 17.2542L18.9199 16.5912L20.6623 15.9282L21.3253 14.1858Z" />
       <path d="M16.1143 7.3418L16.4822 8.3161L17.4565 8.68803L16.4822 9.05996L16.1143 10.0343L15.7424 9.05996L14.7681 8.68803L15.7424 8.3161L16.1143 7.3418Z" />
       <path d="M12.2215 20.2017L12.5934 21.176L13.5677 21.5479L12.5934 21.9198L12.2215 22.8941L11.8495 21.9198L10.8752 21.5479L11.8495 21.176L12.2215 20.2017Z" />
-    </Svg>
+    </LegacySvg>
   );
 };
 

@@ -27,7 +27,6 @@ const StyledModal = styled.div`
   background: ${({ theme }) => theme.colors.white2};
   color: ${({ theme }) => theme.colors.text};
   z-index: ${({ theme }) => theme.zIndices.modal};
-
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
     max-width: 900px;
@@ -95,7 +94,6 @@ const CloseButton = styled.button`
   border: none;
   background: transparent;
   font-weight: 600;
-
   &:hover {
     cursor: pointer;
   }
@@ -112,11 +110,9 @@ const ModalFooter = styled.div`
   align-items: center;
   margin-bottom: 30px;
   padding: 0px 50px;
-
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 0px 284px;
   }
-
   a {
     color: ${({ theme }) => theme.colors.yellow};
     text-decoration: underline;
@@ -144,7 +140,6 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   width: 20%;
-
   &:last-child {
     justify-content: flex-end;
   }
@@ -159,25 +154,21 @@ const CircleButton = styled.div`
   background: ${({ theme }) => theme.colors.white4};
   border-radius: 50%;
   margin-right: 10px;
-
   &.isActive {
     background: linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%);
   }
-
   &:last-child {
     margin-right: 0;
   }
 `;
 const StyledLeftArrow = styled(ArrowDropLeftIcon)<IconProps>`
   display: ${({ step }) => (step === 0 ? "none" : "unset")};
-
   &:hover {
     cursor: pointer;
   }
 `;
 const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
   display: ${({ step, childrensLength }) => (step === childrensLength - 1 ? "none" : "unset")};
-
   &:hover {
     cursor: pointer;
   }
@@ -244,8 +235,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               <StyledLeftArrow
                 color="text"
                 width="12px"
-                height="14px"
-                onClick={goPrev}
+                // height="14px"
+                // onClick={goPrev}
                 step={step}
                 childrensLength={childrensLength}
               />
@@ -257,8 +248,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               <StyledRightArrow
                 color="text"
                 width="12px"
-                height="14px"
-                onClick={goNext}
+                // height="14px"
+                // onClick={goNext}
                 step={step}
                 childrensLength={childrensLength}
               />

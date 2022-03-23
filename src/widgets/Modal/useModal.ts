@@ -9,8 +9,9 @@ const useModal = (
   updateOnPropsChange = false,
   modalId = "defaultNodeId"
 ): [Handler, Handler] => {
-  const { isOpen, nodeId, modalNode, setModalNode, onPresent, onDismiss, setCloseOnOverlayClick } = useContext(Context);
+  const { isOpen, nodeId, modalNode, setModalNode, onPresent, handleClose, setCloseOnOverlayClick } = useContext(Context);
   const onPresentCallback = useCallback(() => {
+    console.log('in thiks callback')
     onPresent(modal, modalId);
   }, [modal, modalId, onPresent]);
   useEffect(() => {
@@ -28,7 +29,7 @@ const useModal = (
     setCloseOnOverlayClick(closeOnOverlayClick);
   }, [closeOnOverlayClick, setCloseOnOverlayClick]);
 
-  return [onPresentCallback, onDismiss];
+  return [onPresentCallback, handleClose];
 };
 
 export default useModal;

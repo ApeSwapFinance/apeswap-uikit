@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { ArrowDropDownIcon } from "./icons";
+import { ArrowDropDownIcon, Binance } from "./icons";
 import Button from "../../components/Button/Button";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
 import { ChainId, NETWORK_LABEL } from "../NetworkModal/config";
-import BinanceChain from "../NetworkModal/icons/BinanceChain";
 import PolygonChain from "../NetworkModal/icons/PolygonChain";
 
 interface Props {
@@ -28,8 +27,8 @@ const StyledButton = styled(Button)`
 `;
 
 export const NETWORK_ICON: { [key: number]: any } = {
-  [ChainId.BSC]: <BinanceChain width="23px" mr="8px" />,
-  [ChainId.BSC_TESTNET]: <BinanceChain width="23px" mr="8px" />,
+  [ChainId.BSC]: <Binance width="23px" mr="8px" />,
+  [ChainId.BSC_TESTNET]: <Binance width="23px" mr="8px" />,
   [ChainId.MATIC]: <PolygonChain width="23px" mr="8px" />,
   [ChainId.MATIC_TESTNET]: <PolygonChain width="23px" mr="8px" />,
 };

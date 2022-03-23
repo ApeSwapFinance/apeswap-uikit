@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import getFontFamily from "../../util/getFontFamily";
-import Button from "../Button/Button";
-import { sizes, variants } from "../Button/types";
+import Button from "../ButtonNew/Button";
+import { sizes, variants } from "../ButtonNew/types";
 import { ButtonMenuItemProps } from "./types";
 
 type InactiveButtonProps = {
@@ -23,11 +23,13 @@ const InactiveButton = styled(Button)<InactiveButtonProps>`
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
 
   font-size: ${({ fontSize }) => fontSize || "16px"};
+  display: flex;
+  align-items: center;
 `;
 
 const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
   isActive = false,
-  size = sizes.MD,
+  size = sizes.MEDIUM,
   variant = variants.PRIMARY,
   as,
   fontFamily,
@@ -41,7 +43,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
         forwardedAs={as}
         size={size}
         variant="tertiary"
-        colorKey={variant === variants.PRIMARY || variants.YELLOW ? "primary" : "gray"}
+        colorKey={variant === variants.PRIMARY || variants.PRIMARY ? "primary" : "gray"}
         fontFamily={fontFamily}
         fontSize={fontSize}
         isMobile={isMobile}
@@ -58,6 +60,10 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
       isMobile={isMobile}
       fontFamily={fontFamily}
       fontSize={fontSize}
+      style={{
+        display: "flex",
+        alignItems: "center",
+      }}
       {...props}
     />
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { SvgProps } from "../../components/Svg";
+import { LegacySvgProps } from "../../components/Svg";
 
 export type ActionHandler = () => void;
 
@@ -17,5 +17,5 @@ export interface IconProps {
 }
 
 export interface ModalContentProps {
-  Icon: SvgProps;
+  Icon: LegacySvgProps;
 }

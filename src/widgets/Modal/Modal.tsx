@@ -1,82 +1,45 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
-import styled from "styled-components";
-import Heading from "../../components/Heading/Heading";
-import Flex from "../../components/Flex/Flex";
-import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
-import { IconButton } from "../../components/Button";
-import { InjectedProps } from "./types";
+import { Box } from "theme-ui";
+import { AnimatePresence, motion } from "framer-motion";
+import { ModalProps } from "./types";
+import style from "./styles";
+import { ModalHeader } from ".";
+import { Heading } from "../..";
 
-interface Props extends InjectedProps {
-  title: string;
-  hideCloseButton?: boolean;
-  onBack?: () => void;
-  bodyPadding?: string;
-}
-
-const StyledModal = styled.div`
-  background: ${({ theme }) => theme.modal.background};
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: none;
-  border-radius: 10px;
-  width: 100%;
-  z-index: ${({ theme }) => theme.zIndices.modal};
-  overflow-y: auto;
-  ${({ theme }) => theme.mediaQueries.xs} {
-    width: auto;
-    min-width: 360px;
-    max-width: 100%;
-  }
-`;
-
-const ModalHeader = styled.div`
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #e9eaeb;
-  align-items: center;
-  padding: 12px 24px;
-  font-family: Poppins;
-  font-weight: 700;
-`;
-
-const ModalTitle = styled(Flex)`
-  align-items: center;
-  flex: 1;
-`;
-
-const Modal: React.FC<Props> = ({
-  title,
-  onDismiss,
-  onBack,
+const Modal: React.FC<ModalProps> = ({
   children,
-  hideCloseButton = false,
-  bodyPadding = "24px",
-}) => (
-  <StyledModal>
-    <ModalHeader>
-      <ModalTitle>
-        {onBack && (
-          <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
-            <ArrowBackIcon color="text" />
-          </IconButton>
+  onDismiss,
+  open = true,
+  title,
+  minWidth = "350px",
+  maxWidth = "80%",
+  ...props
+}) => {
+  return (
+    <Box id={title}>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, transform: "translate(-50%, -50%) scale(0.1)" }}
+            animate={{ opacity: 1, transform: "translate(-50%, -50%) scale(1.0)" }}
+            transition={{ opacity: { duration: 0.2 }, transform: { duration: 0.2 } }}
+            exit={{ opacity: 0, transform: "translate(-50%, -50%) scale(0)" }}
+            {...props}
+            sx={{ minWidth, maxWidth, ...style.container }}
+          >
+            {title && (
+              <ModalHeader onDismiss={onDismiss}>
+                <Heading>{title}</Heading>
+              </ModalHeader>
+            )}
+            {children}
+          </motion.div>
         )}
-        <Heading fontWeight={800}>{title}</Heading>
-      </ModalTitle>
-      {!hideCloseButton && (
-        <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="text" />
-        </IconButton>
-      )}
-    </ModalHeader>
-    <Flex flexDirection="column" p={bodyPadding}>
-      {children}
-    </Flex>
-  </StyledModal>
-);
-
-Modal.defaultProps = {
-  hideCloseButton: false,
-  onBack: undefined,
-  bodyPadding: "24px",
+      </AnimatePresence>
+      {open && <Box sx={style.backdrop} onClick={onDismiss} />}
+    </Box>
+  );
 };
 
 export default Modal;

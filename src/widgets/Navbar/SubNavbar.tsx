@@ -27,7 +27,7 @@ const StyledCard = styled.div`
   position: absolute;
   width: 429px;
   min-height: 316px;
-  background-color: ${({ theme }) => theme.nav.background};
+  background-color: ${({ theme }) => theme.colors.navbar};
   border-radius: 0px 0px 30px 30px;
   padding: 15px 0px 20px 0px;
   margin-left: 22.5px;

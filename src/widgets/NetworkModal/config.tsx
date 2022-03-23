@@ -1,4 +1,4 @@
-import BinanceChain from "./icons/BinanceChain";
+import { BinanceIcon } from "../../components/Svg";
 import PolygonChain from "./icons/PolygonChain";
 import { Config } from "./types";
 
@@ -10,9 +10,9 @@ export enum ChainId {
 }
 
 export const NETWORK_ICON: { [key: number]: any } = {
-  [ChainId.BSC]: BinanceChain,
+  [ChainId.BSC]: BinanceIcon,
   [ChainId.MATIC]: PolygonChain,
-  [ChainId.BSC_TESTNET]: BinanceChain,
+  [ChainId.BSC_TESTNET]: BinanceIcon,
   [ChainId.MATIC_TESTNET]: PolygonChain,
 };
 

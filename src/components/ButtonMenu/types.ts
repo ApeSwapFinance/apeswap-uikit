@@ -1,4 +1,4 @@
-import { ButtonProps, Sizes, variants } from "../Button/types";
+import { ButtonProps, sizeProps as Sizes, variantProps } from "../ButtonNew/types";
 
 export type ButtonMenuItemProps = {
   isActive?: boolean;
@@ -9,7 +9,7 @@ export type ButtonMenuItemProps = {
 } & ButtonProps;
 
 export interface ButtonMenuProps {
-  variant?: typeof variants.PRIMARY | typeof variants.SUBTLE | typeof variants.YELLOW;
+  variant?: variantProps | string;
   activeIndex?: number;
   onClick?: (index: number) => void;
   size?: Sizes;
