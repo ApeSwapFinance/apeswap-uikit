@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Text, ThemeUIStyleObject } from "theme-ui";
 import Modal from "./Modal";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";

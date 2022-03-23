@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
-import { space } from "styled-system";
 import { SvgProps, icons } from "./types";
 import { dynamicStyles } from "./styles";
 import {
@@ -19,7 +18,6 @@ import {
   Trade,
   Vault,
   Ellipse,
-  Twitter,
   Send,
   Error,
   Close,
@@ -35,11 +33,7 @@ import {
   Success,
   Settings,
   Chart,
-  Discord,
-  Reddit,
-  Medium,
-  Instagram,
-  Swap
+  Swap,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -52,7 +46,7 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
     });
 
   if (icon === icons.CARET) {
-    return <Caret {...props} getStyles={getStyles} {...space} />;
+    return <Caret {...props} getStyles={getStyles} />;
   }
   if (icon === icons.EXTERNAL) {
     return <External {...props} getStyles={getStyles} />;
@@ -117,9 +111,6 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   if (icon === icons.HAMBURGER) {
     return <Hamburger {...props} getStyles={getStyles} />;
   }
-  if (icon === icons.TWITTER) {
-    return <Twitter {...props} getStyles={getStyles} />;
-  }
   if (icon === icons.SEND) {
     return <Send {...props} getStyles={getStyles} />;
   }
@@ -145,7 +136,7 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
     return <Chart {...props} getStyles={getStyles} />;
   }
   if (icon === icons.BNB_TOKEN) {
-    return <BNB {...props} getStyles={getStyles} {...space}  />;
+    return <BNB {...props} getStyles={getStyles} />;
   }
   if (icon === icons.BANANA_TOKEN) {
     return <BANANA {...props} getStyles={getStyles} />;
@@ -161,18 +152,6 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.BSC_TOKEN) {
     return <BSC {...props} getStyles={getStyles} />;
-  }
-  if (icon === icons.DISCORD) {
-    return <Discord {...props} getStyles={getStyles} />;
-  }
-  if (icon === icons.REDDIT) {
-    return <Reddit {...props} getStyles={getStyles} />;
-  }
-  if (icon === icons.MEDIUM) {
-    return <Medium {...props} getStyles={getStyles} />;
-  }
-  if (icon === icons.INSTAGRAM) {
-    return <Instagram {...props} getStyles={getStyles} />;
   }
   if (icon === icons.SWAP) {
     return <Swap {...props} getStyles={getStyles} />;

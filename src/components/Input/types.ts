@@ -19,5 +19,5 @@ export interface InputProps extends Omit<Props, "size"> {
   size?: sizeProps;
   icon?: iconTypes;
   width?: number | string;
-  isWarning?: boolean
+  isWarning?: boolean;
 }

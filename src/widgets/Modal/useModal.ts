@@ -9,9 +9,10 @@ const useModal = (
   updateOnPropsChange = false,
   modalId = "defaultNodeId"
 ): [Handler, Handler] => {
-  const { isOpen, nodeId, modalNode, setModalNode, onPresent, handleClose, setCloseOnOverlayClick } = useContext(Context);
+  const { isOpen, nodeId, modalNode, setModalNode, onPresent, handleClose, setCloseOnOverlayClick } =
+    useContext(Context);
   const onPresentCallback = useCallback(() => {
-    console.log('in thiks callback')
+    console.log("in thiks callback");
     onPresent(modal, modalId);
   }, [modal, modalId, onPresent]);
   useEffect(() => {

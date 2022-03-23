@@ -19,7 +19,7 @@ export default {
       control: { type: "select" },
       defaultValue: "bottomRight",
     },
-    transformTip: {type: 'string'}
+    transformTip: { type: "string" },
   },
 };
 

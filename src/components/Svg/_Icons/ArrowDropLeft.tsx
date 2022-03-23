@@ -1,5 +1,5 @@
 import React from "react";
-import { LegacySvg } from "..";
+import LegacySvg from "../LegacySvg";
 import { LegacySvgProps } from "../types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {

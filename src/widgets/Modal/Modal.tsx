@@ -4,8 +4,8 @@ import { Box } from "theme-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { ModalProps } from "./types";
 import style from "./styles";
-import { ModalHeader } from ".";
-import { Heading } from "../..";
+import ModalHeader from "./ModalHeader";
+import { Heading } from "../../components/Heading";
 
 const Modal: React.FC<ModalProps> = ({
   children,

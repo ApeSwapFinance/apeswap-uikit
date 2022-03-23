@@ -13,6 +13,6 @@ export type placementProps = `${placements}`;
 export interface TooltipProps extends BoxProps {
   width?: string;
   placement?: placementProps;
-  transformTip?: string
+  transformTip?: string;
   body: ReactNode;
 }

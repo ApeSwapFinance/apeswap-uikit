@@ -46,7 +46,7 @@ const TooltipBubble: React.FC<TooltipProps> = ({
         return {};
       }
     }
-  }, [width, placement]);
+  }, [width, placement, transformTip]);
 
   useEffect(() => {
     if (bodyRef) {

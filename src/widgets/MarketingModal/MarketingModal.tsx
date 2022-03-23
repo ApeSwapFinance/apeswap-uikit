@@ -235,8 +235,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               <StyledLeftArrow
                 color="text"
                 width="12px"
-                // height="14px"
-                // onClick={goPrev}
+                height="14px"
+                onClick={goPrev}
                 step={step}
                 childrensLength={childrensLength}
               />
@@ -248,8 +248,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               <StyledRightArrow
                 color="text"
                 width="12px"
-                // height="14px"
-                // onClick={goNext}
+                height="14px"
+                onClick={goNext}
                 step={step}
                 childrensLength={childrensLength}
               />
