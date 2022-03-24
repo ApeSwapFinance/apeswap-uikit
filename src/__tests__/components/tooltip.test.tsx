@@ -10,10 +10,10 @@ it("renders correctly", () => {
         class="css-1qnff7c"
       >
         <div
-          class="css-140ll04"
+          class="css-e74vnw"
         >
           <div
-            class="css-k607vm"
+            class="css-s6z2"
           />
         </div>
         <div

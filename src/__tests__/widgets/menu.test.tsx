@@ -47,10 +47,10 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-efQSVx gPKULJ"
+        class="sc-jObWnj PLkiC"
       >
         <nav
-          class="sc-jObWnj dSSMLy"
+          class="sc-bBHHxi hVuUVn"
         >
           <div
             class="sc-gsDKAQ hCbrmE"
@@ -165,16 +165,19 @@ it("renders correctly", () => {
           >
             <div>
               <button
-                class="sc-kDTinF lbXuLc css-byysh4"
+                class="sc-jRQBWg dqpRdy sc-iqseJM hHfbzr"
+                color="text"
                 font-family="poppins"
                 font-size="14px"
+                type="button"
               >
                 0xbd...c980
               </button>
             </div>
             <button
               aria-label="Toggle menu"
-              class="sc-gWXbKe VFcfc css-1nse6m1"
+              class="sc-jRQBWg cHwxKT sc-cidDSM jZLPMU"
+              type="button"
             >
               <svg
                 class="sc-dkPtRN iVoGFY"
@@ -191,34 +194,34 @@ it("renders correctly", () => {
           </div>
         </nav>
         <div
-          class="sc-dPiLbb jknvYo"
+          class="sc-cNKqjZ eVzGaq"
         >
           <div
-            class="sc-iAKWXU uVVff"
+            class="sc-cTAqQK gmFMPj"
           >
             <div
-              class="sc-cidDSM frTVGD"
+              class="sc-caiLqq dxAtkM"
               role="button"
             >
               <a
                 href="/swap"
               >
                 <div
-                  class="sc-cCcXHH uEoPD"
+                  class="sc-jcFjpl hCeqvV"
                 >
                   Exchange
                 </div>
               </a>
             </div>
             <div
-              class="sc-jcFjpl hTJEYv"
+              class="sc-iUKqMP fHuIgh"
             >
               <div
-                class="sc-cidDSM frTVGD"
+                class="sc-caiLqq dxAtkM"
                 role="button"
               >
                 <div
-                  class="sc-cCcXHH uEoPD"
+                  class="sc-jcFjpl hCeqvV"
                 >
                   Stake
                 </div>
@@ -235,18 +238,18 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-caiLqq hWQAsv"
+                class="sc-iAKWXU jEBQzV"
               />
             </div>
             <div
-              class="sc-jcFjpl hTJEYv"
+              class="sc-iUKqMP fHuIgh"
             >
               <div
-                class="sc-cidDSM frTVGD"
+                class="sc-caiLqq dxAtkM"
                 role="button"
               >
                 <div
-                  class="sc-cCcXHH uEoPD"
+                  class="sc-jcFjpl hCeqvV"
                 >
                   Offerings
                 </div>
@@ -263,18 +266,18 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-caiLqq hWQAsv"
+                class="sc-iAKWXU jEBQzV"
               />
             </div>
             <div
-              class="sc-jcFjpl hTJEYv"
+              class="sc-iUKqMP fHuIgh"
             >
               <div
-                class="sc-cidDSM frTVGD"
+                class="sc-caiLqq dxAtkM"
                 role="button"
               >
                 <div
-                  class="sc-cCcXHH uEoPD"
+                  class="sc-jcFjpl hCeqvV"
                 >
                   NFA
                 </div>
@@ -291,32 +294,32 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-caiLqq hWQAsv"
+                class="sc-iAKWXU jEBQzV"
               />
             </div>
             <div
-              class="sc-cidDSM frTVGD"
+              class="sc-caiLqq dxAtkM"
               role="button"
             >
               <a
                 href="https://app.ola.finance/apeswap/markets"
               >
                 <div
-                  class="sc-cCcXHH uEoPD"
+                  class="sc-jcFjpl hCeqvV"
                 >
                   Lending
                 </div>
               </a>
             </div>
             <div
-              class="sc-jcFjpl hTJEYv"
+              class="sc-iUKqMP fHuIgh"
             >
               <div
-                class="sc-cidDSM frTVGD"
+                class="sc-caiLqq dxAtkM"
                 role="button"
               >
                 <div
-                  class="sc-cCcXHH uEoPD"
+                  class="sc-jcFjpl hCeqvV"
                 >
                   More
                 </div>
@@ -333,7 +336,7 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-caiLqq hWQAsv"
+                class="sc-iAKWXU jEBQzV"
               />
             </div>
             <div
@@ -343,7 +346,7 @@ it("renders correctly", () => {
                 style="display: flex; justify-content: space-between; align-items: center; width: 275px;"
               >
                 <a
-                  class="sc-iUKqMP iwGccA"
+                  class="sc-efQSVx fMzmco"
                   href="https://twitter.com/ape_swap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -369,7 +372,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-iUKqMP iwGccA"
+                  class="sc-efQSVx fMzmco"
                   href="https://discord.com/invite/ApeSwap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -395,7 +398,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-iUKqMP iwGccA"
+                  class="sc-efQSVx fMzmco"
                   href="https://t.me/ape_swap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -437,23 +440,26 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <button
-                  class="sc-bqiRlB gTxGMn css-byysh4"
+                  class="sc-jRQBWg cCanUL sc-ksdxgE iOchmL"
+                  color="text"
+                  type="button"
                 >
                   <svg
-                    fill="none"
-                    viewBox="0 0 36 36"
+                    class="sc-dkPtRN guGYWC"
+                    color="text"
+                    viewBox="0 0 16 16"
                     width="23px"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M35 18C35 27.3888 27.3888 35 18 35C8.61116 35 1 27.3888 1 18C1 8.61116 8.61116 1 18 1C27.3888 1 35 8.61116 35 18Z"
-                      fill="#F3BA2F"
-                      stroke="white"
-                      stroke-width="2"
+                    <circle
+                      cx="8"
+                      cy="8"
+                      fill="#F0B90B"
+                      r="8"
                     />
                     <path
-                      d="M13.6303 16.2045L17.9998 11.835L22.3716 16.2068L24.9141 13.6643L17.9998 6.75L11.0878 13.662L13.6303 16.2045ZM6.74982 18L9.29232 15.4575L11.8348 18L9.29232 20.5425L6.74982 18ZM13.6303 19.7955L17.9998 24.165L22.3716 19.7933L24.9141 22.3346L17.9998 29.25L11.0878 22.338L11.0844 22.3346L13.6303 19.7955ZM24.1648 18L26.7073 15.4575L29.2498 18L26.7073 20.5425L24.1648 18ZM20.5783 17.9978H20.5806V18L17.9998 20.5808L15.4224 18.0045L15.4179 18L15.4224 17.9966L15.8736 17.5444L16.0929 17.325L17.9998 15.4193L20.5794 17.9989L20.5783 17.9978Z"
-                      fill="white"
+                      d="M5.01656 8.00006L3.79256 9.23256L2.56006 8.00006L3.79256 6.76756L5.01656 8.00006ZM8.00006 5.01656L10.1081 7.12456L11.3406 5.89206L9.23256 3.79256L8.00006 2.56006L6.76756 3.79256L4.66806 5.89206L5.90056 7.12456L8.00006 5.01656ZM12.2076 6.76756L10.9836 8.00006L12.2161 9.23256L13.4401 8.00006L12.2076 6.76756ZM8.00006 10.9836L5.89206 8.87556L4.66806 10.1081L6.77606 12.2161L8.00006 13.4401L9.23256 12.2076L11.3406 10.0996L10.1081 8.87556L8.00006 10.9836ZM8.00006 9.23256L9.23256 8.00006L8.00006 6.76756L6.76756 8.00006L8.00006 9.23256Z"
+                      fill="#FFFDFA"
                     />
                   </svg>
                    BNB 
@@ -473,23 +479,23 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-bBHHxi dGdBAt"
+            class="sc-AjmGg hJMlim"
           >
             body
           </div>
           <div
-            class="sc-bdvvtL sc-cNKqjZ fYocnU iXFINA"
+            class="sc-bdvvtL sc-khQegj fYocnU dTokpV"
             role="presentation"
           />
         </div>
         <div
-          class="sc-dJjYzT ftrZwG"
+          class="sc-dlVxhl dARhTL"
         >
           <div
-            class="sc-ieecCq cGUYiq"
+            class="sc-hGPBjI jtotfI"
           >
             <div
-              class="sc-cxpSdN bNAbVK"
+              class="sc-iJKOTD cLNluf"
             >
               <svg
                 class="sc-dkPtRN hqCLGz"
@@ -621,7 +627,7 @@ it("renders correctly", () => {
                 />
               </svg>
               <div
-                class="sc-gKclnd XOVEr"
+                class="sc-iCfMLu dhgGUW"
                 color="text"
                 style="color: white;"
               >
@@ -629,10 +635,11 @@ it("renders correctly", () => {
                 experience for everyone.
               </div>
               <div
-                class="sc-llYSUQ fsGqRw"
+                class="sc-giYglK iGvssJ"
               >
                 <button
-                  class="sc-jJoQJp eysyLS css-nkyyii"
+                  class="sc-jRQBWg TBfcp sc-gWXbKe eFcRHS"
+                  type="button"
                 >
                   <div
                     class="sc-gsDKAQ kvvqhM"
@@ -650,7 +657,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <div
-                      class="sc-gKclnd sc-hiCibw bWPtyY YAytZ"
+                      class="sc-iCfMLu sc-cCcXHH fxRkud kxkIKA"
                       color="text"
                     >
                       /
@@ -674,23 +681,26 @@ it("renders correctly", () => {
                   style="margin: 0px 12.5px;"
                 />
                 <button
-                  class="sc-bqiRlB gTxGMn css-byysh4"
+                  class="sc-jRQBWg cCanUL sc-ksdxgE iOchmL"
+                  color="text"
+                  type="button"
                 >
                   <svg
-                    fill="none"
-                    viewBox="0 0 36 36"
+                    class="sc-dkPtRN guGYWC"
+                    color="text"
+                    viewBox="0 0 16 16"
                     width="23px"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M35 18C35 27.3888 27.3888 35 18 35C8.61116 35 1 27.3888 1 18C1 8.61116 8.61116 1 18 1C27.3888 1 35 8.61116 35 18Z"
-                      fill="#F3BA2F"
-                      stroke="white"
-                      stroke-width="2"
+                    <circle
+                      cx="8"
+                      cy="8"
+                      fill="#F0B90B"
+                      r="8"
                     />
                     <path
-                      d="M13.6303 16.2045L17.9998 11.835L22.3716 16.2068L24.9141 13.6643L17.9998 6.75L11.0878 13.662L13.6303 16.2045ZM6.74982 18L9.29232 15.4575L11.8348 18L9.29232 20.5425L6.74982 18ZM13.6303 19.7955L17.9998 24.165L22.3716 19.7933L24.9141 22.3346L17.9998 29.25L11.0878 22.338L11.0844 22.3346L13.6303 19.7955ZM24.1648 18L26.7073 15.4575L29.2498 18L26.7073 20.5425L24.1648 18ZM20.5783 17.9978H20.5806V18L17.9998 20.5808L15.4224 18.0045L15.4179 18L15.4224 17.9966L15.8736 17.5444L16.0929 17.325L17.9998 15.4193L20.5794 17.9989L20.5783 17.9978Z"
-                      fill="white"
+                      d="M5.01656 8.00006L3.79256 9.23256L2.56006 8.00006L3.79256 6.76756L5.01656 8.00006ZM8.00006 5.01656L10.1081 7.12456L11.3406 5.89206L9.23256 3.79256L8.00006 2.56006L6.76756 3.79256L4.66806 5.89206L5.90056 7.12456L8.00006 5.01656ZM12.2076 6.76756L10.9836 8.00006L12.2161 9.23256L13.4401 8.00006L12.2076 6.76756ZM8.00006 10.9836L5.89206 8.87556L4.66806 10.1081L6.77606 12.2161L8.00006 13.4401L9.23256 12.2076L11.3406 10.0996L10.1081 8.87556L8.00006 10.9836ZM8.00006 9.23256L9.23256 8.00006L8.00006 6.76756L6.76756 8.00006L8.00006 9.23256Z"
+                      fill="#FFFDFA"
                     />
                   </svg>
                    BNB 
@@ -708,10 +718,10 @@ it("renders correctly", () => {
                 </button>
               </div>
               <div
-                class="sc-fKVqWL iTvgeG"
+                class="sc-iwjdpV cxSsGx"
               >
                 <a
-                  class="sc-giYglK jVxTVY"
+                  class="sc-bYoBSM nvLRL"
                   href="https://twitter.com/ape_swap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -737,7 +747,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-giYglK jVxTVY"
+                  class="sc-bYoBSM nvLRL"
                   href="https://discord.com/invite/ApeSwap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -779,7 +789,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-giYglK jVxTVY"
+                  class="sc-bYoBSM nvLRL"
                   href="https://t.me/ape_swap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -805,7 +815,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-giYglK jVxTVY"
+                  class="sc-bYoBSM nvLRL"
                   href="https://www.reddit.com/r/Apeswap/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -831,7 +841,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-giYglK jVxTVY"
+                  class="sc-bYoBSM nvLRL"
                   href="https://ape-swap.medium.com/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -865,7 +875,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-giYglK jVxTVY"
+                  class="sc-bYoBSM nvLRL"
                   href="https://www.instagram.com/apeswap.finance/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -900,11 +910,11 @@ it("renders correctly", () => {
                 </a>
               </div>
               <div
-                class="sc-ezbkAF gpmloJ"
+                class="sc-kLwhqv bZlkqf"
               >
                 <div>
                   <a
-                    class="sc-hGPBjI iPltJQ"
+                    class="sc-kfPuZi cpviYR"
                     href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
                     target="_blank"
                   >
@@ -1001,7 +1011,7 @@ it("renders correctly", () => {
                       </g>
                     </svg>
                     <div
-                      class="sc-gKclnd hMMJgT"
+                      class="sc-iCfMLu huzIBO"
                       color="text"
                       font-size="18px"
                       font-weight="600"
@@ -1017,7 +1027,7 @@ it("renders correctly", () => {
                   target="_blank"
                 >
                   <button
-                    class="sc-bYoBSM gwuztp"
+                    class="sc-ikJyIC duBcuy"
                   >
                     BUY BANANA
                   </button>
@@ -1029,10 +1039,10 @@ it("renders correctly", () => {
               style="width: 100%;"
             >
               <div
-                class="sc-kLwhqv hOhmW"
+                class="sc-jJoQJp fvylml"
               >
                 <div
-                  class="sc-gKclnd XOVEr"
+                  class="sc-iCfMLu dhgGUW"
                   color="text"
                   style="color: rgb(255, 179, 0);"
                 >
@@ -1051,10 +1061,10 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-kLwhqv hOhmW"
+                class="sc-jJoQJp fvylml"
               >
                 <div
-                  class="sc-gKclnd XOVEr"
+                  class="sc-iCfMLu dhgGUW"
                   color="text"
                   style="color: rgb(255, 179, 0);"
                 >
@@ -1073,10 +1083,10 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-kLwhqv jjTcKd"
+                class="sc-jJoQJp RypkW"
               >
                 <div
-                  class="sc-gKclnd XOVEr"
+                  class="sc-iCfMLu dhgGUW"
                   color="text"
                   style="color: rgb(255, 179, 0);"
                 >
@@ -1097,7 +1107,7 @@ it("renders correctly", () => {
             </div>
           </div>
           <svg
-            class="sc-dkPtRN iVoGFY sc-kfPuZi bfbdGY"
+            class="sc-dkPtRN iVoGFY sc-bBHxTw gzEvHM"
             color="text"
             viewBox="0 0 425 398"
             width="20px"
@@ -1194,7 +1204,7 @@ it("renders correctly", () => {
             />
           </svg>
           <div
-            class="sc-gKclnd sc-ikJyIC XOVEr YfxKE"
+            class="sc-iCfMLu sc-hiCibw dhgGUW eMWBcd"
             color="text"
           >
             ©2022 All rights reserved

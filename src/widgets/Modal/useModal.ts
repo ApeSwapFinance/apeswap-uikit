@@ -12,7 +12,6 @@ const useModal = (
   const { isOpen, nodeId, modalNode, setModalNode, onPresent, handleClose, setCloseOnOverlayClick } =
     useContext(Context);
   const onPresentCallback = useCallback(() => {
-    console.log("in thiks callback");
     onPresent(modal, modalId);
   }, [modal, modalId, onPresent]);
   useEffect(() => {

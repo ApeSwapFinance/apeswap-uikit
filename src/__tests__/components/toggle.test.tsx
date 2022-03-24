@@ -15,7 +15,7 @@ it("renders correctly", () => {
           class="css-1fooroe-Toggle css-vurnku"
         >
           <div
-            class="sc-gsDKAQ dQMGxp css-1fbfh1p-Toggle"
+            class="sc-bdvvtL foxtoM css-1fbfh1p-Toggle"
             color="text"
           >
             Switch1
@@ -25,14 +25,14 @@ it("renders correctly", () => {
           class="css-1fooroe-Toggle css-vurnku"
         >
           <div
-            class="sc-gsDKAQ dQMGxp css-1fbfh1p-Toggle"
+            class="sc-bdvvtL foxtoM css-1fbfh1p-Toggle"
             color="text"
           >
             Switch2
           </div>
         </div>
         <button
-          class="css-1vox93m"
+          class="css-1rrxyy3"
         >
           Switch2
         </button>

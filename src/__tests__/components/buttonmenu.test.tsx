@@ -18,12 +18,13 @@ it("renders correctly", () => {
         class="sc-bdvvtL kTyAAN"
       >
         <div
-          class="css-1vjm87o"
+          class="css-q18i3k"
+          style="display: flex; align-items: center;"
         >
           Item 1
         </div>
         <div
-          class="sc-gsDKAQ eDDXTy css-nkyyii"
+          class="sc-gsDKAQ eDDXTy css-16t4lnz"
         >
           Item 2
         </div>

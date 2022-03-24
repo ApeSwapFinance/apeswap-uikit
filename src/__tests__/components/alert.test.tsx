@@ -8,7 +8,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-1opymq7-Alert"
+        class="css-uwtvqf-Alert"
         style="right: -250px;"
       >
         <div

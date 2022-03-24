@@ -11,10 +11,10 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="css-8j7t24-Select css-vurnku"
+        class="css-9fp63e-Select css-vurnku"
       >
         <div
-          class="css-13q3kh9-Select css-4cffwv"
+          class="css-1ert1zb-Select css-4cffwv"
         >
           <svg
             class="css-1exjd22-Caret"
@@ -31,7 +31,7 @@ it("renders correctly", () => {
         </div>
         <input
           aria-hidden="true"
-          class="css-d1yftf-Select"
+          class="css-uzzi4b-Select"
           tabindex="-1"
           value=""
         />

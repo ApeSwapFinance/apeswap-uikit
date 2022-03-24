@@ -8,6 +8,7 @@ type ThemedProps = {
   theme: DefaultTheme;
 } & ButtonProps;
 
+
 const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   if (isLoading === true) {
     return `
@@ -79,10 +80,10 @@ const StyledButton = styled.button<ButtonProps>`
   justify-content: center;
   outline: 0;
   padding: ${({ isMobile }) => (isMobile ? "0 10px" : "0 24px")};
-  transition: all 0.3s linear;
+  transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
   text-transform: uppercase;
-
+  
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background-color: ${getButtonVariantProp("backgroundHover")};
     border-color: ${getButtonVariantProp("borderColorHover")};
@@ -90,7 +91,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:active {
-    transform: scale(0.9);
+    transform: scale(.9);
   }
 
   ${getDisabledStyles}
