@@ -13,7 +13,7 @@ it("renders correctly", () => {
           class="css-e74vnw"
         >
           <div
-            class="css-s6z2"
+            class="css-7p82gi"
           />
         </div>
         <div

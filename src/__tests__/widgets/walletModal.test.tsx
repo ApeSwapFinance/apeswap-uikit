@@ -47,7 +47,7 @@ it("renders ConnectModal correctly", () => {
             class="css-1bb4y59"
           />
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
             type="button"
@@ -191,7 +191,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
             type="button"
@@ -236,7 +236,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
             type="button"
@@ -266,7 +266,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
             type="button"
@@ -298,7 +298,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
             type="button"
@@ -334,7 +334,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
             type="button"
@@ -380,7 +380,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
             type="button"
@@ -446,7 +446,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
             type="button"
@@ -494,7 +494,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg jUSPA"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
             type="button"
@@ -547,7 +547,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg gqBkJY"
+            class="sc-jRQBWg cMKDRH"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
             type="button"
@@ -713,7 +713,7 @@ it("renders AccountModal correctly", () => {
             class="sc-gKclnd iyXplq"
           >
             <button
-              class="sc-jRQBWg dxRVXQ"
+              class="sc-jRQBWg eboCIL"
               type="button"
             >
               Logout

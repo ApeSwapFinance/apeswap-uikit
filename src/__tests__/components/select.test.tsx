@@ -14,7 +14,7 @@ it("renders correctly", () => {
         class="css-9fp63e-Select css-vurnku"
       >
         <div
-          class="css-1ert1zb-Select css-4cffwv"
+          class="css-1o8c54s-Select css-4cffwv"
         >
           <svg
             class="css-1exjd22-Caret"
@@ -31,7 +31,7 @@ it("renders correctly", () => {
         </div>
         <input
           aria-hidden="true"
-          class="css-uzzi4b-Select"
+          class="css-krtuhb-Select"
           tabindex="-1"
           value=""
         />

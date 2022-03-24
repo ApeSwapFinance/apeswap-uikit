@@ -37,7 +37,6 @@ const Select: React.FC<SelectProps> = ({
             columnGap: "10px",
             alignItems: "center",
             justifyContent: "space-between",
-            width: "100%",
             overflow: "hidden",
             zIndex: 100,
           }}
@@ -62,6 +61,7 @@ const Select: React.FC<SelectProps> = ({
               exit={{ opacity: 0, height: 0 }}
               sx={{
                 ...styles.ul,
+                width,
                 zIndex: 100,
                 top: position === positions.BOTTOM ? "calc(100% + 5px)" : undefined,
                 bottom: position === positions.TOP ? "calc(100% + 5px)" : undefined,

@@ -40,6 +40,6 @@ export const Default = (args) => {
 
 Default.args = {
   colorMode: "light",
-  size: "md",
-  width: "fit-content",
+  size: "sm",
+  width: "100px",
 };

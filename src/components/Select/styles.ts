@@ -15,17 +15,8 @@ const styles: Record<string, ThemeUIStyleObject> = {
     background: "white2",
     borderRadius: "10px",
     cursor: "pointer",
-    minWidth: "100%",
-    width: "max-content",
     overflow: "hidden",
     boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-    zIndex: 100,
-  },
-  backdrop: {
-    position: "fixed",
-    background: "transparent",
-    top: 0,
-    left: 0,
     zIndex: 100,
   },
   input: {
@@ -34,7 +25,8 @@ const styles: Record<string, ThemeUIStyleObject> = {
     position: "absolute",
     opacity: 0,
     pointerEvents: "none",
-    zIndex: 100,
+    overflow: "hidden",
+    width: "100%",
   },
 };
 
