@@ -6,6 +6,7 @@ import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
 import config from "./config";
 import { Login } from "./types";
+import { Flex } from "../../components/Flex";
 
 interface Props {
   login: Login;
@@ -20,7 +21,7 @@ const HelpLink = styled(Link)`
 `;
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
-  <Modal title="Connect to a wallet" onDismiss={onDismiss}>
+  <Modal title="Connect to a wallet" onDismiss={onDismiss} maxWidth="400px" minWidth="350px">
     {config.map((entry, index) => (
       <WalletCard
         key={entry.title}
@@ -30,10 +31,12 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
         mb={index < config.length - 1 ? "8px" : "0"}
       />
     ))}
-    <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
-      <HelpIcon mr="6px" />
-      Learn how to connect
-    </HelpLink>
+    <Flex alignItems="center" justifyContent="center" mt="10px">
+      <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
+        <HelpIcon mr="6px" />
+        Learn how to connect
+      </HelpLink>
+    </Flex>
   </Modal>
 );
 

@@ -20,10 +20,10 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
   return `
     &:disabled,
     &.button--disabled {
-      background-color: ${theme.colors.white3};
-      border-color: ${variants.PRIMARY ? "transparent" : theme.colors.background};
+      background-color: ${theme.colors.backgroundDisabled};
+      border-color: ${theme.colors.backgroundDisabled};
       box-shadow: none;
-      color: ${variants.PRIMARY ? theme.colors.primaryButtonDisable : theme.colors.secondaryButtonDisableColor};
+      color: ${theme.colors.backgroundDisabled};
       cursor: not-allowed;
     }
   `;
@@ -39,23 +39,17 @@ const removePointerEvents = ({ disabled, as }: ThemedProps) => {
   return "";
 };
 
-const getButtonVariantProp =
-  (prop: keyof ButtonSquareThemeVariant) =>
-  ({ theme, variant = variants.PRIMARY }: ThemedProps) => {
-    return theme.button[variant][prop];
-  };
-
 const StyledButtonSquare = styled.button<ButtonSquareProps>`
   align-items: center;
-  background-color: ${({ bgColor }) => (!bgColor ? getButtonVariantProp("background") : bgColor)};
-  border-radius: 10px;
-  border: ${getButtonVariantProp("border")};
+  background-color: #ffb300;
+  border-radius: 5px;
+  border: none;
   box-shadow: none;
-  color: ${({ color }) => (!color ? getButtonVariantProp("color") : color)};
+  color: white;
   cursor: pointer;
   display: inline-flex;
   font-size: ${({ fontSize }) => fontSize || "12px"};
-  font-weight: ${({ fontWeight = 600 }) => fontWeight};
+  font-weight: 700;
   font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
@@ -67,23 +61,15 @@ const StyledButtonSquare = styled.button<ButtonSquareProps>`
   padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
   transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
-  text-transform: uppercase;
-
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background-color: ${getButtonVariantProp("backgroundHover")};
-    border-color: ${getButtonVariantProp("borderColorHover")};
-    color: ${({ theme, variant }) => (variant === "secondary" ? theme.colors.yellow : getButtonVariantProp("color"))};
+    background-color: inherit;
   }
-
   &:focus:not(:active) {
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.text};
   }
-
   &:active {
-    background-color: ${getButtonVariantProp("backgroundActive")};
-    box-shadow: ${getButtonVariantProp("boxShadowActive")};
+    box-shadow: inherit;
   }
-
   ${getDisabledStyles}
   ${removePointerEvents}
   ${space}

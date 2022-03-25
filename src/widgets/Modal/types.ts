@@ -1,3 +1,14 @@
+export interface InternalProps {
+  onDismiss?: () => void;
+}
+
+export interface ModalProps extends InternalProps {
+  open?: boolean;
+  minWidth?: string;
+  maxWidth?: string;
+  title?: string;
+}
+
 export interface ModalTheme {
   background: string;
 }
@@ -5,5 +16,5 @@ export interface ModalTheme {
 export type Handler = () => void;
 
 export interface InjectedProps {
-  onDismiss?: Handler;
+  handleClose?: Handler;
 }

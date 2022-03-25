@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonSquare from "../../components/ButtonSquare/ButtonSquare";
+import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
 import Flex from "../../components/Flex/Flex";
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
-  <Modal title="Your wallet" onDismiss={onDismiss}>
+  <Modal title="Your wallet" onDismiss={onDismiss} minWidth="350px">
     <Text
       fontSize="20px"
       fontWeight={600}
@@ -23,13 +23,13 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       {account}
     </Text>
     <Flex mb="32px">
-      <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px" fontFamily="poppins" bold>
+      <LinkExternal href={`https://bscscan.com/address/${account}`} mr="16px">
         View on BscScan
       </LinkExternal>
       <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
     </Flex>
     <Flex justifyContent="center">
-      <ButtonSquare
+      <Button
         size="sm"
         variant="secondary"
         onClick={() => {
@@ -40,7 +40,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
         }}
       >
         Logout
-      </ButtonSquare>
+      </Button>
     </Flex>
   </Modal>
 );

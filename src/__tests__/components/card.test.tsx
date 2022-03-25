@@ -1,35 +1,15 @@
 import React from "react";
 import { renderWithTheme } from "../../testHelpers";
-import { Card, CardBody, CardHeader, CardFooter } from "../../components/Card";
+import { Card } from "../../components/Card";
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithTheme(
-    <Card>
-      <CardHeader>Header</CardHeader>
-      <CardBody>Body</CardBody>
-      <CardFooter>Footer</CardFooter>
-    </Card>
-  );
+  const { asFragment } = renderWithTheme(<Card>Card</Card>);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-bdvvtL loOlwF"
+        class="css-vurnku"
       >
-        <div
-          class="sc-dkPtRN gLqhNf"
-        >
-          Header
-        </div>
-        <div
-          class="sc-gsDKAQ bubPPh"
-        >
-          Body
-        </div>
-        <div
-          class="sc-hKwDye jgYErg"
-        >
-          Footer
-        </div>
+        Card
       </div>
     </DocumentFragment>
   `);

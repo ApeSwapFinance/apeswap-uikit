@@ -1,10 +1,10 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import LegacySvg from "../../../components/Svg/LegacySvg";
+import { LegacySvgProps } from "../../../components/Svg/types";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <Svg viewBox="0 0 86.47 88.17" {...props}>
+    <LegacySvg viewBox="0 0 86.47 88.17" {...props}>
       <defs>
         <style>{".prefix__cls-1{fill:#333834}"}</style>
       </defs>
@@ -33,7 +33,7 @@ const Icon: React.FC<SvgProps> = (props) => {
         className="prefix__cls-1"
         d="M51.65 45.29l.54-.08a.35.35 0 01-.16.33 2 2 0 01-.93.48.48.48 0 01-.2 0l-.26-.6v-.06a5.11 5.11 0 01.23-.76c.08-.18.19-.39.39-.42a3.82 3.82 0 01-.14.75 3.3 3.3 0 01.34-.71c.1-.16.22-.34.41-.36a1.88 1.88 0 01-.29.94c.33-.19.41-.63.7-.47-.03.53-.15.83-.63.96z"
       />
-    </Svg>
+    </LegacySvg>
   );
 };
 

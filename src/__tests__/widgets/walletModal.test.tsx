@@ -9,45 +9,45 @@ it("renders ConnectModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iCfMLu iFaiCa"
+        class="css-vurnku"
+        id="Connect to a wallet"
       >
         <div
-          class="sc-furwcr hTjrUw"
+          class="css-1h669uz-Modal"
+          style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <div
-            class="sc-eCImPb sc-pVTFL jpuLQT jNeVHa"
+            class="css-8rn5vi"
           >
-            <h2
-              class="sc-bdvvtL sc-hKwDye gCVxTz hapjyu"
-              color="text"
-              font-weight="800"
+            <h3
+              class="css-1wf7gym"
             >
               Connect to a wallet
-            </h2>
-          </div>
-          <button
-            aria-label="Close the dialog"
-            class="sc-jRQBWg fbfoBv sc-gKclnd bGsNxc"
-            type="button"
-          >
-            <svg
-              class="sc-dkPtRN iVoGFY"
-              color="text"
-              viewBox="0 0 24 24"
-              width="20px"
-              xmlns="http://www.w3.org/2000/svg"
+            </h3>
+            <button
+              class="css-1rb0um5"
             >
-              <path
-                d="M18.3 5.70997C17.91 5.31997 17.28 5.31997 16.89 5.70997L12 10.59L7.10997 5.69997C6.71997 5.30997 6.08997 5.30997 5.69997 5.69997C5.30997 6.08997 5.30997 6.71997 5.69997 7.10997L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10997C18.68 6.72997 18.68 6.08997 18.3 5.70997Z"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="sc-eCImPb fFZhuZ"
-        >
+              <svg
+                class="css-1o9bukh-Close"
+                fill="none"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M10.9497 10.9497C11.3403 10.5592 11.3403 9.92602 10.9497 9.5355L7.41424 5.99999L10.9497 2.46451C11.3402 2.07399 11.3402 1.44082 10.9497 1.0503C10.5592 0.659775 9.92602 0.659775 9.5355 1.0503L6.00002 4.58578L2.46446 1.05022C2.07394 0.659693 1.44077 0.659693 1.05025 1.05022C0.659726 1.44074 0.659726 2.07391 1.05025 2.46443L4.58581 5.99999L1.05022 9.53558C0.659693 9.9261 0.659693 10.5593 1.05022 10.9498C1.44074 11.3403 2.07391 11.3403 2.46443 10.9498L6.00002 7.4142L9.53553 10.9497C9.92605 11.3402 10.5592 11.3402 10.9497 10.9497Z"
+                  fill="#FAFAFA"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <hr
+            class="css-1bb4y59"
+          />
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
             type="button"
@@ -191,7 +191,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
             type="button"
@@ -236,7 +236,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
             type="button"
@@ -266,7 +266,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-safepal wallet"
             style="justify-content: space-between;"
             type="button"
@@ -298,7 +298,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
             type="button"
@@ -334,7 +334,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-coinbase wallet"
             style="justify-content: space-between;"
             type="button"
@@ -380,7 +380,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
             type="button"
@@ -446,7 +446,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-nabox wallet"
             style="justify-content: space-between;"
             type="button"
@@ -494,7 +494,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg flA-Dkx"
+            class="sc-jRQBWg iedtsv"
             id="wallet-connect-onto wallet"
             style="justify-content: space-between;"
             type="button"
@@ -547,7 +547,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-jRQBWg knbMYN"
+            class="sc-jRQBWg cMKDRH"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
             type="button"
@@ -580,27 +580,34 @@ it("renders ConnectModal correctly", () => {
               />
             </svg>
           </button>
-          <a
-            class="sc-bdvvtL sc-gsDKAQ foxtoM eisOmR sc-iqseJM kXQwcx"
-            color="text"
-            href="https://docs.binance.org/smart-chain/wallet/metamask.html"
-            rel="noreferrer noopener"
-            target="_blank"
+          <div
+            class="sc-gKclnd fTngSW"
           >
-            <svg
-              class="sc-dkPtRN dzwQ"
+            <a
+              class="sc-bdvvtL sc-gsDKAQ foxtoM eisOmR sc-iCfMLu fKMfhs"
               color="text"
-              viewBox="0 0 20 20"
-              width="20px"
-              xmlns="http://www.w3.org/2000/svg"
+              href="https://docs.binance.org/smart-chain/wallet/metamask.html"
+              rel="noreferrer noopener"
+              target="_blank"
             >
-              <path
-                d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM9 14H11V16H9V14ZM10.61 4.04C8.55 3.74 6.73 5.01 6.18 6.83C6 7.41 6.44 8 7.05 8H7.25C7.66 8 7.99 7.71 8.13 7.33C8.45 6.44 9.4 5.83 10.43 6.05C11.38 6.25 12.08 7.18 12 8.15C11.9 9.49 10.38 9.78 9.55 11.03C9.55 11.04 9.54 11.04 9.54 11.05C9.53 11.07 9.52 11.08 9.51 11.1C9.42 11.25 9.33 11.42 9.26 11.6C9.25 11.63 9.23 11.65 9.22 11.68C9.21 11.7 9.21 11.72 9.2 11.75C9.08 12.09 9 12.5 9 13H11C11 12.58 11.11 12.23 11.28 11.93C11.3 11.9 11.31 11.87 11.33 11.84C11.41 11.7 11.51 11.57 11.61 11.45C11.62 11.44 11.63 11.42 11.64 11.41C11.74 11.29 11.85 11.18 11.97 11.07C12.93 10.16 14.23 9.42 13.96 7.51C13.72 5.77 12.35 4.3 10.61 4.04Z"
-              />
-            </svg>
-            Learn how to connect
-          </a>
+              <svg
+                class="sc-dkPtRN dzwQ"
+                color="text"
+                viewBox="0 0 20 20"
+                width="20px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM9 14H11V16H9V14ZM10.61 4.04C8.55 3.74 6.73 5.01 6.18 6.83C6 7.41 6.44 8 7.05 8H7.25C7.66 8 7.99 7.71 8.13 7.33C8.45 6.44 9.4 5.83 10.43 6.05C11.38 6.25 12.08 7.18 12 8.15C11.9 9.49 10.38 9.78 9.55 11.03C9.55 11.04 9.54 11.04 9.54 11.05C9.53 11.07 9.52 11.08 9.51 11.1C9.42 11.25 9.33 11.42 9.26 11.6C9.25 11.63 9.23 11.65 9.22 11.68C9.21 11.7 9.21 11.72 9.2 11.75C9.08 12.09 9 12.5 9 13H11C11 12.58 11.11 12.23 11.28 11.93C11.3 11.9 11.31 11.87 11.33 11.84C11.41 11.7 11.51 11.57 11.61 11.45C11.62 11.44 11.63 11.42 11.64 11.41C11.74 11.29 11.85 11.18 11.97 11.07C12.93 10.16 14.23 9.42 13.96 7.51C13.72 5.77 12.35 4.3 10.61 4.04Z"
+                />
+              </svg>
+              Learn how to connect
+            </a>
+          </div>
         </div>
+        <div
+          class="css-1hmwv4n-Modal css-vurnku"
+        />
       </div>
     </DocumentFragment>
   `);
@@ -611,43 +618,43 @@ it("renders AccountModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iCfMLu iFaiCa"
+        class="css-vurnku"
+        id="Your wallet"
       >
         <div
-          class="sc-furwcr hTjrUw"
+          class="css-bwl3l-Modal"
+          style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <div
-            class="sc-eCImPb sc-pVTFL jpuLQT jNeVHa"
+            class="css-8rn5vi"
           >
-            <h2
-              class="sc-bdvvtL sc-hKwDye gCVxTz hapjyu"
-              color="text"
-              font-weight="800"
+            <h3
+              class="css-1wf7gym"
             >
               Your wallet
-            </h2>
-          </div>
-          <button
-            aria-label="Close the dialog"
-            class="sc-jRQBWg fbfoBv sc-gKclnd bGsNxc"
-            type="button"
-          >
-            <svg
-              class="sc-dkPtRN iVoGFY"
-              color="text"
-              viewBox="0 0 24 24"
-              width="20px"
-              xmlns="http://www.w3.org/2000/svg"
+            </h3>
+            <button
+              class="css-1rb0um5"
             >
-              <path
-                d="M18.3 5.70997C17.91 5.31997 17.28 5.31997 16.89 5.70997L12 10.59L7.10997 5.69997C6.71997 5.30997 6.08997 5.30997 5.69997 5.69997C5.30997 6.08997 5.30997 6.71997 5.69997 7.10997L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10997C18.68 6.72997 18.68 6.08997 18.3 5.70997Z"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="sc-eCImPb fFZhuZ"
-        >
+              <svg
+                class="css-1o9bukh-Close"
+                fill="none"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M10.9497 10.9497C11.3403 10.5592 11.3403 9.92602 10.9497 9.5355L7.41424 5.99999L10.9497 2.46451C11.3402 2.07399 11.3402 1.44082 10.9497 1.0503C10.5592 0.659775 9.92602 0.659775 9.5355 1.0503L6.00002 4.58578L2.46446 1.05022C2.07394 0.659693 1.44077 0.659693 1.05025 1.05022C0.659726 1.44074 0.659726 2.07391 1.05025 2.46443L4.58581 5.99999L1.05022 9.53558C0.659693 9.9261 0.659693 10.5593 1.05022 10.9498C1.44074 11.3403 2.07391 11.3403 2.46443 10.9498L6.00002 7.4142L9.53553 10.9497C9.92605 11.3402 10.5592 11.3402 10.9497 10.9497Z"
+                  fill="#FAFAFA"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <hr
+            class="css-1bb4y59"
+          />
           <div
             class="sc-bdvvtL gPAoor"
             color="text"
@@ -656,12 +663,11 @@ it("renders AccountModal correctly", () => {
             style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 8px;"
           />
           <div
-            class="sc-eCImPb hgyeJv"
+            class="sc-gKclnd ckTegq"
           >
             <a
-              class="sc-bdvvtL sc-gsDKAQ dNnqhT cokdGD"
+              class="sc-bdvvtL sc-gsDKAQ kmlhdN eisOmR"
               color="text"
-              font-family="poppins"
               href="https://bscscan.com/address/undefined"
               rel="noreferrer noopener"
               target="_blank"
@@ -680,7 +686,7 @@ it("renders AccountModal correctly", () => {
               </svg>
             </a>
             <div
-              class="sc-bdvvtL sc-egiyK caCXem hYHoGQ"
+              class="sc-bdvvtL sc-furwcr caCXem JDnsC"
               color="text"
               role="button"
             >
@@ -697,23 +703,26 @@ it("renders AccountModal correctly", () => {
                 />
               </svg>
               <div
-                class="sc-bqiRlB hgKvlw"
+                class="sc-pVTFL pEqoK"
               >
                 Copied
               </div>
             </div>
           </div>
           <div
-            class="sc-eCImPb bdSAQD"
+            class="sc-gKclnd iyXplq"
           >
             <button
-              class="sc-crHmcD BhqdG"
+              class="sc-jRQBWg eboCIL"
               type="button"
             >
               Logout
             </button>
           </div>
         </div>
+        <div
+          class="css-1hmwv4n-Modal css-vurnku"
+        />
       </div>
     </DocumentFragment>
   `);

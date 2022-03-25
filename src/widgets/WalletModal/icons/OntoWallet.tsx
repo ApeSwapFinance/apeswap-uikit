@@ -1,10 +1,10 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import LegacySvg from "../../../components/Svg/LegacySvg";
+import { LegacySvgProps } from "../../../components/Svg/types";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <Svg viewBox="0 0 32 32" {...props}>
+    <LegacySvg viewBox="0 0 32 32" {...props}>
       <title>{"\u7F16\u7EC4"}</title>
       <g id="\u9875\u9762-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
         <g id="ONTO-Landing-Page" transform="translate(-48.000000, -53.000000)" stroke="#000000" strokeWidth={3}>
@@ -20,7 +20,7 @@ const Icon: React.FC<SvgProps> = (props) => {
           </g>
         </g>
       </g>
-    </Svg>
+    </LegacySvg>
   );
 };
 

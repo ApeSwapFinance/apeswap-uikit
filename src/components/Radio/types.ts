@@ -1,16 +1,14 @@
-import { SpaceProps } from "styled-system";
+import { ThemeUICSSObject } from "theme-ui";
+import { InputHTMLAttributes } from "react";
 
-export type RadioTheme = {
-  handleBackground: string;
-};
+export enum scales {
+  SM = "sm",
+  MD = "md",
+}
 
-export const scales = {
-  SM: "sm",
-  MD: "md",
-} as const;
+export type scaleProps = typeof scales[keyof typeof scales];
 
-export type Scales = typeof scales[keyof typeof scales];
-
-export interface RadioProps extends SpaceProps {
-  scale?: Scales;
+export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
+  scale?: scaleProps;
+  display?: ThemeUICSSObject["display"];
 }

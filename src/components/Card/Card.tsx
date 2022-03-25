@@ -1,13 +1,13 @@
 import React from "react";
-import StyledCard from "./StyledCard";
+import { Card as ThemeUICard } from "theme-ui";
 import { CardProps } from "./types";
 
-const Card: React.FC<CardProps> = ({ ribbon, children, ...props }) => {
+const Card: React.FC<CardProps> = ({ children, background, sx, ...props }) => {
   return (
-    <StyledCard {...props}>
-      {ribbon}
+    <ThemeUICard {...props} sx={{ ...sx, variant: `cards.primary`, background }}>
       {children}
-    </StyledCard>
+    </ThemeUICard>
   );
 };
+
 export default Card;
