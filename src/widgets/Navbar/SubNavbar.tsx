@@ -67,7 +67,6 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
-  const position = "More";
 
   return (
     <StyledCard key={1}>
@@ -90,7 +89,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
             <TwitterIcon
               color="white3"
               fill={iconFillColor}
-              onClick={() => trackSocialClick(track, "twitter", position, "https://twitter.com/ape_swap", chainId)}
+              onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
             />
           </StyledLink>
           <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
