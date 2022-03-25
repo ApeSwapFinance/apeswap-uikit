@@ -34,7 +34,7 @@ const Wrapper = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   justify-content: space-between;
   flex-grow: 100px;
   max-height: ${({ isPushed }) => (isPushed ? "100vh" : "0px")};
-  background-color: ${({ theme }) => theme.nav.background};
+  background-color: ${({ theme }) => theme.colors.navbar};
   width: ${({ isPushed }) => `${isPushed ? "100" : "0"}%`};
   border-right: ${({ isPushed }) => (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0)};
   z-index: 11;

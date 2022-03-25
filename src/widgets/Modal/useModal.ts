@@ -9,7 +9,8 @@ const useModal = (
   updateOnPropsChange = false,
   modalId = "defaultNodeId"
 ): [Handler, Handler] => {
-  const { isOpen, nodeId, modalNode, setModalNode, onPresent, onDismiss, setCloseOnOverlayClick } = useContext(Context);
+  const { isOpen, nodeId, modalNode, setModalNode, onPresent, handleClose, setCloseOnOverlayClick } =
+    useContext(Context);
   const onPresentCallback = useCallback(() => {
     onPresent(modal, modalId);
   }, [modal, modalId, onPresent]);
@@ -28,7 +29,7 @@ const useModal = (
     setCloseOnOverlayClick(closeOnOverlayClick);
   }, [closeOnOverlayClick, setCloseOnOverlayClick]);
 
-  return [onPresentCallback, onDismiss];
+  return [onPresentCallback, handleClose];
 };
 
 export default useModal;

@@ -1,70 +1,42 @@
-import styled, { DefaultTheme } from "styled-components";
-import { InputProps, scales } from "./types";
+import React from "react";
+import { Input as ThemeUIInput, Box } from "theme-ui";
+import { InputProps, sizes, iconSizes } from "./types";
+import { Svg } from "../Svg";
 
-interface StyledInputProps extends InputProps {
-  theme: DefaultTheme;
-}
-
-/**
- * Priority: Warning --> Success
- */
-const getBoxShadow = ({ isSuccess = false, isWarning = false, theme }: StyledInputProps) => {
-  if (isWarning) {
-    return theme.shadows.warning;
-  }
-
-  if (isSuccess) {
-    return theme.shadows.success;
-  }
-
-  return theme.shadows.inset;
-};
-
-const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
-  switch (scale) {
-    case scales.SM:
-      return "32px";
-    case scales.LG:
-      return "48px";
-    case scales.MD:
-    default:
-      return "40px";
-  }
-};
-
-const Input = styled.input<InputProps>`
-  background-color: ${({ theme }) => theme.colors.inputBorder};
-  border: 0;
-  border-radius: 10px;
-  box-shadow: ${getBoxShadow};
-  color: ${({ theme }) => theme.colors.text};
-  display: block;
-  font-size: 16px;
-  height: ${getHeight};
-  outline: 0;
-  padding: 0 16px;
-  width: 100%;
-
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.gray};
-  }
-
-  &:disabled {
-    background-color: ${({ theme }) => theme.colors.backgroundDisabled};
-    box-shadow: none;
-    color: ${({ theme }) => theme.colors.gray};
-    cursor: not-allowed;
-  }
-
-  &:focus:not(:disabled) {
-    box-shadow: none;
-  }
-`;
-
-Input.defaultProps = {
-  scale: scales.MD,
-  isSuccess: false,
-  isWarning: false,
+const Input: React.FC<InputProps> = ({ size = sizes.MD, icon, width, isWarning, sx, ...props }) => {
+  return (
+    <Box
+      sx={{
+        position: "relative",
+        width: "fit-content",
+      }}
+    >
+      <ThemeUIInput
+        {...props}
+        sx={{
+          width,
+          pl: "15px",
+          pr: icon ? "40px" : "15px",
+          variant: `forms.input.${size}`,
+          color: "text",
+          outline: "none",
+          ...sx,
+        }}
+      />
+      {icon && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            transform: "translateY(-50%)",
+            right: "15px",
+          }}
+        >
+          {isWarning ? <Svg icon="error" width={iconSizes[size]} /> : <Svg icon={icon} width={iconSizes[size]} />}
+        </Box>
+      )}
+    </Box>
+  );
 };
 
 export default Input;

@@ -13,9 +13,7 @@ const MobileLinkMenu: React.FC<{ title: string; items: { label: string; href: st
   return (
     <>
       <Dropdown border={border} onClick={() => setOpen((prev) => !prev)}>
-        <Text color="rgba(255, 179, 0, 1)" bold>
-          {title}
-        </Text>
+        <Text style={{ color: "rgba(255, 179, 0, 1)" }}>{title}</Text>
         {open ? <ArrowDropUpIcon width="8px" color="white" /> : <ArrowDropDownIcon width="8px" color="white" />}
       </Dropdown>
       {open && (

@@ -45,6 +45,7 @@ export const lightColors: Colors = {
   white3: "#F1EADA",
   white4: "#EADFC7",
   tertiary: "#EFF4F5",
+  input: "#4D4040",
 };
 
 export const darkColors: Colors = {
@@ -65,6 +66,7 @@ export const darkColors: Colors = {
   white3: "#383838",
   white4: "#424242",
   tertiary: "#383838",
+  input: "#FAFAFA",
 };
 
 // export const baseColors = {

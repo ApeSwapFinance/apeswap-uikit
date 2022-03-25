@@ -30,9 +30,9 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, isDark }) =>
     <StyledButton variant="tertiary" onClick={() => toggleTheme(!isDark)}>
       {/* alignItems center is a Safari fix */}
       <Flex alignItems="center">
-        <IslandIcon width="20px" />
+        <IslandIcon width="20px" id="islandMode" />
         <StyledText mx="4px">/</StyledText>
-        <MoonIcon width="24px" />
+        <MoonIcon width="24px" id="nightMode" />
       </Flex>
     </StyledButton>
   );

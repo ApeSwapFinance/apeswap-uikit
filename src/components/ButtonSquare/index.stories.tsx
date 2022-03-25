@@ -64,8 +64,6 @@ export const Variants: React.FC = () => {
           Approving
         </ButtonSquare>
         <ButtonSquare isLoading>Approving</ButtonSquare>
-        <ButtonSquare variant="tertiary">Tertiary</ButtonSquare>
-        <ButtonSquare variant="secondary">Secondary</ButtonSquare>
       </Row>
       <Row>
         <ButtonSquare startIcon={<LogoIcon />}>Start Icon</ButtonSquare>
@@ -78,16 +76,16 @@ export const Variants: React.FC = () => {
         <IconButtonSquare>
           <LogoIcon />
         </IconButtonSquare>
-        <IconButtonSquare variant="success">
-          <AddIcon color="#FAFAFA" />
+        <IconButtonSquare>
+          <AddIcon />
         </IconButtonSquare>
       </Row>
       <Row>
-        <IconButtonSquare size="sm" variant="success">
+        <IconButtonSquare size="sm">
           <LogoIcon />
         </IconButtonSquare>
         <IconButtonSquare size="sm">
-          <AddIcon color="#FAFAFA" />
+          <AddIcon />
         </IconButtonSquare>
       </Row>
     </BrowserRouter>

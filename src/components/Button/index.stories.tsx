@@ -17,7 +17,7 @@ const Row = styled(Flex)`
 `;
 
 export default {
-  title: "Components/Button",
+  title: "Components/Button Legacy",
   component: Button,
   argTypes: {},
 };

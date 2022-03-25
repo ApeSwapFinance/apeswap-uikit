@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export const types = {
   SUCCESS: "success",
   DANGER: "danger",
-  WARNING: "warning",
+  ERROR: "error",
   INFO: "info",
 };
 
@@ -18,7 +18,7 @@ export interface Toast {
   id: string;
   type: Types;
   title: string;
-  description?: ReactNode;
+  description?: string;
   action?: ToastAction;
 }
 

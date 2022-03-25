@@ -1,6 +1,7 @@
 import React from "react";
+import { Heading } from "../../components/Heading";
+import { Modal, ModalHeader } from "../Modal";
 import networks from "./config";
-import { Modal } from "../Modal";
 import NetworkCard from "./NetworkCard";
 import { SwitchNetwork } from "./types";
 
@@ -11,7 +12,10 @@ interface Props {
 }
 
 const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNetwork, chainId }) => (
-  <Modal title="Select a Network" onDismiss={onDismiss}>
+  <Modal onDismiss={onDismiss} minWidth="350px">
+    <ModalHeader onDismiss={onDismiss}>
+      <Heading>Network</Heading>
+    </ModalHeader>
     {networks.map((network) => (
       <NetworkCard
         networkConfig={network}

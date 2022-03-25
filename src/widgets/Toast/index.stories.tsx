@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { sample } from "lodash";
-import { alertVariants } from "../../components/Alert";
+import { variants } from "../../components/Alert/types";
 import Button from "../../components/Button/Button";
 import ToastContainer from "./ToastContainer";
 
@@ -19,7 +19,7 @@ export const Default: React.FC = () => {
       id: `id-${now}`,
       title: `Title: ${now}`,
       description,
-      type: alertVariants[sample(Object.keys(alertVariants))],
+      type: variants[sample(Object.keys(variants))],
     };
 
     setToasts((prevToasts) => [randomToast, ...prevToasts]);
@@ -60,7 +60,7 @@ export const WithAction: React.FC = () => {
         text: "Action Button",
         url: "https://apeswap.finance",
       },
-      type: alertVariants[sample(Object.keys(alertVariants))],
+      type: variants[sample(Object.keys(variants))],
     };
 
     setToasts((prevToasts) => [randomToast, ...prevToasts]);
@@ -72,7 +72,7 @@ export const WithAction: React.FC = () => {
 
   return (
     <div>
-      <Button type="button" variant="success" ml="8px" onClick={() => handleClick()}>
+      <Button type="button" ml="8px" onClick={() => handleClick()}>
         Random Toast with Action Button
       </Button>
       <ToastContainer toasts={toasts} onRemove={handleRemove} />

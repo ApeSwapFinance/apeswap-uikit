@@ -1,16 +1,16 @@
 import React from "react";
 import { renderWithTheme } from "../../testHelpers";
-import Text from "../../components/Text/Text";
+import { Text } from "../../components/Text";
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithTheme(<Text>apeswap</Text>);
+  const { asFragment } = renderWithTheme(<Text>Text</Text>);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-bdvvtL foxtoM"
+        class="sc-bczRLJ iPittn"
         color="text"
       >
-        apeswap
+        Text
       </div>
     </DocumentFragment>
   `);

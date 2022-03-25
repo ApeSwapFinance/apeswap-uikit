@@ -63,7 +63,7 @@ export type Colors = {
   // warning: string;
   // contrast: string;
   // invertedContrast: string;
-  // input: string;
+  input: string;
   // textDisabled: string;
   // textSubtle: string;
   // borderColor: string;

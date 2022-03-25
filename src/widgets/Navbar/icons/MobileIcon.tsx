@@ -1,10 +1,10 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import LegacySvg from "../../../components/Svg/LegacySvg";
+import { LegacySvgProps } from "../../../components/Svg/types";
 
-const MobileIcon: React.FC<SvgProps> = (props) => {
+const MobileIcon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <Svg viewBox="0 0 425 398" {...props}>
+    <LegacySvg viewBox="0 0 425 398" {...props}>
       <defs>
         <style>
           {
@@ -84,7 +84,7 @@ const MobileIcon: React.FC<SvgProps> = (props) => {
         d="M261.39,178.87v21.28a9.64,9.64,0,0,0,19.25,0v-3C280.64,187,272,178.87,261.39,178.87Z"
       />
       <ellipse className="cls-6" cx={261.39} cy={191.03} rx={6.42} ry={6.08} />
-    </Svg>
+    </LegacySvg>
   );
 };
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MobileIcon } from "../../widgets/Navbar/icons";
 import { Button } from "../Button";
+import { Flex } from "../Flex";
 import { Text } from "../Text";
 
 export const FlexContainer = styled.div`
@@ -31,7 +32,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   background-color: ${({ theme }) => (theme.isDark ? theme.colors.background : "rgba(77, 64, 64, 1)")};
-  border-top: 5px solid ${({ theme }) => theme.card.background};
+  border-top: 5px solid ${({ theme }) => theme.colors.white3};
   padding: 20px 20px 20px 20px;
   align-items: center;
   justify-content: center;
@@ -115,8 +116,7 @@ export const IconFlex = styled.div`
   }
 `;
 
-export const LinkskWrapper = styled.div`
-  display: flex;
+export const LinkskWrapper = styled(Flex)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;

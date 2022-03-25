@@ -9,63 +9,70 @@ import { MenuEntry } from "./MenuEntry";
 import { LangType } from "./types";
 import { links } from "./config";
 import { TrackProps } from "../../util/trackSocialClick";
+import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 
 export default {
   title: "Widgets/Navbar",
   component: Navbar,
-  argTypes: {},
+  argTypes: {
+    colorMode: {
+      options: ["light", "dark"],
+      control: { type: "inline-radio" },
+    },
+  },
 };
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
-export const Connected: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const track = ({ event, chain, data }: TrackProps): void => {
+export const Connected: React.FC = (args: any) => {
+  const track = ({}: TrackProps): void => {
     return null;
   };
 
   return (
-    <BrowserRouter>
-      <Navbar
-        account="0xbdda50183d817c3289f895a4472eb475967dc980"
-        login={noop}
-        logout={noop}
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        bananaPriceUsd={0.23158668932877668}
-        links={links}
-        profile={{
-          profileLink: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
-          noProfileLink: "",
-          image: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
-        }}
-        chainId={137}
-        switchNetwork={noop}
-        track={track}
-      >
-        <div>
-          <Heading as="h1" mb="8px">
-            Page body
-          </Heading>
-          <Text as="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut
-          </Text>
-        </div>
-      </Navbar>
-    </BrowserRouter>
+    <StorybookLayout {...args}>
+      <BrowserRouter>
+        <Navbar
+          account="0xbdda50183d817c3289f895a4472eb475967dc980"
+          login={noop}
+          logout={noop}
+          isDark={false}
+          toggleTheme={noop}
+          langs={langs}
+          setLang={noop}
+          currentLang="EN"
+          bananaPriceUsd={0.23158668932877668}
+          links={links}
+          profile={{
+            profileLink: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
+            noProfileLink: "",
+            image: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
+          }}
+          chainId={137}
+          switchNetwork={noop}
+          track={track}
+        >
+          <div>
+            <Heading as="h1" mb="8px">
+              Page body
+            </Heading>
+            <Text as="p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut
+            </Text>
+          </div>
+        </Navbar>
+      </BrowserRouter>
+    </StorybookLayout>
   );
 };
 

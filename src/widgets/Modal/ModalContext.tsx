@@ -9,7 +9,7 @@ interface ModalsContext {
   modalNode: React.ReactNode;
   setModalNode: React.Dispatch<React.SetStateAction<React.ReactNode>>;
   onPresent: (node: React.ReactNode, newNodeId: string) => void;
-  onDismiss: Handler;
+  handleClose: Handler;
   setCloseOnOverlayClick: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -32,7 +32,7 @@ export const Context = createContext<ModalsContext>({
   modalNode: null,
   setModalNode: () => null,
   onPresent: () => null,
-  onDismiss: () => null,
+  handleClose: () => null,
   setCloseOnOverlayClick: () => true,
 });
 
@@ -68,7 +68,7 @@ const ModalProvider: React.FC = ({ children }) => {
         modalNode,
         setModalNode,
         onPresent: handlePresent,
-        onDismiss: handleDismiss,
+        handleClose: handleDismiss,
         setCloseOnOverlayClick,
       }}
     >
