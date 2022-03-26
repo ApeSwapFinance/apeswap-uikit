@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
-import { ButtonSquare } from "../../components/ButtonSquare";
+import { Button } from "../../components/Button";
 import { MarketingModalProps, IconProps } from "./types";
 
 const Container = styled.div`
@@ -173,7 +173,7 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
     cursor: pointer;
   }
 `;
-const StyledButton = styled(ButtonSquare)`
+const StyledButton = styled(Button)`
   height: 44px;
   font-size: 16px;
   padding: 10px 20px;
