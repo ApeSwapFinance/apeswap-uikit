@@ -96,8 +96,8 @@ const Navbar: React.FC<NavProps> = ({
   links,
   profile,
   children,
-  chainId,
   switchNetwork,
+  chainId,
   track,
 }) => {
   const { isXxl } = useMatchBreakpoints();
@@ -248,6 +248,7 @@ const Navbar: React.FC<NavProps> = ({
       </BodyWrapper>
       <Footer
         chainId={chainId}
+        track={track}
         toggleTheme={toggleTheme}
         bananaPriceUsd={bananaPriceUsd}
         isDark={isDark}

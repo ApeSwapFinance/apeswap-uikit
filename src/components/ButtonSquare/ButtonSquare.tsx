@@ -4,6 +4,10 @@ import StyledButton from "./StyledButton";
 import { ButtonSquareProps, variants, sizes } from "./types";
 import { Button } from "../ButtonNew";
 
+// Uses ButtonNew instead of old StyledButton
+// Does not pass ...props to ButtonNew
+// When ...props is passed down to ButtonNew (ButtonNewProps doesn't match)
+
 const ButtonSquare: React.FC<ButtonSquareProps> = ({
   startIcon,
   endIcon,
@@ -21,6 +25,7 @@ const ButtonSquare: React.FC<ButtonSquareProps> = ({
   const isDisabled = isLoading || disabled;
   return (
     <Button
+      {...props}
       isLoading={isLoading}
       disabled={isDisabled}
       fontFamily={fontFamily}

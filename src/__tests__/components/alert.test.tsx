@@ -30,7 +30,7 @@ it("renders correctly", () => {
           class="css-1l5ipu9-Alert css-4cffwv"
         >
           <p
-            class="sc-gsDKAQ dQMGxp css-v1hy58-Alert"
+            class="sc-gsnTZi iraXgd css-v1hy58-Alert"
             color="text"
           >
             Alert title

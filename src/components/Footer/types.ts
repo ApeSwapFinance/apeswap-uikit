@@ -1,4 +1,4 @@
-import { TrackHandler } from "../../widgets/Navbar";
+import { TrackHandler } from "../../util/trackSocialClick";
 
 export interface FooterProps {
   chainId: number;

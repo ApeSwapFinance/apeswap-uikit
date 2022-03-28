@@ -14,7 +14,7 @@ it("renders correctly", () => {
         class="css-14ymkcd"
       >
         <div
-          class="sc-bdvvtL foxtoM"
+          class="sc-bczRLJ iPittn"
           color="text"
         >
           Tab

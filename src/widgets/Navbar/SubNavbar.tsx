@@ -5,10 +5,10 @@ import { Flex } from "../../components/Flex";
 import { Text } from "../../components/Text";
 import * as ImageModule from "./images";
 import MenuLink from "./MenuLink";
-import { MenuSubEntry, TrackHandler } from "./types";
+import { MenuSubEntry } from "./types";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
-import trackSocialClick from "../../util/trackSocialClick";
+import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
@@ -67,7 +67,6 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
-  const position = "More";
 
   return (
     <StyledCard key={1}>
@@ -90,7 +89,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
             <TwitterIcon
               color="white3"
               fill={iconFillColor}
-              onClick={() => trackSocialClick(track, "twitter", position, "https://twitter.com/ape_swap", chainId)}
+              onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
             />
           </StyledLink>
           <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">

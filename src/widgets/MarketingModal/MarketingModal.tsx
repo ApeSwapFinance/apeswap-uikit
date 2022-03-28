@@ -174,7 +174,6 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
   }
 `;
 const StyledButton = styled(Button)`
-  /* width: 274px; */
   height: 44px;
   font-size: 16px;
   padding: 10px 20px;

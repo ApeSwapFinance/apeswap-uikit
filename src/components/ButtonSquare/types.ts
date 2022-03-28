@@ -1,6 +1,8 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import { Link, LinkProps } from "react-router-dom";
 import { SpaceProps } from "styled-system";
+import { ButtonProps } from "../ButtonNew";
+import { sizeProps, variantProps } from "../ButtonNew/types";
 
 export const sizes = {
   SM: "sm",
@@ -21,8 +23,10 @@ export type Variants = typeof variants[keyof typeof variants];
 type ButtonSquareTypes = ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement> | LinkProps;
 
 export type ButtonSquareProps = {
-  variant?: Variants;
-  size?: Sizes;
+  variant?: variantProps;
+  size?: sizeProps;
+  [key: string]: any;
+  // variant?: Variants;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   fullWidth?: boolean;
@@ -38,7 +42,8 @@ export type ButtonSquareProps = {
   bgColor?: string;
   bgHover?: string;
 } & ButtonSquareTypes &
-  SpaceProps;
+  SpaceProps &
+  ButtonProps;
 
 export type ButtonSquareThemeVariant = {
   background: string;

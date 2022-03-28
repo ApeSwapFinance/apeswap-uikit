@@ -15,7 +15,7 @@ it("renders correctly", () => {
           class="css-1fooroe-Toggle css-vurnku"
         >
           <div
-            class="sc-bdvvtL foxtoM css-1fbfh1p-Toggle"
+            class="sc-bczRLJ iPittn css-1fbfh1p-Toggle"
             color="text"
           >
             Switch1
@@ -25,7 +25,7 @@ it("renders correctly", () => {
           class="css-1fooroe-Toggle css-vurnku"
         >
           <div
-            class="sc-bdvvtL foxtoM css-1fbfh1p-Toggle"
+            class="sc-bczRLJ iPittn css-1fbfh1p-Toggle"
             color="text"
           >
             Switch2
