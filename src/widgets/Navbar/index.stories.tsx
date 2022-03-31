@@ -23,7 +23,7 @@ export default {
 };
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
-const translate: (key: string) => string = (key) => key
+const translate: (key: string) => string = (key) => key;
 
 export const Connected: React.FC = (args: any) => {
   const track = ({}: TrackProps): void => {
