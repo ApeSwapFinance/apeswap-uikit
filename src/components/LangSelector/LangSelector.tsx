@@ -22,7 +22,6 @@ interface Props {
 const LangSelector: React.FC<Props> = ({
   currentLang,
   langs,
-  color,
   setLang,
   dropdownPosition = "top",
   buttonScale = "sm",
@@ -32,9 +31,14 @@ const LangSelector: React.FC<Props> = ({
     position={dropdownPosition}
     size={"sm"}
     component={
-      <Button size={buttonScale} variant="text" startIcon={<LanguageIcon width="24px" />}>
-        {!hideLanguage && <Text color={color}>{currentLang?.toUpperCase()}</Text>}
-      </Button>
+      <div style={{
+          paddingLeft: '18px',
+          paddingRight: '10px'
+        }}>
+        <Button size={buttonScale} variant="text" style={{padding: 0}}>
+          {!hideLanguage && <Text>{currentLang?.toUpperCase()}</Text>}
+        </Button>
+      </div>
     }
   >
     {langs.map((lang) => (

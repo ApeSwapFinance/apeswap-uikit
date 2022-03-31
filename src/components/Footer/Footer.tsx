@@ -68,6 +68,10 @@ const Footer: React.FC<FooterProps> = ({
             )}
           </Text>
           <ButtonFlex>
+            <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} />
+            <div style={{ margin: "0px 12.5px" }} />
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
+            <div style={{ margin: "0px 12.5px" }} />
             <LangSelector
               currentLang={currentLang}
               langs={langs}
@@ -75,10 +79,6 @@ const Footer: React.FC<FooterProps> = ({
               color={darkColors.text as keyof Colors}
               dropdownPosition="top-right"
             />
-            <div style={{ margin: "0px 12.5px" }} />
-            <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} />
-            <div style={{ margin: "0px 12.5px" }} />
-            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
           </ButtonFlex>
           <IconFlex>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
