@@ -1,5 +1,5 @@
 import { TrackHandler } from "../../util/trackSocialClick";
-import {LangType} from "../../widgets/Navbar";
+import { LangType } from "../../widgets/Navbar";
 
 export interface FooterProps {
   chainId: number;

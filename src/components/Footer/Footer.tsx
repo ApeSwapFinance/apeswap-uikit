@@ -40,7 +40,18 @@ import { Colors } from "../../theme/types";
 import { darkColors } from "../../theme";
 import LangSelector from "../LangSelector/LangSelector";
 
-const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork, track, currentLang, langs, setLang, t }) => {
+const Footer: React.FC<FooterProps> = ({
+  chainId,
+  toggleTheme,
+  isDark,
+  bananaPriceUsd,
+  switchNetwork,
+  track,
+  currentLang,
+  langs,
+  setLang,
+  t,
+}) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const { isXxl, isLg, isXl } = useMatchBreakpoints();
   const isMobile = isXxl === false && isXl === false && isLg === false;
@@ -52,7 +63,9 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
           <Text style={{ color: "white" }}>
-            {t(`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure experience for everyone.`)}
+            {t(
+              `ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure experience for everyone.`
+            )}
           </Text>
           <ButtonFlex>
             <LangSelector
@@ -130,7 +143,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
               )}
             </div>
             <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
-              <BuyBananaButton>{t('BUY BANANA')}</BuyBananaButton>
+              <BuyBananaButton>{t("BUY BANANA")}</BuyBananaButton>
             </a>
           </BottomRowContainer>
         </LogoFlex>
@@ -140,7 +153,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
           <LinkskWrapper>
             <LinkColumnFlex style={{ width: "200px" }}>
               <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                {t('Support')}
+                {t("Support")}
               </Text>
               {supportLinks.map((link) => {
                 return (
@@ -152,7 +165,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "240px" }}>
               <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                {t('Engage')}
+                {t("Engage")}
               </Text>
               {engageLinks.map((link) => {
                 return (
@@ -164,7 +177,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "130px" }}>
               <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                {t('Learn')}
+                {t("Learn")}
               </Text>
               {learnLinks.map((link) => {
                 return (
@@ -178,7 +191,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         )}
       </FlexContainer>
       <PeakingMonkey />
-      <AllRightsReserved>{t('©2022 All rights reserved')}</AllRightsReserved>
+      <AllRightsReserved>{t("©2022 All rights reserved")}</AllRightsReserved>
     </Container>
   );
 };

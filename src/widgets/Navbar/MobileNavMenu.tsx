@@ -65,7 +65,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   pushNav,
   chainId,
   switchNetwork,
-  t
+  t,
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;

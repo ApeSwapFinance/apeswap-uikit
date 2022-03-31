@@ -11,7 +11,7 @@ import { Flex } from "../../components/Flex";
 interface Props {
   login: Login;
   onDismiss?: () => void;
-  t: (key: string) => string
+  t: (key: string) => string;
 }
 
 const HelpLink = styled(Link)`
@@ -22,7 +22,7 @@ const HelpLink = styled(Link)`
 `;
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => (
-  <Modal title={t('Connect to a wallet')} onDismiss={onDismiss} maxWidth="400px" minWidth="350px">
+  <Modal title={t("Connect to a wallet")} onDismiss={onDismiss} maxWidth="400px" minWidth="350px">
     {config.map((entry, index) => (
       <WalletCard
         key={entry.title}
@@ -36,7 +36,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, t }) => 
     <Flex alignItems="center" justifyContent="center" mt="10px">
       <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
         <HelpIcon mr="6px" />
-        {t('Learn how to connect')}
+        {t("Learn how to connect")}
       </HelpLink>
     </Flex>
   </Modal>

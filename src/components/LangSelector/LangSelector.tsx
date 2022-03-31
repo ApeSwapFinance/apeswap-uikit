@@ -4,10 +4,10 @@ import Dropdown from "../Dropdown/Dropdown";
 import Button from "../Button/Button";
 import LanguageIcon from "../Svg/Icons/Language";
 import MenuButton from "./MenuButton";
-import {LangType} from "../../widgets/Navbar";
-import {Colors} from "../../theme/types";
-import {Sizes} from "../Button/types";
-import {Position} from "../Dropdown/types";
+import { LangType } from "../../widgets/Navbar";
+import { Colors } from "../../theme/types";
+import { Sizes } from "../Button/types";
+import { Position } from "../Dropdown/types";
 
 interface Props {
   currentLang: string;
@@ -35,7 +35,8 @@ const LangSelector: React.FC<Props> = ({
       <Button size={buttonScale} variant="text" startIcon={<LanguageIcon width="24px" />}>
         {!hideLanguage && <Text color={color}>{currentLang?.toUpperCase()}</Text>}
       </Button>
-    }>
+    }
+  >
     {langs.map((lang) => (
       <MenuButton
         key={lang.code}

@@ -92,7 +92,7 @@ const Navbar: React.FC<NavProps> = ({
   toggleTheme,
   langs,
   t,
-                                      currentLang,
+  currentLang,
   setLang,
   bananaPriceUsd,
   links,

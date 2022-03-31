@@ -15,7 +15,7 @@ interface Props {
 }
 
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null, t }) => (
-  <Modal title={t('Your wallet')} onDismiss={onDismiss} minWidth="350px">
+  <Modal title={t("Your wallet")} onDismiss={onDismiss} minWidth="350px">
     <Text
       fontSize="20px"
       fontWeight={600}
@@ -25,9 +25,9 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
     </Text>
     <Flex mb="32px">
       <LinkExternal href={`https://bscscan.com/address/${account}`} mr="16px">
-        {t('View on BscScan')}
+        {t("View on BscScan")}
       </LinkExternal>
-      <CopyToClipboard toCopy={account}>{t('Copy Address')}</CopyToClipboard>
+      <CopyToClipboard toCopy={account}>{t("Copy Address")}</CopyToClipboard>
     </Flex>
     <Flex justifyContent="center">
       <Button
@@ -40,7 +40,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
           window.location.reload();
         }}
       >
-        {t('Logout')}
+        {t("Logout")}
       </Button>
     </Flex>
   </Modal>

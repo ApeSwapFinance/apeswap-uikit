@@ -76,7 +76,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, t }) => {
           onPresentConnectModal();
         }}
       >
-        {t('Connect')}
+        {t("Connect")}
       </StyledButton>
     );
   };
