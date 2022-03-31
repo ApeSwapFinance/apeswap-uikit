@@ -23,10 +23,11 @@ export default {
 };
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
+const translate: (key: string) => string = (key) => key
 
 export const Connected: React.FC = (args: any) => {
   const track = ({}: TrackProps): void => {
-    return null;
+    return;
   };
 
   return (
@@ -40,6 +41,7 @@ export const Connected: React.FC = (args: any) => {
           toggleTheme={noop}
           langs={langs}
           setLang={noop}
+          t={translate}
           currentLang="EN"
           bananaPriceUsd={0.23158668932877668}
           links={links}
@@ -80,7 +82,7 @@ export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
-        account={null}
+        account={undefined}
         login={noop}
         logout={noop}
         isDark
@@ -90,6 +92,7 @@ export const NotConnected: React.FC = () => {
         currentLang="EN"
         links={links}
         chainId={56}
+        t={translate}
         switchNetwork={noop}
       >
         <div style={{ lineHeight: "30px" }}>
@@ -165,6 +168,7 @@ export const WithNoProfile: React.FC = () => {
         bananaPriceUsd={0.23158668932877668}
         links={links}
         chainId={56}
+        t={translate}
         switchNetwork={noop}
         profile={{
           profileLink: "/profile",
@@ -205,6 +209,7 @@ export const WithProfile: React.FC = () => {
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
+        t={translate}
         currentLang="EN"
         bananaPriceUsd={0.23158668932877668}
         links={links}
