@@ -16,6 +16,7 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   showMenu: boolean;
   chainId: number;
   switchNetwork: (chainId: number) => void;
+  t: (key: string) => string;
 }
 
 const StyledLink = styled.a`
@@ -64,6 +65,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   pushNav,
   chainId,
   switchNetwork,
+  t
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -131,7 +133,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
             <DiscordIcon color="white3" fill={iconFillColor} />
           </StyledLink>
-          <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+          <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
         </div>
       </div>
     </Wrapper>

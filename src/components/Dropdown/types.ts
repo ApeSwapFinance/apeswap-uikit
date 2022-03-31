@@ -38,3 +38,8 @@ export interface DropdownItemProps {
   active?: boolean;
   size?: sizeProps;
 }
+
+export declare type Position = "top" | "top-right" | "bottom";
+export interface PositionProps {
+  position?: Position;
+}

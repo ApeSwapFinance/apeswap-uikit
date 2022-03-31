@@ -9,6 +9,7 @@ import PolygonChain from "../NetworkModal/icons/PolygonChain";
 interface Props {
   chainId: number;
   switchNetwork: SwitchNetwork;
+  t: (key: string) => string;
 }
 
 const StyledButton = styled(Button)`
@@ -33,8 +34,8 @@ export const NETWORK_ICON: { [key: number]: any } = {
   [ChainId.MATIC_TESTNET]: <PolygonChain width="23px" mr="8px" />,
 };
 
-const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
-  const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId);
+const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t }) => {
+  const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId, t);
 
   return (
     <StyledButton

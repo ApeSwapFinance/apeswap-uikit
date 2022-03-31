@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Button from "../../components/Button/Button";
 import { useWalletModal } from "../WalletModal";
-import { Login } from "../WalletModal/types";
+import { Login } from "../WalletModal";
 
 interface Props {
   account?: string;
   login: Login;
   logout: () => void;
+  t: (key: string) => string;
 }
 
 const StyledButton = styled(Button)`
@@ -26,8 +27,8 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
+const UserBlock: React.FC<Props> = ({ account, login, logout, t }) => {
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, t, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { isXs } = useMatchBreakpoints();
 
@@ -75,7 +76,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           onPresentConnectModal();
         }}
       >
-        Connect
+        {t('Connect')}
       </StyledButton>
     );
   };
