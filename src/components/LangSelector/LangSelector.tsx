@@ -31,11 +31,13 @@ const LangSelector: React.FC<Props> = ({
     position={dropdownPosition}
     size={"sm"}
     component={
-      <div style={{
-          paddingLeft: '18px',
-          paddingRight: '10px'
-        }}>
-        <Button size={buttonScale} variant="text" style={{padding: 0}}>
+      <div
+        style={{
+          paddingLeft: "18px",
+          paddingRight: "10px",
+        }}
+      >
+        <Button size={buttonScale} variant="text" style={{ padding: 0 }}>
           {!hideLanguage && <Text>{currentLang?.toUpperCase()}</Text>}
         </Button>
       </div>
