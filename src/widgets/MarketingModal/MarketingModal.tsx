@@ -180,7 +180,7 @@ const StyledButton = styled(Button)`
   font-weight: 700;
 `;
 
-const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
+const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onDismiss, startEarning, startEarningText, children }) => {
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
@@ -209,6 +209,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
       ))
     );
   };
+  console.log('startEarning', startEarning)
+  console.log("childrensLength", childrensLength);
 
   return (
     <Container>
@@ -229,35 +231,39 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
         {renderChildren()}
 
         <ModalFooter>
-          <SliderBtnSection>
-            <IconContainer>
-              <StyledLeftArrow
-                color="text"
-                width="12px"
-                height="14px"
-                onClick={goPrev}
-                step={step}
-                childrensLength={childrensLength}
-              />
-            </IconContainer>
+          {childrensLength > 1 && (
+            <SliderBtnSection>
+              <IconContainer>
+                <StyledLeftArrow
+                  color="text"
+                  width="12px"
+                  height="14px"
+                  onClick={goPrev}
+                  step={step}
+                  childrensLength={childrensLength}
+                />
+              </IconContainer>
 
-            <CircleDiv>{renderDots()}</CircleDiv>
+              <CircleDiv>{renderDots()}</CircleDiv>
 
-            <IconContainer>
-              <StyledRightArrow
-                color="text"
-                width="12px"
-                height="14px"
-                onClick={goNext}
-                step={step}
-                childrensLength={childrensLength}
-              />
-            </IconContainer>
-          </SliderBtnSection>
+              <IconContainer>
+                <StyledRightArrow
+                  color="text"
+                  width="12px"
+                  height="14px"
+                  onClick={goNext}
+                  step={step}
+                  childrensLength={childrensLength}
+                />
+              </IconContainer>
+            </SliderBtnSection>
+          )}
 
-          <StyledButton fullWidth onClick={startEarning}>
-            Start Earning
-          </StyledButton>
+          {startEarning && (
+            <StyledButton fullWidth onClick={startEarning}>
+              {startEarningText}
+            </StyledButton>
+          )}
         </ModalFooter>
       </StyledModal>
     </Container>
@@ -266,7 +272,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
 
 MarketingModal.defaultProps = {
   onDismiss: () => null,
-  startEarning: () => null,
+  startEarning: undefined,
 };
 
 export default MarketingModal;

@@ -33,7 +33,7 @@ const StyledText = styled(Text)`
 
 const LendingBody1: React.FC = () => {
   return (
-    <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
+      <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
       <RightContent>
         <StyledText>
           Our network uses an &quot;overcollateral&quot; model. <br />
@@ -63,6 +63,7 @@ export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
   title = "Welcome to ApeSwap's Lending Network",
   description = "How does it work?",
   startEarning,
+  startEarningText = "Start Earning",
 }) => {
   const [visible, setVisible] = useState(true);
   const family = [<LendingBody1 />, <LendingBody2 />];
@@ -74,6 +75,7 @@ export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
           title={title}
           description={description}
           startEarning={startEarning}
+          startEarningText={startEarningText}
           onDismiss={() => setVisible(false)}
         >
           {family}
