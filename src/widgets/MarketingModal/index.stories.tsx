@@ -33,7 +33,7 @@ const StyledText = styled(Text)`
 
 const LendingBody1: React.FC = () => {
   return (
-      <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
+    <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
       <RightContent>
         <StyledText>
           Our network uses an &quot;overcollateral&quot; model. <br />

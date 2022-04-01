@@ -30,8 +30,8 @@ const StyledModal = styled.div`
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
     max-width: 900px;
-    height: 500px;
-    max-height: 500px;
+    min-height: 60%;
+    max-height: 75%;
     border-radius: 20px;
     margin: auto;
     position: absolute;
@@ -180,7 +180,14 @@ const StyledButton = styled(Button)`
   font-weight: 700;
 `;
 
-const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onDismiss, startEarning, startEarningText, children }) => {
+const MarketingModal: React.FC<MarketingModalProps> = ({
+  title,
+  description,
+  onDismiss,
+  startEarning,
+  startEarningText,
+  children,
+}) => {
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
@@ -209,7 +216,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
       ))
     );
   };
-  console.log('startEarning', startEarning)
+  console.log("startEarning", startEarning);
   console.log("childrensLength", childrensLength);
 
   return (
