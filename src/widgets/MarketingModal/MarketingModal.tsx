@@ -180,7 +180,7 @@ const StyledButton = styled(Button)`
   font-weight: 700;
 `;
 
-const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
+const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onDismiss, startEarning, children, t }) => {
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
@@ -256,7 +256,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
           </SliderBtnSection>
 
           <StyledButton fullWidth onClick={startEarning}>
-            Start Earning
+            {t('Start Earning')}
           </StyledButton>
         </ModalFooter>
       </StyledModal>

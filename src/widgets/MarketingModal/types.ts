@@ -8,6 +8,7 @@ export interface MarketingModalProps {
   description: string;
   startEarning: ActionHandler;
   onDismiss: ActionHandler;
+  t: (key: string) => string;
   children: React.ReactNode | React.ReactNode[];
 }
 

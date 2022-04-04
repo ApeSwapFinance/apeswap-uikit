@@ -4,7 +4,7 @@ import { InternalProps } from "./types";
 import styles from "./styles";
 import { Text } from "../../components/Text";
 
-const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss }) => {
+const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss, t }) => {
   return (
     <Flex sx={styles.modalFooter}>
       {children}
@@ -17,7 +17,7 @@ const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss }) => {
           fontSize: 16,
         }}
       >
-        Cancel
+        {t ? t('Cancel') : 'Cancel'}
       </Text>
     </Flex>
   );
