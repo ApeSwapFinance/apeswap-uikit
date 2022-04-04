@@ -17,7 +17,7 @@ const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss, t }) => {
           fontSize: 16,
         }}
       >
-        {t ? t('Cancel') : 'Cancel'}
+        {t ? t("Cancel") : "Cancel"}
       </Text>
     </Flex>
   );
