@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import noop from "lodash/noop";
 import { BrowserRouter } from "react-router-dom";
 import Flex from "../../components/Flex/Flex";
@@ -11,16 +10,6 @@ import { LangType } from "./types";
 import { links } from "./config";
 import { TrackProps } from "../../util/trackSocialClick";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
-import { TooltipBubble } from "../../components/TooltipBubble";
-import { HelpIcon } from "../../components/Svg";
-
-export const TitleText = styled(Text)<{ lineHeight?: number }>`
-  opacity: 0.6;
-  font-size: 12px;
-  line-height: ${({ lineHeight }) => lineHeight || 20}px;
-  ${({ theme }) => theme.mediaQueries.md} {
-  }
-`;
 
 export default {
   title: "Widgets/Navbar",
@@ -64,22 +53,6 @@ export const Connected: React.FC = (args: any) => {
           track={track}
         >
           <div>
-            <TooltipBubble
-              placement={"topRight" || "topLeft"}
-              transformTip={"translate(0, -105%)"}
-              body={
-                <Flex>
-                  {
-                    "BANANA reward APRs are calculated in real time. DEX swap fee APRs are calculated based on previous 24 hours of trading volume. Note: APRs are provided for your convenience. APRs are constantly changing and do not represent guaranteed returns."
-                  }
-                </Flex>
-              }
-            >
-              <TitleText lineHeight={15}>
-                {"Liquidity"}
-                <HelpIcon width="12px" ml="5px" />
-              </TitleText>
-            </TooltipBubble>
             <Heading as="h1" mb="8px">
               Page body
             </Heading>
@@ -96,22 +69,6 @@ export const Connected: React.FC = (args: any) => {
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
               exercitation ullamco laboris nisi ut
             </Text>
-            <TooltipBubble
-              placement={"bottomRight" || "bottomLeft"}
-              transformTip={"translate(0, -105%)"}
-              body={
-                <Flex>
-                  {
-                    "BANANA reward APRs are calculated in real time. DEX swap fee APRs are calculated based on previous 24 hours of trading volume. Note: APRs are provided for your convenience. APRs are constantly changing and do not represent guaranteed returns."
-                  }
-                </Flex>
-              }
-            >
-              <TitleText lineHeight={15}>
-                {"Liquidity"}
-                <HelpIcon width="12px" ml="5px" />
-              </TitleText>
-            </TooltipBubble>
           </div>
         </Navbar>
       </BrowserRouter>
