@@ -2,6 +2,7 @@ export const links = [
   {
     label: "Exchange",
     href: "/swap",
+    isNew: false,
   },
   {
     label: "Stake",
@@ -9,20 +10,29 @@ export const links = [
     darkIcon: "StakeDarkImage",
     items: [
       {
-        label: "Farms",
+        label: "BANANA Farms",
         href: "/farms",
+        isNew: true,
       },
       {
         label: "Pools",
         href: "/pools",
+        isNew: false,
+      },
+      {
+        label: "Jungle Farms",
+        href: "/jungle-farms",
+        isNew: false,
       },
       {
         label: "Vaults",
         href: "/vaults",
+        isNew: false,
       },
       {
         label: "GNANA",
         href: "/gnana",
+        isNew: false,
       },
     ],
   },
@@ -34,10 +44,14 @@ export const links = [
       {
         label: "Official",
         href: "/iao",
+        isNew: true,
+        isLive: true,
       },
       {
         label: "Self-Serve",
         href: "/ss-iao",
+        isNew: false,
+        isLive: false,
       },
     ],
   },
@@ -50,20 +64,25 @@ export const links = [
       {
         label: "Collection",
         href: "/nft",
+        isNew: false,
       },
       {
         label: "Auction",
         href: "/auction",
+        isNew: false,
+        isLive: true,
       },
       {
         label: "Staking",
         href: "/staking",
+        isNew: false,
       },
     ],
   },
   {
     label: "Lending",
     href: "https://app.ola.finance/apeswap/markets",
+    isNew: false,
   },
   {
     label: "More",
@@ -73,22 +92,27 @@ export const links = [
       {
         label: "Docs",
         href: "https://apeswap.gitbook.io/apeswap-finance/",
+        isNew: false,
       },
       {
         label: "Charts",
         href: "https://apeswap.gitbook.io/apeswap-finance/",
+        isNew: false,
       },
       {
         label: "Leverage Trading",
         href: "https://apemex.exchange/margin",
+        isNew: false,
       },
       {
         label: "Governance",
         href: "https://vote.apeswap.finance",
+        isNew: false,
       },
       {
         label: "BANANA Burns",
         href: "/burn",
+        isNew: false,
       },
     ],
   },

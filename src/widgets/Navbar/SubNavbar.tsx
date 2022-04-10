@@ -9,6 +9,7 @@ import { MenuSubEntry } from "./types";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
+import { Tag } from "../../components/Tag";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
@@ -57,10 +58,24 @@ const NavImage = styled.div`
 const StyledText = styled(Text)`
   margin-top: 6px;
   margin-bottom: 6px;
+  margin-right: 6px;
   font-weight: 700;
   :hover {
     box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
   }
+`;
+
+const NewMenuLink = styled(MenuLink)`
+  display: flex;
+  align-items: center;
+`;
+const StyledTag = styled(Tag)`
+  font-size: 10px;
+  padding: 0px 6px !important;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  height: auto;
 `;
 
 const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track }) => {
@@ -73,9 +88,12 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
       <NavHolder>
         {items.map((item) => {
           return (
-            <MenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
+            <NewMenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
               <StyledText>{item.label}</StyledText>
-            </MenuLink>
+              {(item?.isNew || item?.isLive) && (
+                <StyledTag variant={item?.isLive ? "success" : "binance"}>{item?.isLive ? "LIVE" : "NEW"}</StyledTag>
+              )}
+            </NewMenuLink>
           );
         })}
       </NavHolder>

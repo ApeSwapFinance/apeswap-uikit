@@ -147,6 +147,8 @@ const Navbar: React.FC<NavProps> = ({
     setHoveredItem(label);
   };
 
+  let isNew: Boolean;
+
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
@@ -191,14 +193,16 @@ const Navbar: React.FC<NavProps> = ({
                     </NavItem>
                   )}
                   {link.label === hoveredItem && link?.items && (
-                    <SubNavbar
-                      items={link.items}
-                      image={isDark ? link.darkIcon : link.lightIcon}
-                      label={link.label}
-                      isDark={isDark}
-                      chainId={chainId}
-                      track={track}
-                    />
+                    <div style={{ display: "flex", backgroundColor: "red" }}>
+                      <SubNavbar
+                        items={link.items}
+                        image={isDark ? link.darkIcon : link.lightIcon}
+                        label={link.label}
+                        isDark={isDark}
+                        chainId={chainId}
+                        track={track}
+                      />
+                    </div>
                   )}
                 </div>
               );

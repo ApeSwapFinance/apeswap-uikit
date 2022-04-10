@@ -29,6 +29,8 @@ export interface MenuSubEntry {
   label: string;
   href: string;
   calloutClass?: string;
+  isNew?: boolean;
+  isLive?: boolean;
 }
 
 export interface MenuEntry {
@@ -39,6 +41,7 @@ export interface MenuEntry {
   href?: string;
   calloutClass?: string;
   initialOpenState?: boolean;
+  isNew?: boolean;
 }
 
 export interface PanelProps {
