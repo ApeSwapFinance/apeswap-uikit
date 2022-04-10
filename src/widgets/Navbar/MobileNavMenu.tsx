@@ -9,6 +9,8 @@ import { LinkLabel, MenuEntry } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import NetworkButton from "./NetworkButton";
 import { PanelProps, PushedProps } from "./types";
+import Text from "../../components/Text/Text";
+import Tag from "../../components/Tag/Tag";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -55,6 +57,38 @@ const Wrapper = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
+const StyledText = styled(Text)<{ label?: string }>`
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-right: 6px;
+  font-weight: 700;
+
+  background: ${({ label }) =>
+    label === "GNANA" &&
+    "linear-gradient(90deg, #ba801e 0%, #ffe988 20.68%, #ba801e 42.29%, #ffe988 66.19%, #ba801e 88.25%)"};
+  -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
+  -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
+  background-clip: ${({ label }) => label === "GNANA" && "text"};
+  text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
+
+  :hover {
+    box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
+  }
+`;
+
+const NewMenuLink = styled(MenuLink)`
+  display: flex;
+  align-items: center;
+`;
+const StyledTag = styled(Tag)`
+  font-size: 10px;
+  padding: 0px 6px !important;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  height: auto;
+`;
+
 const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   isPushed,
   showMenu,
@@ -85,7 +119,14 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               {isPushed &&
                 entry.items.map((item) => (
                   <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <MenuLink href={item.href}>{item.label}</MenuLink>
+                    <NewMenuLink href={item.href}>
+                      <StyledText label={item.label}>{item.label}</StyledText>
+                      {(item?.isNew || item?.isLive) && (
+                        <StyledTag variant={item?.isLive ? "success" : "binance"}>
+                          {item?.isLive ? "LIVE" : "NEW"}
+                        </StyledTag>
+                      )}
+                    </NewMenuLink>
                   </MenuEntry>
                 ))}
             </Accordion>

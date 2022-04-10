@@ -67,7 +67,6 @@ const StyledText = styled(Text)<{ label?: string }>`
   -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
   -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
   background-clip: ${({ label }) => label === "GNANA" && "text"};
-
   text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
 
   :hover {
