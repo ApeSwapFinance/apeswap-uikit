@@ -12,7 +12,7 @@ export const links = [
       {
         label: "BANANA Farms",
         href: "/farms",
-        isNew: true,
+        isNew: false,
       },
       {
         label: "Pools",
@@ -22,7 +22,7 @@ export const links = [
       {
         label: "Jungle Farms",
         href: "/jungle-farms",
-        isNew: false,
+        isNew: true,
       },
       {
         label: "Vaults",

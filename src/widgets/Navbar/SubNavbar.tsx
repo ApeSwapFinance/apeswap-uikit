@@ -55,11 +55,21 @@ const NavImage = styled.div`
   border-radius: 0px 0px 0px 30px;
 `;
 
-const StyledText = styled(Text)`
+const StyledText = styled(Text)<{ label?: string }>`
   margin-top: 6px;
   margin-bottom: 6px;
   margin-right: 6px;
   font-weight: 700;
+
+  background: ${({ label }) =>
+    label === "GNANA" &&
+    "linear-gradient(90deg, #ba801e 0%, #ffe988 20.68%, #ba801e 42.29%, #ffe988 66.19%, #ba801e 88.25%)"};
+  -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
+  -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
+  background-clip: ${({ label }) => label === "GNANA" && "text"};
+
+  text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
+
   :hover {
     box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
   }
@@ -89,7 +99,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
         {items.map((item) => {
           return (
             <NewMenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
-              <StyledText>{item.label}</StyledText>
+              <StyledText label={item.label}>{item.label}</StyledText>
               {(item?.isNew || item?.isLive) && (
                 <StyledTag variant={item?.isLive ? "success" : "binance"}>{item?.isLive ? "LIVE" : "NEW"}</StyledTag>
               )}
