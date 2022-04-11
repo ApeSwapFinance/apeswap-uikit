@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
             experience for everyone.`}
           </Text>
           <ButtonFlex>
-            <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} />
+            <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} isMini={false} />
             <div style={{ margin: "0px 12.5px" }} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
           </ButtonFlex>

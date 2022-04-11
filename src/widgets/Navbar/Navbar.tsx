@@ -17,6 +17,7 @@ import { Footer } from "../../components/Footer";
 import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
+import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 
 const Wrapper = styled.div`
   position: relative;
@@ -147,8 +148,6 @@ const Navbar: React.FC<NavProps> = ({
     setHoveredItem(label);
   };
 
-  let isNew: Boolean;
-
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
@@ -212,6 +211,7 @@ const Navbar: React.FC<NavProps> = ({
         <Flex alignItems="center" style={{ position: "absolute", right: "30px" }}>
           {!isMobile && (
             <Flex marginRight="10px">
+              <ThemeSwitcher isDark={isDark} isMini={true} toggleTheme={toggleTheme} />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>
           )}
@@ -242,6 +242,7 @@ const Navbar: React.FC<NavProps> = ({
             chainId={chainId}
             switchNetwork={switchNetwork}
             isDark={isDark}
+            track={track}
             currentLang="en"
           />
         )}

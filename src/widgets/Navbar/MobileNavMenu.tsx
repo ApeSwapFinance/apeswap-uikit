@@ -11,6 +11,9 @@ import NetworkButton from "./NetworkButton";
 import { PanelProps, PushedProps } from "./types";
 import Text from "../../components/Text/Text";
 import Tag from "../../components/Tag/Tag";
+import Flex from "../../components/Flex/Flex";
+import { ThemeSwitcher } from "../../components/ThemeSwitcher";
+import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -18,6 +21,7 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   showMenu: boolean;
   chainId: number;
   switchNetwork: (chainId: number) => void;
+  track?: TrackHandler | undefined;
 }
 
 const StyledLink = styled.a`
@@ -89,6 +93,24 @@ const StyledTag = styled(Tag)`
   height: auto;
 `;
 
+const BottomContent = styled(Flex)`
+  @media screen and (max-width: 400px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+`;
+
+const RightBottom = styled(Flex)`
+  @media screen and (max-width: 400px) {
+    margin-bottom: 10px;
+  }
+`;
+
 const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   isPushed,
   showMenu,
@@ -98,10 +120,15 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   pushNav,
   chainId,
   switchNetwork,
+  toggleTheme,
+  track,
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;
   const location = useLocation();
+
+  const label = "More";
+
   return (
     <Wrapper isPushed={isPushed} showMenu={showMenu}>
       {links.map((entry) => {
@@ -155,25 +182,42 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           padding: "20px 0",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "275px",
-          }}
-        >
-          <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
-            <TwitterIcon color="white3" fill={iconFillColor} />
-          </StyledLink>
-          <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
-            <TelegramIcon color="white3" fill={iconFillColor} />
-          </StyledLink>
-          <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
-            <DiscordIcon color="white3" fill={iconFillColor} />
-          </StyledLink>
-          <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
-        </div>
+        <BottomContent>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              width: "200px",
+            }}
+          >
+            <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
+              <TwitterIcon
+                color="white3"
+                fill={iconFillColor}
+                onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
+              />
+            </StyledLink>
+            <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
+              <TelegramIcon
+                color="white3"
+                fill={iconFillColor}
+                onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
+              />
+            </StyledLink>
+            <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
+              <DiscordIcon
+                color="white3"
+                fill={iconFillColor}
+                onClick={() => trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)}
+              />
+            </StyledLink>
+          </div>
+          <RightBottom>
+            <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} isMini={true} />
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+          </RightBottom>
+        </BottomContent>
       </div>
     </Wrapper>
   );
