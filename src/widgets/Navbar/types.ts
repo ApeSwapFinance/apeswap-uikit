@@ -42,6 +42,7 @@ export interface MenuEntry {
   calloutClass?: string;
   initialOpenState?: boolean;
   isNew?: boolean;
+  isLive?: boolean;
 }
 
 export interface PanelProps {

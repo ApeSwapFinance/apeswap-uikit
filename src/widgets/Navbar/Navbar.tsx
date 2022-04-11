@@ -216,7 +216,7 @@ const Navbar: React.FC<NavProps> = ({
             </Flex>
           )}
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
+          {account && profile && <Avatar profile={profile} />}
           {isMobile && (
             <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(!isPushed)}>
               {isPushed ? (

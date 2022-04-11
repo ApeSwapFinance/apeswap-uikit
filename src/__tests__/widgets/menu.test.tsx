@@ -165,9 +165,8 @@ it("renders correctly", () => {
           >
             <div>
               <button
-                class="sc-jSMfEi jiXQQC sc-iqcoie jitCqI"
+                class="sc-jSMfEi hmbSwx sc-iqcoie fvwCet"
                 color="text"
-                font-family="poppins"
                 font-size="14px"
                 type="button"
               >
