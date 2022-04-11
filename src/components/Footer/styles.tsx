@@ -37,6 +37,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: -1;
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 80px 50px 80px 50px;
   }

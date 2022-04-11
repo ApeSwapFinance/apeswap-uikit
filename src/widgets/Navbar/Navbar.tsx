@@ -22,6 +22,7 @@ import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  z-index: 0;
 `;
 
 const NavItem = styled.div<{ active?: boolean }>`
