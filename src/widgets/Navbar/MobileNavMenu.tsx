@@ -14,7 +14,6 @@ import Tag from "../../components/Tag/Tag";
 import Flex from "../../components/Flex/Flex";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
-import { GlowCircle } from "../../components/GlowCircle";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -23,7 +22,7 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   chainId: number;
   switchNetwork: (chainId: number) => void;
   track?: TrackHandler | undefined;
-  liveResult: LiveResultProps["apiResult"];
+  liveResult?: LiveResultProps["apiResult"] | undefined;
 }
 
 const StyledLink = styled.a`
@@ -136,7 +135,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
     <Wrapper isPushed={isPushed} showMenu={showMenu}>
       {links.map((entry) => {
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        const found = liveResult.find((result) => result.label === entry.label);
+        const found = liveResult?.find((result) => result.label === entry.label);
 
         if (entry.items) {
           return (
@@ -147,7 +146,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               label={entry.label}
               initialOpenState={entry.initialOpenState}
               className={calloutClass}
-              isLive={found?.settings[0]?.tag === "LIVE"}
+              found={found}
             >
               {isPushed &&
                 entry.items.map((item) => {
