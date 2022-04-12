@@ -24,7 +24,7 @@ interface SubNavbarProps {
     id: number;
     tag: string;
     navItem: string;
-  }[]
+  }[];
 }
 const StyledLink = styled.a`
   :hover {
@@ -99,7 +99,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
     <StyledCard key={1}>
       <NavHolder>
         {items.map((item) => {
-          const found = subMenu?.find(menu => menu.navItem === item.label)
+          const found = subMenu?.find((menu) => menu.navItem === item.label);
           console.log("subMenu navItem", found?.navItem);
           console.log("subMenu Tag", found?.tag);
 

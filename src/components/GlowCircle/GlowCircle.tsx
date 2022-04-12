@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { GlowCircleProps } from "./types";
 
 const GlowCircle = styled.span<GlowCircleProps>`
-  margin: 100px;
+  margin-left: 5px;
   display: block;
-  width: 22px;
-  height: 22px;
+  width: ${({ width }) => (width ? width : "8px")};
+  height: ${({ height }) => (height ? height : "8px")};
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.success};
   cursor: pointer;

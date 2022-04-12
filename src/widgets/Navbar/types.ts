@@ -55,6 +55,18 @@ export interface PanelProps {
   links: Array<MenuEntry>;
 }
 
+export interface LiveResultProps {
+  apiResult: {
+    id: number;
+    label: string;
+    settings: {
+      id: number;
+      tag: string;
+      navItem: string;
+    }[];
+  }[];
+}
+
 export interface NavProps extends PanelProps {
   account?: string;
   login: Login;
@@ -63,4 +75,5 @@ export interface NavProps extends PanelProps {
   chainId: number;
   switchNetwork: SwitchNetwork;
   track?: TrackHandler | undefined;
+  liveResult?: LiveResultProps["apiResult"];
 }
