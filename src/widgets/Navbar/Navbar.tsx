@@ -18,6 +18,7 @@ import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
+import { GlowCircle } from "../../components/GlowCircle";
 
 const Wrapper = styled.div`
   position: relative;
@@ -149,6 +150,21 @@ const Navbar: React.FC<NavProps> = ({
     setHoveredItem(label);
   };
 
+  const navbarApiResult = [
+    {
+      id: 1,
+      settings: [
+        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+        { id: 2, label: "Collect", settings: [{ id: 2, tag: "NOT", navItem: "NFA Auction" }] },
+      ],
+      published_at: "2022-04-11T18:15:41.981Z",
+      created_at: "2022-04-11T18:15:39.418Z",
+      updated_at: "2022-04-12T14:20:12.100Z",
+    },
+  ][0]?.settings;
+  console.log("navbarApiResult", navbarApiResult);
+
+
   return (
     <Wrapper>
       <StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
@@ -161,6 +177,7 @@ const Navbar: React.FC<NavProps> = ({
         {!isMobile && (
           <Flex ml="15px" justifyContent="space-between" style={{ height: "100%" }}>
             {links.map((link) => {
+              const found = navbarApiResult.find(result => result.label === link.label)
               return (
                 <div
                   style={{ position: "relative" }}
@@ -179,18 +196,21 @@ const Navbar: React.FC<NavProps> = ({
                         onClick={handleClick}
                       >
                         {link.label}
-                        {link.label === "Raise" && <p>d</p>}
                       </NavItem>
                     </MenuLink>
                   ) : (
                     <NavItem
                       key={link.href}
                       active={
-                        link.href === currentPath || link.items?.find((item) => item.href === currentPath) !== undefined
+                        link.href === currentPath ||
+                        link.items?.find((item) => item.href === currentPath) !== undefined
                       }
                       onClick={handleClick}
                     >
                       {link.label}
+                      {link.label === "Raise" &&
+                        found?.label === link.label &&
+                        found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
                     </NavItem>
                   )}
                   {link.label === hoveredItem && link?.items && (
@@ -202,11 +222,63 @@ const Navbar: React.FC<NavProps> = ({
                         isDark={isDark}
                         chainId={chainId}
                         track={track}
+                        subMenu={found?.settings}
                       />
                     </div>
                   )}
                 </div>
               );
+
+              // DIVIDER ---------------------- DIVIDER
+
+              // return (
+              //   <div
+              //     style={{ position: "relative" }}
+              //     onMouseOver={() => handleHover(link.label)}
+              //     onFocus={() => handleHover(link.label)}
+              //     onMouseLeave={() => handleHover("")}
+              //   >
+              //     {link.href ? (
+              //       <MenuLink href={link.href}>
+              //         <NavItem
+              //           key={link.href}
+              //           active={
+              //             link.href === currentPath ||
+              //             link.items?.find((item) => item.href === currentPath) !== undefined
+              //           }
+              //           onClick={handleClick}
+              //         >
+              //           {link.label}
+              //           link is "Raise"
+              //           settings[""]
+              //           {link.label === "Raise" && tag === "LIVE" && <GlowCircle />}
+              //         </NavItem>
+              //       </MenuLink>
+              //     ) : (
+              //       <NavItem
+              //         key={link.href}
+              //         active={
+              //           link.href === currentPath || link.items?.find((item) => item.href === currentPath) !== undefined
+              //         }
+              //         onClick={handleClick}
+              //       >
+              //         {link.label}
+              //       </NavItem>
+              //     )}
+              //     {link.label === hoveredItem && link?.items && (
+              //       <div style={{ display: "flex", backgroundColor: "red" }}>
+              //         <SubNavbar
+              //           items={link.items}
+              //           image={isDark ? link.darkIcon : link.lightIcon}
+              //           label={link.label}
+              //           isDark={isDark}
+              //           chainId={chainId}
+              //           track={track}
+              //         />
+              //       </div>
+              //     )}
+              //   </div>
+              // );
             })}
           </Flex>
         )}

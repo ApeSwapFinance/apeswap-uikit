@@ -20,6 +20,11 @@ interface SubNavbarProps {
   isDark: boolean;
   chainId: number | string;
   track?: TrackHandler | undefined;
+  subMenu?: {
+    id: number;
+    tag: string;
+    navItem: string;
+  }[]
 }
 const StyledLink = styled.a`
   :hover {
@@ -85,7 +90,7 @@ const StyledTag = styled(Tag)`
   height: auto;
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track }) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track, subMenu }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
@@ -94,11 +99,17 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
     <StyledCard key={1}>
       <NavHolder>
         {items.map((item) => {
+          const found = subMenu?.find(menu => menu.navItem === item.label)
+          console.log("subMenu navItem", found?.navItem);
+          console.log("subMenu Tag", found?.tag);
+
           return (
             <NewMenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
               <StyledText label={item.label}>{item.label}</StyledText>
-              {(item?.isNew || item?.isLive) && (
-                <StyledTag variant={item?.isLive ? "success" : "binance"}>{item?.isLive ? "LIVE" : "NEW"}</StyledTag>
+              {(item?.isNew || found?.tag === "LIVE") && (
+                <StyledTag variant={found?.tag === "LIVE" ? "success" : "binance"}>
+                  {found?.tag === "LIVE" ? "LIVE" : "NEW"}
+                </StyledTag>
               )}
             </NewMenuLink>
           );

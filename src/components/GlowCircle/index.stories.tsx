@@ -1,5 +1,4 @@
 import React from "react";
-import Flex from "../Flex/Flex";
 import GlowCircle from "./GlowCircle";
 
 export default {
@@ -9,7 +8,5 @@ export default {
 };
 
 export const Default: React.FC = () => {
-  return (
-    <GlowCircle />
-  );
+  return <GlowCircle />;
 };

@@ -47,10 +47,10 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-gSAPjG dVnwau"
+        class="sc-lbxAil jCEoqo"
       >
         <nav
-          class="sc-iNWwEs ksrpKF"
+          class="sc-jfmDQi hFXrp"
         >
           <div
             class="sc-gsnTZi jjsmnk"
@@ -193,7 +193,7 @@ it("renders correctly", () => {
           </div>
         </nav>
         <div
-          class="sc-jfmDQi hegyBW"
+          class="sc-eKszNL bwTPcC"
         >
           <div
             class="sc-bBXxYQ goysRs"
@@ -250,7 +250,7 @@ it("renders correctly", () => {
                 <div
                   class="sc-iAvgwm kaGhUN"
                 >
-                  Offerings
+                  Raise
                 </div>
                 <svg
                   class="sc-dkzDqf jbfioX"
@@ -278,7 +278,7 @@ it("renders correctly", () => {
                 <div
                   class="sc-iAvgwm kaGhUN"
                 >
-                  NFA
+                  Collect
                 </div>
                 <svg
                   class="sc-dkzDqf jbfioX"
@@ -306,7 +306,7 @@ it("renders correctly", () => {
                 <div
                   class="sc-iAvgwm kaGhUN"
                 >
-                  Lending
+                  Lend
                 </div>
               </a>
             </div>
@@ -509,12 +509,12 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-eKszNL jSkqKj"
+            class="sc-olbas cFlZhZ"
           >
             body
           </div>
           <div
-            class="sc-bczRLJ sc-olbas hQRyqf cBXRBi"
+            class="sc-bczRLJ sc-hiMGwR hQRyqf ggQHUb"
             role="presentation"
           />
         </div>

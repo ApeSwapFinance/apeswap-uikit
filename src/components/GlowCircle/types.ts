@@ -1,3 +1,1 @@
-export interface GlowCircleProps {
-
-}
+export interface GlowCircleProps {}

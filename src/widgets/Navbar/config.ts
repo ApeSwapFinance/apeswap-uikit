@@ -42,16 +42,14 @@ export const links = [
     darkIcon: "OfferingsDarkImage",
     items: [
       {
-        label: "Official",
+        label: "Official IAO",
         href: "/iao",
-        isNew: true,
-        isLive: true,
+        isNew: false,
       },
       {
         label: "Self-Serve",
         href: "/ss-iao",
         isNew: false,
-        isLive: false,
       },
     ],
   },
@@ -67,10 +65,9 @@ export const links = [
         isNew: false,
       },
       {
-        label: "Auction",
+        label: "NFA Auction",
         href: "/auction",
         isNew: false,
-        isLive: true,
       },
       {
         label: "Staking",

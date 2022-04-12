@@ -7,9 +7,9 @@ const GlowCircle = styled.span<GlowCircleProps>`
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #cca92c;
+  background: ${({ theme }) => theme.colors.success};
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+  box-shadow: 0 0 0 rgba(56, 166, 17, 0.4);
   animation: pulse 2s infinite;
 
   :hover {
@@ -18,7 +18,7 @@ const GlowCircle = styled.span<GlowCircleProps>`
 
   @-webkit-keyframes pulse {
     0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+      -webkit-box-shadow: 0 0 0 0 rgba(56, 166, 17, 0.4);
     }
     70% {
       -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
@@ -30,8 +30,8 @@ const GlowCircle = styled.span<GlowCircleProps>`
 
   @keyframes pulse {
     0% {
-      -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
-      box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+      -moz-box-shadow: 0 0 0 0 rgba(56, 166, 17, 0.4);
+      box-shadow: 0 0 0 0 rgba(56, 166, 17, 0.4);
     }
     70% {
       -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
