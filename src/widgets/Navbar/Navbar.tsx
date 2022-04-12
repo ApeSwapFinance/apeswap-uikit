@@ -179,6 +179,7 @@ const Navbar: React.FC<NavProps> = ({
                         onClick={handleClick}
                       >
                         {link.label}
+                        {link.label === "Raise" && <p>d</p>}
                       </NavItem>
                     </MenuLink>
                   ) : (

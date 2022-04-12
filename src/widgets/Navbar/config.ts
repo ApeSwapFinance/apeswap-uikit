@@ -37,7 +37,7 @@ export const links = [
     ],
   },
   {
-    label: "Offerings",
+    label: "Raise",
     lightIcon: "OfferingsLightImage",
     darkIcon: "OfferingsDarkImage",
     items: [
@@ -57,7 +57,7 @@ export const links = [
   },
 
   {
-    label: "NFA",
+    label: "Collect",
     lightIcon: "NfaLightImage",
     darkIcon: "NfaDarkImage",
     items: [
@@ -80,7 +80,7 @@ export const links = [
     ],
   },
   {
-    label: "Lending",
+    label: "Lend",
     href: "https://app.ola.finance/apeswap/markets",
     isNew: false,
   },

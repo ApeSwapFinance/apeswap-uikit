@@ -28,6 +28,7 @@ export * from "./components/Carousel";
 export * from "./components/TooltipBubble";
 export * from "./components/Select";
 export * from "./components/Layouts";
+export * from "./components/GlowCircle";
 
 // Hooks
 export * from "./hooks";
