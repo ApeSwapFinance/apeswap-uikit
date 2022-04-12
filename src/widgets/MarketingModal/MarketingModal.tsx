@@ -254,7 +254,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
               />
             </IconContainer>
 
-              <CircleDiv>{renderDots()}</CircleDiv>
+            <CircleDiv>{renderDots()}</CircleDiv>
 
             <IconContainer>
               <StyledRightArrow
