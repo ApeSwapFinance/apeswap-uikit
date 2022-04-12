@@ -28,7 +28,6 @@ export const Connected: React.FC = (args: any) => {
   const track = ({}: TrackProps): void => {
     return null;
   };
-
   const navbarApiResult = [
     {
       id: 1,
