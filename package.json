@@ -1,6 +1,6 @@
 {
   "name": "@apeswapfinance/uikit",
-  "version": "0.11.2-1.2-alpha",
+  "version": "0.11.2-1.2-beta",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
