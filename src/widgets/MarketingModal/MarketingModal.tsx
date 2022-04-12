@@ -31,8 +31,8 @@ const StyledModal = styled.div`
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
     max-width: 900px;
-    height: 500px;
-    max-height: 500px;
+    min-height: 60%;
+    max-height: 75%;
     border-radius: 20px;
     margin: auto;
     position: absolute;
@@ -184,7 +184,14 @@ const StyledButton = styled(ButtonSquare)`
   font-weight: 700;
 `;
 
-const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onDismiss, startEarning, children }) => {
+const MarketingModal: React.FC<MarketingModalProps> = ({
+  title,
+  description,
+  onDismiss,
+  startEarning,
+  startEarningText,
+  children,
+}) => {
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
@@ -213,6 +220,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
       ))
     );
   };
+  console.log("startEarning", startEarning);
+  console.log("childrensLength", childrensLength);
 
   return (
     <Container>
@@ -245,7 +254,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               />
             </IconContainer>
 
-            <CircleDiv>{renderDots()}</CircleDiv>
+              <CircleDiv>{renderDots()}</CircleDiv>
 
             <IconContainer>
               <StyledRightArrow
@@ -259,9 +268,11 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
             </IconContainer>
           </SliderBtnSection>
 
-          <StyledButton fullWidth onClick={startEarning}>
-            Start Earning
-          </StyledButton>
+          {startEarning && (
+            <StyledButton fullWidth onClick={startEarning}>
+              {startEarningText}
+            </StyledButton>
+          )}
         </ModalFooter>
       </StyledModal>
     </Container>
@@ -270,7 +281,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
 
 MarketingModal.defaultProps = {
   onDismiss: () => null,
-  startEarning: () => null,
+  startEarning: undefined,
 };
 
 export default MarketingModal;
