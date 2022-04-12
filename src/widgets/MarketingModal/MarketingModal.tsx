@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
-import { Button } from "../../components/Button";
+import { ButtonSquare } from "../../components/ButtonSquare";
 import { MarketingModalProps, IconProps } from "./types";
 
 const Container = styled.div`
@@ -17,6 +17,7 @@ const Container = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   z-index: ${({ theme }) => theme.zIndices.modal - 5};
 `;
+
 const StyledModal = styled.div`
   position: relative;
   display: flex;
@@ -41,6 +42,7 @@ const StyledModal = styled.div`
     left: 0;
   }
 `;
+
 const ModalHeader = styled.div`
   display: flex;
   flex-direction: column-reverse;
@@ -52,6 +54,7 @@ const ModalHeader = styled.div`
     align-self: center;
   }
 `;
+
 const LeftHeader = styled.div`
   display: flex;
   flex-direction: column;
@@ -173,7 +176,8 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
     cursor: pointer;
   }
 `;
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonSquare)`
+  /* width: 274px; */
   height: 44px;
   font-size: 16px;
   padding: 10px 20px;
@@ -234,8 +238,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               <StyledLeftArrow
                 color="text"
                 width="12px"
-                height="14px"
-                onClick={goPrev}
+                // height="14px"
+                // onClick={goPrev}
                 step={step}
                 childrensLength={childrensLength}
               />
@@ -247,8 +251,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({ title, description, onD
               <StyledRightArrow
                 color="text"
                 width="12px"
-                height="14px"
-                onClick={goNext}
+                // height="14px"
+                // onClick={goNext}
                 step={step}
                 childrensLength={childrensLength}
               />
