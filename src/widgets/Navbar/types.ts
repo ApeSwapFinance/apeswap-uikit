@@ -75,5 +75,5 @@ export interface NavProps extends PanelProps {
   chainId: number;
   switchNetwork: SwitchNetwork;
   track?: TrackHandler | undefined;
-  liveResult?: LiveResultProps["apiResult"];
+  liveResult: LiveResultProps["apiResult"];
 }

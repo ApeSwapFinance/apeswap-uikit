@@ -8,12 +8,13 @@ import { DiscordIcon, TelegramIcon, TwitterIcon } from "./icons";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import NetworkButton from "./NetworkButton";
-import { PanelProps, PushedProps } from "./types";
+import { LiveResultProps, PanelProps, PushedProps } from "./types";
 import Text from "../../components/Text/Text";
 import Tag from "../../components/Tag/Tag";
 import Flex from "../../components/Flex/Flex";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
+import { GlowCircle } from "../../components/GlowCircle";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -22,6 +23,7 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   chainId: number;
   switchNetwork: (chainId: number) => void;
   track?: TrackHandler | undefined;
+  liveResult: LiveResultProps["apiResult"];
 }
 
 const StyledLink = styled.a`
@@ -122,6 +124,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   switchNetwork,
   toggleTheme,
   track,
+  liveResult,
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -133,6 +136,8 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
     <Wrapper isPushed={isPushed} showMenu={showMenu}>
       {links.map((entry) => {
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        const found = liveResult.find((result) => result.label === entry.label);
+
         if (entry.items) {
           return (
             <Accordion
@@ -142,20 +147,29 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               label={entry.label}
               initialOpenState={entry.initialOpenState}
               className={calloutClass}
+              isLive={found?.settings[0]?.tag === "LIVE"}
             >
               {isPushed &&
-                entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <NewMenuLink href={item.href}>
-                      <StyledText label={item.label}>{item.label}</StyledText>
-                      {(item?.isNew || item?.isLive) && (
-                        <StyledTag variant={item?.isLive ? "success" : "binance"}>
-                          {item?.isLive ? "LIVE" : "NEW"}
-                        </StyledTag>
-                      )}
-                    </NewMenuLink>
-                  </MenuEntry>
-                ))}
+                entry.items.map((item) => {
+                  const subMenu = found?.settings?.find((menu) => menu.navItem === item.label);
+                  return (
+                    <MenuEntry
+                      key={item.href}
+                      secondary
+                      isActive={item.href === location.pathname}
+                      onClick={handleClick}
+                    >
+                      <NewMenuLink href={item.href}>
+                        <StyledText label={item.label}>{item.label}</StyledText>
+                        {(item?.isNew || subMenu?.tag === "LIVE") && (
+                          <StyledTag variant={subMenu?.tag === "LIVE" ? "success" : "binance"}>
+                            {subMenu?.tag === "LIVE" ? "LIVE" : "NEW"}
+                          </StyledTag>
+                        )}
+                      </NewMenuLink>
+                    </MenuEntry>
+                  );
+                })}
             </Accordion>
           );
         }
@@ -166,7 +180,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
             isActive={entry.href === location.pathname}
             onClick={handleClick}
           >
-            <MenuLink href={entry?.href}>
+            <MenuLink href={entry?.href} target={entry.label === "Lend" ? "_blank" : "_parent"}>
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
             </MenuLink>
           </MenuEntry>

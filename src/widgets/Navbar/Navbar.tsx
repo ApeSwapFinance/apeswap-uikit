@@ -163,7 +163,7 @@ const Navbar: React.FC<NavProps> = ({
         {!isMobile && (
           <Flex ml="15px" justifyContent="space-between" style={{ height: "100%" }}>
             {links.map((link) => {
-              const found = liveResult?.find((result) => result.label === link.label);
+              const found = liveResult.find((result) => result.label === link.label);
               return (
                 <div
                   style={{ position: "relative" }}
@@ -172,7 +172,7 @@ const Navbar: React.FC<NavProps> = ({
                   onMouseLeave={() => handleHover("")}
                 >
                   {link.href ? (
-                    <MenuLink href={link.href}>
+                    <MenuLink href={link.href} target={link.label === 'Lend' ? "_blank" : "_parent"}>
                       <NavItem
                         key={link.href}
                         active={
@@ -252,6 +252,7 @@ const Navbar: React.FC<NavProps> = ({
             isDark={isDark}
             track={track}
             currentLang="en"
+            liveResult={liveResult}
           />
         )}
         <Inner isPushed={isPushed} showMenu={showMenu} isMobile={isMobile}>

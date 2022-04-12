@@ -100,9 +100,6 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
       <NavHolder>
         {items.map((item) => {
           const found = subMenu?.find((menu) => menu.navItem === item.label);
-          console.log("subMenu navItem", found?.navItem);
-          console.log("subMenu Tag", found?.tag);
-
           return (
             <NewMenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
               <StyledText label={item.label}>{item.label}</StyledText>

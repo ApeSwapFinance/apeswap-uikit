@@ -91,6 +91,18 @@ export const Connected: React.FC = (args: any) => {
 };
 
 export const NotConnected: React.FC = () => {
+   const navbarApiResult = [
+     {
+       id: 1,
+       settings: [
+         { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+       ],
+       published_at: "2022-04-11T18:15:41.981Z",
+       created_at: "2022-04-11T18:15:39.418Z",
+       updated_at: "2022-04-12T14:20:12.100Z",
+     },
+   ][0].settings;
   return (
     <BrowserRouter>
       <Navbar
@@ -105,6 +117,7 @@ export const NotConnected: React.FC = () => {
         links={links}
         chainId={56}
         switchNetwork={noop}
+        liveResult={navbarApiResult}
       >
         <div style={{ lineHeight: "30px" }}>
           <h1>Page body</h1>
@@ -165,6 +178,18 @@ export const NotConnected: React.FC = () => {
 };
 
 export const WithNoProfile: React.FC = () => {
+  const navbarApiResult = [
+    {
+      id: 1,
+      settings: [
+        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+      ],
+      published_at: "2022-04-11T18:15:41.981Z",
+      created_at: "2022-04-11T18:15:39.418Z",
+      updated_at: "2022-04-12T14:20:12.100Z",
+    },
+  ][0].settings;
   return (
     <BrowserRouter>
       <Navbar
@@ -184,6 +209,7 @@ export const WithNoProfile: React.FC = () => {
           profileLink: "/profile",
           noProfileLink: "/no-profile",
         }}
+        liveResult={navbarApiResult}
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -209,6 +235,18 @@ export const WithNoProfile: React.FC = () => {
 };
 
 export const WithProfile: React.FC = () => {
+   const navbarApiResult = [
+     {
+       id: 1,
+       settings: [
+         { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+       ],
+       published_at: "2022-04-11T18:15:41.981Z",
+       created_at: "2022-04-11T18:15:39.418Z",
+       updated_at: "2022-04-12T14:20:12.100Z",
+     },
+   ][0].settings;
   return (
     <BrowserRouter>
       <Navbar
@@ -230,6 +268,7 @@ export const WithProfile: React.FC = () => {
           profileLink: "/profile",
           noProfileLink: "/no-profile",
         }}
+        liveResult={navbarApiResult}
       >
         <div>
           <Heading as="h1" mb="8px">
