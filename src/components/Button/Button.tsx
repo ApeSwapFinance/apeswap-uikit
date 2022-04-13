@@ -1,3 +1,4 @@
+import { capitalize } from "lodash";
 import React from "react";
 import { Button as ThemeUIButton, useColorMode } from "theme-ui";
 import { ButtonProps, variants, buttonFontSizes, buttonPadding, sizes } from "./types";
@@ -30,11 +31,13 @@ const Button: React.FC<ButtonProps> = ({
       {...props}
       sx={{
         variant: `buttons.${variant}`,
+        textTransform: "uppercase",
         fontSize: buttonFontSizes[size],
         px: buttonPadding[size].x,
         py: buttonPadding[size].y,
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
         transition: "all .3s linear",
         ...hoverStyle,
         "&:active": {
