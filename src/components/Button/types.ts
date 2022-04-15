@@ -39,6 +39,7 @@ export interface ButtonProps extends ThemeUIButtonProps {
   variant?: variantProps;
   size?: sizeProps;
   csx?: ThemeUICSSObject;
+  load?: boolean;
   [key: string]: any;
 }
 

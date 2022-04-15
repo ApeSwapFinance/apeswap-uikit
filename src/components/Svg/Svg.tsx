@@ -38,19 +38,24 @@ import {
   Reddit,
   Medium,
   Instagram,
+  Website,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./Icons/types";
 
 const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
-  const getStyles = ({ degree, color }: IconStyles) =>
+  const getStyles = ({ degree, color, margin }: IconStyles) =>
     dynamicStyles.generic({
       degree,
       color,
+      margin,
     });
 
   if (icon === icons.CARET) {
     return <Caret {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.WEBSITE) {
+    return <Website {...props} getStyles={getStyles} />;
   }
   if (icon === icons.EXTERNAL) {
     return <External {...props} getStyles={getStyles} />;
