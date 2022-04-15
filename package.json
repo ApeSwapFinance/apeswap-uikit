@@ -1,6 +1,6 @@
 {
   "name": "@ape.swap/uikit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
