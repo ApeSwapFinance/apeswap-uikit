@@ -48,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
         ...csx,
       }}
     >
-      {children} {load && <Icon color='currentColor' ml='5px' spin />}
+      {children} {load && <Icon color="currentColor" ml="5px" spin />}
     </ThemeUIButton>
   );
 };

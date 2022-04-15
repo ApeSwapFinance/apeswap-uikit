@@ -9,7 +9,7 @@ it("renders correctly", () => {
       <button
         class="css-1uqiw52"
       >
-        Submit
+        Submit 
       </button>
     </DocumentFragment>
   `);

@@ -32,7 +32,7 @@ it("renders correctly", () => {
         <button
           class="css-1tsgfhl"
         >
-          Switch2
+          Switch2 
         </button>
         <input
           aria-hidden="true"
