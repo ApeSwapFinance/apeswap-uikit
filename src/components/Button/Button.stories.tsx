@@ -30,4 +30,5 @@ Default.args = {
   variant: "primary",
   disabled: false,
   size: "md",
+  load: false,
 };

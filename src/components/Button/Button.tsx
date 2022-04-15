@@ -1,6 +1,6 @@
-import { capitalize } from "lodash";
 import React from "react";
 import { Button as ThemeUIButton, useColorMode } from "theme-ui";
+import Icon from "../Svg/_Icons/AutoRenew";
 import { ButtonProps, variants, buttonFontSizes, buttonPadding, sizes } from "./types";
 
 const Button: React.FC<ButtonProps> = ({
@@ -8,6 +8,7 @@ const Button: React.FC<ButtonProps> = ({
   sx,
   csx,
   size = sizes.MEDIUM,
+  load,
   children,
   ...props
 }) => {
@@ -47,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
         ...csx,
       }}
     >
-      {children}
+      {children} {load && <Icon color="currentColor" ml="5px" spin />}
     </ThemeUIButton>
   );
 };

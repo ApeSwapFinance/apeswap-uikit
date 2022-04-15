@@ -45,6 +45,7 @@ export enum icons {
   REDDIT = "reddit",
   MEDIUM = "medium",
   INSTAGRAM = "instagram",
+  WEBSITE = "website",
 }
 
 export enum directions {
@@ -66,4 +67,5 @@ export interface SvgProps {
   direction?: directionTypes;
   color?: colorProps;
   width?: string | number;
+  spin?: boolean;
 }

@@ -20,12 +20,12 @@ it("renders correctly", () => {
         <div
           class="css-1uqiw52"
         >
-          Item 1
+          Item 1 
         </div>
         <div
-          class="sc-gsTEea iwPuPn css-1bp4pnh"
+          class="sc-dlfnuX ciRmlX css-1bp4pnh"
         >
-          Item 2
+          Item 2 
         </div>
       </div>
     </DocumentFragment>

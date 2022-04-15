@@ -33,3 +33,4 @@ export { default as Discord } from "./Discord";
 export { default as Reddit } from "./Reddit";
 export { default as Medium } from "./Medium";
 export { default as Instagram } from "./Instagram";
+export { default as Website } from "./Website";

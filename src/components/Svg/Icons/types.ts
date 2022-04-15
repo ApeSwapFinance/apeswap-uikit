@@ -15,4 +15,5 @@ export interface rotation {
 export interface IconStyles {
   color?: string;
   degree?: number;
+  margin?: string;
 }
