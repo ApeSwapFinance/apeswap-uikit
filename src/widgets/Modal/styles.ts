@@ -9,7 +9,6 @@ const styles: Record<string, ThemeUIStyleObject> = {
     hr: {
       background: "#DCD9D9",
     },
-    zIndex: "modal",
     position: "fixed",
     display: "block",
     top: "50%",
