@@ -27,7 +27,7 @@ const StyledModal = styled.div`
   background: ${({ theme }) => theme.colors.white2};
   color: ${({ theme }) => theme.colors.text};
   z-index: ${({ theme }) => theme.zIndices.modal};
-  
+
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
     height: 500px;
