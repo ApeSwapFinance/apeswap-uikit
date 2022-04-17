@@ -1,5 +1,5 @@
 import React from "react";
-import { Button as ThemeUIButton, useColorMode } from "theme-ui";
+import { Button as ThemeUIButton } from "theme-ui";
 import Icon from "../Svg/_Icons/AutoRenew";
 import { ButtonProps, variants, buttonFontSizes, buttonPadding, sizes } from "./types";
 
@@ -12,7 +12,6 @@ const Button: React.FC<ButtonProps> = ({
   children,
   ...props
 }) => {
-  const [colorMode] = useColorMode();
   let hoverStyle = {
     "&:hover": {
       "&:not([disabled])": { borderColor: "#FFDA00", background: variant === "primary" && "#FFDA00" },
@@ -23,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     hoverStyle = {
       "&:hover": {
         "&:not([disabled])": hoverStyle["&:hover"]["&:not([disabled])"],
-        "&:disabled": colorMode === "dark" && { color: "#AFADAA", borderColor: "#AFADAA" },
+        "&:disabled": { color: "#AFADAA", borderColor: "#AFADAA" },
       },
     };
   }

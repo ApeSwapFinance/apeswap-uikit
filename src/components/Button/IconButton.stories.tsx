@@ -29,7 +29,7 @@ export const Default = (args: any) => (
 export const Custom = (args: any) => (
   <StorybookLayout {...args}>
     <IconButton {...args}>
-      <Svg color={"white" as any} icon="twitter" />
+      <Svg color={"white" as any} icon="reddit"/>
     </IconButton>
   </StorybookLayout>
 );

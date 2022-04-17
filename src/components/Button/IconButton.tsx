@@ -7,7 +7,7 @@ import style from "./styles";
 import colorValues from "../../theme/Apeswap/types";
 
 const IconButton: React.FC<IconButtonProps> = ({
-  icon = icons.SEND,
+  icon = icons.DISCORD,
   color = colorValues.white1,
   background = colorValues.yellow,
   variant = variants.PRIMARY,
