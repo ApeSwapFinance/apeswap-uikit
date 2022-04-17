@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ArrowDropDownIcon } from "../../components/Svg";
 import Button from "../../components/Button/Button";
 import { SwitchNetwork } from "./types";
-import useNetworkModal from "./useNetworkModal"
+import useNetworkModal from "./useNetworkModal";
 import { ChainId, NETWORK_LABEL } from "./config";
 import BinanceChain from "./icons/BinanceChain";
 import PolygonChain from "./icons/PolygonChain";

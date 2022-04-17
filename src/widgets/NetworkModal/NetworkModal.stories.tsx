@@ -18,15 +18,15 @@ export default {
 };
 
 export const Default = (args: any) => {
-  const [chainId, setChainId] = useState(56)
+  const [chainId, setChainId] = useState(56);
 
   const changeNetwork = (netId: number): void => {
-     if (netId === 56) {
-       setChainId(137)
-     } else {
-       setChainId(56)
-     }
-  }
+    if (netId === 56) {
+      setChainId(137);
+    } else {
+      setChainId(56);
+    }
+  };
 
   return (
     <StorybookLayout {...args}>
