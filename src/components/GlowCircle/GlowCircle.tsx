@@ -4,8 +4,8 @@ import { GlowCircleProps } from "./types";
 const GlowCircle = styled.span<GlowCircleProps>`
   margin-left: 5px;
   display: block;
-  width: ${({ width }) => (width || "8px")};
-  height: ${({ height }) => (height || "8px")};
+  width: ${({ width }) => width || "8px"};
+  height: ${({ height }) => height || "8px"};
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.success};
   cursor: pointer;
