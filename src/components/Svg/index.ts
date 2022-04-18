@@ -6,6 +6,9 @@ export * from "./Icons";
 export * from "./tokens";
 
 // Legacy Icons
+export { default as BillsM1 } from "./_Icons/BillsM1";
+export { default as BillsM2 } from "./_Icons/BillsM2";
+export { default as BillsM3 } from "./_Icons/BillsM3";
 export { default as PFarmingIcon } from "./_Icons/PFarming";
 export { default as GovernanceIcon } from "./_Icons/Governance";
 export { default as XPoolsIcon } from "./_Icons/XPools";

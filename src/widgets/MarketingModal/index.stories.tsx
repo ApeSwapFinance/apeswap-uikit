@@ -63,6 +63,7 @@ export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
   title = "Welcome to ApeSwap's Lending Network",
   description = "How does it work?",
   startEarning,
+  startEarningText = "Buy Bills",
 }) => {
   const [visible, setVisible] = useState(true);
   const family = [<LendingBody1 />, <LendingBody2 />];
@@ -74,6 +75,7 @@ export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
           title={title}
           description={description}
           startEarning={startEarning}
+          startEarningText={startEarningText}
           onDismiss={() => setVisible(false)}
         >
           {family}
