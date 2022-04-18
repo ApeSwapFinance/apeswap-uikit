@@ -18,7 +18,6 @@ const StyledButton = styled(Button)`
   justify-content: space-between;
   align-items: center;
   height: 35px;
-  background-color: "yellow";
   border-radius: 10px;
   font-size: 14px;
   line-height: 10px;
@@ -41,7 +40,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
   return (
     <StyledButton
       size="sm"
-      variant="tertiary"
+      variant="secondary"
       color="text"
       onClick={() => {
         onPresentNetworkModal();

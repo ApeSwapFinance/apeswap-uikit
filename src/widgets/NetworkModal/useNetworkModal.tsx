@@ -1,5 +1,5 @@
 import React from "react";
-import { useModal } from "./Modal";
+import { useModal } from "../Modal";
 import { SwitchNetwork } from "./types";
 import SelectNetworkModal from "./SelectNetworkModal";
 
@@ -8,7 +8,12 @@ interface ReturnType {
 }
 
 const useNetworkModal = (switchNetwork: SwitchNetwork, chainId: number): ReturnType => {
-  const [onPresentNetworkModal] = useModal(<SelectNetworkModal switchNetwork={switchNetwork} chainId={chainId} />);
+  const [onPresentNetworkModal] = useModal(
+    <SelectNetworkModal switchNetwork={switchNetwork} chainId={chainId} />,
+    true,
+    false,
+    "NetworkModal"
+  );
   return { onPresentNetworkModal };
 };
 

@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Text, ThemeUIStyleObject } from "theme-ui";
 import Modal from "./Modal";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
@@ -62,7 +62,7 @@ export const Default = (args: any) => {
         Show Modal
       </Button>
       <Modal {...args} open={open} handleClose={() => setOpen(!open)}>
-        <ModalHeader handleClose={() => setOpen(!open)}>
+        <ModalHeader onDismiss={() => setOpen(!open)}>
           <Heading as="h3">Stake BANANA</Heading>
         </ModalHeader>
         <div sx={styles.base}>
@@ -78,7 +78,7 @@ export const Default = (args: any) => {
             <Text>Balance: 100.33</Text>
           </div>
         </div>
-        <ModalFooter handleClose={() => setOpen(!open)}>
+        <ModalFooter onDismiss={() => setOpen(!open)}>
           <Button>DEPOSIT</Button>
         </ModalFooter>
       </Modal>

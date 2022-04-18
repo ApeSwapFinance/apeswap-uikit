@@ -1,5 +1,6 @@
 export { default as Modal } from "./Modal";
 export { default as ModalHeader } from "./ModalHeader";
+export { default as ModalProvider } from "./ModalContext";
 export { default as ModalFooter } from "./ModalFooter";
-export type { ModalProps } from "./types";
 export { default as useModal } from "./useModal";
+export type { ModalProps } from "./types";

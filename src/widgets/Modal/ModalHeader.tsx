@@ -5,12 +5,12 @@ import { IconButton } from "../../components/Button";
 import { InternalProps } from "./types";
 import { Divider } from "../../components/Divider";
 
-const ModalHeader: React.FC<InternalProps> = ({ children, handleClose, ...props }) => {
+const ModalHeader: React.FC<InternalProps> = ({ children, onDismiss, ...props }) => {
   return (
     <>
       <Flex {...props} sx={style.modalHead}>
         {children}
-        <IconButton icon="close" color="text" variant="transparent" onClick={handleClose} />
+        <IconButton icon="close" color="text" variant="transparent" onClick={onDismiss} />
       </Flex>
       <Divider />
     </>

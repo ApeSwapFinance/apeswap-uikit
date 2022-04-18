@@ -18,7 +18,6 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switc
       disabled={networkConfig.chainId === chainId}
       marginBottom="10px"
       variant="secondary"
-      fontFamily="poppins"
       onClick={() => {
         switchNetwork(networkConfig.chainId);
         onDismiss();
