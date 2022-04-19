@@ -239,6 +239,6 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
 MobileNavMenu.defaultProps = {
   track: undefined,
   liveResult: undefined,
-}
+};
 
 export default MobileNavMenu;

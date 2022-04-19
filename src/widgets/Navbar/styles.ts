@@ -36,7 +36,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     marginLeft: "15px",
     justifyContent: "space-between",
     height: "100%",
-  }
+  },
 };
 
 export default styles;

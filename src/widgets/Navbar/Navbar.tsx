@@ -19,7 +19,7 @@ import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { GlowCircle } from "../../components/GlowCircle";
-import styles from "./styles"
+import styles from "./styles";
 
 const Wrapper = styled.div`
   position: relative;
@@ -217,11 +217,13 @@ const Navbar: React.FC<NavProps> = ({
             })}
           </Flex>
         )}
-        <Flex sx={{
-          alignItems: "center",
-          position: "absolute",
-          right: "30px"
-        }}>
+        <Flex
+          sx={{
+            alignItems: "center",
+            position: "absolute",
+            right: "30px",
+          }}
+        >
           {!isMobile && (
             <Flex sx={{ marginRight: "10px" }}>
               <ThemeSwitcher isDark={isDark} isMini toggleTheme={toggleTheme} />
