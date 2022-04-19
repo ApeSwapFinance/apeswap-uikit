@@ -1,3 +1,4 @@
+import { ButtonTheme } from "../components/Button/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices, FontFamily } from "./types";
 
 export interface ApeSwapTheme {
@@ -7,6 +8,7 @@ export interface ApeSwapTheme {
   fontFamily: FontFamily;
   breakpoints: Breakpoints;
   mediaQueries: MediaQueries;
+  button: ButtonTheme;
   spacing: Spacing;
   shadows: Shadows;
   radii: Radii;

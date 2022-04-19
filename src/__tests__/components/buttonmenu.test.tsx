@@ -23,7 +23,7 @@ it("renders correctly", () => {
           Item 1 
         </div>
         <div
-          class="sc-dlfnuX ciRmlX css-1bp4pnh"
+          class="sc-dlfnuX kGgUdn css-1bp4pnh"
         >
           Item 2 
         </div>

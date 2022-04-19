@@ -25,6 +25,7 @@ export * from "./components/Carousel";
 export * from "./components/TooltipBubble";
 export * from "./components/Select";
 export * from "./components/GlowCircle";
+export * from "./components/ThemeSwitcher";
 
 // Hooks
 export * from "./hooks";

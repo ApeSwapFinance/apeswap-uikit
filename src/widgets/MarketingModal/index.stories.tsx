@@ -1,55 +1,72 @@
 import React, { useState } from "react";
-import { MktModalProps, MarketingModal } from ".";
-import { Default as Connected } from "../Menu/Menu.stories";
+import styled from "styled-components";
+import { MarketingModalProps, MarketingModal } from ".";
+import { Connected } from "../Navbar/index.stories";
+import { Text } from "../../components/Text";
+import ModalContent from "./ModalContent";
+import { LendingM1Icon, LendingM2Icon } from "../../components/Svg";
 
 export default {
   title: "Widgets/MarketingModal",
   component: MarketingModal,
   argTypes: {
     onDismiss: { action: "onDismiss" },
-    goToFarms: { action: "goToFarms" },
-    goToLiquidity: { action: "goToLiquidity" },
-    connectWallet: { action: "connectWallet" },
     startEarning: { action: "startEarning" },
   },
 };
 
-export const Default: React.FC<MktModalProps> = ({
-  title = "Welcome to ApeSwap's Farms",
-  description = "Start earning passive income with your cryptocurrency!",
-  connectWallet,
-  goToFarms,
-  goToLiquidity,
-  startEarning,
-}) => {
-  const [visible, setVisible] = useState(true);
+const RightContent = styled.div`
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 50%;
+  }
+`;
+const StyledText = styled(Text)`
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
 
+  ${({ theme }) => theme.mediaQueries.md} {
+    text-align: left;
+  }
+`;
+
+const LendingBody1: React.FC = () => {
   return (
-    <>
-      {visible && (
-        <MarketingModal
-          title={title}
-          description={description}
-          connectWallet={connectWallet}
-          goToFarms={goToFarms}
-          goToLiquidity={goToLiquidity}
-          startEarning={startEarning}
-          onDismiss={() => setVisible(false)}
-        />
-      )}
-    </>
+    <ModalContent Icon={<LendingM1Icon width={240} height={120} />}>
+      <RightContent>
+        <StyledText>
+          Our network uses an &quot;overcollateral&quot; model. <br />
+          Users can borrow any type of asset listed, as long as they supply some of their own assets as collateral
+          first.
+        </StyledText>
+      </RightContent>
+    </ModalContent>
   );
 };
 
-export const WithMenuBackground: React.FC<MktModalProps> = ({
-  title = "Welcome to ApeSwap's Farms",
-  description = "Start earning passive income with your cryptocurrency!",
-  connectWallet,
-  goToFarms,
-  goToLiquidity,
+const LendingBody2: React.FC = () => {
+  return (
+    <ModalContent Icon={<LendingM2Icon width={240} height={120} />}>
+      <RightContent>
+        <StyledText>
+          Suppliers earn interest paid by borrowers. <br />
+          When a supplied asset is enabled as collateral, suppliers can borrow from any of the available markets. <br />
+          The borrow amount is limited to 70% of the value of supplied assets.
+        </StyledText>
+      </RightContent>
+    </ModalContent>
+  );
+};
+
+export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
+  title = "Welcome to ApeSwap's Lending Network",
+  description = "How does it work?",
   startEarning,
+  startEarningText = "Buy Bills",
 }) => {
   const [visible, setVisible] = useState(true);
+  const family = [<LendingBody1 />, <LendingBody2 />];
 
   return (
     <>
@@ -57,12 +74,12 @@ export const WithMenuBackground: React.FC<MktModalProps> = ({
         <MarketingModal
           title={title}
           description={description}
-          connectWallet={connectWallet}
-          goToFarms={goToFarms}
-          goToLiquidity={goToLiquidity}
           startEarning={startEarning}
+          startEarningText={startEarningText}
           onDismiss={() => setVisible(false)}
-        />
+        >
+          {family}
+        </MarketingModal>
       )}
       <Connected />
     </>

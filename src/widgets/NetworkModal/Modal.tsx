@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useEffect } from "react";
 import styled from "styled-components";
 import Heading from "../../components/Heading/Heading";
 import Flex from "../../components/Flex/Flex";
-import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
+import { ArrowBackIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { InjectedProps, Handler } from "./types";
 import { Context } from "./ModalContext";

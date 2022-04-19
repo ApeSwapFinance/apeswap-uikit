@@ -9,7 +9,17 @@ it("renders correctly", () => {
     <DocumentFragment>
       <div
         class="css-vurnku"
-      />
+      >
+        <div
+          class="css-bwl3l-Modal"
+          style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
+        >
+          body
+        </div>
+        <div
+          class="css-x5mwqx-Modal"
+        />
+      </div>
     </DocumentFragment>
   `);
 });

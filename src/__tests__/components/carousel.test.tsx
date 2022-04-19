@@ -16,7 +16,7 @@ it("renders correctly", () => {
             class="css-nyzuf5"
           >
             <svg
-              class="sc-bdfBQB kMDCNf"
+              class="sc-bdfBQB kA-DbXw"
               color="text"
               viewBox="0 0 24 24"
               width="20px"
@@ -31,7 +31,7 @@ it("renders correctly", () => {
             class="css-nyzuf5"
           >
             <svg
-              class="sc-bdfBQB kMDCNf"
+              class="sc-bdfBQB kA-DbXw"
               color="text"
               viewBox="0 0 24 24"
               width="20px"

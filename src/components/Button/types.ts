@@ -23,6 +23,10 @@ export const buttonPadding = {
 export enum variants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  TEXT = "text",
+  DANGER = "danger",
+  TERTIARY = "tertiary",
+  SUCCESS = "success",
 }
 
 export enum iconButtonVariants {
@@ -49,3 +53,18 @@ export interface IconButtonProps extends Omit<ButtonProps, "variant"> {
   background?: colorProps;
   icon?: iconTypes;
 }
+
+export type ButtonThemeVariant = {
+  background: string;
+  backgroundActive: string;
+  backgroundHover: string;
+  border: string | number;
+  borderColorHover: string;
+  boxShadow: string;
+  boxShadowActive: string;
+  color: string;
+};
+
+export type ButtonTheme = {
+  [key in variants]: ButtonThemeVariant;
+};
