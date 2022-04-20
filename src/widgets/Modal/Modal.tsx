@@ -9,6 +9,7 @@ const Modal: React.FC<ModalProps> = ({
   children,
   handleClose,
   open = false,
+  zIndex = "modal",
   minWidth = "50%",
   maxWidth = "80%",
   ...props
@@ -23,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({
             transition={{ opacity: { duration: 0.2 }, transform: { duration: 0.2 } }}
             exit={{ opacity: 0, transform: "translate(-50%, -50%) scale(0)" }}
             {...props}
-            sx={{ minWidth, maxWidth, ...style.container }}
+            sx={{ minWidth, maxWidth, zIndex, ...style.container }}
           >
             {children}
           </motion.div>

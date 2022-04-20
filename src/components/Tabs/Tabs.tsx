@@ -4,6 +4,8 @@ import { Button } from "../Button";
 import { TabsProps, variants, tabPadding, sizes, fontSizes } from "./types";
 import styles from "./styles";
 
+const isBrowser = typeof window === "object";
+
 const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants.CENTERED, size = sizes.MEDIUM }) => {
   const [label, setLabel] = useState<string>();
   const activeRef = useRef<any>(null);
@@ -45,6 +47,13 @@ const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants
         {React.Children.map(children, (child) => {
           return React.cloneElement(child as any, {
             ...(child as any)?.props,
+            sx:
+              !isBrowser && (child as any)?.props?.index === activeTab
+                ? {
+                    background: "yellow",
+                    color: "primaryBright",
+                  }
+                : undefined,
             ref: (child as any)?.props?.index === activeTab ? activeRef : undefined,
           });
         })}
@@ -52,6 +61,7 @@ const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants
           csx={{
             ...styles.tabButton,
             ...activeStyle,
+            display: isBrowser ? undefined : "none",
           }}
           sx={{ px: tabPadding[size].x, py: tabPadding[size].y, fontSize: fontSizes[size] }}
         >

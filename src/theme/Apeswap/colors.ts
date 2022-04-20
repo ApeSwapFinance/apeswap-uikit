@@ -28,6 +28,7 @@ const Colors = {
   white4: "#EADFC7",
   radioChecked: "#FAFAFA",
   navMenuLogo: "#C8BA9C",
+  footer: "#4d4040",
   modes: {
     dark: {
       background: "#0B0B0B",
@@ -51,6 +52,7 @@ const Colors = {
       white4: "#424242",
       radioChecked: "#0B0B0B",
       navMenuLogo: "#5E5E5E",
+      footer: "#0B0B0B",
     },
   },
 };

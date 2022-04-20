@@ -6,6 +6,8 @@ import { Text } from "../Text";
 import { ToggleProps, sizes, togglePadding, fontSizes } from "./types";
 import styles from "./styles";
 
+const isBrowser = typeof window === "object";
+
 const Toggle: React.FC<ToggleProps> = ({ checked, labels, size = sizes.MEDIUM, ...props }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const leftRef = useRef<any>(null);
@@ -14,13 +16,19 @@ const Toggle: React.FC<ToggleProps> = ({ checked, labels, size = sizes.MEDIUM, .
   const [activeStyle, setActiveStyle] = useState({});
 
   const getActiveStyles = useCallback(() => {
-    return {
-      width: (isChecked && size ? rightRef : leftRef)?.current?.getBoundingClientRect?.()?.width || "fit-content",
-      left:
-        isChecked && rightRef?.current
-          ? rightRef?.current?.getBoundingClientRect?.()?.x - rightRef?.current?.parentNode.getBoundingClientRect?.()?.x
-          : 0,
-    };
+    return isBrowser
+      ? {
+          width: (isChecked && size ? rightRef : leftRef)?.current?.getBoundingClientRect?.()?.width || "fit-content",
+          left:
+            isChecked && rightRef?.current
+              ? rightRef?.current?.getBoundingClientRect?.()?.x -
+                rightRef?.current?.parentNode.getBoundingClientRect?.()?.x
+              : 0,
+        }
+      : {
+          right: isChecked ? 0 : undefined,
+          left: isChecked ? undefined : 0,
+        };
   }, [isChecked, size]);
 
   useEffect(() => {

@@ -6,4 +6,5 @@ export interface ModalProps extends InternalProps {
   open?: boolean;
   minWidth?: string;
   maxWidth?: string;
+  zIndex?: string | number;
 }

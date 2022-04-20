@@ -5,7 +5,7 @@ import { sizes, TabProps, variants, tabPadding, fontSizes } from "./types";
 import styles from "./styles";
 
 const Tab: React.FC<TabProps> = React.forwardRef(
-  ({ onClick, index, label, size = sizes.MEDIUM, variant = variants.CENTERED }, ref) => {
+  ({ onClick, index, label, size = sizes.MEDIUM, variant = variants.CENTERED, ...props }, ref) => {
     return (
       <Box
         ref={ref as any}
@@ -14,6 +14,7 @@ const Tab: React.FC<TabProps> = React.forwardRef(
           flex: variant === variants.FULLWIDTH ? 1 : undefined,
           px: tabPadding[size].x,
           py: tabPadding[size].y,
+          ...(props as any)?.sx,
         }}
         onClick={() => onClick(index)}
       >
