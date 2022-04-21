@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
-import { ButtonSquareProps, ButtonSquareThemeVariant, variants } from "./types";
+import { ButtonSquareProps } from "./types";
 
 type ThemedProps = {
   theme: DefaultTheme;
@@ -22,7 +22,7 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedProps) => {
       background-color: ${theme.colors.backgroundDisabled};
       border-color: ${theme.colors.backgroundDisabled};
       box-shadow: none;
-      color: ${theme.colors.textDisabled};
+      color: ${theme.colors.backgroundDisabled};
       cursor: not-allowed;
     }
   `;

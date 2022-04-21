@@ -59,17 +59,7 @@ export type Colors = {
   tertiary: string;
   primaryGray: string;
   yellowHover: string;
-  // secondary: string;
-  // warning: string;
-  // contrast: string;
-  // invertedContrast: string;
   input: string;
-  // textDisabled: string;
-  // textSubtle: string;
-  // borderColor: string;
-  // card: string;
-  // white: string;
-  // green: string;
 
   // Gradients
   gradients?: Gradients;

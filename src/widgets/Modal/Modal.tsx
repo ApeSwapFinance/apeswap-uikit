@@ -12,7 +12,7 @@ const Modal: React.FC<ModalProps> = ({
   onDismiss,
   open = true,
   title,
-  minWidth = "350px",
+  minWidth = "50%",
   maxWidth = "80%",
   ...props
 }) => {

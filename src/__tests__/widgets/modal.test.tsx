@@ -11,7 +11,7 @@ it("renders correctly", () => {
         class="css-vurnku"
       >
         <div
-          class="css-bwl3l-Modal"
+          class="css-ntbpa9-Modal"
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           body

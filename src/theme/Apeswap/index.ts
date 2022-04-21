@@ -5,7 +5,7 @@ import baseTheme, { breakpointMap } from "./base";
 const buttonBaseStyles = {
   borderRadius: "normal",
   padding: "10px 20px 10px 19px",
-  fontSize: 2,
+  fontSize: "16px",
   cursor: "pointer",
   fontWeight: "bold",
 };

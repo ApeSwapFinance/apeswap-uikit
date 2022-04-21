@@ -1,4 +1,6 @@
-export const links = [
+import { MenuEntry } from "./types";
+
+export const links: MenuEntry[] = [
   {
     label: "Exchange",
     href: "/swap",
