@@ -246,6 +246,19 @@ const Apeswap: Theme = {
         color: "secondaryButtonDisableColor",
       },
     },
+    tertiary: {
+      ...buttonBaseStyles,
+      background: "navbar",
+      border: "",
+      color: "text",
+
+      "&:disabled": {
+        cursor: "not-allowed",
+        background: "white3",
+        color: "primaryButtonDisable",
+        border: "primaryBtnDisable",
+      },
+    },
     circular: {
       width: "40px",
       height: "40px",

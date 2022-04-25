@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ButtonProps as ThemeUIButtonProps, ThemeUICSSObject } from "theme-ui";
 import { iconTypes } from "../Svg/types";
 import { colorProps } from "../../theme/Apeswap/types";
@@ -15,9 +16,9 @@ export const buttonFontSizes = {
 };
 
 export const buttonPadding = {
-  [sizes.SMALL]: { x: 7, y: 1 },
-  [sizes.MEDIUM]: { x: 15, y: 4 },
-  [sizes.LARGE]: { x: 16, y: 6 },
+  [sizes.SMALL]: { x: 5, y: 2 },
+  [sizes.MEDIUM]: { x: 7, y: 4 },
+  [sizes.LARGE]: { x: 10, y: 6 },
 };
 
 export enum variants {
@@ -42,6 +43,9 @@ export type iconButtonVariantsProps = `${iconButtonVariants}`;
 export interface ButtonProps extends ThemeUIButtonProps {
   variant?: variantProps;
   size?: sizeProps;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  fullWidth?: boolean;
   csx?: ThemeUICSSObject;
   load?: boolean;
   [key: string]: any;
