@@ -71,7 +71,7 @@ export const WithVariations = (args: any) => {
       </Flex>
     </StorybookLayout>
   );
-}
+};
 
 Default.args = {
   colorMode: "light",
