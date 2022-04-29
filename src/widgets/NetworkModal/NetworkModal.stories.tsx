@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from "react";
-import NetworkButton from "./NetworkButton";
+import NetworkButton from "../Navbar/NetworkButton";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 
 export default {

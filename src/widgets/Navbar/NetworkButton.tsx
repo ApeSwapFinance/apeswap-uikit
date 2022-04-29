@@ -1,34 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { ArrowDropDownIcon, Binance } from "./icons";
-import Button from "../../components/Button/Button";
+import { ArrowDropDownIcon } from "../../components/Svg";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
 import { ChainId, NETWORK_LABEL } from "../NetworkModal/config";
 import PolygonChain from "../NetworkModal/icons/PolygonChain";
+import BinanceChain from "../NetworkModal/icons/BinanceChain";
+import { IconButton } from "../../components/Button";
+import { Text } from "../../components/Text";
+import styles from "./styles";
 
 interface Props {
   chainId: number;
   switchNetwork: SwitchNetwork;
 }
 
-const StyledButton = styled(Button)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 35px;
-  background-color: ${({ theme }) => theme.colors.white3};
-  border-radius: 10px;
-  font-size: 14px;
-  line-height: 10px;
-  padding: 0px 15px 0px 10px;
-  :focus {
-    box-shadow: none !important;
-  }
-`;
-
 export const NETWORK_ICON: { [key: number]: any } = {
-  [ChainId.BSC]: <Binance width="23px" mr="8px" />,
-  [ChainId.BSC_TESTNET]: <Binance width="23px" mr="8px" />,
+  [ChainId.BSC]: <BinanceChain width="23px" mr="8px" />,
+  [ChainId.BSC_TESTNET]: <BinanceChain width="23px" mr="8px" />,
   [ChainId.MATIC]: <PolygonChain width="23px" mr="8px" />,
   [ChainId.MATIC_TESTNET]: <PolygonChain width="23px" mr="8px" />,
 };
@@ -37,16 +25,18 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
   const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId);
 
   return (
-    <StyledButton
-      size="sm"
-      variant="tertiary"
-      color="text"
+    <IconButton
+      sx={styles.networkBtn}
       onClick={() => {
         onPresentNetworkModal();
       }}
     >
-      {NETWORK_ICON[chainId]} {NETWORK_LABEL[chainId]} <ArrowDropDownIcon width="10px" ml="8px" />
-    </StyledButton>
+      {NETWORK_ICON[chainId]}
+      <Text color="text" variant="sm" weight="bold">
+        {NETWORK_LABEL[chainId]}
+      </Text>
+      <ArrowDropDownIcon width="10px" ml="8px" />
+    </IconButton>
   );
 };
 

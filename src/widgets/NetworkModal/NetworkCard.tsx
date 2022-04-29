@@ -10,38 +10,13 @@ interface Props {
   switchNetwork: SwitchNetwork;
 }
 
-// -webkit-box-align: center;
-//     align-items: center;
-//     background-color: #f9f4e7;
-//     border: 2px solid #4d4040;
-//     color: #4d4040;
-//     border-radius: 10px;
-//     font-weight: 600;
-//     box-shadow: none;
-//     cursor: pointer;
-//     display: inline-flex;
-//     font-size: 16px;
-//     width: 100%;
-//     height: 44px;
-//     line-height: 1;
-//     letter-spacing: 0.03em;
-//     justify-content: center;
-//     outline: 0px;
-//     padding: 0px 24px;
-//     transition: background-color 0.2s ease 0s;
-//     opacity: 1;
-//     text-transform: uppercase;
-//     margin-bottom: 10px;
-
 const networkBtn = {
   alignItems: "center",
-  fontWeight: "bold",
-  display: "inline-flex",
-  fontSize: "16px",
-  height: "44px",
-  lineHeight: 1,
-  letterSpacing: "0.03em",
   justifyContent: "center",
+  fontWeight: "bold",
+  fontSize: "16px",
+  height: "48px",
+  letterSpacing: "0.03em",
   padding: "0px 24px",
   transition: " background-color 0.2s ease 0s",
   opacity: 1,
@@ -54,8 +29,8 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switc
     <Button
       csx={networkBtn}
       fullWidth
-      disabled={networkConfig.chainId === chainId}
-      variant="secondary"
+      disabled={chainId === networkConfig.chainId}
+      variant={chainId === networkConfig.chainId ? "primary" : "secondary"}
       onClick={() => {
         switchNetwork(networkConfig.chainId);
         onDismiss();

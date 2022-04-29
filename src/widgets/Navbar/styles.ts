@@ -37,6 +37,19 @@ const styles: Record<string, ThemeUIStyleObject> = {
     justifyContent: "space-between",
     height: "100%",
   },
+  networkBtn: {
+    display: 'flex',
+    alignItems: "center",
+    borderRadius: "10px",
+    fontSize: "14px",
+    lineHeight: "10px",
+    padding: "8px 11px",
+    background: "white3",
+    color: "text",
+    "&:hover": {
+      background: "white3",
+    }
+  },
 };
 
 export default styles;
