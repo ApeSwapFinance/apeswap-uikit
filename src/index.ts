@@ -26,6 +26,7 @@ export * from "./components/TooltipBubble";
 export * from "./components/Select";
 export * from "./components/GlowCircle";
 export * from "./components/ThemeSwitcher";
+export * from "./components/Tabs";
 
 // Hooks
 export * from "./hooks";

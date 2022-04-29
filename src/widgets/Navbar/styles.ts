@@ -38,7 +38,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     height: "100%",
   },
   networkBtn: {
-    display: 'flex',
+    display: "flex",
     alignItems: "center",
     borderRadius: "10px",
     fontSize: "14px",
@@ -48,7 +48,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     color: "text",
     "&:hover": {
       background: "white3",
-    }
+    },
   },
 };
 

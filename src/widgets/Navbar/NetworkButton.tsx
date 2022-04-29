@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { ArrowDropDownIcon } from "../../components/Svg";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
 import { ChainId, NETWORK_LABEL } from "../NetworkModal/config";

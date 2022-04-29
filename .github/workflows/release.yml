@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    branches:
-      - main-v-2
+    tags:
+      - '**'
 
 jobs:
   release:
@@ -13,8 +13,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
+      - name: Get tag name
+        id: get_tag_name
+        run: echo ::set-output name=TAG_NAME::${GITHUB_REF/refs\/tags\//}
+      
+      - name: Checkout branch
+        env:
+          TAG_NAME: ${{ steps.get_tag_name.outputs.TAG_NAME }}
+        run: git checkout tags/${TAG_NAME} -b ${TAG_NAME}-branch
 
-      - name: setup git config
+      - name: Setup git config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
@@ -34,7 +43,17 @@ jobs:
           always-auth=true
           EOT
       
-      - name: release
-        run: yarn release
-        env: 
+      - name: Release
+        env:
+          TAG_NAME: ${{ steps.get_tag_name.outputs.TAG_NAME }}
           NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: |
+          if [[ "$TAG_NAME" == *"alpha"* ]]; then
+            dist_tag=alpha
+          elif [[ "$TAG_NAME" == *"beta"* ]]; then
+            dist_tag=beta
+          else
+            dist_tag=latest
+          fi
+          yarn release -- $TAG_NAME --tag=${dist_tag}${TAG_NAME:1:1} --branch ${TAG_NAME}-branch
+          

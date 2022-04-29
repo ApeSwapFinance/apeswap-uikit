@@ -7,6 +7,7 @@ export interface ModalProps extends InternalProps {
   minWidth?: string;
   maxWidth?: string;
   title?: string;
+  zIndex?: string | number;
 }
 
 export interface ModalTheme {

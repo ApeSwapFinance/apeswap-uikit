@@ -13,14 +13,12 @@ interface Props {
 const networkBtn = {
   alignItems: "center",
   justifyContent: "center",
-  fontWeight: "bold",
   fontSize: "16px",
   height: "48px",
   letterSpacing: "0.03em",
   padding: "0px 24px",
-  transition: " background-color 0.2s ease 0s",
-  opacity: 1,
   marginBottom: "10px",
+  opacity: 1,
 };
 
 const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switchNetwork }) => {
@@ -28,6 +26,7 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switc
   return (
     <Button
       csx={networkBtn}
+      size="sm"
       fullWidth
       disabled={chainId === networkConfig.chainId}
       variant={chainId === networkConfig.chainId ? "primary" : "secondary"}
