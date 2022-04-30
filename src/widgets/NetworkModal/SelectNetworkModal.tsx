@@ -17,7 +17,6 @@ import { Heading } from "../../components/Heading";
 import networks from "./config";
 import NetworkCard from "./NetworkCard";
 
-
 // const networks = [
 //   {
 //     icon: "bsc_token",
@@ -35,8 +34,6 @@ interface Props {
   onDismiss?: () => void;
   chainId: number;
 }
-
-
 
 const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNetwork, chainId }) => (
   <Modal zIndex={200} maxWidth="350px" minWidth="350px" onDismiss={onDismiss}>

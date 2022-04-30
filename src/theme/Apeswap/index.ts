@@ -290,7 +290,7 @@ const Apeswap: Theme = {
       "&:hover": {
         filter: "brightness(85%)",
       },
-      
+
       "&:active": {
         transform: "scale(0.9)",
       },

@@ -40,7 +40,6 @@ const StyledButton = styled(Button)<{ account?: string }>`
 //   border: "none",
 // }
 
-
 const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
