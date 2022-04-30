@@ -24,10 +24,10 @@ export const buttonPadding = {
 export enum variants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
-  TEXT = "text",
-  DANGER = "danger",
   TERTIARY = "tertiary",
   SUCCESS = "success",
+  DANGER = "danger",
+  TEXT = "text",
 }
 
 export enum iconButtonVariants {

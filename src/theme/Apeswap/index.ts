@@ -223,14 +223,22 @@ const Apeswap: Theme = {
     primary: {
       ...buttonBaseStyles,
       background: "yellow",
-      color: "primaryBright",
       border: "primaryButton",
+      color: "primaryBright",
 
       "&:disabled": {
         cursor: "not-allowed",
         background: "white3",
         color: "primaryButtonDisable",
         border: "primaryBtnDisable",
+      },
+
+      "&:hover": {
+        "&:not([disabled])": {
+          borderColor: "yellow",
+          background: "yellow",
+        },
+        "&:disabled": {},
       },
     },
     secondary: {
@@ -245,11 +253,18 @@ const Apeswap: Theme = {
         border: "secondaryButtonDisable",
         color: "secondaryButtonDisableColor",
       },
+
+      "&:hover": {
+        "&:not([disabled])": {
+          borderColor: "yellow",
+        },
+        "&:disabled": {},
+      },
     },
     tertiary: {
       ...buttonBaseStyles,
-      background: "navbar",
-      border: "",
+      background: "white3",
+      border: "none",
       color: "text",
 
       "&:disabled": {
@@ -271,9 +286,11 @@ const Apeswap: Theme = {
       cursor: "pointer",
       padding: "1px",
       transition: "all .3s linear",
+
       "&:hover": {
         filter: "brightness(85%)",
       },
+      
       "&:active": {
         transform: "scale(0.9)",
       },

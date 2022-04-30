@@ -4,7 +4,7 @@ import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
 import { ChainId, NETWORK_LABEL } from "../NetworkModal/config";
 import PolygonChain from "../NetworkModal/icons/PolygonChain";
 import BinanceChain from "../NetworkModal/icons/BinanceChain";
-import { IconButton } from "../../components/Button";
+import { Button } from "../../components/Button";
 import { Text } from "../../components/Text";
 import styles from "./styles";
 
@@ -24,7 +24,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
   const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId);
 
   return (
-    <IconButton
+    <Button
       sx={styles.networkBtn}
       onClick={() => {
         onPresentNetworkModal();
@@ -35,7 +35,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
         {NETWORK_LABEL[chainId]}
       </Text>
       <ArrowDropDownIcon width="10px" ml="8px" />
-    </IconButton>
+    </Button>
   );
 };
 

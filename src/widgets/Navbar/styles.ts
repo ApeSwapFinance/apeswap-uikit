@@ -43,11 +43,12 @@ const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: "10px",
     fontSize: "14px",
     lineHeight: "10px",
-    padding: "8px 11px",
-    background: "white3",
+    padding: "6px 8px",
+    background: "white4",
     color: "text",
+    border: "none",
     "&:hover": {
-      background: "white3",
+      background: "white4",
     },
   },
 };

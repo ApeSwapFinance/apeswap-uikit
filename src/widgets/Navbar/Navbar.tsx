@@ -19,6 +19,8 @@ import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { GlowCircle } from "../../components/GlowCircle";
+
+// CHANGE COMPONENTS TO USE THE NEW THEME-UI COMPONENTS INSTEAD OF STYLED COMPONENTS
 import styles from "./styles";
 
 const Wrapper = styled.div`
@@ -225,7 +227,7 @@ const Navbar: React.FC<NavProps> = ({
           }}
         >
           {!isMobile && (
-            <Flex sx={{ marginRight: "10px" }}>
+            <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
               <ThemeSwitcher isDark={isDark} isMini toggleTheme={toggleTheme} />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>

@@ -30,6 +30,8 @@ const Colors = {
   navMenuLogo: "#C8BA9C",
   input: "#4D4040",
   footer: "#4d4040",
+  primaryGray: "#4D40407F",
+  gray: "#7A7A7A",
   modes: {
     dark: {
       background: "#0B0B0B",
