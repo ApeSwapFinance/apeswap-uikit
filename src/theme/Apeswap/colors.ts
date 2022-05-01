@@ -10,7 +10,7 @@ const Colors = {
   success: "#38A611",
   error: "#DF4141",
   yellow: "#FFB300",
-  brown: "#4D4040",
+  hoveredYellow: "#FFDA00",
   info: "#4D4040",
   primaryButtonDisable: "rgba(66, 66, 66, 0.5)",
   secondaryButtonDisableBg: "#F1EADA",
@@ -32,6 +32,7 @@ const Colors = {
   footer: "#4d4040",
   primaryGray: "#4D40407F",
   gray: "#7A7A7A",
+  brown: "#4D4040",
   modes: {
     dark: {
       background: "#0B0B0B",

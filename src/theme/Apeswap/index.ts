@@ -235,8 +235,8 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
-          borderColor: "yellow",
-          background: "yellow",
+          borderColor: "hoveredYellow",
+          background: "hoveredYellow",
         },
         "&:disabled": {},
       },
@@ -256,7 +256,7 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
-          borderColor: "yellow",
+          borderColor: "hoveredYellow",
         },
         "&:disabled": {},
       },
@@ -272,6 +272,14 @@ const Apeswap: Theme = {
         background: "white3",
         color: "primaryButtonDisable",
         border: "primaryBtnDisable",
+      },
+
+      "&:hover": {
+        "&:not([disabled])": {
+          background: "white4",
+          border: "none",
+        },
+        "&:disabled": {},
       },
     },
     circular: {

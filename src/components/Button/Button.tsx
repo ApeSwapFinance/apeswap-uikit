@@ -15,6 +15,32 @@ const Button: React.FC<ButtonProps> = ({
   fullWidth,
   ...props
 }) => {
+  let hoverStyle = {
+    "&:hover": {
+      "&:not([disabled])": { borderColor: "hoveredYellow", background: variant === "primary" && "hoveredYellow" },
+      "&:disabled": {},
+    },
+  };
+  if (variant === "secondary") {
+    hoverStyle = {
+      "&:hover": {
+        "&:not([disabled])": hoverStyle["&:hover"]["&:not([disabled])"],
+        "&:disabled": { color: "#AFADAA", borderColor: "#AFADAA" },
+      },
+    };
+  }
+  if (variant === "tertiary") {
+    hoverStyle = {
+      "&:hover": {
+        "&:not([disabled])": {
+          background: "white4",
+          borderColor: "none",
+        },
+        "&:disabled": {},
+      },
+    };
+  }
+
   return (
     <ThemeUIButton
       {...props}
@@ -31,6 +57,7 @@ const Button: React.FC<ButtonProps> = ({
         "&:active": {
           transform: "scale(0.9)",
         },
+        ...hoverStyle,
         width: fullWidth ? "100%" : "max-content",
         ...sx,
         ...csx,

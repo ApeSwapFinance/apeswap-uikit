@@ -26,6 +26,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
   return (
     <Button
       sx={styles.networkBtn}
+      variant="tertiary"
       onClick={() => {
         onPresentNetworkModal();
       }}

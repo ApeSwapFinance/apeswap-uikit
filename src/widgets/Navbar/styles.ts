@@ -1,5 +1,6 @@
 import { ThemeUIStyleObject } from "theme-ui";
 
+
 const styles: Record<string, ThemeUIStyleObject> = {
   menu: {
     background: "white3",
@@ -38,17 +39,27 @@ const styles: Record<string, ThemeUIStyleObject> = {
     height: "100%",
   },
   networkBtn: {
-    display: "flex",
     alignItems: "center",
-    borderRadius: "10px",
     fontSize: "14px",
     lineHeight: "10px",
     padding: "6px 8px",
-    background: "white4",
-    color: "text",
+    background: "white3",
+    border: "none",
+    height: "35px",
+    "&:hover": {
+      background: "white3",
+    },
+  },
+  userBlockBtn: {
+    height: "35px",
+    marginLeft: "10px",
+    background: (account) => account ? "white3" : "yellow",
+    color: (account) => account ? "text" : "primaryBright",
+    lineHeight: "10px",
+    padding: (account) => `0px ${account ? "45px" : "15px"} 0px 15px`,
     border: "none",
     "&:hover": {
-      background: "white4",
+      background: "white3",
     },
   },
 };

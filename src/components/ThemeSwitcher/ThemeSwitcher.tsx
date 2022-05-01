@@ -9,8 +9,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, isDark, isMi
   return (
     <Button
       sx={{
-        background: "white4",
-        borderRadius: "10px",
+        background: "white3",
         padding: isMini ? "8px" : "3px 12px",
         marginRight: isMini && "20px",
         height: "35px",
@@ -22,9 +21,10 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, isDark, isMi
           fill: isDark ? "gray" : "primaryGray",
         },
         "&:hover": {
-          background: "white4",
+          background: "white3",
         },
       }}
+      variant="tertiary"
       onClick={() => toggleTheme(!isDark)}
       isMini={isMini}
     >
@@ -33,7 +33,12 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, isDark, isMi
         {!isMini && (
           <>
             <IslandIcon width="20px" id="islandMode" />
-            <Text sx={{ color: isDark ? "gray" : "brown" }} mx="4px">
+            <Text
+              sx={{
+                color: isDark ? "gray" : "brown"
+              }}
+              mx="4px"
+            >
               /
             </Text>
           </>
