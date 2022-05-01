@@ -14,6 +14,7 @@ import Tag from "../../components/Tag/Tag";
 import Flex from "../../components/Flex/Flex";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
+import styles from "./styles";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -157,7 +158,20 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
                       onClick={handleClick}
                     >
                       <NewMenuLink href={item.href}>
-                        <StyledText label={item.label}>{item.label}</StyledText>
+                        <Text
+                          sx={{
+                            ...styles.dropDownMenuText,
+                            "&:hover": {
+                              boxShadow: `0px 2px 0px ${iconFillColor}`,
+                            },
+                          }}
+                          weight={700}
+                          size="16px"
+                          label={item.label}
+                        >
+                          {item.label}
+                        </Text>
+                        {/* <StyledText label={item.label}>{item.label}</StyledText> */}
                         {(item?.isNew || subMenu?.tag === "LIVE") && (
                           <StyledTag variant={subMenu?.tag === "LIVE" ? "success" : "binance"}>
                             {subMenu?.tag === "LIVE" ? "LIVE" : "NEW"}

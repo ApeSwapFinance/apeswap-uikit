@@ -5,7 +5,14 @@ import MobileLinkMenu from "./MobileLinkMenu";
 
 const MobileLinks: React.FC = () => {
   return (
-    <Flex flexDirection="column" margin="20px 0px" mb="100px" style={{ width: "100%" }}>
+    <Flex
+      sx={{
+        flexDirection: "column",
+        margin: "20px 0px",
+        width: "100%",
+      }}
+      mb="100px"
+    >
       <MobileLinkMenu title="Support" items={supportLinks} border />
       <MobileLinkMenu title="Engage" items={engageLinks} border />
       <MobileLinkMenu title="Learn" items={learnLinks} />

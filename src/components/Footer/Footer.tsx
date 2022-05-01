@@ -14,7 +14,7 @@ import {
 import { Text } from "../Text";
 import { FooterProps } from "./types";
 import { supportLinks, engageLinks, learnLinks } from "./config";
-import {
+import styles, {
   FlexContainer,
   Container,
   PeakingMonkey,
@@ -24,7 +24,6 @@ import {
   LinkColumnFlex,
   LogoFlex,
   ButtonFlex,
-  LinkText,
   StyledLink,
   BuyBananaButton,
   BottomRowContainer,
@@ -48,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       <FlexContainer>
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
-          <Text sx={{ color: "primaryBright" }} size="16px">
+          <Text color="primaryBright" size="16px">
             {`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
             experience for everyone.`}
           </Text>
@@ -111,9 +110,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                   target="_blank"
                 >
                   <ApeSwapRoundIcon width="34px" mr="8px" />
-                  <Text sx={{ color: "primaryBright" }} size="18px" weight={600}>{`$${bananaPriceUsd.toFixed(
-                    3
-                  )}`}</Text>
+                  <Text color="primaryBright" size="18px" weight={600}>{`$${bananaPriceUsd.toFixed(3)}`}</Text>
                 </PriceLink>
               ) : (
                 <Skeleton width={90} height={35} />
@@ -129,76 +126,90 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         ) : (
           <LinkskWrapper>
             <LinkColumnFlex style={{ width: "200px" }}>
-              {/* <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                Support
-              </Text> */}
               <Text
                 sx={{
-                  color: "yellow",
                   lineHeight: 1.5,
                 }}
                 size="22px"
                 weight="bold"
+                color="yellow"
               >
                 Support
               </Text>
               {supportLinks.map((link) => {
                 return (
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <LinkText>{link.label}</LinkText>
-                    {/* <Text sx={styles.linkText} size="normal" weight={400}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={
+                      {
+                        marginTop: "15px",
+                        marginBottom: "5px",
+                      }
+                    }
+                  >
+                    <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
                       {link.label}
-                    </Text> */}
+                    </Text>
                   </a>
                 );
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "240px" }}>
-              {/* <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                Engage
-              </Text> */}
               <Text
                 sx={{
-                  color: "yellow",
                   lineHeight: 1.5,
                 }}
                 size="22px"
                 weight="bold"
+                color="yellow"
               >
                 Engage
               </Text>
               {engageLinks.map((link) => {
                 return (
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <LinkText>{link.label}</LinkText>
-                    {/* <Text sx={styles.linkText} size="normal" weight={400}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      marginTop: "15px",
+                      marginBottom: "5px",
+                    }}
+                  >
+                    <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
                       {link.label}
-                    </Text> */}
+                    </Text>
                   </a>
                 );
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "130px" }}>
-              {/* <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                Learn
-              </Text> */}
               <Text
                 sx={{
-                  color: "yellow",
                   lineHeight: 1.5,
                 }}
                 size="22px"
                 weight="bold"
+                color="yellow"
               >
                 Learn
               </Text>
               {learnLinks.map((link) => {
                 return (
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <LinkText>{link.label}</LinkText>
-                    {/* <Text sx={styles.linkText} size="normal" weight={400}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      marginTop: "15px",
+                      marginBottom: "5px",
+                    }}
+                  >
+                    <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
                       {link.label}
-                    </Text> */}
+                    </Text>
                   </a>
                 );
               })}
@@ -208,7 +219,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       </FlexContainer>
       <PeakingMonkey />
       <AllRightsReserved>©2022 All rights reserved</AllRightsReserved>
-      {/* <Text sx={styles.allRightsReserved} weight={400}>
+      {/* <Text sx={styles.allRightsReserved} color="primaryBright" weight={400}>
         ©2022 All rights reserved
       </Text> */}
     </Container>

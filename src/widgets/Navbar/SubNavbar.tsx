@@ -85,8 +85,8 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
                     boxShadow: `0px 2px 0px ${iconFillColor}`,
                   },
                 }}
-                weight="bold"
-                size="normal"
+                weight={700}
+                size="16px"
                 label={item.label}
               >
                 {item.label}

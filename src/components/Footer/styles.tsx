@@ -1,4 +1,6 @@
+import { ThemeUIStyleObject } from "theme-ui";
 import styled from "styled-components";
+import ApeSwapTheme from "../../theme/Apeswap";
 import { MobileIcon } from "../../widgets/Navbar/icons";
 import { Button } from "../Button";
 import { Flex } from "../Flex";
@@ -11,6 +13,7 @@ export const FlexContainer = styled.div`
   background-color: ${({ theme }) => (theme.isDark ? theme.colors.background : "rgba(77, 64, 64, 1)")};
   flex-wrap: wrap;
   width: 250px;
+  margin-bottom: 100px;
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 335px;
     align-items: center;
@@ -25,6 +28,7 @@ export const FlexContainer = styled.div`
     width: 1200px;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 0px;
   }
 `;
 
@@ -192,15 +196,6 @@ export const ButtonFlex = styled.div`
   }
 `;
 
-export const LinkText = styled(Text)`
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: white;
-  :hover {
-    text-decoration: underline;
-  }
-`;
-
 export const StyledLink = styled.a`
   :hover {
     opacity: 0.8;
@@ -244,8 +239,30 @@ export const AllRightsReserved = styled(Text)`
   color: white;
   bottom: 10px;
   left: 20px;
+
   ${({ theme }) => theme.mediaQueries.sm} {
     bottom: 20px;
     left: auto;
   }
 `;
+
+const styles: Record<string, ThemeUIStyleObject> = {
+  allRightsReserved: {
+    position: "absolute",
+    bottom: "10px",
+    left: "20px",
+
+    [`${ApeSwapTheme?.mediaQueries?.sm}`]: {
+      background: "red",
+      bottom: "20px",
+      left: "auto",
+    },
+  },
+  linkText: {
+    "&:hover": {
+      textDecoration: "underline",
+    }
+  },
+};
+
+export default styles;
