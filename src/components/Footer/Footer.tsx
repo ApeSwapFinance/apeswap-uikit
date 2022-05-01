@@ -142,12 +142,10 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={
-                      {
-                        marginTop: "15px",
-                        marginBottom: "5px",
-                      }
-                    }
+                    style={{
+                      marginTop: "15px",
+                      marginBottom: "5px",
+                    }}
                   >
                     <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
                       {link.label}

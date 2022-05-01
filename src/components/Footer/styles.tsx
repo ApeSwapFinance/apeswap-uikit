@@ -261,7 +261,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
   linkText: {
     "&:hover": {
       textDecoration: "underline",
-    }
+    },
   },
 };
 
