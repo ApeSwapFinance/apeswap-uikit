@@ -1,4 +1,5 @@
 import React from "react";
+import { Box } from "theme-ui";
 import styled from "styled-components";
 import { DiscordIcon, TelegramIcon, TwitterIcon } from "./icons";
 import { Flex } from "../../components/Flex";
@@ -10,6 +11,7 @@ import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 import { Tag } from "../../components/Tag";
+import styles from "./styles"
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
@@ -32,54 +34,28 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledCard = styled.div`
-  position: absolute;
-  width: 429px;
-  min-height: 316px;
-  background-color: ${({ theme }) => theme.colors.navbar};
-  border-radius: 0px 0px 30px 30px;
-  padding: 15px 0px 20px 0px;
-  margin-left: 22.5px;
-  cursor: default;
-`;
+// const StyledText = styled(Text)<{ label?: string }>`
+//   margin-top: 6px;
+//   margin-bottom: 6px;
+//   margin-right: 6px;
+//   font-weight: 700;
 
-const NavHolder = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 200px;
-  margin: 0px 0px 0px 30px;
-`;
+//   background: ${({ label }) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)"};
+//   -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
+//   -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
+//   background-clip: ${({ label }) => label === "GNANA" && "text"};
+//   text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
 
-const NavImage = styled.div`
-  position: absolute;
-  display: block;
-  top: 0px;
-  right: 0px;
-  border-radius: 0px 0px 0px 30px;
-`;
+//   :hover {
+//     box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
+//   }
+// `;
 
-const StyledText = styled(Text)<{ label?: string }>`
-  margin-top: 6px;
-  margin-bottom: 6px;
-  margin-right: 6px;
-  font-weight: 700;
-
-  background: ${({ label }) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)"};
-  -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
-  -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
-  background-clip: ${({ label }) => label === "GNANA" && "text"};
-  text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
-
-  :hover {
-    box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
-  }
-`;
 
 const NewMenuLink = styled(MenuLink)`
   display: flex;
   align-items: center;
+  background: "red";
 `;
 
 const StyledTag = styled(Tag)`
@@ -97,13 +73,25 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
   const imageElement = <Image />;
 
   return (
-    <StyledCard key={1}>
-      <NavHolder>
+    <Box sx={styles.cardContainer} key={1}>
+      <Box sx={styles.navHolder}>
         {items.map((item) => {
           const found = subMenu?.find((menu) => menu.navItem === item.label);
           return (
-            <NewMenuLink href={item.href} target={label === "More" ? "_blank" : ""}>
-              <StyledText label={item.label}>{item.label}</StyledText>
+            <NewMenuLink href={item.href} target={label === "More" ? "_blank" : "_parent"}>
+              <Text
+                sx={{
+                  ...styles.dropDownMenuText,
+                  "&:hover": {
+                    boxShadow: `0px 2px 0px ${iconFillColor}`,
+                  },
+                }}
+                weight="bold"
+                size="normal"
+                label={item.label}
+              >
+                {item.label}
+              </Text>
               {(item?.isNew || found?.tag === "LIVE") && (
                 <StyledTag variant={found?.tag === "LIVE" ? "success" : "binance"}>
                   {found?.tag === "LIVE" ? "LIVE" : "NEW"}
@@ -112,12 +100,17 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
             </NewMenuLink>
           );
         })}
-      </NavHolder>
-      <NavImage>{imageElement}</NavImage>
+      </Box>
+      <Box sx={styles.navImage}>{imageElement}</Box>
       {label === "More" && (
         <Flex
-          justifyContent="space-between"
-          style={{ position: "absolute", bottom: "5px", right: "20px", width: "150px" }}
+          sx={{
+            justifyContent: "space-between",
+            position: "absolute",
+            bottom: "5px",
+            right: "20px",
+            width: "150px",
+          }}
         >
           <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
             <TwitterIcon
@@ -142,7 +135,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
           </StyledLink>
         </Flex>
       )}
-    </StyledCard>
+    </Box>
   );
 };
 

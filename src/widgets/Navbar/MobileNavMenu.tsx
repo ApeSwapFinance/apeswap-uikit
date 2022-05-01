@@ -68,9 +68,7 @@ const StyledText = styled(Text)<{ label?: string }>`
   margin-right: 6px;
   font-weight: 700;
 
-  background: ${({ label }) =>
-    label === "GNANA" &&
-    "linear-gradient(90deg, #ba801e 0%, #ffe988 20.68%, #ba801e 42.29%, #ffe988 66.19%, #ba801e 88.25%)"};
+  background: ${({ label }) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)"};
   -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
   -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
   background-clip: ${({ label }) => label === "GNANA" && "text"};

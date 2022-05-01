@@ -20,7 +20,6 @@ import MobileNavMenu from "./MobileNavMenu";
 import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { GlowCircle } from "../../components/GlowCircle";
 
-// CHANGE COMPONENTS TO USE THE NEW THEME-UI COMPONENTS INSTEAD OF STYLED COMPONENTS
 import styles from "./styles";
 
 const Wrapper = styled.div`

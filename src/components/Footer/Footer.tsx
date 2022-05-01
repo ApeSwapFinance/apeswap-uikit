@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       <FlexContainer>
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
-          <Text style={{ color: "white" }}>
+          <Text sx={{ color: "primaryBright" }} size="16px">
             {`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
             experience for everyone.`}
           </Text>
@@ -111,7 +111,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                   target="_blank"
                 >
                   <ApeSwapRoundIcon width="34px" mr="8px" />
-                  <Text fontSize="18px" fontWeight={600} style={{ color: "white" }}>{`$${bananaPriceUsd.toFixed(
+                  <Text sx={{ color: "primaryBright" }} size="18px" weight={600}>{`$${bananaPriceUsd.toFixed(
                     3
                   )}`}</Text>
                 </PriceLink>
@@ -129,37 +129,76 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         ) : (
           <LinkskWrapper>
             <LinkColumnFlex style={{ width: "200px" }}>
-              <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
+              {/* <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
+                Support
+              </Text> */}
+              <Text
+                sx={{
+                  color: "yellow",
+                  lineHeight: 1.5,
+                }}
+                size="22px"
+                weight="bold"
+              >
                 Support
               </Text>
               {supportLinks.map((link) => {
                 return (
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
                     <LinkText>{link.label}</LinkText>
+                    {/* <Text sx={styles.linkText} size="normal" weight={400}>
+                      {link.label}
+                    </Text> */}
                   </a>
                 );
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "240px" }}>
-              <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
+              {/* <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
+                Engage
+              </Text> */}
+              <Text
+                sx={{
+                  color: "yellow",
+                  lineHeight: 1.5,
+                }}
+                size="22px"
+                weight="bold"
+              >
                 Engage
               </Text>
               {engageLinks.map((link) => {
                 return (
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
                     <LinkText>{link.label}</LinkText>
+                    {/* <Text sx={styles.linkText} size="normal" weight={400}>
+                      {link.label}
+                    </Text> */}
                   </a>
                 );
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "130px" }}>
-              <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
+              {/* <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
+                Learn
+              </Text> */}
+              <Text
+                sx={{
+                  color: "yellow",
+                  lineHeight: 1.5,
+                }}
+                size="22px"
+                weight="bold"
+              >
                 Learn
               </Text>
               {learnLinks.map((link) => {
                 return (
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
                     <LinkText>{link.label}</LinkText>
+                    {/* <Text sx={styles.linkText} size="normal" weight={400}>
+                      {link.label}
+                    </Text> */}
                   </a>
                 );
               })}
@@ -169,6 +208,9 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       </FlexContainer>
       <PeakingMonkey />
       <AllRightsReserved>©2022 All rights reserved</AllRightsReserved>
+      {/* <Text sx={styles.allRightsReserved} weight={400}>
+        ©2022 All rights reserved
+      </Text> */}
     </Container>
   );
 };

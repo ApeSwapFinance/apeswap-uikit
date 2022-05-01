@@ -14,11 +14,13 @@ export enum weights {
 }
 
 type variantProps = `${variants}`;
-type weightProps = `${weights}`;
+type weightProps = `${weights}` | number;
+type sizeProps = string;
 
 export interface TextProps extends ThemeUITextProps {
   variant?: variantProps;
   weight?: weightProps;
   color?: colorProps;
+  size?: sizeProps;
   [key: string]: any;
 }

@@ -55,6 +55,42 @@ const styles: Record<string, ThemeUIStyleObject> = {
     padding: (account) => `0px ${account ? "45px" : "15px"} 0px 15px`,
     border: "none",
   },
+  cardContainer: {
+    position: "absolute",
+    width: "429px",
+    minHeight: "316px",
+    backgroundColor: "navbar",
+    borderRadius: "0px 0px 30px 30px",
+    padding: "15px 0px 20px 0px",
+    marginLeft: "22.5px",
+    cursor: "default",
+  },
+  navHolder: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "center",
+    width: "200px",
+    margin: "0px 0px 0px 30px",
+  },
+  navImage: {
+    position: "absolute",
+    display: "block",
+    top: "0px",
+    right: "0px",
+    borderRadius: "0px 0px 0px 30px",
+  },
+  dropDownMenuText: {
+    marginTop: "6px",
+    marginBottom: "6px",
+    marginRight: "6px",
+
+    "&:-webkit-background-clip": (label) => label === "GNANA" && "text",
+    "&:-webkit-text-fill-color": (label) => label === "GNANA" && "transparent",
+    backgroundClip: (label) => label === "GNANA" && "text",
+    background: (label) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
+    // "text-fill-color": (label) => label === "GNANA" && "transparent",
+  },
 };
 
 export default styles;

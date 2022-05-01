@@ -46,6 +46,7 @@ export enum icons {
   MEDIUM = "medium",
   INSTAGRAM = "instagram",
   WEBSITE = "website",
+  TELEGRAM = "telegram",
 }
 
 export enum directions {
