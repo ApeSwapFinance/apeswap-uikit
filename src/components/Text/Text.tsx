@@ -12,10 +12,7 @@ const Text: React.FC<TextProps> = ({
   ...props
 }) => {
   return (
-    <ThemeUIText
-      {...props}
-      sx={{ ...sx, variant: `text.${variant}`, color, fontWeight: weight, fontSize: size }}
-    >
+    <ThemeUIText {...props} sx={{ ...sx, variant: `text.${variant}`, color, fontWeight: weight, fontSize: size }}>
       {children}
     </ThemeUIText>
   );

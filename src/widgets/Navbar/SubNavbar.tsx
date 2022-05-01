@@ -11,7 +11,7 @@ import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 import { Tag } from "../../components/Tag";
-import styles from "./styles"
+import styles from "./styles";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
@@ -50,7 +50,6 @@ const StyledLink = styled.a`
 //     box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
 //   }
 // `;
-
 
 const NewMenuLink = styled(MenuLink)`
   display: flex;

@@ -27,7 +27,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
 
         "&:hover": {
           border: "none",
-        }
+        },
       }}
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
