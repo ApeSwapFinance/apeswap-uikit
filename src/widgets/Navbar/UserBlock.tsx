@@ -1,5 +1,4 @@
 import React from "react";
-// import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Button from "../../components/Button/Button";
 import { useWalletModal } from "../WalletModal";
@@ -13,36 +12,6 @@ interface Props {
   login: Login;
   logout: () => void;
 }
-
-// const StyledButton = styled(Button)<{ account?: string }>`
-//   /* display: flex; */
-//   /* justify-content: center; */
-//   /* align-items: center; */
-//   height: 35px;
-//   margin-left: 10px;
-//   color: ${({ account }) => (account ? "text" : "primaryBright")};
-//   border-radius: 10px;
-//   line-height: 10px;
-//   background-color: ${({ account }) => (account ? "white3" : "yellow")};
-//   padding: ${({ account }) => `0px ${account ? "45px" : "15px"} 0px 15px`};
-//   :focus {
-//     box-shadow: none !important;
-//   }
-// `;
-
-
-// const userBlockButton = {
-//   height: "35px",
-//   marginLeft: "10px",
-//   background: account ? "white3" : "yellow",
-//   color: account ? "text" : "primaryBright",
-//   lineHeight: "10px",
-//   padding: `0px ${account ? "45px" : "15px"} 0px 15px`,
-//   border: "none",
-//   "&:hover": {
-//     background: "white3",
-//   },
-// };
 
 const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);

@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   let hoverStyle = {
     "&:hover": {
-      "&:not([disabled])": { borderColor: "hoveredYellow", background: variant === "primary" && "hoveredYellow" },
+      "&:not([disabled])": { borderColor: "#FFDA00", background: variant === "primary" && "#FFDA00" },
       "&:disabled": {},
     },
   };
@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
     hoverStyle = {
       "&:hover": {
         "&:not([disabled])": hoverStyle["&:hover"]["&:not([disabled])"],
-        "&:disabled": { color: "#AFADAA", borderColor: "#AFADAA" },
+        "&:disabled": { color: "secondaryButtonDisableColor", borderColor: "secondaryButtonDisable" },
       },
     };
   }
@@ -33,8 +33,8 @@ const Button: React.FC<ButtonProps> = ({
     hoverStyle = {
       "&:hover": {
         "&:not([disabled])": {
+          borderColor: "primaryBtnDisable",
           background: "white4",
-          borderColor: "none",
         },
         "&:disabled": {},
       },

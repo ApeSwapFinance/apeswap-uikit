@@ -271,13 +271,11 @@ const Apeswap: Theme = {
         cursor: "not-allowed",
         background: "white3",
         color: "primaryButtonDisable",
-        border: "primaryBtnDisable",
       },
 
       "&:hover": {
         "&:not([disabled])": {
           background: "white4",
-          border: "none",
         },
         "&:disabled": {},
       },
