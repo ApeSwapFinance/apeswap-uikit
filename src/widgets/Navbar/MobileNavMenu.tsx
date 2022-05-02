@@ -93,24 +93,6 @@ const StyledTag = styled(Tag)`
   height: auto;
 `;
 
-const BottomContent = styled(Flex)`
-  @media screen and (max-width: 400px) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 90%;
-`;
-
-const RightBottom = styled(Flex)`
-  @media screen and (max-width: 400px) {
-    margin-bottom: 10px;
-  }
-`;
-
 const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   isPushed,
   showMenu,
@@ -207,7 +189,19 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           padding: "20px 0",
         }}
       >
-        <BottomContent>
+        <Flex
+          sx={{
+            "@media screen and (max-width: 400px)": {
+              flexDirection: "column-reverse",
+              alignItems: "center",
+            },
+
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            width: "90%",
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -238,11 +232,15 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               />
             </StyledLink>
           </div>
-          <RightBottom>
+          <Flex sx={{
+            "@media screen and (max-width: 400px)": {
+              marginBottom: "10px",
+            }
+          }}>
             <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} isMini />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
-          </RightBottom>
-        </BottomContent>
+          </Flex>
+        </Flex>
       </div>
     </Wrapper>
   );
