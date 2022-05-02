@@ -22,7 +22,7 @@ it("renders link external link correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <a
-        class="css-zmtz1e"
+        class="css-dovavb"
         href="https://apeswap.finance"
         target="_blank"
       >
@@ -34,7 +34,7 @@ it("renders link external link correctly", () => {
             class="css-15ebd6j-External"
             fill="none"
             viewBox="0 0 11 12"
-            width="11"
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

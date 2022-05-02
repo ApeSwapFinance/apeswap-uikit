@@ -47,10 +47,10 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-hTZgZg haifPG"
+        class="sc-citxvW iRpojR"
       >
         <nav
-          class="sc-gTgzoy LgcFg"
+          class="sc-bZSRNg fYLsjM"
         >
           <div
             class="css-4cffwv"
@@ -160,11 +160,11 @@ it("renders correctly", () => {
             </a>
           </div>
           <div
-            class="css-1wrw6pc"
+            class="css-viv9et"
           >
             <div>
               <button
-                class="sc-pGacB EorbK css-1w8r73l"
+                class="css-z7dc45"
                 font-size="14px"
               >
                 0xbd...c980 
@@ -172,7 +172,7 @@ it("renders correctly", () => {
             </div>
             <button
               aria-label="Toggle menu"
-              class="sc-cBNeex dquJnd css-6fwyeq"
+              class="css-13tk8k6"
             >
               <svg
                 class="sc-gsTEea fQWPxo"
@@ -190,13 +190,13 @@ it("renders correctly", () => {
           </div>
         </nav>
         <div
-          class="sc-laRQdt bsejct"
+          class="sc-iUuxjF jtvsWi"
         >
           <div
-            class="sc-jNMcJZ kgYsMG"
+            class="sc-jJEKmz iCqmdF"
           >
             <div
-              class="sc-jcVcSv JweEk"
+              class="sc-iJuVqt cSyUog"
               role="button"
             >
               <a
@@ -204,24 +204,24 @@ it("renders correctly", () => {
                 target="_parent"
               >
                 <div
-                  class="sc-citxvW IZiTE"
+                  class="sc-lmoMya daZkmU"
                 >
                   Exchange
                 </div>
               </a>
             </div>
             <div
-              class="sc-iUuxjF dIrmAZ"
+              class="sc-ezredP kdQMIs"
             >
               <div
-                class="sc-jcVcSv JweEk"
+                class="sc-iJuVqt cSyUog"
                 role="button"
               >
                 <div
-                  class="sc-eggMyH iDKGDQ"
+                  class="sc-kLgnNl duEDLN"
                 >
                   <div
-                    class="sc-citxvW IZiTE"
+                    class="sc-lmoMya daZkmU"
                   >
                     Stake
                   </div>
@@ -239,21 +239,21 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-iBaQBe hKJFXa"
+                class="sc-bYEvvW jbVPcz"
               />
             </div>
             <div
-              class="sc-iUuxjF dIrmAZ"
+              class="sc-ezredP kdQMIs"
             >
               <div
-                class="sc-jcVcSv JweEk"
+                class="sc-iJuVqt cSyUog"
                 role="button"
               >
                 <div
-                  class="sc-eggMyH iDKGDQ"
+                  class="sc-kLgnNl duEDLN"
                 >
                   <div
-                    class="sc-citxvW IZiTE"
+                    class="sc-lmoMya daZkmU"
                   >
                     Raise
                   </div>
@@ -271,21 +271,21 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-iBaQBe hKJFXa"
+                class="sc-bYEvvW jbVPcz"
               />
             </div>
             <div
-              class="sc-iUuxjF dIrmAZ"
+              class="sc-ezredP kdQMIs"
             >
               <div
-                class="sc-jcVcSv JweEk"
+                class="sc-iJuVqt cSyUog"
                 role="button"
               >
                 <div
-                  class="sc-eggMyH iDKGDQ"
+                  class="sc-kLgnNl duEDLN"
                 >
                   <div
-                    class="sc-citxvW IZiTE"
+                    class="sc-lmoMya daZkmU"
                   >
                     Collect
                   </div>
@@ -303,11 +303,11 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-iBaQBe hKJFXa"
+                class="sc-bYEvvW jbVPcz"
               />
             </div>
             <div
-              class="sc-jcVcSv JweEk"
+              class="sc-iJuVqt cSyUog"
               role="button"
             >
               <a
@@ -315,24 +315,24 @@ it("renders correctly", () => {
                 target="_blank"
               >
                 <div
-                  class="sc-citxvW IZiTE"
+                  class="sc-lmoMya daZkmU"
                 >
                   Lend
                 </div>
               </a>
             </div>
             <div
-              class="sc-iUuxjF dIrmAZ"
+              class="sc-ezredP kdQMIs"
             >
               <div
-                class="sc-jcVcSv JweEk"
+                class="sc-iJuVqt cSyUog"
                 role="button"
               >
                 <div
-                  class="sc-eggMyH iDKGDQ"
+                  class="sc-kLgnNl duEDLN"
                 >
                   <div
-                    class="sc-citxvW IZiTE"
+                    class="sc-lmoMya daZkmU"
                   >
                     More
                   </div>
@@ -350,20 +350,20 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-iBaQBe hKJFXa"
+                class="sc-bYEvvW jbVPcz"
               />
             </div>
             <div
               style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100px; padding: 20px 0px;"
             >
               <div
-                class="sc-Azgjq kWTysO css-4cffwv"
+                class="css-h2xgf9"
               >
                 <div
                   style="display: flex; align-items: center; justify-content: space-evenly; width: 200px;"
                 >
                   <a
-                    class="sc-cTkxnA PUuG"
+                    class="sc-iktFfs dJxxvQ"
                     href="https://twitter.com/ape_swap"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -389,7 +389,7 @@ it("renders correctly", () => {
                     </svg>
                   </a>
                   <a
-                    class="sc-cTkxnA PUuG"
+                    class="sc-iktFfs dJxxvQ"
                     href="https://t.me/ape_swap"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -415,7 +415,7 @@ it("renders correctly", () => {
                     </svg>
                   </a>
                   <a
-                    class="sc-cTkxnA PUuG"
+                    class="sc-iktFfs dJxxvQ"
                     href="https://t.me/ape_swap"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -458,10 +458,10 @@ it("renders correctly", () => {
                   </a>
                 </div>
                 <div
-                  class="sc-khAkCZ cnNGRQ css-4cffwv"
+                  class="css-98z5z1"
                 >
                   <button
-                    class="sc-hiSbEG iNygLD css-1bp4pnh"
+                    class="css-3q8cvw"
                   >
                     <div
                       class="css-4cffwv"
@@ -484,7 +484,7 @@ it("renders correctly", () => {
                      
                   </button>
                   <button
-                    class="sc-crrszt oUVEx css-1w8r73l"
+                    class="css-1sy4fxi"
                   >
                     <svg
                       class="sc-gsTEea RuZui"
@@ -504,7 +504,11 @@ it("renders correctly", () => {
                         fill="#FFFDFA"
                       />
                     </svg>
-                     BSC 
+                    <span
+                      class="css-hbvfi5"
+                    >
+                      BSC
+                    </span>
                     <svg
                       class="sc-gsTEea jJcsIR"
                       color="text"
@@ -523,23 +527,23 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-iNqMzA doFYBC"
+            class="sc-iBaQBe eWDVUC"
           >
             body
           </div>
           <div
-            class="sc-bdfBQB sc-jeGTLq kFZzJL hTalnU"
+            class="sc-bdfBQB sc-eggMyH fhltBt llDsKk"
             role="presentation"
           />
         </div>
         <div
-          class="sc-hHfuMS cRueTg"
+          class="sc-kstqJO ghTZyp"
         >
           <div
-            class="sc-dIUeWJ kWoNqA"
+            class="sc-bqyKOL lfHhHf"
           >
             <div
-              class="sc-lmoMya dXFPIt"
+              class="sc-hHfuMS gGahMv"
             >
               <svg
                 class="sc-gsTEea fEVstH"
@@ -671,17 +675,16 @@ it("renders correctly", () => {
                 />
               </svg>
               <span
-                class="css-1ciuxd4"
-                style="color: white;"
+                class="css-1rzh7ej"
               >
                 ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
                 experience for everyone.
               </span>
               <div
-                class="sc-iJuVqt enVFKB"
+                class="sc-dmlqKv koGHbZ"
               >
                 <button
-                  class="sc-hiSbEG ggaUJp css-1bp4pnh"
+                  class="css-1xz48uv"
                 >
                   <div
                     class="css-4cffwv"
@@ -700,7 +703,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <span
-                      class="sc-gWHigU kWGGOq css-1vi9qfn"
+                      class="css-i0gbfj"
                     >
                       /
                     </span>
@@ -725,7 +728,7 @@ it("renders correctly", () => {
                   style="margin: 0px 12.5px;"
                 />
                 <button
-                  class="sc-crrszt oUVEx css-1w8r73l"
+                  class="css-1sy4fxi"
                 >
                   <svg
                     class="sc-gsTEea RuZui"
@@ -745,7 +748,11 @@ it("renders correctly", () => {
                       fill="#FFFDFA"
                     />
                   </svg>
-                   BSC 
+                  <span
+                    class="css-hbvfi5"
+                  >
+                    BSC
+                  </span>
                   <svg
                     class="sc-gsTEea jJcsIR"
                     color="text"
@@ -761,10 +768,10 @@ it("renders correctly", () => {
                 </button>
               </div>
               <div
-                class="sc-bBXrwG gfALvL"
+                class="sc-bkzYnD kJjwTF"
               >
                 <a
-                  class="sc-ezredP dewTXJ"
+                  class="sc-kfzBvY hjZKab"
                   href="https://twitter.com/ape_swap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -790,7 +797,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-ezredP dewTXJ"
+                  class="sc-kfzBvY hjZKab"
                   href="https://discord.com/invite/ApeSwap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -832,7 +839,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-ezredP dewTXJ"
+                  class="sc-kfzBvY hjZKab"
                   href="https://t.me/ape_swap"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -858,7 +865,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-ezredP dewTXJ"
+                  class="sc-kfzBvY hjZKab"
                   href="https://www.reddit.com/r/Apeswap/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -884,7 +891,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-ezredP dewTXJ"
+                  class="sc-kfzBvY hjZKab"
                   href="https://ape-swap.medium.com/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -918,7 +925,7 @@ it("renders correctly", () => {
                   </svg>
                 </a>
                 <a
-                  class="sc-ezredP dewTXJ"
+                  class="sc-kfzBvY hjZKab"
                   href="https://www.instagram.com/apeswap.finance/"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -953,11 +960,11 @@ it("renders correctly", () => {
                 </a>
               </div>
               <div
-                class="sc-bYEvvW bMZzZf"
+                class="sc-fKFxtB gdSytb"
               >
                 <div>
                   <a
-                    class="sc-dmlqKv lcRwER"
+                    class="sc-hBEYId bHnjWH"
                     href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
                     target="_blank"
                   >
@@ -1054,10 +1061,7 @@ it("renders correctly", () => {
                       </g>
                     </svg>
                     <span
-                      class="css-1ciuxd4"
-                      font-size="18px"
-                      font-weight="600"
-                      style="color: white;"
+                      class="css-1gpelb2"
                     >
                       $0.232
                     </span>
@@ -1069,7 +1073,7 @@ it("renders correctly", () => {
                   target="_blank"
                 >
                   <button
-                    class="sc-kLgnNl eMJFWn"
+                    class="sc-bBXrwG kyUMIJ"
                   >
                     BUY BANANA
                   </button>
@@ -1077,15 +1081,13 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="css-qj8ook"
-              style="width: 100%;"
+              class="css-gzcqlw"
             >
               <div
-                class="sc-iktFfs hEkgii"
+                class="sc-iwyWTf bTwUqp"
               >
                 <span
-                  class="css-1ciuxd4"
-                  style="color: rgb(255, 179, 0);"
+                  class="css-1i6vqms"
                 >
                   Support
                 </span>
@@ -1102,11 +1104,10 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-iktFfs hEkgii"
+                class="sc-iwyWTf bTwUqp"
               >
                 <span
-                  class="css-1ciuxd4"
-                  style="color: rgb(255, 179, 0);"
+                  class="css-1i6vqms"
                 >
                   Engage
                 </span>
@@ -1123,11 +1124,10 @@ it("renders correctly", () => {
                 </svg>
               </div>
               <div
-                class="sc-iktFfs clUFnx"
+                class="sc-iwyWTf fhRUry"
               >
                 <span
-                  class="css-1ciuxd4"
-                  style="color: rgb(255, 179, 0);"
+                  class="css-1i6vqms"
                 >
                   Learn
                 </span>
@@ -1146,7 +1146,7 @@ it("renders correctly", () => {
             </div>
           </div>
           <svg
-            class="sc-gsTEea fQWPxo sc-fKFxtB dCuqJI"
+            class="sc-gsTEea fQWPxo sc-fFucqa cFGxKD"
             color="text"
             viewBox="0 0 425 398"
             width="20px"
@@ -1243,7 +1243,7 @@ it("renders correctly", () => {
             />
           </svg>
           <span
-            class="sc-jJEKmz dUwjOU css-1ciuxd4"
+            class="sc-cxFLGX esrHGt css-175enzh"
           >
             ©2022 All rights reserved
           </span>

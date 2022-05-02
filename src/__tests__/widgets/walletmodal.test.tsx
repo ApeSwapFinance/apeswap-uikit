@@ -13,7 +13,7 @@ it("renders ConnectModal correctly", () => {
         id="Connect to a wallet"
       >
         <div
-          class="css-1h669uz-Modal"
+          class="css-ast67m-Modal"
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <div
@@ -25,7 +25,7 @@ it("renders ConnectModal correctly", () => {
               Connect to a wallet
             </h3>
             <button
-              class="css-3wkfxb"
+              class="css-140f90q"
             >
               <svg
                 class="css-1o9bukh-Close"
@@ -44,16 +44,14 @@ it("renders ConnectModal correctly", () => {
             </button>
           </div>
           <hr
-            class="css-7xw2cm"
+            class="css-hkhu5r"
           />
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-metamask"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               Metamask
             </span>
@@ -190,13 +188,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-trustwallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               TrustWallet
             </span>
@@ -234,13 +230,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-walletconnect"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               WalletConnect
             </span>
@@ -263,13 +257,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-safepal wallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               SafePal Wallet
             </span>
@@ -294,13 +286,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-tokenpocket"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               TokenPocket
             </span>
@@ -329,13 +319,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-coinbase wallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               Coinbase Wallet
             </span>
@@ -374,13 +362,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-binance chain wallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               Binance Chain Wallet
             </span>
@@ -439,13 +425,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-nabox wallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               NABOX Wallet
             </span>
@@ -486,13 +470,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-jardjy"
+            class="css-ma1mgc"
             id="wallet-connect-onto wallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               ONTO Wallet
             </span>
@@ -538,13 +520,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1rhkl58"
+            class="css-1nppjt6"
             id="wallet-connect-mathwallet"
-            style="justify-content: space-between;"
           >
             <span
-              class="css-11yrisi"
-              font-weight="600"
+              class="css-1q4cnz0"
             >
               MathWallet
             </span>
@@ -571,10 +551,10 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <div
-            class="css-1fj1bi0"
+            class="css-1gksbu2"
           >
             <a
-              class="css-zmtz1e"
+              class="css-dovavb"
               target="_blank"
             >
               <svg
@@ -596,7 +576,7 @@ it("renders ConnectModal correctly", () => {
                   class="css-15ebd6j-External"
                   fill="none"
                   viewBox="0 0 11 12"
-                  width="11"
+                  width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -625,7 +605,7 @@ it("renders AccountModal correctly", () => {
         id="Your wallet"
       >
         <div
-          class="css-bwl3l-Modal"
+          class="css-1hr9rwd-Modal"
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <div
@@ -637,7 +617,7 @@ it("renders AccountModal correctly", () => {
               Your wallet
             </h3>
             <button
-              class="css-3wkfxb"
+              class="css-140f90q"
             >
               <svg
                 class="css-1o9bukh-Close"
@@ -656,19 +636,16 @@ it("renders AccountModal correctly", () => {
             </button>
           </div>
           <hr
-            class="css-7xw2cm"
+            class="css-hkhu5r"
           />
           <span
-            class="css-1ciuxd4"
-            font-size="20px"
-            font-weight="600"
-            style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 8px;"
+            class="css-c5ksor"
           />
           <div
-            class="css-1m77ulh"
+            class="css-1ne87w5"
           >
             <a
-              class="css-9p80p6"
+              class="css-1hks94s"
               href="https://bscscan.com/address/undefined"
               target="_blank"
             >
@@ -680,7 +657,7 @@ it("renders AccountModal correctly", () => {
                   class="css-15ebd6j-External"
                   fill="none"
                   viewBox="0 0 11 12"
-                  width="11"
+                  width="16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -691,12 +668,12 @@ it("renders AccountModal correctly", () => {
               </span>
             </a>
             <span
-              class="sc-jSgvzq gTeYDU css-1ciuxd4"
+              class="css-15jcp9d"
               role="button"
             >
               Copy Address
               <svg
-                class="sc-bdfBQB bsiuIh"
+                class="sc-bdfBQB bBbsHV"
                 color="text"
                 viewBox="0 0 24 24"
                 width="20px"
@@ -707,17 +684,17 @@ it("renders AccountModal correctly", () => {
                 />
               </svg>
               <div
-                class="sc-gKseQn bcWjUB"
+                class="sc-jSgvzq cWLZjj"
               >
                 Copied
               </div>
             </span>
           </div>
           <div
-            class="css-4cffwv"
+            class="css-1b2tw1j"
           >
             <button
-              class="css-pbivxy"
+              class="css-1cdgqa2"
             >
               Logout 
             </button>
