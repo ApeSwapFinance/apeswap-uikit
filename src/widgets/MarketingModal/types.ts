@@ -5,10 +5,10 @@ export type ActionHandler = () => void;
 
 export interface MarketingModalProps {
   title: string;
-  description: string;
-  startEarning: ActionHandler;
+  description?: string;
+  startEarning?: ActionHandler | undefined;
+  startEarningText?: string | undefined;
   onDismiss: ActionHandler;
-  t: (key: string) => string;
   children: React.ReactNode | React.ReactNode[];
 }
 
@@ -18,5 +18,5 @@ export interface IconProps {
 }
 
 export interface ModalContentProps {
-  Icon: LegacySvgProps;
+  Icon?: LegacySvgProps;
 }

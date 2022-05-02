@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
-import { Button } from "../../components/Button";
+import { ButtonSquare } from "../../components/ButtonSquare";
 import { MarketingModalProps, IconProps } from "./types";
 
 const Container = styled.div`
@@ -27,11 +27,13 @@ const StyledModal = styled.div`
   background: ${({ theme }) => theme.colors.white2};
   color: ${({ theme }) => theme.colors.text};
   z-index: ${({ theme }) => theme.zIndices.modal};
+
   ${({ theme }) => theme.mediaQueries.md} {
     width: 80%;
-    max-width: 900px;
     height: 500px;
-    max-height: 500px;
+    max-width: 900px;
+    min-height: 60%;
+    max-height: 75%;
     border-radius: 20px;
     margin: auto;
     position: absolute;
@@ -173,7 +175,7 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
     cursor: pointer;
   }
 `;
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonSquare)`
   height: 44px;
   font-size: 16px;
   padding: 10px 20px;
@@ -185,8 +187,8 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
   description,
   onDismiss,
   startEarning,
-  children,
-  t,
+  startEarningText,
+  children
 }) => {
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
@@ -248,7 +250,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
               />
             </IconContainer>
 
-            <CircleDiv>{renderDots()}</CircleDiv>
+            {childrensLength > 1 && <CircleDiv>{renderDots()}</CircleDiv>}
 
             <IconContainer>
               <StyledRightArrow
@@ -262,9 +264,11 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
             </IconContainer>
           </SliderBtnSection>
 
-          <StyledButton fullWidth onClick={startEarning}>
-            {t("Start Earning")}
-          </StyledButton>
+          {startEarning && (
+            <StyledButton fullWidth onClick={startEarning}>
+              {startEarningText}
+            </StyledButton>
+          )}
         </ModalFooter>
       </StyledModal>
     </Container>
@@ -273,7 +277,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
 
 MarketingModal.defaultProps = {
   onDismiss: () => null,
-  startEarning: () => null,
+  startEarning: undefined,
 };
 
 export default MarketingModal;
