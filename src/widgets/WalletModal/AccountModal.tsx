@@ -15,20 +15,16 @@ interface Props {
 
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
   <Modal title="Your wallet" onDismiss={onDismiss} minWidth="350px">
-    <Text
-      fontSize="20px"
-      fontWeight={600}
-      style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" }}
-    >
+    <Text size="20px" weight={600} sx={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} mb="8px">
       {account}
     </Text>
-    <Flex mb="32px">
-      <LinkExternal href={`https://bscscan.com/address/${account}`} mr="16px">
+    <Flex sx={{ alignItems: "center" }} mt="8px" mb="32px">
+      <LinkExternal sx={{ "&:hover": { textDecoration: "underline" }}} href={`https://bscscan.com/address/${account}`} mr="16px">
         View on BscScan
       </LinkExternal>
       <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
     </Flex>
-    <Flex justifyContent="center">
+    <Flex sx={{ justifyContent: "center" }}>
       <Button
         size="sm"
         variant="secondary"

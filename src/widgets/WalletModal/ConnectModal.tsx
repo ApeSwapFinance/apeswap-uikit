@@ -31,7 +31,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
         mb={index < config.length - 1 ? "8px" : "0"}
       />
     ))}
-    <Flex alignItems="center" justifyContent="center" mt="10px">
+    <Flex sx={{ alignItems: "center", justifyContent: "center", }}  mt="10px">
       <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
         <HelpIcon mr="6px" />
         Learn how to connect

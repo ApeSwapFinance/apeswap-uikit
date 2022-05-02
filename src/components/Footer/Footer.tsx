@@ -217,9 +217,6 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       </FlexContainer>
       <PeakingMonkey />
       <AllRightsReserved>©2022 All rights reserved</AllRightsReserved>
-      {/* <Text sx={styles.allRightsReserved} color="primaryBright" weight={400}>
-        ©2022 All rights reserved
-      </Text> */}
     </Container>
   );
 };

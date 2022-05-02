@@ -24,15 +24,21 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       }}
       sx={{
         justifyContent: "space-between",
-
-        "&:hover": {
-          border: "none",
-        },
+        border: "0px",
+        background: "white4",
+        fontSize: "16px",
+        height: "44px",
+        boxShadow: "none",
+        lineHeight: 1,
+        letterSpacing: "0.03em",
+        padding: "0px 24px",
+        opacity: 1,
+        "&:hover": {},
       }}
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Text fontWeight={600} color="text" mr="16px">
+      <Text sx={{ lineHeight: 1.5 }} size="16px" weight={600} color="text" mr="16px">
         {title}
       </Text>
       <Icon width="32px" />

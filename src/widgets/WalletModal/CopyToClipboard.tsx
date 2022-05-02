@@ -7,13 +7,13 @@ interface Props {
   toCopy?: string | number;
 }
 
-const StyleButton = styled(Text).attrs({ role: "button" })`
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.text};
-  font-weight: ${({ fontWeight = 600 }) => fontWeight};
-`;
+// const StyleButton = styled(Text).attrs({ role: "button" })`
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   color: ${({ theme }) => theme.colors.text};
+//   font-weight: ${({ weight = 600 }) => weight};
+// `;
 
 const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   display: ${({ isTooltipDisplayed }) => (isTooltipDisplayed ? "block" : "none")};
@@ -22,7 +22,6 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   right: 0;
   left: 0;
   text-align: center;
-  font-family: poppins;
   font-weight: 700;
   background-color: ${({ theme }) => (theme.isDark ? theme.colors.primaryBright : theme.colors.white4)};
   color: ${({ theme }) => theme.colors.primary};
@@ -34,8 +33,11 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
   const [isTooltipDisplayed, setIsTooltipDisplayed] = useState(false);
 
   return (
-    <StyleButton
-      small
+    <Text
+      size="14px"
+      color="text"
+      weight={600}
+      role="button"
       onClick={() => {
         navigator.clipboard.writeText(JSON.stringify(toCopy));
         setIsTooltipDisplayed(true);
@@ -43,12 +45,16 @@ const CopyToClipboard: React.FC<Props> = ({ toCopy, children, ...props }) => {
           setIsTooltipDisplayed(false);
         }, 1000);
       }}
+      sx={{
+        position: "relative",
+        alignItems: "center",
+      }}
       {...props}
     >
       {children}
-      <CopyIcon width="20px" color="text" ml="4px" />
+      <CopyIcon width="20px" color="text" ml="4px" mb="-4px" />
       <Tooltip isTooltipDisplayed={isTooltipDisplayed}>Copied</Tooltip>
-    </StyleButton>
+    </Text>
   );
 };
 

@@ -1,12 +1,5 @@
 import { Colors } from "./types";
 
-// white1, background,
-// white2, navbar,
-// white3, lvl1,
-// white4, lvl2,
-// contrast: "#965a50ff",
-// invertedContrast: "#FFFFFF",
-
 export const baseColors = {
   error: "#DF4141",
   success: "#38A611",
