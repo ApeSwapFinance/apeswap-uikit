@@ -19,7 +19,11 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       {account}
     </Text>
     <Flex sx={{ alignItems: "center" }} mt="8px" mb="32px">
-      <LinkExternal sx={{ "&:hover": { textDecoration: "underline" }}} href={`https://bscscan.com/address/${account}`} mr="16px">
+      <LinkExternal
+        sx={{ "&:hover": { textDecoration: "underline" } }}
+        href={`https://bscscan.com/address/${account}`}
+        mr="16px"
+      >
         View on BscScan
       </LinkExternal>
       <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
