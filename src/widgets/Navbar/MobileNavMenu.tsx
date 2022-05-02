@@ -232,11 +232,13 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               />
             </StyledLink>
           </div>
-          <Flex sx={{
-            "@media screen and (max-width: 400px)": {
-              marginBottom: "10px",
-            }
-          }}>
+          <Flex
+            sx={{
+              "@media screen and (max-width: 400px)": {
+                marginBottom: "10px",
+              },
+            }}
+          >
             <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} isMini />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
           </Flex>

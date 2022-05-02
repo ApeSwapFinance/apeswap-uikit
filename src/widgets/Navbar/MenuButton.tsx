@@ -28,10 +28,10 @@ const MenuButton: React.FC<MenuButtonProps> = ({ handleClick, ...props }) => {
       onClick={handleClick}
       {...props}
     />
-  )
-}
+  );
+};
 
-export default MenuButton
+export default MenuButton;
 
 // const MenuButton = styled(Button)`
 //   color: ${({ theme }) => theme.colors.text};

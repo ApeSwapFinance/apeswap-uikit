@@ -234,10 +234,7 @@ const Navbar: React.FC<NavProps> = ({
           <UserBlock account={account} login={login} logout={logout} />
           {account && profile && <Avatar profile={profile} />}
           {isMobile && (
-            <MenuButton
-              aria-label="Toggle menu"
-              handleClick={() => setIsPushed(!isPushed)}
-            >
+            <MenuButton aria-label="Toggle menu" handleClick={() => setIsPushed(!isPushed)}>
               {isPushed ? (
                 <HamburgerCloseIcon width="24px" color="text" />
               ) : (
