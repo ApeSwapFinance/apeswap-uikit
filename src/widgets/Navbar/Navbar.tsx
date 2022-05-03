@@ -17,8 +17,6 @@ import { Footer } from "../../components/Footer";
 import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
-import { Button } from "../../components/ButtonNew";
-import { ArrowDropRightIcon, CreditCardOutlineIcon } from "../../components/Svg";
 import { RunFiatButton } from "../../components/RunFiatButton";
 
 const Wrapper = styled.div`
