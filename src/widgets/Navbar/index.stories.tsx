@@ -50,6 +50,7 @@ export const Connected: React.FC = (args: any) => {
           }}
           chainId={137}
           switchNetwork={noop}
+          runFiat={noop}
           track={track}
         >
           <div>
@@ -91,6 +92,7 @@ export const NotConnected: React.FC = () => {
         links={links}
         chainId={56}
         switchNetwork={noop}
+        runFiat={noop}
       >
         <div style={{ lineHeight: "30px" }}>
           <h1>Page body</h1>
@@ -166,6 +168,7 @@ export const WithNoProfile: React.FC = () => {
         links={links}
         chainId={56}
         switchNetwork={noop}
+        runFiat={noop}
         profile={{
           profileLink: "/profile",
           noProfileLink: "/no-profile",
@@ -210,6 +213,7 @@ export const WithProfile: React.FC = () => {
         links={links}
         chainId={56}
         switchNetwork={noop}
+        runFiat={noop}
         profile={{
           name: "apeswap",
           image: "https://raw.githubusercontent.com/ApeSwapFinance/non-fungible-apes/main/images/4.png",
