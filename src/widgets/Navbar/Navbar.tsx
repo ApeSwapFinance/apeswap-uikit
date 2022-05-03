@@ -214,7 +214,7 @@ const Navbar: React.FC<NavProps> = ({
         <Flex alignItems="center" style={{ position: "absolute", right: "30px" }}>
           {!isMobile && (
             <Flex marginRight="10px">
-              <RunFiatButton mini isDark runFiat={runFiat} />
+              <RunFiatButton mini runFiat={runFiat} />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>
           )}
