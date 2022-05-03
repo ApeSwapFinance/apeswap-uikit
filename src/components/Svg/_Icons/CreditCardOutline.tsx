@@ -23,6 +23,6 @@ const Icon: React.FC<LegacySvgProps> = (props) => {
       />
     </LegacySvg>
   );
-}
+};
 
 export default Icon;

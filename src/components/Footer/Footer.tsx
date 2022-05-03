@@ -38,7 +38,15 @@ import MobileLinks from "./MobileLinks";
 import trackSocialClick from "../../util/trackSocialClick";
 import { RunFiatButton } from "../RunFiatButton";
 
-const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork, track, runFiat }) => {
+const Footer: React.FC<FooterProps> = ({
+  chainId,
+  toggleTheme,
+  isDark,
+  bananaPriceUsd,
+  switchNetwork,
+  track,
+  runFiat,
+}) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const { isXxl, isLg, isXl } = useMatchBreakpoints();
   const isMobile = isXxl === false && isXl === false && isLg === false;
