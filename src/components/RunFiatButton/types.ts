@@ -1,4 +1,4 @@
-export interface RunFiatButtonProps {
+export interface RFBProps {
   mini?: boolean;
   runFiat: () => void;
 }

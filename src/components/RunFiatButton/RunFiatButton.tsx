@@ -2,9 +2,9 @@ import React from "react";
 import { Button } from "../ButtonNew";
 import { Text } from "../Text";
 import { ArrowDropLeftIcon, ArrowDropRightIcon } from "../Svg";
-import { RunFiatButtonProps } from "./types";
+import { RFBProps } from "./types";
 
-const RunFiatButton: React.FC<RunFiatButtonProps> = ({ runFiat, mini, ...props }) => {
+const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
   return (
     <Button
       {...props}
