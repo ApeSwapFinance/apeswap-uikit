@@ -18,7 +18,7 @@ const RunFiatButton: React.FC<RunFiatButtonProps> = ({ runFiat, mini, ...props }
         fontSize: "16px",
         "&:hover": {
           background: mini && "white4",
-          filter: !mini && "brightness(115%)" || "unset",
+          filter: (!mini && "brightness(115%)") || "unset",
         },
       }}
       onClick={runFiat}
