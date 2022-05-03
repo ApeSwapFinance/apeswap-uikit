@@ -69,4 +69,5 @@ export interface SvgProps extends SpaceProps {
   direction?: directionTypes;
   color?: colorProps;
   width?: string | number;
+  height?: string | number;
 }

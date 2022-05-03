@@ -211,8 +211,7 @@ export const BottomRowContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  align-items: space-between;
+  align-items: center;
 `;
 
 export const BuyBananaButton = styled.button`

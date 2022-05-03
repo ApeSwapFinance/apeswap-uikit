@@ -7,6 +7,7 @@ export interface FooterProps {
   isDark: boolean;
   bananaPriceUsd: number | undefined;
   track?: TrackHandler | undefined;
+  runFiat: () => void;
 }
 
 export interface PushedProps {

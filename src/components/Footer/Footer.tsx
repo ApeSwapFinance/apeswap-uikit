@@ -36,8 +36,9 @@ import darkTheme from "../../theme/dark";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import MobileLinks from "./MobileLinks";
 import trackSocialClick from "../../util/trackSocialClick";
+import { RunFiatButton } from "../RunFiatButton";
 
-const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork, track }) => {
+const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork, track, runFiat }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const { isXxl, isLg, isXl } = useMatchBreakpoints();
   const isMobile = isXxl === false && isXl === false && isLg === false;
@@ -104,7 +105,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
             </StyledLink>
           </IconFlex>
           <BottomRowContainer>
-            <div>
+            <div style={{ marginRight: "21px" }}>
               {bananaPriceUsd ? (
                 <PriceLink
                   href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
@@ -119,9 +120,10 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                 <Skeleton width={90} height={35} />
               )}
             </div>
-            <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
               <BuyBananaButton>BUY BANANA</BuyBananaButton>
-            </a>
+            </a> */}
+            <RunFiatButton runFiat={runFiat} isDark />
           </BottomRowContainer>
         </LogoFlex>
         {isMobile ? (

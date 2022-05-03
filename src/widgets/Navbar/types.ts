@@ -59,4 +59,5 @@ export interface NavProps extends PanelProps {
   chainId: number;
   switchNetwork: SwitchNetwork;
   track?: TrackHandler | undefined;
+  runFiat: () => void;
 }

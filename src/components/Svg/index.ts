@@ -88,3 +88,4 @@ export { default as RedditIcon } from "./_Icons/Reddit";
 export { default as MediumIcon } from "./_Icons/Medium";
 export { default as InstagramIcon } from "./_Icons/Instagram";
 export { default as TwitterIcon } from "./_Icons/Twitter";
+export { default as CreditCardOutlineIcon } from "./_Icons/CreditCardOutline";

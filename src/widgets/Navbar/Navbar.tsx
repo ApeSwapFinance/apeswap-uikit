@@ -17,6 +17,9 @@ import { Footer } from "../../components/Footer";
 import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
+import { Button } from "../../components/ButtonNew";
+import { ArrowDropRightIcon, CreditCardOutlineIcon } from "../../components/Svg";
+import { RunFiatButton } from "../../components/RunFiatButton";
 
 const Wrapper = styled.div`
   position: relative;
@@ -100,6 +103,7 @@ const Navbar: React.FC<NavProps> = ({
   switchNetwork,
   chainId,
   track,
+  runFiat,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -209,6 +213,7 @@ const Navbar: React.FC<NavProps> = ({
         <Flex alignItems="center" style={{ position: "absolute", right: "30px" }}>
           {!isMobile && (
             <Flex marginRight="10px">
+              <RunFiatButton mini isDark runFiat={runFiat} />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>
           )}
@@ -254,6 +259,7 @@ const Navbar: React.FC<NavProps> = ({
         bananaPriceUsd={bananaPriceUsd}
         isDark={isDark}
         switchNetwork={switchNetwork}
+        runFiat={runFiat}
       />
     </Wrapper>
   );
