@@ -203,6 +203,7 @@ const Navbar: React.FC<NavProps> = ({
                       isDark={isDark}
                       chainId={chainId}
                       track={track}
+                      runFiat={runFiat}
                     />
                   )}
                 </div>

@@ -9,6 +9,7 @@ import { MenuSubEntry } from "./types";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
+import { RunFiatButton } from "../../components/RunFiatButton";
 
 const Icons = ImageModule as unknown as { [key: string]: React.FC };
 
@@ -19,6 +20,7 @@ interface SubNavbarProps {
   isDark: boolean;
   chainId: number | string;
   track?: TrackHandler | undefined;
+  runFiat: () => void;
 }
 const StyledLink = styled.a`
   :hover {
@@ -63,7 +65,7 @@ const StyledText = styled(Text)`
   }
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track }) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track, runFiat }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
@@ -83,29 +85,41 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
       {label === "More" && (
         <Flex
           justifyContent="space-between"
-          style={{ position: "absolute", bottom: "5px", right: "20px", width: "150px" }}
+          style={{
+            position: "absolute",
+            bottom: "10px",
+            right: "20px",
+            width: "90%",
+            marginLeft: "30px",
+            alignItems: "flex-end",
+          }}
         >
-          <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
-            <TwitterIcon
-              color="white3"
-              fill={iconFillColor}
-              onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
-            />
-          </StyledLink>
-          <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
-            <TelegramIcon
-              color="white3"
-              fill={iconFillColor}
-              onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
-            />
-          </StyledLink>
-          <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
-            <DiscordIcon
-              color="white3"
-              fill={iconFillColor}
-              onClick={() => trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)}
-            />
-          </StyledLink>
+          <div style={{ marginBottom: "5px" }}>
+            <RunFiatButton runFiat={runFiat} />
+          </div>
+          <Flex justifyContent="space-evenly" alignItems="flex-end">
+            <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
+              <TwitterIcon
+                color="white3"
+                fill={iconFillColor}
+                onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
+              />
+            </StyledLink>
+            <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
+              <TelegramIcon
+                color="white3"
+                fill={iconFillColor}
+                onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
+              />
+            </StyledLink>
+            <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+              <DiscordIcon
+                color="white3"
+                fill={iconFillColor}
+                onClick={() => trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)}
+              />
+            </StyledLink>
+          </Flex>
         </Flex>
       )}
     </StyledCard>
