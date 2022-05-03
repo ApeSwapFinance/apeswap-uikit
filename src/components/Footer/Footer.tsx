@@ -131,7 +131,7 @@ const Footer: React.FC<FooterProps> = ({
             {/* <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
               <BuyBananaButton>BUY BANANA</BuyBananaButton>
             </a> */}
-            <RunFiatButton runFiat={runFiat} isDark />
+            <RunFiatButton runFiat={runFiat} />
           </BottomRowContainer>
         </LogoFlex>
         {isMobile ? (
