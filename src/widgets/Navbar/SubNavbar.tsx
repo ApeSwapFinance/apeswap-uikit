@@ -97,7 +97,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
           <div style={{ marginBottom: "5px" }}>
             <RunFiatButton runFiat={runFiat} />
           </div>
-          <Flex justifyContent="space-evenly" alignItems="flex-end">
+          <Flex justifyContent="space-between" alignItems="flex-end" style={{ width: "40%" }}>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
               <TwitterIcon
                 color="white3"
