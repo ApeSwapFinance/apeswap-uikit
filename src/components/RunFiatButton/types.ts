@@ -1,5 +1,4 @@
-import { ButtonProps } from "../ButtonNew";
-export interface RunFiatButtonProps extends ButtonProps {
+export interface RunFiatButtonProps {
   mini?: boolean;
   runFiat: () => void;
 }
