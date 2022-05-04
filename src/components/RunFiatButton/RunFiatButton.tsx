@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { Button } from "../ButtonNew";
 import { Text } from "../Text";
-import { CreditCardOutlineIcon } from "../Svg";
+import { CardIcon } from "../Svg";
 import { RFBProps } from "./types";
 
 const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
@@ -30,10 +30,10 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
           <Text color="primaryBright" bold>
             ADD FUNDS
           </Text>
-          <CreditCardOutlineIcon fill="#FAFAFA" marginLeft="5px" />
+          <CardIcon fill="#FAFAFA" marginLeft="5px" />
         </>
       )}
-      {mini && <CreditCardOutlineIcon fill={(theme.isDark && "#FAFAFA") || "#4D4040"} />}
+      {mini && <CardIcon fill={(theme.isDark && "#FAFAFA") || "#4D4040"} />}
     </Button>
   );
 };
