@@ -1,10 +1,12 @@
 import React from "react";
+import { useTheme } from "styled-components";
 import { Button } from "../ButtonNew";
 import { Text } from "../Text";
 import { CreditCardOutlineIcon } from "../Svg";
 import { RFBProps } from "./types";
 
 const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
+  const theme = useTheme();
   return (
     <Button
       {...props}
@@ -28,7 +30,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
           ADD FUNDS
         </Text>
       )}
-      <CreditCardOutlineIcon fill={(mini && "#4D4040") || "#FAFAFA"} marginLeft={(!mini && "5px") || "0px"} />
+      <CreditCardOutlineIcon fill={(theme.isDark && mini && "#FAFAFA") || (mini && "#4D4040") || "#FAFAFA"} marginLeft={(!mini && "5px") || "0px"} />
     </Button>
   );
 };
