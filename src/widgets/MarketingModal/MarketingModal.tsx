@@ -188,7 +188,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
   onDismiss,
   startEarning,
   startEarningText,
-  children
+  children,
 }) => {
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;

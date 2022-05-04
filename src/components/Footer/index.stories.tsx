@@ -11,7 +11,17 @@ export default {
 export const Default: React.FC = () => {
   return (
     <div>
-      <Footer chainId={56} toggleTheme={null} isDark bananaPriceUsd={0.48} switchNetwork={null} t={noop} currentLang={null} langs={null} setLang={noop} />
+      <Footer
+        chainId={56}
+        toggleTheme={null}
+        isDark
+        bananaPriceUsd={0.48}
+        switchNetwork={null}
+        t={noop}
+        currentLang={null}
+        langs={null}
+        setLang={noop}
+      />
     </div>
   );
 };
