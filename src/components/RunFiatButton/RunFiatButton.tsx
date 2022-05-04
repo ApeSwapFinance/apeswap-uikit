@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../ButtonNew";
 import { Text } from "../Text";
-import { ArrowDropLeftIcon, ArrowDropRightIcon } from "../Svg";
+import { CreditCardOutlineIcon } from "../Svg";
 import { RFBProps } from "./types";
 
 const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
@@ -23,15 +23,8 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
       }}
       onClick={runFiat}
     >
-      {!mini && (
-        <>
-          <Text color="primaryBright" bold>
-            ADD FUNDS
-          </Text>
-          <ArrowDropLeftIcon width="14px" color="primaryBright" marginLeft="5px" />
-        </>
-      )}
-      {mini && <ArrowDropRightIcon width="14px" color="text" />}
+      {!mini && <Text color="primaryBright" bold>ADD FUNDS</Text>}
+      <CreditCardOutlineIcon fill={mini && "#4D4040" || "#FAFAFA"} marginLeft={!mini && "5px" || "0px"} />
     </Button>
   );
 };
