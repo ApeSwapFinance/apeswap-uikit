@@ -30,7 +30,10 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
           ADD FUNDS
         </Text>
       )}
-      <CreditCardOutlineIcon fill={(theme.isDark && mini && "#FAFAFA") || (mini && "#4D4040") || "#FAFAFA"} marginLeft={(!mini && "5px") || "0px"} />
+      <CreditCardOutlineIcon
+        fill={(theme.isDark && mini && "#FAFAFA") || (mini && "#4D4040") || "#FAFAFA"}
+        marginLeft={(!mini && "5px") || "0px"}
+      />
     </Button>
   );
 };
