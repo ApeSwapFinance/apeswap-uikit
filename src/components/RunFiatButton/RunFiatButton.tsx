@@ -33,11 +33,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
           <CreditCardOutlineIcon fill="#FAFAFA" marginLeft="5px" />
         </>
       )}
-      {mini && (
-        <CreditCardOutlineIcon
-          fill={(theme.isDark && "#FAFAFA") || "#4D4040"}
-        />
-      )}
+      {mini && <CreditCardOutlineIcon fill={(theme.isDark && "#FAFAFA") || "#4D4040"} />}
     </Button>
   );
 };
