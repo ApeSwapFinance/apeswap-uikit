@@ -72,13 +72,20 @@ const Footer: React.FC<FooterProps> = ({
             <div style={{ margin: "0px 12.5px" }} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
             <div style={{ margin: "0px 12.5px" }} />
+
+            {/* 
+
+            Remove until language release
+
             <LangSelector
               currentLang={currentLang}
               langs={langs}
               setLang={setLang}
               color={darkColors.text as keyof Colors}
               dropdownPosition="top-right"
-            />
+            /> 
+            
+            */}
           </ButtonFlex>
           <IconFlex>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
