@@ -26,14 +26,18 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
       onClick={runFiat}
     >
       {!mini && (
-        <Text color="primaryBright" bold>
-          ADD FUNDS
-        </Text>
+        <>
+          <Text color="primaryBright" bold>
+            ADD FUNDS
+          </Text>
+          <CreditCardOutlineIcon fill="#FAFAFA" marginLeft="5px" />
+        </>
       )}
-      <CreditCardOutlineIcon
-        fill={(theme.isDark && mini && "#FAFAFA") || (mini && "#4D4040") || "#FAFAFA"}
-        marginLeft={(!mini && "5px") || "0px"}
-      />
+      {mini && (
+        <CreditCardOutlineIcon
+          fill={(theme.isDark && "#FAFAFA") || "#4D4040"}
+        />
+      )}
     </Button>
   );
 };
