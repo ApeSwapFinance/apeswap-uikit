@@ -1,5 +1,5 @@
-import { SwitchNetwork } from "../NetworkModal/types";
-import { Login } from "../WalletModal/types";
+import { SwitchNetwork } from "../NetworkModal";
+import { Login } from "../WalletModal";
 import { TrackHandler } from "../../util/trackSocialClick";
 
 export interface LangType {
@@ -46,7 +46,7 @@ export interface PanelProps {
   toggleTheme: (isDark: boolean) => void;
   bananaPriceUsd?: number;
   currentLang: string;
-  langs?: LangType[];
+  langs: LangType[];
   setLang: (lang: LangType) => void;
   links: Array<MenuEntry>;
 }
@@ -57,6 +57,7 @@ export interface NavProps extends PanelProps {
   profile?: Profile;
   logout: () => void;
   chainId: number;
+  t: (text: string) => string;
   switchNetwork: SwitchNetwork;
   track?: TrackHandler | undefined;
   runFiat: () => void;

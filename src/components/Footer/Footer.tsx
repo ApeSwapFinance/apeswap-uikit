@@ -37,6 +37,9 @@ import { ThemeSwitcher } from "../ThemeSwitcher";
 import MobileLinks from "./MobileLinks";
 import trackSocialClick from "../../util/trackSocialClick";
 import { RunFiatButton } from "../RunFiatButton";
+import { Colors } from "../../theme/types";
+import { darkColors } from "../../theme";
+import LangSelector from "../LangSelector/LangSelector";
 
 const Footer: React.FC<FooterProps> = ({
   chainId,
@@ -46,6 +49,10 @@ const Footer: React.FC<FooterProps> = ({
   switchNetwork,
   track,
   runFiat,
+  currentLang,
+  langs,
+  setLang,
+  t,
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const { isXxl, isLg, isXl } = useMatchBreakpoints();
@@ -58,13 +65,29 @@ const Footer: React.FC<FooterProps> = ({
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
           <Text style={{ color: "white" }}>
-            {`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
-            experience for everyone.`}
+            {t(
+              `ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure experience for everyone.`
+            )}
           </Text>
           <ButtonFlex>
             <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} />
             <div style={{ margin: "0px 12.5px" }} />
-            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
+            <div style={{ margin: "0px 12.5px" }} />
+
+            {/* 
+
+            Remove until language release
+
+            <LangSelector
+              currentLang={currentLang}
+              langs={langs}
+              setLang={setLang}
+              color={darkColors.text as keyof Colors}
+              dropdownPosition="top-right"
+            /> 
+            
+            */}
           </ButtonFlex>
           <IconFlex>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
@@ -140,36 +163,36 @@ const Footer: React.FC<FooterProps> = ({
           <LinkskWrapper>
             <LinkColumnFlex style={{ width: "200px" }}>
               <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                Support
+                {t("Support")}
               </Text>
               {supportLinks.map((link) => {
                 return (
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <LinkText>{link.label}</LinkText>
+                    <LinkText>{t(link.label)}</LinkText>
                   </a>
                 );
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "240px" }}>
               <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                Engage
+                {t("Engage")}
               </Text>
               {engageLinks.map((link) => {
                 return (
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <LinkText>{link.label}</LinkText>
+                    <LinkText>{t(link.label)}</LinkText>
                   </a>
                 );
               })}
             </LinkColumnFlex>
             <LinkColumnFlex style={{ width: "130px" }}>
               <Text style={{ color: "rgba(255, 179, 0, 1)" }} fontSize="22px" bold>
-                Learn
+                {t("Learn")}
               </Text>
               {learnLinks.map((link) => {
                 return (
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
-                    <LinkText>{link.label}</LinkText>
+                    <LinkText>{t(link.label)}</LinkText>
                   </a>
                 );
               })}
@@ -178,7 +201,7 @@ const Footer: React.FC<FooterProps> = ({
         )}
       </FlexContainer>
       <PeakingMonkey />
-      <AllRightsReserved>©2022 All rights reserved</AllRightsReserved>
+      <AllRightsReserved>{t("©2022 All rights reserved")}</AllRightsReserved>
     </Container>
   );
 };

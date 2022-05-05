@@ -11,7 +11,18 @@ export default {
 export const Default: React.FC = () => {
   return (
     <div>
-      <Footer runFiat={noop} chainId={56} toggleTheme={null} isDark bananaPriceUsd={0.48} switchNetwork={null} />
+      <Footer
+        chainId={56}
+        toggleTheme={null}
+        isDark
+        bananaPriceUsd={0.48}
+        switchNetwork={null}
+        t={() => ""}
+        currentLang={null}
+        langs={null}
+        setLang={noop}
+        runFiat={noop}
+      />
     </div>
   );
 };

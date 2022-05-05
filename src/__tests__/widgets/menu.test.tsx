@@ -38,6 +38,7 @@ it("renders correctly", () => {
         bananaPriceUsd={0.23158668932877668}
         chainId={56}
         switchNetwork={noop}
+        t={() => ""}
         links={menuConfig}
         runFiat={noop}
       >
@@ -631,10 +632,7 @@ it("renders correctly", () => {
                 class="sc-iBkjds mweal"
                 color="text"
                 style="color: white;"
-              >
-                ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
-                experience for everyone.
-              </div>
+              />
               <div
                 class="sc-gicCDI envVjv"
               >
@@ -719,6 +717,9 @@ it("renders correctly", () => {
                     />
                   </svg>
                 </button>
+                <div
+                  style="margin: 0px 12.5px;"
+                />
               </div>
               <div
                 class="sc-ivTmOn fabyZe"
@@ -981,6 +982,7 @@ it("renders correctly", () => {
                 <button
                   class="css-b8k0eu"
                 >
+<<<<<<< HEAD
                   <div
                     class="sc-iBkjds gMCkEh"
                     color="primaryBright"
@@ -1001,6 +1003,12 @@ it("renders correctly", () => {
                     />
                   </svg>
                 </button>
+=======
+                  <button
+                    class="sc-ikZpkk iVNAMf"
+                  />
+                </a>
+>>>>>>> 47df40205e4e26bf3dab6dbf717dd0133693e14c
               </div>
             </div>
             <div
@@ -1175,9 +1183,7 @@ it("renders correctly", () => {
           <div
             class="sc-iBkjds sc-himrzO mweal bxIYGi"
             color="text"
-          >
-            ©2022 All rights reserved
-          </div>
+          />
         </div>
       </div>
     </DocumentFragment>

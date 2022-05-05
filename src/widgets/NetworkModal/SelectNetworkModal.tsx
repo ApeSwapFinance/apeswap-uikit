@@ -9,12 +9,13 @@ interface Props {
   switchNetwork: SwitchNetwork;
   onDismiss?: () => void;
   chainId: number;
+  t: (key: string) => string;
 }
 
-const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNetwork, chainId }) => (
+const SelectNetworkModal: React.FC<Props> = ({ onDismiss = () => null, switchNetwork, chainId, t }) => (
   <Modal onDismiss={onDismiss} minWidth="350px">
     <ModalHeader onDismiss={onDismiss}>
-      <Heading>Network</Heading>
+      <Heading>{t("Network")}</Heading>
     </ModalHeader>
     {networks.map((network) => (
       <NetworkCard
