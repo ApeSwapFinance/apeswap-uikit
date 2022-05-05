@@ -23,6 +23,11 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
+    title: "Social Login",
+    icon: TorusWallet,
+    connectorId: ConnectorNames.Torus,
+  },
+  {
     title: "WalletConnect",
     icon: WalletConnect,
     connectorId: ConnectorNames.WalletConnect,
@@ -61,11 +66,6 @@ const connectors: Config[] = [
     title: "MathWallet",
     icon: MathWallet,
     connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "Social Login",
-    icon: TorusWallet,
-    connectorId: ConnectorNames.Torus,
   },
 ];
 
