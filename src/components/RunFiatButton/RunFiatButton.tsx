@@ -33,7 +33,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
           <CardIcon fill="#FAFAFA" marginLeft="5px" />
         </>
       )}
-      {mini && <CardIcon fill={(theme.isDark && "#FAFAFA") || "#4D4040"} />}
+      {mini && <CardIcon fill={theme.isDark ? "#FAFAFA" : "#4D4040"} />}
     </Button>
   );
 };
