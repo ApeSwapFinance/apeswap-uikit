@@ -25,7 +25,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb, t }) 
       }}
       style={{ justifyContent: "space-between" }}
       mb={mb}
-      id={`wallet-connect-${title.toLocaleLowerCase()}`}
+      id={`wallet-connect-${t(title)?.toLocaleLowerCase()}`}
     >
       <Text fontWeight={600} color="text" mr="16px">
         {t(title)}

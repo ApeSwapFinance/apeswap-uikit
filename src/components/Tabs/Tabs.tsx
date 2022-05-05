@@ -40,6 +40,7 @@ const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants
         sx={{
           ...styles.tabUnderlay,
           width: variant === variants.FULLWIDTH ? "100%" : undefined,
+          justifyContent: variant === variants.FULLWIDTH ? "space-between" : "center",
         }}
       >
         {React.Children.map(children, (child) => {
