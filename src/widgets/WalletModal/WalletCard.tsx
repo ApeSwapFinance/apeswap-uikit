@@ -9,9 +9,10 @@ interface Props {
   login: Login;
   onDismiss: () => void;
   mb: string;
+  t: (key: string) => string;
 }
 
-const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
+const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb, t }) => {
   const { title, icon: Icon } = walletConfig;
   return (
     <Button
@@ -27,7 +28,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
       <Text fontWeight={600} color="text" mr="16px">
-        {title}
+        {t(title)}
       </Text>
       <Icon width="32px" />
     </Button>

@@ -5,47 +5,17 @@ import ConnectModal from "../../widgets/WalletModal/ConnectModal";
 import AccountModal from "../../widgets/WalletModal/AccountModal";
 
 it("renders ConnectModal correctly", () => {
-  const { asFragment } = renderWithTheme(<ConnectModal login={noop} />);
+  const { asFragment } = renderWithTheme(<ConnectModal login={noop} t={() => ""} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
         class="css-vurnku"
-        id="Connect to a wallet"
+        id=""
       >
         <div
           class="css-1h669uz-Modal"
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
-          <div
-            class="css-8rn5vi"
-          >
-            <h3
-              class="css-1wf7gym"
-            >
-              Connect to a wallet
-            </h3>
-            <button
-              class="css-1rb0um5"
-            >
-              <svg
-                class="css-1o9bukh-Close"
-                fill="none"
-                viewBox="0 0 12 12"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M10.9497 10.9497C11.3403 10.5592 11.3403 9.92602 10.9497 9.5355L7.41424 5.99999L10.9497 2.46451C11.3402 2.07399 11.3402 1.44082 10.9497 1.0503C10.5592 0.659775 9.92602 0.659775 9.5355 1.0503L6.00002 4.58578L2.46446 1.05022C2.07394 0.659693 1.44077 0.659693 1.05025 1.05022C0.659726 1.44074 0.659726 2.07391 1.05025 2.46443L4.58581 5.99999L1.05022 9.53558C0.659693 9.9261 0.659693 10.5593 1.05022 10.9498C1.44074 11.3403 2.07391 11.3403 2.46443 10.9498L6.00002 7.4142L9.53553 10.9497C9.92605 11.3402 10.5592 11.3402 10.9497 10.9497Z"
-                  fill="#FAFAFA"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-          <hr
-            class="css-1bb4y59"
-          />
           <button
             class="sc-jSMfEi hcwbMg"
             id="wallet-connect-metamask"
@@ -56,9 +26,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              Metamask
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -200,9 +168,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              TrustWallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -245,9 +211,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              WalletConnect
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -275,9 +239,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              SafePal Wallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -307,9 +269,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              TokenPocket
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -343,9 +303,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              Coinbase Wallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -389,9 +347,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              Binance Chain Wallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -455,9 +411,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              NABOX Wallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -503,9 +457,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              ONTO Wallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -556,9 +508,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              MathWallet
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
@@ -601,7 +551,6 @@ it("renders ConnectModal correctly", () => {
                   d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM9 14H11V16H9V14ZM10.61 4.04C8.55 3.74 6.73 5.01 6.18 6.83C6 7.41 6.44 8 7.05 8H7.25C7.66 8 7.99 7.71 8.13 7.33C8.45 6.44 9.4 5.83 10.43 6.05C11.38 6.25 12.08 7.18 12 8.15C11.9 9.49 10.38 9.78 9.55 11.03C9.55 11.04 9.54 11.04 9.54 11.05C9.53 11.07 9.52 11.08 9.51 11.1C9.42 11.25 9.33 11.42 9.26 11.6C9.25 11.63 9.23 11.65 9.22 11.68C9.21 11.7 9.21 11.72 9.2 11.75C9.08 12.09 9 12.5 9 13H11C11 12.58 11.11 12.23 11.28 11.93C11.3 11.9 11.31 11.87 11.33 11.84C11.41 11.7 11.51 11.57 11.61 11.45C11.62 11.44 11.63 11.42 11.64 11.41C11.74 11.29 11.85 11.18 11.97 11.07C12.93 10.16 14.23 9.42 13.96 7.51C13.72 5.77 12.35 4.3 10.61 4.04Z"
                 />
               </svg>
-              Learn how to connect
             </a>
           </div>
         </div>
@@ -614,47 +563,17 @@ it("renders ConnectModal correctly", () => {
 });
 
 it("renders AccountModal correctly", () => {
-  const { asFragment } = renderWithTheme(<AccountModal logout={noop} />);
+  const { asFragment } = renderWithTheme(<AccountModal logout={noop} t={() => ""} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
         class="css-vurnku"
-        id="Your wallet"
+        id=""
       >
         <div
           class="css-bwl3l-Modal"
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
-          <div
-            class="css-8rn5vi"
-          >
-            <h3
-              class="css-1wf7gym"
-            >
-              Your wallet
-            </h3>
-            <button
-              class="css-1rb0um5"
-            >
-              <svg
-                class="css-1o9bukh-Close"
-                fill="none"
-                viewBox="0 0 12 12"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M10.9497 10.9497C11.3403 10.5592 11.3403 9.92602 10.9497 9.5355L7.41424 5.99999L10.9497 2.46451C11.3402 2.07399 11.3402 1.44082 10.9497 1.0503C10.5592 0.659775 9.92602 0.659775 9.5355 1.0503L6.00002 4.58578L2.46446 1.05022C2.07394 0.659693 1.44077 0.659693 1.05025 1.05022C0.659726 1.44074 0.659726 2.07391 1.05025 2.46443L4.58581 5.99999L1.05022 9.53558C0.659693 9.9261 0.659693 10.5593 1.05022 10.9498C1.44074 11.3403 2.07391 11.3403 2.46443 10.9498L6.00002 7.4142L9.53553 10.9497C9.92605 11.3402 10.5592 11.3402 10.9497 10.9497Z"
-                  fill="#FAFAFA"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-          <hr
-            class="css-1bb4y59"
-          />
           <div
             class="sc-bczRLJ IXDpI"
             color="text"
@@ -672,7 +591,6 @@ it("renders AccountModal correctly", () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              View on BscScan
               <svg
                 class="sc-dkzDqf Xhgwe"
                 color="text"
@@ -690,7 +608,6 @@ it("renders AccountModal correctly", () => {
               color="text"
               role="button"
             >
-              Copy Address
               <svg
                 class="sc-dkzDqf Xhgwe"
                 color="text"
@@ -715,9 +632,7 @@ it("renders AccountModal correctly", () => {
             <button
               class="sc-jSMfEi hoJtog"
               type="button"
-            >
-              Logout
-            </button>
+            />
           </div>
         </div>
         <div

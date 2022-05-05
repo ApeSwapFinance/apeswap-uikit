@@ -92,6 +92,8 @@ const Navbar: React.FC<NavProps> = ({
   isDark,
   toggleTheme,
   langs,
+  t,
+  currentLang,
   setLang,
   bananaPriceUsd,
   links,
@@ -209,10 +211,10 @@ const Navbar: React.FC<NavProps> = ({
         <Flex alignItems="center" style={{ position: "absolute", right: "30px" }}>
           {!isMobile && (
             <Flex marginRight="10px">
-              <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+              <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
             </Flex>
           )}
-          <UserBlock account={account} login={login} logout={logout} />
+          <UserBlock account={account} login={login} logout={logout} t={t} />
           {profile && <Avatar profile={profile} />}
           {isMobile && (
             <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed(!isPushed)}>
@@ -239,7 +241,8 @@ const Navbar: React.FC<NavProps> = ({
             chainId={chainId}
             switchNetwork={switchNetwork}
             isDark={isDark}
-            currentLang="en"
+            currentLang={currentLang}
+            t={t}
           />
         )}
         <Inner isPushed={isPushed} showMenu={showMenu} isMobile={isMobile}>
@@ -254,6 +257,10 @@ const Navbar: React.FC<NavProps> = ({
         bananaPriceUsd={bananaPriceUsd}
         isDark={isDark}
         switchNetwork={switchNetwork}
+        langs={langs}
+        setLang={setLang}
+        currentLang={currentLang}
+        t={t}
       />
     </Wrapper>
   );
