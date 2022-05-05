@@ -982,7 +982,6 @@ it("renders correctly", () => {
                 <button
                   class="css-b8k0eu"
                 >
-<<<<<<< HEAD
                   <div
                     class="sc-iBkjds gMCkEh"
                     color="primaryBright"
@@ -1003,12 +1002,6 @@ it("renders correctly", () => {
                     />
                   </svg>
                 </button>
-=======
-                  <button
-                    class="sc-ikZpkk iVNAMf"
-                  />
-                </a>
->>>>>>> 47df40205e4e26bf3dab6dbf717dd0133693e14c
               </div>
             </div>
             <div

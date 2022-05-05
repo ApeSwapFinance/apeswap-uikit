@@ -540,9 +540,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bczRLJ fXIUCw"
               color="text"
               font-weight="600"
-            >
-              Torus
-            </div>
+            />
             <svg
               class="sc-dkzDqf jbfioX"
               color="text"
