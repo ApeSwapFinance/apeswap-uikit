@@ -21,6 +21,7 @@ export const Wallet = (args: any) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
     () => null,
     () => null,
+    (title: string) => title,
     "0xbdda50183d817c3289f895a4472eb475967dc980"
   );
   return (
