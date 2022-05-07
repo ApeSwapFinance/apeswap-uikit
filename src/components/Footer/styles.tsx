@@ -248,15 +248,10 @@ export const AllRightsReserved = styled(Text)`
 
 const styles: Record<string, ThemeUIStyleObject> = {
   allRightsReserved: {
+    color: "primaryBright",
     position: "absolute",
-    bottom: "10px",
-    left: "20px",
-
-    [`${ApeSwapTheme?.mediaQueries?.sm}`]: {
-      background: "red",
-      bottom: "20px",
-      left: "auto",
-    },
+    bottom: ["10px", "20px" ],
+    left: ["20px", "auto"],
   },
   linkText: {
     "&:hover": {

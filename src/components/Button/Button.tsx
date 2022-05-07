@@ -44,6 +44,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <ThemeUIButton
       {...props}
+      variant={variant}
       sx={{
         variant: `buttons.${variant}`,
         textTransform: "uppercase",

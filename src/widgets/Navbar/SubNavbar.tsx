@@ -34,23 +34,6 @@ const StyledLink = styled.a`
   }
 `;
 
-// const StyledText = styled(Text)<{ label?: string }>`
-//   margin-top: 6px;
-//   margin-bottom: 6px;
-//   margin-right: 6px;
-//   font-weight: 700;
-
-//   background: ${({ label }) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)"};
-//   -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
-//   -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
-//   background-clip: ${({ label }) => label === "GNANA" && "text"};
-//   text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
-
-//   :hover {
-//     box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
-//   }
-// `;
-
 const NewMenuLink = styled(MenuLink)`
   display: flex;
   align-items: center;
@@ -81,6 +64,14 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
               <Text
                 sx={{
                   ...styles.dropDownMenuText,
+                  "&&&": {
+                    background: item.label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
+                    WebkitBackgroundClip: item.label === "GNANA" && "text",
+                    backgroundClip: item.label === "GNANA" && "text",
+                    WebkitTextFillColor: item.label === "GNANA" && "transparent",
+                    textFillColor: item.label === "GNANA" && "transparent",
+                  },
+
                   "&:hover": {
                     boxShadow: `0px 2px 0px ${iconFillColor}`,
                   },

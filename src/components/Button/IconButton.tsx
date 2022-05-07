@@ -17,6 +17,7 @@ const IconButton: React.FC<IconButtonProps> = ({
   return (
     <Button
       {...props}
+      variant={variant}
       sx={{
         variant: `buttons.${variant}`,
         background,

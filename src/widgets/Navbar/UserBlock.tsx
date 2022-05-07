@@ -4,7 +4,7 @@ import Button from "../../components/Button/Button";
 import { useWalletModal } from "../WalletModal";
 import { Login } from "../WalletModal/types";
 import { Profile } from "./types";
-import styles from "./styles";
+import { dynamicStyles } from "./styles";
 
 interface Props {
   account?: string | undefined;
@@ -18,6 +18,8 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { isXs } = useMatchBreakpoints();
 
+  const buttonStyle = dynamicStyles.userBlockBtn({ account });
+
   const loadButton = () => {
     if (account) {
       if (isXs) {
@@ -26,7 +28,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
             size="sm"
             fontSize="14px"
             variant="tertiary"
-            sx={styles.userBlockBtn}
+            sx={buttonStyle}
             onClick={() => {
               onPresentAccountModal();
             }}
@@ -41,7 +43,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
           size="sm"
           variant="tertiary"
           fontSize="14px"
-          sx={styles.userBlockBtn}
+          sx={buttonStyle}
           onClick={() => {
             onPresentAccountModal();
           }}

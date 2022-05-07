@@ -46,15 +46,6 @@ const styles: Record<string, ThemeUIStyleObject> = {
     background: "white3",
     border: "none",
   },
-  userBlockBtn: {
-    height: "35px",
-    marginLeft: "10px",
-    background: (account) => (account ? "white3" : "yellow"),
-    color: (account) => (account ? "text" : "primaryBright"),
-    lineHeight: "10px",
-    padding: (account) => `0px ${account ? "45px" : "15px"} 0px 15px`,
-    border: "none",
-  },
   cardContainer: {
     position: "absolute",
     width: "429px",
@@ -84,13 +75,25 @@ const styles: Record<string, ThemeUIStyleObject> = {
     marginTop: "6px",
     marginBottom: "6px",
     marginRight: "6px",
-
-    "&:-webkit-background-clip": (label) => label === "GNANA" && "text",
-    "&:-webkit-text-fill-color": (label) => label === "GNANA" && "transparent",
-    backgroundClip: (label) => label === "GNANA" && "text",
-    background: (label) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
-    // "text-fill-color": (label) => label === "GNANA" && "transparent",
   },
+};
+
+interface Props {
+  account?: string
+}
+
+export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
+  userBlockBtn: ({ account }: Props) => ({
+    height: "35px",
+    marginLeft: "10px",
+    lineHeight: "10px",
+    border: "none",
+    background: account ? "white3" : "yellow",
+    color: account ? "text" : "primaryBright",
+    "&&": {
+      padding: `0px ${account ? "45px" : "15px"} 0px 15px`,
+    }
+  }),
 };
 
 export default styles;
