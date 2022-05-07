@@ -250,7 +250,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
   allRightsReserved: {
     color: "primaryBright",
     position: "absolute",
-    bottom: ["10px", "20px" ],
+    bottom: ["10px", "20px"],
     left: ["20px", "auto"],
   },
   linkText: {

@@ -79,7 +79,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
 };
 
 interface Props {
-  account?: string
+  account?: string;
 }
 
 export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
@@ -92,7 +92,7 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     color: account ? "text" : "primaryBright",
     "&&": {
       padding: `0px ${account ? "45px" : "15px"} 0px 15px`,
-    }
+    },
   }),
 };
 
