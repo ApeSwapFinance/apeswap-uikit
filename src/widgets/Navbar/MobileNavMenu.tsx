@@ -12,7 +12,6 @@ import { LiveResultProps, PanelProps, PushedProps } from "./types";
 import Text from "../../components/Text/Text";
 import Tag from "../../components/Tag/Tag";
 import Flex from "../../components/Flex/Flex";
-import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 import styles from "./styles";
 
@@ -24,6 +23,7 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   switchNetwork: (chainId: number) => void;
   track?: TrackHandler;
   liveResult?: LiveResultProps["apiResult"];
+  t: (key: string) => string;
 }
 
 const StyledLink = styled.a`
@@ -63,23 +63,6 @@ const Wrapper = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
-const StyledText = styled(Text)<{ label?: string }>`
-  margin-top: 6px;
-  margin-bottom: 6px;
-  margin-right: 6px;
-  font-weight: 700;
-
-  background: ${({ label }) => label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)"};
-  -webkit-background-clip: ${({ label }) => label === "GNANA" && "text"};
-  -webkit-text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
-  background-clip: ${({ label }) => label === "GNANA" && "text"};
-  text-fill-color: ${({ label }) => label === "GNANA" && "transparent"};
-
-  :hover {
-    box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
-  }
-`;
-
 const NewMenuLink = styled(MenuLink)`
   display: flex;
   align-items: center;
@@ -102,9 +85,9 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   pushNav,
   chainId,
   switchNetwork,
-  toggleTheme,
   track,
   liveResult,
+  t,
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -239,7 +222,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               },
             }}
           >
-            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
           </Flex>
         </Flex>
       </div>

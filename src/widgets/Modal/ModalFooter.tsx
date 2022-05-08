@@ -5,7 +5,7 @@ import styles from "./styles";
 import { Text } from "../../components/Text";
 import { Context as ModalContext } from "./ModalContext";
 
-const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss }) => {
+const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss, t }) => {
   const { handleClose } = useContext(ModalContext);
   const onClose = () => {
     onDismiss?.();
@@ -16,14 +16,14 @@ const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss }) => {
       {children}
       <Text
         onClick={onClose}
-        style={{
+        sx={{
           textDecoration: "underline",
           color: "text",
           cursor: "pointer",
-          fontSize: 16,
+          fontSize: "16px",
         }}
       >
-        Cancel
+        {t ? t("Cancel") : "Cancel"}
       </Text>
     </Flex>
   );

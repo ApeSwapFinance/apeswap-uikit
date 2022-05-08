@@ -38,6 +38,7 @@ it("renders correctly", () => {
         bananaPriceUsd={0.23158668932877668}
         chainId={56}
         switchNetwork={noop}
+        t={() => ""}
         links={menuConfig}
       >
         body
@@ -47,10 +48,10 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-citxvW iRpojR"
+        class="sc-cBNeex hSTgAN"
       >
         <nav
-          class="sc-bZSRNg fYLsjM"
+          class="sc-jcVcSv lnkgNN"
         >
           <div
             class="css-4cffwv"
@@ -195,7 +196,7 @@ it("renders correctly", () => {
           </div>
         </nav>
         <div
-          class="sc-iUuxjF jtvsWi"
+          class="sc-bZSRNg hTwjCL"
         >
           <div
             class="sc-jJEKmz iCqmdF"
@@ -509,12 +510,12 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-iBaQBe eWDVUC"
+            class="sc-iUuxjF iHTANz"
           >
             body
           </div>
           <div
-            class="sc-bdfBQB sc-eggMyH fhltBt llDsKk"
+            class="sc-bdfBQB sc-iBaQBe fhltBt hyejBZ"
             role="presentation"
           />
         </div>
@@ -658,10 +659,7 @@ it("renders correctly", () => {
               </svg>
               <span
                 class="css-1rzh7ej"
-              >
-                ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
-                experience for everyone.
-              </span>
+              />
               <div
                 class="sc-dmlqKv koGHbZ"
               >
@@ -748,6 +746,9 @@ it("renders correctly", () => {
                   </svg>
                    
                 </button>
+                <div
+                  style="margin: 0px 12.5px;"
+                />
               </div>
               <div
                 class="sc-bkzYnD kJjwTF"
@@ -1056,9 +1057,7 @@ it("renders correctly", () => {
                 >
                   <button
                     class="sc-bBXrwG kyUMIJ"
-                  >
-                    BUY BANANA
-                  </button>
+                  />
                 </a>
               </div>
             </div>
@@ -1226,9 +1225,7 @@ it("renders correctly", () => {
           </svg>
           <span
             class="css-1lwg7ih"
-          >
-            ©2022 All rights reserved
-          </span>
+          />
         </div>
       </div>
     </DocumentFragment>

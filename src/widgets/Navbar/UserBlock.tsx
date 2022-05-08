@@ -1,21 +1,19 @@
 import React from "react";
 import { useMatchBreakpoints } from "../../hooks";
 import Button from "../../components/Button/Button";
-import { useWalletModal } from "../WalletModal";
-import { Login } from "../WalletModal/types";
-import { Profile } from "./types";
+import { useWalletModal, Login } from "../WalletModal";
 import { dynamicStyles } from "./styles";
 import { Text } from "../../components/Text";
 
 interface Props {
   account?: string | undefined;
-  profile?: Profile;
   login: Login;
   logout: () => void;
+  t: (key: string) => string;
 }
 
-const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
+const UserBlock: React.FC<Props> = ({ account, login, logout, t }) => {
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, t, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { isXs } = useMatchBreakpoints();
 
@@ -64,7 +62,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
         }}
         account={account}
       >
-        Connect
+        {t("Connect")}
       </Button>
     );
   };
@@ -74,7 +72,6 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
 
 UserBlock.defaultProps = {
   account: "",
-  profile: undefined,
 };
 
 export default UserBlock;

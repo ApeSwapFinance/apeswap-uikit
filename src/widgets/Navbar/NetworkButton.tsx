@@ -11,6 +11,7 @@ import styles from "./styles";
 interface Props {
   chainId: number;
   switchNetwork: SwitchNetwork;
+  t: (key: string) => string;
 }
 
 export const NETWORK_ICON: { [key: number]: any } = {
@@ -20,8 +21,8 @@ export const NETWORK_ICON: { [key: number]: any } = {
   [ChainId.MATIC_TESTNET]: <PolygonChain width="23px" mr="8px" />,
 };
 
-const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
-  const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId);
+const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t }) => {
+  const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId, t);
 
   return (
     <Button

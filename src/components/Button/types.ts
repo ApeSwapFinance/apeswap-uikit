@@ -9,6 +9,8 @@ export enum sizes {
   LARGE = "lg",
 }
 
+export type Sizes = typeof sizes[keyof typeof sizes];
+
 export const buttonFontSizes = {
   [sizes.SMALL]: 1,
   [sizes.MEDIUM]: 3,

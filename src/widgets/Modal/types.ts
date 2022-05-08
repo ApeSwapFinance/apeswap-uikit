@@ -1,5 +1,6 @@
 export interface InternalProps {
   onDismiss?: () => void;
+  t?: (key: string) => string;
 }
 
 export interface ModalProps extends InternalProps {

@@ -23,6 +23,7 @@ export default {
 };
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
+const translate: (key: string) => string = (key) => key;
 
 export const Connected: React.FC = (args: any) => {
   // eslint-disable-next-line no-empty-pattern
@@ -54,6 +55,7 @@ export const Connected: React.FC = (args: any) => {
           langs={langs}
           setLang={noop}
           currentLang="EN"
+          t={translate}
           bananaPriceUsd={0.23158668932877668}
           links={links}
           profile={{
@@ -106,7 +108,7 @@ export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
-        account={null}
+        account={undefined}
         login={noop}
         logout={noop}
         isDark
@@ -118,6 +120,7 @@ export const NotConnected: React.FC = () => {
         chainId={56}
         switchNetwork={noop}
         liveResult={navbarApiResult}
+        t={translate}
       >
         <div style={{ lineHeight: "30px" }}>
           <h1>Page body</h1>
@@ -210,6 +213,7 @@ export const WithNoProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        t={translate}
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -269,6 +273,7 @@ export const WithProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        t={translate}
       >
         <div>
           <Heading as="h1" mb="8px">

@@ -11,12 +11,13 @@ import { Context as ModalContext } from "../Modal/ModalContext";
 interface Props {
   account?: string;
   logout: () => void;
+  t: (key: string) => string;
 }
 
-const AccountModal: React.FC<Props> = ({ account, logout }) => {
+const AccountModal: React.FC<Props> = ({ account, logout, t }) => {
   const { handleClose } = useContext(ModalContext);
   return (
-    <Modal title="Your wallet" minWidth="350px">
+    <Modal title={t("Your wallet")} minWidth="350px">
       <Text
         size="20px"
         weight={600}
@@ -31,9 +32,9 @@ const AccountModal: React.FC<Props> = ({ account, logout }) => {
           href={`https://bscscan.com/address/${account}`}
           mr="16px"
         >
-          View on BscScan
+          {t("View on BscScan")}
         </LinkExternal>
-        <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
+        <CopyToClipboard toCopy={account}>{t("Copy Address")}</CopyToClipboard>
       </Flex>
       <Flex sx={{ justifyContent: "center" }}>
         <Button
@@ -46,7 +47,7 @@ const AccountModal: React.FC<Props> = ({ account, logout }) => {
             window.location.reload();
           }}
         >
-          Logout
+          {t("Logout")}
         </Button>
       </Flex>
     </Modal>

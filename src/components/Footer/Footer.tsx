@@ -27,7 +27,6 @@ import styles, {
   StyledLink,
   BuyBananaButton,
   BottomRowContainer,
-  AllRightsReserved,
 } from "./styles";
 import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 import lightTheme from "../../theme/light";
@@ -35,8 +34,22 @@ import darkTheme from "../../theme/dark";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import MobileLinks from "./MobileLinks";
 import trackSocialClick from "../../util/trackSocialClick";
+import { Colors } from "../../theme/types";
+import { darkColors } from "../../theme";
+import LangSelector from "../LangSelector/LangSelector";
 
-const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPriceUsd, switchNetwork, track }) => {
+const Footer: React.FC<FooterProps> = ({
+  chainId,
+  toggleTheme,
+  isDark,
+  bananaPriceUsd,
+  switchNetwork,
+  track,
+  currentLang,
+  langs,
+  setLang,
+  t,
+}) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const { isXxl, isLg, isXl } = useMatchBreakpoints();
   const isMobile = isXxl === false && isXl === false && isLg === false;
@@ -48,13 +61,26 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
         <LogoFlex>
           <FullLogo width="240px" mb="20px" />
           <Text color="primaryBright" size="16px">
-            {`ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure
-            experience for everyone.`}
+            {t(
+              `ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure experience for everyone.`
+            )}
           </Text>
           <ButtonFlex>
             <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} isMini={false} />
             <div style={{ margin: "0px 12.5px" }} />
-            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
+            <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
+            <div style={{ margin: "0px 12.5px" }} />
+            {/* 
+            Remove until language release
+            <LangSelector
+              currentLang={currentLang}
+              langs={langs}
+              setLang={setLang}
+              color={darkColors.text as keyof Colors}
+              dropdownPosition="top-right"
+            />
+            
+            */}
           </ButtonFlex>
           <IconFlex>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
@@ -117,7 +143,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
               )}
             </div>
             <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
-              <BuyBananaButton>BUY BANANA</BuyBananaButton>
+              <BuyBananaButton>{t("BUY BANANA")}</BuyBananaButton>
             </a>
           </BottomRowContainer>
         </LogoFlex>
@@ -134,7 +160,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                 weight="bold"
                 color="yellow"
               >
-                Support
+                {t("Support")}
               </Text>
               {supportLinks.map((link) => {
                 return (
@@ -148,7 +174,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                     }}
                   >
                     <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
-                      {link.label}
+                      {t(link.label)}
                     </Text>
                   </a>
                 );
@@ -163,7 +189,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                 weight="bold"
                 color="yellow"
               >
-                Engage
+                {t("Engage")}
               </Text>
               {engageLinks.map((link) => {
                 return (
@@ -177,7 +203,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                     }}
                   >
                     <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
-                      {link.label}
+                      {t(link.label)}
                     </Text>
                   </a>
                 );
@@ -192,7 +218,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                 weight="bold"
                 color="yellow"
               >
-                Learn
+                {t("Learn")}
               </Text>
               {learnLinks.map((link) => {
                 return (
@@ -206,7 +232,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
                     }}
                   >
                     <Text sx={styles.linkText} size="16px" weight={400} color="primaryBright">
-                      {link.label}
+                      {t(link.label)}
                     </Text>
                   </a>
                 );
@@ -217,7 +243,7 @@ const Footer: React.FC<FooterProps> = ({ chainId, toggleTheme, isDark, bananaPri
       </FlexContainer>
       <PeakingMonkey />
       {/* <AllRightsReserved>©2022 All rights reserved</AllRightsReserved> */}
-      <Text sx={styles.allRightsReserved}>©2022 All rights reserved</Text>
+      <Text sx={styles.allRightsReserved}>{t("©2022 All rights reserved")}</Text>
     </Container>
   );
 };
