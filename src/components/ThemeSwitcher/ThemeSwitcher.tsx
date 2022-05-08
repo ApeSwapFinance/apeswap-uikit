@@ -30,11 +30,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, isDark, isMi
         {!isMini && (
           <>
             <IslandIcon width="20px" id="islandMode" />
-            <Text
-              weight="normal"
-              color={isDark ? "gray" : "brown"}
-              mx="4px"
-            >
+            <Text weight="normal" color={isDark ? "gray" : "brown"} mx="4px">
               /
             </Text>
           </>
