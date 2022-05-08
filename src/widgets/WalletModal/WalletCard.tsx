@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import { localStorageKey } from "./config";
 import { Login, Config } from "./types";
-import { Context as ModalContext } from "../Modal/ModalContext"
+import { Context as ModalContext } from "../Modal/ModalContext";
 
 interface Props {
   walletConfig: Config;

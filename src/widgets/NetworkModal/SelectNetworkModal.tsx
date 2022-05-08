@@ -16,12 +16,7 @@ const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId }) => (
       <Heading as="h4">Network</Heading>
     </ModalHeader>
     {networks.map((network) => (
-      <NetworkCard
-        networkConfig={network}
-        chainId={chainId}
-        switchNetwork={switchNetwork}
-        key={network.chainId}
-      />
+      <NetworkCard networkConfig={network} chainId={chainId} switchNetwork={switchNetwork} key={network.chainId} />
     ))}
   </Modal>
 );

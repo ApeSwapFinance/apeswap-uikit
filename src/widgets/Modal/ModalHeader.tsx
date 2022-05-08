@@ -11,7 +11,7 @@ const ModalHeader: React.FC<InternalProps> = ({ children, onDismiss, ...props })
   const onClose = () => {
     onDismiss?.();
     handleClose();
-  }
+  };
   return (
     <>
       <Flex {...props} sx={style.modalHead}>

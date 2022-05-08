@@ -22,12 +22,7 @@ const HelpLink = styled(Link)`
 const ConnectModal: React.FC<Props> = ({ login }) => (
   <Modal title="Connect to a wallet" maxWidth="400px" minWidth="350px">
     {config.map((entry, index) => (
-      <WalletCard
-        key={entry.title}
-        login={login}
-        walletConfig={entry}
-        mb={index < config.length - 1 ? "8px" : "0"}
-      />
+      <WalletCard key={entry.title} login={login} walletConfig={entry} mb={index < config.length - 1 ? "8px" : "0"} />
     ))}
     <Flex sx={{ alignItems: "center", justifyContent: "center" }} mt="10px">
       <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">

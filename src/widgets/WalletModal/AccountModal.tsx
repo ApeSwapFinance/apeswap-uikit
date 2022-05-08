@@ -51,7 +51,7 @@ const AccountModal: React.FC<Props> = ({ account, logout }) => {
       </Flex>
     </Modal>
   );
-}
+};
 
 AccountModal.defaultProps = {
   account: undefined,
