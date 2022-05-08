@@ -14,15 +14,19 @@ const MenuButton: React.FC<MenuButtonProps> = ({ handleClick, ...props }) => {
         marginLeft: "20px",
         borderRadius: "8px",
         marginTop: "3.5px",
-        background: "none",
         border: "none",
         paddingLeft: "0px",
         paddingRight: "0px",
+        "&&": {
+          background: "none",
+        },
         "&:focus": {
           boxShadow: "none",
         },
         "&:hover": {
-          background: "none",
+          "&&": {
+            background: "none",
+          },
         },
       }}
       onClick={handleClick}

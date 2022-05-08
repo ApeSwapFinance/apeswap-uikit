@@ -239,7 +239,6 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               },
             }}
           >
-            <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} isMini />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
           </Flex>
         </Flex>

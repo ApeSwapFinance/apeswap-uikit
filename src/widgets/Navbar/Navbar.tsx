@@ -17,7 +17,6 @@ import { Footer } from "../../components/Footer";
 import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
-import { ThemeSwitcher } from "../../components/ThemeSwitcher";
 import { GlowCircle } from "../../components/GlowCircle";
 
 import styles from "./styles";
@@ -227,7 +226,6 @@ const Navbar: React.FC<NavProps> = ({
         >
           {!isMobile && (
             <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
-              <ThemeSwitcher isDark={isDark} isMini toggleTheme={toggleTheme} />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} />
             </Flex>
           )}
