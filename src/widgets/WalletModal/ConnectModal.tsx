@@ -10,7 +10,6 @@ import { Flex } from "../../components/Flex";
 
 interface Props {
   login: Login;
-  onDismiss?: () => void;
 }
 
 const HelpLink = styled(Link)`
@@ -20,14 +19,13 @@ const HelpLink = styled(Link)`
   margin-top: 24px;
 `;
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
-  <Modal title="Connect to a wallet" onDismiss={onDismiss} maxWidth="400px" minWidth="350px">
+const ConnectModal: React.FC<Props> = ({ login }) => (
+  <Modal title="Connect to a wallet" maxWidth="400px" minWidth="350px">
     {config.map((entry, index) => (
       <WalletCard
         key={entry.title}
         login={login}
         walletConfig={entry}
-        onDismiss={onDismiss}
         mb={index < config.length - 1 ? "8px" : "0"}
       />
     ))}
@@ -39,9 +37,5 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
     </Flex>
   </Modal>
 );
-
-ConnectModal.defaultProps = {
-  onDismiss: () => null,
-};
 
 export default ConnectModal;

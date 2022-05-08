@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import { localStorageKey } from "./config";
 import { Login, Config } from "./types";
+import { Context as ModalContext } from "../Modal/ModalContext"
 
 interface Props {
   walletConfig: Config;
   login: Login;
-  onDismiss: () => void;
   mb: string;
 }
 
-const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
+const WalletCard: React.FC<Props> = ({ login, walletConfig, mb }) => {
+  const { handleClose } = useContext(ModalContext);
   const { title, icon: Icon } = walletConfig;
   return (
     <Button
@@ -20,7 +21,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       onClick={() => {
         login(walletConfig.connectorId);
         window.localStorage.setItem(localStorageKey, walletConfig.connectorId);
-        onDismiss();
+        handleClose();
       }}
       sx={{
         justifyContent: "space-between",

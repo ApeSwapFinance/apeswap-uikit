@@ -39,7 +39,7 @@ it("renders correctly", () => {
           class="css-vurnku"
         >
           <button
-            class="css-140f90q"
+            class="css-1pye0ku"
           >
             <svg
               class="css-1o9bukh-Close"

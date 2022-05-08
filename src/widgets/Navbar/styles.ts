@@ -44,7 +44,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     padding: "6px 8px",
     height: "35px",
     background: "white3",
-    border: "none",
+    borderRadius: "10px",
   },
   cardContainer: {
     position: "absolute",
@@ -87,7 +87,7 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     height: "35px",
     marginLeft: "10px",
     lineHeight: "10px",
-    border: "none",
+    borderRadius: "10px",
     background: account ? "white3" : "yellow",
     color: account ? "text" : "primaryBright",
     "&&": {

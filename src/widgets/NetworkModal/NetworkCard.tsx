@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "../../components/Button";
 import Text from "../../components/Text/Text";
 import { SwitchNetwork, Config } from "./types";
+import { Context as ModalContext } from "../Modal/ModalContext";
 
 interface Props {
   networkConfig: Config;
   chainId: number;
-  onDismiss: () => void;
   switchNetwork: SwitchNetwork;
 }
 
@@ -21,7 +21,8 @@ const networkBtn = {
   opacity: 1,
 };
 
-const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switchNetwork }) => {
+const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, switchNetwork }) => {
+  const { handleClose } = useContext(ModalContext);
   const { symbol, icon: Icon } = networkConfig;
   return (
     <Button
@@ -32,7 +33,7 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, onDismiss, switc
       variant={chainId === networkConfig.chainId ? "tertiary" : "secondary"}
       onClick={() => {
         switchNetwork(networkConfig.chainId);
-        onDismiss();
+        handleClose();
       }}
     >
       <Icon width="22px" mr="10px" alignmentBaseline="baseline" />

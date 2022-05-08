@@ -10,6 +10,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleTheme, isDark, isMi
     <Button
       sx={{
         background: "white3",
+        borderRadius: "10px",
         border: "none",
         padding: isMini ? "8px" : "3px 12px",
         marginRight: isMini && "20px",

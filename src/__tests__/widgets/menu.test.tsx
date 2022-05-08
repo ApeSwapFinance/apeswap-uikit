@@ -164,7 +164,7 @@ it("renders correctly", () => {
           >
             <div>
               <button
-                class="css-z7dc45"
+                class="css-8oc1qe"
                 font-size="14px"
               >
                 0xbd...c980 
@@ -172,7 +172,7 @@ it("renders correctly", () => {
             </div>
             <button
               aria-label="Toggle menu"
-              class="css-13tk8k6"
+              class="css-1otfjqb"
             >
               <svg
                 class="sc-gsTEea fQWPxo"
@@ -461,7 +461,7 @@ it("renders correctly", () => {
                   class="css-98z5z1"
                 >
                   <button
-                    class="css-3q8cvw"
+                    class="css-1dy2hix"
                   >
                     <div
                       class="css-4cffwv"
@@ -484,7 +484,7 @@ it("renders correctly", () => {
                      
                   </button>
                   <button
-                    class="css-1sy4fxi"
+                    class="css-j1bajx"
                   >
                     <svg
                       class="sc-gsTEea RuZui"
@@ -684,7 +684,7 @@ it("renders correctly", () => {
                 class="sc-dmlqKv koGHbZ"
               >
                 <button
-                  class="css-1xz48uv"
+                  class="css-k0nmrq"
                 >
                   <div
                     class="css-4cffwv"
@@ -728,7 +728,7 @@ it("renders correctly", () => {
                   style="margin: 0px 12.5px;"
                 />
                 <button
-                  class="css-1sy4fxi"
+                  class="css-j1bajx"
                 >
                   <svg
                     class="sc-gsTEea RuZui"
@@ -1243,7 +1243,7 @@ it("renders correctly", () => {
             />
           </svg>
           <span
-            class="sc-cxFLGX esrHGt css-175enzh"
+            class="css-1lwg7ih"
           >
             ©2022 All rights reserved
           </span>

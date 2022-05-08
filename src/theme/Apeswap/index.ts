@@ -3,11 +3,13 @@ import Colors from "./colors";
 import baseTheme, { breakpointMap } from "./base";
 
 const buttonBaseStyles = {
-  borderRadius: "normal",
   padding: "10px 20px 10px 19px",
   fontSize: "16px",
   cursor: "pointer",
   fontWeight: "bold",
+  "&&": {
+    borderRadius: "normal",
+  },
 };
 
 const Apeswap: Theme = {
@@ -235,6 +237,7 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
+          cursor: "pointer",
           borderColor: "hoveredYellow",
           background: "hoveredYellow",
         },
@@ -256,6 +259,7 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
+          cursor: "pointer",
           borderColor: "hoveredYellow",
         },
         "&:disabled": {},
@@ -275,6 +279,7 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
+          cursor: "pointer",
           background: "white4",
         },
         "&:disabled": {},

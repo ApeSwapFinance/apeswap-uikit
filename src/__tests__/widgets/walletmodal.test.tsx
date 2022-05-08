@@ -25,7 +25,7 @@ it("renders ConnectModal correctly", () => {
               Connect to a wallet
             </h3>
             <button
-              class="css-140f90q"
+              class="css-1pye0ku"
             >
               <svg
                 class="css-1o9bukh-Close"
@@ -47,7 +47,7 @@ it("renders ConnectModal correctly", () => {
             class="css-hkhu5r"
           />
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-metamask"
           >
             <span
@@ -188,7 +188,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-trustwallet"
           >
             <span
@@ -230,7 +230,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-walletconnect"
           >
             <span
@@ -257,7 +257,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-safepal wallet"
           >
             <span
@@ -286,7 +286,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-tokenpocket"
           >
             <span
@@ -319,7 +319,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-coinbase wallet"
           >
             <span
@@ -362,7 +362,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-binance chain wallet"
           >
             <span
@@ -425,7 +425,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-nabox wallet"
           >
             <span
@@ -470,7 +470,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-ma1mgc"
+            class="css-1gy5qw"
             id="wallet-connect-onto wallet"
           >
             <span
@@ -520,7 +520,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1nppjt6"
+            class="css-1lqnz10"
             id="wallet-connect-mathwallet"
           >
             <span
@@ -617,7 +617,7 @@ it("renders AccountModal correctly", () => {
               Your wallet
             </h3>
             <button
-              class="css-140f90q"
+              class="css-1pye0ku"
             >
               <svg
                 class="css-1o9bukh-Close"
@@ -694,7 +694,7 @@ it("renders AccountModal correctly", () => {
             class="css-1b2tw1j"
           >
             <button
-              class="css-1cdgqa2"
+              class="css-e3rl4a"
             >
               Logout 
             </button>

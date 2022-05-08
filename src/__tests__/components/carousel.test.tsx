@@ -13,7 +13,7 @@ it("renders correctly", () => {
           class="css-1xe8amk"
         >
           <button
-            class="css-162q7qs"
+            class="css-1vzkm0m"
           >
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -28,7 +28,7 @@ it("renders correctly", () => {
             </svg>
           </button>
           <button
-            class="css-162q7qs"
+            class="css-1vzkm0m"
           >
             <svg
               class="sc-bdfBQB kA-DbXw"

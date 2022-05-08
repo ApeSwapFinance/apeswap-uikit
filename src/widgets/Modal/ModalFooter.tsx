@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Flex } from "theme-ui";
 import { InternalProps } from "./types";
 import styles from "./styles";
 import { Text } from "../../components/Text";
+import { Context as ModalContext } from "./ModalContext";
 
 const ModalFooter: React.FC<InternalProps> = ({ children, onDismiss }) => {
+  const { handleClose } = useContext(ModalContext);
+  const onClose = () => {
+    onDismiss?.();
+    handleClose();
+  };
   return (
     <Flex sx={styles.modalFooter}>
       {children}
       <Text
-        onClick={onDismiss}
+        onClick={onClose}
         style={{
           textDecoration: "underline",
           color: "text",
