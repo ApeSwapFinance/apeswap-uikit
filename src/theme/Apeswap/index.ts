@@ -237,7 +237,6 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
-          cursor: "pointer",
           borderColor: "hoveredYellow",
           background: "hoveredYellow",
         },
@@ -259,7 +258,6 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
-          cursor: "pointer",
           borderColor: "hoveredYellow",
         },
         "&:disabled": {},
@@ -279,7 +277,6 @@ const Apeswap: Theme = {
 
       "&:hover": {
         "&:not([disabled])": {
-          cursor: "pointer",
           background: "white4",
         },
         "&:disabled": {},

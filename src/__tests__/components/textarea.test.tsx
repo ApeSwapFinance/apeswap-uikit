@@ -7,7 +7,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <textarea
-        class="css-220yb7"
+        class="css-tc50bd"
       />
     </DocumentFragment>
   `);

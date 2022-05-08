@@ -32,7 +32,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork }) => {
       }}
     >
       {NETWORK_ICON[chainId]}
-      <Text color="text" variant="sm" weight="bold">
+      <Text color="text" variant="sm" weight="normal">
         {NETWORK_LABEL[chainId]}
       </Text>
       <ArrowDropDownIcon width="10px" ml="8px" />

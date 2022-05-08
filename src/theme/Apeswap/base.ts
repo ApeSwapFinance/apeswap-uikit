@@ -32,8 +32,8 @@ const baseTheme = {
   borderWidths: [0, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 48, 64],
   mediaQueries,
   fontWeights: {
-    light: 300,
-    normal: 500,
+    light: 400,
+    normal: 600,
     bold: 700,
   },
   fonts: {

@@ -164,15 +164,20 @@ it("renders correctly", () => {
           >
             <div>
               <button
-                class="css-8oc1qe"
+                class="css-1kusgwj"
                 font-size="14px"
               >
-                0xbd...c980 
+                <span
+                  class="css-1yc05tr"
+                >
+                  0xbd...c980
+                </span>
+                 
               </button>
             </div>
             <button
               aria-label="Toggle menu"
-              class="css-1otfjqb"
+              class="css-14uo4c0"
             >
               <svg
                 class="sc-gsTEea fQWPxo"
@@ -461,7 +466,7 @@ it("renders correctly", () => {
                   class="css-98z5z1"
                 >
                   <button
-                    class="css-1dy2hix"
+                    class="css-9spwju"
                   >
                     <div
                       class="css-4cffwv"
@@ -484,7 +489,7 @@ it("renders correctly", () => {
                      
                   </button>
                   <button
-                    class="css-j1bajx"
+                    class="css-1erqard"
                   >
                     <svg
                       class="sc-gsTEea RuZui"
@@ -505,7 +510,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <span
-                      class="css-hbvfi5"
+                      class="css-mfd659"
                     >
                       BSC
                     </span>
@@ -684,7 +689,7 @@ it("renders correctly", () => {
                 class="sc-dmlqKv koGHbZ"
               >
                 <button
-                  class="css-k0nmrq"
+                  class="css-c0dbms"
                 >
                   <div
                     class="css-4cffwv"
@@ -703,7 +708,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <span
-                      class="css-i0gbfj"
+                      class="css-1itohfj"
                     >
                       /
                     </span>
@@ -728,7 +733,7 @@ it("renders correctly", () => {
                   style="margin: 0px 12.5px;"
                 />
                 <button
-                  class="css-j1bajx"
+                  class="css-1erqard"
                 >
                   <svg
                     class="sc-gsTEea RuZui"
@@ -749,7 +754,7 @@ it("renders correctly", () => {
                     />
                   </svg>
                   <span
-                    class="css-hbvfi5"
+                    class="css-mfd659"
                   >
                     BSC
                   </span>

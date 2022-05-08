@@ -30,7 +30,7 @@ it("renders correctly", () => {
           </span>
         </div>
         <button
-          class="css-17owbmz"
+          class="css-1uj2es5"
         >
           Switch2 
         </button>

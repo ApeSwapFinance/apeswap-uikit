@@ -5,6 +5,7 @@ import { useWalletModal } from "../WalletModal";
 import { Login } from "../WalletModal/types";
 import { Profile } from "./types";
 import { dynamicStyles } from "./styles";
+import { Text } from "../../components/Text";
 
 interface Props {
   account?: string | undefined;
@@ -34,7 +35,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
             }}
             account={account}
           >
-            {accountEllipsis}
+            <Text weight="normal">{accountEllipsis}</Text>
           </Button>
         );
       }
@@ -49,7 +50,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, profile }) => {
           }}
           account={account}
         >
-          {accountEllipsis}
+          <Text weight="normal">{accountEllipsis}</Text>
         </Button>
       );
     }
