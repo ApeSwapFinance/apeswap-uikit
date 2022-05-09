@@ -126,6 +126,14 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
                         <Text
                           sx={{
                             ...styles.dropDownMenuText,
+                            "&&&": {
+                              background:
+                                item.label === "GNANA" && "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
+                              WebkitBackgroundClip: item.label === "GNANA" && "text",
+                              backgroundClip: item.label === "GNANA" && "text",
+                              WebkitTextFillColor: item.label === "GNANA" && "transparent",
+                              textFillColor: item.label === "GNANA" && "transparent",
+                            },
                             "&:hover": {
                               boxShadow: `0px 2px 0px ${iconFillColor}`,
                             },
