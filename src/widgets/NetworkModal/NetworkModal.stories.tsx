@@ -28,9 +28,11 @@ export const Default = (args: any) => {
     }
   };
 
+  const translate: (key: string) => string = (key) => key;
+
   return (
     <StorybookLayout {...args}>
-      <NetworkButton chainId={chainId} switchNetwork={() => changeNetwork(chainId)} />
+      <NetworkButton chainId={chainId} switchNetwork={() => changeNetwork(chainId)} t={translate} />
     </StorybookLayout>
   );
 };
