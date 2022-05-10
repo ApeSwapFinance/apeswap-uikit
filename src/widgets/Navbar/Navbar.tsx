@@ -196,9 +196,9 @@ const Navbar: React.FC<NavProps> = ({
                       onClick={handleClick}
                     >
                       {link.label}
-                      {link.label === "Raise" && found?.label === link.label && found?.settings[0]?.tag === "LIVE" && (
-                        <GlowCircle />
-                      )}
+                      {(link.label === "Raise" || link.label === "Collect") &&
+                        found?.label === link.label &&
+                        found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
                     </NavItem>
                   )}
                   {link.label === hoveredItem && link?.items && (
