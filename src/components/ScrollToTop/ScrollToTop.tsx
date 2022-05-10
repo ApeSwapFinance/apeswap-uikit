@@ -1,8 +1,7 @@
-
 import React from "react";
 import { lightColors } from "../../theme";
 import { ChevronUpIcon } from "../Svg";
-import { Props } from "./types"
+import { Props } from "./types";
 
 export const ScrollToTop: React.FC<Props> = ({ style, ...props }) => {
   const scrollToTop = (): void => {

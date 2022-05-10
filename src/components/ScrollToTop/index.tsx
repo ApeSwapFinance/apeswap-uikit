@@ -1,2 +1,2 @@
 export { default as ScrollToTop } from "./ScrollToTop";
-export type { Props } from "./types"
+export type { Props } from "./types";
