@@ -17,7 +17,7 @@ export default {
   },
 };
 
-  const translate: (key: string) => string = (key) => key;
+const translate: (key: string) => string = (key) => key;
 
 export const Wallet = (args: any) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
