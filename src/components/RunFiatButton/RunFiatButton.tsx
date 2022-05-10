@@ -12,7 +12,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, ...props }) => {
       {...props}
       sx={{
         width: (mini && "32px") || "max-content",
-        height: (mini && "32px") || "44px",
+        height: (mini && "32px") || "40px",
         marginRight: "15px",
         background: (mini && "white3") || "yellow",
         border: "none",

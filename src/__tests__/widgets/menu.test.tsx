@@ -980,7 +980,7 @@ it("renders correctly", () => {
                   </a>
                 </div>
                 <button
-                  class="css-b8k0eu"
+                  class="css-1dhg1jc"
                 >
                   <div
                     class="sc-iBkjds gMCkEh"
