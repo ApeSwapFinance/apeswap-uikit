@@ -27,6 +27,9 @@ export enum variants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
   TERTIARY = "tertiary",
+  TEXT = "text",
+  SUCCESS = "success",
+  DANGER = "danger",
 }
 
 export enum iconButtonVariants {

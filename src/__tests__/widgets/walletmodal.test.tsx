@@ -611,7 +611,7 @@ it("renders AccountModal correctly", () => {
             class="css-1b2tw1j"
           >
             <button
-              class="css-1sr6qt6"
+              class="css-1x2si9p"
             >
                
             </button>

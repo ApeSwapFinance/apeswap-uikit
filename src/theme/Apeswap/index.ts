@@ -252,11 +252,11 @@ const Apeswap: Theme = {
       "&:disabled": {
         cursor: "not-allowed",
         background: "white3",
-        border: "secondaryButtonDisable",
-        color: "secondaryButtonDisableColor",
+        color: "primaryButtonDisable",
+        border: "primaryBtnDisable",
       },
 
-      "&:hover": {
+      "&&:hover": {
         "&:not([disabled])": {
           borderColor: "hoveredYellow",
         },
@@ -278,6 +278,60 @@ const Apeswap: Theme = {
       "&:hover": {
         "&:not([disabled])": {
           background: "white4",
+        },
+        "&:disabled": {},
+      },
+    },
+    text: {
+      ...buttonBaseStyles,
+      background: "transparent",
+      color: "text",
+
+      "&:hover": {
+        "&:not([disabled])": {
+          color: "yellow",
+        },
+        "&:disabled": {},
+      },
+
+      "&:disabled": {
+        cursor: "not-allowed",
+        background: "white3",
+        color: "primaryButtonDisable",
+      },
+    },
+    success: {
+      ...buttonBaseStyles,
+      background: "success",
+      color: "primaryBright",
+
+      "&:disabled": {
+        cursor: "not-allowed",
+        background: "white3",
+        color: "primaryButtonDisable",
+      },
+
+      "&:hover": {
+        "&:not([disabled])": {
+          background: "hoveredSuccess",
+        },
+        "&:disabled": {},
+      },
+    },
+    danger: {
+      ...buttonBaseStyles,
+      background: "error",
+      color: "primaryBright",
+
+      "&:disabled": {
+        cursor: "not-allowed",
+        background: "white3",
+        color: "primaryButtonDisable",
+      },
+
+      "&:hover": {
+        "&:not([disabled])": {
+          background: "hoveredDanger",
         },
         "&:disabled": {},
       },

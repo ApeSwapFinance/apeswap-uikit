@@ -33,6 +33,8 @@ const Colors = {
   gray: "#7A7A7A",
   brown: "#4D4040",
   hoveredYellow: "#FFDA00",
+  hoveredSuccess: "#38A611B3",
+  hoveredDanger: "#DF4141B3",
   modes: {
     dark: {
       background: "#0B0B0B",

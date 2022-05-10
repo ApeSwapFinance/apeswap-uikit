@@ -40,6 +40,28 @@ const Button: React.FC<ButtonProps> = ({
       },
     };
   }
+  if (variant === "success") {
+    hoverStyle = {
+      "&:hover": {
+        "&:not([disabled])": {
+          borderColor: "hoveredSuccess",
+          background: "hoveredSuccess",
+        },
+        "&:disabled": {},
+      },
+    };
+  }
+  if (variant === "danger") {
+    hoverStyle = {
+      "&:hover": {
+        "&:not([disabled])": {
+          borderColor: "hoveredDanger",
+          background: "hoveredDanger",
+        },
+        "&:disabled": {},
+      },
+    };
+  }
 
   return (
     <ThemeUIButton
