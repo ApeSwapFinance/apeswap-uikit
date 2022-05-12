@@ -36,7 +36,8 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, switchNetwork })
         handleClose();
       }}
     >
-      <Icon width="22px" mr="10px" alignmentBaseline="baseline" />
+      <Icon width="22px" alignmentBaseline="baseline" />
+      <span style={{ margin: "0px 4px" }} />
       <Text weight="normal" color="text" mr="16px" textAlign="start">
         {symbol}
       </Text>

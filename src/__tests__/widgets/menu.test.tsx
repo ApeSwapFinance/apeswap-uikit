@@ -470,10 +470,10 @@ it("renders correctly", () => {
                     class="css-1erqard"
                   >
                     <svg
-                      class="sc-gsTEea RuZui"
+                      class="sc-gsTEea fQWPxo"
                       color="text"
                       viewBox="0 0 16 16"
-                      width="23px"
+                      width="20px"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <circle
@@ -487,6 +487,9 @@ it("renders correctly", () => {
                         fill="#FFFDFA"
                       />
                     </svg>
+                    <span
+                      style="margin: 0px 4px;"
+                    />
                     <span
                       class="css-mfd659"
                     >
@@ -711,10 +714,10 @@ it("renders correctly", () => {
                   class="css-1erqard"
                 >
                   <svg
-                    class="sc-gsTEea RuZui"
+                    class="sc-gsTEea fQWPxo"
                     color="text"
                     viewBox="0 0 16 16"
-                    width="23px"
+                    width="20px"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <circle
@@ -728,6 +731,9 @@ it("renders correctly", () => {
                       fill="#FFFDFA"
                     />
                   </svg>
+                  <span
+                    style="margin: 0px 4px;"
+                  />
                   <span
                     class="css-mfd659"
                   >

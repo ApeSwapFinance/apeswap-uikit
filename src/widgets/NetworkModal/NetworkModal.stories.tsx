@@ -21,18 +21,14 @@ export const Default = (args: any) => {
   const [chainId, setChainId] = useState(56);
 
   const changeNetwork = (netId: number): void => {
-    if (netId === 56) {
-      setChainId(137);
-    } else {
-      setChainId(56);
-    }
+    setChainId(netId);
   };
 
   const translate: (key: string) => string = (key) => key;
 
   return (
     <StorybookLayout {...args}>
-      <NetworkButton chainId={chainId} switchNetwork={() => changeNetwork(chainId)} t={translate} />
+      <NetworkButton chainId={chainId} switchNetwork={(chain) => changeNetwork(chain)} t={translate} />
     </StorybookLayout>
   );
 };
