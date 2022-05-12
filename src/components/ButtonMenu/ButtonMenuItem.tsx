@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import getFontFamily from "../../util/getFontFamily";
 import Button from "../Button/Button";
 import { sizes, variants } from "../Button/types";
 import { ButtonMenuItemProps } from "./types";
@@ -18,7 +17,6 @@ const InactiveButton = styled(Button)<InactiveButtonProps>`
   &:hover:not(:disabled):not(:active) {
     background-color: transparent;
   }
-  font-family: ${({ fontFamily, theme }) => fontFamily && getFontFamily(fontFamily, theme)};
   font-size: ${({ fontSize }) => fontSize || "16px"};
   display: flex;
   align-items: center;

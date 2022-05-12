@@ -6,6 +6,7 @@ export const breakpointMap: { [key: string]: number } = {
   md: 852,
   lg: 968,
   xl: 1080,
+  xxl: 1200,
 };
 
 const breakpoints: Breakpoints = Object.values(breakpointMap).map((breakpoint) => `${breakpoint}px`);
@@ -16,6 +17,7 @@ const mediaQueries: MediaQueries = {
   md: `@media screen and (min-width: ${breakpointMap.md}px)`,
   lg: `@media screen and (min-width: ${breakpointMap.lg}px)`,
   xl: `@media screen and (min-width: ${breakpointMap.xl}px)`,
+  xxl: `@media screen and (min-width: ${breakpointMap.xxl}px)`,
   nav: `@media screen and (min-width: ${breakpointMap.lg}px)`,
 };
 
@@ -32,15 +34,15 @@ export const shadows = {
 const spacing: Spacing = [0, 4, 8, 16, 24, 32, 48, 64];
 
 const fontFamily: FontFamily = {
-  titan: "Titan One",
   poppins: "Poppins",
 };
 
-const radii = {
-  small: "4px",
-  default: "16px",
+export const radii = {
   card: "32px",
   circle: "50%",
+  default: "16px",
+  normal: "10px",
+  small: "4px",
 };
 
 const zIndices = {

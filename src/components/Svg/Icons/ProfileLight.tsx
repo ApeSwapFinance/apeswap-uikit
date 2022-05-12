@@ -4,13 +4,7 @@ import { SvgProps } from "./types";
 
 const ProfileLight: React.FC<SvgProps> = ({ width }) => {
   return (
-    <svg
-      width={width || "30"}
-      viewBox="0 0 30 35"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      //   sx={style}
-    >
+    <svg width={width || "30"} viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M25.5783 31.9577C22.4006 33.9518 18.7237 35.0066 14.9721 35C11.2206 35.0066 7.54363 33.9518 4.36597 31.9577C7.54363 29.9635 11.2206 28.9088 14.9721 28.9153C18.7237 28.9088 22.4006 29.9635 25.5783 31.9577Z"
         fill="#C8BA9C"

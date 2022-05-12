@@ -1,6 +1,10 @@
 import { ThemeUIStyleObject } from "theme-ui";
 
 const defaultStyle = {
+  cursor: "pointer",
+  color: "primaryBright",
+  fontWeight: 600,
+  fontSize: "16px",
   padding: "10px",
   border: "none",
   transition: "all .3s linear",

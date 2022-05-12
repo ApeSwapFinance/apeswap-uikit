@@ -30,7 +30,7 @@ it("renders correctly", () => {
           class="css-r6zb6k-Alert"
         >
           <p
-            class="css-yijyy9-Alert"
+            class="css-17kxnp3-Alert"
           >
             Alert title
           </p>
@@ -39,7 +39,7 @@ it("renders correctly", () => {
           class="css-vurnku"
         >
           <button
-            class="css-1hdp9rj"
+            class="css-1pye0ku"
           >
             <svg
               class="css-1o9bukh-Close"

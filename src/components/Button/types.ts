@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ButtonProps as ThemeUIButtonProps, ThemeUICSSObject } from "theme-ui";
 import { iconTypes } from "../Svg/types";
 import { colorProps } from "../../theme/Apeswap/types";
@@ -8,6 +9,8 @@ export enum sizes {
   LARGE = "lg",
 }
 
+export type Sizes = typeof sizes[keyof typeof sizes];
+
 export const buttonFontSizes = {
   [sizes.SMALL]: 1,
   [sizes.MEDIUM]: 3,
@@ -15,14 +18,18 @@ export const buttonFontSizes = {
 };
 
 export const buttonPadding = {
-  [sizes.SMALL]: { x: 7, y: 1 },
-  [sizes.MEDIUM]: { x: 15, y: 4 },
-  [sizes.LARGE]: { x: 16, y: 6 },
+  [sizes.SMALL]: { x: 5, y: 2 },
+  [sizes.MEDIUM]: { x: 7, y: 4 },
+  [sizes.LARGE]: { x: 10, y: 6 },
 };
 
 export enum variants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  TERTIARY = "tertiary",
+  TEXT = "text",
+  SUCCESS = "success",
+  DANGER = "danger",
 }
 
 export enum iconButtonVariants {
@@ -38,6 +45,9 @@ export type iconButtonVariantsProps = `${iconButtonVariants}`;
 export interface ButtonProps extends ThemeUIButtonProps {
   variant?: variantProps;
   size?: sizeProps;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  fullWidth?: boolean;
   csx?: ThemeUICSSObject;
   load?: boolean;
   [key: string]: any;
@@ -49,3 +59,18 @@ export interface IconButtonProps extends Omit<ButtonProps, "variant"> {
   background?: colorProps;
   icon?: iconTypes;
 }
+
+export type ButtonThemeVariant = {
+  background: string;
+  backgroundActive: string;
+  backgroundHover: string;
+  border: string | number;
+  borderColorHover: string;
+  boxShadow: string;
+  boxShadowActive: string;
+  color: string;
+};
+
+export type ButtonTheme = {
+  [key in variants]: ButtonThemeVariant;
+};

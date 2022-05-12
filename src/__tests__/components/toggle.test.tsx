@@ -15,7 +15,7 @@ it("renders correctly", () => {
           class="css-hgu77l-Toggle"
         >
           <span
-            class="css-vnj78y-Toggle"
+            class="css-1jxlto-Toggle"
           >
             Switch1
           </span>
@@ -24,13 +24,13 @@ it("renders correctly", () => {
           class="css-hgu77l-Toggle"
         >
           <span
-            class="css-vnj78y-Toggle"
+            class="css-1jxlto-Toggle"
           >
             Switch2
           </span>
         </div>
         <button
-          class="css-1tsgfhl"
+          class="css-1uj2es5"
         >
           Switch2 
         </button>

@@ -46,6 +46,7 @@ export enum icons {
   MEDIUM = "medium",
   INSTAGRAM = "instagram",
   WEBSITE = "website",
+  TELEGRAM = "telegram",
 }
 
 export enum directions {
@@ -61,6 +62,7 @@ type directionTypes = `${directions}`;
 export interface LegacySvgProps extends SVGAttributes<HTMLOrSVGElement>, SpaceProps {
   theme?: DefaultTheme;
   spin?: boolean;
+  bgColor?: string;
 }
 export interface SvgProps {
   icon?: iconTypes;

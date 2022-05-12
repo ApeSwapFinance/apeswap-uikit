@@ -24,14 +24,18 @@ export * from "./components/Textarea";
 export * from "./components/Carousel";
 export * from "./components/TooltipBubble";
 export * from "./components/Select";
+export * from "./components/GlowCircle";
+export * from "./components/ThemeSwitcher";
 export * from "./components/Tabs";
+export * from "./components/ScrollToTop";
 
 // Hooks
 export * from "./hooks";
 
 // Widgets
 export * from "./widgets/Modal";
-export * from "./widgets/Menu";
+export * from "./widgets/Navbar";
+export * from "./widgets/WalletModal";
 export * from "./widgets/MarketingModal";
 
 // Theme

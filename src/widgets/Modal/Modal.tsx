@@ -4,18 +4,21 @@ import { Box } from "theme-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { ModalProps } from "./types";
 import style from "./styles";
+import ModalHeader from "./ModalHeader";
+import { Heading } from "../../components/Heading";
 
 const Modal: React.FC<ModalProps> = ({
   children,
-  handleClose,
-  open = false,
+  onDismiss,
+  open = true,
+  title,
   zIndex = "modal",
   minWidth = "50%",
   maxWidth = "80%",
   ...props
 }) => {
   return (
-    <Box>
+    <Box id={title}>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -26,11 +29,16 @@ const Modal: React.FC<ModalProps> = ({
             {...props}
             sx={{ minWidth, maxWidth, zIndex, ...style.container }}
           >
+            {title && (
+              <ModalHeader onDismiss={onDismiss}>
+                <Heading>{title}</Heading>
+              </ModalHeader>
+            )}
             {children}
           </motion.div>
         )}
       </AnimatePresence>
-      {open && <Box sx={style.backdrop} onClick={handleClose} />}
+      {open && <Box sx={style.backdrop} onClick={onDismiss} />}
     </Box>
   );
 };
