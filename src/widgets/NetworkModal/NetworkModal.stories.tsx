@@ -21,7 +21,7 @@ export const Default = (args: any) => {
   const [chainId, setChainId] = useState(56);
 
   const changeNetwork = (netId: number): void => {
-    setChainId(netId)
+    setChainId(netId);
   };
 
   const translate: (key: string) => string = (key) => key;
