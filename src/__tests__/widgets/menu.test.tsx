@@ -40,6 +40,7 @@ it("renders correctly", () => {
         switchNetwork={noop}
         t={() => ""}
         links={menuConfig}
+        runFiat={noop}
       >
         body
       </Navbar>
@@ -949,9 +950,11 @@ it("renders correctly", () => {
                 </a>
               </div>
               <div
-                class="sc-fKFxtB gdSytb"
+                class="sc-fKFxtB guSKNG"
               >
-                <div>
+                <div
+                  style="margin-right: 21px;"
+                >
                   <a
                     class="sc-hBEYId bHnjWH"
                     href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"

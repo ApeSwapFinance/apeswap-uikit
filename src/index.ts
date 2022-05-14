@@ -28,6 +28,7 @@ export * from "./components/GlowCircle";
 export * from "./components/ThemeSwitcher";
 export * from "./components/Tabs";
 export * from "./components/ScrollToTop";
+export * from "./components/RunFiatButton";
 
 // Hooks
 export * from "./hooks";

@@ -67,6 +67,7 @@ export const Connected: React.FC = (args: any) => {
           switchNetwork={noop}
           track={track}
           liveResult={navbarApiResult}
+          runFiat={noop}
         >
           <div>
             <Heading as="h1" mb="8px">
@@ -120,6 +121,7 @@ export const NotConnected: React.FC = () => {
         chainId={56}
         switchNetwork={noop}
         liveResult={navbarApiResult}
+        runFiat={noop}
         t={translate}
       >
         <div style={{ lineHeight: "30px" }}>
@@ -213,6 +215,7 @@ export const WithNoProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        runFiat={noop}
         t={translate}
       >
         <div>
@@ -273,6 +276,7 @@ export const WithProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        runFiat={noop}
         t={translate}
       >
         <div>
