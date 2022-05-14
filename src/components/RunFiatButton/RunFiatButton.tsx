@@ -19,7 +19,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, t, ...props }) => {
         fontSize: "16px",
         "&&": {
           borderRadius: (mini && "50%") || "10px",
-          
+
           "&:hover": {
             background: mini && "white4",
             filter: (!mini && "brightness(115%)") || "unset",

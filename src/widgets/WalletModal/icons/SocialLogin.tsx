@@ -3,7 +3,7 @@ import LegacySvg from "../../../components/Svg/LegacySvg";
 import { LegacySvgProps } from "../../../components/Svg/types";
 import TorusWallet from "./TorusWallet";
 
-const Icon: React.FC<LegacySvgProps> = ({ fill, ...props}) => {
+const Icon: React.FC<LegacySvgProps> = ({ fill, ...props }) => {
   return (
     <>
       <LegacySvg viewBox="0 0 18 18" {...props} width="24px" />

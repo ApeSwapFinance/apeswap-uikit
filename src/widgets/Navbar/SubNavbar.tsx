@@ -52,17 +52,7 @@ const StyledTag = styled(Tag)`
   height: auto;
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({
-  items,
-  image,
-  label,
-  isDark,
-  chainId,
-  track,
-  subMenu,
-  runFiat,
-  t,
-}) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track, subMenu, runFiat, t }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
