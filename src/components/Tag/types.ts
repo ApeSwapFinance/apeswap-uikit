@@ -3,12 +3,12 @@ import { SpaceProps } from "styled-system";
 
 export const variants = {
   PRIMARY: "primary",
-  SECONDARY: "secondary",
   SUCCESS: "success",
+  BINANCE: "binance",
+  ERROR: "error",
+  SECONDARY: "secondary",
   TEXTDISABLED: "textDisabled",
   TEXTSUBTLE: "textSubtle",
-  BINANCE: "binance",
-  FAILURE: "failure",
 } as const;
 
 export type Variants = typeof variants[keyof typeof variants];

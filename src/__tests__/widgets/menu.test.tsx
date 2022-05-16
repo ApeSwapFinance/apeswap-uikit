@@ -494,7 +494,7 @@ it("renders correctly", () => {
                     <span
                       class="css-mfd659"
                     >
-                      BSC
+                      BNB
                     </span>
                     <svg
                       class="sc-gsTEea jJcsIR"
@@ -738,7 +738,7 @@ it("renders correctly", () => {
                   <span
                     class="css-mfd659"
                   >
-                    BSC
+                    BNB
                   </span>
                   <svg
                     class="sc-gsTEea jJcsIR"
