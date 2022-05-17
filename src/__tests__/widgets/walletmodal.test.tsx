@@ -616,7 +616,9 @@ it("renders ConnectModal correctly", () => {
             class="css-1gksbu2"
           >
             <a
-              class="css-dovavb"
+              class="css-10ylzz7"
+              href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <svg
@@ -676,8 +678,9 @@ it("renders AccountModal correctly", () => {
             class="css-1ne87w5"
           >
             <a
-              class="css-1hks94s"
+              class="css-f7lsuy"
               href="https://bscscan.com/address/undefined"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <span
@@ -713,7 +716,7 @@ it("renders AccountModal correctly", () => {
                 />
               </svg>
               <div
-                class="sc-jSgvzq cWLZjj"
+                class="sc-eCstlR vNuVf"
               >
                 Copied
               </div>

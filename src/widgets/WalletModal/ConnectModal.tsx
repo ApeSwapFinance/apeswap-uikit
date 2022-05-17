@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "../../components/Link";
 import { HelpIcon } from "../../components/Svg";
 import { Modal } from "../Modal";
@@ -13,12 +12,6 @@ interface Props {
   t: (key: string) => string;
 }
 
-const HelpLink = styled(Link)`
-  display: flex;
-  align-self: center;
-  align-items: center;
-  margin-top: 24px;
-`;
 
 const ConnectModal: React.FC<Props> = ({ login, t }) => (
   <Modal title={t("Connect to a wallet")} maxWidth="400px" minWidth="350px">
@@ -32,10 +25,21 @@ const ConnectModal: React.FC<Props> = ({ login, t }) => (
       />
     ))}
     <Flex sx={{ alignItems: "center", justifyContent: "center" }} mt="10px">
-      <HelpLink href="https://docs.binance.org/smart-chain/wallet/metamask.html" external color="text">
+      <Link
+        href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
+        external
+        color="text"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          alignSelf: "center",
+          marginTop: "24px",
+          "&:hover": { textDecoration: "underline" },
+        }}
+      >
         <HelpIcon mr="6px" />
         {t("Learn how to connect")}
-      </HelpLink>
+      </Link>
     </Flex>
   </Modal>
 );

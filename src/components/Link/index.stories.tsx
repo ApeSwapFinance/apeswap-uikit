@@ -24,19 +24,14 @@ export default {
   },
 };
 
-export const Default = (args) => {
+export const Default = (args: any) => {
   return (
     <StorybookLayout {...args}>
       <div>
         <Link href="/">Default</Link>
       </div>
       <div>
-        <Link href="/" fontFamily="Titan One">
-          Titan One
-        </Link>
-      </div>
-      <div>
-        <Link href="/" color="text">
+        <Link href="/" color="red">
           Custom color
         </Link>
       </div>
@@ -55,9 +50,12 @@ export const Default = (args) => {
   );
 };
 
-export const External = (args) => (
+export const External = (args: any) => (
   <StorybookLayout {...args}>
-    <Link external href="/">
+    <Link
+      external
+      href="/"
+    >
       Link External
     </Link>
   </StorybookLayout>
