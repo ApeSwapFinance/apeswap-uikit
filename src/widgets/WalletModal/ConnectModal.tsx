@@ -12,7 +12,6 @@ interface Props {
   t: (key: string) => string;
 }
 
-
 const ConnectModal: React.FC<Props> = ({ login, t }) => (
   <Modal title={t("Connect to a wallet")} maxWidth="400px" minWidth="350px">
     {config.map((entry, index) => (

@@ -52,10 +52,7 @@ export const Default = (args: any) => {
 
 export const External = (args: any) => (
   <StorybookLayout {...args}>
-    <Link
-      external
-      href="/"
-    >
+    <Link external href="/">
       Link External
     </Link>
   </StorybookLayout>
