@@ -12,6 +12,7 @@ export interface FooterProps {
   langs: LangType[];
   setLang: (lang: LangType) => void;
   t: (text: string) => string;
+  runFiat: () => void;
 }
 
 export interface PushedProps {

@@ -75,4 +75,5 @@ export interface NavProps extends PanelProps {
   track?: TrackHandler | undefined;
   liveResult?: LiveResultProps["apiResult"] | undefined;
   t: (text: string) => string;
+  runFiat: () => void;
 }

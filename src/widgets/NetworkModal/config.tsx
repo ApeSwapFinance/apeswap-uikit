@@ -20,8 +20,8 @@ export const NETWORK_ICON: { [key: number]: any } = {
 };
 
 export const NETWORK_LABEL: { [key: number]: any } = {
-  [ChainId.BSC]: "BSC",
-  [ChainId.BSC_TESTNET]: "BSC Testnet",
+  [ChainId.BSC]: "BNB",
+  [ChainId.BSC_TESTNET]: "BNB Testnet",
   [ChainId.MATIC]: "Polygon",
   [ChainId.MATIC_TESTNET]: "Matic Testnet",
   [ChainId.ETH]: "Ethereum",

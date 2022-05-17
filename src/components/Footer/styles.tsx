@@ -1,6 +1,5 @@
 import { ThemeUIStyleObject } from "theme-ui";
 import styled from "styled-components";
-import ApeSwapTheme from "../../theme/Apeswap";
 import { MobileIcon } from "../../widgets/Navbar/icons";
 import { Button } from "../Button";
 import { Flex } from "../Flex";
@@ -206,8 +205,7 @@ export const BottomRowContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  align-items: space-between;
+  align-items: center;
 `;
 
 export const BuyBananaButton = styled.button`

@@ -87,3 +87,4 @@ export { default as PoolsM1Icon } from "./_Icons/PoolsM1";
 export { default as PoolsM2Icon } from "./_Icons/PoolsM2";
 export { default as PoolsM3Icon } from "./_Icons/PoolsM3";
 export { default as PoolsM4Icon } from "./_Icons/PoolsM4";
+export { default as CardIcon } from "./_Icons/CardIcon";

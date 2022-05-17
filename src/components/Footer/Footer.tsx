@@ -34,6 +34,7 @@ import darkTheme from "../../theme/dark";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import MobileLinks from "./MobileLinks";
 import trackSocialClick from "../../util/trackSocialClick";
+import { RunFiatButton } from "../RunFiatButton";
 import { Colors } from "../../theme/types";
 import { darkColors } from "../../theme";
 import LangSelector from "../LangSelector/LangSelector";
@@ -45,6 +46,7 @@ const Footer: React.FC<FooterProps> = ({
   bananaPriceUsd,
   switchNetwork,
   track,
+  runFiat,
   currentLang,
   langs,
   setLang,
@@ -129,7 +131,7 @@ const Footer: React.FC<FooterProps> = ({
             </StyledLink>
           </IconFlex>
           <BottomRowContainer>
-            <div>
+            <div style={{ marginRight: "21px" }}>
               {bananaPriceUsd ? (
                 <PriceLink
                   href="https://info.apeswap.finance/token/0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
@@ -145,6 +147,7 @@ const Footer: React.FC<FooterProps> = ({
             <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
               <BuyBananaButton>{t("BUY BANANA")}</BuyBananaButton>
             </a>
+            {/* <RunFiatButton runFiat={runFiat} t={t} /> */}
           </BottomRowContainer>
         </LogoFlex>
         {isMobile ? (

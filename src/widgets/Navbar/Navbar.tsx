@@ -18,6 +18,7 @@ import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
 import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
 import { GlowCircle } from "../../components/GlowCircle";
+import { RunFiatButton } from "../../components/RunFiatButton";
 
 import styles from "./styles";
 
@@ -106,6 +107,7 @@ const Navbar: React.FC<NavProps> = ({
   chainId,
   track,
   liveResult,
+  runFiat,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -211,6 +213,8 @@ const Navbar: React.FC<NavProps> = ({
                         chainId={chainId}
                         track={track}
                         subMenu={found?.settings}
+                        runFiat={runFiat}
+                        t={t}
                       />
                     </div>
                   )}
@@ -228,6 +232,7 @@ const Navbar: React.FC<NavProps> = ({
         >
           {!isMobile && (
             <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
+              {/* <RunFiatButton mini runFiat={runFiat} t={t} /> */}
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
             </Flex>
           )}
@@ -280,6 +285,7 @@ const Navbar: React.FC<NavProps> = ({
         setLang={setLang}
         currentLang={currentLang}
         t={t}
+        runFiat={runFiat}
       />
     </Wrapper>
   );

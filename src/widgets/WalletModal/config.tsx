@@ -7,6 +7,7 @@ import BinanceChain from "./icons/BinanceChain";
 import OntoWallet from "./icons/OntoWallet";
 import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
+import TorusWallet from "./icons/SocialLogin";
 import Coinbase from "./icons/Coinbase";
 import { Config, ConnectorNames } from "./types";
 
@@ -20,6 +21,11 @@ const connectors: Config[] = [
     title: "TrustWallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Social Login",
+    icon: TorusWallet,
+    connectorId: ConnectorNames.Torus,
   },
   {
     title: "WalletConnect",

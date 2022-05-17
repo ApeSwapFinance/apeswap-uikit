@@ -23,6 +23,7 @@ export const Default: React.FC = () => {
         currentLang={null}
         langs={null}
         setLang={noop}
+        runFiat={noop}
       />
     </div>
   );

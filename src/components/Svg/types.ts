@@ -69,5 +69,6 @@ export interface SvgProps {
   direction?: directionTypes;
   color?: colorProps;
   width?: string | number;
+  height?: string | number;
   spin?: boolean;
 }
