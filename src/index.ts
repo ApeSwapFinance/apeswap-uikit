@@ -37,6 +37,7 @@ export * from "./hooks";
 export * from "./widgets/Modal";
 export * from "./widgets/Navbar";
 export * from "./widgets/WalletModal";
+export * from "./widgets/NetworkModal";
 export * from "./widgets/MarketingModal";
 
 // Theme
