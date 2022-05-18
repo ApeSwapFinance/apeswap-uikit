@@ -9,14 +9,15 @@ const Tab: React.FC<TabProps> = React.forwardRef(
     return (
       <Box
         ref={ref as any}
+        {...props}
         sx={{
           ...styles.tab,
           flex: variant === variants.FULLWIDTH ? 1 : undefined,
           px: tabPadding[size].x,
           py: tabPadding[size].y,
-          ...(props as any)?.sx,
+          cursor: props?.disabled ? "not-allowed" : "pointer",
         }}
-        onClick={() => onClick(index)}
+        onClick={() => props?.disabled || onClick(index)}
       >
         <Text sx={{ fontSize: fontSizes[size] }} weight="bold">
           {label}

@@ -24,6 +24,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     height: "100%",
     fontSize: "14px",
     transition: "left 0.2s linear",
+    textTransform: "none",
     "&:hover": {
       filter: "none",
     },
@@ -32,10 +33,10 @@ const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: "10px",
     px: "36px",
     py: "9px",
-    cursor: "pointer",
     background: "white3",
     color: "primaryButtonDisable",
     textAlign: "center",
+    border: 0,
     "&:hover": {
       filter: "20%",
     },

@@ -1,3 +1,5 @@
+import { BoxProps } from "theme-ui";
+
 export enum sizes {
   SMALL = "sm",
   MEDIUM = "md",
@@ -24,13 +26,14 @@ export enum variants {
 export type variantProps = `${variants}`;
 export type sizeProps = `${sizes}`;
 
-export interface TabProps {
+export interface TabProps extends Omit<BoxProps, "onClick"> {
   index: number;
   activeTab?: number;
   label: string;
   onClick: (activeTab: number) => void;
   size: sizeProps;
   variant: variantProps;
+  disabled?: boolean;
 }
 
 export interface TabsProps {

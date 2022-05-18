@@ -28,7 +28,7 @@ export const Default = (args: any) => {
   return (
     <StorybookLayout {...args}>
       <Tabs {...args} activeTab={activeTab}>
-        <Tab index={0} onClick={setActiveTab} label="Tab 1" {...args} />
+        <Tab disabled index={0} onClick={setActiveTab} label="Tab 1" {...args} />
         <Tab index={1} onClick={setActiveTab} label="Tab 2" {...args} />
         <Tab index={2} onClick={setActiveTab} label="Tab 3" {...args} />
       </Tabs>
