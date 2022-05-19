@@ -1,5 +1,6 @@
 export interface InternalProps {
   onDismiss?: () => void;
+  onAnimationComplete?: () => void;
   t?: (key: string) => string;
 }
 
