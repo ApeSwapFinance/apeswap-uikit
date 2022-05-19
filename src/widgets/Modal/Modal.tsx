@@ -15,6 +15,7 @@ const Modal: React.FC<ModalProps> = ({
   zIndex = "modal",
   minWidth = "50%",
   maxWidth = "80%",
+  onAnimationComplete,
   ...props
 }) => {
   return (
@@ -28,6 +29,7 @@ const Modal: React.FC<ModalProps> = ({
             exit={{ opacity: 0, transform: "translate(-50%, -50%) scale(0)" }}
             {...props}
             sx={{ minWidth, maxWidth, zIndex, ...style.container }}
+            onAnimationComplete={onAnimationComplete}
           >
             {title && (
               <ModalHeader onDismiss={onDismiss}>
