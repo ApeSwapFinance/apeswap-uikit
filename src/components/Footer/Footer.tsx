@@ -70,11 +70,7 @@ const Footer: React.FC<FooterProps> = ({
           <ButtonFlex>
             <ThemeSwitcher toggleTheme={toggleTheme} isDark={isDark} isMini={false} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
-            <LangSelector
-              currentLang={currentLang}
-              langs={langs}
-              setLang={setLang}
-            />
+            <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
           </ButtonFlex>
           <IconFlex>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">

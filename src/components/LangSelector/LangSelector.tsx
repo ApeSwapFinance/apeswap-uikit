@@ -11,7 +11,7 @@ interface Props {
 const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => (
   <Select size="xsm" active={currentLang} position="top">
     {langs?.map((lang) => (
-      <SelectItem key={lang.code} value={lang.language} onClick={() => setLang(lang)} size='xsm'  >
+      <SelectItem key={lang.code} value={lang.language} onClick={() => setLang(lang)} size="xsm">
         {lang.language}
       </SelectItem>
     ))}
