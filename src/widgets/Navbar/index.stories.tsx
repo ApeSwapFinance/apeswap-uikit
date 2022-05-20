@@ -54,7 +54,7 @@ export const Connected: React.FC = (args: any) => {
           toggleTheme={noop}
           langs={langs}
           setLang={noop}
-          currentLang="EN"
+          currentLang="English1"
           t={translate}
           bananaPriceUsd={0.23158668932877668}
           links={links}

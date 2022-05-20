@@ -1,6 +1,7 @@
 import React from "react";
 import { noop } from "lodash";
 import Footer from "./Footer";
+import { LangType } from "../../widgets/Navbar";
 
 export default {
   title: "Components/Footer",
@@ -9,6 +10,7 @@ export default {
 };
 
 const translate: (key: string) => string = (key) => key;
+const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
 export const Default: React.FC = () => {
   return (
@@ -20,8 +22,8 @@ export const Default: React.FC = () => {
         bananaPriceUsd={0.48}
         switchNetwork={null}
         t={translate}
-        currentLang={null}
-        langs={null}
+        currentLang="English1"
+        langs={langs}
         setLang={noop}
         runFiat={noop}
       />

@@ -6,24 +6,35 @@ export enum positions {
 }
 
 export enum sizes {
+  XSMALL = "xsm",
   SMALL = "sm",
   MEDIUM = "md",
   LARGE = "lg",
 }
 
 export const fontSizes = {
+  [sizes.XSMALL]: 1,
   [sizes.SMALL]: 1,
   [sizes.MEDIUM]: 3,
   [sizes.LARGE]: 6,
 };
 
 export const selectPadding = {
+  [sizes.XSMALL]: 2,
   [sizes.SMALL]: 4,
   [sizes.MEDIUM]: 6,
   [sizes.LARGE]: 8,
 };
 
+export const selectedExtraPadding = {
+  [sizes.XSMALL]: 1,
+  [sizes.SMALL]: 0,
+  [sizes.MEDIUM]: 0,
+  [sizes.LARGE]: 0,
+};
+
 export const selectItemPadding = {
+  [sizes.XSMALL]: 2,
   [sizes.SMALL]: 4,
   [sizes.MEDIUM]: 6,
   [sizes.LARGE]: 8,

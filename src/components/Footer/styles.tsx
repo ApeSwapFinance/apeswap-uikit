@@ -184,13 +184,13 @@ export const ButtonFlex = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 60px;
-  justify-content: flex-start;
+  height: 100px;
+  justify-content: space-between;
   align-items: flex-end;
   margin-top: 10px;
   ${({ theme }) => theme.mediaQueries.sm} {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: 60px;
   }
 `;

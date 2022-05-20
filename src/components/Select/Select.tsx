@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import { Box, Flex } from "theme-ui";
 import { AnimatePresence, motion } from "framer-motion";
-import { SelectProps, selectPadding, sizes, positions } from "./types";
+import { SelectProps, selectPadding, sizes, positions, selectedExtraPadding } from "./types";
 import { Svg } from "../Svg";
 import styles from "./styles";
 
@@ -33,6 +33,7 @@ const Select: React.FC<SelectProps> = ({
       <Box sx={{ ...styles.container, width }} onClick={handleClick}>
         <Flex
           sx={{
+            padding: selectedExtraPadding[size],
             pr: selectPadding[size],
             columnGap: "10px",
             alignItems: "center",
