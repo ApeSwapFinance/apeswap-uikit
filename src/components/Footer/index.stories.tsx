@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { noop } from "lodash";
 import Footer from "./Footer";
-import { LangType } from "../../widgets/Navbar";
+import { Language } from "../LangSelector/types";
 
 export default {
   title: "Components/Footer",
@@ -10,9 +10,11 @@ export default {
 };
 
 const translate: (key: string) => string = (key) => key;
-const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
+const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}`, locale: `e${i}` }));
 
 export const Default: React.FC = () => {
+  const [currentLang, setCurrentLang] = useState("English1");
+
   return (
     <div>
       <Footer
@@ -22,9 +24,9 @@ export const Default: React.FC = () => {
         bananaPriceUsd={0.48}
         switchNetwork={null}
         t={translate}
-        currentLang="English1"
+        currentLang={currentLang}
         langs={langs}
-        setLang={noop}
+        setLang={(lang) => setCurrentLang(lang.language)}
         runFiat={noop}
       />
     </div>

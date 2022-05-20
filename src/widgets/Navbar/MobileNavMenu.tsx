@@ -14,6 +14,7 @@ import Tag from "../../components/Tag/Tag";
 import Flex from "../../components/Flex/Flex";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 import styles from "./styles";
+import LangSelectorButton from "../../components/LangSelectorButton/LangSelectorButton";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -85,6 +86,9 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   pushNav,
   chainId,
   switchNetwork,
+  setLang,
+  currentLang,
+  langs,
   track,
   liveResult,
   t,
@@ -230,6 +234,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               },
             }}
           >
+            <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
           </Flex>
         </Flex>

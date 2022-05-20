@@ -19,8 +19,8 @@ import MenuButton from "./MenuButton";
 import MobileNavMenu from "./MobileNavMenu";
 import { GlowCircle } from "../../components/GlowCircle";
 import { RunFiatButton } from "../../components/RunFiatButton";
-
 import styles from "./styles";
+import LangSelectorButton from "../../components/LangSelectorButton/LangSelectorButton";
 
 const Wrapper = styled.div`
   position: relative;
@@ -37,7 +37,7 @@ const NavItem = styled.div<{ active?: boolean }>`
   box-shadow: ${(props) => props.active && `0px 2px 0px ${props.theme.colors.text}`};
   font-size: 16px;
   font-weight: 700;
-  margin: 0px 22.5px 0px 22.5px;
+  margin: 0px 22.5px;
   color: ${({ theme }) => theme.colors.text};
   :hover {
     box-shadow: ${({ theme }) => `0px 2px 0px ${theme.colors.text}`};
@@ -233,6 +233,7 @@ const Navbar: React.FC<NavProps> = ({
           {!isMobile && (
             <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
               {/* <RunFiatButton mini runFiat={runFiat} t={t} /> */}
+              <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
             </Flex>
           )}

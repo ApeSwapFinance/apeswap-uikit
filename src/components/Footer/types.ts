@@ -1,5 +1,5 @@
 import { TrackHandler } from "../../util/trackSocialClick";
-import { LangType } from "../../widgets/Navbar";
+import { Language } from "../LangSelector/types";
 
 export interface FooterProps {
   chainId: number;
@@ -9,8 +9,8 @@ export interface FooterProps {
   bananaPriceUsd: number | undefined;
   track?: TrackHandler | undefined;
   currentLang: string;
-  langs: LangType[];
-  setLang: (lang: LangType) => void;
+  langs: Language[];
+  setLang: (lang: Language) => void;
   t: (text: string) => string;
   runFiat: () => void;
 }
