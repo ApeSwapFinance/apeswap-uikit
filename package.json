@@ -1,6 +1,6 @@
 {
   "name": "@ape.swap/uikit",
-  "version": "1.0.10",
+  "version": "1.0.10-alpha.3",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
@@ -89,8 +89,8 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.8.1",
-    "@rollup/plugin-json": "^4.1.0",
     "@mdx-js/react": "1.6.22",
+    "@rollup/plugin-json": "^4.1.0",
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",
     "framer-motion": "^4.1.17",
