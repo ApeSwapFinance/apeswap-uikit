@@ -63,7 +63,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
         {items.map((item) => {
           const found = subMenu?.find((menu) => menu.navItem === item.label);
           return (
-            <NewMenuLink href={item.href} target={label === "More" ? "_blank" : "_parent"}>
+            <NewMenuLink href={item.href}>
               <Text
                 sx={{
                   ...styles.dropDownMenuText,
@@ -95,7 +95,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
         })}
       </Box>
       <Box sx={styles.navImage}>{imageElement}</Box>
-      {label === "More" && (
+      {label === t("More") && (
         <Flex
           sx={{
             justifyContent: "space-between",
