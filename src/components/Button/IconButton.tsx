@@ -12,7 +12,6 @@ const IconButton: React.FC<IconButtonProps> = ({
   background = colorValues.yellow,
   variant = variants.PRIMARY,
   children,
-  sx,
   ...props
 }) => {
   return (
@@ -24,7 +23,6 @@ const IconButton: React.FC<IconButtonProps> = ({
         background,
         ...(variant === variants.PRIMARY ? style.primary : {}),
         ...(variant === variants.TRANSPARENT ? style.transparent : {}),
-        ...sx,
       }}
     >
       {children || <Svg color={color} icon={icon} {...props} />}

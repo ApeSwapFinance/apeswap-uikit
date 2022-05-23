@@ -49,6 +49,7 @@ const ModalProvider: React.FC = ({ children }) => {
   };
 
   const handleDismiss = () => {
+    if (React.isValidElement(modalNode)) modalNode.props?.onDismiss();
     setModalNode(undefined);
     setIsOpen(false);
     setNodeId("");

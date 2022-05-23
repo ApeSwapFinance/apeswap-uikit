@@ -61,8 +61,8 @@ export const Default = (args: any) => {
       <Button variant="secondary" onClick={() => setOpen(!open)}>
         Show Modal
       </Button>
-      <Modal {...args} open={open} handleClose={() => setOpen(!open)}>
-        <ModalHeader onDismiss={() => setOpen(!open)}>
+      <Modal {...args} open={open} onDismiss={() => setOpen(!open)}>
+        <ModalHeader>
           <Heading as="h3">Stake BANANA</Heading>
         </ModalHeader>
         <div sx={styles.base}>
@@ -78,7 +78,7 @@ export const Default = (args: any) => {
             <Text>Balance: 100.33</Text>
           </div>
         </div>
-        <ModalFooter onDismiss={() => setOpen(!open)}>
+        <ModalFooter>
           <Button>DEPOSIT</Button>
         </ModalFooter>
       </Modal>

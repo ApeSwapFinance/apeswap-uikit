@@ -9,10 +9,11 @@ interface Props {
   switchNetwork: SwitchNetwork;
   chainId: number;
   t: (key: string) => string;
+  onDismiss?: () => void;
 }
 
-const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t }) => (
-  <Modal maxWidth="350px" minWidth="350px">
+const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss }) => (
+  <Modal maxWidth="350px" minWidth="350px" onDismiss={onDismiss}>
     <ModalHeader>
       <Heading as="h4">{t("Network")}</Heading>
     </ModalHeader>
@@ -21,5 +22,9 @@ const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t }) => (
     ))}
   </Modal>
 );
+
+SelectNetworkModal.defaultProps = {
+  onDismiss: () => null,
+};
 
 export default SelectNetworkModal;

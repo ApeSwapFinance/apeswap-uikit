@@ -17,7 +17,7 @@ it("renders ConnectModal correctly", () => {
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -156,7 +156,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -196,7 +196,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -308,7 +308,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -333,7 +333,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -360,7 +360,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -391,7 +391,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -432,7 +432,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -493,7 +493,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -536,7 +536,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-6h7fdg"
+            class="css-1fjjhyd"
             id="wallet-connect-"
           >
             <span
@@ -584,7 +584,7 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1dn8hyl"
+            class="css-rtl4ff"
             id="wallet-connect-"
           >
             <span
@@ -616,7 +616,7 @@ it("renders ConnectModal correctly", () => {
             class="css-1gksbu2"
           >
             <a
-              class="css-10ylzz7"
+              class="css-1n3itcm"
               href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
               rel="noreferrer noopener"
               target="_blank"
@@ -678,7 +678,7 @@ it("renders AccountModal correctly", () => {
             class="css-1ne87w5"
           >
             <a
-              class="css-f7lsuy"
+              class="css-1i0376m"
               href="https://bscscan.com/address/undefined"
               rel="noreferrer noopener"
               target="_blank"

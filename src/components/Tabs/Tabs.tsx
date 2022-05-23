@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Box } from "theme-ui";
 import { Button } from "../Button";
@@ -6,7 +7,13 @@ import styles from "./styles";
 
 const isBrowser = typeof window === "object";
 
-const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants.CENTERED, size = sizes.MEDIUM }) => {
+const Tabs: React.FC<TabsProps> = ({
+  activeTab = 0,
+  children,
+  variant = variants.CENTERED,
+  size = sizes.MEDIUM,
+  ...props
+}) => {
   const [label, setLabel] = useState<string>();
   const activeRef = useRef<any>(null);
   const [activeStyle, setActiveStyle] = useState({});
@@ -33,6 +40,7 @@ const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants
 
   return (
     <Box
+      {...props}
       sx={{
         ...styles.tabs,
         justifyContent: variant === variants.CENTERED ? "center" : null,
@@ -58,16 +66,20 @@ const Tabs: React.FC<TabsProps> = ({ activeTab = 0, children, variant = variants
             ref: (child as any)?.props?.index === activeTab ? activeRef : undefined,
           });
         })}
-        <Button
-          csx={{
-            ...styles.tabButton,
-            ...activeStyle,
-            display: isBrowser ? undefined : "none",
-          }}
-          sx={{ px: tabPadding[size].x, py: tabPadding[size].y, fontSize: fontSizes[size] }}
-        >
-          {label}
-        </Button>
+        {activeTab >= 0 && (
+          <Button
+            sx={{
+              px: tabPadding[size].x,
+              py: tabPadding[size].y,
+              fontSize: fontSizes[size],
+              ...styles.tabButton,
+              ...activeStyle,
+              display: isBrowser ? undefined : "none",
+            }}
+          >
+            {label}
+          </Button>
+        )}
       </Box>
     </Box>
   );

@@ -4,7 +4,7 @@ import { Box, Link } from "theme-ui";
 import { Svg } from "../Svg";
 import { LinkExternalProps } from "./types";
 
-const LinkExternal: React.FC<LinkExternalProps> = ({ display, textAlign, children, sx, ...props }) => {
+const LinkExternal: React.FC<LinkExternalProps> = ({ display, textAlign, children, ...props }) => {
   return (
     <Link
       sx={{
@@ -13,7 +13,6 @@ const LinkExternal: React.FC<LinkExternalProps> = ({ display, textAlign, childre
         textAlign,
         cursor: "pointer",
         alignItems: "center",
-        ...sx,
       }}
       {...props}
       target="_blank"

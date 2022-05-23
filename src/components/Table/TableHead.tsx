@@ -2,9 +2,10 @@
 import React from "react";
 import { TableHeadProps } from "./types";
 
-const TableHead: React.FC<TableHeadProps> = ({ children, width }) => {
+const TableHead: React.FC<TableHeadProps> = ({ children, width, ...props }) => {
   return (
     <th
+      {...props}
       sx={{
         px: 4,
         py: 2,

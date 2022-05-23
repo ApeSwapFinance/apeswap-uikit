@@ -16,13 +16,10 @@ const styles: Record<string, ThemeUIStyleObject> = {
     margin: 0,
   },
   tabButton: {
-    px: "36px",
-    py: "9px",
     position: "absolute",
     border: 0,
     top: 0,
     height: "100%",
-    fontSize: "14px",
     transition: "left 0.2s linear",
     textTransform: "none",
     "&:hover": {
