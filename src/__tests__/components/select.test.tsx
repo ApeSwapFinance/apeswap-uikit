@@ -14,7 +14,7 @@ it("renders correctly", () => {
         class="css-1i0o8tf-Select"
       >
         <div
-          class="css-mmv66p-Select"
+          class="css-1w21k6h-Select"
         >
           <svg
             class="css-1exjd22-Caret"

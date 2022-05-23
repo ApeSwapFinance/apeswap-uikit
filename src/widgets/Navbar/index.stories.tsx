@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import noop from "lodash/noop";
 import { BrowserRouter } from "react-router-dom";
 import Flex from "../../components/Flex/Flex";
@@ -6,10 +6,10 @@ import Heading from "../../components/Heading/Heading";
 import Text from "../../components/Text/Text";
 import Navbar from "./Navbar";
 import { MenuEntry } from "./MenuEntry";
-import { LangType } from "./types";
 import { links } from "./config";
 import { TrackProps } from "../../util/trackSocialClick";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
+import { Language } from "../../components/LangSelector/types";
 
 export default {
   title: "Widgets/Navbar",
@@ -22,10 +22,12 @@ export default {
   },
 };
 
-const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
+const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}`, locale: `e${i}` }));
 const translate: (key: string) => string = (key) => key;
 
 export const Connected: React.FC = (args: any) => {
+  const [currentLang, setCurrentLang] = useState("English1");
+
   // eslint-disable-next-line no-empty-pattern
   const track = ({}: TrackProps): void => {
     return null;
@@ -53,8 +55,8 @@ export const Connected: React.FC = (args: any) => {
           isDark={false}
           toggleTheme={noop}
           langs={langs}
-          setLang={noop}
-          currentLang="EN"
+          setLang={(lang) => setCurrentLang(lang.language)}
+          currentLang={currentLang}
           t={translate}
           bananaPriceUsd={0.23158668932877668}
           links={links}

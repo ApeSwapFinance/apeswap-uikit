@@ -1,6 +1,7 @@
 import { SwitchNetwork } from "../NetworkModal";
 import { Login } from "../WalletModal";
 import { TrackHandler } from "../../util/trackSocialClick";
+import { Language } from "../../components/LangSelector/types";
 
 export interface LangType {
   code: string;
@@ -48,8 +49,8 @@ export interface PanelProps {
   toggleTheme: (isDark: boolean) => void;
   bananaPriceUsd?: number;
   currentLang: string;
-  langs: LangType[];
-  setLang: (lang: LangType) => void;
+  langs: Language[];
+  setLang: (lang: Language) => void;
   links: Array<MenuEntry>;
 }
 
