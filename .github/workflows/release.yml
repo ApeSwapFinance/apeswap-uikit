@@ -49,11 +49,11 @@ jobs:
           NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
         run: |
           if [[ "$TAG_NAME" == *"alpha"* ]]; then
-            dist_tag=alpha
+            dist_tag=alpha${TAG_NAME:1:1}
           elif [[ "$TAG_NAME" == *"beta"* ]]; then
-            dist_tag=beta
+            dist_tag=beta${TAG_NAME:1:1}
           else
             dist_tag=latest
           fi
-          yarn release -- $TAG_NAME --tag=${dist_tag}${TAG_NAME:1:1} --branch ${TAG_NAME}-branch
+          yarn release -- $TAG_NAME --tag=${dist_tag} --branch ${TAG_NAME}-branch
           
