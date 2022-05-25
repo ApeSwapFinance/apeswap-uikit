@@ -8,7 +8,7 @@ import styles from "./styles";
 
 const isBrowser = typeof window === "object";
 
-const Toggle: React.FC<ToggleProps> = ({ checked, labels, size = sizes.MEDIUM, ...props }) => {
+const Toggle: React.FC<ToggleProps> = ({ checked, labels, size = sizes.MEDIUM, className, ...props }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const leftRef = useRef<any>(null);
   const rightRef = useRef<any>(null);
@@ -41,7 +41,7 @@ const Toggle: React.FC<ToggleProps> = ({ checked, labels, size = sizes.MEDIUM, .
   };
 
   return (
-    <Box sx={styles.container}>
+    <Box className={className} sx={styles.container}>
       <Box
         ref={leftRef}
         sx={{
@@ -76,7 +76,7 @@ const Toggle: React.FC<ToggleProps> = ({ checked, labels, size = sizes.MEDIUM, .
         </Text>
       </Box>
       <Button
-        csx={{
+        sx={{
           ...styles.button,
           ...activeStyle,
           fontSize: fontSizes[size],

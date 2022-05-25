@@ -4,12 +4,13 @@ import { Box } from "theme-ui";
 import { SelectItemProps, selectItemPadding, sizes } from "./types";
 import { dynamicStyles } from "./styles";
 
-const SelectItem: React.FC<SelectItemProps> = ({ onClick, value, active, size = sizes.MEDIUM, children }) => {
+const SelectItem: React.FC<SelectItemProps> = ({ onClick, value, active, size = sizes.MEDIUM, children, ...props }) => {
   const style = dynamicStyles.dropdownItem({ size });
 
   return (
     <Box
       as="li"
+      {...props}
       onClick={() => onClick?.(value)}
       sx={{
         padding: selectItemPadding[size],

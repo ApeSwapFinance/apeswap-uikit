@@ -17,10 +17,18 @@ const Element: React.FC<DropdownItemProps> = ({ onClick, url, active, size, chil
   );
 };
 
-const DropdownItem: React.FC<DropdownItemProps> = ({ onClick, url, active, size = sizes.MEDIUM, children }) => {
+const DropdownItem: React.FC<DropdownItemProps> = ({
+  onClick,
+  url,
+  active,
+  size = sizes.MEDIUM,
+  children,
+  ...props
+}) => {
   return (
     <Box
       as="li"
+      {...props}
       sx={{
         px: dropdownItemPadding[size].x,
         py: dropdownItemPadding[size].y,

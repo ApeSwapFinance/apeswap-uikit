@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useContext } from "react";
 import { Button } from "../../components/Button";
 import Text from "../../components/Text/Text";
@@ -26,7 +27,7 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, switchNetwork })
   const { symbol, icon: Icon } = networkConfig;
   return (
     <Button
-      csx={networkBtn}
+      sx={networkBtn}
       size="sm"
       fullWidth
       disabled={chainId === networkConfig.chainId}

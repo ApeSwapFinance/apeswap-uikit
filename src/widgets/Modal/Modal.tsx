@@ -36,7 +36,18 @@ const Modal: React.FC<ModalProps> = ({
                 <Heading>{title}</Heading>
               </ModalHeader>
             )}
-            {children}
+            {React.Children.map(children, (child) => {
+              if (React.isValidElement(child)) {
+                return React.cloneElement(child as any, {
+                  ...(child as any)?.props,
+                  onDismiss: () => {
+                    (child as any)?.props?.onDismiss?.();
+                    onDismiss?.();
+                  },
+                });
+              }
+              return child;
+            })}
           </motion.div>
         )}
       </AnimatePresence>

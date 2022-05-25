@@ -19,14 +19,12 @@ const styles: Record<string, ThemeUIStyleObject> = {
     },
   },
   button: {
-    px: "14px",
-    py: "9px",
     position: "absolute",
     border: 0,
     top: 0,
     height: "100%",
-    fontSize: "14px",
     transition: "left 0.2s linear",
+    textTransform: "none",
     "&:hover": {
       filter: "none",
     },
