@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useContext } from "react";
 import { Modal, ModalContext } from "../Modal";
 import { Flex } from "../../components/Flex";
@@ -30,7 +31,7 @@ const SelectLanguageModal: React.FC<Props> = ({ currentLang, langs, setLang, t }
       <Flex sx={{ height: "auto", flexDirection: "column" }}>
         {langs.map((lang) => (
           <Button
-            csx={langButton}
+            sx={langButton}
             fullWidth
             variant={currentLang === lang.language ? "tertiary" : "secondary"}
             onClick={() => {
