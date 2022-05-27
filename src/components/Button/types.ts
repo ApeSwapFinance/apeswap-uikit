@@ -48,7 +48,6 @@ export interface ButtonProps extends ThemeUIButtonProps {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   fullWidth?: boolean;
-  csx?: ThemeUICSSObject;
   load?: boolean;
   [key: string]: any;
 }

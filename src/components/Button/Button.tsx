@@ -5,8 +5,6 @@ import { ButtonProps, variants, buttonFontSizes, buttonPadding, sizes } from "./
 
 const Button: React.FC<ButtonProps> = ({
   variant = variants.PRIMARY,
-  sx,
-  csx,
   size = sizes.MEDIUM,
   load,
   children,
@@ -82,8 +80,6 @@ const Button: React.FC<ButtonProps> = ({
         },
         ...hoverStyle,
         width: fullWidth ? "100%" : "max-content",
-        ...sx,
-        ...csx,
       }}
     >
       {React.isValidElement(startIcon) &&

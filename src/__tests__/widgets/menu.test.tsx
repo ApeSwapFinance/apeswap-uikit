@@ -167,7 +167,7 @@ it("renders correctly", () => {
           >
             <div>
               <button
-                class="css-1kusgwj"
+                class="css-10odqte"
                 font-size="14px"
               >
                 <span
@@ -180,7 +180,7 @@ it("renders correctly", () => {
             </div>
             <button
               aria-label="Toggle menu"
-              class="css-cnncwg"
+              class="css-1u0toul"
             >
               <svg
                 class="sc-gsTEea fQWPxo"
@@ -485,7 +485,7 @@ it("renders correctly", () => {
                     </svg>
                   </div>
                   <button
-                    class="css-1erqard"
+                    class="css-giy75x"
                   >
                     <svg
                       class="sc-gsTEea fQWPxo"
@@ -685,7 +685,7 @@ it("renders correctly", () => {
                 class="sc-hHfuMS jmzyPq"
               >
                 <button
-                  class="css-c0dbms"
+                  class="css-giy75x"
                 >
                   <div
                     class="css-4cffwv"
@@ -726,7 +726,7 @@ it("renders correctly", () => {
                    
                 </button>
                 <button
-                  class="css-1erqard"
+                  class="css-giy75x"
                 >
                   <svg
                     class="sc-gsTEea fQWPxo"

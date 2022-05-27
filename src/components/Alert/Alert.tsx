@@ -9,7 +9,7 @@ import { AlertProps, variants } from "./types";
 import { LinkExternal } from "../Link";
 import { Svg } from "../Svg";
 
-const Alert: React.FC<AlertProps> = ({ variant = variants.ERROR, text, linkText, url, size, onClose }) => {
+const Alert: React.FC<AlertProps> = ({ variant = variants.ERROR, text, linkText, url, size, onClose, ...props }) => {
   return (
     <motion.div
       initial={{ right: "-250px" }}
@@ -17,6 +17,7 @@ const Alert: React.FC<AlertProps> = ({ variant = variants.ERROR, text, linkText,
       transition={{ duration: 0.5 }}
       exit={{ right: "-250px" }}
       sx={styles.alert}
+      {...props}
     >
       <Flex>
         <Svg
