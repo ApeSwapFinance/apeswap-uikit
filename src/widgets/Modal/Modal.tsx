@@ -1,11 +1,12 @@
 /** @jsxImportSource theme-ui */
-import React from "react";
+import React, { useContext } from "react";
 import { Box } from "theme-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { ModalProps } from "./types";
 import style from "./styles";
 import ModalHeader from "./ModalHeader";
 import { Heading } from "../../components/Heading";
+import { Context as ModalContext } from "./ModalContext";
 
 const Modal: React.FC<ModalProps> = ({
   children,
@@ -18,6 +19,9 @@ const Modal: React.FC<ModalProps> = ({
   onAnimationComplete,
   ...props
 }) => {
+  const { handleClose } = useContext(ModalContext);
+  const onClose = onDismiss || handleClose;
+
   return (
     <Box id={title}>
       <AnimatePresence>
@@ -32,7 +36,7 @@ const Modal: React.FC<ModalProps> = ({
             onAnimationComplete={onAnimationComplete}
           >
             {title && (
-              <ModalHeader onDismiss={onDismiss}>
+              <ModalHeader onDismiss={onClose}>
                 <Heading>{title}</Heading>
               </ModalHeader>
             )}
@@ -42,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({
                   ...(child as any)?.props,
                   onDismiss: () => {
                     (child as any)?.props?.onDismiss?.();
-                    onDismiss?.();
+                    onClose();
                   },
                 });
               }
@@ -51,7 +55,7 @@ const Modal: React.FC<ModalProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-      {open && <Box sx={style.backdrop} onClick={onDismiss} />}
+      {open && <Box sx={style.backdrop} onClick={onClose} />}
     </Box>
   );
 };
