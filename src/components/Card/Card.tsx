@@ -2,9 +2,9 @@ import React from "react";
 import { Card as ThemeUICard } from "theme-ui";
 import { CardProps } from "./types";
 
-const Card: React.FC<CardProps> = ({ children, background, sx, ...props }) => {
+const Card: React.FC<CardProps> = ({ children, background, ...props }) => {
   return (
-    <ThemeUICard {...props} sx={{ ...sx, variant: `cards.primary`, background }}>
+    <ThemeUICard {...props} sx={{ variant: `cards.primary`, background }}>
       {children}
     </ThemeUICard>
   );

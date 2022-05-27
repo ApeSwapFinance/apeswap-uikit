@@ -22,12 +22,12 @@ const getCheckedScale = ({ scale }: RadioProps) => {
   }
 };
 
-const Radio: React.FC<RadioProps> = ({ scale = scales.SM, display = "inline-block", ...props }) => {
+const Radio: React.FC<RadioProps> = ({ scale = scales.SM, display = "inline-block", className, ...props }) => {
   const scaleSize = getScale({ scale });
   const checkedScale = getCheckedScale({ scale });
 
   return (
-    <span sx={{ display, width: scaleSize, height: scaleSize, position: "relative" }}>
+    <span className={className} sx={{ display, width: scaleSize, height: scaleSize, position: "relative" }}>
       <input type="radio" sx={{ variant: "forms.radio" }} {...props} />
       <span sx={{ width: checkedScale, height: checkedScale }} />
     </span>

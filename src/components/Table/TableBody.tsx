@@ -2,9 +2,10 @@
 import React from "react";
 import { TableBodyProps } from "./types";
 
-const TableBody: React.FC<TableBodyProps> = ({ children, borderRadius }) => {
+const TableBody: React.FC<TableBodyProps> = ({ children, borderRadius, ...props }) => {
   return (
     <tbody
+      {...props}
       sx={{
         tr: {
           "&:nth-child(odd) td": {

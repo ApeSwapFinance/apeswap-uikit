@@ -14,6 +14,7 @@ const Progress: React.FC<ProgressProps> = ({
   color = "gradient",
   background = "white4",
   width = "100%",
+  ...props
 }) => {
   const [toValue, setTo] = useState(0);
 
@@ -23,6 +24,7 @@ const Progress: React.FC<ProgressProps> = ({
 
   return (
     <div
+      {...props}
       sx={{
         height,
         width,

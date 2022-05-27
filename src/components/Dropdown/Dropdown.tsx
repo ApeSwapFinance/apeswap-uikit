@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { DropdownProps, dropdownPadding, fontSizes, sizes } from "./types";
 import { Svg } from "../Svg";
 
-const Dropdown: React.FC<DropdownProps> = ({ component, children, size = sizes.MEDIUM }) => {
+const Dropdown: React.FC<DropdownProps> = ({ component, children, size = sizes.MEDIUM, ...props }) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => setOpen((prev) => !prev);
@@ -19,6 +19,7 @@ const Dropdown: React.FC<DropdownProps> = ({ component, children, size = sizes.M
         position: "relative",
       }}
       onClick={handleClick}
+      {...props}
     >
       <Flex
         sx={{
