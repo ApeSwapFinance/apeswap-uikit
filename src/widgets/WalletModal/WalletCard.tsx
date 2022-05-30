@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useContext } from "react";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";

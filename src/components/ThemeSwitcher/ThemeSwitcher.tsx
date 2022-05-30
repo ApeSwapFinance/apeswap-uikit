@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { Text } from "../Text";
 import { Flex } from "../Flex";
