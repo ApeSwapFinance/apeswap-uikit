@@ -167,7 +167,7 @@ it("renders correctly", () => {
           >
             <div>
               <button
-                class="css-10odqte"
+                class="css-jf6eza-UserBlock"
                 font-size="14px"
               >
                 <span
@@ -180,7 +180,7 @@ it("renders correctly", () => {
             </div>
             <button
               aria-label="Toggle menu"
-              class="css-1u0toul"
+              class="css-w7rft9-MenuButton"
             >
               <svg
                 class="sc-gsTEea fQWPxo"
@@ -365,7 +365,7 @@ it("renders correctly", () => {
               style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100px; padding: 20px 0px;"
             >
               <div
-                class="css-h2xgf9"
+                class="css-y3p97l-MobileNavMenu"
               >
                 <div
                   style="display: flex; align-items: center; justify-content: space-evenly; width: 200px;"
@@ -466,10 +466,10 @@ it("renders correctly", () => {
                   </a>
                 </div>
                 <div
-                  class="css-98z5z1"
+                  class="css-w7szru-MobileNavMenu"
                 >
                   <div
-                    class="css-1583d67"
+                    class="css-14rclsd-LangSelectorButton"
                   >
                     <svg
                       class="sc-gsTEea fQWPxo"
@@ -485,7 +485,7 @@ it("renders correctly", () => {
                     </svg>
                   </div>
                   <button
-                    class="css-giy75x"
+                    class="css-he8ds2-NetworkButton"
                   >
                     <svg
                       class="sc-gsTEea fQWPxo"
@@ -685,7 +685,7 @@ it("renders correctly", () => {
                 class="sc-hHfuMS jmzyPq"
               >
                 <button
-                  class="css-giy75x"
+                  class="css-1ksg6kp-ThemeSwitcher"
                 >
                   <div
                     class="css-4cffwv"
@@ -726,7 +726,7 @@ it("renders correctly", () => {
                    
                 </button>
                 <button
-                  class="css-giy75x"
+                  class="css-he8ds2-NetworkButton"
                 >
                   <svg
                     class="sc-gsTEea fQWPxo"
@@ -1108,13 +1108,13 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="css-gzcqlw"
+              class="css-e2mh0b-MobileLinks"
             >
               <div
                 class="sc-bBXrwG itjZDJ"
               >
                 <span
-                  class="css-1i6vqms"
+                  class="css-1k1lj3q-MobileLinkMenu"
                 >
                   Support
                 </span>
@@ -1134,7 +1134,7 @@ it("renders correctly", () => {
                 class="sc-bBXrwG itjZDJ"
               >
                 <span
-                  class="css-1i6vqms"
+                  class="css-1k1lj3q-MobileLinkMenu"
                 >
                   Engage
                 </span>
@@ -1154,7 +1154,7 @@ it("renders correctly", () => {
                 class="sc-bBXrwG eDXltO"
               >
                 <span
-                  class="css-1i6vqms"
+                  class="css-1k1lj3q-MobileLinkMenu"
                 >
                   Learn
                 </span>
@@ -1270,7 +1270,7 @@ it("renders correctly", () => {
             />
           </svg>
           <span
-            class="css-1lwg7ih"
+            class="css-h41df7-Footer"
           />
         </div>
       </div>
