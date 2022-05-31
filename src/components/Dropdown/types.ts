@@ -37,6 +37,7 @@ export interface DropdownItemProps {
   url?: string;
   active?: boolean;
   size?: sizeProps;
+  sx?: any;
 }
 
 export declare type Position = "top" | "top-right" | "bottom";

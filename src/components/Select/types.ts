@@ -57,4 +57,5 @@ export interface SelectItemProps {
   active?: boolean;
   size?: sizeProps;
   value: number | string;
+  sx?: any;
 }

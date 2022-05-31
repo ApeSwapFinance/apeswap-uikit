@@ -40,9 +40,11 @@ export interface TabsProps {
   activeTab: number;
   variant?: variantProps;
   size?: sizeProps;
+  sx?: any;
 }
 
 export interface TabPanelProps {
   index: number;
   activeTab: number;
+  sx?: any;
 }
