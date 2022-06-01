@@ -41,7 +41,6 @@ const styles: Record<string, ThemeUIStyleObject> = {
     alignItems: "center",
     fontSize: "14px",
     lineHeight: "10px",
-    padding: "6px 8px",
     height: "35px",
   },
   cardContainer: {
