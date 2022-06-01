@@ -485,7 +485,7 @@ it("renders correctly", () => {
                     </svg>
                   </div>
                   <button
-                    class="css-he8ds2-NetworkButton"
+                    class="css-1sb0sm0-NetworkButton"
                   >
                     <svg
                       class="sc-gsTEea fQWPxo"
@@ -726,7 +726,7 @@ it("renders correctly", () => {
                    
                 </button>
                 <button
-                  class="css-he8ds2-NetworkButton"
+                  class="css-1sb0sm0-NetworkButton"
                 >
                   <svg
                     class="sc-gsTEea fQWPxo"
