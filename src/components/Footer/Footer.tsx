@@ -1,4 +1,5 @@
 import React from "react";
+import { Box } from "theme-ui";
 import { FullLogo } from "../../widgets/Navbar/icons";
 import NetworkButton from "../../widgets/Navbar/NetworkButton";
 import { Skeleton } from "../Skeleton";
@@ -235,6 +236,15 @@ const Footer: React.FC<FooterProps> = ({
       <PeakingMonkey />
       {/* <AllRightsReserved>©2022 All rights reserved</AllRightsReserved> */}
       <Text sx={styles.allRightsReserved}>{t("©2022 All rights reserved")}</Text>
+      <Box sx={styles.legalContent}>
+        <Text sx={styles.linkText} size="12px">
+          <a href="https://apeswap.finance/terms">{t("Terms & Conditions")}</a>
+        </Text>
+        {" · "}
+        <Text sx={styles.linkText} size="12px">
+          <a href="https://apeswap.finance/privacy"> {t("Privacy policy")}</a>
+        </Text>
+      </Box>
     </Container>
   );
 };

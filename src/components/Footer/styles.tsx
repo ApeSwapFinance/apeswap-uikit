@@ -248,13 +248,20 @@ const styles: Record<string, ThemeUIStyleObject> = {
   allRightsReserved: {
     color: "primaryBright",
     position: "absolute",
-    bottom: ["10px", "20px"],
+    bottom: ["60px", "40px"],
     left: ["20px", "auto"],
   },
   linkText: {
     "&:hover": {
       textDecoration: "underline",
     },
+  },
+  legalContent: {
+    color: "primaryBright",
+    position: "absolute",
+    bottom: ["10px", "15px"],
+    left: ["20px", "auto"],
+    width: ["130px", "auto"],
   },
 };
 
