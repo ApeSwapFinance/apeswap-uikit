@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ButtonProps as ThemeUIButtonProps, ThemeUICSSObject } from "theme-ui";
+import { ButtonProps as ThemeUIButtonProps } from "theme-ui";
 import { iconTypes } from "../Svg/types";
 import { colorProps } from "../../theme/Apeswap/types";
 
@@ -42,7 +42,7 @@ export type sizeProps = `${sizes}`;
 export type variantProps = `${variants}`;
 export type iconButtonVariantsProps = `${iconButtonVariants}`;
 
-export interface ButtonProps extends ThemeUIButtonProps {
+export interface ButtonProps extends Omit<ThemeUIButtonProps, "sx"> {
   variant?: variantProps;
   size?: sizeProps;
   startIcon?: ReactNode;

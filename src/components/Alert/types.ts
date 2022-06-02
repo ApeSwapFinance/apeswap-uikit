@@ -27,4 +27,5 @@ export interface AlertProps {
   url?: string;
   size?: sizeProps;
   onClose?: () => void;
+  sx?: any;
 }

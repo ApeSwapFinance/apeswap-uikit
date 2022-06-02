@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useContext } from "react";
 import { Flex } from "theme-ui";
 import { InternalProps } from "./types";

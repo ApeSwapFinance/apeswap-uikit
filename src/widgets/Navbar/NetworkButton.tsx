@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { ArrowDropDownIcon } from "../../components/Svg";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
