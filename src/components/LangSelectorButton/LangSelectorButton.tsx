@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import useLanguageModal from "../../widgets/LanguageModal/useLanguageModal";
 import { LanguageIcon } from "../../widgets/Navbar/icons";

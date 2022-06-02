@@ -143,12 +143,15 @@ export type TableAction<T extends DataType> =
 
 export interface TableRowProps {
   textAlign?: "left" | "center" | "right";
+  sx?: any;
 }
 
 export interface TableHeadProps {
   width?: string | number;
+  sx?: any;
 }
 
 export interface TableBodyProps {
   borderRadius?: number;
+  sx?: any;
 }

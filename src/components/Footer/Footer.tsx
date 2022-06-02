@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { FullLogo } from "../../widgets/Navbar/icons";
 import NetworkButton from "../../widgets/Navbar/NetworkButton";
