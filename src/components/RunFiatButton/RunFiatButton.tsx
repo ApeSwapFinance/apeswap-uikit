@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { useTheme } from "styled-components";
 import { Button } from "../Button";
@@ -31,7 +32,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, t, ...props }) => {
       {!mini && (
         <>
           <Text color="primaryBright" bold>
-            {t("ADD FUNDS")}
+            {t?.("ADD FUNDS")}
           </Text>
           <CardIcon fill="#FAFAFA" marginLeft="5px" />
         </>

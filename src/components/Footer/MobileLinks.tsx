@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { Flex } from "../Flex";
 import { engageLinks, learnLinks, supportLinks } from "./config";

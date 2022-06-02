@@ -12,6 +12,7 @@ const Select: React.FC<SelectProps> = ({
   width = "fit-content",
   size = sizes.MEDIUM,
   position = positions.BOTTOM,
+  className,
   ...props
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,7 +31,7 @@ const Select: React.FC<SelectProps> = ({
 
   return (
     <>
-      <Box sx={{ ...styles.container, width }} onClick={handleClick}>
+      <Box sx={{ ...styles.container, width }} onClick={handleClick} className={className}>
         <Flex
           sx={{
             padding: selectedExtraPadding[size],

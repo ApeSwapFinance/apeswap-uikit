@@ -17,11 +17,11 @@ it("renders ConnectModal correctly", () => {
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -156,11 +156,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -196,11 +196,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -308,11 +308,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -443,11 +443,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -470,11 +470,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -501,11 +501,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -542,11 +542,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -603,11 +603,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -646,11 +646,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -694,11 +694,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-rtl4ff"
+            class="css-x1oklj-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
@@ -723,10 +723,10 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <div
-            class="css-1gksbu2"
+            class="css-1mzw27c-ConnectModal"
           >
             <a
-              class="css-1n3itcm"
+              class="css-noze16-ConnectModal"
               href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
               rel="noreferrer noopener"
               target="_blank"
@@ -782,13 +782,13 @@ it("renders AccountModal correctly", () => {
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <span
-            class="css-c5ksor"
+            class="css-fzorxp-AccountModal"
           />
           <div
-            class="css-1ne87w5"
+            class="css-1g1b591-AccountModal"
           >
             <a
-              class="css-1i0376m"
+              class="css-15tanw9-AccountModal"
               href="https://bscscan.com/address/undefined"
               rel="noreferrer noopener"
               target="_blank"
@@ -811,7 +811,7 @@ it("renders AccountModal correctly", () => {
               </span>
             </a>
             <span
-              class="css-15jcp9d"
+              class="css-aqpyd3-CopyToClipboard"
               role="button"
             >
               <svg
@@ -833,7 +833,7 @@ it("renders AccountModal correctly", () => {
             </span>
           </div>
           <div
-            class="css-1b2tw1j"
+            class="css-56qkhf-AccountModal"
           >
             <button
               class="css-1x2si9p"
