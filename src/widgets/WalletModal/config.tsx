@@ -1,4 +1,5 @@
 import Metamask from "./icons/Metamask";
+import Brave from "./icons/Brave";
 import MathWallet from "./icons/MathWallet";
 import TokenPocket from "./icons/TokenPocket";
 import TrustWallet from "./icons/TrustWallet";
@@ -26,6 +27,11 @@ const connectors: Config[] = [
     title: "Social Login",
     icon: TorusWallet,
     connectorId: ConnectorNames.Torus,
+  },
+  {
+    title: "Brave Wallet",
+    icon: Brave,
+    connectorId: ConnectorNames.Injected,
   },
   {
     title: "WalletConnect",

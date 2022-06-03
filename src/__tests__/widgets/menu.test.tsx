@@ -1270,8 +1270,33 @@ it("renders correctly", () => {
             />
           </svg>
           <span
-            class="css-h41df7-Footer"
+            class="css-643v6y-Footer"
           />
+          <div
+            class="css-kcsue9-Footer"
+          >
+            <span
+              class="css-1p9kj3n-Footer"
+            >
+              <a
+                href="https://apeswap.finance/terms"
+              />
+            </span>
+            <span
+              class="css-1ovovw4"
+            >
+               · 
+            </span>
+            <span
+              class="css-1p9kj3n-Footer"
+            >
+              <a
+                href="https://apeswap.finance/privacy"
+              >
+                 
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </DocumentFragment>

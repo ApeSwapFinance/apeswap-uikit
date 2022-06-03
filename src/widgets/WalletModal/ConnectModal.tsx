@@ -15,15 +15,17 @@ interface Props {
 
 const ConnectModal: React.FC<Props> = ({ login, t }) => (
   <Modal title={t("Connect to a wallet")} maxWidth="400px" minWidth="350px">
-    {config.map((entry, index) => (
-      <WalletCard
-        key={entry.title}
-        login={login}
-        walletConfig={entry}
-        mb={index < config.length - 1 ? "8px" : "0"}
-        t={t}
-      />
-    ))}
+    <Flex sx={{ overflowY: "scroll", flexDirection: "column", maxHeight:'400px' }}>
+      {config.map((entry, index) => (
+        <WalletCard
+          key={entry.title}
+          login={login}
+          walletConfig={entry}
+          mb={index < config.length - 1 ? "8px" : "0"}
+          t={t}
+        />
+      ))}
+    </Flex>
     <Flex sx={{ alignItems: "center", justifyContent: "center" }} mt="10px">
       <Link
         href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
