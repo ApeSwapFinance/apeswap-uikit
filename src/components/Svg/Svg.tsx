@@ -39,6 +39,8 @@ import {
   Medium,
   Instagram,
   Website,
+  Arrow,
+  SwapArrows,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -51,6 +53,12 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
       margin,
     });
 
+  if (icon === icons.ARROW) {
+    return <Arrow {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SWAP_ARROWS) {
+    return <SwapArrows {...props} getStyles={getStyles} />;
+  }
   if (icon === icons.CARET) {
     return <Caret {...props} getStyles={getStyles} />;
   }
