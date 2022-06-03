@@ -238,9 +238,11 @@ const Footer: React.FC<FooterProps> = ({
       <Text sx={styles.allRightsReserved}>{t("©2022 All rights reserved")}</Text>
       <Box sx={styles.legalContent}>
         <Text sx={styles.linkText} size="12px">
-          <a href="https://apeswap.finance/terms">{t("Terms & Conditions")}</a>
+          <a href="https://apeswap.finance/terms">{t("Terms of Use")}</a>
         </Text>
-        {" · "}
+        <Text color="primaryBright" size="12px">
+          {" · "}
+        </Text>
         <Text sx={styles.linkText} size="12px">
           <a href="https://apeswap.finance/privacy"> {t("Privacy policy")}</a>
         </Text>
