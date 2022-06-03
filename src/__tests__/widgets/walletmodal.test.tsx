@@ -418,11 +418,11 @@ it("renders ConnectModal correctly", () => {
              
           </button>
           <button
-            class="css-1fjjhyd"
+            class="css-1alwwnd-WalletCard"
             id="wallet-connect-"
           >
             <span
-              class="css-1q4cnz0"
+              class="css-oe19h8-WalletCard"
             />
             <svg
               class="sc-bdfBQB kA-DbXw"
