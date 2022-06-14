@@ -1,66 +1,54 @@
-/* eslint-disable consistent-return */
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Box } from "theme-ui";
+import React from "react";
+import { Box, ThemeUIStyleObject } from "theme-ui";
 import { TooltipProps, placements } from "./TooltipBubble.interface";
-import style from "./styles";
+import style, { container } from "./styles";
+
+const placementStyles = {
+  [placements.BOTTOMLEFT]: {
+    top: "calc(100% + 15px)",
+    left: 0,
+  },
+  [placements.BOTTOMRIGHT]: {
+    top: "calc(100% + 15px)",
+    right: 0,
+  },
+  [placements.TOPLEFT]: {
+    bottom: "calc(100% + 15px)",
+    left: 0,
+  },
+  [placements.TOPRIGHT]: {
+    bottom: "calc(100% + 15px)",
+    right: 0,
+  },
+};
 
 const TooltipBubble: React.FC<TooltipProps> = ({
-  width = "232px",
+  width,
   placement = placements.BOTTOMRIGHT,
   body,
+  backgroundColor,
+  hideTooltip,
   children,
   ...props
 }) => {
-  const bodyRef = useRef<HTMLDivElement>(null);
-  const [styles, setStyles] = useState({});
-
-  const getStyles = useCallback(() => {
-    const right = bodyRef?.current?.getBoundingClientRect().width;
-
-    switch (placement) {
-      case placements.BOTTOMLEFT: {
-        return {
-          bottom: 0,
-          transform: "translate(0, 100%)",
-        };
-      }
-      case placements.BOTTOMRIGHT: {
-        return {
-          bottom: 0,
-          transform: `translate(calc(${right}px - ${width}), 100%)`,
-        };
-      }
-      case placements.TOPLEFT: {
-        return {
-          top: 0,
-          transform: "translate(0, -100%)",
-        };
-      }
-      case placements.TOPRIGHT: {
-        return {
-          top: 0,
-          transform: `translate(calc(${right}px - ${width}), -100%)`,
-        };
-      }
-      default: {
-        return {};
-      }
-    }
-  }, [width, placement]);
-
-  useEffect(() => {
-    if (bodyRef) {
-      setStyles(getStyles());
-    }
-  }, [bodyRef, getStyles, width, placement]);
+  const backgroundColorStyle = backgroundColor
+    ? ({
+        backgroundColor,
+        "&:before": {
+          borderBottomColor:
+            placement === placements.BOTTOMLEFT || placement === placements.BOTTOMRIGHT ? backgroundColor : undefined,
+          borderTopColor:
+            placement === placements.TOPLEFT || placement === placements.TOPRIGHT ? backgroundColor : undefined,
+        },
+      } as ThemeUIStyleObject)
+    : {};
 
   return (
-    <Box as="span" sx={style.container} {...props}>
+    <Box sx={container(hideTooltip)}>
       <Box
         sx={{
           position: "absolute",
-          width,
-          ...styles,
+          ...(placementStyles[placement] || {}),
         }}
       >
         <Box
@@ -68,19 +56,15 @@ const TooltipBubble: React.FC<TooltipProps> = ({
             position: "relative",
             ...style.default,
             ...style[placement],
+            ...backgroundColorStyle,
+            width,
           }}
+          {...props}
         >
           {body}
         </Box>
       </Box>
-      <Box
-        ref={bodyRef}
-        sx={{
-          width: "fit-content",
-        }}
-      >
-        {children}
-      </Box>
+      {children}
     </Box>
   );
 };
