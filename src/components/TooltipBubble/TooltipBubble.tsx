@@ -9,6 +9,7 @@ const TooltipBubble: React.FC<TooltipProps> = ({
   placement = placements.BOTTOMRIGHT,
   body,
   children,
+  ...props
 }) => {
   const bodyRef = useRef<HTMLDivElement>(null);
   const [styles, setStyles] = useState({});
@@ -54,7 +55,7 @@ const TooltipBubble: React.FC<TooltipProps> = ({
   }, [bodyRef, getStyles, width, placement]);
 
   return (
-    <Box as="span" sx={style.container}>
+    <Box as="span" sx={style.container} {...props}>
       <Box
         sx={{
           position: "absolute",

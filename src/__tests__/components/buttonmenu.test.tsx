@@ -18,7 +18,7 @@ it("renders correctly", () => {
         class="sc-bdfBQB ekFJNm"
       >
         <div
-          class="css-xcqyue"
+          class="css-kfshva-ButtonMenuItem"
         >
           Item 1 
         </div>

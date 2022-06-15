@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
 import { useMatchBreakpoints } from "../../hooks";
 import Button from "../../components/Button/Button";

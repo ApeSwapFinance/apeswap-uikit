@@ -6,4 +6,5 @@ export interface ProgressProps {
   to?: number;
   color?: colorProps;
   background?: colorProps;
+  sx?: any;
 }

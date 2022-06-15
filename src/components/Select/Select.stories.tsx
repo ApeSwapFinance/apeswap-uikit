@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useState } from "react";
 import { Text } from "../Text";
 import Select from "./Select";

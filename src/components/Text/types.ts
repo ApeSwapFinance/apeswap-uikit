@@ -17,7 +17,7 @@ type variantProps = `${variants}`;
 type weightProps = `${weights}` | number;
 type sizeProps = string;
 
-export interface TextProps extends ThemeUITextProps {
+export interface TextProps extends Omit<ThemeUITextProps, "sx"> {
   variant?: variantProps;
   weight?: weightProps;
   color?: colorProps;

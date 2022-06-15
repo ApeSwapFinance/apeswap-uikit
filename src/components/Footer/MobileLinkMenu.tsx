@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React, { useState } from "react";
 import { Flex } from "../Flex";
 import { ArrowDropDownIcon, ArrowDropUpIcon } from "../Svg";
