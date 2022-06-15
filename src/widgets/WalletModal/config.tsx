@@ -6,6 +6,7 @@ import TrustWallet from "./icons/TrustWallet";
 import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
 import OntoWallet from "./icons/OntoWallet";
+import Bitkeep from "./icons/Bitkeep";
 import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
 import TorusWallet from "./icons/SocialLogin";
@@ -16,6 +17,11 @@ const connectors: Config[] = [
   {
     title: "Metamask",
     icon: Metamask,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Bitkeep",
+    icon: Bitkeep,
     connectorId: ConnectorNames.Injected,
   },
   {
