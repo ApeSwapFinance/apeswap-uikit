@@ -20,11 +20,6 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: "Bitkeep",
-    icon: Bitkeep,
-    connectorId: ConnectorNames.Injected,
-  },
-  {
     title: "TrustWallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
@@ -67,6 +62,11 @@ const connectors: Config[] = [
   {
     title: "NABOX Wallet",
     icon: Nabox,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Bitkeep",
+    icon: Bitkeep,
     connectorId: ConnectorNames.Injected,
   },
   {
