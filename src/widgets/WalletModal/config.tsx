@@ -10,6 +10,7 @@ import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
 import TorusWallet from "./icons/SocialLogin";
 import Coinbase from "./icons/Coinbase";
+import Bitkeep from "./icons/Bitkeep";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -71,6 +72,11 @@ const connectors: Config[] = [
   {
     title: "MathWallet",
     icon: MathWallet,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Bitkeep",
+    icon: Bitkeep,
     connectorId: ConnectorNames.Injected,
   },
 ];
