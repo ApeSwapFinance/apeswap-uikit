@@ -6,9 +6,9 @@ export type ActionHandler = () => void;
 export interface MarketingModalProps {
   title: string;
   description?: string;
+  onDismiss: ActionHandler;
   startEarning?: ActionHandler | undefined;
   startEarningText?: string | undefined;
-  onDismiss: ActionHandler;
   children: React.ReactNode | React.ReactNode[];
 }
 

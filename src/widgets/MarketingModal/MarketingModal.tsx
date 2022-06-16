@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { CloseIcon, ArrowDropLeftIcon, ArrowDropRightIcon } from "../../components/Svg";
-import { ButtonSquare } from "../../components/ButtonSquare";
+import { Button } from "../../components/Button";
 import { MarketingModalProps, IconProps } from "./types";
 
 const Container = styled.div`
@@ -153,6 +153,7 @@ const CircleDiv = styled.div`
 const CircleButton = styled.div`
   width: 14px;
   height: 14px;
+  border: none;
   background: ${({ theme }) => theme.colors.white4};
   border-radius: 50%;
   margin-right: 10px;
@@ -174,12 +175,6 @@ const StyledRightArrow = styled(ArrowDropRightIcon)<IconProps>`
   &:hover {
     cursor: pointer;
   }
-`;
-const StyledButton = styled(ButtonSquare)`
-  height: 44px;
-  font-size: 16px;
-  padding: 10px 20px;
-  font-weight: 700;
 `;
 
 const MarketingModal: React.FC<MarketingModalProps> = ({
@@ -209,15 +204,17 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
     return children && childrens.map((element, index) => <>{step === index && element}</>);
   };
 
-  const renderDots = () => {
-    return (
-      children &&
-      childrens.map((_, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <CircleButton key={`circle-${index}`} className={step === index ? "isActive" : ""} />
-      ))
-    );
-  };
+  const renderDots = (): false | "" | 0 | JSX.Element[] | null | undefined =>
+    children &&
+    childrens.map((_, index) => (
+        <CircleButton
+          // onClick={setStep(index)}
+          // eslint-disable-next-line react/no-array-index-key
+          key={`circle-${index}`}
+          className={step === index ? "isActive" : ""}
+        />
+    ));
+
 
   return (
     <Container>
@@ -265,9 +262,18 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
           </SliderBtnSection>
 
           {startEarning && (
-            <StyledButton fullWidth onClick={startEarning}>
+            <Button
+              sx={{
+                height: "44px !important",
+                fontSize: "16px",
+                padding: "10px 20px",
+                fontWeight: 700,
+              }}
+              fullWidth
+              onClick={startEarning}
+            >
               {startEarningText}
-            </StyledButton>
+            </Button>
           )}
         </ModalFooter>
       </StyledModal>
@@ -277,7 +283,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
 
 MarketingModal.defaultProps = {
   onDismiss: () => null,
-  startEarning: undefined,
+  startEarning: () => null,
 };
 
 export default MarketingModal;

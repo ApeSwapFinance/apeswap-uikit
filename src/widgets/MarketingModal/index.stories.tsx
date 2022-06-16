@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { MarketingModalProps, MarketingModal } from ".";
+import { MarketingModal } from ".";
 import { Connected } from "../Navbar/index.stories";
 import { Text } from "../../components/Text";
 import ModalContent from "./ModalContent";
@@ -59,14 +59,14 @@ const LendingBody2: React.FC = () => {
   );
 };
 
-export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
-  title = "Welcome to ApeSwap's Lending Network",
-  description = "How does it work?",
-  startEarning,
-  startEarningText = "Buy Bills",
-}) => {
+export const ModalWithBackgroundMenu: React.FC = () => {
   const [visible, setVisible] = useState(true);
   const family = [<LendingBody1 />, <LendingBody2 />];
+
+  const title = "Welcome to ApeSwap's Lending Network";
+  const description = "How does it work?";
+  const startEarningText = "Buy Bills";
+  const onDismiss = () => setVisible(false);
 
   return (
     <>
@@ -74,9 +74,9 @@ export const ModalWithBackgroundMenu: React.FC<MarketingModalProps> = ({
         <MarketingModal
           title={title}
           description={description}
-          startEarning={startEarning}
+          onDismiss={onDismiss}
+          startEarning={onDismiss}
           startEarningText={startEarningText}
-          onDismiss={() => setVisible(false)}
         >
           {family}
         </MarketingModal>
