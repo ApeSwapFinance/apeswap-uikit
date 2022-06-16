@@ -204,17 +204,17 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
     return children && childrens.map((element, index) => <>{step === index && element}</>);
   };
 
-  const renderDots = (): false | "" | 0 | JSX.Element[] | null | undefined =>
-    children &&
-    childrens.map((_, index) => (
+  const renderDots = () => {
+   return (
+      children &&
+      childrens.map((_, index) => (
         <CircleButton
-          // onClick={setStep(index)}
           // eslint-disable-next-line react/no-array-index-key
           key={`circle-${index}`}
           className={step === index ? "isActive" : ""}
         />
-    ));
-
+      )))
+  }
 
   return (
     <Container>
