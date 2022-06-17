@@ -1,11 +1,10 @@
 import React from "react";
-import { Box } from "theme-ui";
+import { Box, Flex } from "theme-ui";
 import { Text } from "../Text";
 import { Button } from "../Button";
 import TooltipBubble from "./TooltipBubble";
 import StorybookLayout from "../StorybookLayout/StorybookLayout";
 import { LinkExternal } from "../Link";
-import TooltipBody from "./TooltipBody";
 
 export default {
   title: "Components/TooltipBubble",
@@ -19,6 +18,17 @@ export default {
       control: { type: "select" },
       defaultValue: "bottomRight",
     },
+  },
+};
+
+const flex = {
+  justifyContent: "space-between",
+  alignItems: "center",
+  fontSize: 0,
+  lineHeight: "18px",
+  color: "text",
+  "span:nth-of-type(2)": {
+    fontWeight: "bold",
   },
 };
 
@@ -61,14 +71,14 @@ export const SingleText = (args: any) => {
 export const WithLinks = (args: any) => {
   const body = (
     <>
-      <TooltipBody>
+      <Flex sx={flex}>
         <Text variant="sm">Multiplier Var 2:</Text>
         <Text variant="sm">X35</Text>
-      </TooltipBody>
-      <TooltipBody>
+      </Flex>
+      <Flex sx={flex}>
         <Text variant="sm">Stake:</Text>
         <Text variant="sm">BANANA-BNB LP</Text>
-      </TooltipBody>
+      </Flex>
       <Box mt="10px">
         <LinkExternal display="block" textAlign="center" href="https://google.com" target="_blank">
           Urlhere
@@ -92,14 +102,14 @@ export const WithLinks = (args: any) => {
 export const WithoutLinks = (args: any) => {
   const body = (
     <>
-      <TooltipBody>
+      <Flex sx={flex}>
         <Text variant="sm">Multiplier Var 1:</Text>
         <Text variant="sm">X35</Text>
-      </TooltipBody>
-      <TooltipBody>
+      </Flex>
+      <Flex sx={flex}>
         <Text variant="sm">Stake:</Text>
         <Text variant="sm">BANANA-BNB LP</Text>
-      </TooltipBody>
+      </Flex>
     </>
   );
 
