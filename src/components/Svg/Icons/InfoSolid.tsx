@@ -15,7 +15,7 @@ const Arrow: React.FC<SvgProps> = ({ direction = "down", color = "text", width, 
   });
 
   return (
-    <svg width={width || "6"} viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg" sx={style}>
+    <svg width={width || "12"} viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg" sx={style}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
