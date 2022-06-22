@@ -36,3 +36,7 @@ export { default as Instagram } from "./Instagram";
 export { default as Website } from "./Website";
 export { default as Arrow } from "./Arrow";
 export { default as SwapArrows } from "./SwapArrows"; 
+export { default as InfoSolid } from "./InfoSolid";
+export { default as Cancelled } from "./Cancelled";
+export { default as SuccessOutline } from "./SuccessOutline";
+export { default as Trash } from "./Trash"; 

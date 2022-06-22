@@ -8,6 +8,7 @@ import { Modal } from "../Modal";
 import CopyToClipboard from "./CopyToClipboard";
 import { localStorageKey } from "./config";
 import { Context as ModalContext } from "../Modal/ModalContext";
+import { useMatchBreakpoints } from "../../hooks";
 
 interface Props {
   account?: string;
@@ -17,6 +18,9 @@ interface Props {
 
 const AccountModal: React.FC<Props> = ({ account, logout, t }) => {
   const { handleClose } = useContext(ModalContext);
+  const { isXs, isSm, isMd } = useMatchBreakpoints();
+  const reducedAddress = account ? `${account.substring(0, 15)}...${account.substring(account.length - 4)}` : null;
+
   return (
     <Modal title={t("Your wallet")} minWidth="350px">
       <Text
@@ -25,7 +29,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, t }) => {
         sx={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}
         mb="8px"
       >
-        {account}
+        {isXs || isSm || isMd ? reducedAddress : account}
       </Text>
       <Flex sx={{ alignItems: "center" }} mt="8px" mb="32px">
         <Link
