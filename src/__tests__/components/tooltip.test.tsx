@@ -13,7 +13,7 @@ it("renders correctly", () => {
           class="css-tcu21u"
         >
           <div
-            class="css-exfmlh"
+            class="css-nf20el"
           />
         </div>
         Tooltip
