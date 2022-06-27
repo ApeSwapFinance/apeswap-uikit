@@ -209,7 +209,6 @@ it("renders correctly", () => {
             >
               <a
                 href="/swap"
-                target="_parent"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -320,7 +319,6 @@ it("renders correctly", () => {
             >
               <a
                 href="https://app.ola.finance/apeswap/markets"
-                target="_blank"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -1221,9 +1219,44 @@ it("renders correctly", () => {
               ry="6.08"
             />
           </svg>
-          <span
-            class="css-h41df7-Footer"
-          />
+          <div
+            class="css-1h8v89v-Footer"
+          >
+            <span
+              class="css-bar4ur"
+            />
+            <div
+              class="css-13l1fuo-Footer"
+            >
+              <a
+                class="css-t1ogsg"
+                href="https://apeswap.finance/terms"
+                target="_blank"
+              >
+                <span
+                  class="css-1n6g8if-Footer"
+                >
+                  Terms
+                </span>
+              </a>
+              <span
+                class="css-dme1ca"
+              >
+                 | 
+              </span>
+              <a
+                class="css-t1ogsg"
+                href="https://apeswap.finance/privacy"
+                target="_blank"
+              >
+                <span
+                  class="css-1n6g8if-Footer"
+                >
+                  Privacy Policy
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </DocumentFragment>

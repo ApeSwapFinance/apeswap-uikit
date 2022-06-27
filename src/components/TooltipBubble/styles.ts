@@ -6,6 +6,7 @@ const baseStyle = {
   background: "navbar",
   width: "max-content",
   zIndex: "modal",
+  boxShadow: `0px 0px 30px rgb(200,200,200, .4)`,
 };
 
 const baseDirectionArrow = {
