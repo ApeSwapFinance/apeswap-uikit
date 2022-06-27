@@ -61,7 +61,7 @@ export const SingleText = (args: any) => {
 
   return (
     <StorybookLayout {...args}>
-      <TooltipBubble {...args} body={body} transformTip='translate(-10px, 0px)'>
+      <TooltipBubble {...args} body={body} transformTip="translate(-10px, 0px)">
         <Button variant="secondary">Just Text. Variant 3</Button>
       </TooltipBubble>
     </StorybookLayout>
