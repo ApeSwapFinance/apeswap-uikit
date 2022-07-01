@@ -29,6 +29,7 @@ const TooltipBubble: React.FC<TooltipProps> = ({
   backgroundColor,
   hideTooltip,
   children,
+  transformTip,
   ...props
 }) => {
   const backgroundColorStyle = backgroundColor
@@ -58,6 +59,7 @@ const TooltipBubble: React.FC<TooltipProps> = ({
             ...style[placement],
             ...backgroundColorStyle,
             width,
+            transform: transformTip,
           }}
           {...props}
         >

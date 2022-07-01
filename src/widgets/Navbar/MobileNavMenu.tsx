@@ -172,7 +172,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
             isActive={entry.href === location.pathname}
             onClick={handleClick}
           >
-            <MenuLink href={entry?.href} target={entry.label === "Lend" ? "_blank" : "_parent"}>
+            <MenuLink href={entry?.href}>
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
             </MenuLink>
           </MenuEntry>

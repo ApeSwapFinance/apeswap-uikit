@@ -39,6 +39,12 @@ import {
   Medium,
   Instagram,
   Website,
+  Arrow,
+  SwapArrows,
+  InfoSolid,
+  SuccessOutline,
+  Trash,
+  Cancelled,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -50,7 +56,24 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
       color,
       margin,
     });
-
+  if (icon === icons.SUCCESS_OUTLINE) {
+    return <SuccessOutline {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.TRASH) {
+    return <Trash {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.CANCELLED) {
+    return <Cancelled {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.INFO_SOLID) {
+    return <InfoSolid {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ARROW) {
+    return <Arrow {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.SWAP_ARROWS) {
+    return <SwapArrows {...props} getStyles={getStyles} />;
+  }
   if (icon === icons.CARET) {
     return <Caret {...props} getStyles={getStyles} />;
   }
