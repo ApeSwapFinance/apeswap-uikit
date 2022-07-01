@@ -14,15 +14,16 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, t, ...props }) => {
       sx={{
         width: (mini && "32px") || "max-content",
         height: (mini && "32px") || "40px",
-        marginRight: "15px",
-        background: (mini && "white3") || "yellow",
+        marginRight: "20px",
+        background: (mini && "none") || "yellow",
         border: "none",
         fontSize: "16px",
+        fontWeight: 600,
         "&&": {
           borderRadius: (mini && "50%") || "10px",
 
           "&:hover": {
-            background: mini && "white4",
+            background: mini && "none",
             filter: (!mini && "brightness(115%)") || "unset",
           },
         },
@@ -34,10 +35,10 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, t, ...props }) => {
           <Text color="primaryBright" bold>
             {t?.("ADD FUNDS")}
           </Text>
-          <CardIcon fill="#FAFAFA" marginLeft="5px" />
+          <CardIcon fill="#FAFAFA" marginLeft="5px" width="24px" />
         </>
       )}
-      {mini && <CardIcon fill={theme.isDark ? "#FAFAFA" : "#4D4040"} />}
+      {mini && <CardIcon fill={theme.isDark ? "#FAFAFA" : "#4D4040"} {...props} />}
     </Button>
   );
 };
