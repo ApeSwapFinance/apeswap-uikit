@@ -228,7 +228,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           </div>
           <Flex sx={{ marginBottom: "15px" }}>
             <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
-            <RunFiatButton mini runFiat={runFiat} t={t} />
+            <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
           </Flex>
         </Flex>
