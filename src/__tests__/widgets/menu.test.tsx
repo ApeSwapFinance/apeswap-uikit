@@ -483,10 +483,10 @@ it("renders correctly", () => {
                     </svg>
                   </div>
                   <button
-                    class="css-19l6wk0-RunFiatButton"
+                    class="css-6yhlse-MobileNavMenu"
                   >
                     <svg
-                      class="sc-gsTEea fQWPxo"
+                      class="sc-gsTEea fQWPxo css-js3zxr-MobileNavMenu"
                       color="text"
                       fill="none"
                       viewBox="0 0 24 24"
