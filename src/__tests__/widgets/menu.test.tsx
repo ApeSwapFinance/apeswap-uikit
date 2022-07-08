@@ -42,6 +42,7 @@ it("renders correctly", () => {
         t={() => ""}
         links={menuConfig}
         runFiat={noop}
+        iframe={false}
       >
         body
       </Navbar>
