@@ -276,21 +276,21 @@ const Navbar: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
-      {!iframe && 
-        (<Footer
-        chainId={chainId}
-        track={track}
-        toggleTheme={toggleTheme}
-        bananaPriceUsd={bananaPriceUsd}
-        isDark={isDark}
-        switchNetwork={switchNetwork}
-        langs={langs}
-        setLang={setLang}
-        currentLang={currentLang}
-        t={t}
-        runFiat={runFiat}
-        />)
-     }
+      {!iframe && (
+        <Footer
+          chainId={chainId}
+          track={track}
+          toggleTheme={toggleTheme}
+          bananaPriceUsd={bananaPriceUsd}
+          isDark={isDark}
+          switchNetwork={switchNetwork}
+          langs={langs}
+          setLang={setLang}
+          currentLang={currentLang}
+          t={t}
+          runFiat={runFiat}
+        />
+      )}
     </Wrapper>
   );
 };
