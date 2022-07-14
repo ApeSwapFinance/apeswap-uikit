@@ -5,6 +5,7 @@ import { LegacySvgProps } from "../../../components/Svg/types";
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
     <LegacySvg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>Unstoppable Domains Logo</title>
       <g clipPath="url(#clip0_397_9586)">
         <path d="M36.6855 3.52722V15.6759L1 30.0309L36.6855 3.52722Z" fill="#00C9FF" />
         <path
