@@ -11,6 +11,7 @@ import SafePalWallet from "./icons/SafePalWallet";
 import TorusWallet from "./icons/SocialLogin";
 import Coinbase from "./icons/Coinbase";
 import Unstoppable from "./icons/Unstoppable";
+import Bitkeep from "./icons/Bitkeep";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -72,6 +73,11 @@ const connectors: Config[] = [
   {
     title: "ONTO Wallet",
     icon: OntoWallet,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Bitkeep",
+    icon: Bitkeep,
     connectorId: ConnectorNames.Injected,
   },
   {

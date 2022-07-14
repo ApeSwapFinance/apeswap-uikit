@@ -29,6 +29,7 @@ enum colorValues {
   navMenuLogo = "navMenuLogo",
   footer = "footer",
   gray = "gray",
+  smartGradient = "smartGradient",
 }
 
 export type colorProps = `${colorValues}`;
