@@ -632,6 +632,57 @@ it("renders ConnectModal correctly", () => {
               <svg
                 class="sc-bdfBQB kA-DbXw"
                 color="text"
+                viewBox="0 0 32 32"
+                width="32px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Unstoppable Domains Logo
+                </title>
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  id="Unstoppable-Domains-Sign-Dark"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <rect
+                    fill="#4C47F7"
+                    height="480"
+                    id="Rectangle"
+                    width="480"
+                    x="0"
+                    y="0"
+                  />
+                  <g
+                    id="Unstoppable-Domains---Sign---Dark---Transparent"
+                    transform="translate(73.000000, 93.000000)"
+                  >
+                    <polygon
+                      fill="#2FE9FF"
+                      id="Rectangle-Copy-3"
+                      points="320 5 320 115 -4.54747351e-13 245"
+                    />
+                    <path
+                      d="M260,0 L260,190 C260,245.228475 215.228475,290 160,290 C104.771525,290 60,245.228475 60,190 L60,110 L120,77 L120,190 C120,209.329966 135.670034,225 155,225 C174.329966,225 190,209.329966 190,190 L190,38.5 L260,0 Z"
+                      fill="#FFFFFF"
+                      id="Path"
+                    />
+                  </g>
+                </g>
+              </svg>
+               
+            </button>
+            <button
+              class="css-1l1jss8-WalletCard"
+              id="wallet-connect-"
+            >
+              <span
+                class="css-oe19h8-WalletCard"
+              />
+              <svg
+                class="sc-bdfBQB kA-DbXw"
+                color="text"
                 viewBox="0 0 200.17 228.32"
                 width="32px"
                 xmlns="http://www.w3.org/2000/svg"

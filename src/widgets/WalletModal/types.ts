@@ -7,7 +7,7 @@ export enum ConnectorNames {
   BSC = "bsc",
   Walletlink = "Walletlink",
   Torus = "Torus",
-  Unstoppable = "Unstoppable"
+  Unstoppable = "Unstoppable",
 }
 
 export type Login = (connectorId: ConnectorNames) => void;

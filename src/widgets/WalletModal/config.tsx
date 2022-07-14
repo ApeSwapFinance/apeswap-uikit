@@ -63,7 +63,7 @@ const connectors: Config[] = [
   {
     title: "Unstoppable Domains",
     icon: Unstoppable,
-    connectorId: ConnectorNames.Unstoppable
+    connectorId: ConnectorNames.Unstoppable,
   },
   {
     title: "NABOX Wallet",
