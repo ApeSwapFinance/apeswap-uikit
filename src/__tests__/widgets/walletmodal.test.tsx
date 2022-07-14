@@ -632,44 +632,36 @@ it("renders ConnectModal correctly", () => {
               <svg
                 class="sc-bdfBQB kA-DbXw"
                 color="text"
-                viewBox="0 0 32 32"
+                fill="none"
+                height="38"
+                viewBox="0 0 38 38"
                 width="32px"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title>
-                  Unstoppable Domains Logo
-                </title>
                 <g
-                  fill="none"
-                  fill-rule="evenodd"
-                  id="Unstoppable-Domains-Sign-Dark"
-                  stroke="none"
-                  stroke-width="1"
+                  clip-path="url(#clip0_397_9586)"
                 >
-                  <rect
-                    fill="#4C47F7"
-                    height="480"
-                    id="Rectangle"
-                    width="480"
-                    x="0"
-                    y="0"
+                  <path
+                    d="M36.6855 3.52722V15.6759L1 30.0309L36.6855 3.52722Z"
+                    fill="#00C9FF"
                   />
-                  <g
-                    id="Unstoppable-Domains---Sign---Dark---Transparent"
-                    transform="translate(73.000000, 93.000000)"
-                  >
-                    <polygon
-                      fill="#2FE9FF"
-                      id="Rectangle-Copy-3"
-                      points="320 5 320 115 -4.54747351e-13 245"
-                    />
-                    <path
-                      d="M260,0 L260,190 C260,245.228475 215.228475,290 160,290 C104.771525,290 60,245.228475 60,190 L60,110 L120,77 L120,190 C120,209.329966 135.670034,225 155,225 C174.329966,225 190,209.329966 190,190 L190,38.5 L260,0 Z"
-                      fill="#FFFFFF"
-                      id="Path"
-                    />
-                  </g>
+                  <path
+                    d="M29.9957 3V23.9573C29.9957 26.8859 28.8208 29.6947 26.7293 31.7656C24.6378 33.8366 21.8011 35 18.8433 35C15.8855 35 13.0489 33.8366 10.9574 31.7656C8.8659 29.6947 7.69092 26.8859 7.69092 23.9573V15.1264L14.3812 11.4807V23.9573C14.3186 24.5018 14.3728 25.0533 14.5404 25.5756C14.708 26.0979 14.9851 26.5792 15.3537 26.9881C15.7223 27.397 16.1739 27.7241 16.679 27.9481C17.1842 28.1721 17.7314 28.288 18.2849 28.288C18.8383 28.288 19.3856 28.1721 19.8907 27.9481C20.3958 27.7241 20.8475 27.397 21.216 26.9881C21.5846 26.5792 21.8617 26.0979 22.0293 25.5756C22.1969 25.0533 22.2512 24.5018 22.1885 23.9573V7.22924L29.9957 3Z"
+                    fill="#0D67FE"
+                  />
                 </g>
+                <defs>
+                  <clippath
+                    id="clip0_397_9586"
+                  >
+                    <rect
+                      fill="white"
+                      height="32"
+                      transform="translate(1 3)"
+                      width="35.6855"
+                    />
+                  </clippath>
+                </defs>
               </svg>
                
             </button>
