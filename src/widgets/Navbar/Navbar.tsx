@@ -90,6 +90,7 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const Navbar: React.FC<NavProps> = ({
+  uDName,
   account,
   login,
   logout,
@@ -237,8 +238,8 @@ const Navbar: React.FC<NavProps> = ({
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
             </Flex>
           )}
-          <UserBlock account={account} login={login} logout={logout} t={t} />
-          {account && profile && <Avatar profile={profile} />}
+          <UserBlock uDName={uDName} account={account} login={login} logout={logout} t={t} />
+          {(uDName || account) && profile && <Avatar profile={profile} />}
           {isMobile && (
             <MenuButton aria-label="Toggle menu" handleClick={() => setIsPushed(!isPushed)}>
               {isPushed ? (

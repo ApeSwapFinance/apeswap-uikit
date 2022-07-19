@@ -111,6 +111,7 @@ export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        uDName={undefined}
         account={undefined}
         login={noop}
         logout={noop}
@@ -200,6 +201,7 @@ export const WithNoProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
@@ -259,6 +261,7 @@ export const WithProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
