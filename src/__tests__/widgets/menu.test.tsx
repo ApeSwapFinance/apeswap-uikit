@@ -173,7 +173,7 @@ it("renders correctly", () => {
                 <span
                   class="css-1yc05tr"
                 >
-                  ...
+                  0xbd...c980
                 </span>
                  
               </button>
