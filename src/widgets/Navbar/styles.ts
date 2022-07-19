@@ -85,10 +85,10 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     height: "35px",
     marginLeft: "10px",
     lineHeight: "10px",
-    background: (uDName || account) ? "white3" : "yellow",
-    color: (uDName || account) ? "text" : "primaryBright",
+    background: uDName || account ? "white3" : "yellow",
+    color: uDName || account ? "text" : "primaryBright",
     "&&": {
-      padding: `0px ${(uDName || account) ? "45px" : "15px"} 0px 15px`,
+      padding: `0px ${uDName || account ? "45px" : "15px"} 0px 15px`,
     },
   }),
 };

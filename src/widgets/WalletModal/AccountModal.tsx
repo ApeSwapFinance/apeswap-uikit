@@ -30,7 +30,7 @@ const AccountModal: React.FC<Props> = ({ uDName, account, logout, t }) => {
         sx={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}
         mb="8px"
       >
-        {isXs || isSm || isMd ? (uDName || reducedAddress) : (uDName || account)}
+        {isXs || isSm || isMd ? uDName || reducedAddress : uDName || account}
       </Text>
       <Flex sx={{ alignItems: "center" }} mt="8px" mb="32px">
         <Link

@@ -35,7 +35,7 @@ const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
             }}
             account={uDName || account}
           >
-            <Text weight="normal">{!uDName ? "..." : (uDName || accountEllipsis)}</Text>
+            <Text weight="normal">{!uDName ? "..." : uDName || accountEllipsis}</Text>
           </Button>
         );
       }
@@ -50,7 +50,7 @@ const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
           }}
           account={uDName || account}
         >
-          <Text weight="normal">{!uDName ? "..." : (uDName || accountEllipsis)}</Text>
+          <Text weight="normal">{!uDName ? "..." : uDName || accountEllipsis}</Text>
         </Button>
       );
     }
