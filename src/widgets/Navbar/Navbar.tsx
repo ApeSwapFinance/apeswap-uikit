@@ -109,6 +109,7 @@ const Navbar: React.FC<NavProps> = ({
   track,
   liveResult,
   runFiat,
+  iframe
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -276,19 +277,21 @@ const Navbar: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
-      <Footer
-        chainId={chainId}
-        track={track}
-        toggleTheme={toggleTheme}
-        bananaPriceUsd={bananaPriceUsd}
-        isDark={isDark}
-        switchNetwork={switchNetwork}
-        langs={langs}
-        setLang={setLang}
-        currentLang={currentLang}
-        t={t}
-        runFiat={runFiat}
-      />
+      {!iframe && (
+        <Footer
+          chainId={chainId}
+          track={track}
+          toggleTheme={toggleTheme}
+          bananaPriceUsd={bananaPriceUsd}
+          isDark={isDark}
+          switchNetwork={switchNetwork}
+          langs={langs}
+          setLang={setLang}
+          currentLang={currentLang}
+          t={t}
+          runFiat={runFiat}
+        />
+      )}
     </Wrapper>
   );
 };

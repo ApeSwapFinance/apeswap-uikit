@@ -78,4 +78,5 @@ export interface NavProps extends PanelProps {
   t: (text: string) => string;
   runFiat: () => void;
   uDName?: string;
+  iframe: boolean;
 }
