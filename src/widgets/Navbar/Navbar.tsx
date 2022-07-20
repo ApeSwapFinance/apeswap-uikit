@@ -109,7 +109,7 @@ const Navbar: React.FC<NavProps> = ({
   track,
   liveResult,
   runFiat,
-  iframe
+  iframe,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
