@@ -149,7 +149,6 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
                         >
                           {item.label}
                         </Text>
-                        {/* <StyledText label={item.label}>{item.label}</StyledText> */}
                         {(item?.isNew || subMenu?.tag === "LIVE") && (
                           <StyledTag variant={subMenu?.tag === "LIVE" ? "success" : "binance"}>
                             {subMenu?.tag === "LIVE" ? "LIVE" : "NEW"}
@@ -169,7 +168,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
             isActive={entry.href === location.pathname}
             onClick={handleClick}
           >
-            <MenuLink href={entry?.href}>
+            <MenuLink href={entry.href} target={entry.label === "Lend" ? "_blank" : "_self"}>
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
             </MenuLink>
           </MenuEntry>

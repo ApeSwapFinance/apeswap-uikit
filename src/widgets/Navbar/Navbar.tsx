@@ -178,7 +178,7 @@ const Navbar: React.FC<NavProps> = ({
                   onMouseLeave={() => handleHover("")}
                 >
                   {link.href ? (
-                    <MenuLink href={link.href} target={link.label === "Lend" ? "_blank" : "_parent"}>
+                    <MenuLink href={link.href} target={link.label === "Lend" ? "_blank" : "_self"}>
                       <NavItem
                         key={link.href}
                         active={
