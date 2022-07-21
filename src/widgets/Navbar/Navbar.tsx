@@ -159,7 +159,7 @@ const Navbar: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
+      {!iframe && (<StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
         <Logo
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
@@ -250,7 +250,7 @@ const Navbar: React.FC<NavProps> = ({
             </MenuButton>
           )}
         </Flex>
-      </StyledNav>
+      </StyledNav>)}
       <BodyWrapper>
         {isMobile && (
           <MobileNavMenu
