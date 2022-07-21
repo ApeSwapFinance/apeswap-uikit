@@ -68,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({
             <FullLogo width="240px" mb="20px" />
             <Text color="primaryBright" size="16px">
               {t(
-                `ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure experience for everyone.`
+                `ApeSwap is a DeFi Hub on BNB Chain, Polygon and Ethereum focused on offering an accessible, transparent and secure experience for everyone.`
               )}
             </Text>
             <ButtonFlex>
