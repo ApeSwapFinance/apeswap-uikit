@@ -138,10 +138,7 @@ const Footer: React.FC<FooterProps> = ({
                   <Skeleton width={90} height={35} />
                 )}
               </div>
-              <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
-                <BuyBananaButton>{t("BUY BANANA")}</BuyBananaButton>
-              </a>
-              {/* <RunFiatButton runFiat={runFiat} t={t} /> */}
+              <RunFiatButton runFiat={runFiat} t={t} />
             </BottomRowContainer>
           </LogoFlex>
           {isMobile ? (

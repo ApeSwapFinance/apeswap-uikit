@@ -16,6 +16,7 @@ import Flex from "../../components/Flex/Flex";
 import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
 import styles from "./styles";
 import LangSelectorButton from "../../components/LangSelectorButton/LangSelectorButton";
+import { RunFiatButton } from "../../components/RunFiatButton";
 
 interface MobileNavMenuProps extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -26,6 +27,7 @@ interface MobileNavMenuProps extends PanelProps, PushedProps {
   track?: TrackHandler;
   liveResult?: LiveResultProps["apiResult"];
   t: (key: string) => string;
+  runFiat: () => void;
 }
 
 const StyledLink = styled.a`
@@ -93,6 +95,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   track,
   liveResult,
   t,
+  runFiat,
 }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -181,18 +184,13 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          height: "100px",
+          height: "120px",
           padding: "20px 0",
         }}
       >
         <Flex
           sx={{
-            "@media screen and (max-width: 400px)": {
-              flexDirection: "column-reverse",
-              alignItems: "center",
-            },
-
-            flexDirection: "row",
+            flexDirection: "column-reverse",
             justifyContent: "space-evenly",
             alignItems: "center",
             width: "90%",
@@ -228,14 +226,9 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               />
             </StyledLink>
           </div>
-          <Flex
-            sx={{
-              "@media screen and (max-width: 400px)": {
-                marginBottom: "10px",
-              },
-            }}
-          >
+          <Flex sx={{ marginBottom: "15px" }}>
             <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
+            <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
           </Flex>
         </Flex>
