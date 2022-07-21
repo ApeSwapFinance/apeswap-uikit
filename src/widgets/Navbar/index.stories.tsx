@@ -70,6 +70,7 @@ export const Connected: React.FC = (args: any) => {
           track={track}
           liveResult={navbarApiResult}
           runFiat={noop}
+          iframe={false}
         >
           <div>
             <Heading as="h1" mb="8px">
@@ -126,6 +127,7 @@ export const NotConnected: React.FC = () => {
         liveResult={navbarApiResult}
         runFiat={noop}
         t={translate}
+        iframe={false}
       >
         <div style={{ lineHeight: "30px" }}>
           <h1>Page body</h1>
@@ -221,6 +223,7 @@ export const WithNoProfile: React.FC = () => {
         liveResult={navbarApiResult}
         runFiat={noop}
         t={translate}
+        iframe={false}
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -283,6 +286,7 @@ export const WithProfile: React.FC = () => {
         liveResult={navbarApiResult}
         runFiat={noop}
         t={translate}
+        iframe={false}
       >
         <div>
           <Heading as="h1" mb="8px">
