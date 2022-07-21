@@ -21,6 +21,7 @@ const Colors = {
   heading: "#4D4040",
   black: "#000000",
   gradient: "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
+  smartGradient: "linear-gradient(94.44deg, #BA801E -9.73%, #E7CF67 40.14%, #BA801E 93.01%)",
   white1: "#FDFBF5",
   white2: "#F9F4E7",
   white3: "#F1EADA",

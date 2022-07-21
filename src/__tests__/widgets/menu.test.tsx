@@ -210,7 +210,6 @@ it("renders correctly", () => {
             >
               <a
                 href="/swap"
-                target="_parent"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -321,7 +320,6 @@ it("renders correctly", () => {
             >
               <a
                 href="https://app.ola.finance/apeswap/markets"
-                target="_blank"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -363,10 +361,10 @@ it("renders correctly", () => {
               />
             </div>
             <div
-              style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100px; padding: 20px 0px;"
+              style="display: flex; justify-content: center; align-items: center; width: 100%; height: 120px; padding: 20px 0px;"
             >
               <div
-                class="css-y3p97l-MobileNavMenu"
+                class="css-1l0nhm4-MobileNavMenu"
               >
                 <div
                   style="display: flex; align-items: center; justify-content: space-evenly; width: 200px;"
@@ -467,7 +465,7 @@ it("renders correctly", () => {
                   </a>
                 </div>
                 <div
-                  class="css-w7szru-MobileNavMenu"
+                  class="css-lv1n4u-MobileNavMenu"
                 >
                   <div
                     class="css-14rclsd-LangSelectorButton"
@@ -485,6 +483,24 @@ it("renders correctly", () => {
                       />
                     </svg>
                   </div>
+                  <button
+                    class="css-6yhlse-MobileNavMenu"
+                  >
+                    <svg
+                      class="sc-gsTEea fQWPxo css-js3zxr-MobileNavMenu"
+                      color="text"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      width="20px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22 7.55c0 .66-.54 1.2-1.2 1.2H3.2c-.66 0-1.2-.54-1.2-1.2v-.01C2 5.25 3.85 3.4 6.14 3.4h11.71C20.14 3.4 22 5.26 22 7.55ZM2 11.45v5.01c0 2.29 1.85 4.14 4.14 4.14h11.71c2.29 0 4.15-1.86 4.15-4.15v-5c0-.66-.54-1.2-1.2-1.2H3.2c-.66 0-1.2.54-1.2 1.2Zm6 5.8H6c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h2c.41 0 .75.34.75.75s-.34.75-.75.75Zm6.5 0h-4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75Z"
+                        fill="#4D4040"
+                      />
+                    </svg>
+                     
+                  </button>
                   <button
                     class="css-1sb0sm0-NetworkButton"
                   >
@@ -1049,15 +1065,27 @@ it("renders correctly", () => {
                     </span>
                   </a>
                 </div>
-                <a
-                  href="https://apeswap.finance/swap"
-                  rel="noopener noreferrer"
-                  target="_blank"
+                <button
+                  class="css-1g1scme-RunFiatButton"
                 >
-                  <button
-                    class="sc-fKFxtB fHeksm"
+                  <span
+                    class="css-bar4ur"
                   />
-                </a>
+                  <svg
+                    class="sc-gsTEea gitCVs"
+                    color="text"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 7.55c0 .66-.54 1.2-1.2 1.2H3.2c-.66 0-1.2-.54-1.2-1.2v-.01C2 5.25 3.85 3.4 6.14 3.4h11.71C20.14 3.4 22 5.26 22 7.55ZM2 11.45v5.01c0 2.29 1.85 4.14 4.14 4.14h11.71c2.29 0 4.15-1.86 4.15-4.15v-5c0-.66-.54-1.2-1.2-1.2H3.2c-.66 0-1.2.54-1.2 1.2Zm6 5.8H6c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h2c.41 0 .75.34.75.75s-.34.75-.75.75Zm6.5 0h-4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75Z"
+                      fill="#FAFAFA"
+                    />
+                  </svg>
+                   
+                </button>
               </div>
             </div>
             <div
@@ -1222,9 +1250,44 @@ it("renders correctly", () => {
               ry="6.08"
             />
           </svg>
-          <span
-            class="css-h41df7-Footer"
-          />
+          <div
+            class="css-1h8v89v-Footer"
+          >
+            <span
+              class="css-bar4ur"
+            />
+            <div
+              class="css-13l1fuo-Footer"
+            >
+              <a
+                class="css-t1ogsg"
+                href="https://apeswap.finance/terms"
+                target="_blank"
+              >
+                <span
+                  class="css-1n6g8if-Footer"
+                >
+                  Terms
+                </span>
+              </a>
+              <span
+                class="css-dme1ca"
+              >
+                 | 
+              </span>
+              <a
+                class="css-t1ogsg"
+                href="https://apeswap.finance/privacy"
+                target="_blank"
+              >
+                <span
+                  class="css-1n6g8if-Footer"
+                >
+                  Privacy Policy
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </DocumentFragment>

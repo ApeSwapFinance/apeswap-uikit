@@ -12,6 +12,7 @@ export const baseColors = {
   gray: "#7A7A7A",
   inputBorder: "#E6DECB",
   brown: "#A16552",
+  smartGradient: "linear-gradient(94.44deg, #BA801E -9.73%, #E7CF67 40.14%, #BA801E 93.01%)",
 };
 
 export const brandColors = {
