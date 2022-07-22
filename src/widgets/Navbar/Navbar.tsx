@@ -236,8 +236,8 @@ const Navbar: React.FC<NavProps> = ({
           >
             {!isMobile && (
               <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
-                {/* <RunFiatButton mini runFiat={runFiat} t={t} /> */}
                 <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
+                <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
                 <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
               </Flex>
             )}
@@ -273,6 +273,7 @@ const Navbar: React.FC<NavProps> = ({
             liveResult={liveResult}
             currentLang={currentLang}
             t={t}
+            runFiat={runFiat}
           />
         )}
         <Inner isPushed={isPushed} showMenu={showMenu} isMobile={isMobile}>

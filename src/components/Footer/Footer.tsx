@@ -68,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({
             <FullLogo width="240px" mb="20px" />
             <Text color="primaryBright" size="16px">
               {t(
-                `ApeSwap is a DeFi Hub on BNB Chain & Polygon focused on offering an accessible, transparent and secure experience for everyone.`
+                `ApeSwap is a DeFi Hub on BNB Chain, Polygon and Ethereum focused on offering an accessible, transparent and secure experience for everyone.`
               )}
             </Text>
             <ButtonFlex>
@@ -138,10 +138,7 @@ const Footer: React.FC<FooterProps> = ({
                   <Skeleton width={90} height={35} />
                 )}
               </div>
-              <a href="https://apeswap.finance/swap" target="_blank" rel="noopener noreferrer">
-                <BuyBananaButton>{t("BUY BANANA")}</BuyBananaButton>
-              </a>
-              {/* <RunFiatButton runFiat={runFiat} t={t} /> */}
+              <RunFiatButton runFiat={runFiat} t={t} />
             </BottomRowContainer>
           </LogoFlex>
           {isMobile ? (
