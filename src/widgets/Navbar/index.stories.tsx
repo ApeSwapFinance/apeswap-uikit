@@ -25,9 +25,7 @@ export default {
 const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}`, locale: `e${i}` }));
 const translate: (key: string) => string = (key) => key;
 // eslint-disable-next-line no-empty-pattern
-const track =
-  ({}: TrackProps): TrackHandler =>
-  () => ({});
+const track: TrackHandler = ({}: TrackProps) => () => ({});
 
 export const Connected: React.FC = (args: any) => {
   const [currentLang, setCurrentLang] = useState("English1");
