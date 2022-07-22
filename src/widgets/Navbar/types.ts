@@ -77,5 +77,6 @@ export interface NavProps extends PanelProps {
   liveResult?: LiveResultProps["apiResult"] | undefined;
   t: (text: string) => string;
   runFiat: () => void;
+  uDName?: string;
   iframe: boolean;
 }

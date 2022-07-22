@@ -210,6 +210,7 @@ it("renders correctly", () => {
             >
               <a
                 href="/swap"
+                target="_self"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -320,6 +321,7 @@ it("renders correctly", () => {
             >
               <a
                 href="https://app.ola.finance/apeswap/markets"
+                target="_blank"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"

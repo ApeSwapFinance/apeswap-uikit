@@ -10,6 +10,7 @@ import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
 import TorusWallet from "./icons/SocialLogin";
 import Coinbase from "./icons/Coinbase";
+import Unstoppable from "./icons/Unstoppable";
 import Bitkeep from "./icons/Bitkeep";
 import { Config, ConnectorNames } from "./types";
 
@@ -58,6 +59,11 @@ const connectors: Config[] = [
     title: "Binance Chain Wallet",
     icon: BinanceChain,
     connectorId: ConnectorNames.BSC,
+  },
+  {
+    title: "Unstoppable Domains",
+    icon: Unstoppable,
+    connectorId: ConnectorNames.Unstoppable,
   },
   {
     title: "NABOX Wallet",
