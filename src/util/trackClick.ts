@@ -1,11 +1,11 @@
 export interface TrackProps {
   event: string;
-  chain?: number | string;
+  chain: number | string;
   data: any;
   value?: number | string;
 }
 
-export type TrackHandler = ({ ...arg }: TrackProps) => void;
+export type TrackHandler = ({ event, chain, data, value }: TrackProps) => void;
 
 export interface clickProps {
   chainId: TrackProps["chain"];
@@ -33,12 +33,6 @@ const trackClick = (
         socialName,
       },
     });
-    console.log("tracker", tracker);
-    console.log("event", event);
-    console.log("chainId", chainId);
-    console.log("position", position);
-    console.log("clickUrl", clickUrl);
-    console.log("socialName", socialName);
   } else {
     // eslint-disable-next-line no-console
     console.info("tracker not found");

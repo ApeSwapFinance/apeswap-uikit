@@ -7,5 +7,5 @@ export interface RFBProps {
   sx?: any;
   track?: TrackHandler;
   position: string;
-  chainId?: TrackProps["chain"];
+  chainId: TrackProps["chain"];
 }

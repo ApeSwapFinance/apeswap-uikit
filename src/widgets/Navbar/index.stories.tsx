@@ -7,7 +7,7 @@ import Text from "../../components/Text/Text";
 import Navbar from "./Navbar";
 import { MenuEntry } from "./MenuEntry";
 import { links } from "./config";
-import { TrackProps } from "../../util/trackClick";
+import { TrackHandler, TrackProps } from "../../util/trackClick";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Language } from "../../components/LangSelector/types";
 
@@ -24,12 +24,12 @@ export default {
 
 const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}`, locale: `e${i}` }));
 const translate: (key: string) => string = (key) => key;
+// eslint-disable-next-line no-empty-pattern
+const track = ({}: TrackProps): TrackHandler => () => ({});
 
 export const Connected: React.FC = (args: any) => {
   const [currentLang, setCurrentLang] = useState("English1");
 
-  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
-  const track = ({}: TrackProps): void => {};
   const navbarApiResult = [
     {
       id: 1,
@@ -106,8 +106,6 @@ export const NotConnected: React.FC = () => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
-  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
-  const track = ({}: TrackProps): void => {};
   return (
     <BrowserRouter>
       <Navbar
@@ -198,8 +196,6 @@ export const WithNoProfile: React.FC = () => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
-  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
-  const track = ({}: TrackProps): void => {};
   return (
     <BrowserRouter>
       <Navbar
@@ -260,8 +256,6 @@ export const WithProfile: React.FC = () => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
-  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
-  const track = ({}: TrackProps): void => {};
   return (
     <BrowserRouter>
       <Navbar
