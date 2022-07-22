@@ -233,7 +233,15 @@ const Navbar: React.FC<NavProps> = ({
           {!isMobile && (
             <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
               <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
-              <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
+              <RunFiatButton
+                mini
+                runFiat={runFiat}
+                t={t}
+                sx={{ width: "30px" }}
+                track={track}
+                position="NavBar"
+                chainId={chainId}
+              />
               <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
             </Flex>
           )}

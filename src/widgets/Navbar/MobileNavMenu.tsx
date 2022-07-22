@@ -216,20 +216,30 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               <TelegramIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() =>  trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
+                onClick={() => trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
               />
             </StyledLink>
             <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
               <DiscordIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() =>  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")}
+                onClick={() =>
+                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
+                }
               />
             </StyledLink>
           </div>
           <Flex sx={{ marginBottom: "15px" }}>
             <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
-            <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
+            <RunFiatButton
+              mini
+              runFiat={runFiat}
+              t={t}
+              sx={{ width: "30px" }}
+              track={track}
+              position="NavBar"
+              chainId={chainId}
+            />
             <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
           </Flex>
         </Flex>

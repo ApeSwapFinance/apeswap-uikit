@@ -20,8 +20,8 @@ const trackClick = (
   event: TrackProps["event"],
   position: clickProps["position"],
   chainId: clickProps["chainId"],
-  socialName: clickProps["socialName"],
-  clickUrl: clickProps["clickUrl"]
+  socialName?: clickProps["socialName"],
+  clickUrl?: clickProps["clickUrl"]
 ): void => {
   if (tracker) {
     tracker({
@@ -33,6 +33,12 @@ const trackClick = (
         socialName,
       },
     });
+    console.log("tracker", tracker);
+    console.log("event", event);
+    console.log("chainId", chainId);
+    console.log("position", position);
+    console.log("clickUrl", clickUrl);
+    console.log("socialName", socialName);
   } else {
     // eslint-disable-next-line no-console
     console.info("tracker not found");

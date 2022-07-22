@@ -53,7 +53,17 @@ const StyledTag = styled(Tag)`
   height: auto;
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, position, isDark, chainId, track, subMenu, runFiat, t }) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({
+  items,
+  image,
+  position,
+  isDark,
+  chainId,
+  track,
+  subMenu,
+  runFiat,
+  t,
+}) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
@@ -110,7 +120,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, position, isDark, c
           }}
         >
           <Box sx={{ margin: "0 0 5px 40px" }}>
-            <RunFiatButton runFiat={runFiat} t={t} />
+            <RunFiatButton runFiat={runFiat} t={t} track={track} position="Tab" chainId={chainId} />
           </Box>
           <Flex sx={{ justifyContent: "space-between", alignItems: "flex-end", width: "35%" }}>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
@@ -132,14 +142,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, position, isDark, c
                 color="white3"
                 fill={iconFillColor}
                 onClick={() =>
-                  trackClick(
-                    track,
-                    event,
-                    position,
-                    chainId,
-                    "discord",
-                    "https://discord.com/invite/ApeSwap"
-                  )
+                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
                 }
               />
             </StyledLink>

@@ -119,7 +119,14 @@ const Footer: React.FC<FooterProps> = ({
                   color="white3"
                   fill={iconFillColor}
                   onClick={() =>
-                    trackClick(track, event, position, chainId, "instagram", "https://www.instagram.com/apeswap.finance/")
+                    trackClick(
+                      track,
+                      event,
+                      position,
+                      chainId,
+                      "instagram",
+                      "https://www.instagram.com/apeswap.finance/"
+                    )
                   }
                 />
               </StyledLink>
@@ -138,7 +145,7 @@ const Footer: React.FC<FooterProps> = ({
                   <Skeleton width={90} height={35} />
                 )}
               </div>
-              <RunFiatButton runFiat={runFiat} t={t} />
+              <RunFiatButton runFiat={runFiat} t={t} track={track} position={position} chainId={chainId} />
             </BottomRowContainer>
           </LogoFlex>
           {isMobile ? (
