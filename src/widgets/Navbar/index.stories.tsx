@@ -7,7 +7,7 @@ import Text from "../../components/Text/Text";
 import Navbar from "./Navbar";
 import { MenuEntry } from "./MenuEntry";
 import { links } from "./config";
-import { TrackProps } from "../../util/trackSocialClick";
+import { TrackProps } from "../../util/trackClick";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Language } from "../../components/LangSelector/types";
 
@@ -28,10 +28,8 @@ const translate: (key: string) => string = (key) => key;
 export const Connected: React.FC = (args: any) => {
   const [currentLang, setCurrentLang] = useState("English1");
 
-  // eslint-disable-next-line no-empty-pattern
-  const track = ({}: TrackProps): void => {
-    return null;
-  };
+  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
+  const track = ({}: TrackProps): void => {};
   const navbarApiResult = [
     {
       id: 1,
@@ -108,6 +106,8 @@ export const NotConnected: React.FC = () => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
+  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
+  const track = ({}: TrackProps): void => {};
   return (
     <BrowserRouter>
       <Navbar
@@ -123,6 +123,7 @@ export const NotConnected: React.FC = () => {
         chainId={56}
         switchNetwork={noop}
         liveResult={navbarApiResult}
+        track={track}
         runFiat={noop}
         t={translate}
       >
@@ -197,6 +198,8 @@ export const WithNoProfile: React.FC = () => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
+  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
+  const track = ({}: TrackProps): void => {};
   return (
     <BrowserRouter>
       <Navbar
@@ -217,6 +220,7 @@ export const WithNoProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        track={track}
         runFiat={noop}
         t={translate}
       >
@@ -256,6 +260,8 @@ export const WithProfile: React.FC = () => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
+  // eslint-disable-next-line no-empty-pattern, @typescript-eslint/no-empty-function
+  const track = ({}: TrackProps): void => {};
   return (
     <BrowserRouter>
       <Navbar
@@ -278,6 +284,7 @@ export const WithProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        track={track}
         runFiat={noop}
         t={translate}
       >

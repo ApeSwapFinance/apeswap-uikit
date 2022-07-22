@@ -10,7 +10,7 @@ import MenuLink from "./MenuLink";
 import { MenuSubEntry } from "./types";
 import darkTheme from "../../theme/dark";
 import lightTheme from "../../theme/light";
-import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
+import trackClick, { TrackHandler } from "../../util/trackClick";
 import { RunFiatButton } from "../../components/RunFiatButton";
 import { Tag } from "../../components/Tag";
 import styles from "./styles";
@@ -20,7 +20,7 @@ const Icons = ImageModule as unknown as { [key: string]: React.FC };
 interface SubNavbarProps {
   items: MenuSubEntry[];
   image?: string;
-  label: string;
+  position: string;
   isDark: boolean;
   chainId: number | string;
   track?: TrackHandler | undefined;
@@ -53,10 +53,11 @@ const StyledTag = styled(Tag)`
   height: auto;
 `;
 
-const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chainId, track, subMenu, runFiat, t }) => {
+const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, position, isDark, chainId, track, subMenu, runFiat, t }) => {
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const Image = Icons[image || ""];
   const imageElement = <Image />;
+  const event = "socialClick";
 
   return (
     <Box sx={styles.cardContainer} key={1}>
@@ -96,7 +97,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
         })}
       </Box>
       <Box sx={styles.navImage}>{imageElement}</Box>
-      {label === t("More") && (
+      {position === t("More") && (
         <Flex
           sx={{
             justifyContent: "space-between",
@@ -116,21 +117,30 @@ const SubNavbar: React.FC<SubNavbarProps> = ({ items, image, label, isDark, chai
               <TwitterIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
+                onClick={() => trackClick(track, event, position, chainId, "twitter", "https://twitter.com/ape_swap")}
               />
             </StyledLink>
             <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
               <TelegramIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
+                onClick={() => trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
               />
             </StyledLink>
             <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
               <DiscordIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)}
+                onClick={() =>
+                  trackClick(
+                    track,
+                    event,
+                    position,
+                    chainId,
+                    "discord",
+                    "https://discord.com/invite/ApeSwap"
+                  )
+                }
               />
             </StyledLink>
           </Flex>

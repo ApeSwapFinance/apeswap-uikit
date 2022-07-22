@@ -13,7 +13,7 @@ import { LiveResultProps, PanelProps, PushedProps } from "./types";
 import Text from "../../components/Text/Text";
 import Tag from "../../components/Tag/Tag";
 import Flex from "../../components/Flex/Flex";
-import trackSocialClick, { TrackHandler } from "../../util/trackSocialClick";
+import trackClick, { TrackHandler } from "../../util/trackClick";
 import styles from "./styles";
 import LangSelectorButton from "../../components/LangSelectorButton/LangSelectorButton";
 import { RunFiatButton } from "../../components/RunFiatButton";
@@ -101,7 +101,8 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
   const handleClick = isMobile ? () => pushNav(false) : undefined;
   const location = useLocation();
 
-  const label = "More";
+  const position = "More";
+  const event = "socialClick";
 
   return (
     <Wrapper isPushed={isPushed} showMenu={showMenu}>
@@ -208,21 +209,21 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
               <TwitterIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
+                onClick={() => trackClick(track, event, position, chainId, "twitter", "https://twitter.com/ape_swap")}
               />
             </StyledLink>
             <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
               <TelegramIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
+                onClick={() =>  trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
               />
             </StyledLink>
             <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
               <DiscordIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)}
+                onClick={() =>  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")}
               />
             </StyledLink>
           </div>

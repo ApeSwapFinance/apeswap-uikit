@@ -208,7 +208,7 @@ const Navbar: React.FC<NavProps> = ({
                       <SubNavbar
                         items={link.items}
                         image={isDark ? link.darkIcon : link.lightIcon}
-                        label={link.label}
+                        position={link.label}
                         isDark={isDark}
                         chainId={chainId}
                         track={track}
