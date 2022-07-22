@@ -70,6 +70,7 @@ export const Connected: React.FC = (args: any) => {
           track={track}
           liveResult={navbarApiResult}
           runFiat={noop}
+          iframe={false}
         >
           <div>
             <Heading as="h1" mb="8px">
@@ -111,6 +112,7 @@ export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        uDName={undefined}
         account={undefined}
         login={noop}
         logout={noop}
@@ -126,6 +128,7 @@ export const NotConnected: React.FC = () => {
         track={track}
         runFiat={noop}
         t={translate}
+        iframe={false}
       >
         <div style={{ lineHeight: "30px" }}>
           <h1>Page body</h1>
@@ -201,6 +204,7 @@ export const WithNoProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
@@ -221,6 +225,7 @@ export const WithNoProfile: React.FC = () => {
         track={track}
         runFiat={noop}
         t={translate}
+        iframe={false}
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -261,6 +266,7 @@ export const WithProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
@@ -283,6 +289,7 @@ export const WithProfile: React.FC = () => {
         track={track}
         runFiat={noop}
         t={translate}
+        iframe={false}
       >
         <div>
           <Heading as="h1" mb="8px">

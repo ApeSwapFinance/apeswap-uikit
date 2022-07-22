@@ -42,6 +42,7 @@ it("renders correctly", () => {
         t={() => ""}
         links={menuConfig}
         runFiat={noop}
+        iframe={false}
       >
         body
       </Navbar>
@@ -209,6 +210,7 @@ it("renders correctly", () => {
             >
               <a
                 href="/swap"
+                target="_self"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -319,6 +321,7 @@ it("renders correctly", () => {
             >
               <a
                 href="https://app.ola.finance/apeswap/markets"
+                target="_blank"
               >
                 <div
                   class="sc-cxFLGX fnkOhF"
@@ -552,7 +555,7 @@ it("renders correctly", () => {
             body
           </div>
           <div
-            class="sc-bdfBQB sc-iUuxjF fhltBt dGHztY"
+            class="sc-bdfBQB sc-iUuxjF fhltBt cHGZjq"
             role="presentation"
           />
         </div>
