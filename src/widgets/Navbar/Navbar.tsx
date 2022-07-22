@@ -90,6 +90,7 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const Navbar: React.FC<NavProps> = ({
+  uDName,
   account,
   login,
   logout,
@@ -108,6 +109,7 @@ const Navbar: React.FC<NavProps> = ({
   track,
   liveResult,
   runFiat,
+  iframe,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -158,26 +160,39 @@ const Navbar: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
-        <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
-        {!isMobile && (
-          <Flex sx={styles.rightMenu}>
-            {links.map((link) => {
-              const found = liveResult?.find((result) => result.label === link.label);
-              return (
-                <div
-                  style={{ position: "relative" }}
-                  onMouseOver={() => handleHover(link.label)}
-                  onFocus={() => handleHover(link.label)}
-                  onMouseLeave={() => handleHover("")}
-                >
-                  {link.href ? (
-                    <MenuLink href={link.href}>
+      {!iframe && (
+        <StyledNav showMenu={showMenu} isMobile={isMobile} isPushed={isPushed}>
+          <Logo
+            isPushed={isPushed}
+            togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
+            isDark={isDark}
+            href={homeLink?.href ?? "/"}
+          />
+          {!isMobile && (
+            <Flex sx={styles.rightMenu}>
+              {links.map((link) => {
+                const found = liveResult?.find((result) => result.label === link.label);
+                return (
+                  <div
+                    style={{ position: "relative" }}
+                    onMouseOver={() => handleHover(link.label)}
+                    onFocus={() => handleHover(link.label)}
+                    onMouseLeave={() => handleHover("")}
+                  >
+                    {link.href ? (
+                      <MenuLink href={link.href} target={link.label === "Lend" ? "_blank" : "_self"}>
+                        <NavItem
+                          key={link.href}
+                          active={
+                            link.href === currentPath ||
+                            link.items?.find((item) => item.href === currentPath) !== undefined
+                          }
+                          onClick={handleClick}
+                        >
+                          {link.label}
+                        </NavItem>
+                      </MenuLink>
+                    ) : (
                       <NavItem
                         key={link.href}
                         active={
@@ -187,69 +202,59 @@ const Navbar: React.FC<NavProps> = ({
                         onClick={handleClick}
                       >
                         {link.label}
+                        {(link.label === "Raise" || link.label === "Collect") &&
+                          found?.label === link.label &&
+                          found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
                       </NavItem>
-                    </MenuLink>
-                  ) : (
-                    <NavItem
-                      key={link.href}
-                      active={
-                        link.href === currentPath || link.items?.find((item) => item.href === currentPath) !== undefined
-                      }
-                      onClick={handleClick}
-                    >
-                      {link.label}
-                      {(link.label === "Raise" || link.label === "Collect") &&
-                        found?.label === link.label &&
-                        found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
-                    </NavItem>
-                  )}
-                  {link.label === hoveredItem && link?.items && (
-                    <div style={{ display: "flex", backgroundColor: "red" }}>
-                      <SubNavbar
-                        items={link.items}
-                        image={isDark ? link.darkIcon : link.lightIcon}
-                        label={link.label}
-                        isDark={isDark}
-                        chainId={chainId}
-                        track={track}
-                        subMenu={found?.settings}
-                        runFiat={runFiat}
-                        t={t}
-                      />
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </Flex>
-        )}
-        <Flex
-          sx={{
-            alignItems: "center",
-            position: "absolute",
-            right: "20px",
-          }}
-        >
-          {!isMobile && (
-            <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
-              <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
-              <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
-              <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
+                    )}
+                    {link.label === hoveredItem && link?.items && (
+                      <div style={{ display: "flex", backgroundColor: "red" }}>
+                        <SubNavbar
+                          items={link.items}
+                          image={isDark ? link.darkIcon : link.lightIcon}
+                          label={link.label}
+                          isDark={isDark}
+                          chainId={chainId}
+                          track={track}
+                          subMenu={found?.settings}
+                          runFiat={runFiat}
+                          t={t}
+                        />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </Flex>
           )}
-          <UserBlock account={account} login={login} logout={logout} t={t} />
-          {account && profile && <Avatar profile={profile} />}
-          {isMobile && (
-            <MenuButton aria-label="Toggle menu" handleClick={() => setIsPushed(!isPushed)}>
-              {isPushed ? (
-                <HamburgerCloseIcon width="24px" color="text" />
-              ) : (
-                <HamburgerIcon width="24px" color="text" />
-              )}
-            </MenuButton>
-          )}
-        </Flex>
-      </StyledNav>
+          <Flex
+            sx={{
+              alignItems: "center",
+              position: "absolute",
+              right: "20px",
+            }}
+          >
+            {!isMobile && (
+              <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
+                <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
+                <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
+                <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
+              </Flex>
+            )}
+            <UserBlock uDName={uDName} account={account} login={login} logout={logout} t={t} />
+            {(uDName || account) && profile && <Avatar profile={profile} />}
+            {isMobile && (
+              <MenuButton aria-label="Toggle menu" handleClick={() => setIsPushed(!isPushed)}>
+                {isPushed ? (
+                  <HamburgerCloseIcon width="24px" color="text" />
+                ) : (
+                  <HamburgerIcon width="24px" color="text" />
+                )}
+              </MenuButton>
+            )}
+          </Flex>
+        </StyledNav>
+      )}
       <BodyWrapper>
         {isMobile && (
           <MobileNavMenu
@@ -276,19 +281,21 @@ const Navbar: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
-      <Footer
-        chainId={chainId}
-        track={track}
-        toggleTheme={toggleTheme}
-        bananaPriceUsd={bananaPriceUsd}
-        isDark={isDark}
-        switchNetwork={switchNetwork}
-        langs={langs}
-        setLang={setLang}
-        currentLang={currentLang}
-        t={t}
-        runFiat={runFiat}
-      />
+      {!iframe && (
+        <Footer
+          chainId={chainId}
+          track={track}
+          toggleTheme={toggleTheme}
+          bananaPriceUsd={bananaPriceUsd}
+          isDark={isDark}
+          switchNetwork={switchNetwork}
+          langs={langs}
+          setLang={setLang}
+          currentLang={currentLang}
+          t={t}
+          runFiat={runFiat}
+        />
+      )}
     </Wrapper>
   );
 };
