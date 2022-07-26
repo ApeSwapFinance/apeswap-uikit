@@ -1,4 +1,4 @@
-import { TrackHandler } from "../../util/trackSocialClick";
+import { TrackHandler } from "../../util/trackClick";
 import { Language } from "../LangSelector/types";
 
 export interface FooterProps {
@@ -6,8 +6,8 @@ export interface FooterProps {
   toggleTheme: (isDark: boolean) => void;
   switchNetwork: (chainId: number) => void;
   isDark: boolean;
-  bananaPriceUsd: number | undefined;
-  track?: TrackHandler | undefined;
+  bananaPriceUsd?: number;
+  track?: TrackHandler;
   currentLang: string;
   langs: Language[];
   setLang: (lang: Language) => void;

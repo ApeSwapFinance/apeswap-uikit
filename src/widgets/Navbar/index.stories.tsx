@@ -7,7 +7,7 @@ import Text from "../../components/Text/Text";
 import Navbar from "./Navbar";
 import { MenuEntry } from "./MenuEntry";
 import { links } from "./config";
-import { TrackProps } from "../../util/trackSocialClick";
+import { TrackHandler, TrackProps } from "../../util/trackClick";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Language } from "../../components/LangSelector/types";
 
@@ -24,14 +24,14 @@ export default {
 
 const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}`, locale: `e${i}` }));
 const translate: (key: string) => string = (key) => key;
+const track: TrackHandler =
+// eslint-disable-next-line no-empty-pattern
+  ({}: TrackProps) =>
+  () => ({});
 
 export const Connected: React.FC = (args: any) => {
   const [currentLang, setCurrentLang] = useState("English1");
 
-  // eslint-disable-next-line no-empty-pattern
-  const track = ({}: TrackProps): void => {
-    return null;
-  };
   const navbarApiResult = [
     {
       id: 1,
@@ -125,6 +125,7 @@ export const NotConnected: React.FC = () => {
         chainId={56}
         switchNetwork={noop}
         liveResult={navbarApiResult}
+        track={track}
         runFiat={noop}
         t={translate}
         iframe={false}
@@ -221,6 +222,7 @@ export const WithNoProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        track={track}
         runFiat={noop}
         t={translate}
         iframe={false}
@@ -284,6 +286,7 @@ export const WithProfile: React.FC = () => {
           noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
+        track={track}
         runFiat={noop}
         t={translate}
         iframe={false}

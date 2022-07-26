@@ -5,9 +5,16 @@ import { Button } from "../Button";
 import { Text } from "../Text";
 import { CardIcon } from "../Svg";
 import { RFBProps } from "./types";
+import trackClick from "../../util/trackClick";
 
-const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, t, ...props }) => {
+const RunFiatButton: React.FC<RFBProps> = ({ track, position, chainId, runFiat, mini, t, ...props }) => {
   const theme = useTheme();
+  const event = "moonpayClick";
+
+  const handleClick = () => {
+    runFiat();
+    trackClick(track, event, position, chainId);
+  };
   return (
     <Button
       {...props}
@@ -28,7 +35,7 @@ const RunFiatButton: React.FC<RFBProps> = ({ runFiat, mini, t, ...props }) => {
           },
         },
       }}
-      onClick={runFiat}
+      onClick={handleClick}
     >
       {!mini && (
         <>
