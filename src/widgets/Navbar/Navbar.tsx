@@ -83,7 +83,6 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean; isMobile: boole
 const MobileOnlyOverlay = styled(Overlay)`
   position: fixed;
   height: 100%;
-
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
   }
@@ -212,7 +211,7 @@ const Navbar: React.FC<NavProps> = ({
                         <SubNavbar
                           items={link.items}
                           image={isDark ? link.darkIcon : link.lightIcon}
-                          label={link.label}
+                          position={link.label}
                           isDark={isDark}
                           chainId={chainId}
                           track={track}
@@ -237,7 +236,15 @@ const Navbar: React.FC<NavProps> = ({
             {!isMobile && (
               <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
                 <LangSelectorButton currentLang={currentLang} langs={langs} setLang={setLang} t={t} />
-                <RunFiatButton mini runFiat={runFiat} t={t} sx={{ width: "30px" }} />
+                <RunFiatButton
+                  mini
+                  runFiat={runFiat}
+                  t={t}
+                  sx={{ width: "30px" }}
+                  track={track}
+                  position="NavBar"
+                  chainId={chainId}
+                />
                 <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
               </Flex>
             )}
