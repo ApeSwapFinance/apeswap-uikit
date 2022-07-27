@@ -27,7 +27,6 @@ import styles, {
   LogoFlex,
   ButtonFlex,
   StyledLink,
-  BuyBananaButton,
   BottomRowContainer,
 } from "./styles";
 import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
@@ -35,10 +34,8 @@ import lightTheme from "../../theme/light";
 import darkTheme from "../../theme/dark";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import MobileLinks from "./MobileLinks";
-import trackSocialClick from "../../util/trackSocialClick";
+import trackClick from "../../util/trackClick";
 import { RunFiatButton } from "../RunFiatButton";
-import { Colors } from "../../theme/types";
-import { darkColors } from "../../theme";
 import LangSelector from "../LangSelector/LangSelector";
 import { Flex } from "../Flex";
 
@@ -58,7 +55,8 @@ const Footer: React.FC<FooterProps> = ({
   const iconFillColor = isDark ? darkTheme.colors.text : lightTheme.colors.text;
   const { isXxl, isLg, isXl } = useMatchBreakpoints();
   const isMobile = isXxl === false && isXl === false && isLg === false;
-  const label = "Footer";
+  const position = "Footer";
+  const event = "socialClick";
 
   return (
     <>
@@ -81,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({
                 <TwitterIcon
                   color="white3"
                   fill={iconFillColor}
-                  onClick={() => trackSocialClick(track, "twitter", label, "https://twitter.com/ape_swap", chainId)}
+                  onClick={() => trackClick(track, event, position, chainId, "twitter", "https://twitter.com/ape_swap")}
                 />
               </StyledLink>
               <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
@@ -89,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({
                   color="white3"
                   fill={iconFillColor}
                   onClick={() =>
-                    trackSocialClick(track, "discord", label, "https://discord.com/invite/ApeSwap", chainId)
+                    trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
                   }
                 />
               </StyledLink>
@@ -97,21 +95,23 @@ const Footer: React.FC<FooterProps> = ({
                 <TelegramIcon
                   color="white3"
                   fill={iconFillColor}
-                  onClick={() => trackSocialClick(track, "telegram", label, "https://t.me/ape_swap", chainId)}
+                  onClick={() => trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
                 />
               </StyledLink>
               <StyledLink href="https://www.reddit.com/r/Apeswap/" target="_blank" rel="noopener noreferrer">
                 <RedditIcon
                   color="white3"
                   fill={iconFillColor}
-                  onClick={() => trackSocialClick(track, "reddit", label, "https://www.reddit.com/r/Apeswap/", chainId)}
+                  onClick={() =>
+                    trackClick(track, event, position, chainId, "reddit", "https://www.reddit.com/r/Apeswap/")
+                  }
                 />
               </StyledLink>
               <StyledLink href="https://ape-swap.medium.com/" target="_blank" rel="noopener noreferrer">
                 <MediumIcon
                   color="white3"
                   fill={iconFillColor}
-                  onClick={() => trackSocialClick(track, "medium", label, "https://ape-swap.medium.com/", chainId)}
+                  onClick={() => trackClick(track, event, position, chainId, "medium", "https://ape-swap.medium.com/")}
                 />
               </StyledLink>
               <StyledLink href="https://www.instagram.com/apeswap.finance/" target="_blank" rel="noopener noreferrer">
@@ -119,7 +119,14 @@ const Footer: React.FC<FooterProps> = ({
                   color="white3"
                   fill={iconFillColor}
                   onClick={() =>
-                    trackSocialClick(track, "instagram", label, "https://www.instagram.com/apeswap.finance/", chainId)
+                    trackClick(
+                      track,
+                      event,
+                      position,
+                      chainId,
+                      "instagram",
+                      "https://www.instagram.com/apeswap.finance/"
+                    )
                   }
                 />
               </StyledLink>
@@ -138,7 +145,7 @@ const Footer: React.FC<FooterProps> = ({
                   <Skeleton width={90} height={35} />
                 )}
               </div>
-              <RunFiatButton runFiat={runFiat} t={t} />
+              <RunFiatButton runFiat={runFiat} t={t} track={track} position={position} chainId={chainId} />
             </BottomRowContainer>
           </LogoFlex>
           {isMobile ? (

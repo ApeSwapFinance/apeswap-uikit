@@ -555,7 +555,7 @@ it("renders correctly", () => {
             body
           </div>
           <div
-            class="sc-bdfBQB sc-iUuxjF fhltBt dGHztY"
+            class="sc-bdfBQB sc-iUuxjF fhltBt cHGZjq"
             role="presentation"
           />
         </div>
