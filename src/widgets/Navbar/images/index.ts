@@ -6,5 +6,5 @@ export { default as StakeLightImage } from "./stakeLight";
 export { default as StakeDarkImage } from "./stakeDark";
 export { default as OfferingsLightImage } from "./offeringsLight";
 export { default as OfferingsDarkImage } from "./offeringsDark";
-export { default as ExchangeLightImage } from "./moreLight";
-export { default as ExchangeDarkImage } from "./moreDark";
+export { default as ExchangeLightImage } from "./exchangeLight";
+export { default as ExchangeDarkImage } from "./exchangeDark";
