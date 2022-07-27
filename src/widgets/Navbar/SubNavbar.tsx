@@ -107,7 +107,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({
         })}
       </Box>
       <Box sx={styles.navImage}>{imageElement}</Box>
-      {label === t("Exchange") && (
+      {position === t("Exchange") && (
         <Flex
           sx={{
             justifyContent: "space-between",
@@ -124,7 +124,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({
           </Box>
         </Flex>
       )}
-      {label === t("More") && (
+      {position === t("More") && (
         <Flex
           sx={{
             justifyContent: "space-between",
