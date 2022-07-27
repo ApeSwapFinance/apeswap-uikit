@@ -107,7 +107,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({
         })}
       </Box>
       <Box sx={styles.navImage}>{imageElement}</Box>
-      {position === t("More") && (
+      {position === t("Exchange") && (
         <Flex
           sx={{
             justifyContent: "space-between",
@@ -122,7 +122,21 @@ const SubNavbar: React.FC<SubNavbarProps> = ({
           <Box sx={{ margin: "0 0 5px 40px" }}>
             <RunFiatButton runFiat={runFiat} t={t} track={track} position="Tab" chainId={chainId} />
           </Box>
-          <Flex sx={{ justifyContent: "space-between", alignItems: "flex-end", width: "35%" }}>
+        </Flex>
+      )}
+      {position === t("More") && (
+        <Flex
+          sx={{
+            justifyContent: "space-between",
+            position: "absolute",
+            bottom: "10px",
+            right: "20px",
+            width: "35%",
+            marginLeft: "30px",
+            alignItems: "flex-end",
+          }}
+        >
+          <Flex sx={{ justifyContent: "space-between", alignItems: "flex-end", width: "100%" }}>
             <StyledLink href="https://twitter.com/ape_swap" target="_blank" rel="noopener noreferrer">
               <TwitterIcon
                 color="white3"
