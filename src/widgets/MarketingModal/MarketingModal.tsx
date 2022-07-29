@@ -20,7 +20,6 @@ import {
   StyledRightArrow,
 } from "./styles";
 
-
 const MarketingModal: React.FC<MarketingModalProps> = ({
   title,
   description,
@@ -104,11 +103,7 @@ const MarketingModal: React.FC<MarketingModalProps> = ({
           </SliderBtnSection>
 
           {startEarning && (
-            <Button
-              fullWidth
-              onClick={startEarning}
-              sx={styles.startEarningBtn}
-            >
+            <Button fullWidth onClick={startEarning} sx={styles.startEarningBtn}>
               {startEarningText}
             </Button>
           )}
