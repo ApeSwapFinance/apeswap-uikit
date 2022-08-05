@@ -20,11 +20,11 @@ export const supportLinks = [
 export const engageLinks = [
   {
     label: "Governance",
-    href: "https://apeswap.gitbook.io/apeswap-finance/governance",
+    href: "https://discuss.apeswap.finance",
   },
   {
     label: "Partner Application",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSdiC4jpKQAYD4iALGrm9ErmDIs1xtsOENu9GsvgdczVwe_uOw/viewform",
+    href: "https://forms.clickup.com/3080492/f/2y09c-6585/O175DYTK4PMR6P4CZA",
   },
   {
     label: "Bug Bounty",

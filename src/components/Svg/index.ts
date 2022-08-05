@@ -42,6 +42,7 @@ export { default as CommunityIcon } from "./_Icons/Community";
 export { default as CopyIcon } from "./_Icons/Copy";
 export { default as ErrorIcon } from "./_Icons/Error";
 export { default as HelpIcon } from "./_Icons/Help";
+export { default as MissingIcon } from "./_Icons/Missing";
 export { default as InfoIcon } from "./_Icons/Info";
 export { default as ListViewIcon } from "./_Icons/ListView";
 export { default as LogoIcon } from "./_Icons/Logo";
