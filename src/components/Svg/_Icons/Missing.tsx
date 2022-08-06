@@ -4,13 +4,7 @@ import { LegacySvgProps } from "../types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <LegacySvg
-      width={30}
-      height={30}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <LegacySvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g clipPath="url(#a)" fill="#ffffff">
         <path
           d="M25.607 25.607c5.858-5.858 5.858-15.356 0-21.214-5.858-5.857-15.355-5.857-21.213 0-5.858 5.858-5.858 15.356 0 21.214 5.858 5.858 15.355 5.858 21.213 0Z"
