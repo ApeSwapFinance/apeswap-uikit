@@ -38,6 +38,7 @@ export const Connected: React.FC = (args: any) => {
       settings: [
         { id: 1, label: "Raise", settings: [{ id: 1, tag: "LIVE", navItem: "Official IAO" }] },
         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+        { id: 3, label: "Explore", settings: [{ id: 1, tag: "LIVE", navItem: "ApeStats" }] },
       ],
       published_at: "2022-04-11T18:15:41.981Z",
       created_at: "2022-04-11T18:15:39.418Z",

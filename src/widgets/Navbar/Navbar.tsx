@@ -201,7 +201,7 @@ const Navbar: React.FC<NavProps> = ({
                         onClick={handleClick}
                       >
                         {link.label}
-                        {(link.label === "Raise" || link.label === "Collect") &&
+                        {(link.label === "Raise" || link.label === "Collect" || link.label === "Explore") &&
                           found?.label === link.label &&
                           found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
                       </NavItem>

@@ -343,7 +343,7 @@ it("renders correctly", () => {
                   <div
                     class="sc-cxFLGX fnkOhF"
                   >
-                    More
+                    Explore
                   </div>
                 </div>
                 <svg

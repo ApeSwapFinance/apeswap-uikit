@@ -44,13 +44,18 @@ export const links: MenuEntry[] = [
     darkIcon: "OfferingsDarkImage",
     items: [
       {
-        label: "Official IAO",
-        href: "/iao",
+        label: 'Treasury Bills',
+        href: '/treasury-bills',
         isNew: false,
       },
       {
-        label: "Self-Serve",
-        href: "/ss-iao",
+        label: 'Official IAO',
+        href: '/iao',
+        isNew: false,
+      },
+      {
+        label: 'Self-Serve IAO',
+        href: '/ss-iao',
         isNew: false,
       },
     ],
@@ -84,33 +89,33 @@ export const links: MenuEntry[] = [
     isNew: false,
   },
   {
-    label: "More",
+    label: "Explore",
     lightIcon: "MoreLightImage",
     darkIcon: "MoreDarkImage",
     items: [
       {
-        label: "Docs",
-        href: "https://apeswap.gitbook.io/apeswap-finance/",
+        label: 'ApeStats',
+        href: '/apestats',
+        isNew: true,
+      },
+      {
+        label: 'Documentation',
+        href: 'https://apeswap.gitbook.io/apeswap-finance/',
         isNew: false,
       },
       {
-        label: "Charts",
-        href: "https://apeswap.gitbook.io/apeswap-finance/",
+        label: 'Charts',
+        href: 'https://apeswap.finance',
         isNew: false,
       },
       {
-        label: "Leverage Trading",
-        href: "https://apemex.exchange/margin",
+        label: 'Governance',
+        href: 'https://vote.apeswap.finance',
         isNew: false,
       },
       {
-        label: "Governance",
-        href: "https://vote.apeswap.finance",
-        isNew: false,
-      },
-      {
-        label: "BANANA Burns",
-        href: "/burn",
+        label: 'Education',
+        href: 'https://www.apelabs.education/',
         isNew: false,
       },
     ],
