@@ -64,7 +64,9 @@ const Accordion: React.FC<Props> = ({
         {icon}
         <LabelSection>
           <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
-          {(label === "Raise" || label === "Explore") && found?.label === label && found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
+          {(label === "Raise" || label === "Explore") &&
+            found?.label === label &&
+            found?.settings[0]?.tag === "LIVE" && <GlowCircle />}
         </LabelSection>
 
         {isOpen ? <ArrowDropUpSmallIcon /> : <ArrowDropDownSmallIcon />}
