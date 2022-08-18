@@ -44,18 +44,18 @@ export const links: MenuEntry[] = [
     darkIcon: "OfferingsDarkImage",
     items: [
       {
-        label: 'Treasury Bills',
-        href: '/treasury-bills',
+        label: "Treasury Bills",
+        href: "/treasury-bills",
         isNew: false,
       },
       {
-        label: 'Official IAO',
-        href: '/iao',
+        label: "Official IAO",
+        href: "/iao",
         isNew: false,
       },
       {
-        label: 'Self-Serve IAO',
-        href: '/ss-iao',
+        label: "Self-Serve IAO",
+        href: "/ss-iao",
         isNew: false,
       },
     ],
@@ -94,28 +94,28 @@ export const links: MenuEntry[] = [
     darkIcon: "MoreDarkImage",
     items: [
       {
-        label: 'ApeStats',
-        href: '/apestats',
+        label: "ApeStats",
+        href: "/apestats",
         isNew: true,
       },
       {
-        label: 'Documentation',
-        href: 'https://apeswap.gitbook.io/apeswap-finance/',
+        label: "Documentation",
+        href: "https://apeswap.gitbook.io/apeswap-finance/",
         isNew: false,
       },
       {
-        label: 'Charts',
-        href: 'https://apeswap.finance',
+        label: "Charts",
+        href: "https://apeswap.finance",
         isNew: false,
       },
       {
-        label: 'Governance',
-        href: 'https://vote.apeswap.finance',
+        label: "Governance",
+        href: "https://vote.apeswap.finance",
         isNew: false,
       },
       {
-        label: 'Education',
-        href: 'https://www.apelabs.education/',
+        label: "Education",
+        href: "https://www.apelabs.education/",
         isNew: false,
       },
     ],
