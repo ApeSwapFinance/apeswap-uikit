@@ -53,6 +53,9 @@ export enum icons {
   CANCELLED = "cancelled",
   SUCCESS_OUTLINE = "successOutline",
   TRASH = "trash",
+  ZAP_ARROW = "ZapArrow",
+  ZAP_ICON = "ZapIcon",
+  MIGRATE = "Migrate",
 }
 
 export enum directions {
