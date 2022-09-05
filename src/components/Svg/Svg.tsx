@@ -207,7 +207,7 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
     return <ZapIcon {...props} getStyles={getStyles} />;
   }
   if (icon === icons.ZAP_ARROW) {
-    return <ZapArrow {...props} getStyles={getStyles} />;
+    return <ZapArrow {...props} getStyles={getStyles} color="white" />;
   }
   if (icon === icons.MIGRATE) {
     return <Migrate {...props} getStyles={getStyles} />;
