@@ -42,10 +42,6 @@ export const learnLinks = [
     href: "https://apeswap.gitbook.io/apeswap-finance/welcome/master",
   },
   {
-    label: "ApeLabs",
-    href: "https://www.apelabs.education/",
-  },
-  {
     label: "ApeTV Podcast",
     href: "https://open.spotify.com/show/4nFre3hez2RKPCqkX7CZBa",
   },

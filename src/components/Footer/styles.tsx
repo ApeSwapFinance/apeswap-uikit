@@ -122,7 +122,7 @@ export const IconFlex = styled.div`
 
 export const LinkskWrapper = styled(Flex)`
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   ${({ theme }) => theme.mediaQueries.xs} {
     margin-bottom: 100px;
