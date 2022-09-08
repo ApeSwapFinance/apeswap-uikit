@@ -45,6 +45,9 @@ import {
   SuccessOutline,
   Trash,
   Cancelled,
+  ZapArrow,
+  ZapIcon,
+  Migrate,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -199,6 +202,15 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.INSTAGRAM) {
     return <Instagram {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ZAP_ICON) {
+    return <ZapIcon {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ZAP_ARROW) {
+    return <ZapArrow {...props} getStyles={getStyles} color="white" />;
+  }
+  if (icon === icons.MIGRATE) {
+    return <Migrate {...props} getStyles={getStyles} />;
   }
   return null;
 };

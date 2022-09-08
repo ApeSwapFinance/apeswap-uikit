@@ -40,3 +40,6 @@ export { default as InfoSolid } from "./InfoSolid";
 export { default as Cancelled } from "./Cancelled";
 export { default as SuccessOutline } from "./SuccessOutline";
 export { default as Trash } from "./Trash";
+export { default as ZapArrow } from "./ZapArrow";
+export { default as ZapIcon } from "./ZapIcon";
+export { default as Migrate } from "./Migrate";
