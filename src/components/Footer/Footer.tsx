@@ -219,7 +219,7 @@ const Footer: React.FC<FooterProps> = ({
                   weight="bold"
                   color="yellow"
                 >
-                  {t("Learn")}
+                  {t("Access")}
                 </Text>
                 {learnLinks.map((link) => {
                   return (
