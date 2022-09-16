@@ -3,7 +3,7 @@ import { SvgProps } from "../types";
 
 const TLOS: React.FC<SvgProps> = ({ width }) => {
   return (
-    <svg width={width || "114"} viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width || "25"} viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="57" cy="57" r="57" fill="url(#paint0_linear)" />
       <g filter="url(#filter0_i)">
         <circle cx="57" cy="57" r="57" fill="url(#paint1_linear)" />
