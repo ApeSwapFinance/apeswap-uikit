@@ -49,7 +49,7 @@ import {
   ZapIcon,
   Migrate,
 } from "./Icons";
-import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
+import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
 import { IconStyles } from "./Icons/types";
 
 const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
@@ -187,6 +187,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.POLYGON_TOKEN) {
     return <POLYGON {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.TLOS_TOKEN) {
+    return <TLOS {...props} getStyles={getStyles} />;
   }
   if (icon === icons.BSC_TOKEN) {
     return <BSC {...props} getStyles={getStyles} />;
