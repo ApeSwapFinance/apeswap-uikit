@@ -56,6 +56,11 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Walletlink,
   },
   {
+    title: "Blocto",
+    icon: Coinbase,
+    connectorId: ConnectorNames.Blocto,
+  },
+  {
     title: "Binance Chain Wallet",
     icon: BinanceChain,
     connectorId: ConnectorNames.BSC,
