@@ -56,6 +56,7 @@ export enum icons {
   ZAP_ARROW = "ZapArrow",
   ZAP_ICON = "ZapIcon",
   MIGRATE = "Migrate",
+  MESSAGE = 'Message'
 }
 
 export enum directions {

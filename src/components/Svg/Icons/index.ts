@@ -43,3 +43,4 @@ export { default as Trash } from "./Trash";
 export { default as ZapArrow } from "./ZapArrow";
 export { default as ZapIcon } from "./ZapIcon";
 export { default as Migrate } from "./Migrate";
+export { default as Message } from "./Message";
