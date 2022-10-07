@@ -223,7 +223,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
                 color="white3"
                 fill={iconFillColor}
                 onClick={() =>
-                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
+                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwapOfficial")
                 }
               />
             </StyledLink>
