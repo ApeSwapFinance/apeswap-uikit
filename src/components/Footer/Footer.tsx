@@ -82,12 +82,12 @@ const Footer: React.FC<FooterProps> = ({
                   onClick={() => trackClick(track, event, position, chainId, "twitter", "https://twitter.com/ape_swap")}
                 />
               </StyledLink>
-              <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+              <StyledLink href="https://discord.com/invite/ApeSwapOfficial" target="_blank" rel="noopener noreferrer">
                 <DiscordIcon
                   color="white3"
                   fill={iconFillColor}
                   onClick={() =>
-                    trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
+                    trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwapOfficial")
                   }
                 />
               </StyledLink>
