@@ -17,17 +17,15 @@ export default {
   argTypes: {
     colorMode: {
       options: ["light", "dark"],
-      control: { type: "inline-radio" },
-    },
-  },
+      control: { type: "inline-radio" }
+    }
+  }
 };
 
 const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}`, locale: `e${i}` }));
 const translate: (key: string) => string = (key) => key;
 const track: TrackHandler =
   // eslint-disable-next-line no-empty-pattern
-
-
     ({}: TrackProps) =>
     () => ({});
 
@@ -40,12 +38,12 @@ export const Connected: React.FC = (args: any) => {
       settings: [
         { id: 1, label: "Raise", settings: [{ id: 1, tag: "LIVE", navItem: "Official IAO" }] },
         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
-        { id: 3, label: "Explore", settings: [{ id: 1, tag: "LIVE", navItem: "ApeStats" }] },
+        { id: 3, label: "Explore", settings: [{ id: 1, tag: "LIVE", navItem: "ApeStats" }] }
       ],
       published_at: "2022-04-11T18:15:41.981Z",
       created_at: "2022-04-11T18:15:39.418Z",
-      updated_at: "2022-04-12T14:20:12.100Z",
-    },
+      updated_at: "2022-04-12T14:20:12.100Z"
+    }
   ][0].settings;
 
   return (
@@ -66,7 +64,7 @@ export const Connected: React.FC = (args: any) => {
           profile={{
             profileLink: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
             noProfileLink: "",
-            image: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png",
+            image: "https://ipfs.io/ipfs/QmYhuJnr3GGUnDGtg6rmSXTgo7FzaWgrriqikfgn5SkXhZ/7142.png"
           }}
           chainId={137}
           switchNetwork={noop}
@@ -105,12 +103,12 @@ export const NotConnected: React.FC = () => {
       id: 1,
       settings: [
         { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
-        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] }
       ],
       published_at: "2022-04-11T18:15:41.981Z",
       created_at: "2022-04-11T18:15:39.418Z",
-      updated_at: "2022-04-12T14:20:12.100Z",
-    },
+      updated_at: "2022-04-12T14:20:12.100Z"
+    }
   ][0].settings;
   return (
     <BrowserRouter>
@@ -197,12 +195,12 @@ export const WithNoProfile: React.FC = () => {
       id: 1,
       settings: [
         { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
-        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] }
       ],
       published_at: "2022-04-11T18:15:41.981Z",
       created_at: "2022-04-11T18:15:39.418Z",
-      updated_at: "2022-04-12T14:20:12.100Z",
-    },
+      updated_at: "2022-04-12T14:20:12.100Z"
+    }
   ][0].settings;
   return (
     <BrowserRouter>
@@ -222,7 +220,7 @@ export const WithNoProfile: React.FC = () => {
         switchNetwork={noop}
         profile={{
           profileLink: "/profile",
-          noProfileLink: "/no-profile",
+          noProfileLink: "/no-profile"
         }}
         liveResult={navbarApiResult}
         track={track}
@@ -259,12 +257,12 @@ export const WithProfile: React.FC = () => {
       id: 1,
       settings: [
         { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
-        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
+        { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] }
       ],
       published_at: "2022-04-11T18:15:41.981Z",
       created_at: "2022-04-11T18:15:39.418Z",
-      updated_at: "2022-04-12T14:20:12.100Z",
-    },
+      updated_at: "2022-04-12T14:20:12.100Z"
+    }
   ][0].settings;
   return (
     <BrowserRouter>
@@ -286,7 +284,7 @@ export const WithProfile: React.FC = () => {
           name: "apeswap",
           image: "https://raw.githubusercontent.com/ApeSwapFinance/non-fungible-apes/main/images/4.png",
           profileLink: "/profile",
-          noProfileLink: "/no-profile",
+          noProfileLink: "/no-profile"
         }}
         liveResult={navbarApiResult}
         track={track}
