@@ -108,7 +108,7 @@ const Navbar: React.FC<NavProps> = ({
   track,
   liveResult,
   runFiat,
-  iframe
+  iframe,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -156,8 +156,6 @@ const Navbar: React.FC<NavProps> = ({
   const handleHover = (label: string) => {
     setHoveredItem(label);
   };
-
-  console.log("Newest version");
 
   const exchangeActive =
     currentPath.includes("migrate") ||
@@ -241,7 +239,7 @@ const Navbar: React.FC<NavProps> = ({
             sx={{
               alignItems: "center",
               position: "absolute",
-              right: "20px"
+              right: "20px",
             }}
           >
             {!isMobile && (
