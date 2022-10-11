@@ -108,7 +108,7 @@ const Navbar: React.FC<NavProps> = ({
   track,
   liveResult,
   runFiat,
-  iframe,
+  iframe
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -157,6 +157,15 @@ const Navbar: React.FC<NavProps> = ({
     setHoveredItem(label);
   };
 
+  console.log("Newest version");
+
+  const exchangeActive =
+    currentPath.includes("migrate") ||
+    currentPath.includes("/add-liquidity") ||
+    currentPath.includes("/liquidity") ||
+    currentPath.includes("/remove") ||
+    currentPath.includes("/unstake");
+
   return (
     <Wrapper>
       {!iframe && (
@@ -184,7 +193,8 @@ const Navbar: React.FC<NavProps> = ({
                           key={link.href}
                           active={
                             link.href === currentPath ||
-                            link.items?.find((item) => item.href === currentPath) !== undefined
+                            link.items?.find((item) => item.href === currentPath) !== undefined ||
+                            (link.label === t("Exchange") && exchangeActive)
                           }
                           onClick={handleClick}
                         >
@@ -196,7 +206,8 @@ const Navbar: React.FC<NavProps> = ({
                         key={link.href}
                         active={
                           link.href === currentPath ||
-                          link.items?.find((item) => item.href === currentPath) !== undefined
+                          link.items?.find((item) => item.href === currentPath) !== undefined ||
+                          (link.label === t("Exchange") && exchangeActive)
                         }
                         onClick={handleClick}
                       >
@@ -230,7 +241,7 @@ const Navbar: React.FC<NavProps> = ({
             sx={{
               alignItems: "center",
               position: "absolute",
-              right: "20px",
+              right: "20px"
             }}
           >
             {!isMobile && (

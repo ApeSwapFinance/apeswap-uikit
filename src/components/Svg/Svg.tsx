@@ -48,7 +48,7 @@ import {
   ZapArrow,
   ZapIcon,
   Migrate,
-  Positions
+  Positions,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -58,7 +58,7 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
     dynamicStyles.generic({
       degree,
       color,
-      margin
+      margin,
     });
   if (icon === icons.SUCCESS_OUTLINE) {
     return <SuccessOutline {...props} getStyles={getStyles} />;

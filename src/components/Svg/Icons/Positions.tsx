@@ -7,11 +7,11 @@ const Positions: React.FC<SvgProps> = ({ direction = "right", color = "text", wi
     left: 180,
     up: 270,
     right: 0,
-    down: 90
+    down: 90,
   };
   const style = getStyles({
     degree: deg[direction as keyof rotation],
-    color
+    color,
   });
 
   return (
