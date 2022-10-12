@@ -157,6 +157,13 @@ const Navbar: React.FC<NavProps> = ({
     setHoveredItem(label);
   };
 
+  const exchangeActive =
+    currentPath.includes("migrate") ||
+    currentPath.includes("/add-liquidity") ||
+    currentPath.includes("/liquidity") ||
+    currentPath.includes("/remove") ||
+    currentPath.includes("/unstake");
+
   return (
     <Wrapper>
       {!iframe && (
@@ -184,7 +191,8 @@ const Navbar: React.FC<NavProps> = ({
                           key={link.href}
                           active={
                             link.href === currentPath ||
-                            link.items?.find((item) => item.href === currentPath) !== undefined
+                            link.items?.find((item) => item.href === currentPath) !== undefined ||
+                            (link.label === t("Exchange") && exchangeActive)
                           }
                           onClick={handleClick}
                         >
@@ -196,7 +204,8 @@ const Navbar: React.FC<NavProps> = ({
                         key={link.href}
                         active={
                           link.href === currentPath ||
-                          link.items?.find((item) => item.href === currentPath) !== undefined
+                          link.items?.find((item) => item.href === currentPath) !== undefined ||
+                          (link.label === t("Exchange") && exchangeActive)
                         }
                         onClick={handleClick}
                       >
