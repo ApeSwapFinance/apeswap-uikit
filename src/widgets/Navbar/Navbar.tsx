@@ -21,6 +21,7 @@ import { GlowCircle } from "../../components/GlowCircle";
 import { RunFiatButton } from "../../components/RunFiatButton";
 import styles from "./styles";
 import LangSelectorButton from "../../components/LangSelectorButton/LangSelectorButton";
+import { Newsletter } from "../Newsletter";
 
 const Wrapper = styled.div`
   position: relative;
@@ -109,6 +110,7 @@ const Navbar: React.FC<NavProps> = ({
   liveResult,
   runFiat,
   iframe,
+  mailChimpUrl,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -288,6 +290,8 @@ const Navbar: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
+      {/* Should put Newsletter here -> isModal should be false */}
+      <Newsletter mailChimpUrl={mailChimpUrl} t={t} />
       {!iframe && (
         <Footer
           chainId={chainId}

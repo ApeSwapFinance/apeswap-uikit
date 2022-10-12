@@ -45,11 +45,13 @@ export const Connected: React.FC = (args: any) => {
       updated_at: "2022-04-12T14:20:12.100Z",
     },
   ][0].settings;
+  const mailchimpUrl = "https://finance.us10.list-manage.com/subscribe/post?u=27a3a0916491071a6c436c597&id=07fca3e316";
 
   return (
     <StorybookLayout {...args}>
       <BrowserRouter>
         <Navbar
+          mailChimpUrl={mailchimpUrl}
           account="0xbdda50183d817c3289f895a4472eb475967dc980"
           login={noop}
           logout={noop}
@@ -113,6 +115,7 @@ export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        mailChimpUrl=""
         uDName={undefined}
         account={undefined}
         login={noop}
@@ -205,6 +208,7 @@ export const WithNoProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        mailChimpUrl=""
         uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
@@ -267,6 +271,7 @@ export const WithProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
+        mailChimpUrl=""
         uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
