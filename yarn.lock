@@ -3699,6 +3699,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-mailchimp-subscribe@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/react-mailchimp-subscribe/-/react-mailchimp-subscribe-2.1.1.tgz#e42b6d84aab84881d0b0868667a6b9ba38059425"
+  integrity sha512-ic6ruLaDdlgwj94CeML/FGHiMacXB92bZbmJimNKVzrc147/hORPCy3nZ4MHGKBiZNVqi4NBmX1pN6i3Kbg1JA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-router-dom@^5.1.6":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.3.0.tgz#8c4e0aa0ccaf638ba965829ad29a10ac3cbe2212"

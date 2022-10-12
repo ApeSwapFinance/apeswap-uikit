@@ -8,7 +8,7 @@ import { Input } from "../../components/Input";
 import { TooltipBubble } from "../../components/TooltipBubble";
 import { useMatchBreakpoints } from "../../hooks";
 import { FormType } from "./types";
-import { styles, dynamicStyles } from "./styles";
+import { styles } from "./styles";
 
 const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isModal, t }) => {
   const { isMd, isLg, isXl, isXxl } = useMatchBreakpoints();

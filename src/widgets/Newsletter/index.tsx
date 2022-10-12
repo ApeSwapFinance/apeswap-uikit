@@ -1,2 +1,2 @@
 export { default as Newsletter } from "./Newsletter";
-export type { FormType, NewsletterProps, MCSubscribeProps } from "./types";
+export type { FormType, NewsletterProps } from "./types";
