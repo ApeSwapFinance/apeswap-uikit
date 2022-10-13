@@ -11,3 +11,7 @@ export interface NewsletterProps {
   mailChimpUrl: string;
   t: (text: string) => string;
 }
+
+export interface NewsModalProps extends NewsletterProps {
+  onDismiss?: () => void;
+}
