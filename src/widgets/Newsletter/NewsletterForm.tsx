@@ -31,6 +31,8 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
     }
   };
 
+  // On route change, reset input, status and message to ""
+
   return (
     <Flex
       sx={{
@@ -40,6 +42,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
         // padding: [(!isModal && "15px") || "", "", "20px"],
         margin: 0,
         paddingBottom: 0,
+        padding: ["", "", "", isModal && "20px"],
         alignItems: [isModal && "center", isModal && "center", isModal && "center", "center"],
         justifyContent: [(!isModal && "flex-start") || "", "", "center"],
         background: !isModal && "white2",
@@ -67,7 +70,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
         <Flex
           sx={{
             width: ["100%", !isModal && "90%"],
-            justifyContent: "space-between",
+            justifyContent: ["space-between", "", "", !isModal && "flex-start"],
             gap: !isModal && ["10px", "20px", "50px"],
             alignItems: [(!isModal && "flex-start") || "", "", ""],
             flexDirection: ["column", (isModal && "column") || "row"],
@@ -78,22 +81,24 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
             sx={{
               flexDirection: "column",
               mr: [0, 0, 0, 0, "82px"],
-              width: ["100%"],
+              width: ["100%", "", "", !isModal && "45%"],
+              marginTop: [isModal && "10px", isModal && "10px", 0],
             }}
           >
             <Text
               sx={{
                 fontWeight: 700,
-                fontSize: ["16px", "16px", isModal && "25px"],
+                fontSize: [(isModal && "18px") || "16px", (isModal && "20px") || "16px", isModal && "25px"],
                 lineHeight: ["24px", "24px", isModal && "28px"],
               }}
             >
-              Get the latest news from {isModal && (!isMobile || !isMd) && <br />} ApeSwap directly to your inbox.
+              Get the latest news from ApeSwap directly to your{isModal && isMd && <br />} inbox.
             </Text>
             {!isModal && (
               <Flex
                 sx={{
                   alignSelf: "flex-start",
+                  alignItems: "center",
                   marginTop: (isModal && "10px") || "5px",
                   ":hover": {
                     cursor: "pointer",
@@ -123,7 +128,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
           <Flex
             sx={{
               flexDirection: "column",
-              width: ["100%"],
+              width: ["100%", "", "", !isModal && "40%"],
             }}
           >
             <Flex
@@ -133,7 +138,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
               sx={{
                 ...styles.form,
                 width: "100%",
-                marginTop: [isModal && "10px", "", isModal && "20px"],
+                marginTop: [isModal && "20px", "", isModal && "20px"],
               }}
             >
               <Flex sx={{ alignItems: "center" }}>
@@ -148,17 +153,20 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
                     border: "none",
                     paddingRight: "5px",
                     width: [
-                      (isModal && "190px") || "240px",
-                      (isModal && "230px") || "290px",
-                      (isModal && "270px") || "",
+                      (isModal && "190px") || "230px",
+                      (isModal && "230px") || "280px",
+                      (isModal && "270px") || (isLg && "224px") || (isXl && "245px"),
                     ],
                     paddingLeft: "10px",
                     "@media screen and (min-width: 425px) and (max-width: 768px)": {
-                      width: (isModal && "230px") || (!isModal && ((isMd && "225px") || (isXl && "310px"))) || "290px",
+                      width:
+                        (isModal && "230px") ||
+                        (!isModal && ((isMd && "212px") || (isLg && "224px") || (isXl && "245px"))) ||
+                        "280px",
                     },
                     "@media screen and (max-width: 320px)": {
                       paddingLeft: "5px",
-                      width: (isModal && "140px") || "185px",
+                      width: (isModal && "140px") || "173px",
                     },
                     "::placeholder": {
                       opacity: (status === "success" && 0.8) || 0.5,
@@ -182,17 +190,18 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
                 {status === "sending" ? "..." : <ChevronRightIcon sx={{ width: "40px" }} />}
               </Button>
             </Flex>
-            {/* {status === "error" && ( */}
+            {status === "error" && (
               <Text color="error" sx={{ ...styles.status, width: "100%" }}>
                 {t("Invalid email address. Make sure the format is 'email@domain.com'")}
               </Text>
-            {/* )} */}
+            )}
           </Flex>
           {isModal && (
             <Flex
               sx={{
                 alignSelf: "flex-start",
-                marginTop: status === "error" && "10px",
+                alignItems: "center",
+                marginTop: (status === "error" && "10px") || (isModal && "5px"),
                 ":hover": {
                   cursor: "pointer",
                 },

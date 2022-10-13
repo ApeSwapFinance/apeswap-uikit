@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import React  from "react";
+import React from "react";
 import { Button } from "../../components/Button";
 import { Flex } from "../../components/Flex";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
@@ -19,24 +19,22 @@ export default {
 
 const translate: (key: string) => string = (key) => key;
 
+const mcLink = "";
+
 export const Default = (args: any) => {
-  const { onPresentNewsModal } = useNewsModal(
-    ""
-  , translate);
+  const { onPresentNewsModal } = useNewsModal(mcLink, translate);
+
 
   return (
     <StorybookLayout {...args}>
       <Flex sx={{ paddingTop: 17, flexDirection: "column" }}>
         <Button onClick={onPresentNewsModal}>Open Modal</Button>
-        <Newsletter
-          mailChimpUrl=""
-          t={translate}
-        />
+        <Newsletter mailChimpUrl={mcLink} t={translate} />
       </Flex>
     </StorybookLayout>
   );
-}
+};
 
 Default.args = {
   colorMode: "light",
-}
+};

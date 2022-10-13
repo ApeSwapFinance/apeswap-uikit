@@ -5,7 +5,7 @@ export const modalProps = {
     minWidth: ["90%", "50%", "800px"],
     width: ["200px"],
     maxWidth: "800px",
-    height: ["calc(100vh - 15%)", "auto"],
+    height: ["500px", "500px", "auto"],
   },
 };
 
@@ -37,9 +37,10 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     zIndex: 1,
   },
   status: {
-    mt: "10px",
+    mt: "5px",
     fontWeight: "normal",
     fontSize: "12px",
+    lineHeight: "16px",
   },
 
   modalBody: {
@@ -50,12 +51,9 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   },
   showApe: {
     alignSelf: ["center", "center", ""],
-    width: ["280px", "280px", "46%"],
-    height: ["280px", "280px", "400px"],
-    "@media screen and (max-width: 320px)": {
-      width: "240px",
-      height: "240px",
-    },
+    width: ["230px", "230px", "46%"],
+    height: ["230px", "230px", "400px"],
+    marginTop: "-20px",
     background: `url(images/marketing-modals/emailApe.svg)`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
