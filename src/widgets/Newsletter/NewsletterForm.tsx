@@ -2,7 +2,7 @@
 import React, { useState, ChangeEvent } from "react";
 import { Text } from "../../components/Text";
 import { Flex } from "../../components/Flex";
-import { Svg, ChevronRightIcon } from "../../components/Svg";
+import { Svg, ChevronRightIcon, HelpIcon } from "../../components/Svg";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { TooltipBubble } from "../../components/TooltipBubble";
@@ -119,7 +119,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
                   transformTip="translate(-8%, 0%)"
                   width="260px"
                 >
-                  <Svg icon="question" width="10px" />
+                  <HelpIcon width={isMobile ? "12px" : "14px"} />
                 </TooltipBubble>
               </Flex>
             )}
@@ -221,7 +221,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
                 transformTip="translate(-8%, 0%)"
                 width="260px"
               >
-                <Svg icon="question" width="10px" />
+                <HelpIcon width={isMobile ? "12px" : "14px"} />
               </TooltipBubble>
             </Flex>
           )}

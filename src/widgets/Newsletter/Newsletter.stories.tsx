@@ -24,10 +24,9 @@ const mcLink = "";
 export const Default = (args: any) => {
   const { onPresentNewsModal } = useNewsModal(mcLink, translate);
 
-
   return (
     <StorybookLayout {...args}>
-      <Flex sx={{ paddingTop: 17, flexDirection: "column" }}>
+      <Flex sx={{ paddingTop: 17, flexDirection: "column", gap: "20px" }}>
         <Button onClick={onPresentNewsModal}>Open Modal</Button>
         <Newsletter mailChimpUrl={mcLink} t={translate} />
       </Flex>
