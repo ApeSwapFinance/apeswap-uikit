@@ -57,7 +57,7 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
           px: !isModal && (isMobile || isMd) && "20px",
           "@media screen and (min-width: 2000px)": {
             justifyContent: !isModal && "center",
-          }
+          },
         }}
       >
         <Flex
