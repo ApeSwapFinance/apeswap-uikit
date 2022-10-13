@@ -564,10 +564,10 @@ it("renders correctly", () => {
           class="css-1n918su-NewsletterForm"
         >
           <div
-            class="css-70fk83-NewsletterForm"
+            class="css-lpoqhv-NewsletterForm"
           >
             <div
-              class="css-t76wvi-NewsletterForm"
+              class="css-aps2qx-NewsletterForm"
             >
               <div
                 class="css-sq6l7q-NewsletterForm"
@@ -593,10 +593,10 @@ it("renders correctly", () => {
                     class="css-14rwn71"
                   >
                     <div
-                      class="css-j3cjon"
+                      class="css-1pzaosa"
                     >
                       <div
-                        class="css-1329jds"
+                        class="css-1tfrp7g"
                       >
                         <span
                           class="css-175enzh"
@@ -620,7 +620,7 @@ it("renders correctly", () => {
                 </div>
               </div>
               <div
-                class="css-19w90tn-NewsletterForm"
+                class="css-4y8jh-NewsletterForm"
               >
                 <form
                   class="input-form-container css-1886h98-NewsletterForm"

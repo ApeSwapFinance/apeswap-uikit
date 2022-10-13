@@ -39,7 +39,6 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
         marginTop: isModal && isMobile && "25px",
         height: isModal && !isMobile && "350px",
         width: ["100%", "100%", (isModal && "60%") || "100%"],
-        // padding: [(!isModal && "15px") || "", "", "20px"],
         margin: 0,
         paddingBottom: 0,
         padding: ["", "", "", isModal && "20px"],
@@ -49,28 +48,22 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
         flexDirection: status === "error" && "column",
       }}
     >
-      {/* display border -> !isModal, borderWidth -> !isModal && !isMobile && "80%" => else "100%" */}
-      {/*
-        320 -> 150px,
-        375 -> 210px,
-        425 -> 260px,
-        768 -> 203px,
-        1024 -> 195px,
-        1440 -> 260px 
-      */}
       <Flex
         sx={{
-          width: (!isModal && !isMobile && "80%") || "100%",
+          width: "100%",
           borderTop: !isModal && "5px solid",
           borderTopColor: "white3",
           py: !isModal && "15px",
           px: !isModal && (isMobile || isMd) && "20px",
+          "@media screen and (min-width: 2000px)": {
+            justifyContent: !isModal && "center",
+          }
         }}
       >
         <Flex
           sx={{
             width: ["100%", !isModal && "90%"],
-            justifyContent: ["space-between", "", "", !isModal && "flex-start"],
+            justifyContent: ["space-between", "", "", !isModal && "center"],
             gap: !isModal && ["10px", "20px", "50px"],
             alignItems: [(!isModal && "flex-start") || "", "", ""],
             flexDirection: ["column", (isModal && "column") || "row"],
@@ -109,15 +102,15 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
                   <Text sx={styles.privacyLink}>{t("We respect your privacy")}</Text>
                 </a>
                 <TooltipBubble
-                  placement="topLeft"
+                  placement={(isMobile && !isMd && "topRight") || "topLeft"}
                   body={
                     <Text>
                       ApeSwap will only use your email address for the sole purpose of marketing newsletters. Your
                       personal information will not be shared with any third party.
                     </Text>
                   }
-                  transformTip="translate(-8%, 0%)"
-                  width="260px"
+                  transformTip={(isMobile && !isMd && "translate(12%, 0)") || "translate(-6%, 0%)"}
+                  width={(isMobile && !isMd && "200px") || "260px"}
                 >
                   <HelpIcon width={isMobile ? "12px" : "14px"} />
                 </TooltipBubble>
@@ -129,6 +122,9 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
             sx={{
               flexDirection: "column",
               width: ["100%", "", "", !isModal && "40%"],
+              "@media screen and (min-width: 1300px)": {
+                width: !isModal && "35%",
+              },
             }}
           >
             <Flex
@@ -211,15 +207,15 @@ const NewsletterForm: React.FC<FormType> = ({ status, message, onValidated, isMo
                 <Text sx={styles.privacyLink}>{t("We respect your privacy")}</Text>
               </a>
               <TooltipBubble
-                placement="topLeft"
+                placement={(isMobile && !isMd && "topRight") || "topLeft"}
                 body={
                   <Text>
                     ApeSwap will only use your email address for the sole purpose of marketing newsletters. Your
                     personal information will not be shared with any third party.
                   </Text>
                 }
-                transformTip="translate(-8%, 0%)"
-                width="260px"
+                transformTip={(isMobile && !isMd && "translate(12%, 0)") || "translate(-6%, 0%)"}
+                width={(isMobile && !isMd && "200px") || "260px"}
               >
                 <HelpIcon width={isMobile ? "12px" : "14px"} />
               </TooltipBubble>
