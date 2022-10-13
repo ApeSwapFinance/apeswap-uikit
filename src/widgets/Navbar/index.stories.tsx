@@ -50,7 +50,7 @@ export const Connected: React.FC = (args: any) => {
     <StorybookLayout {...args}>
       <BrowserRouter>
         <Navbar
-          mailChimpUrl="https://finance.us10.list-manage.com/subscribe/post?u=27a3a0916491071a6c436c597&07fca3e316"
+          mailChimpUrl=""
           account="0xbdda50183d817c3289f895a4472eb475967dc980"
           login={noop}
           logout={noop}

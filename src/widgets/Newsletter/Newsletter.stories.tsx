@@ -18,7 +18,6 @@ export default {
 };
 
 const translate: (key: string) => string = (key) => key;
-
 const mcLink = "";
 
 export const Default = (args: any) => {

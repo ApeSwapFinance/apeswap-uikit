@@ -564,7 +564,7 @@ it("renders correctly", () => {
           class="css-1n918su-NewsletterForm"
         >
           <div
-            class="css-lpoqhv-NewsletterForm"
+            class="css-9qge6d-NewsletterForm"
           >
             <div
               class="css-aps2qx-NewsletterForm"
