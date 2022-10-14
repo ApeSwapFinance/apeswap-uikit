@@ -28,6 +28,7 @@ const track: TrackHandler =
   // eslint-disable-next-line no-empty-pattern
   ({}: TrackProps) =>
   () => ({});
+const mcLink = "";
 
 export const Connected: React.FC = (args: any) => {
   const [currentLang, setCurrentLang] = useState("English1");
@@ -50,7 +51,7 @@ export const Connected: React.FC = (args: any) => {
     <StorybookLayout {...args}>
       <BrowserRouter>
         <Navbar
-          mailChimpUrl=""
+          mailChimpUrl={mcLink}
           account="0xbdda50183d817c3289f895a4472eb475967dc980"
           login={noop}
           logout={noop}
@@ -114,7 +115,7 @@ export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
-        mailChimpUrl=""
+        mailChimpUrl={mcLink}
         uDName={undefined}
         account={undefined}
         login={noop}
@@ -207,7 +208,7 @@ export const WithNoProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
-        mailChimpUrl=""
+        mailChimpUrl={mcLink}
         uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
@@ -270,7 +271,7 @@ export const WithProfile: React.FC = () => {
   return (
     <BrowserRouter>
       <Navbar
-        mailChimpUrl=""
+        mailChimpUrl={mcLink}
         uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
