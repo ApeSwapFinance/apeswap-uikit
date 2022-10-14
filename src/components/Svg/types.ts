@@ -40,6 +40,7 @@ export enum icons {
   ETH_TOKEN = "eth_token",
   GNANA_TOKEN = "gnana_token",
   POLYGON_TOKEN = "polygon_token",
+  TLOS_TOKEN = "tlos_token",
   BSC_TOKEN = "bsc_token",
   DISCORD = "discord",
   REDDIT = "reddit",
