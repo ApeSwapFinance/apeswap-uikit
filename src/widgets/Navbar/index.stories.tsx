@@ -27,6 +27,7 @@ const translate: (key: string) => string = (key) => key;
 const track: TrackHandler =
   // eslint-disable-next-line no-empty-pattern
 
+
     ({}: TrackProps) =>
     () => ({});
 
