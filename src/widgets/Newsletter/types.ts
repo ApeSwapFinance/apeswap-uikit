@@ -15,3 +15,8 @@ export interface NewsletterProps {
 export interface NewsModalProps extends NewsletterProps {
   onDismiss?: () => void;
 }
+
+export interface PrivacyProps {
+  isModal?: boolean;
+  t: (text: string) => string;
+}

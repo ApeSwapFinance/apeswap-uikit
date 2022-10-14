@@ -578,7 +578,7 @@ it("renders correctly", () => {
                   Get the latest news from ApeSwap directly to your inbox.
                 </span>
                 <div
-                  class="css-yjd025-NewsletterForm"
+                  class="css-1elffif-Privacy"
                 >
                   <a
                     href="https://apeswap.finance/privacy"
@@ -586,7 +586,7 @@ it("renders correctly", () => {
                     target="_blank"
                   >
                     <span
-                      class="css-1g97aoo-NewsletterForm"
+                      class="css-md7liq-Privacy"
                     />
                   </a>
                   <div
