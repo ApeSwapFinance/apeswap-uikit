@@ -5,7 +5,7 @@ export const supportLinks = [
   },
   {
     label: "Discord",
-    href: "https://discord.com/invite/ApeSwap",
+    href: "https://discord.com/invite/ApeSwapOfficial",
   },
   {
     label: "Tokenomics",

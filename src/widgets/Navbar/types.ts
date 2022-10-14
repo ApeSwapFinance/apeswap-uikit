@@ -69,14 +69,15 @@ export interface LiveResultProps {
 export interface NavProps extends PanelProps {
   account?: string;
   login: Login;
-  profile?: Profile;
   logout: () => void;
   chainId: number;
   switchNetwork: SwitchNetwork;
-  track?: TrackHandler;
-  liveResult?: LiveResultProps["apiResult"] | undefined;
   t: (text: string) => string;
   runFiat: () => void;
-  uDName?: string;
   iframe: boolean;
+  mailChimpUrl: string;
+  profile?: Profile;
+  track?: TrackHandler;
+  uDName?: string;
+  liveResult?: LiveResultProps["apiResult"] | undefined;
 }

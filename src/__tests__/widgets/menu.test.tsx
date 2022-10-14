@@ -28,6 +28,7 @@ it("renders correctly", () => {
   const { asFragment } = renderWithTheme(
     <BrowserRouter>
       <Navbar
+        mailChimpUrl=""
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
@@ -560,6 +561,120 @@ it("renders correctly", () => {
           />
         </div>
         <div
+          class="css-1n918su-NewsletterForm"
+        >
+          <div
+            class="css-9qge6d-NewsletterForm"
+          >
+            <div
+              class="css-aps2qx-NewsletterForm"
+            >
+              <div
+                class="css-sq6l7q-NewsletterForm"
+              >
+                <span
+                  class="css-1pm0o15-NewsletterForm"
+                >
+                  Get the latest news from ApeSwap directly to your inbox.
+                </span>
+                <div
+                  class="css-1elffif-Privacy"
+                >
+                  <a
+                    href="https://apeswap.finance/privacy"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span
+                      class="css-md7liq-Privacy"
+                    />
+                  </a>
+                  <div
+                    class="css-14rwn71"
+                  >
+                    <div
+                      class="css-1pzaosa"
+                    >
+                      <div
+                        class="css-1tfrp7g"
+                      >
+                        <span
+                          class="css-175enzh"
+                        >
+                          ApeSwap will only use your email address for the sole purpose of marketing newsletters. Your personal information will not be shared with any third party.
+                        </span>
+                      </div>
+                    </div>
+                    <svg
+                      class="sc-gsTEea fQWPxo"
+                      color="text"
+                      viewBox="0 0 20 20"
+                      width="12px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM9 14H11V16H9V14ZM10.61 4.04C8.55 3.74 6.73 5.01 6.18 6.83C6 7.41 6.44 8 7.05 8H7.25C7.66 8 7.99 7.71 8.13 7.33C8.45 6.44 9.4 5.83 10.43 6.05C11.38 6.25 12.08 7.18 12 8.15C11.9 9.49 10.38 9.78 9.55 11.03C9.55 11.04 9.54 11.04 9.54 11.05C9.53 11.07 9.52 11.08 9.51 11.1C9.42 11.25 9.33 11.42 9.26 11.6C9.25 11.63 9.23 11.65 9.22 11.68C9.21 11.7 9.21 11.72 9.2 11.75C9.08 12.09 9 12.5 9 13H11C11 12.58 11.11 12.23 11.28 11.93C11.3 11.9 11.31 11.87 11.33 11.84C11.41 11.7 11.51 11.57 11.61 11.45C11.62 11.44 11.63 11.42 11.64 11.41C11.74 11.29 11.85 11.18 11.97 11.07C12.93 10.16 14.23 9.42 13.96 7.51C13.72 5.77 12.35 4.3 10.61 4.04Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="css-4y8jh-NewsletterForm"
+              >
+                <form
+                  class="input-form-container css-1886h98-NewsletterForm"
+                >
+                  <div
+                    class="css-6cygy3-NewsletterForm"
+                  >
+                    <svg
+                      class="css-1lgtnpr-Message"
+                      fill="none"
+                      height="20"
+                      viewBox="0 0 25 20"
+                      width="25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.76146 20C1.99765 20 1.34646 19.7347 0.807873 19.2041C0.269291 18.6734 0 18.0318 0 17.2793V2.74964C0 1.99711 0.269291 1.3507 0.807873 0.81042C1.34646 0.27014 1.99765 0 2.76146 0H22.2092C22.973 0 23.6291 0.27014 24.1774 0.81042C24.7258 1.3507 25 1.99711 25 2.74964V17.2793C25 18.0318 24.7258 18.6734 24.1774 19.2041C23.6291 19.7347 22.973 20 22.2092 20H2.76146ZM12.4853 11.879L2.76146 5.5794V17.2793H22.2092V5.5794L12.4853 11.879ZM12.4853 9.05934L22.0917 2.74964H2.90834L12.4853 9.05934ZM2.76146 5.5794V2.74964V17.2793V5.5794Z"
+                        fill="#4D4040"
+                      />
+                    </svg>
+                    <div
+                      class="css-1u137ur"
+                    >
+                      <input
+                        class="input css-y01sy6-NewsletterForm"
+                        name="EMAIL"
+                        placeholder="example@domain.com"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="input-btn css-1jj7t0h-NewsletterForm"
+                    type="submit"
+                  >
+                    <svg
+                      class="sc-gsTEea fQWPxo css-1nwgdzc-NewsletterForm"
+                      color="text"
+                      viewBox="0 0 24 24"
+                      width="20px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.29006 15.88L13.1701 12L9.29006 8.12001C8.90006 7.73001 8.90006 7.10001 9.29006 6.71001C9.68006 6.32001 10.3101 6.32001 10.7001 6.71001L15.2901 11.3C15.6801 11.69 15.6801 12.32 15.2901 12.71L10.7001 17.3C10.3101 17.69 9.68006 17.69 9.29006 17.3C8.91006 16.91 8.90006 16.27 9.29006 15.88Z"
+                      />
+                    </svg>
+                     
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
           class="sc-bqyKOL dxNQRP"
         >
           <div
@@ -844,7 +959,7 @@ it("renders correctly", () => {
                 </a>
                 <a
                   class="sc-dmlqKv hsLGOY"
-                  href="https://discord.com/invite/ApeSwap"
+                  href="https://discord.com/invite/ApeSwapOfficial"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
