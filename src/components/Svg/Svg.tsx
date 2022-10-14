@@ -48,6 +48,7 @@ import {
   ZapArrow,
   ZapIcon,
   Migrate,
+  Message,
   Positions,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON } from "./tokens";
@@ -212,6 +213,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.MIGRATE) {
     return <Migrate {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.MESSAGE) {
+    return <Message {...props} getStyles={getStyles} />;
   }
   if (icon === icons.POSITIONS) {
     return <Positions {...props} getStyles={getStyles} />;

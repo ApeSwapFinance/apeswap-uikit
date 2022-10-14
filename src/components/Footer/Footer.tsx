@@ -243,7 +243,6 @@ const Footer: React.FC<FooterProps> = ({
           )}
         </FlexContainer>
         <PeakingMonkey />
-        {/* <AllRightsReserved>©2022 All rights reserved</AllRightsReserved> */}
         <Flex
           sx={{
             position: "absolute",
