@@ -156,7 +156,7 @@ const SubNavbar: React.FC<SubNavbarProps> = ({
                 color="white3"
                 fill={iconFillColor}
                 onClick={() =>
-                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwapOfficial")
+                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
                 }
               />
             </StyledLink>
