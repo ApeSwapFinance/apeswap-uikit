@@ -119,7 +119,6 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     borderRadius: "10px",
     alignItems: "center",
     justifyContent: "center",
-    zIndex: 1,
   },
   status: {
     mt: "5px",

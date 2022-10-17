@@ -48,7 +48,7 @@ const Dropdown: React.FC<DropdownProps> = ({ component, children, size = sizes.M
               borderBottomRightRadius: "10px",
               borderBottomLeftRadius: "10px",
               overflow: "hidden",
-              paddingTop: "5px",
+              marginTop: "5px",
               top: "85%",
             }}
           >
