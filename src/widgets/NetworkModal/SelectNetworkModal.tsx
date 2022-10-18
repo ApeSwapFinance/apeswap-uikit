@@ -1,4 +1,5 @@
 import React from "react";
+import { partition } from "lodash";
 import { Modal, ModalHeader } from "../Modal";
 import { SwitchNetwork } from "./types";
 import { Heading } from "../../components/Heading";
@@ -15,29 +16,33 @@ interface Props {
   onDismiss?: () => void;
 }
 
-const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss }) => (
-  <Modal maxWidth="350px" minWidth="350px" onDismiss={onDismiss}>
-    <ModalHeader>
-      <Heading as="h4">{t("Network")}</Heading>
-    </ModalHeader>
-    {networks.map((network) => (
-      <NetworkCard networkConfig={network} chainId={chainId} switchNetwork={switchNetwork} key={network.chainId} />
-    ))}
-    <Flex sx={styles.bridge}>
-      <a
-        href="https://app.multichain.org/#/router"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          marginRight: "3px",
-        }}
-      >
-        {t("Bridge Tokens")}
-      </a>
-      <Svg icon="caret" width="6px" direction="right" />
-    </Flex>
-  </Modal>
-);
+const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss }) => {
+  const [selectedNetwork, networkList] = partition(networks, (network) => network.chainId === chainId);
+  return (
+    <Modal maxWidth="350px" minWidth="350px" onDismiss={onDismiss}>
+      <ModalHeader>
+        <Heading as="h4">{t("Network")}</Heading>
+      </ModalHeader>
+      <NetworkCard networkConfig={selectedNetwork[0]} chainId={chainId} switchNetwork={switchNetwork} />
+      {networkList.map((network) => (
+        <NetworkCard networkConfig={network} chainId={chainId} switchNetwork={switchNetwork} key={network.chainId} />
+      ))}
+      <Flex sx={styles.bridge}>
+        <a
+          href="https://app.multichain.org/#/router"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            marginRight: "3px",
+          }}
+        >
+          {t("Bridge Tokens")}
+        </a>
+        <Svg icon="caret" width="6px" direction="right" />
+      </Flex>
+    </Modal>
+  );
+};
 
 SelectNetworkModal.defaultProps = {
   onDismiss: () => null,

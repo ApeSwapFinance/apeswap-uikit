@@ -44,16 +44,16 @@ const networks: Config[] = [
     icon: NETWORK_ICON[ChainId.MATIC],
   },
   {
-    chainId: ChainId.ETH,
-    networkName: "Ethereum",
-    symbol: NETWORK_LABEL[ChainId.ETH],
-    icon: NETWORK_ICON[ChainId.ETH],
-  },
-  {
     chainId: ChainId.TLOS,
     networkName: "Telos",
     symbol: NETWORK_LABEL[ChainId.TLOS],
     icon: NETWORK_ICON[ChainId.TLOS],
+  },
+  {
+    chainId: ChainId.ETH,
+    networkName: "Ethereum",
+    symbol: NETWORK_LABEL[ChainId.ETH],
+    icon: NETWORK_ICON[ChainId.ETH],
   },
 ];
 
