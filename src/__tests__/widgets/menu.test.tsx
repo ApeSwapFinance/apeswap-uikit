@@ -959,7 +959,7 @@ it("renders correctly", () => {
                 </a>
                 <a
                   class="sc-dmlqKv hsLGOY"
-                  href="https://discord.com/invite/ApeSwapOfficial"
+                  href="https://discord.gg/apeswap"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
