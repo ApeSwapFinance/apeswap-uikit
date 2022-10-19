@@ -151,13 +151,11 @@ const SubNavbar: React.FC<SubNavbarProps> = ({
                 onClick={() => trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
               />
             </StyledLink>
-            <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+            <StyledLink href="https://discord.gg/apeswap" target="_blank" rel="noopener noreferrer">
               <DiscordIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() =>
-                  trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwapOfficial")
-                }
+                onClick={() => trackClick(track, event, position, chainId, "discord", "https://discord.gg/apeswap")}
               />
             </StyledLink>
           </Flex>
