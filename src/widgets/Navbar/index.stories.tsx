@@ -116,6 +116,7 @@ export const NotConnected: React.FC = () => {
     <BrowserRouter>
       <Navbar
         mailChimpUrl={mcLink}
+        sidName={undefined}
         uDName={undefined}
         account={undefined}
         login={noop}
@@ -209,7 +210,8 @@ export const WithNoProfile: React.FC = () => {
     <BrowserRouter>
       <Navbar
         mailChimpUrl={mcLink}
-        uDName="babadrape64.wallet"
+        sidName="bbdrape.bnb"
+        uDName={undefined}
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
@@ -272,6 +274,7 @@ export const WithProfile: React.FC = () => {
     <BrowserRouter>
       <Navbar
         mailChimpUrl={mcLink}
+        sidName="bbdrape.bnb"
         uDName="babadrape64.wallet"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
@@ -289,7 +292,7 @@ export const WithProfile: React.FC = () => {
           name: "apeswap",
           image: "https://raw.githubusercontent.com/ApeSwapFinance/non-fungible-apes/main/images/4.png",
           profileLink: "/profile",
-          noProfileLink: "/no-profile"
+          noProfileLink: "/no-profile",
         }}
         liveResult={navbarApiResult}
         track={track}

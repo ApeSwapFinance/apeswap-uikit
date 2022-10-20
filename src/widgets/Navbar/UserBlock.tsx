@@ -7,22 +7,23 @@ import { dynamicStyles } from "./styles";
 import { Text } from "../../components/Text";
 
 interface Props {
-  account?: string | undefined;
-  uDName?: string | undefined;
+  account?: string;
+  uDName?: string;
+  sidName?: string;
   login: Login;
   logout: () => void;
   t: (key: string) => string;
 }
 
-const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, t, account, uDName);
+const UserBlock: React.FC<Props> = ({ sidName, uDName, account, login, logout, t }) => {
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, t, account, uDName, sidName);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { isXs } = useMatchBreakpoints();
 
-  const buttonStyle = dynamicStyles.userBlockBtn({ account, uDName });
+  const buttonStyle = dynamicStyles.userBlockBtn({ account, uDName, sidName });
 
   const loadButton = () => {
-    if (uDName || account) {
+    if (uDName || sidName || account) {
       if (isXs) {
         return (
           <Button
@@ -33,9 +34,9 @@ const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
             onClick={() => {
               onPresentAccountModal();
             }}
-            account={uDName || account}
+            account={uDName || sidName || account}
           >
-            <Text weight="normal">{uDName || accountEllipsis}</Text>
+            <Text weight="normal">{uDName || sidName || accountEllipsis}</Text>
           </Button>
         );
       }
@@ -48,9 +49,9 @@ const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
           onClick={() => {
             onPresentAccountModal();
           }}
-          account={uDName || account}
+          account={uDName || sidName || account}
         >
-          <Text weight="normal">{uDName || accountEllipsis}</Text>
+          <Text weight="normal">{uDName || sidName || accountEllipsis}</Text>
         </Button>
       );
     }
@@ -62,7 +63,7 @@ const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
         onClick={() => {
           onPresentConnectModal();
         }}
-        account={uDName || account}
+        account={uDName || sidName || account}
       >
         {t("Connect")}
       </Button>
@@ -73,8 +74,9 @@ const UserBlock: React.FC<Props> = ({ uDName, account, login, logout, t }) => {
 };
 
 UserBlock.defaultProps = {
-  account: "",
-  uDName: "",
+  account: undefined,
+  uDName: undefined,
+  sidName: undefined,
 };
 
 export default UserBlock;
