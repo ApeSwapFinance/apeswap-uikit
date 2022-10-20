@@ -426,7 +426,7 @@ it("renders correctly", () => {
                   </a>
                   <a
                     class="sc-kLgnNl iobZJR"
-                    href="https://t.me/ape_swap"
+                    href="https://discord.gg/apeswap"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -642,7 +642,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <div
-                      class="css-1u137ur"
+                      class="css-r8xm40"
                     >
                       <input
                         class="input css-y01sy6-NewsletterForm"
@@ -653,7 +653,7 @@ it("renders correctly", () => {
                     </div>
                   </div>
                   <button
-                    class="input-btn css-1jj7t0h-NewsletterForm"
+                    class="input-btn css-ya9p4b-NewsletterForm"
                     type="submit"
                   >
                     <svg
@@ -959,7 +959,7 @@ it("renders correctly", () => {
                 </a>
                 <a
                   class="sc-dmlqKv hsLGOY"
-                  href="https://discord.com/invite/ApeSwap"
+                  href="https://discord.gg/apeswap"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
