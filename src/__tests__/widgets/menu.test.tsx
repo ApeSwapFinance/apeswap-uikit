@@ -29,6 +29,8 @@ it("renders correctly", () => {
     <BrowserRouter>
       <Navbar
         mailChimpUrl=""
+        uDName="babadrape64.wallet"
+        sidName="bbdrape.bnb"
         account="0xbdda50183d817c3289f895a4472eb475967dc980"
         login={noop}
         logout={noop}
