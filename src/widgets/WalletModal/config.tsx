@@ -12,6 +12,7 @@ import TorusWallet from "./icons/SocialLogin";
 import Coinbase from "./icons/Coinbase";
 import Unstoppable from "./icons/Unstoppable";
 import Bitkeep from "./icons/Bitkeep";
+import Blocto from "./icons/Blocto";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -57,7 +58,7 @@ const connectors: Config[] = [
   },
   {
     title: "Blocto",
-    icon: Coinbase,
+    icon: Blocto,
     connectorId: ConnectorNames.Blocto,
   },
   {
