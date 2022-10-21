@@ -21,6 +21,7 @@ import { GlowCircle } from "../../components/GlowCircle";
 import { RunFiatButton } from "../../components/RunFiatButton";
 import styles from "./styles";
 import LangSelectorButton from "../../components/LangSelectorButton/LangSelectorButton";
+import { Newsletter } from "../Newsletter";
 
 const Wrapper = styled.div`
   position: relative;
@@ -109,6 +110,7 @@ const Navbar: React.FC<NavProps> = ({
   liveResult,
   runFiat,
   iframe,
+  mailChimpUrl,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -157,6 +159,13 @@ const Navbar: React.FC<NavProps> = ({
     setHoveredItem(label);
   };
 
+  const exchangeActive =
+    currentPath.includes("migrate") ||
+    currentPath.includes("/add-liquidity") ||
+    currentPath.includes("/liquidity") ||
+    currentPath.includes("/remove") ||
+    currentPath.includes("/unstake");
+
   return (
     <Wrapper>
       {!iframe && (
@@ -184,7 +193,8 @@ const Navbar: React.FC<NavProps> = ({
                           key={link.href}
                           active={
                             link.href === currentPath ||
-                            link.items?.find((item) => item.href === currentPath) !== undefined
+                            link.items?.find((item) => item.href === currentPath) !== undefined ||
+                            (link.label === t("Exchange") && exchangeActive)
                           }
                           onClick={handleClick}
                         >
@@ -196,7 +206,8 @@ const Navbar: React.FC<NavProps> = ({
                         key={link.href}
                         active={
                           link.href === currentPath ||
-                          link.items?.find((item) => item.href === currentPath) !== undefined
+                          link.items?.find((item) => item.href === currentPath) !== undefined ||
+                          (link.label === t("Exchange") && exchangeActive)
                         }
                         onClick={handleClick}
                       >
@@ -288,6 +299,8 @@ const Navbar: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
+      {/* Should put Newsletter here -> isModal should be false */}
+      <Newsletter mailChimpUrl={mailChimpUrl} t={t} />
       {!iframe && (
         <Footer
           chainId={chainId}

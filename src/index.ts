@@ -39,6 +39,7 @@ export * from "./widgets/WalletModal";
 export * from "./widgets/NetworkModal";
 export * from "./widgets/MarketingModal";
 export { default as useLanguageModal } from "./widgets/LanguageModal/useLanguageModal";
+export * from "./widgets/Newsletter";
 
 // Theme
 export { default as ResetCSS } from "./ResetCSS";

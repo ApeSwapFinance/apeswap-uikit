@@ -40,6 +40,7 @@ export enum icons {
   ETH_TOKEN = "eth_token",
   GNANA_TOKEN = "gnana_token",
   POLYGON_TOKEN = "polygon_token",
+  TLOS_TOKEN = "tlos_token",
   BSC_TOKEN = "bsc_token",
   DISCORD = "discord",
   REDDIT = "reddit",
@@ -56,6 +57,8 @@ export enum icons {
   ZAP_ARROW = "ZapArrow",
   ZAP_ICON = "ZapIcon",
   MIGRATE = "Migrate",
+  MESSAGE = "message",
+  POSITIONS = "Positions",
 }
 
 export enum directions {

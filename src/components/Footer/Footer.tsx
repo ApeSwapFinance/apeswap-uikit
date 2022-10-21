@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({
             <FullLogo width="240px" mb="20px" />
             <Text color="primaryBright" size="16px">
               {t(
-                `ApeSwap is a DeFi Hub on BNB Chain, Polygon and Ethereum focused on offering an accessible, transparent and secure experience for everyone.`
+                `ApeSwap is a multichain DeFi Hub offering an accessible, transparent, and secure experience for everyone.`
               )}
             </Text>
             <ButtonFlex>
@@ -82,13 +82,11 @@ const Footer: React.FC<FooterProps> = ({
                   onClick={() => trackClick(track, event, position, chainId, "twitter", "https://twitter.com/ape_swap")}
                 />
               </StyledLink>
-              <StyledLink href="https://discord.com/invite/ApeSwap" target="_blank" rel="noopener noreferrer">
+              <StyledLink href="https://discord.gg/apeswap" target="_blank" rel="noopener noreferrer">
                 <DiscordIcon
                   color="white3"
                   fill={iconFillColor}
-                  onClick={() =>
-                    trackClick(track, event, position, chainId, "discord", "https://discord.com/invite/ApeSwap")
-                  }
+                  onClick={() => trackClick(track, event, position, chainId, "discord", "https://discord.gg/apeswap")}
                 />
               </StyledLink>
               <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
@@ -243,7 +241,6 @@ const Footer: React.FC<FooterProps> = ({
           )}
         </FlexContainer>
         <PeakingMonkey />
-        {/* <AllRightsReserved>©2022 All rights reserved</AllRightsReserved> */}
         <Flex
           sx={{
             position: "absolute",

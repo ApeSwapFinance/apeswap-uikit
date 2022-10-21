@@ -30,8 +30,7 @@ const NetworkCard: React.FC<Props> = ({ networkConfig, chainId, switchNetwork })
       sx={networkBtn}
       size="sm"
       fullWidth
-      disabled={chainId === networkConfig.chainId}
-      variant={chainId === networkConfig.chainId ? "tertiary" : "secondary"}
+      variant={chainId === networkConfig.chainId ? "secondary" : "tertiary"}
       onClick={() => {
         switchNetwork(networkConfig.chainId);
         handleClose();

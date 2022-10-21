@@ -19,10 +19,10 @@ export const Default: React.FC = () => {
     <div>
       <Footer
         chainId={56}
-        toggleTheme={null}
+        toggleTheme={noop}
         isDark
         bananaPriceUsd={0.48}
-        switchNetwork={null}
+        switchNetwork={noop}
         t={translate}
         currentLang={currentLang}
         langs={langs}
