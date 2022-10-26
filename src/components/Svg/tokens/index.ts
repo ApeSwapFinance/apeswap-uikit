@@ -4,3 +4,4 @@ export { default as BSC } from "./BSC";
 export { default as ETH } from "./ETH";
 export { default as GNANA } from "./GNANA";
 export { default as POLYGON } from "./POLYGON";
+export { default as TLOS } from "./TLOS";
