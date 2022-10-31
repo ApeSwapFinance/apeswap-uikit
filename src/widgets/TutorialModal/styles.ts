@@ -14,12 +14,12 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     height: "100%",
   },
   right: {
-    flexDirection: 'column',
+    flexDirection: "column",
     // height: '100%',
-    
+
     // test absolute position
-    height: '73%',
-    overflowY: 'auto',
+    height: "73%",
+    overflowY: "auto",
   },
   modalHeader: {
     flexDirection: ["column"],
@@ -81,12 +81,12 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     bottom: 0,
     left: 0,
     right: 0,
-    background: 'navbar',
-    borderRadius: '10px',
+    background: "navbar",
+    borderRadius: "10px",
   },
   readyBtn: {
     // mt: '10px', -> removed to test absolute position
-    textTransform: 'uppercase',
-    height: '40px',
+    textTransform: "uppercase",
+    height: "40px",
   },
 };

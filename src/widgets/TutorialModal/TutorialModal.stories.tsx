@@ -22,11 +22,10 @@ export default {
 
 const translate: (key: string) => string = (key) => key;
 
-
 const LendingBody1 = () => {
-  const t = translate
+  const t = translate;
   return (
-    <Flex sx={{ flexDirection: "column", mt: '15px' }}>
+    <Flex sx={{ flexDirection: "column", mt: "15px" }}>
       <Text sx={{ fontSize: "10px", lineHeight: "14px", fontWeight: 700, color: "yellow" }}>Step 1</Text>
       <Text sx={{ fontSize: "12px", lineHeight: "14px", fontWeight: 700, textTransform: "uppercase" }}>
         Connect your wallet
@@ -42,9 +41,7 @@ const LendingBody1 = () => {
             {t("Click here")}
           </a>
         </Text>{" "}
-        <Text>
-          {t("to connect your wallet to ApeSwap.")}
-        </Text>
+        <Text>{t("to connect your wallet to ApeSwap.")}</Text>
       </Text>
       <Text sx={{ fontSize: "12px", lineHeight: "14px", fontWeight: 400, fontStyle: "italic" }}>
         <Text sx={{ color: "yellow" }}>
