@@ -8,8 +8,8 @@ interface ReturnType {
 }
 
 const useTutorialModal = ({
+  type,
   children,
-  icon,
   title,
   description,
   onDismiss,
@@ -19,7 +19,7 @@ const useTutorialModal = ({
 }: TModalProps): ReturnType => {
   const [onPresentTutorialModal] = useModal(
     <TutorialModal
-      icon={icon}
+      type={type}
       title={title}
       description={description}
       onDismiss={onDismiss}

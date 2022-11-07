@@ -1,12 +1,37 @@
 import { ThemeUIStyleObject } from "theme-ui";
+import { ShowApeType } from "./types";
 
 export const modalProps = {
   sx: {
-    minWidth: ["90%", "50%", "800px"],
+    minWidth: ["280px", "280px", "800px"],
     width: ["200px"],
-    maxWidth: "800px",
-    height: ["500px"],
+    maxWidth: ["280px", "280px", "800px"],
+    // height: ["500px"],
   },
+};
+
+export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
+  showApe: ({ type, isDark }: ShowApeType) => ({
+    alignSelf: ["center", "center", ""],
+    width: ["200px", "200px", "46%"],
+    height: ["200px", "200px", "400px"],
+    marginTop: "20px",
+    background: "brown",
+    // background: `url(images/tutorial-modals/${type}-${isDark ? "dark" : "light"}.svg)`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  }),
+  allCircle: ({ isActive }) => ({
+    width: "8px",
+    height: "8px",
+    background: isActive ? "linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)" : "white4",
+    borderRadius: "50%",
+    mr: "10px",
+    "&.last-child": {
+      mr: 0,
+    },
+  }),
 };
 
 export const styles: Record<string, ThemeUIStyleObject> = {
@@ -15,11 +40,11 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   },
   right: {
     flexDirection: "column",
-    // height: '100%',
+    height: "100%", // -> removed to test absolute position
 
     // test absolute position
-    height: "73%",
-    overflowY: "auto",
+    // height: "73%",
+    // overflowY: "auto",
   },
   modalHeader: {
     flexDirection: ["column"],
@@ -39,29 +64,19 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     opacity: 0.5,
     mt: ["7px"],
   },
-  showApe: {
-    alignSelf: ["center", "center", ""],
-    width: ["200px", "200px", "46%"],
-    height: ["200px", "200px", "400px"],
-    marginTop: "20px",
-    background: `url(images/marketing-modals/emailApe.svg)`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-  },
-  allCircle: {
-    width: "8px",
-    height: "8px",
-    background: "white4",
-    borderRadius: "50%",
-    mr: "10px",
-    "&.isActive": {
-      background: "linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)",
-    },
-    "&.last-child": {
-      mr: 0,
-    },
-  },
+  // allCircle: {
+  //   width: "8px",
+  //   height: "8px",
+  //   background: "white4",
+  //   borderRadius: "50%",
+  //   mr: "10px",
+  //   "&.isActive": {
+  //     background: "linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)",
+  //   },
+  //   "&.last-child": {
+  //     mr: 0,
+  //   },
+  // },
   circles: {
     justifyContent: "space-between",
     alignItems: "center",
@@ -75,17 +90,17 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     alignItems: "center",
 
     // test absolute position
-    position: "absolute",
-    padding: "20px",
-    pt: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    background: "navbar",
-    borderRadius: "10px",
+    // position: "absolute",
+    // padding: "20px",
+    // pt: 0,
+    // bottom: 0,
+    // left: 0,
+    // right: 0,
+    // background: "navbar",
+    // borderRadius: "10px",
   },
   readyBtn: {
-    // mt: '10px', -> removed to test absolute position
+    mt: "10px", // -> removed to test absolute position
     textTransform: "uppercase",
     height: "40px",
   },
