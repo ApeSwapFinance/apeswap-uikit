@@ -3,7 +3,7 @@ export type ActionHandler = () => void;
 export interface TModalProps {
   t: (key: string) => string;
   onDismiss: ActionHandler;
-  type: TutorialModalTypes;
+  type: TutorialModalTypes | string;
   title: string;
   readyText: string;
   description?: string;
@@ -17,15 +17,15 @@ export interface CountProps {
   isActive: boolean;
 }
 
-export enum tutorialModals {
+export enum TutorialModals {
+  BNB_DEX = "BNB-dex",
+  POLYGON_DEX = "Polygon-dex",
+  ETHEREUM_DEX = "Ethereum-dex",
+  TELOS_DEX = "Telos-dex",
   JUNGLE_FARMS = "jungle-farms",
   BANANA_FARMS = "banana-farms",
   POLYGON_FARMS = "polygon-farms",
   TELOS_FARMS = "telos-farms",
-  BSC_DEX = "bsc-dex",
-  POLYGON_DEX = "polygon-dex",
-  ETHEREUM_DEX = "ethereum-dex",
-  TELOS_DEX = "telos-dex",
   MAXIMIZERS_VAULTS = "maximizers-vaults",
   LIQUIDITY = "liquidity",
   ORDERS = "orders",
@@ -36,9 +36,10 @@ export enum tutorialModals {
   TREASURY_BILL = "treasury-bills",
 }
 
-export type TutorialModalTypes = `${tutorialModals}`;
+export type TutorialModalTypes = `${TutorialModals}`;
 
 export interface ShowApeType {
-  type: TutorialModalTypes;
+  step: number;
+  type: TutorialModalTypes | string;
   isDark: boolean;
 }

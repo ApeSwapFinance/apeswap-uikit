@@ -11,13 +11,12 @@ export const modalProps = {
 };
 
 export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
-  showApe: ({ type, isDark }: ShowApeType) => ({
+  showApe: ({ step, type, isDark }: ShowApeType) => ({
     alignSelf: ["center", "center", ""],
     width: ["200px", "200px", "46%"],
     height: ["200px", "200px", "400px"],
     marginTop: "20px",
-    background: "brown",
-    // background: `url(images/tutorial-modals/${type}-${isDark ? "dark" : "light"}.svg)`,
+    background: `url(images/tutorial-modals/${type}-${isDark ? "dark" : "light"}-${step}.svg)`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -64,19 +63,6 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     opacity: 0.5,
     mt: ["7px"],
   },
-  // allCircle: {
-  //   width: "8px",
-  //   height: "8px",
-  //   background: "white4",
-  //   borderRadius: "50%",
-  //   mr: "10px",
-  //   "&.isActive": {
-  //     background: "linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)",
-  //   },
-  //   "&.last-child": {
-  //     mr: 0,
-  //   },
-  // },
   circles: {
     justifyContent: "space-between",
     alignItems: "center",

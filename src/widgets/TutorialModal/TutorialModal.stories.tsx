@@ -6,7 +6,7 @@ import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Text } from "../../components/Text";
 import { Connected } from "../Navbar/index.stories";
 import TutorialModal from "./TutorialModal";
-import { tutorialModals } from "./types";
+import { TutorialModals } from "./types";
 import useTutorialModal from "./useTutorialModal";
 
 export default {
@@ -105,7 +105,7 @@ export const WithUseModalNavbar: React.FC = (args: any) => {
     children: [<LendingBody1 />, <LendingBody2 />],
     readyText: "I'm Ready",
     onReady: () => setVisible(!visible),
-    type: tutorialModals.LENDING,
+    type: TutorialModals.LENDING,
   });
   return (
     <StorybookLayout {...args}>
@@ -118,6 +118,7 @@ export const WithUseModalNavbar: React.FC = (args: any) => {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const WithNavbar: React.FC = (args: any) => {
   const [visible, setVisible] = useState(true);
+
   return (
     <StorybookLayout {...args}>
       <>
@@ -129,7 +130,7 @@ export const WithNavbar: React.FC = (args: any) => {
             onDismiss={() => setVisible(!visible)}
             readyText="I'm Ready"
             onReady={() => setVisible(!visible)}
-            type={tutorialModals.LENDING}
+            type={TutorialModals.LENDING}
           >
             {[<LendingBody1 />, <LendingBody2 />]}
           </TutorialModal>

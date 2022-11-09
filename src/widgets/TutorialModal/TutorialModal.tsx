@@ -51,6 +51,7 @@ const TutorialModal: React.FC<TModalProps> = ({
     ));
   };
 
+  console.log('type:::', type)
   return (
     <Modal zIndex={10} onDismiss={onDismiss} {...modalProps}>
       <Flex className="tutorial-modal" sx={styles.modalCon}>
@@ -63,7 +64,7 @@ const TutorialModal: React.FC<TModalProps> = ({
             height: "100%",
           }}
         >
-          <Box sx={dynamicStyles.showApe({ type, isDark })} />
+          <Box sx={dynamicStyles.showApe({ step, type, isDark })} />
           <Flex sx={{ width: "100%", flexDirection: "column", flex: 1 }}>
             <Flex sx={styles.right}>
               <Flex sx={styles.modalHeader}>
