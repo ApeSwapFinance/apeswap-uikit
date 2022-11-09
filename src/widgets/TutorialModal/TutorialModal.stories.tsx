@@ -28,30 +28,26 @@ const Body1 = () => {
   const t = translate;
   return (
     <Flex sx={styles.container}>
-      <Text sx={styles.step}>{t('Step 1')}</Text>
-      <Text sx={styles.head}>{t('Connect your wallet')}</Text>
+      <Text sx={styles.step}>{t("Step 1")}</Text>
+      <Text sx={styles.head}>{t("Connect your wallet")}</Text>
 
       <Text sx={styles.content}>
-        <Text sx={styles.yellow}>
-          {t('Click here')}
-        </Text>{' '}
-        <Text sx={styles.content}>{t('to connect your wallet to ApeSwap.')}</Text>
+        <Text sx={styles.yellow}>{t("Click here")}</Text>{" "}
+        <Text sx={styles.content}>{t("to connect your wallet to ApeSwap.")}</Text>
       </Text>
 
-      <Text sx={{ ...styles.content, fontStyle: 'italic' }}>
-        <Text sx={styles.content}>{t('Don’t have a wallet?')}</Text>{' '}
-        <Text sx={styles.content}>
-          {t(`A full setup guide for MetaMask on BNB Chain can be found `)}
-        </Text>
+      <Text sx={{ ...styles.content, fontStyle: "italic" }}>
+        <Text sx={styles.content}>{t("Don’t have a wallet?")}</Text>{" "}
+        <Text sx={styles.content}>{t(`A full setup guide for MetaMask on BNB Chain can be found `)}</Text>
         <Text sx={styles.yellow}>
           <a href="void" target="_blank" rel="noreferrer noopener">
-            {t('here')}
+            {t("here")}
           </a>
         </Text>
       </Text>
     </Flex>
   );
-}
+};
 
 const Body2 = () => {
   const t = translate;
@@ -71,9 +67,7 @@ const Body2 = () => {
             {t("bridge tokens")}
           </a>
         </Text>{" "}
-        <Text sx={styles.content}>
-          {t(`first. Always keep spare BNB to account for gas fees.`)}
-        </Text>
+        <Text sx={styles.content}>{t(`first. Always keep spare BNB to account for gas fees.`)}</Text>
       </Text>
     </Flex>
   );

@@ -51,7 +51,7 @@ const TutorialModal: React.FC<TModalProps> = ({
     ));
   };
 
-  console.log('type:::', type)
+  console.log("type:::", type);
   return (
     <Modal zIndex={10} onDismiss={onDismiss} {...modalProps}>
       <Flex className="tutorial-modal" sx={styles.modalCon}>
@@ -62,11 +62,13 @@ const TutorialModal: React.FC<TModalProps> = ({
             width: "100%",
             alignItems: "center",
             height: "100%",
-            justifyContent: ['', '', 'space-between'],
+            justifyContent: ["", "", "space-between"],
           }}
         >
           <Box sx={dynamicStyles.showApe({ step, type, isDark })} />
-          <Flex sx={{ width: "100%", flexDirection: "column", flex: 1, mr: ['', '', '30px'], maxWidth: ['', '', '52%'] }}>
+          <Flex
+            sx={{ width: "100%", flexDirection: "column", flex: 1, mr: ["", "", "30px"], maxWidth: ["", "", "52%"] }}
+          >
             <Flex sx={styles.right}>
               <Flex sx={styles.modalHeader}>
                 <Text sx={styles.title}>{t(`${title}`)}</Text>
@@ -76,9 +78,7 @@ const TutorialModal: React.FC<TModalProps> = ({
             </Flex>
 
             <Flex sx={styles.modalFooter}>
-              <Flex sx={styles.circles}>
-                {renderDots()}
-              </Flex>
+              <Flex sx={styles.circles}>{renderDots()}</Flex>
               <Button onClick={step === childrensLength - 1 ? onReady : goNext} sx={styles.readyBtn}>
                 {step === childrensLength - 1 ? t(`${readyText}`) : t("Next")}
               </Button>

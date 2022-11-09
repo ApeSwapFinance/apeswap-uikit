@@ -73,7 +73,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     mt: "10px", // -> removed to test absolute position
     textTransform: "uppercase",
     height: "40px",
-    width: ['100%', '100%', '240px']
+    width: ["100%", "100%", "240px"],
   },
   modalFooter: {
     flexDirection: "column",
