@@ -228,9 +228,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   if (icon === icons.QUIZ) {
     return <Quiz {...props} getStyles={getStyles} />;
   }
-   if (icon === icons.BRIDGE) {
-     return <Bridge {...props} getStyles={getStyles} />;
-   }
+  if (icon === icons.BRIDGE) {
+    return <Bridge {...props} getStyles={getStyles} />;
+  }
   return null;
 };
 
