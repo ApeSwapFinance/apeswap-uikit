@@ -50,6 +50,8 @@ import {
   Migrate,
   Message,
   Positions,
+  Quiz,
+  Bridge,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -223,6 +225,12 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   if (icon === icons.POSITIONS) {
     return <Positions {...props} getStyles={getStyles} />;
   }
+  if (icon === icons.QUIZ) {
+    return <Quiz {...props} getStyles={getStyles} />;
+  }
+   if (icon === icons.BRIDGE) {
+     return <Bridge {...props} getStyles={getStyles} />;
+   }
   return null;
 };
 

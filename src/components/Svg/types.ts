@@ -59,6 +59,8 @@ export enum icons {
   MIGRATE = "Migrate",
   MESSAGE = "message",
   POSITIONS = "Positions",
+  QUIZ = "quiz",
+  BRIDGE ='bridge',
 }
 
 export enum directions {
