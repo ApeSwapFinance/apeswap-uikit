@@ -11,13 +11,13 @@ export const modalProps = {
 };
 
 export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
-  showApe: ({ step, type, isDark }: ShowApeType) => ({
+  showApe: ({ step, type }: ShowApeType) => ({
     alignSelf: ["center", "center", ""],
     width: ["200px", "200px", "340px"],
     height: ["200px", "200px", "340px"],
     marginTop: "20px",
     // background: 'brown',
-    background: `url(images/tutorial-modals/${type}-${isDark ? "dark" : "light"}-${step}.svg)`,
+    background: `url(images/tutorial-modals/${type}-${step}.svg)`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",

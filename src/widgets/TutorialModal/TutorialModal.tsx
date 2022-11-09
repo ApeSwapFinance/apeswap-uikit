@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from "react";
-import { useTheme } from "styled-components";
 import { Box } from "theme-ui";
 
 import { CloseIcon } from "../../components/Svg";
@@ -31,7 +30,6 @@ const TutorialModal: React.FC<TModalProps> = ({
   onReady,
   t,
 }) => {
-  const { isDark } = useTheme();
   const childrens = children as React.ReactNode[];
   const childrensLength = childrens.length;
 
@@ -65,7 +63,7 @@ const TutorialModal: React.FC<TModalProps> = ({
             justifyContent: ["", "", "space-between"],
           }}
         >
-          <Box sx={dynamicStyles.showApe({ step, type, isDark })} />
+          <Box sx={dynamicStyles.showApe({ step, type })} />
           <Flex
             sx={{ width: "100%", flexDirection: "column", flex: 1, mr: ["", "", "30px"], maxWidth: ["", "", "52%"] }}
           >

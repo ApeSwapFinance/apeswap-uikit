@@ -28,6 +28,7 @@ export * from "./components/ThemeSwitcher";
 export * from "./components/Tabs";
 export * from "./components/ScrollToTop";
 export * from "./components/RunFiatButton";
+export * from "./components/FloatingDocs";
 
 // Hooks
 export * from "./hooks";

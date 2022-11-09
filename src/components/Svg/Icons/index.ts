@@ -47,3 +47,4 @@ export { default as Message } from "./Message";
 export { default as Positions } from "./Positions";
 export { default as Quiz } from "./Quiz";
 export { default as Bridge } from "./Bridge";
+export { default as DocsIcon } from "./Docs";

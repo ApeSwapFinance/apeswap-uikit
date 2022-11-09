@@ -61,6 +61,7 @@ export enum icons {
   POSITIONS = "Positions",
   QUIZ = "quiz",
   BRIDGE = "bridge",
+  DOCS = "docs",
 }
 
 export enum directions {
