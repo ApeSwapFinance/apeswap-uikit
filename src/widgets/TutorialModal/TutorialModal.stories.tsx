@@ -8,6 +8,7 @@ import { Connected } from "../Navbar/index.stories";
 import TutorialModal from "./TutorialModal";
 import { TutorialModals } from "./types";
 import useTutorialModal from "./useTutorialModal";
+import { styles } from "./styles";
 
 export default {
   title: "Widgets/TutorialModal",
@@ -23,72 +24,56 @@ export default {
 
 const translate: (key: string) => string = (key) => key;
 
-const LendingBody1 = () => {
+const Body1 = () => {
   const t = translate;
   return (
-    <Flex sx={{ flexDirection: "column", mt: "15px", gap: "5px" }}>
-      <Text sx={{ fontSize: "10px", lineHeight: "14px", fontWeight: 700, color: "yellow", textTransform: "uppercase" }}>
-        {t("Step 1")}
-      </Text>
-      <Text sx={{ fontSize: "12px", lineHeight: "14px", fontWeight: 700, textTransform: "uppercase" }}>
-        {t("Connect your wallet")}
+    <Flex sx={styles.container}>
+      <Text sx={styles.step}>{t('Step 1')}</Text>
+      <Text sx={styles.head}>{t('Connect your wallet')}</Text>
+
+      <Text sx={styles.content}>
+        <Text sx={styles.yellow}>
+          {t('Click here')}
+        </Text>{' '}
+        <Text sx={styles.content}>{t('to connect your wallet to ApeSwap.')}</Text>
       </Text>
 
-      <Text sx={{ fontSize: "12px", fontWeight: 400, lineHeight: "18px" }}>
-        <Text sx={{ color: "yellow", lineHeight: "18px" }}>
-          <a
-            href="https://box.genki.io/RJ4LP3"
-            style={{ textDecoration: "underline" }}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {t("Click here")}
-          </a>
-        </Text>{" "}
-        <Text sx={{ fontWeight: 400, lineHeight: "18px" }}>{t("to connect your wallet to ApeSwap.")}</Text>
-      </Text>
-
-      <Text sx={{ fontSize: "12px", lineHeight: "18px", fontWeight: 400, fontStyle: "italic" }}>
-        <Text sx={{ lineHeight: "18px" }}>{t("Don’t have a wallet?")}</Text>{" "}
-        <Text sx={{ fontSize: "12px", lineHeight: "18px", fontWeight: 400 }}>
-          {t(`A full setup guide for MetaMask on ${"BNB"} Chain can be found `)}
+      <Text sx={{ ...styles.content, fontStyle: 'italic' }}>
+        <Text sx={styles.content}>{t('Don’t have a wallet?')}</Text>{' '}
+        <Text sx={styles.content}>
+          {t(`A full setup guide for MetaMask on BNB Chain can be found `)}
         </Text>
-        <Text sx={{ color: "yellow", lineHeight: "18px" }}>
-          <a
-            href="https://box.genki.io/RJ4LP3"
-            style={{ textDecoration: "underline" }}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {t("here")}
+        <Text sx={styles.yellow}>
+          <a href="void" target="_blank" rel="noreferrer noopener">
+            {t('here')}
           </a>
         </Text>
       </Text>
     </Flex>
   );
-};
-const LendingBody2 = () => {
+}
+
+const Body2 = () => {
   const t = translate;
   return (
-    <Flex sx={{ flexDirection: "column", mt: "15px", gap: "5px" }}>
-      <Text sx={{ fontSize: "10px", lineHeight: "14px", fontWeight: 700, color: "yellow", textTransform: "uppercase" }}>
-        {t("Step 2")}
-      </Text>
-      <Text sx={{ fontSize: "12px", lineHeight: "14px", fontWeight: 700, textTransform: "uppercase" }}>
-        {t("Supply")}
-      </Text>
-      <Text sx={{ fontSize: "12px", fontWeight: 400, lineHeight: "18px" }}>
-        <Text sx={{ lineHeight: "18px" }}>
-          {t("Select your desired market, APPROVE and SUPPLY your assets. You'll earn")}
-        </Text>{" "}
-        <Text sx={{ lineHeight: "18px", fontWeight: 700 }}>{t("interest,")}</Text>{" "}
-        <Text sx={{ lineHeight: "18px" }}>{t("and in some cases, additional BANANA rewards.")}</Text>{" "}
+    <Flex sx={styles.container}>
+      <Text sx={styles.step}>{t("Step 2")}</Text>
+      <Text sx={styles.head}>{t("Select Tokens & Amount")}</Text>
+
+      <Text sx={styles.content}>
+        <Text sx={styles.content}>{t("Select the tokens you want to trade and enter your preferred amount.")}</Text>
       </Text>
 
-      <Text sx={{ fontSize: "12px", lineHeight: "18px", fontWeight: 400, fontStyle: "italic" }}>
-        <Text sx={{ lineHeight: "18px" }}>{t("Check the BANANA Distribution")}</Text>{" "}
-        <Text sx={{ lineHeight: "18px", fontWeight: 700 }}>{t("APY")}</Text>{" "}
-        <Text sx={{ lineHeight: "18px" }}>{t("for each market.")}</Text>
+      <Text sx={{ ...styles.content, fontStyle: "italic" }}>
+        <Text sx={styles.content}>{t(`New to BNB Chain? You might need to`)}</Text>{" "}
+        <Text sx={styles.yellow}>
+          <a href="void" target="_blank" rel="noreferrer noopener">
+            {t("bridge tokens")}
+          </a>
+        </Text>{" "}
+        <Text sx={styles.content}>
+          {t(`first. Always keep spare BNB to account for gas fees.`)}
+        </Text>
       </Text>
     </Flex>
   );
@@ -98,14 +83,14 @@ const LendingBody2 = () => {
 export const WithUseModalNavbar: React.FC = (args: any) => {
   const [visible, setVisible] = useState(true);
   const { onPresentTutorialModal } = useTutorialModal({
-    title: "ApeSwap's Lending Network",
-    description: "Supply, borrow, and earn!",
+    title: "Welcome to ApeSwap's Dex",
+    description: "Easily trade ANY token on BNB Chain!",
     t: translate,
     onDismiss: () => setVisible(!visible),
-    children: [<LendingBody1 />, <LendingBody2 />],
+    children: [<Body1 />, <Body2 />],
     readyText: "I'm Ready",
     onReady: () => setVisible(!visible),
-    type: TutorialModals.LENDING,
+    type: TutorialModals.BNB_DEX,
   });
   return (
     <StorybookLayout {...args}>
@@ -124,15 +109,15 @@ export const WithNavbar: React.FC = (args: any) => {
       <>
         {visible && (
           <TutorialModal
-            title="ApeSwap's Lending Network"
-            description="Supply, borrow, and earn!"
+            title="Welcome to ApeSwap's Dex"
+            description="Easily trade ANY token on BNB Chain!"
             t={translate}
             onDismiss={() => setVisible(!visible)}
             readyText="I'm Ready"
             onReady={() => setVisible(!visible)}
-            type={TutorialModals.LENDING}
+            type={TutorialModals.BNB_DEX}
           >
-            {[<LendingBody1 />, <LendingBody2 />]}
+            {[<Body1 />, <Body2 />]}
           </TutorialModal>
         )}
         <Connected />

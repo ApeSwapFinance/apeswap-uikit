@@ -62,10 +62,11 @@ const TutorialModal: React.FC<TModalProps> = ({
             width: "100%",
             alignItems: "center",
             height: "100%",
+            justifyContent: ['', '', 'space-between'],
           }}
         >
           <Box sx={dynamicStyles.showApe({ step, type, isDark })} />
-          <Flex sx={{ width: "100%", flexDirection: "column", flex: 1 }}>
+          <Flex sx={{ width: "100%", flexDirection: "column", flex: 1, mr: ['', '', '30px'], maxWidth: ['', '', '52%'] }}>
             <Flex sx={styles.right}>
               <Flex sx={styles.modalHeader}>
                 <Text sx={styles.title}>{t(`${title}`)}</Text>
@@ -76,9 +77,9 @@ const TutorialModal: React.FC<TModalProps> = ({
 
             <Flex sx={styles.modalFooter}>
               <Flex sx={styles.circles}>
-                <Flex sx={styles.circleCon}>{renderDots()}</Flex>
+                {renderDots()}
               </Flex>
-              <Button fullWidth onClick={step === childrensLength - 1 ? onReady : goNext} sx={styles.readyBtn}>
+              <Button onClick={step === childrensLength - 1 ? onReady : goNext} sx={styles.readyBtn}>
                 {step === childrensLength - 1 ? t(`${readyText}`) : t("Next")}
               </Button>
             </Flex>
