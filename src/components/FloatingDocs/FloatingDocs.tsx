@@ -13,7 +13,7 @@ export const FloatingDocs: React.FC<FloatingDocsProps> = ({ link, iconProps, ...
           right: "20px",
           width: "40px",
           height: "40px",
-          zIndex: 10,
+          zIndex: 5,
           cursor: "pointer",
         }}
         onClick={() => window.open(link, "_blank")}

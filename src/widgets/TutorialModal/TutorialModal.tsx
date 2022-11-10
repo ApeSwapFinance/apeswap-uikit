@@ -35,8 +35,17 @@ const TutorialModal: React.FC<TModalProps> = ({
 
   const [step, setStep] = useState(0);
 
-  const goNext = () => {
-    if (step + 1 !== childrensLength) setStep(step + 1);
+  // const goNext = () => {
+  //   if (step + 1 !== childrensLength) setStep(step + 1);
+  // };
+
+  // eslint-disable-next-line consistent-return
+  const handleNext = () => {
+    if (childrensLength <= step + 1) {
+      onDismiss();
+    } else {
+      return setStep(step + 1);
+    }
   };
 
   const renderChildren = () => {
@@ -72,12 +81,14 @@ const TutorialModal: React.FC<TModalProps> = ({
                 <Text sx={styles.title}>{t(`${title}`)}</Text>
                 <Text sx={styles.description}>{t(`${description}`)}</Text>
               </Flex>
+              {/* If mobile wrap the children in a higher order component */}
+              {/* {renderChildren()} */}
+              {/* step, setStep, goNext */}
               {renderChildren()}
             </Flex>
-
             <Flex sx={styles.modalFooter}>
               <Flex sx={styles.circles}>{renderDots()}</Flex>
-              <Button onClick={step === childrensLength - 1 ? onReady : goNext} sx={styles.readyBtn}>
+              <Button onClick={step === childrensLength - 1 ? onReady : handleNext} sx={styles.readyBtn}>
                 {step === childrensLength - 1 ? t(`${readyText}`) : t("Next")}
               </Button>
             </Flex>

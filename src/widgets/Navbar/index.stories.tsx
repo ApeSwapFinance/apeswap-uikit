@@ -10,6 +10,7 @@ import { links } from "./config";
 import { TrackHandler, TrackProps } from "../../util/trackClick";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Language } from "../../components/LangSelector/types";
+import { FloatingDocs } from "../../components/FloatingDocs";
 
 export default {
   title: "Widgets/Navbar",
@@ -94,6 +95,7 @@ export const Connected: React.FC = (args: any) => {
             </Text>
           </div>
         </Navbar>
+        <FloatingDocs link="https://apeswap.finance" />
       </BrowserRouter>
     </StorybookLayout>
   );
@@ -189,6 +191,7 @@ export const NotConnected: React.FC = () => {
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </Navbar>
+      <FloatingDocs link="https://apeswap.finance" />
     </BrowserRouter>
   );
 };
@@ -253,6 +256,7 @@ export const WithNoProfile: React.FC = () => {
           </Text>
         </div>
       </Navbar>
+      <FloatingDocs link="https://apeswap.finance" />
     </BrowserRouter>
   );
 };
@@ -319,6 +323,7 @@ export const WithProfile: React.FC = () => {
           </Text>
         </div>
       </Navbar>
+      <FloatingDocs link="https://apeswap.finance" />
     </BrowserRouter>
   );
 };

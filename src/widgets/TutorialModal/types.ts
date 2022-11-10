@@ -1,3 +1,5 @@
+import React from "react";
+
 export type ActionHandler = () => void;
 
 export interface TModalProps {
