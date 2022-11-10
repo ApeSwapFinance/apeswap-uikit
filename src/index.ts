@@ -28,6 +28,7 @@ export * from "./components/ThemeSwitcher";
 export * from "./components/Tabs";
 export * from "./components/ScrollToTop";
 export * from "./components/RunFiatButton";
+export { default as NetworkButton } from "./widgets/Navbar/NetworkButton";
 
 // Hooks
 export * from "./hooks";
