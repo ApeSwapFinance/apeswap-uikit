@@ -86,7 +86,9 @@ const Footer: React.FC<FooterProps> = ({
                 <DiscordIcon
                   color="white3"
                   fill={iconFillColor}
-                  onClick={() => trackClick(track, event, position, chainId, "discord", "https://apeswap.click/discord")}
+                  onClick={() =>
+                    trackClick(track, event, position, chainId, "discord", "https://apeswap.click/discord")
+                  }
                 />
               </StyledLink>
               <StyledLink href="https://t.me/ape_swap" target="_blank" rel="noopener noreferrer">
