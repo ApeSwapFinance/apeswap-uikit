@@ -7,7 +7,6 @@ const Input: React.FC<InputProps> = ({ size = sizes.MD, icon, width, ...props })
   return (
     <Box
       sx={{
-        position: "relative",
         width: "fit-content",
       }}
     >
