@@ -28,7 +28,7 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     background: isActive ? "linear-gradient(53.53deg, #a16552 15.88%, #e1b242 92.56%)" : "white4",
     borderRadius: "50%",
     mr: "10px",
-    cursor: 'pointer',
+    cursor: "pointer",
     "&.last-child": {
       mr: 0,
     },
