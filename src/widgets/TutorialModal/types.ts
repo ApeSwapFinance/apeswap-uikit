@@ -26,14 +26,16 @@ export enum TutorialModals {
   TELOS_DEX = "Telos-dex",
   JUNGLE_FARMS = "jungle-farms",
   BANANA_FARMS = "banana-farms",
-  POLYGON_FARMS = "polygon-farms",
-  TELOS_FARMS = "telos-farms",
+  POLYGON_FARMS = "Polygon-farms",
+  TELOS_FARMS = "Telos-farms",
+
+  POOLS = "pools",
+
   MAXIMIZERS_VAULTS = "maximizers-vaults",
   LIQUIDITY = "liquidity",
   ORDERS = "orders",
   IAO = "iao",
   GNANA = "gnana",
-  POOLS = "pools",
   LENDING = "lending",
   TREASURY_BILL = "treasury-bills",
 }
