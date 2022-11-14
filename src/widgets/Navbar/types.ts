@@ -79,5 +79,6 @@ export interface NavProps extends PanelProps {
   profile?: Profile;
   track?: TrackHandler;
   uDName?: string;
+  sidName?: string;
   liveResult?: LiveResultProps["apiResult"] | undefined;
 }

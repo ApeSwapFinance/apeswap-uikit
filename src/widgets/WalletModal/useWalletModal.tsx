@@ -14,10 +14,13 @@ const useWalletModal = (
   logout: () => void,
   t: (key: string) => string,
   account?: string,
-  uDName?: string
+  uDName?: string,
+  sidName?: string
 ): ReturnType => {
   const [onPresentConnectModal] = useModal(<ConnectModal login={login} t={t} />);
-  const [onPresentAccountModal] = useModal(<AccountModal uDName={uDName} account={account} logout={logout} t={t} />);
+  const [onPresentAccountModal] = useModal(
+    <AccountModal sidName={sidName} uDName={uDName} account={account} logout={logout} t={t} />
+  );
   return { onPresentConnectModal, onPresentAccountModal };
 };
 

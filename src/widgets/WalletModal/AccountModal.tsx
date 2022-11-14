@@ -15,9 +15,10 @@ interface Props {
   logout: () => void;
   t: (key: string) => string;
   uDName?: string;
+  sidName?: string;
 }
 
-const AccountModal: React.FC<Props> = ({ uDName, account, logout, t }) => {
+const AccountModal: React.FC<Props> = ({ sidName, uDName = undefined, account, logout, t }) => {
   const { handleClose } = useContext(ModalContext);
   const { isXs, isSm, isMd } = useMatchBreakpoints();
   const reducedAddress = account ? `${account.substring(0, 15)}...${account.substring(account.length - 4)}` : null;
@@ -30,7 +31,7 @@ const AccountModal: React.FC<Props> = ({ uDName, account, logout, t }) => {
         sx={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}
         mb="8px"
       >
-        {isXs || isSm || isMd ? uDName || reducedAddress : uDName || account}
+        {isXs || isSm || isMd ? uDName || sidName || reducedAddress : uDName || sidName || account}
       </Text>
       <Flex sx={{ alignItems: "center" }} mt="8px" mb="32px">
         <Link
@@ -64,6 +65,7 @@ const AccountModal: React.FC<Props> = ({ uDName, account, logout, t }) => {
 AccountModal.defaultProps = {
   account: undefined,
   uDName: undefined,
+  sidName: undefined,
 };
 
 export default AccountModal;

@@ -78,17 +78,18 @@ const styles: Record<string, ThemeUIStyleObject> = {
 interface Props {
   account?: string;
   uDName?: string;
+  sidName?: string;
 }
 
 export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
-  userBlockBtn: ({ account, uDName }: Props) => ({
+  userBlockBtn: ({ account, uDName, sidName }: Props) => ({
     height: "35px",
     marginLeft: "10px",
     lineHeight: "10px",
-    background: uDName || account ? "white3" : "yellow",
-    color: uDName || account ? "text" : "primaryBright",
+    background: uDName || sidName || account ? "white3" : "yellow",
+    color: uDName || sidName || account ? "text" : "primaryBright",
     "&&": {
-      padding: `0px ${uDName || account ? "45px" : "15px"} 0px 15px`,
+      padding: `0px ${uDName || sidName || account ? "45px" : "15px"} 0px 15px`,
     },
   }),
 };
