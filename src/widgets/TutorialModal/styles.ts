@@ -16,7 +16,6 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     width: ["200px", "200px", "340px"],
     height: ["200px", "200px", "340px"],
     marginTop: "20px",
-    // background: 'brown',
     background: `url(images/tutorial-modals/${type}-${step}.svg)`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -41,11 +40,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   },
   right: {
     flexDirection: "column",
-    height: "100%", // -> removed to test absolute position
-
-    // test absolute position
-    // height: "73%",
-    // overflowY: "auto",
+    height: "100%",
   },
   modalHeader: {
     flexDirection: ["column"],
@@ -80,24 +75,13 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: ["center", "center", "flex-start"],
-
-    // test absolute position
-    // position: "absolute",
-    // padding: "20px",
-    // pt: 0,
-    // bottom: 0,
-    // left: 0,
-    // right: 0,
-    // background: "navbar",
-    // borderRadius: "10px",
   },
-
   // To test frontend modal content
   container: {
     flexDirection: "column",
     mt: ["15px", "15px", "30px"],
     gap: "5px",
-    height: ["142px", "142px", "200px"],
+    height: ["145px", "145px", "200px"],
   },
   step: {
     fontSize: "10px",
