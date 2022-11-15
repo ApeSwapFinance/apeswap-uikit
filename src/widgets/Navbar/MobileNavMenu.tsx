@@ -218,11 +218,11 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
                 onClick={() => trackClick(track, event, position, chainId, "telegram", "https://t.me/ape_swap")}
               />
             </StyledLink>
-            <StyledLink href="https://discord.gg/apeswap" target="_blank" rel="noopener noreferrer">
+            <StyledLink href="https://apeswap.click/discord" target="_blank" rel="noopener noreferrer">
               <DiscordIcon
                 color="white3"
                 fill={iconFillColor}
-                onClick={() => trackClick(track, event, position, chainId, "discord", "https://discord.gg/apeswap")}
+                onClick={() => trackClick(track, event, position, chainId, "discord", "https://apeswap.click/discord")}
               />
             </StyledLink>
           </div>
