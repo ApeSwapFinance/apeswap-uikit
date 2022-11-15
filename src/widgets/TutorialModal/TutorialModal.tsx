@@ -5,10 +5,10 @@ import { Box } from "theme-ui";
 import { CloseIcon } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
 import { Modal } from "../Modal";
-import { styles, modalProps, dynamicStyles } from "./styles";
 import { CountProps, TModalProps } from "./types";
 import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
+import { styles, modalProps, dynamicStyles } from "./styles";
 
 const Circle: React.FC<CountProps> = ({ index, goToStep, isActive }) => {
   return (
@@ -58,24 +58,13 @@ const TutorialModal: React.FC<TModalProps> = ({
     ));
   };
 
-  console.log("type:::", type);
   return (
     <Modal zIndex={10} onDismiss={onDismiss} {...modalProps}>
       <Flex className="tutorial-modal" sx={styles.modalCon}>
         <CloseIcon width={22} onClick={onDismiss} sx={{ cursor: "pointer", position: "absolute", right: "20px" }} />
-        <Flex
-          sx={{
-            flexDirection: ["column", "column", "row"],
-            width: "100%",
-            alignItems: "center",
-            height: "100%",
-            justifyContent: ["", "", "space-between"],
-          }}
-        >
+        <Flex sx={styles.contentBody}>
           <Box sx={dynamicStyles.showApe({ step, type })} />
-          <Flex
-            sx={{ width: "100%", flexDirection: "column", flex: 1, mr: ["", "", "30px"], maxWidth: ["", "", "52%"] }}
-          >
+          <Flex sx={styles.rightCon}>
             <Flex sx={styles.right}>
               <Flex sx={styles.modalHeader}>
                 <Text sx={styles.title}>{t(`${title}`)}</Text>

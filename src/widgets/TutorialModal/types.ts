@@ -28,16 +28,15 @@ export enum TutorialModals {
   BANANA_FARMS = "banana-farms",
   POLYGON_FARMS = "Polygon-farms",
   TELOS_FARMS = "Telos-farms",
-
   POOLS = "pools",
-
   MAXIMIZERS_VAULTS = "maximizers-vaults",
-  LIQUIDITY = "liquidity",
-  ORDERS = "orders",
-  IAO = "iao",
   GNANA = "gnana",
-  LENDING = "lending",
   TREASURY_BILL = "treasury-bills",
+  IAO = "iao",
+  ORDERS = "orders",
+  LIQUIDITY = "liquidity",
+
+  LENDING = "lending",
 }
 
 export type TutorialModalTypes = `${TutorialModals}`;

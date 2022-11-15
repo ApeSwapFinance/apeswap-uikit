@@ -38,6 +38,20 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   modalCon: {
     height: "100%",
   },
+  contentBody: {
+    flexDirection: ["column", "column", "row"],
+    width: "100%",
+    alignItems: "center",
+    height: "100%",
+    justifyContent: ["", "", "space-between"],
+  },
+  rightCon: {
+    width: "100%",
+    flexDirection: "column",
+    flex: 1,
+    mr: ["", "", "30px"],
+    maxWidth: ["", "", "53%"],
+  },
   right: {
     flexDirection: "column",
     height: "100%",
@@ -66,7 +80,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     padding: ["8px", "8px", "8px 8px 8px 0px"],
   },
   readyBtn: {
-    mt: "10px", // -> removed to test absolute position
+    mt: "10px",
     textTransform: "uppercase",
     height: "40px",
     width: ["100%", "100%", "240px"],
