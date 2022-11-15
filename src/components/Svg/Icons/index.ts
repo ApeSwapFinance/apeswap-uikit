@@ -45,3 +45,4 @@ export { default as ZapIcon } from "./ZapIcon";
 export { default as Migrate } from "./Migrate";
 export { default as Message } from "./Message";
 export { default as Positions } from "./Positions";
+export { default as MenuSettings } from "./MenuSettings";
