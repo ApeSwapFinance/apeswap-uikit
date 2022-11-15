@@ -3,21 +3,25 @@ import { partition } from "lodash";
 import { Modal, ModalHeader } from "../Modal";
 import { SwitchNetwork } from "./types";
 import { Heading } from "../../components/Heading";
-import networks from "./config";
+import networks, { ChainId } from "./config";
 import NetworkCard from "./NetworkCard";
 import { Svg } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
 import styles from "./styles";
 
-interface Props {
+export interface Props {
   switchNetwork: SwitchNetwork;
   chainId: number;
   t: (key: string) => string;
   onDismiss?: () => void;
+  supportedChains?: ChainId[];
 }
 
-const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss }) => {
-  const [selectedNetwork, networkList] = partition(networks, (network) => network.chainId === chainId);
+const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss, supportedChains }) => {
+  const filteredNetworks = supportedChains
+    ? networks.filter((network) => supportedChains?.includes(network.chainId))
+    : networks;
+  const [selectedNetwork, networkList] = partition(filteredNetworks, (network) => network.chainId === chainId);
   return (
     <Modal maxWidth="350px" minWidth="350px" onDismiss={onDismiss}>
       <ModalHeader>
