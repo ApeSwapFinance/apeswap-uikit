@@ -2,7 +2,7 @@
 import React from "react";
 import { ArrowDropDownIcon } from "../../components/Svg";
 import { useNetworkModal, SwitchNetwork } from "../NetworkModal";
-import { ChainId, NETWORK_ICON, NETWORK_LABEL } from "../NetworkModal/config";
+import { NETWORK_ICON, NETWORK_LABEL } from "../NetworkModal/config";
 import { Button } from "../../components/Button";
 import { Text } from "../../components/Text";
 import styles from "./styles";
@@ -11,7 +11,7 @@ export interface Props {
   chainId: number;
   switchNetwork: SwitchNetwork;
   t: (key: string) => string;
-  supportedChains?: ChainId[];
+  supportedChains?: number[];
 }
 
 const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t, supportedChains }) => {

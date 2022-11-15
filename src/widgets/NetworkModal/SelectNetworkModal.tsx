@@ -3,7 +3,7 @@ import { partition } from "lodash";
 import { Modal, ModalHeader } from "../Modal";
 import { SwitchNetwork } from "./types";
 import { Heading } from "../../components/Heading";
-import networks, { ChainId } from "./config";
+import networks from "./config";
 import NetworkCard from "./NetworkCard";
 import { Svg } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
@@ -14,7 +14,7 @@ export interface Props {
   chainId: number;
   t: (key: string) => string;
   onDismiss?: () => void;
-  supportedChains?: ChainId[];
+  supportedChains?: number[];
 }
 
 const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss, supportedChains }) => {
