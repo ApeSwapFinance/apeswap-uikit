@@ -642,10 +642,10 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <div
-                      class="css-r8xm40"
+                      class="css-1vb0zbs-Input"
                     >
                       <input
-                        class="input css-y01sy6-NewsletterForm"
+                        class="input css-wrmpc0-NewsletterForm"
                         name="EMAIL"
                         placeholder="example@domain.com"
                         value=""

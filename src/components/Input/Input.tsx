@@ -1,15 +1,12 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
-import { Input as ThemeUIInput, Box } from "theme-ui";
+import { Input as ThemeUIInput, Box, Flex } from "theme-ui";
 import { InputProps, sizes, iconSizes } from "./types";
 import { Svg } from "../Svg";
 
 const Input: React.FC<InputProps> = ({ size = sizes.MD, icon, width, ...props }) => {
   return (
-    <Box
-      sx={{
-        width: "fit-content",
-      }}
-    >
+    <Flex sx={{ width }}>
       <ThemeUIInput
         {...props}
         sx={{
@@ -24,16 +21,14 @@ const Input: React.FC<InputProps> = ({ size = sizes.MD, icon, width, ...props })
       {icon && (
         <Box
           sx={{
-            position: "absolute",
-            top: "50%",
-            transform: "translateY(-50%)",
-            right: "15px",
+            transform: "translateX(-25px)",
+            display: "flex",
           }}
         >
           <Svg icon={icon} width={iconSizes[size]} />
         </Box>
       )}
-    </Box>
+    </Flex>
   );
 };
 
