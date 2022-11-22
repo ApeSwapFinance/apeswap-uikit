@@ -27,8 +27,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t, supportedCh
       }}
     >
       <Icon />
-      <span style={{ margin: "0px 4px" }} />
-      <Text color="text" variant="sm" weight="normal">
+      <Text color="text" variant="sm" weight="normal" sx={{ marginLeft: "8px" }}>
         {NETWORK_LABEL[chainId]}
       </Text>
       <ArrowDropDownIcon width="10px" ml="8px" />

@@ -526,10 +526,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <span
-                      style="margin: 0px 4px;"
-                    />
-                    <span
-                      class="css-mfd659"
+                      class="css-18slpqc-NetworkButton"
                     >
                       BNB
                     </span>
@@ -881,10 +878,7 @@ it("renders correctly", () => {
                     />
                   </svg>
                   <span
-                    style="margin: 0px 4px;"
-                  />
-                  <span
-                    class="css-mfd659"
+                    class="css-18slpqc-NetworkButton"
                   >
                     BNB
                   </span>
