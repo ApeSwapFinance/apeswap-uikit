@@ -8,11 +8,21 @@ import { Divider } from "../../components/Divider";
 const ModalHeader: React.FC<InternalProps> = ({ children, onDismiss, ...props }) => {
   return (
     <>
-      <Flex {...props} sx={style.modalHead}>
-        {children}
-        <IconButton icon="close" color="text" variant="transparent" onClick={onDismiss} />
-      </Flex>
-      <Divider />
+      {children && (
+        <>
+          <Flex {...props} sx={style.modalHead}>
+            {children}
+          </Flex>
+          <Divider />
+        </>
+      )}
+      <IconButton
+        icon="close"
+        color="text"
+        variant="transparent"
+        onClick={onDismiss}
+        sx={{ position: "absolute", right: "20px", top: "25px" }}
+      />
     </>
   );
 };
