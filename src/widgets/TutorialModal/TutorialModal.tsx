@@ -20,40 +20,43 @@ const Circle: React.FC<CountProps> = ({ index, goToStep, isActive }) => {
     />
   );
 };
-const TutorialModal: React.FC<TModalProps> = ({
-  type,
-  title,
-  description,
-  children,
-  onDismiss,
-  readyText,
-  onReady,
-  t,
-}) => {
-  const childrens = children as React.ReactNode[];
-  const childrensLength = childrens.length;
-
+const TutorialModal: React.FC<TModalProps> = ({ type, title, description, children, onDismiss, readyText, t }) => {
   const [step, setStep] = useState(0);
 
-  // const goNext = () => {
-  //   if (step + 1 !== childrensLength) setStep(step + 1);
-  // };
-
-  // eslint-disable-next-line consistent-return
   const handleNext = () => {
-    if (childrensLength <= step + 1) {
-      onDismiss();
-    } else {
-      return setStep(step + 1);
-    }
+    setStep(step + 1);
   };
 
   const renderChildren = () => {
-    return children && childrens.map((element, index) => <>{step === index && element}</>);
+    return children.map((element, index) => (
+      <Flex key={`${element.title + index}`}>
+        {step === index && (
+          <Flex sx={{ width: "100%", flexWrap: "wrap", mt: 30 }}>
+            <Flex sx={{ width: "100%" }}>
+              <Text
+                sx={{
+                  fontSize: "10px",
+                  lineHeight: "14px",
+                  fontWeight: 700,
+                  color: "yellow",
+                  textTransform: "uppercase",
+                }}
+              >
+                {t(`Step ${step + 1}`)}
+              </Text>
+            </Flex>
+            <Flex sx={{ width: "100%" }}>
+              <Text>{element.title}</Text>
+            </Flex>
+            <Flex sx={{ width: "100%" }}>{element.description}</Flex>
+          </Flex>
+        )}
+      </Flex>
+    ));
   };
 
   const renderDots = () => {
-    return [...Array(childrensLength)].map((_, index) => (
+    return [...Array(children.length)].map((_, index) => (
       <Circle index={index} goToStep={() => setStep(index)} isActive={index === step} />
     ));
   };
@@ -77,8 +80,8 @@ const TutorialModal: React.FC<TModalProps> = ({
             </Flex>
             <Flex sx={styles.modalFooter}>
               <Flex sx={styles.circles}>{renderDots()}</Flex>
-              <Button onClick={step === childrensLength - 1 ? onReady : handleNext} sx={styles.readyBtn}>
-                {step === childrensLength - 1 ? t(`${readyText}`) : t("Next")}
+              <Button onClick={step === children.length - 1 ? onDismiss : handleNext} sx={styles.readyBtn}>
+                {step === children.length - 1 ? t(`${readyText}`) : t("Next")}
               </Button>
             </Flex>
           </Flex>

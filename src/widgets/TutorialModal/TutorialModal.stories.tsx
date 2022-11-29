@@ -81,9 +81,17 @@ export const WithUseModalNavbar: React.FC = (args: any) => {
     description: "Easily trade ANY token on BNB Chain!",
     t: translate,
     onDismiss: () => setVisible(!visible),
-    children: [<Body1 />, <Body2 />],
+    children: [
+      {
+        title: "title1",
+        description: <>slide content 1</>,
+      },
+      {
+        title: "title2",
+        description: <>slide content 2</>,
+      },
+    ],
     readyText: "I'm Ready",
-    onReady: () => setVisible(!visible),
     type: TutorialModals.BNB_DEX,
   });
   return (
@@ -108,10 +116,12 @@ export const WithNavbar: React.FC = (args: any) => {
             t={translate}
             onDismiss={() => setVisible(!visible)}
             readyText="I'm Ready"
-            onReady={() => setVisible(!visible)}
             type={TutorialModals.BNB_DEX}
           >
-            {[<Body1 />, <Body2 />]}
+            {[
+              { title: "title1", description: <>content1</> },
+              { title: "title2", description: <>content2</> },
+            ]}
           </TutorialModal>
         )}
         <Connected />
