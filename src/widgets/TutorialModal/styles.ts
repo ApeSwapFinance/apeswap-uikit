@@ -55,6 +55,7 @@ export const styles: Record<string, ThemeUIStyleObject> = {
   right: {
     flexDirection: "column",
     height: "100%",
+    minHeight: "270px",
   },
   modalHeader: {
     flexDirection: ["column"],

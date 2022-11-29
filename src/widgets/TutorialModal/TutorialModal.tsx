@@ -46,7 +46,17 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
               </Text>
             </Flex>
             <Flex sx={{ width: "100%" }}>
-              <Text>{element.title}</Text>
+              <Text
+                sx={{
+                  fontSize: ["12px", "12px", "22px"],
+                  lineHeight: ["12px", "12px", "22px"],
+                  fontWeight: 700,
+                  textTransform: ["uppercase", "uppercase", "capitalize"],
+                  mb: [0, 0, "10px"],
+                }}
+              >
+                {element.title}
+              </Text>
             </Flex>
             <Flex sx={{ width: "100%" }}>{element.description}</Flex>
           </Flex>
