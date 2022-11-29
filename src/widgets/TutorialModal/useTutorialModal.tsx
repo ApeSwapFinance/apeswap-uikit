@@ -14,7 +14,6 @@ const useTutorialModal = ({
   description,
   onDismiss,
   readyText,
-  onReady,
   t,
 }: TModalProps): ReturnType => {
   const [onPresentTutorialModal] = useModal(
@@ -24,7 +23,6 @@ const useTutorialModal = ({
       description={description}
       onDismiss={onDismiss}
       readyText={readyText}
-      onReady={onReady}
       t={t}
     >
       {children}
