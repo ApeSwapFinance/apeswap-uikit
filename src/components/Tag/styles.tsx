@@ -29,4 +29,22 @@ export const StyledTag = styled.div<ThemedProps>`
   }
 `;
 
-export default null;
+export const StyledLpTag = styled.div<{ background: string }>`
+  align-items: center;
+  background: ${({ background }) => background};
+  border-radius: 6px;
+  display: inline-flex;
+  height: 15px;
+  padding: 0 5px;
+`;
+
+export const StyledLpText = styled.div<{ background?: string }>`
+  background: ${({ background }) => background};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+`;

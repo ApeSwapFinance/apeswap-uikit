@@ -1,6 +1,6 @@
 import React from "react";
 import { TagProps } from "./types";
-import { StyledTag } from "./StyledTag";
+import { StyledTag } from "./styles";
 
 const Tag: React.FC<TagProps> = ({ startIcon, endIcon, children, ...props }) => (
   <StyledTag {...props}>
