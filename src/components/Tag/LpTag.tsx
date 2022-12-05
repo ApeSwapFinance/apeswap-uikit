@@ -1,10 +1,6 @@
 import React from "react";
 import { StyledLpTag, StyledLpText } from "./styles";
-
-export enum LpTypeVariants {
-  APE = "ape",
-  UNI = "uni",
-}
+import { LpTypeVariants } from "./types";
 
 export interface LpTagProps {
   variant: LpTypeVariants;

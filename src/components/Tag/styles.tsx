@@ -42,7 +42,7 @@ export const StyledLpText = styled.div<{ background?: string }>`
   background: ${({ background }) => background};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.8;
+  opacity: 1;
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 500;
