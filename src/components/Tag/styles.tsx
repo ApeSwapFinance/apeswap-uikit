@@ -29,20 +29,27 @@ export const StyledTag = styled.div<ThemedProps>`
   }
 `;
 
-export const StyledLpTag = styled.div<{ background: string }>`
+export const StyledLpTag = styled.div<{ background: { light: string; dark: string } }>`
   align-items: center;
-  background: ${({ background }) => background};
+  background: ${({ background, theme }) => (theme.isDark ? background.dark : background.light)};
   border-radius: 6px;
   display: inline-flex;
   height: 15px;
   padding: 0 5px;
 `;
 
-export const StyledLpText = styled.div<{ background?: string }>`
-  background: ${({ background }) => background};
+export const LightText = styled.div<{ background: { light: string; dark: string } }>`
+  background: ${({ background }) => background?.light};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+`;
+
+export const DarkText = styled.div<{ background: { light: string; dark: string } }>`
+  color: ${({ background }) => background?.dark};
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 500;

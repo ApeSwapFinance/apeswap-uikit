@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Meta } from "@storybook/react/types-6-0";
 import { CommunityIcon, RemoveIcon } from "../Svg";
 import Tag from "./Tag";
-import { variants } from "./types";
-import LpTag, { LpTypeVariants } from "./LpTag";
+import { LpTypeVariants, variants } from "./types";
+import LpTag from "./LpTag";
 
 const Row = styled.div`
   display: flex;
