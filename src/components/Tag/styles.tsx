@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
 import getColor from "../../util/getColor";
-import { TagProps } from "./types";
+import { LpTypeVariants, TagProps } from "./types";
 
 interface ThemedProps extends TagProps {
   theme: DefaultTheme;
@@ -29,17 +29,17 @@ export const StyledTag = styled.div<ThemedProps>`
   }
 `;
 
-export const StyledLpTag = styled.div<{ background: { light: string; dark: string } }>`
+export const StyledLpTag = styled.div<{ variant: LpTypeVariants }>`
   align-items: center;
-  background: ${({ background, theme }) => (theme.isDark ? background.dark : background.light)};
+  background: ${({ theme, variant }) => theme?.colors?.lpTagBg[variant]};
   border-radius: 6px;
   display: inline-flex;
   height: 15px;
   padding: 0 5px;
 `;
 
-export const LightText = styled.div<{ background: { light: string; dark: string } }>`
-  background: ${({ background }) => background?.light};
+export const LightText = styled.div<{ variant: LpTypeVariants }>`
+  background: ${({ theme, variant }) => theme?.colors?.lpTagText[variant]};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
@@ -48,8 +48,8 @@ export const LightText = styled.div<{ background: { light: string; dark: string 
   line-height: 15px;
 `;
 
-export const DarkText = styled.div<{ background: { light: string; dark: string } }>`
-  color: ${({ background }) => background?.dark};
+export const DarkText = styled.div<{ variant: LpTypeVariants }>`
+  color: ${({ theme, variant }) => theme?.colors?.lpTagText[variant]};
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 500;
