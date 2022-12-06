@@ -426,7 +426,7 @@ it("renders correctly", () => {
                   </a>
                   <a
                     class="sc-hiSbEG gqZtKj"
-                    href="https://discord.gg/apeswap"
+                    href="https://apeswap.click/discord"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -953,7 +953,7 @@ it("renders correctly", () => {
                 </a>
                 <a
                   class="sc-bBXrwG kqTzrD"
-                  href="https://discord.gg/apeswap"
+                  href="https://apeswap.click/discord"
                   rel="noopener noreferrer"
                   target="_blank"
                 >

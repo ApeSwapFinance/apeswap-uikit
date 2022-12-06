@@ -25,7 +25,8 @@ export const Wallet = (args: any) => {
     () => null,
     translate,
     "0xbdda50183d817c3289f895a4472eb475967dc980",
-    "babadrape64.wallet"
+    "",
+    "bbdrape.bnb"
   );
   return (
     <StorybookLayout {...args}>
