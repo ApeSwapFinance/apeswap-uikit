@@ -20,7 +20,8 @@ export interface TagProps extends SpaceProps {
   outline?: boolean;
 }
 
-export enum LpTypeVariants {
+export enum LpTypes {
   APE = "ape",
   UNI = "uni",
 }
+export type LpTypeVariants = typeof LpTypes[keyof typeof LpTypes];
