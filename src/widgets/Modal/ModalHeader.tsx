@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Flex } from "theme-ui";
 import style from "./styles";
 import { IconButton } from "../../components/Button";

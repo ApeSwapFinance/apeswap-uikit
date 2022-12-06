@@ -7,14 +7,15 @@ import { Button } from "../../components/Button";
 import { Text } from "../../components/Text";
 import styles from "./styles";
 
-interface Props {
+export interface Props {
   chainId: number;
   switchNetwork: SwitchNetwork;
   t: (key: string) => string;
+  supportedChains?: number[];
 }
 
-const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t }) => {
-  const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId, t);
+const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t, supportedChains }) => {
+  const { onPresentNetworkModal } = useNetworkModal(switchNetwork, chainId, t, supportedChains);
   const Icon = NETWORK_ICON[chainId];
 
   return (
@@ -26,8 +27,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t }) => {
       }}
     >
       <Icon />
-      <span style={{ margin: "0px 4px" }} />
-      <Text color="text" variant="sm" weight="normal">
+      <Text color="text" variant="sm" weight="normal" sx={{ marginLeft: "8px" }}>
         {NETWORK_LABEL[chainId]}
       </Text>
       <ArrowDropDownIcon width="10px" ml="8px" />

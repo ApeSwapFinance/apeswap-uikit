@@ -31,6 +31,14 @@ export const lightColors: Colors = {
     newGradient: "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
     bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
   },
+  lpTagBg: {
+    ape: "linear-gradient(53.53deg, rgba(161, 101, 82, 0.2) 15.88%, rgba(225, 178, 66, 0.2) 92.56%)",
+    uni: "rgba(213, 49, 113, 0.15)",
+  },
+  lpTagText: {
+    ape: "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
+    uni: "#D53171",
+  },
   primaryButtonDisable: "rgba(66, 66, 66, 0.5)",
   secondaryButtonDisableBg: "#F1EADA",
   secondaryButtonDisableColor: "rgba(66, 66, 66, 0.5)",
@@ -51,6 +59,14 @@ export const darkColors: Colors = {
   navbar: "#212121",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
+  },
+  lpTagBg: {
+    ape: "linear-gradient(53.53deg, rgba(161, 101, 82, 0.5) 15.88%, rgba(225, 178, 66, 0.5) 92.56%)",
+    uni: "rgba(213, 49, 113, 0.15)",
+  },
+  lpTagText: {
+    ape: "rgba(255, 255, 255, 0.5)",
+    uni: "#D53171",
   },
   primaryButtonDisable: "rgba(241, 234, 218, 0.5)",
   secondaryButtonDisableBg: "rgba(33, 33, 33, 0.5)",

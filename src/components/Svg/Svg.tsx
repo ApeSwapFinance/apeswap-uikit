@@ -50,6 +50,7 @@ import {
   Migrate,
   Message,
   Positions,
+  MenuSettings,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -222,6 +223,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.POSITIONS) {
     return <Positions {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.MENU_SETTINGS) {
+    return <MenuSettings {...props} getStyles={getStyles} />;
   }
   return null;
 };

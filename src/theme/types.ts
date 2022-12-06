@@ -61,6 +61,8 @@ export type Colors = {
   smartGradient: string;
   yellowHover: string;
   input: string;
+  lpTagBg: LpTagColors;
+  lpTagText: LpTagColors;
 
   // Gradients
   gradients?: Gradients;
@@ -76,4 +78,9 @@ export type ZIndices = {
 
 export type FontFamily = {
   poppins: string;
+};
+
+export type LpTagColors = {
+  ape: string;
+  uni: string;
 };

@@ -19,3 +19,8 @@ export interface TagProps extends SpaceProps {
   endIcon?: ReactNode;
   outline?: boolean;
 }
+
+export enum LpTypeVariants {
+  APE = "ape",
+  UNI = "uni",
+}
