@@ -1,13 +1,9 @@
 import React from "react";
 import { useTheme } from "styled-components";
 import { StyledLpTag, LightText, DarkText } from "./styles";
-import { LpTypeVariants } from "./types";
+import { LpTagProps } from "./types";
 
-export interface LpTagProps {
-  variant?: LpTypeVariants;
-}
-
-const LpTag: React.FC<LpTagProps> = ({ variant = LpTypeVariants.APE, ...props }) => {
+const LpTag: React.FC<LpTagProps> = ({ variant, ...props }) => {
   const { isDark } = useTheme();
 
   return (

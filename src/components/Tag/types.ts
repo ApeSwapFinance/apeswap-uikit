@@ -20,7 +20,13 @@ export interface TagProps extends SpaceProps {
   outline?: boolean;
 }
 
-export enum LpTypeVariants {
-  APE = "ape",
-  UNI = "uni",
+export const lpTagVariants = {
+  APE: "ape",
+  UNI: "uni",
+} as const;
+
+export type LpTagVariants = typeof lpTagVariants[keyof typeof lpTagVariants];
+
+export interface LpTagProps extends SpaceProps {
+  variant?: LpTagVariants;
 }
