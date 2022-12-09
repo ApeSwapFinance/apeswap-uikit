@@ -32,7 +32,7 @@ export const lightColors: Colors = {
     bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
   },
   lpTagBg: {
-    ape: "linear-gradient(53.53deg, rgba(161, 101, 82, 0.2) 15.88%, rgba(225, 178, 66, 0.2) 92.56%)",
+    ape: "linear-gradient(53.53deg, rgba(161, 101, 82, 0.35) 15.88%, rgba(225, 178, 66, 0.35) 92.56%)",
     uni: "rgba(213, 49, 113, 0.15)",
   },
   lpTagText: {
@@ -65,7 +65,7 @@ export const darkColors: Colors = {
     uni: "rgba(213, 49, 113, 0.15)",
   },
   lpTagText: {
-    ape: "rgba(255, 255, 255, 0.5)",
+    ape: "rgba(255, 255, 255, 0.75)",
     uni: "#D53171",
   },
   primaryButtonDisable: "rgba(241, 234, 218, 0.5)",

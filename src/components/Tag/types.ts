@@ -28,5 +28,5 @@ export const lpTagVariants = {
 export type LpTagVariants = typeof lpTagVariants[keyof typeof lpTagVariants];
 
 export interface LpTagProps extends SpaceProps {
-  variant?: LpTagVariants;
+  variant: LpTagVariants;
 }
