@@ -82,4 +82,5 @@ export type FontFamily = {
 export type LpTagColors = {
   ape: string;
   uni: string;
+  ark: string;
 };

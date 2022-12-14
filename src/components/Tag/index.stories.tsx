@@ -41,6 +41,7 @@ export const Default: React.FC = () => {
       <Row>
         <LpTag variant="ape" />
         <LpTag variant="uni" />
+        <LpTag variant="ark" />
       </Row>
     </>
   );

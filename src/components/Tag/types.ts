@@ -23,6 +23,7 @@ export interface TagProps extends SpaceProps {
 export const lpTagVariants = {
   APE: "ape",
   UNI: "uni",
+  ARK: "ark",
 } as const;
 
 export type LpTagVariants = typeof lpTagVariants[keyof typeof lpTagVariants];

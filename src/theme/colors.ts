@@ -34,6 +34,7 @@ export const lightColors: Colors = {
   lpTagBg: {
     ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
     uni: "rgba(213, 49, 113, 0.8)",
+    ark: "rgba(208, 126, 90, 0.8)",
   },
   primaryButtonDisable: "rgba(66, 66, 66, 0.5)",
   secondaryButtonDisableBg: "#F1EADA",
@@ -59,6 +60,7 @@ export const darkColors: Colors = {
   lpTagBg: {
     ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
     uni: "rgba(213, 49, 113, 0.8)",
+    ark: "rgba(208, 126, 90, 0.8)",
   },
   primaryButtonDisable: "rgba(241, 234, 218, 0.5)",
   secondaryButtonDisableBg: "rgba(33, 33, 33, 0.5)",
