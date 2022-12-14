@@ -42,20 +42,10 @@ export const StyledLpTag = styled.div<CustomProps>`
   padding: 0 5px;
 `;
 
-export const LightText = styled.div<CustomProps>`
-  background: ${({ theme, variant = "ape" }) => theme?.colors?.lpTagText?.[variant]};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+export const StyledLPText = styled.div<{ theme: DefaultTheme }>`
+  color: ${({ theme }) => theme?.colors?.primaryBright};
   text-transform: uppercase;
   font-size: 10px;
-  font-weight: 500;
-  line-height: 15px;
-`;
-
-export const DarkText = styled.div<CustomProps>`
-  color: ${({ theme, variant = "ape" }) => theme?.colors?.lpTagText?.[variant]};
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 15px;
 `;
