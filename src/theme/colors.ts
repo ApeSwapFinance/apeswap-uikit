@@ -13,6 +13,11 @@ export const baseColors = {
   inputBorder: "#E6DECB",
   brown: "#A16552",
   smartGradient: "linear-gradient(94.44deg, #BA801E -9.73%, #E7CF67 40.14%, #BA801E 93.01%)",
+  lpTagBg: {
+    ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
+    uni: "rgba(213, 49, 113, 0.8)",
+    ark: "rgba(208, 126, 90, 0.8)",
+  },
 };
 
 export const brandColors = {
@@ -30,11 +35,6 @@ export const lightColors: Colors = {
   gradients: {
     newGradient: "linear-gradient(53.53deg, #A16552 15.88%, #E1B242 92.56%)",
     bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
-  },
-  lpTagBg: {
-    ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
-    uni: "rgba(213, 49, 113, 0.8)",
-    ark: "rgba(208, 126, 90, 0.8)",
   },
   primaryButtonDisable: "rgba(66, 66, 66, 0.5)",
   secondaryButtonDisableBg: "#F1EADA",
@@ -56,11 +56,6 @@ export const darkColors: Colors = {
   navbar: "#212121",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
-  },
-  lpTagBg: {
-    ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
-    uni: "rgba(213, 49, 113, 0.8)",
-    ark: "rgba(208, 126, 90, 0.8)",
   },
   primaryButtonDisable: "rgba(241, 234, 218, 0.5)",
   secondaryButtonDisableBg: "rgba(33, 33, 33, 0.5)",
