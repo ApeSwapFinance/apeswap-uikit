@@ -62,7 +62,6 @@ export type Colors = {
   yellowHover: string;
   input: string;
   lpTagBg: LpTagColors;
-  lpTagText: LpTagColors;
 
   // Gradients
   gradients?: Gradients;
@@ -83,4 +82,5 @@ export type FontFamily = {
 export type LpTagColors = {
   ape: string;
   uni: string;
+  ark: string;
 };
