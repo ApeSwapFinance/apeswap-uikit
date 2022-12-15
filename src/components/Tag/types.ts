@@ -19,3 +19,15 @@ export interface TagProps extends SpaceProps {
   endIcon?: ReactNode;
   outline?: boolean;
 }
+
+export const lpTagVariants = {
+  APE: "ape",
+  UNI: "uni",
+  ARK: "ark",
+} as const;
+
+export type LpTagVariants = typeof lpTagVariants[keyof typeof lpTagVariants];
+
+export interface LpTagProps extends SpaceProps {
+  variant: LpTagVariants;
+}

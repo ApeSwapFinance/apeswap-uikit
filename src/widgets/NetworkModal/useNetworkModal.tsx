@@ -7,9 +7,14 @@ interface ReturnType {
   onPresentNetworkModal: () => void;
 }
 
-const useNetworkModal = (switchNetwork: SwitchNetwork, chainId: number, t: (key: string) => string): ReturnType => {
+const useNetworkModal = (
+  switchNetwork: SwitchNetwork,
+  chainId: number,
+  t: (key: string) => string,
+  supportedChains?: number[]
+): ReturnType => {
   const [onPresentNetworkModal] = useModal(
-    <SelectNetworkModal switchNetwork={switchNetwork} chainId={chainId} t={t} />,
+    <SelectNetworkModal switchNetwork={switchNetwork} chainId={chainId} t={t} supportedChains={supportedChains} />,
     true,
     false,
     "NetworkModal"

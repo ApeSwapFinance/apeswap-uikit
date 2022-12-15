@@ -50,6 +50,7 @@ import {
   Migrate,
   Message,
   Positions,
+  MenuSettings,
   Quiz,
   Bridge,
   DocsIcon,
@@ -225,6 +226,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.POSITIONS) {
     return <Positions {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.MENU_SETTINGS) {
+    return <MenuSettings {...props} getStyles={getStyles} />;
   }
   if (icon === icons.QUIZ) {
     return <Quiz {...props} getStyles={getStyles} />;

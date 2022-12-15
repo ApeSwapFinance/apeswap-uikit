@@ -9,15 +9,19 @@ import { Svg } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
 import styles from "./styles";
 
-interface Props {
+export interface Props {
   switchNetwork: SwitchNetwork;
   chainId: number;
   t: (key: string) => string;
   onDismiss?: () => void;
+  supportedChains?: number[];
 }
 
-const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss }) => {
-  const [selectedNetwork, networkList] = partition(networks, (network) => network.chainId === chainId);
+const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDismiss, supportedChains }) => {
+  const filteredNetworks = supportedChains
+    ? networks.filter((network) => supportedChains?.includes(network.chainId))
+    : networks;
+  const [selectedNetwork, networkList] = partition(filteredNetworks, (network) => network.chainId === chainId);
   return (
     <Modal maxWidth="350px" minWidth="350px" onDismiss={onDismiss}>
       <ModalHeader>

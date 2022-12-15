@@ -20,7 +20,7 @@ const styles: Record<string, ThemeUIStyleObject> = {
     boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
   },
   backdrop: {
-    width: "100vw",
+    width: "98vw",
     height: "100vh",
     position: "fixed",
     background: "transparent",

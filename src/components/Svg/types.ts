@@ -59,6 +59,7 @@ export enum icons {
   MIGRATE = "Migrate",
   MESSAGE = "message",
   POSITIONS = "Positions",
+  MENU_SETTINGS = "MenuSettings",
   QUIZ = "quiz",
   BRIDGE = "bridge",
   DOCS = "docs",
