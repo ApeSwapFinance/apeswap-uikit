@@ -9,12 +9,7 @@ export interface TModalProps {
   title: string;
   readyText: string;
   description?: string;
-  children: Slide[];
-}
-
-export interface Slide {
-  title: string;
-  description: React.ReactNode;
+  children: React.ReactNode[];
 }
 
 export interface CountProps {

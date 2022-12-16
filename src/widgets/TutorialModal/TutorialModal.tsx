@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React, { useState } from "react";
 import { Box } from "theme-ui";
-
 import { CloseIcon } from "../../components/Svg";
 import { Flex } from "../../components/Flex";
 import { Modal } from "../Modal";
@@ -28,9 +27,9 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
   };
 
   const renderChildren = () => {
-    return children.map((element, index) => (
-      <Flex key={`${element.title + index}`}>
-        {step === index && (
+    return children?.map((element, i) => (
+      <Flex>
+        {step === i && (
           <Flex sx={{ width: "100%", flexWrap: "wrap", mt: 30 }}>
             <Flex sx={{ width: "100%" }}>
               <Text
@@ -45,20 +44,7 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
                 {t(`Step ${step + 1}`)}
               </Text>
             </Flex>
-            <Flex sx={{ width: "100%" }}>
-              <Text
-                sx={{
-                  fontSize: ["12px", "12px", "22px"],
-                  lineHeight: ["12px", "12px", "22px"],
-                  fontWeight: 700,
-                  textTransform: ["uppercase", "uppercase", "capitalize"],
-                  mb: [0, 0, "10px"],
-                }}
-              >
-                {element.title}
-              </Text>
-            </Flex>
-            <Flex sx={{ width: "100%" }}>{element.description}</Flex>
+            <Flex sx={{ width: "100%" }}>{element}</Flex>
           </Flex>
         )}
       </Flex>
@@ -66,7 +52,7 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
   };
 
   const renderDots = () => {
-    return [...Array(children.length)].map((_, index) => (
+    return [...Array(children?.length)].map((_, index) => (
       <Circle index={index} goToStep={() => setStep(index)} isActive={index === step} />
     ));
   };
@@ -83,15 +69,12 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
                 <Text sx={styles.title}>{t(`${title}`)}</Text>
                 <Text sx={styles.description}>{t(`${description}`)}</Text>
               </Flex>
-              {/* If mobile wrap the children in a higher order component */}
-              {/* {renderChildren()} */}
-              {/* step, setStep, goNext */}
               {renderChildren()}
             </Flex>
             <Flex sx={styles.modalFooter}>
               <Flex sx={styles.circles}>{renderDots()}</Flex>
-              <Button onClick={step === children.length - 1 ? onDismiss : handleNext} sx={styles.readyBtn}>
-                {step === children.length - 1 ? t(`${readyText}`) : t("Next")}
+              <Button onClick={step >= (children?.length || 0) - 1 ? onDismiss : handleNext} sx={styles.readyBtn}>
+                {step >= (children?.length || 0) - 1 ? t(`${readyText}`) : t("Next")}
               </Button>
             </Flex>
           </Flex>

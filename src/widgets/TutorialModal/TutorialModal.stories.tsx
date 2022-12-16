@@ -77,20 +77,11 @@ const Body2 = () => {
 export const WithUseModalNavbar: React.FC = (args: any) => {
   const [visible, setVisible] = useState(true);
   const { onPresentTutorialModal } = useTutorialModal({
-    title: "Welcome to ApeSwap's Dex",
-    description: "Easily trade ANY token on BNB Chain!",
+    title: "This is the tutorial {title}",
+    description: "This is the tutorial {description}",
     t: translate,
     onDismiss: () => setVisible(!visible),
-    children: [
-      {
-        title: "title1",
-        description: <>slide content 1</>,
-      },
-      {
-        title: "title2",
-        description: <>slide content 2</>,
-      },
-    ],
+    children: [<>this is the slide content</>, <>fede is hot</>],
     readyText: "I'm Ready",
     type: TutorialModals.BNB_DEX,
   });
@@ -98,34 +89,6 @@ export const WithUseModalNavbar: React.FC = (args: any) => {
     <StorybookLayout {...args}>
       <Button onClick={onPresentTutorialModal}>open Modal</Button>
       <Connected />
-    </StorybookLayout>
-  );
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const WithNavbar: React.FC = (args: any) => {
-  const [visible, setVisible] = useState(true);
-
-  return (
-    <StorybookLayout {...args}>
-      <>
-        {visible && (
-          <TutorialModal
-            title="Welcome to ApeSwap's Dex"
-            description="Easily trade ANY token on BNB Chain!"
-            t={translate}
-            onDismiss={() => setVisible(!visible)}
-            readyText="I'm Ready"
-            type={TutorialModals.BNB_DEX}
-          >
-            {[
-              { title: "title1", description: <>content1</> },
-              { title: "title2", description: <>content2</> },
-            ]}
-          </TutorialModal>
-        )}
-        <Connected />
-      </>
     </StorybookLayout>
   );
 };
