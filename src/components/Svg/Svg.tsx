@@ -51,6 +51,7 @@ import {
   Message,
   Positions,
   MenuSettings,
+  Fav
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -226,6 +227,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.MENU_SETTINGS) {
     return <MenuSettings {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.FAV) {
+    return <Fav {...props} getStyles={getStyles} />;
   }
   return null;
 };
