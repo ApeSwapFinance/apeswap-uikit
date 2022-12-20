@@ -84,6 +84,7 @@ export const WithUseModalNavbar: React.FC = (args: any) => {
     children: [<>this is the slide content</>, <>fede is hot</>],
     readyText: "I'm Ready",
     type: TutorialModals.BNB_DEX,
+    isConnected: true,
   });
   return (
     <StorybookLayout {...args}>

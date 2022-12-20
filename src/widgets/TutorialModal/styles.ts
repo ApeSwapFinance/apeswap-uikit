@@ -11,12 +11,12 @@ export const modalProps = {
 };
 
 export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
-  showApe: ({ step, type }: ShowApeType) => ({
+  showApe: ({ slideNumber, type }: ShowApeType) => ({
     alignSelf: ["center", "center", ""],
     width: ["200px", "200px", "340px"],
     height: ["200px", "200px", "340px"],
     marginTop: "20px",
-    background: `url(images/tutorial-modals/${type}-${step}.svg)`,
+    background: `url(images/tutorial-modals/${type}-${slideNumber}.svg)`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",

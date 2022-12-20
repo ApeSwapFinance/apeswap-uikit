@@ -19,8 +19,18 @@ const Circle: React.FC<CountProps> = ({ index, goToStep, isActive }) => {
     />
   );
 };
-const TutorialModal: React.FC<TModalProps> = ({ type, title, description, children, onDismiss, readyText, t }) => {
-  const [step, setStep] = useState(0);
+const TutorialModal: React.FC<TModalProps> = ({
+  type,
+  title,
+  description,
+  children,
+  onDismiss,
+  readyText,
+  t,
+  isConnected,
+}) => {
+  const [step, setStep] = useState<number>(0);
+  const slideNumber = isConnected ? step + 1 : step;
 
   const handleNext = () => {
     setStep(step + 1);
@@ -30,7 +40,7 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
     return children?.map((element, i) => (
       <Flex>
         {step === i && (
-          <Flex sx={{ width: "100%", flexWrap: "wrap", mt: 30 }}>
+          <Flex sx={{ width: "100%", flexWrap: "wrap", mt: ["15px", "15px", "30px"] }}>
             <Flex sx={{ width: "100%" }}>
               <Text
                 sx={{
@@ -62,7 +72,7 @@ const TutorialModal: React.FC<TModalProps> = ({ type, title, description, childr
       <Flex className="tutorial-modal" sx={styles.modalCon}>
         <CloseIcon width={22} onClick={onDismiss} sx={{ cursor: "pointer", position: "absolute", right: "20px" }} />
         <Flex sx={styles.contentBody}>
-          <Box sx={dynamicStyles.showApe({ step, type })} />
+          <Box sx={dynamicStyles.showApe({ slideNumber, type })} />
           <Flex sx={styles.rightCon}>
             <Flex sx={styles.right}>
               <Flex sx={styles.modalHeader}>

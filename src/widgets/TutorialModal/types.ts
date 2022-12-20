@@ -10,6 +10,7 @@ export interface TModalProps {
   readyText: string;
   description?: string;
   children: React.ReactNode[];
+  isConnected: boolean;
 }
 
 export interface CountProps {
@@ -41,7 +42,7 @@ export enum TutorialModals {
 export type TutorialModalTypes = `${TutorialModals}`;
 
 export interface ShowApeType {
-  step: number;
+  slideNumber: number;
   type: TutorialModalTypes | string;
   isDark: boolean;
 }
