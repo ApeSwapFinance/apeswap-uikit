@@ -51,6 +51,7 @@ import {
   Message,
   Positions,
   MenuSettings,
+  Fav,
   Quiz,
   Bridge,
   DocsIcon,
@@ -229,6 +230,9 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.MENU_SETTINGS) {
     return <MenuSettings {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.FAV) {
+    return <Fav {...props} getStyles={getStyles} />;
   }
   if (icon === icons.QUIZ) {
     return <Quiz {...props} getStyles={getStyles} />;

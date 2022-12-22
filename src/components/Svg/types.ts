@@ -60,6 +60,7 @@ export enum icons {
   MESSAGE = "message",
   POSITIONS = "Positions",
   MENU_SETTINGS = "MenuSettings",
+  FAV = "Fav",
   QUIZ = "quiz",
   BRIDGE = "bridge",
   DOCS = "docs",

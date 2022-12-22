@@ -49,3 +49,4 @@ export { default as MenuSettings } from "./MenuSettings";
 export { default as Quiz } from "./Quiz";
 export { default as Bridge } from "./Bridge";
 export { default as DocsIcon } from "./Docs";
+export { default as Fav } from "./Fav";
