@@ -39,24 +39,7 @@ const TutorialModal: React.FC<TModalProps> = ({
   const renderChildren = () => {
     return children?.map((element, i) => (
       <Flex>
-        {step === i && (
-          <Flex sx={{ width: "100%", flexWrap: "wrap", mt: ["15px", "15px", "30px"] }}>
-            <Flex sx={{ width: "100%" }}>
-              <Text
-                sx={{
-                  fontSize: "10px",
-                  lineHeight: "14px",
-                  fontWeight: 700,
-                  color: "yellow",
-                  textTransform: "uppercase",
-                }}
-              >
-                {t(`Step ${step + 1}`)}
-              </Text>
-            </Flex>
-            <Flex sx={{ width: "100%" }}>{element}</Flex>
-          </Flex>
-        )}
+        {step === i && <Flex sx={{ width: "100%", flexWrap: "wrap", mt: ["15px", "15px", "30px"] }}>{element}</Flex>}
       </Flex>
     ));
   };
