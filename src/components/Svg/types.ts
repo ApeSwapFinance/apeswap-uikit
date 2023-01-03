@@ -61,6 +61,9 @@ export enum icons {
   POSITIONS = "Positions",
   MENU_SETTINGS = "MenuSettings",
   FAV = "Fav",
+  URL = "URL",
+  BUBBLE = "bubble",
+  AUDIT = "audit",
 }
 
 export enum directions {
