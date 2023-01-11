@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
 import getColor from "../../util/getColor";
-import { LpTagProps, TagProps } from "./types";
+import { ListTagProps, TagProps } from "./types";
 
 interface ThemedProps extends TagProps {
   theme: DefaultTheme;
@@ -29,20 +29,20 @@ export const StyledTag = styled.div<ThemedProps>`
   }
 `;
 
-interface CustomProps extends LpTagProps {
+interface CustomProps extends ListTagProps {
   theme: DefaultTheme;
 }
 
-export const StyledLpTag = styled.div<CustomProps>`
+export const StyledListTag = styled.div<CustomProps>`
   align-items: center;
-  background: ${({ theme, variant = "ape" }) => theme?.colors?.lpTagBg?.[variant]};
-  border-radius: 6px;
+  background: ${({ theme, variant = "ape" }) => theme?.colors?.listTagBg?.[variant]};
+  border-radius: 16px;
   display: inline-flex;
   height: 15px;
   padding: 0 5px;
 `;
 
-export const StyledLPText = styled.div<{ theme: DefaultTheme }>`
+export const StyledTagText = styled.div<{ theme: DefaultTheme }>`
   color: ${({ theme }) => theme?.colors?.primaryBright};
   text-transform: uppercase;
   font-size: 10px;
