@@ -3,6 +3,7 @@ import { StyledListTag, StyledTagText } from "./styles";
 import { ListTagProps } from "./types";
 
 const ListTag: React.FC<ListTagProps> = ({ variant, ...props }) => {
+  const asd = "dummy string"
   return (
     <StyledListTag variant={variant} {...props}>
       <StyledTagText>
