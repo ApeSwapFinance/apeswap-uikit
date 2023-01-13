@@ -3,9 +3,7 @@ import { ShowApeType } from "./types";
 
 export const modalProps = {
   sx: {
-    minWidth: ["280px", "280px", "873px"],
     width: ["200px"],
-    maxWidth: ["280px", "280px", "873px"],
     height: ["", "", "500px"],
   },
 };
@@ -15,7 +13,6 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
     alignSelf: ["center", "center", ""],
     width: ["200px", "200px", "340px"],
     height: ["200px", "200px", "340px"],
-    marginTop: "20px",
     background: `url(images/tutorial-modals/${type}-${slideNumber}.svg)`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -49,8 +46,8 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     width: "100%",
     flexDirection: "column",
     flex: 1,
-    mr: ["", "", "30px"],
-    maxWidth: ["", "", "53%"],
+    mr: ["", "", "10px"],
+    maxWidth: ["", "", "55%"],
   },
   right: {
     flexDirection: "column",

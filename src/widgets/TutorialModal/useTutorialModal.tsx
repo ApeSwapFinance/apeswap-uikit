@@ -13,9 +13,9 @@ const useTutorialModal = ({
   title,
   description,
   onDismiss,
-  readyText,
   t,
   isConnected,
+  width,
 }: TModalProps): ReturnType => {
   const [onPresentTutorialModal] = useModal(
     <TutorialModal
@@ -23,9 +23,9 @@ const useTutorialModal = ({
       title={title}
       description={description}
       onDismiss={onDismiss}
-      readyText={readyText}
       t={t}
       isConnected={isConnected}
+      width={width}
     >
       {children}
     </TutorialModal>,

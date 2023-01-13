@@ -8,6 +8,7 @@ import { CountProps, TModalProps } from "./types";
 import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
 import { styles, modalProps, dynamicStyles } from "./styles";
+import useMatchBreakpoints from "../../hooks/useMatchBreakpoints";
 
 const Circle: React.FC<CountProps> = ({ index, goToStep, isActive }) => {
   return (
@@ -25,12 +26,14 @@ const TutorialModal: React.FC<TModalProps> = ({
   description,
   children,
   onDismiss,
-  readyText,
   t,
   isConnected,
+  width = "280px",
 }) => {
   const [step, setStep] = useState<number>(0);
   const slideNumber = isConnected ? step + 1 : step;
+  const { isXxl, isLg, isXl } = useMatchBreakpoints();
+  const isMobile = !isXxl && !isXl && !isLg;
 
   const handleNext = () => {
     setStep(step + 1);
@@ -51,7 +54,13 @@ const TutorialModal: React.FC<TModalProps> = ({
   };
 
   return (
-    <Modal zIndex={10} onDismiss={onDismiss} {...modalProps}>
+    <Modal
+      zIndex={10}
+      onDismiss={onDismiss}
+      minWidth={isMobile ? width : "873px"}
+      maxWidth={isMobile ? width : "873px"}
+      {...modalProps}
+    >
       <Flex className="tutorial-modal" sx={styles.modalCon}>
         <CloseIcon width={22} onClick={onDismiss} sx={{ cursor: "pointer", position: "absolute", right: "20px" }} />
         <Flex sx={styles.contentBody}>
@@ -67,7 +76,7 @@ const TutorialModal: React.FC<TModalProps> = ({
             <Flex sx={styles.modalFooter}>
               <Flex sx={styles.circles}>{renderDots()}</Flex>
               <Button onClick={step >= (children?.length || 0) - 1 ? onDismiss : handleNext} sx={styles.readyBtn}>
-                {step >= (children?.length || 0) - 1 ? t(`${readyText}`) : t("Next")}
+                {step >= (children?.length || 0) - 1 ? t("I'm Ready") : t("Next")}
               </Button>
             </Flex>
           </Flex>

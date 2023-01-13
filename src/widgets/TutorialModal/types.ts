@@ -5,12 +5,12 @@ export type ActionHandler = () => void;
 export interface TModalProps {
   t: (key: string) => string;
   onDismiss: ActionHandler;
-  type: TutorialModalTypes | string;
+  type: string;
   title: string;
-  readyText: string;
   description?: string;
   children: React.ReactNode[];
   isConnected: boolean;
+  width?: string;
 }
 
 export interface CountProps {
@@ -19,30 +19,8 @@ export interface CountProps {
   isActive: boolean;
 }
 
-export enum TutorialModals {
-  BNB_DEX = "BNB-dex",
-  POLYGON_DEX = "Polygon-dex",
-  ETHEREUM_DEX = "Ethereum-dex",
-  TELOS_DEX = "Telos-dex",
-  JUNGLE_FARMS = "jungle-farms",
-  BANANA_FARMS = "banana-farms",
-  POLYGON_FARMS = "Polygon-farms",
-  TELOS_FARMS = "Telos-farms",
-  POOLS = "pools",
-  MAXIMIZERS_VAULTS = "maximizers-vaults",
-  GNANA = "gnana",
-  TREASURY_BILL = "treasury-bills",
-  IAO = "iao",
-  ORDERS = "orders",
-  LIQUIDITY = "liquidity",
-
-  LENDING = "lending",
-}
-
-export type TutorialModalTypes = `${TutorialModals}`;
-
 export interface ShowApeType {
   slideNumber: number;
-  type: TutorialModalTypes | string;
+  type: string;
   isDark: boolean;
 }

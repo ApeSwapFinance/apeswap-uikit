@@ -4,7 +4,6 @@ import { Button } from "../../components/Button";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
 import { Connected } from "../Navbar/index.stories";
 import TutorialModal from "./TutorialModal";
-import { TutorialModals } from "./types";
 import useTutorialModal from "./useTutorialModal";
 
 export default {
@@ -29,9 +28,9 @@ export const WithUseModalNavbar: React.FC = (args: any) => {
     t: translate,
     onDismiss: () => setVisible(!visible),
     children: [<>slide content 1</>, <>second slide content</>],
-    readyText: "I'm Ready",
-    type: TutorialModals.BNB_DEX,
+    type: "migrate",
     isConnected: true,
+    width: "280px",
   });
   return (
     <StorybookLayout {...args}>
