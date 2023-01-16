@@ -51,7 +51,7 @@ import {
   Message,
   Positions,
   MenuSettings,
-  Fav
+  Fav,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
 import { IconStyles } from "./Icons/types";
