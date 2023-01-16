@@ -8,6 +8,7 @@ export enum ConnectorNames {
   Walletlink = "Walletlink",
   Unstoppable = "Unstoppable",
   Torus = "Torus",
+  LEDGER_HQ_LIVE = "Ledger",
 }
 
 export type Login = (connectorId: ConnectorNames) => void;

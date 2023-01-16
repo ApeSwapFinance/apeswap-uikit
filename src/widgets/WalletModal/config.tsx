@@ -16,6 +16,11 @@ import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
   {
+    title: "Ledger",
+    icon: Metamask,
+    connectorId: ConnectorNames.LEDGER_HQ_LIVE,
+  },
+  {
     title: "Metamask",
     icon: Metamask,
     connectorId: ConnectorNames.Injected,
