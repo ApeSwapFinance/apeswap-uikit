@@ -8,7 +8,10 @@ export const modalProps = {
   },
 };
 
-export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> = {
+export const dynamicStyles: Record<
+  "showApe" | "allCircle",
+  (props: { slideNumber?: number; type?: string; isActive?: boolean }) => ThemeUIStyleObject
+> = {
   showApe: ({ slideNumber, type }: ShowApeType) => ({
     alignSelf: ["center", "center", ""],
     width: ["200px", "200px", "340px"],
@@ -31,7 +34,19 @@ export const dynamicStyles: Record<string, (props: any) => ThemeUIStyleObject> =
   }),
 };
 
-export const styles: Record<string, ThemeUIStyleObject> = {
+export const styles: Record<
+  | "modalCon"
+  | "contentBody"
+  | "rightCon"
+  | "right"
+  | "modalHeader"
+  | "title"
+  | "description"
+  | "circles"
+  | "readyBtn"
+  | "modalFooter",
+  ThemeUIStyleObject
+> = {
   modalCon: {
     height: "100%",
   },
@@ -87,43 +102,5 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: ["center", "center", "flex-start"],
-  },
-  // To test frontend modal content
-  container: {
-    flexDirection: "column",
-    mt: ["15px", "15px", "30px"],
-    gap: "5px",
-    height: ["145px", "145px", "200px"],
-  },
-  step: {
-    fontSize: "10px",
-    lineHeight: "14px",
-    fontWeight: 700,
-    color: "yellow",
-    textTransform: "uppercase",
-  },
-  head: {
-    fontSize: ["12px", "12px", "22px"],
-    lineHeight: "14px",
-    fontWeight: 700,
-    textTransform: ["uppercase", "uppercase", "capitalize"],
-    mb: [0, 0, "10px"],
-  },
-  yellow: {
-    color: "yellow",
-    lineHeight: "18px",
-    textDecoration: "underline",
-  },
-  content: {
-    fontSize: ["12px", "12px", "14px"],
-    fontWeight: [400, 400, 500],
-    lineHeight: ["18px", "18px", "21px"],
-  },
-  tipTitle: {
-    fontWeight: 700,
-  },
-  tipBody: {
-    fontWeight: 500,
-    fontStyle: "normal",
   },
 };

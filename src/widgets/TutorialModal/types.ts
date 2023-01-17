@@ -20,7 +20,6 @@ export interface CountProps {
 }
 
 export interface ShowApeType {
-  slideNumber: number;
-  type: string;
-  isDark: boolean;
+  slideNumber?: number;
+  type?: string;
 }
