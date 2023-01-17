@@ -55,6 +55,9 @@ import {
   Quiz,
   Bridge,
   DocsIcon,
+  URL,
+  Bubble,
+  Audit,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
 import { IconStyles } from "./Icons/types";
@@ -242,6 +245,15 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.DOCS) {
     return <DocsIcon {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.URL) {
+    return <URL {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.BUBBLE) {
+    return <Bubble {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.AUDIT) {
+    return <Audit {...props} getStyles={getStyles} />;
   }
   return null;
 };

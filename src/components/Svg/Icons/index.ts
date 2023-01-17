@@ -50,3 +50,6 @@ export { default as Quiz } from "./Quiz";
 export { default as Bridge } from "./Bridge";
 export { default as DocsIcon } from "./Docs";
 export { default as Fav } from "./Fav";
+export { default as URL } from "./URL";
+export { default as Bubble } from "./Bubble";
+export { default as Audit } from "./Audit";

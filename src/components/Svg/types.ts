@@ -64,6 +64,9 @@ export enum icons {
   QUIZ = "quiz",
   BRIDGE = "bridge",
   DOCS = "docs",
+  URL = "URL",
+  BUBBLE = "bubble",
+  AUDIT = "audit",
 }
 
 export enum directions {
