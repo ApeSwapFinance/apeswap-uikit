@@ -52,6 +52,9 @@ import {
   Positions,
   MenuSettings,
   Fav,
+  Quiz,
+  Bridge,
+  DocsIcon,
   URL,
   Bubble,
   Audit,
@@ -233,6 +236,15 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.FAV) {
     return <Fav {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.QUIZ) {
+    return <Quiz {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.BRIDGE) {
+    return <Bridge {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.DOCS) {
+    return <DocsIcon {...props} getStyles={getStyles} />;
   }
   if (icon === icons.URL) {
     return <URL {...props} getStyles={getStyles} />;
