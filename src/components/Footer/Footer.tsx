@@ -255,7 +255,7 @@ const Footer: React.FC<FooterProps> = ({
             left: ["10px", "auto"],
           }}
         >
-          <Text color="primaryBright">{t("©2022 All rights reserved")}</Text>
+          <Text color="primaryBright">{t(`©${new Date().getFullYear()} All rights reserved`)}</Text>
           <Flex sx={{ alignItems: "center", width: "150px", justifyContent: "center" }}>
             <Link href="https://apeswap.finance/terms" target="_blank">
               <Text size="12px" color="primaryBright" sx={styles.linkText}>

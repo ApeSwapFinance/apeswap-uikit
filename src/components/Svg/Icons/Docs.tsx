@@ -1,8 +1,9 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
 import { SvgProps, rotation } from "./types";
+import { Flex } from "../../Flex";
 
-const Docs: React.FC<SvgProps> = ({ direction = "right", color = "primaryBright", width, getStyles }) => {
+const Docs: React.FC<SvgProps> = ({ direction = "right", color = "primaryBright", getStyles }) => {
   const deg: rotation = {
     left: 180,
     up: 270,
@@ -15,7 +16,7 @@ const Docs: React.FC<SvgProps> = ({ direction = "right", color = "primaryBright"
   });
 
   return (
-    <svg width={width || "40"} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" sx={style}>
+    <svg width="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" sx={style}>
       <g clipPath="url(#docs-icon)">
         <rect width="40" height="40" rx="20" fill="#FFB300" stroke="#fff" />
         <path
