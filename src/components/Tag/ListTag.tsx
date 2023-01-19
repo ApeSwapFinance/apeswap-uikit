@@ -1,15 +1,16 @@
+/** @jsxImportSource theme-ui */
 import React from "react";
-import { StyledListTag, StyledTagText } from "./styles";
+import { styles } from "./styles";
 import { ListTagProps } from "./types";
+import { Flex } from "../Flex";
 
-const ListTag: React.FC<ListTagProps> = ({ variant, ...props }) => {
-  const asd = "dummy string"
+const ListTag: React.FC<ListTagProps> = ({ variant }) => {
   return (
-    <StyledListTag variant={variant} {...props}>
-      <StyledTagText>
+    <Flex variant={variant} sx={styles.listTagCont({ variant })}>
+      <Flex sx={styles.tagText}>
         {variant} {variant === "new" || variant === "hot" ? null : "LP"}
-      </StyledTagText>
-    </StyledListTag>
+      </Flex>
+    </Flex>
   );
 };
 

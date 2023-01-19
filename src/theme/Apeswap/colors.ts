@@ -36,6 +36,13 @@ const Colors = {
   hoveredYellow: "#FFDA00",
   hoveredSuccess: "#38A611B3",
   hoveredDanger: "#DF4141B3",
+  listTagBg: {
+    ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
+    uni: "rgba(213, 49, 113, 0.8)",
+    ark: "rgba(208, 126, 90, 0.8)",
+    hot: "#DF4141",
+    new: "#38A611",
+  },
   modes: {
     dark: {
       background: "#0B0B0B",
