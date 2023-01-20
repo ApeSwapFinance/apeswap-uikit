@@ -31,7 +31,7 @@ export const StyledTag = styled.div<ThemedProps>`
   }
 `;
 
-export const styles: Record<"listTagCont" | "tagText", (props: { variant?: string }) => ThemeUIStyleObject> = {
+export const styles: Record<"listTagCont" | "tagText", (props: { variant?: any }) => ThemeUIStyleObject> = {
   listTagCont: ({ variant = "ape" }) => ({
     alignItems: "center",
     background: (theme) => theme?.colors?.listTagBg?.[variant],
