@@ -19,6 +19,8 @@ export const baseColors = {
     ark: "rgba(208, 126, 90, 0.8)",
     hot: "#DF4141",
     new: "#38A611",
+    auto: "#DF4141",
+    max: "#38A611",
   },
 };
 

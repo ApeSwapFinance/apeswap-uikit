@@ -26,6 +26,8 @@ export const listTagVariants = {
   ARK: "ark",
   NEW: "new",
   HOT: "hot",
+  AUTO: "auto",
+  MAX: "max",
 } as const;
 
 export type ListTagVariants = typeof listTagVariants[keyof typeof listTagVariants];

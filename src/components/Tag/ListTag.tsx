@@ -8,7 +8,7 @@ const ListTag: React.FC<ListTagProps> = ({ variant }) => {
   return (
     <Flex variant={variant} sx={styles.listTagCont({ variant })}>
       <Flex sx={styles.tagText}>
-        {variant} {variant === "new" || variant === "hot" ? null : "LP"}
+        {variant} {(variant === "ape" || variant === "uni" || variant === "ark") && "LP"}
       </Flex>
     </Flex>
   );
