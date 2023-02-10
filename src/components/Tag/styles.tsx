@@ -1,6 +1,8 @@
+/** @jsxImportSource theme-ui */
 import styled, { DefaultTheme } from "styled-components";
+import { ThemeUIStyleObject } from "theme-ui";
 import getColor from "../../util/getColor";
-import { LpTagProps, TagProps } from "./types";
+import { TagProps } from "./types";
 
 interface ThemedProps extends TagProps {
   theme: DefaultTheme;
@@ -29,23 +31,20 @@ export const StyledTag = styled.div<ThemedProps>`
   }
 `;
 
-interface CustomProps extends LpTagProps {
-  theme: DefaultTheme;
-}
-
-export const StyledLpTag = styled.div<CustomProps>`
-  align-items: center;
-  background: ${({ theme, variant = "ape" }) => theme?.colors?.lpTagBg?.[variant]};
-  border-radius: 6px;
-  display: inline-flex;
-  height: 15px;
-  padding: 0 5px;
-`;
-
-export const StyledLPText = styled.div<{ theme: DefaultTheme }>`
-  color: ${({ theme }) => theme?.colors?.primaryBright};
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 15px;
-`;
+export const styles: Record<"listTagCont" | "tagText", (props: { variant?: any }) => ThemeUIStyleObject> = {
+  listTagCont: ({ variant = "ape" }) => ({
+    alignItems: "center",
+    background: (theme) => theme?.colors?.listTagBg?.[variant],
+    borderRadius: "16px",
+    display: "inline-flex",
+    height: "15px",
+    padding: "0 5px",
+  }),
+  tagText: () => ({
+    color: (theme) => theme?.colors?.primaryBright,
+    textTransform: "uppercase",
+    fontSize: "10px",
+    fontWeight: 600,
+    lineHeight: "15px",
+  }),
+};

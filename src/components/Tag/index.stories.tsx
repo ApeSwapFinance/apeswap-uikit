@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Meta } from "@storybook/react/types-6-0";
 import { CommunityIcon, RemoveIcon } from "../Svg";
 import Tag from "./Tag";
-import { variants } from "./types";
-import LpTag from "./LpTag";
+import { ListTagVariants, listTagVariants, variants } from "./types";
+import ListTag from "./ListTag";
 
 const Row = styled.div`
   display: flex;
@@ -39,9 +39,9 @@ export const Default: React.FC = () => {
         ))}
       </Row>
       <Row>
-        <LpTag variant="ape" />
-        <LpTag variant="uni" />
-        <LpTag variant="ark" />
+        {Object.values(listTagVariants).map((variant: ListTagVariants) => {
+          return <ListTag variant={variant} />;
+        })}
       </Row>
     </>
   );

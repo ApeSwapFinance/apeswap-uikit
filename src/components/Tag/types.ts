@@ -20,14 +20,20 @@ export interface TagProps extends SpaceProps {
   outline?: boolean;
 }
 
-export const lpTagVariants = {
+export const listTagVariants = {
   APE: "ape",
   UNI: "uni",
   ARK: "ark",
+  NEW: "new",
+  HOT: "hot",
+  AUTO: "auto",
+  MAX: "max",
 } as const;
 
-export type LpTagVariants = typeof lpTagVariants[keyof typeof lpTagVariants];
+export type ListTagVariants = typeof listTagVariants[keyof typeof listTagVariants];
 
-export interface LpTagProps extends SpaceProps {
-  variant: LpTagVariants;
+export interface ListTagProps extends SpaceProps {
+  variant: ListTagVariants;
 }
+
+export const lpTags = ["ape", "uni", "ark"];
