@@ -15,7 +15,8 @@ import WalletImage from "./icons/walletImage";
 interface Props {
   login: Login;
   t: (key: string) => string;
-  connectError: boolean;
+  // eslint-disable-next-line react/require-default-props
+  connectError?: boolean;
 }
 
 const modalProps = {
@@ -52,7 +53,7 @@ const variants = {
   },
 };
 
-const ConnectModal: React.FC<Props> = ({ login, t, connectError }) => {
+const ConnectModal: React.FC<Props> = ({ login, t, connectError = false }) => {
   const [open, setOpen] = React.useState(false);
   const showWallets = config.slice(0, 3);
 
