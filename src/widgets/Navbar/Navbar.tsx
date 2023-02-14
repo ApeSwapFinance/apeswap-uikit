@@ -112,6 +112,7 @@ const Navbar: React.FC<NavProps> = ({
   runFiat,
   iframe,
   mailChimpUrl,
+  connectError,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
@@ -260,7 +261,15 @@ const Navbar: React.FC<NavProps> = ({
                 <NetworkButton chainId={chainId} switchNetwork={switchNetwork} t={t} />
               </Flex>
             )}
-            <UserBlock sidName={sidName} uDName={uDName} account={account} login={login} logout={logout} t={t} />
+            <UserBlock
+              sidName={sidName}
+              uDName={uDName}
+              account={account}
+              login={login}
+              logout={logout}
+              t={t}
+              connectError={connectError}
+            />
             {(uDName || sidName || account) && profile && <Avatar profile={profile} />}
             {isMobile && (
               <MenuButton aria-label="Toggle menu" handleClick={() => setIsPushed(!isPushed)}>
