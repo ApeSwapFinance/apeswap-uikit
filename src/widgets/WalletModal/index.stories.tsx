@@ -30,7 +30,7 @@ export const Wallet = (args: any) => {
   );
   useEffect(() => {
     onPresentConnectModal();
-  }, []);
+  }, [onPresentConnectModal]);
 
   return (
     <StorybookLayout {...args}>

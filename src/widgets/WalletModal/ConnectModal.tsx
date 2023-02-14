@@ -165,11 +165,12 @@ const ConnectModal: React.FC<Props> = ({ login, t, connectError }) => {
                     justifyContent: "center",
                     mb: "15px",
                     background: "white4",
-                    fontSize: "16px",
+                    fontSize: ["12px", "12px", "16px"],
                     padding: "0px 24px",
                   }}
                   onClick={() => setOpen(true)}
                 >
+                  <Svg icon="more" />
                   {t("MORE")}
                 </Button>
               </Flex>
