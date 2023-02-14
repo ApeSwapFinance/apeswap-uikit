@@ -112,7 +112,7 @@ const Navbar: React.FC<NavProps> = ({
   runFiat,
   iframe,
   mailChimpUrl,
-  connectError,
+  connectError = false,
 }) => {
   const { isXxl } = useMatchBreakpoints();
   const isMobile = isXxl === false;
