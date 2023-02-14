@@ -8,7 +8,7 @@ import BinanceChain from "./icons/BinanceChain";
 import OntoWallet from "./icons/OntoWallet";
 import Nabox from "./icons/Nabox";
 import SafePalWallet from "./icons/SafePalWallet";
-import TorusWallet from "./icons/SocialLogin";
+import TorusWallet from "./icons/TorusWallet";
 import Coinbase from "./icons/Coinbase";
 import Unstoppable from "./icons/Unstoppable";
 import Bitkeep from "./icons/Bitkeep";
@@ -26,14 +26,14 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: "Social Login",
-    icon: TorusWallet,
-    connectorId: ConnectorNames.Torus,
-  },
-  {
     title: "Brave Wallet",
     icon: Brave,
     connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Social Login",
+    icon: TorusWallet,
+    connectorId: ConnectorNames.Torus,
   },
   {
     title: "WalletConnect",

@@ -9,16 +9,14 @@ import { Context as ModalContext } from "../Modal/ModalContext";
 interface Props {
   walletConfig: Config;
   login: Login;
-  mb: string;
   t: (key: string) => string;
 }
 
-const WalletCard: React.FC<Props> = ({ login, walletConfig, mb, t }) => {
+const WalletCard: React.FC<Props> = ({ login, walletConfig, t }) => {
   const { handleClose } = useContext(ModalContext);
   const { title, icon: Icon } = walletConfig;
   return (
     <Button
-      fullWidth
       variant="tertiary"
       onClick={() => {
         login(walletConfig.connectorId);
@@ -26,25 +24,21 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, mb, t }) => {
         handleClose();
       }}
       sx={{
-        justifyContent: "space-between",
-        border: "0px",
+        width: ["112px", "112px", "128px"],
+        flexDirection: "column",
+        minHeight: ["84px", "84px", "114px"],
+        justifyContent: "center",
+        mb: "15px",
         background: "white4",
         fontSize: "16px",
-        minHeight: "44px",
-        boxShadow: "none",
-        lineHeight: 1,
-        letterSpacing: "0.03em",
-        padding: "0px 24px",
-        opacity: 1,
-        "&:hover": {},
+        padding: "0px 12px",
       }}
-      mb={mb}
       id={`wallet-connect-${t(title)?.toLocaleLowerCase()}`}
     >
-      <Text sx={{ lineHeight: 1.5 }} size="16px" weight={600} color="text" mr="16px">
+      <Icon width="32px" />
+      <Text sx={{ lineHeight: 1.5, mt: "5px" }} size="12px" weight={600} color="text">
         {t(title)}
       </Text>
-      <Icon width="32px" />
     </Button>
   );
 };

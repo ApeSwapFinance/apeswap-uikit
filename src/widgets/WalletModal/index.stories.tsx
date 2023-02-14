@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../../components/Button/Button";
 import Flex from "../../components/Flex/Flex";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
@@ -28,6 +28,10 @@ export const Wallet = (args: any) => {
     "",
     "bbdrape.bnb"
   );
+  useEffect(() => {
+    onPresentConnectModal();
+  }, []);
+
   return (
     <StorybookLayout {...args}>
       <Flex>

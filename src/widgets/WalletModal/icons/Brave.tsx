@@ -4,7 +4,7 @@ import { LegacySvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <LegacySvg width="218px" height="256px" viewBox="0 0 218 256" {...props}>
+    <LegacySvg viewBox="0 0 218 256" {...props}>
       <defs>
         <linearGradient x1="0%" y1="50.7055163%" x2="100%" y2="50.7055163%" id="linearGradient-1">
           <stop stopColor="#FF5500" offset="0%" />
