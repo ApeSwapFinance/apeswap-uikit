@@ -460,7 +460,7 @@ it("renders ConnectModal correctly", () => {
                 class="css-n4ozow-ConnectModal"
               >
                 <button
-                  class="css-asajdc-WalletCard"
+                  class="css-gmxzhi-WalletCard"
                   id="wallet-connect-"
                 >
                   <svg
@@ -599,7 +599,7 @@ it("renders ConnectModal correctly", () => {
                    
                 </button>
                 <button
-                  class="css-asajdc-WalletCard"
+                  class="css-gmxzhi-WalletCard"
                   id="wallet-connect-"
                 >
                   <svg
@@ -639,7 +639,7 @@ it("renders ConnectModal correctly", () => {
                    
                 </button>
                 <button
-                  class="css-asajdc-WalletCard"
+                  class="css-gmxzhi-WalletCard"
                   id="wallet-connect-"
                 >
                   <svg

@@ -24,13 +24,15 @@ export const Wallet = (args: any) => {
     () => null,
     () => null,
     translate,
+    false,
     "0xbdda50183d817c3289f895a4472eb475967dc980",
     "",
     "bbdrape.bnb"
   );
   useEffect(() => {
     onPresentConnectModal();
-  }, [onPresentConnectModal]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <StorybookLayout {...args}>

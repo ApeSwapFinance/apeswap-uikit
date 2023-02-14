@@ -29,6 +29,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, t }) => {
         minHeight: ["84px", "84px", "114px"],
         justifyContent: "center",
         mb: "15px",
+        mr: ["0px", "0px", "15px"],
         background: "white4",
         fontSize: "16px",
         padding: "0px 12px",
