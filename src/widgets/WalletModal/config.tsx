@@ -26,6 +26,31 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
+    title: "Wallet Connect",
+    icon: WalletConnect,
+    connectorId: ConnectorNames.WalletConnect,
+  },
+  {
+    title: "Bitkeep",
+    icon: Bitkeep,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "TokenPocket",
+    icon: TokenPocket,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "SafePal Wallet",
+    icon: SafePalWallet,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "Binance Chain Wallet",
+    icon: BinanceChain,
+    connectorId: ConnectorNames.BSC,
+  },
+  {
     title: "Brave Wallet",
     icon: Brave,
     connectorId: ConnectorNames.Injected,
@@ -36,29 +61,9 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Torus,
   },
   {
-    title: "WalletConnect",
-    icon: WalletConnect,
-    connectorId: ConnectorNames.WalletConnect,
-  },
-  {
-    title: "SafePal Wallet",
-    icon: SafePalWallet,
-    connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "TokenPocket",
-    icon: TokenPocket,
-    connectorId: ConnectorNames.Injected,
-  },
-  {
     title: "Coinbase Wallet",
     icon: Coinbase,
     connectorId: ConnectorNames.Walletlink,
-  },
-  {
-    title: "Binance Chain Wallet",
-    icon: BinanceChain,
-    connectorId: ConnectorNames.BSC,
   },
   {
     title: "Unstoppable Domains",
@@ -73,11 +78,6 @@ const connectors: Config[] = [
   {
     title: "ONTO Wallet",
     icon: OntoWallet,
-    connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "Bitkeep",
-    icon: Bitkeep,
     connectorId: ConnectorNames.Injected,
   },
   {
