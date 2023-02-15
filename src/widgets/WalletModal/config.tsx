@@ -12,6 +12,7 @@ import TorusWallet from "./icons/SocialLogin";
 import Coinbase from "./icons/Coinbase";
 import Unstoppable from "./icons/Unstoppable";
 import Bitkeep from "./icons/Bitkeep";
+import MadWallet from "./icons/MadWallet";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -33,6 +34,11 @@ const connectors: Config[] = [
   {
     title: "Brave Wallet",
     icon: Brave,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "MadWallet",
+    icon: MadWallet,
     connectorId: ConnectorNames.Injected,
   },
   {
