@@ -1,0 +1,122 @@
+import { ThemeUIStyleObject } from "theme-ui";
+
+const styles: Record<
+  | "allWalletsContainer"
+  | "textContainer"
+  | "connectWalletTitle"
+  | "title"
+  | "error"
+  | "cardsContainer"
+  | "prioritizedContainer"
+  | "infoContainer"
+  | "firstStep"
+  | "learnHow"
+  | "buttonsContainer"
+  | "button"
+  | "moreWallets"
+  | "walletName"
+  | "iconContainer",
+  ThemeUIStyleObject
+> = {
+  allWalletsContainer: {
+    flexWrap: "wrap",
+    position: "absolute",
+    width: "100%",
+    maxWidth: ["248px", "248px", "580px"],
+    flexDirection: "column",
+    justifyContent: "space-between",
+    height: ["325px", "325px", "390px"],
+    overflow: "hidden",
+  },
+  textContainer: {
+    width: "100%",
+    flexWrap: "wrap",
+    justifyContent: ["flex-start", "flex-start", "center"],
+  },
+  connectWalletTitle: { width: "100%", justifyContent: ["flex-start", "flex-start", "center"] },
+  title: {
+    fontSize: ["16px", "16px", "25px"],
+    fontWeight: 700,
+    lineHeight: ["24px", "24px", "37.5px"],
+  },
+  error: {
+    fontSize: "12px",
+    fontWeight: 500,
+    color: "error",
+    fontStyle: "italic",
+    lineHeight: "14px",
+  },
+  cardsContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: ["space-between", "space-between", "flex-start"],
+    mt: "15px",
+    mb: "-15px",
+    maxHeight: ["273px", "273px", "335px"],
+    overflowY: "auto",
+    width: ["248px", "248px", "580px"],
+  },
+  prioritizedContainer: {
+    flexWrap: "wrap",
+    position: "absolute",
+    width: "100%",
+    maxWidth: ["248px", "248px", "580px"],
+  },
+  infoContainer: {
+    flexWrap: "wrap",
+    width: ["100%", "100%", "50%"],
+    flexDirection: "column",
+    height: ["132px", "132px", "unset"],
+  },
+  firstStep: {
+    fontSize: ["12px", "12px", "16px"],
+    fontWeight: 500,
+    lineHeight: ["14px", "14px", "24px"],
+  },
+  learnHow: {
+    display: "flex",
+    "&:hover": { textDecoration: "underline" },
+    "& svg": { width: "9px" },
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    minWidth: ["240px", "240px", "580px"],
+    mt: ["15px", "15px", "30px"],
+  },
+  button: {
+    width: ["112px", "112px", "128px"],
+    flexDirection: "column",
+    minHeight: ["84px", "84px", "114px"],
+    justifyContent: "flex-start",
+    mb: "15px",
+    mr: ["5px", "5px", "15px"],
+    padding: "0",
+    background: "white4",
+    fontSize: ["12px", "12px", "16px"],
+  },
+  moreWallets: {
+    background: "textareaColor",
+    borderRadius: "25px",
+    opacity: 0.9,
+    width: ["30px", "30px", "40px"],
+    height: ["30px", "30px", "40px"],
+    alignItems: "flex-start",
+    color: "white1",
+    justifyContent: "center",
+  },
+  walletName: {
+    lineHeight: "18px",
+    mt: "6px",
+    fontSize: ["12px", "12px", "14px"],
+    fontWeight: 700,
+  },
+  iconContainer: {
+    height: ["50px", "50px", "65px"],
+    alignItems: "flex-end",
+    width: ["32px", "32px", "40px"],
+  },
+};
+
+export default styles;

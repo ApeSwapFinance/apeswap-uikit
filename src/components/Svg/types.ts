@@ -67,6 +67,7 @@ export enum icons {
   URL = "URL",
   BUBBLE = "bubble",
   AUDIT = "audit",
+  THREE_DOTS = "threeDots",
 }
 
 export enum directions {

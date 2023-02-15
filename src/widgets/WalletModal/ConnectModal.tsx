@@ -3,7 +3,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "../../components/Link";
 import { Modal, ModalHeader } from "../Modal";
-import WalletCard from "./WalletCard";
+import WalletCard from "./components/WalletCard";
 import config from "./config";
 import { Login } from "./types";
 import { Flex } from "../../components/Flex";
@@ -11,6 +11,8 @@ import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
 import { Svg } from "../../components/Svg";
 import WalletImage from "./icons/walletImage";
+import PrioritizedWallets from "./components/PrioritizedWallets";
+import AllWallets from "./components/AllWallets";
 
 interface Props {
   login: Login;
@@ -53,15 +55,13 @@ const variants = {
 };
 
 const ConnectModal: React.FC<Props> = ({ login, t, connectError }) => {
-  console.log(connectError);
   const [open, setOpen] = React.useState(false);
-  const showWallets = config.slice(0, 3);
 
   return (
     <Modal {...modalProps}>
       <ModalHeader {...{ sx: { height: "24px" } }}>
         {open && (
-          <Flex onClick={() => setOpen(false)}>
+          <Flex onClick={() => setOpen(false)} sx={{ "&:hover": { cursor: "pointer" } }}>
             <Svg icon="caret" direction="left" />
             <Text sx={{ fontWeight: 700, ml: "5px", fontSize: "14px" }}>{t("Back")}</Text>
           </Flex>
@@ -85,147 +85,9 @@ const ConnectModal: React.FC<Props> = ({ login, t, connectError }) => {
           sx={{ width: "100%" }}
         >
           {!open ? (
-            <Flex sx={{ flexWrap: "wrap", position: "absolute", width: "100%", maxWidth: ["240px", "240px", "580px"] }}>
-              <Flex sx={{ flexWrap: "wrap", width: "100%" }}>
-                <Flex sx={{ display: ["none", "none", "flex"] }}>
-                  <WalletImage />
-                </Flex>
-                <Flex
-                  sx={{
-                    flexWrap: "wrap",
-                    width: ["100%", "100%", "50%"],
-                    flexDirection: "column",
-                    height: ["132px", "132px", "unset"],
-                  }}
-                >
-                  <Flex sx={{ width: "100%" }}>
-                    <Text
-                      sx={{
-                        fontSize: ["16px", "16px", "25px"],
-                        fontWeight: 700,
-                        lineHeight: ["24px", "24px", "37.5px"],
-                      }}
-                    >
-                      {t("Connect Wallet")}
-                    </Text>
-                  </Flex>
-                  <Text
-                    sx={{ fontSize: ["12px", "12px", "16px"], fontWeight: 500, lineHeight: ["14px", "14px", "24px"] }}
-                  >
-                    {t(
-                      "Start by connecting with one of the wallets below. Be sure to store your private keys or seed phrase securely. Never share them with anyone."
-                    )}
-                  </Text>
-                  <Text sx={{ fontSize: "12px", fontWeight: 300 }}>
-                    <Link
-                      href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
-                      external
-                      color="text"
-                      sx={{
-                        display: "flex",
-                        "&:hover": { textDecoration: "underline" },
-                        "& svg": { width: "9px" },
-                      }}
-                    >
-                      {t("Learn how to connect")}
-                    </Link>
-                  </Text>
-                  {connectError && (
-                    <Text
-                      sx={{
-                        fontSize: "12px",
-                        fontWeight: 500,
-                        color: "error",
-                        fontStyle: "italic",
-                        lineHeight: "14px",
-                      }}
-                    >
-                      {t("Error: Wallet incompatible with selected chain.")}
-                    </Text>
-                  )}
-                </Flex>
-              </Flex>
-              <Flex
-                sx={{
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  justifyContent: "space-between",
-                  width: ["240px", "240px", "580px"],
-                  mt: ["15px", "15px", "30px"],
-                }}
-              >
-                {showWallets.map((entry) => (
-                  <WalletCard key={entry.title} login={login} walletConfig={entry} t={t} />
-                ))}
-                <Button
-                  variant="tertiary"
-                  sx={{
-                    width: ["112px", "112px", "128px"],
-                    flexDirection: "column",
-                    minHeight: ["84px", "84px", "114px"],
-                    justifyContent: "center",
-                    mb: "15px",
-                    background: "white4",
-                    fontSize: ["12px", "12px", "16px"],
-                    padding: "0px 24px",
-                  }}
-                  onClick={() => setOpen(true)}
-                >
-                  <Svg icon="more" />
-                  {t("MORE")}
-                </Button>
-              </Flex>
-            </Flex>
+            <PrioritizedWallets t={t} connectError={connectError} login={login} setOpen={setOpen} />
           ) : (
-            <Flex
-              sx={{
-                flexWrap: "wrap",
-                position: "absolute",
-                width: "100%",
-                maxWidth: ["240px", "240px", "580px"],
-                flexDirection: "column",
-                justifyContent: "space-between",
-                height: ["325px", "325px", "390px"],
-                overflow: "hidden",
-              }}
-            >
-              <Flex sx={{ width: "100%", flexWrap: "wrap", justifyContent: ["flex-start", "flex-start", "center"] }}>
-                <Flex sx={{ width: "100%", justifyContent: ["flex-start", "flex-start", "center"] }}>
-                  <Text
-                    sx={{
-                      fontSize: ["16px", "16px", "25px"],
-                      fontWeight: 700,
-                      lineHeight: ["24px", "24px", "37.5px"],
-                    }}
-                  >
-                    {t("Connect Wallet")}
-                  </Text>
-                </Flex>
-                {connectError && (
-                  <Text
-                    sx={{ fontSize: "12px", fontWeight: 500, color: "error", fontStyle: "italic", lineHeight: "14px" }}
-                  >
-                    {t("Error: Wallet incompatible with selected chain.")}
-                  </Text>
-                )}
-              </Flex>
-              <Flex
-                sx={{
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  justifyContent: ["space-between", "space-between", "flex-start"],
-                  mt: "15px",
-                  mb: "-15px",
-                  maxHeight: ["273px", "273px", "335px"],
-                  overflowY: "auto",
-                  width: ["240px", "240px", "580px"],
-                }}
-              >
-                {config.map((entry) => (
-                  <WalletCard key={entry.title} login={login} walletConfig={entry} t={t} />
-                ))}
-              </Flex>
-            </Flex>
+            <AllWallets t={t} connectError={connectError} login={login} />
           )}
         </motion.div>
       </AnimatePresence>
