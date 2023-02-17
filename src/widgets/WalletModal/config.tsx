@@ -13,6 +13,7 @@ import Coinbase from "./icons/Coinbase";
 import Unstoppable from "./icons/Unstoppable";
 import Bitkeep from "./icons/Bitkeep";
 import { Config, ConnectorNames } from "./types";
+import OKX from "./icons/OKX";
 
 const connectors: Config[] = [
   {
@@ -83,6 +84,11 @@ const connectors: Config[] = [
   {
     title: "MathWallet",
     icon: MathWallet,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "OKX Wallet",
+    icon: OKX,
     connectorId: ConnectorNames.Injected,
   },
 ];

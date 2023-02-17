@@ -31,7 +31,9 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, t }) => {
       <Flex sx={styles.iconContainer}>
         <Icon width="100%" />
       </Flex>
-      <Text sx={styles.walletName}>{t(title)}</Text>
+      <Flex sx={{ height: ["39px", "39px", "49px"], alignItems: "center" }}>
+        <Text sx={styles.walletName}>{t(title)}</Text>
+      </Flex>
     </Button>
   );
 };

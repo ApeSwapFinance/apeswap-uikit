@@ -53,12 +53,14 @@ const PrioritizedWallets = ({ login, t, connectError, setOpen }: Props) => {
           <WalletCard key={entry.title} login={login} walletConfig={entry} t={t} />
         ))}
         <Button variant="tertiary" sx={styles.button} onClick={() => setOpen(true)}>
-          <Flex sx={{ height: ["50px", "50px", "65px"], alignItems: "flex-end" }}>
+          <Flex sx={{ height: ["45px", "45px", "65px"], alignItems: "flex-end" }}>
             <Flex sx={styles.moreWallets}>
-              <Flex sx={{ lineHeight: ["24px", "24px", "33px"], fontWeight: [700, 700, 900] }}>. . .</Flex>
+              <Flex sx={{ lineHeight: ["24px", "24px", "40px"], fontWeight: [700, 700, 900] }}>. . .</Flex>
             </Flex>
           </Flex>
-          <Text sx={styles.walletName}>{t("MORE")}</Text>
+          <Flex sx={{ height: ["39px", "39px", "49px"], alignItems: "center" }}>
+            <Text sx={styles.walletName}>{t("MORE")}</Text>
+          </Flex>
         </Button>
       </Flex>
     </Flex>
