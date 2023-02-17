@@ -460,11 +460,11 @@ it("renders ConnectModal correctly", () => {
                 class="css-1wgf5ji-PrioritizedWallets"
               >
                 <button
-                  class="css-clu8l3-WalletCard"
+                  class="css-jesf3g-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
-                    class="css-1ydleti-WalletCard"
+                    class="css-mjyeuz-WalletCard"
                   >
                     <svg
                       class="sc-bdfBQB kA-DbXw"
@@ -597,17 +597,21 @@ it("renders ConnectModal correctly", () => {
                       />
                     </svg>
                   </div>
-                  <span
-                    class="css-ojmvxc-WalletCard"
-                  />
+                  <div
+                    class="css-bqpbpy-WalletCard"
+                  >
+                    <span
+                      class="css-1ctf3cz-WalletCard"
+                    />
+                  </div>
                    
                 </button>
                 <button
-                  class="css-clu8l3-WalletCard"
+                  class="css-jesf3g-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
-                    class="css-1ydleti-WalletCard"
+                    class="css-mjyeuz-WalletCard"
                   >
                     <svg
                       class="sc-bdfBQB kA-DbXw"
@@ -641,17 +645,21 @@ it("renders ConnectModal correctly", () => {
                       </defs>
                     </svg>
                   </div>
-                  <span
-                    class="css-ojmvxc-WalletCard"
-                  />
+                  <div
+                    class="css-bqpbpy-WalletCard"
+                  >
+                    <span
+                      class="css-1ctf3cz-WalletCard"
+                    />
+                  </div>
                    
                 </button>
                 <button
-                  class="css-clu8l3-WalletCard"
+                  class="css-jesf3g-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
-                    class="css-1ydleti-WalletCard"
+                    class="css-mjyeuz-WalletCard"
                   >
                     <svg
                       class="sc-bdfBQB kA-DbXw"
@@ -670,30 +678,38 @@ it("renders ConnectModal correctly", () => {
                       />
                     </svg>
                   </div>
-                  <span
-                    class="css-ojmvxc-WalletCard"
-                  />
+                  <div
+                    class="css-bqpbpy-WalletCard"
+                  >
+                    <span
+                      class="css-1ctf3cz-WalletCard"
+                    />
+                  </div>
                    
                 </button>
                 <button
-                  class="css-130lwyq-PrioritizedWallets"
+                  class="css-wgcide-PrioritizedWallets"
                 >
                   <div
-                    class="css-iq0afh-PrioritizedWallets"
+                    class="css-1gmq74l-PrioritizedWallets"
                   >
                     <div
-                      class="css-19n9gsn-PrioritizedWallets"
+                      class="css-1ghckj5-PrioritizedWallets"
                     >
                       <div
-                        class="css-wp0kel-PrioritizedWallets"
+                        class="css-jtcp69-PrioritizedWallets"
                       >
                         . . .
                       </div>
                     </div>
                   </div>
-                  <span
-                    class="css-1cq9yfe-PrioritizedWallets"
-                  />
+                  <div
+                    class="css-9ie454-PrioritizedWallets"
+                  >
+                    <span
+                      class="css-dbb8u1-PrioritizedWallets"
+                    />
+                  </div>
                    
                 </button>
               </div>
