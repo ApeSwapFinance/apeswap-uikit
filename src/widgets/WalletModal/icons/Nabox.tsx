@@ -1,27 +1,31 @@
 import React from "react";
-import LegacySvg from "../../../components/Svg/LegacySvg";
 import { LegacySvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <LegacySvg viewBox="-13 -35 240 268" {...props}>
-      <defs>
-        <style>{".prefix__cls-1{fill:#2ac98b;fill-rule:evenodd}"}</style>
-      </defs>
-      <title>Nabox</title>
-      <g id="prefix__\u56FE\u5C42_2" data-name="\u56FE\u5C42 2">
-        <g id="prefix__\u56FE\u5C42_1-2" data-name="\u56FE\u5C42 1">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      id="Capa_1"
+      x="0px"
+      y="0px"
+      viewBox="0 0 50 56"
+      xmlSpace="preserve"
+      fill="#2AC98B"
+      {...props}
+    >
+      <circle cx="25" cy="28" r="25" fill="#FFFFFF" />
+      <g id="prefix_x5F__x5F__x5C_u56FE_x5C_u5C42_x5F_2">
+        <g id="prefix_x5F__x5F__x5C_u56FE_x5C_u5C42_x5F_1-2">
+          <path className="st1" d="M6.3,18.7v19.8l5.7,3.3V27.6l5.7,3.3v14.2l5.7,3.3V28.6L6.3,18.7z" />
           <path
-            className="prefix__cls-1"
-            d="M0 64.12v106.34l30.79 17.75v-76.07l30.68 17.72v76.02l30.8 17.75V117.28L0 64.12z"
-          />
-          <path
-            className="prefix__cls-1"
-            d="M69.94 54.39l30.85-18.08 38.33 22.43-30.83 18zM100.83 0l-93 54.41 100.29 58.8v115.11l30.42-17.72V94.15l30.74-18V192.5l30.87-18.17V58.11z"
+            fill="#2AC98B"
+            d="M19.4,16.8l5.8-3.4l7.2,4.2L26.5,21L19.4,16.8z M25.1,6.7L7.8,16.8l18.7,11v21.5l5.7-3.3V24.3l5.7-3.4v21.7    l5.8-3.4V17.5L25.1,6.7z"
           />
         </g>
       </g>
-    </LegacySvg>
+    </svg>
   );
 };
 

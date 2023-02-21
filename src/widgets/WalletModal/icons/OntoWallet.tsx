@@ -1,26 +1,31 @@
 import React from "react";
-import LegacySvg from "../../../components/Svg/LegacySvg";
 import { LegacySvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <LegacySvg viewBox="-3 0 32 32" {...props}>
-      <title>{"\u7F16\u7EC4"}</title>
-      <g id="\u9875\u9762-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-        <g id="ONTO-Landing-Page" transform="translate(-48.000000, -53.000000)" stroke="#000000" strokeWidth={3}>
-          <g id="\u7F16\u7EC4" transform="translate(50.000000, 57.000000)">
-            <path
-              d="M3.14572653,3.565339 L3.14572653,3.565339 L0,0.420257608 L0,11.1571295 C0,13.9054947 1.04857551,16.6532371 3.14572653,18.7495428 C7.3406516,22.9427771 14.141751,22.9427771 18.336676,18.7495428 L3.14572653,3.565339 Z"
-              id="Fill-11\u5907\u4EFD"
-            />
-            <path
-              d="M18.1336247,18.3291295 L18.1336247,18.3291295 L21.2793512,21.4735881 L21.2793512,10.7367162 C21.2793512,7.98897381 20.2307757,5.24123142 18.1336247,3.14492569 C13.9386996,-1.04830856 7.13760023,-1.04830856 2.94267516,3.14492569 L18.1336247,18.3291295 Z"
-              id="Fill-12\u5907\u4EFD"
-            />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      id="Capa_1"
+      x="0px"
+      y="0px"
+      viewBox="0 0 50 50"
+      xmlSpace="preserve"
+      {...props}
+    >
+      <circle cx="25" cy="25" r="25" fill="#FFFFFF" />
+      <g id="ONTO-Landing-Page" transform="translate(-48.000000, -53.000000)">
+        <g id="_x5C_u7F16_x5C_u7EC4" transform="translate(50.000000, 57.000000)">
+          <g id="Fill-11_x5C_u5907_x5C_u4EFD">
+            <path d="M23.1,36c-3.8,0-7.6-1.4-10.5-4.3c-2.8-2.8-4.3-6.5-4.3-10.5V3.9l26.5,26.5l-1.3,1.3C30.7,34.6,26.9,36,23.1,36z      M12,12.7v8.6c0,3,1.2,5.8,3.3,7.9c3.9,3.9,10,4.3,14.4,1.2L12,12.7z" />
+          </g>
+          <g id="Fill-12_x5C_u5907_x5C_u4EFD">
+            <path d="M37.7,38.1L11.1,11.6l1.3-1.3c5.8-5.8,15.2-5.8,20.9,0c2.8,2.8,4.3,6.5,4.3,10.5V38.1z M16.4,11.7L34,29.3v-8.6     c0-3-1.2-5.8-3.3-7.9C26.9,8.9,20.7,8.5,16.4,11.7z" />
           </g>
         </g>
       </g>
-    </LegacySvg>
+    </svg>
   );
 };
 
