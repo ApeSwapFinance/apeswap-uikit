@@ -13,19 +13,10 @@ interface Props {
   login: Login;
   logout: () => void;
   t: (key: string) => string;
-  connectError: boolean;
 }
 
-const UserBlock: React.FC<Props> = ({ sidName, uDName, account, login, logout, t, connectError }) => {
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
-    login,
-    logout,
-    t,
-    connectError,
-    account,
-    uDName,
-    sidName
-  );
+const UserBlock: React.FC<Props> = ({ sidName, uDName, account, login, logout, t }) => {
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, t, account, uDName, sidName);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   const { isXs } = useMatchBreakpoints();
 

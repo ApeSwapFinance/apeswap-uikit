@@ -1,23 +1,17 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "../../components/Link";
 import { Modal, ModalHeader } from "../Modal";
-import WalletCard from "./components/WalletCard";
-import config from "./config";
 import { Login } from "./types";
 import { Flex } from "../../components/Flex";
 import { Text } from "../../components/Text";
-import { Button } from "../../components/Button";
 import { Svg } from "../../components/Svg";
-import WalletImage from "./icons/walletImage";
 import PrioritizedWallets from "./components/PrioritizedWallets";
 import AllWallets from "./components/AllWallets";
 
 interface Props {
   login: Login;
   t: (key: string) => string;
-  connectError: boolean;
 }
 
 const modalProps = {
@@ -54,7 +48,7 @@ const variants = {
   },
 };
 
-const ConnectModal: React.FC<Props> = ({ login, t, connectError }) => {
+const ConnectModal: React.FC<Props> = ({ login, t }) => {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -84,11 +78,7 @@ const ConnectModal: React.FC<Props> = ({ login, t, connectError }) => {
           dragElastic={1}
           sx={{ width: "100%" }}
         >
-          {!open ? (
-            <PrioritizedWallets t={t} connectError={connectError} login={login} setOpen={setOpen} />
-          ) : (
-            <AllWallets t={t} connectError={connectError} login={login} />
-          )}
+          {!open ? <PrioritizedWallets t={t} login={login} setOpen={setOpen} /> : <AllWallets t={t} login={login} />}
         </motion.div>
       </AnimatePresence>
     </Modal>

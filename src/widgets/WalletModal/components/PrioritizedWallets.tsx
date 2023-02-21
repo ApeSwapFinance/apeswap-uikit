@@ -13,11 +13,10 @@ import styles from "./styles";
 interface Props {
   login: Login;
   t: (key: string) => string;
-  connectError: boolean;
   setOpen: (open: boolean) => void;
 }
 
-const PrioritizedWallets = ({ login, t, connectError, setOpen }: Props) => {
+const PrioritizedWallets = ({ login, t, setOpen }: Props) => {
   const showWallets = config.slice(0, 3);
 
   return (
@@ -45,7 +44,6 @@ const PrioritizedWallets = ({ login, t, connectError, setOpen }: Props) => {
               {t("Learn how to connect")}
             </Link>
           </Text>
-          {connectError && <Text sx={styles.error}>{t("Error: Wallet incompatible with selected chain.")}</Text>}
         </Flex>
       </Flex>
       <Flex sx={styles.buttonsContainer}>

@@ -4,7 +4,7 @@ import { LegacySvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <LegacySvg viewBox="0 0 200.17 228.32" {...props}>
+    <LegacySvg viewBox="-13 -35 240 268" {...props}>
       <defs>
         <style>{".prefix__cls-1{fill:#2ac98b;fill-rule:evenodd}"}</style>
       </defs>

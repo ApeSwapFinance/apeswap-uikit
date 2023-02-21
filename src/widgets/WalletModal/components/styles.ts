@@ -5,7 +5,6 @@ const styles: Record<
   | "textContainer"
   | "connectWalletTitle"
   | "title"
-  | "error"
   | "cardsContainer"
   | "prioritizedContainer"
   | "infoContainer"
@@ -39,20 +38,13 @@ const styles: Record<
     fontWeight: 700,
     lineHeight: ["24px", "24px", "37.5px"],
   },
-  error: {
-    fontSize: "12px",
-    fontWeight: 500,
-    color: "error",
-    fontStyle: "italic",
-    lineHeight: "14px",
-  },
   cardsContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: ["space-between", "space-between", "flex-start"],
     mt: "15px",
     mb: "-15px",
-    maxHeight: ["273px", "273px", "335px"],
+    maxHeight: ["300px", "300px", "348px"],
     overflowY: "auto",
     width: ["240px", "240px", "580px"],
   },
@@ -67,6 +59,7 @@ const styles: Record<
     width: ["100%", "100%", "50%"],
     flexDirection: "column",
     height: ["132px", "132px", "unset"],
+    justifyContent: ["space-between", "space-between", "flex-start"],
   },
   firstStep: {
     fontSize: ["12px", "12px", "16px"],
@@ -93,7 +86,7 @@ const styles: Record<
     mb: "15px",
     mr: ["5px", "5px", "15px"],
     padding: "0 9px",
-    background: "white4",
+    background: "white3",
     fontSize: ["12px", "12px", "16px"],
   },
   moreWallets: {

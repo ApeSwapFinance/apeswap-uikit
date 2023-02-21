@@ -22,7 +22,7 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 it("renders ConnectModal correctly", () => {
-  const { asFragment } = renderWithTheme(<ConnectModal login={noop} t={() => ""} connectError={false} />);
+  const { asFragment } = renderWithTheme(<ConnectModal login={noop} t={() => ""} />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
@@ -415,7 +415,7 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                 </div>
                 <div
-                  class="css-1n181v9-PrioritizedWallets"
+                  class="css-mzvcn1-PrioritizedWallets"
                 >
                   <div
                     class="css-n6iki8-PrioritizedWallets"
@@ -460,7 +460,7 @@ it("renders ConnectModal correctly", () => {
                 class="css-1wgf5ji-PrioritizedWallets"
               >
                 <button
-                  class="css-jesf3g-WalletCard"
+                  class="css-74dhh8-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
@@ -607,7 +607,7 @@ it("renders ConnectModal correctly", () => {
                    
                 </button>
                 <button
-                  class="css-jesf3g-WalletCard"
+                  class="css-74dhh8-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
@@ -655,7 +655,7 @@ it("renders ConnectModal correctly", () => {
                    
                 </button>
                 <button
-                  class="css-jesf3g-WalletCard"
+                  class="css-74dhh8-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
@@ -688,7 +688,7 @@ it("renders ConnectModal correctly", () => {
                    
                 </button>
                 <button
-                  class="css-wgcide-PrioritizedWallets"
+                  class="css-1ybs5pz-PrioritizedWallets"
                 >
                   <div
                     class="css-1gmq74l-PrioritizedWallets"

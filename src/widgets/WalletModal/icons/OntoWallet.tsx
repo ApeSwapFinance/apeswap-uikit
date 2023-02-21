@@ -4,7 +4,7 @@ import { LegacySvgProps } from "../../../components/Svg/types";
 
 const Icon: React.FC<LegacySvgProps> = (props) => {
   return (
-    <LegacySvg viewBox="0 0 32 32" {...props}>
+    <LegacySvg viewBox="-3 0 32 32" {...props}>
       <title>{"\u7F16\u7EC4"}</title>
       <g id="\u9875\u9762-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
         <g id="ONTO-Landing-Page" transform="translate(-48.000000, -53.000000)" stroke="#000000" strokeWidth={3}>

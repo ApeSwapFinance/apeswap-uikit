@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import React, { useEffect } from "react";
+import React from "react";
 import Button from "../../components/Button/Button";
 import Flex from "../../components/Flex/Flex";
 import StorybookLayout from "../../components/StorybookLayout/StorybookLayout";
@@ -24,16 +24,10 @@ export const Wallet = (args: any) => {
     () => null,
     () => null,
     translate,
-    false,
     "0xbdda50183d817c3289f895a4472eb475967dc980",
     "",
     "bbdrape.bnb"
   );
-  useEffect(() => {
-    onPresentConnectModal();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <StorybookLayout {...args}>
       <Flex>

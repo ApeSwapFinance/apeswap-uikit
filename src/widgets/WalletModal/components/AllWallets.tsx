@@ -10,17 +10,15 @@ import styles from "./styles";
 interface Props {
   login: Login;
   t: (key: string) => string;
-  connectError: boolean;
 }
 
-const AllWallets = ({ login, t, connectError }: Props) => {
+const AllWallets = ({ login, t }: Props) => {
   return (
     <Flex sx={styles.allWalletsContainer}>
       <Flex sx={styles.textContainer}>
         <Flex sx={styles.connectWalletTitle}>
           <Text sx={styles.title}>{t("Connect Wallet")}</Text>
         </Flex>
-        {connectError && <Text sx={styles.error}> {t("Error: Wallet incompatible with selected chain.")} </Text>}
       </Flex>
       <Flex sx={styles.cardsContainer}>
         {config.map((entry) => (

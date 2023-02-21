@@ -81,5 +81,4 @@ export interface NavProps extends PanelProps {
   uDName?: string;
   sidName?: string;
   liveResult?: LiveResultProps["apiResult"] | undefined;
-  connectError?: boolean;
 }
