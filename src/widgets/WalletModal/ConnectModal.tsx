@@ -8,6 +8,7 @@ import { Text } from "../../components/Text";
 import { Svg } from "../../components/Svg";
 import PrioritizedWallets from "./components/PrioritizedWallets";
 import AllWallets from "./components/AllWallets";
+import styles from "./components/styles";
 
 interface Props {
   login: Login;
@@ -18,11 +19,12 @@ const modalProps = {
   sx: {
     zIndex: 11,
     maxHeight: "calc(100% - 30px)",
-    height: ["395px", "395px", "455px"],
+    height: ["395px", "395px", "470px"],
     width: ["280px", "280px", "620px"],
     maxWidth: ["280px", "280px", "620px"],
     minWidth: ["unset", "unset", "620px"],
     overflow: "hidden",
+    padding: ["20px", "20px", "30px"],
     "& hr": { display: "none" },
   },
 };
@@ -55,9 +57,12 @@ const ConnectModal: React.FC<Props> = ({ login, t }) => {
     <Modal {...modalProps}>
       <ModalHeader {...{ sx: { height: "24px" } }}>
         {open && (
-          <Flex onClick={() => setOpen(false)} sx={{ "&:hover": { cursor: "pointer" } }}>
-            <Svg icon="caret" direction="left" />
-            <Text sx={{ fontWeight: 700, ml: "5px", fontSize: "14px" }}>{t("Back")}</Text>
+          <Flex sx={{ width: "100%" }}>
+            <Flex onClick={() => setOpen(false)} sx={{ "&:hover": { cursor: "pointer" } }}>
+              <Svg icon="caret" direction="left" />
+              <Text sx={{ fontWeight: 700, ml: "5px", fontSize: "14px" }}>{t("Back")}</Text>
+            </Flex>
+            <Text sx={styles.smallTitle}>{t("Connect Wallet")}</Text>
           </Flex>
         )}
       </ModalHeader>

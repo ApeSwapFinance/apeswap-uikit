@@ -15,11 +15,6 @@ interface Props {
 const AllWallets = ({ login, t }: Props) => {
   return (
     <Flex sx={styles.allWalletsContainer}>
-      <Flex sx={styles.textContainer}>
-        <Flex sx={styles.connectWalletTitle}>
-          <Text sx={styles.title}>{t("Connect Wallet")}</Text>
-        </Flex>
-      </Flex>
       <Flex sx={styles.cardsContainer}>
         {config.map((entry) => (
           <WalletCard key={entry.title} login={login} walletConfig={entry} t={t} />

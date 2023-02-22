@@ -50,7 +50,16 @@ const PrioritizedWallets = ({ login, t, setOpen }: Props) => {
         {showWallets.map((entry) => (
           <WalletCard key={entry.title} login={login} walletConfig={entry} t={t} />
         ))}
-        <Button variant="tertiary" sx={styles.button} onClick={() => setOpen(true)}>
+        <Button
+          sx={{
+            ...styles.button,
+            background: "white4",
+            "&:hover": { background: "white3" },
+            border: "none",
+            "&:hover:not([disabled])": { background: "white3" },
+          }}
+          onClick={() => setOpen(true)}
+        >
           <Flex sx={{ height: ["45px", "45px", "65px"], alignItems: "flex-end" }}>
             <Flex sx={styles.moreWallets}>
               <Flex sx={{ lineHeight: ["24px", "24px", "40px"], fontWeight: [700, 700, 900] }}>. . .</Flex>
