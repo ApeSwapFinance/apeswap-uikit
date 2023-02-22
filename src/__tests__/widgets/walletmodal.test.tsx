@@ -29,7 +29,7 @@ it("renders ConnectModal correctly", () => {
         class="css-vurnku"
       >
         <div
-          class="css-vio4i1-ConnectModal"
+          class="css-1bnw8pr-ConnectModal"
           style="opacity: 0; transform: translate(-50%, -50%) scale(0.1);"
         >
           <div
@@ -63,7 +63,7 @@ it("renders ConnectModal correctly", () => {
             style="z-index: 1; opacity: 1; transform: none; user-select: none;"
           >
             <div
-              class="css-1g7mmo7-PrioritizedWallets"
+              class="css-1mer14e-PrioritizedWallets"
             >
               <div
                 class="css-jqjmc4-PrioritizedWallets"
@@ -415,23 +415,23 @@ it("renders ConnectModal correctly", () => {
                   </svg>
                 </div>
                 <div
-                  class="css-mzvcn1-PrioritizedWallets"
+                  class="css-1n181v9-PrioritizedWallets"
                 >
                   <div
                     class="css-n6iki8-PrioritizedWallets"
                   >
                     <span
-                      class="css-1j05u5i-PrioritizedWallets"
+                      class="css-khg6ty-PrioritizedWallets"
                     />
                   </div>
                   <span
-                    class="css-2gthg2-PrioritizedWallets"
+                    class="css-vaw65n-PrioritizedWallets"
                   />
                   <span
                     class="css-1oz7vix-PrioritizedWallets"
                   >
                     <a
-                      class="css-hr8nmr-PrioritizedWallets"
+                      class="css-1d4fqck-PrioritizedWallets"
                       href="https://apeswap.gitbook.io/apeswap-finance/product-and-features/wallets/how-to-connect-your-wallet"
                       rel="noreferrer noopener"
                       target="_blank"
@@ -457,10 +457,10 @@ it("renders ConnectModal correctly", () => {
                 </div>
               </div>
               <div
-                class="css-1wgf5ji-PrioritizedWallets"
+                class="css-299i8w-PrioritizedWallets"
               >
                 <button
-                  class="css-74dhh8-WalletCard"
+                  class="css-eo2p4d-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
@@ -601,13 +601,13 @@ it("renders ConnectModal correctly", () => {
                     class="css-bqpbpy-WalletCard"
                   >
                     <span
-                      class="css-1ctf3cz-WalletCard"
+                      class="css-3syr6r-WalletCard"
                     />
                   </div>
                    
                 </button>
                 <button
-                  class="css-74dhh8-WalletCard"
+                  class="css-eo2p4d-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
@@ -649,13 +649,13 @@ it("renders ConnectModal correctly", () => {
                     class="css-bqpbpy-WalletCard"
                   >
                     <span
-                      class="css-1ctf3cz-WalletCard"
+                      class="css-3syr6r-WalletCard"
                     />
                   </div>
                    
                 </button>
                 <button
-                  class="css-74dhh8-WalletCard"
+                  class="css-eo2p4d-WalletCard"
                   id="wallet-connect-"
                 >
                   <div
@@ -682,13 +682,13 @@ it("renders ConnectModal correctly", () => {
                     class="css-bqpbpy-WalletCard"
                   >
                     <span
-                      class="css-1ctf3cz-WalletCard"
+                      class="css-3syr6r-WalletCard"
                     />
                   </div>
                    
                 </button>
                 <button
-                  class="css-1ybs5pz-PrioritizedWallets"
+                  class="css-1sxa8e5-PrioritizedWallets"
                 >
                   <div
                     class="css-1gmq74l-PrioritizedWallets"
@@ -707,7 +707,7 @@ it("renders ConnectModal correctly", () => {
                     class="css-9ie454-PrioritizedWallets"
                   >
                     <span
-                      class="css-dbb8u1-PrioritizedWallets"
+                      class="css-o8cjgx-PrioritizedWallets"
                     />
                   </div>
                    
