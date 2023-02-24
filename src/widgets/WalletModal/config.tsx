@@ -14,6 +14,7 @@ import Unstoppable from "./icons/Unstoppable";
 import Bitkeep from "./icons/Bitkeep";
 import { Config, ConnectorNames } from "./types";
 import OKX from "./icons/OKX";
+import MadWallet from "./icons/MadWallet";
 
 const connectors: Config[] = [
   {
@@ -89,6 +90,11 @@ const connectors: Config[] = [
   {
     title: "OKX Wallet",
     icon: OKX,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "MadWallet",
+    icon: MadWallet,
     connectorId: ConnectorNames.Injected,
   },
 ];

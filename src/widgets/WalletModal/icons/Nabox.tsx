@@ -10,7 +10,7 @@ const Icon: React.FC<LegacySvgProps> = (props) => {
       id="Capa_1"
       x="0px"
       y="0px"
-      viewBox="0 0 50 56"
+      viewBox="0 0 50 53"
       xmlSpace="preserve"
       fill="#2AC98B"
       {...props}
