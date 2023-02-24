@@ -1,7 +1,7 @@
 import React from "react";
-import { LegacySvgProps } from "../../../components/Svg/types";
+import { SvgProps } from "../types";
 
-const Icon: React.FC<LegacySvgProps> = (props) => {
+const Icon: React.FC<SvgProps> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

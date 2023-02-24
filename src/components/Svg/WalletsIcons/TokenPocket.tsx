@@ -1,7 +1,7 @@
 import React from "react";
-import { LegacySvgProps } from "../../../components/Svg/types";
+import { SvgProps } from "../types";
 
-const Icon: React.FC<LegacySvgProps> = (props) => {
+const Icon: React.FC<SvgProps> = (props) => {
   return (
     <svg viewBox="0 0 32 32" {...props}>
       <rect width="32" height="32" fill="url(#pattern1)" rx="16" />

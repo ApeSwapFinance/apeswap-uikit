@@ -1,6 +1,3 @@
-import { SVGAttributes } from "react";
-import { DefaultTheme } from "styled-components";
-import { SpaceProps } from "styled-system";
 import { colorProps } from "../../theme/Apeswap/types";
 
 export enum icons {
@@ -80,11 +77,6 @@ export enum directions {
 export type iconTypes = `${icons}`;
 type directionTypes = `${directions}`;
 
-export interface LegacySvgProps extends SVGAttributes<HTMLOrSVGElement>, SpaceProps {
-  theme?: DefaultTheme;
-  spin?: boolean;
-  bgColor?: string;
-}
 export interface SvgProps {
   icon?: iconTypes;
   direction?: directionTypes;

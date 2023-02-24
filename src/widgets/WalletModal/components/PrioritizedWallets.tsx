@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
 import { Flex } from "../../../components/Flex";
-import WalletImage from "../icons/walletImage";
+import WalletImage from "../../../components/Svg/WalletsIcons/walletImage";
 import { Text } from "../../../components/Text";
 import { Link } from "../../../components/Link";
 import WalletCard from "./WalletCard";

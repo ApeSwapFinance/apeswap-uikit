@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
 
-const WalletImage = () => {
+const WalletImage: React.FC = () => {
   return (
     <svg width="270" height="246" viewBox="0 0 270 246" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_287_6404)">
