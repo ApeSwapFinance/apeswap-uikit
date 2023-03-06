@@ -26,7 +26,7 @@ const NetworkButton: React.FC<Props> = ({ chainId, switchNetwork, t, supportedCh
         onPresentNetworkModal();
       }}
     >
-      <Icon />
+      <Icon width="22px" />
       <Text color="text" variant="sm" weight="normal" sx={{ marginLeft: "8px" }}>
         {NETWORK_LABEL[chainId]}
       </Text>

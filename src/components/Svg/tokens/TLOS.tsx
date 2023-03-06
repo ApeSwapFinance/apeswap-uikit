@@ -1,30 +1,34 @@
 import React from "react";
 import { SvgProps } from "../types";
 
-const TLOS: React.FC<SvgProps> = ({ width }) => {
+const TLOS: React.FC<SvgProps> = (props) => {
   return (
-    <svg width={width || "25"} viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="57" cy="57" r="57" fill="url(#paint0_linear)" />
-      <g filter="url(#filter0_i)">
-        <circle cx="57" cy="57" r="57" fill="url(#paint1_linear)" />
-      </g>
-      <circle cx="57" cy="57" r="56.4062" stroke="url(#paint2_linear)" strokeOpacity="0.12" strokeWidth="1.1875" />
-      <g filter="url(#filter1_di)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" {...props}>
+      <g clipPath="url(#clip0_1295_45629)">
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M78.1902 29.5337C78.432 28.9047 77.9953 28.2215 77.323 28.1769L65.9858 27.425C65.6353 27.4018 65.2984 27.5641 65.0981 27.8526L62.0942 32.1799C61.9062 32.4508 61.5966 32.6116 61.2669 32.6097L41.3099 32.4919C40.3307 32.4861 39.3835 32.8397 38.6476 33.4856L33.1104 38.3457C31.8784 39.427 31.4309 41.1507 31.9812 42.6948L34.6187 50.0948C34.6322 50.133 34.6258 50.1754 34.6014 50.2077V50.2077C33.1195 52.1776 32.258 54.5443 32.1266 57.0059L32.0819 57.8444C31.8028 63.0749 32.4187 68.3138 33.9037 73.337C35.1274 77.4764 36.5298 82.2203 37.3894 85.128C37.8429 86.6621 39.4098 87.5672 40.9653 87.1936C44.3144 86.3893 50.0664 85.0074 54.5963 83.9167C58.5798 82.9575 62.3674 81.3222 65.8017 79.0873L67.9506 77.6889C70.0167 76.3444 71.6355 74.4149 72.6006 72.1465V72.1465C72.6164 72.1093 72.6499 72.0825 72.6897 72.0752L80.4171 70.6592C82.0295 70.3638 83.2984 69.1144 83.6189 67.5068L85.0593 60.2814C85.2508 59.3211 85.0833 58.324 84.5887 57.4789L75.2139 41.4603C74.5997 40.4109 74.4962 39.139 74.9327 38.0041L78.1902 29.5337Z"
-          stroke="white"
-          strokeWidth="5.5"
+          d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+          fill="url(#paint0_linear_1295_45629)"
         />
+        <g filter="url(#filter0_i_1295_45629)">
+          <path
+            d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+            fill="url(#paint1_linear_1295_45629)"
+          />
+        </g>
+        <g filter="url(#filter1_di_1295_45629)">
+          <path
+            d="M11.3 25.5C10.5 25.5 9.8 25 9.5 24.2C9.4 23.9 9.3 23.5 9.2 23.1C8.6 21 7.8 18.5 8 16.2C8 15.4 8.2 14.7 8.6 14L8 12.3C7.7 11.5 8 10.6 8.6 10L10.2 8.60004C10.6 8.30004 11.1 8.10004 11.6 8.10004H16.8L17.4 7.20004C17.7 6.80004 18.1 6.60004 18.5 6.70004L21.7 6.90004C22.1 6.90004 22.5 7.10004 22.7 7.50004C22.9 7.90004 23 8.30004 22.8 8.60004L22 11V11.1L24.6 15.6C25.1 16.3 24.9 17.3 24.6 18.3C24.5 18.6 24.5 18.8 24.4 19.1C24.2 20 23.6 20.7 22.7 20.8L21 21.1C20.6 21.8 19.8 22.5 18.9 23C17.4 24.1 15.2 24.6 13.3 25C12.7 25.1 12.2 25.3 11.7 25.4C11.6 25.5 11.5 25.5 11.3 25.5ZM11.6 10.1L10 11.5C10 11.5 9.9 11.6 10 11.6L10.9 14.2L10.6 14.6C10.3 15 10 15.6 10 16.2V16.3V16.4C9.8 18.3 10.5 20.7 11.1 22.6C11.2 22.9 11.3 23.2 11.4 23.6C11.9 23.5 12.4 23.4 12.9 23.2C14.6 22.8 16.6 22.4 17.9 21.5C18.7 21 19.3 20.5 19.5 20L19.7 19.5L22.4 19C22.4 19 22.5 19 22.5 18.9C22.5 18.7 22.6 18.4 22.7 18C22.8 17.7 22.9 17 22.9 16.8L20.3 12.3C20 11.7 19.9 11.1 20.2 10.5L20.8 9.00004L19 8.90004L18.4 9.80004C18.2 10.1 17.8 10.4 17.3 10.4L11.6 10.1Z"
+            fill="white"
+          />
+        </g>
       </g>
       <defs>
         <filter
-          id="filter0_i"
+          id="filter0_i_1295_45629"
           x="-9.5"
           y="0"
-          width="123.5"
-          height="114"
+          width="41.5"
+          height="32"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
@@ -40,14 +44,14 @@ const TLOS: React.FC<SvgProps> = ({ width }) => {
           <feGaussianBlur stdDeviation="4.75" />
           <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
           <feColorMatrix type="matrix" values="0 0 0 0 0.682353 0 0 0 0 0.45098 0 0 0 0 0.980392 0 0 0 0.56 0" />
-          <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1295_45629" />
         </filter>
         <filter
-          id="filter1_di"
-          x="28.0378"
-          y="24.1923"
-          width="60.8097"
-          height="67.2773"
+          id="filter1_di_1295_45629"
+          x="6.92133"
+          y="6.19407"
+          width="18.9442"
+          height="20.7475"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
@@ -61,8 +65,8 @@ const TLOS: React.FC<SvgProps> = ({ width }) => {
           <feOffset dy="0.480491" />
           <feGaussianBlur stdDeviation="0.480491" />
           <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
-          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1295_45629" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1295_45629" result="shape" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -73,20 +77,19 @@ const TLOS: React.FC<SvgProps> = ({ width }) => {
           <feGaussianBlur stdDeviation="0.480491" />
           <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
           <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
-          <feBlend mode="normal" in2="shape" result="effect2_innerShadow" />
+          <feBlend mode="normal" in2="shape" result="effect2_innerShadow_1295_45629" />
         </filter>
-        <linearGradient id="paint0_linear" x1="57" y1="0" x2="57" y2="114" gradientUnits="userSpaceOnUse">
+        <linearGradient id="paint0_linear_1295_45629" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
           <stop stopColor="#130C3F" />
           <stop offset="1" stopColor="#15197B" />
         </linearGradient>
-        <linearGradient id="paint1_linear" x1="0" y1="57" x2="114" y2="57" gradientUnits="userSpaceOnUse">
+        <linearGradient id="paint1_linear_1295_45629" x1="0" y1="16" x2="32" y2="16" gradientUnits="userSpaceOnUse">
           <stop stopColor="#AE73FA" />
           <stop offset="1" stopColor="#AE73FA" stopOpacity="0" />
         </linearGradient>
-        <linearGradient id="paint2_linear" x1="114" y1="57" x2="-1.66555e-06" y2="57" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#AE73FA" />
-          <stop offset="1" stopColor="#AE73FA" stopOpacity="0" />
-        </linearGradient>
+        <clipPath id="clip0_1295_45629">
+          <rect width="32" height="32" fill="white" />
+        </clipPath>
       </defs>
     </svg>
   );

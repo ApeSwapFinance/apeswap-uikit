@@ -2,6 +2,7 @@ import { ETH as ETHIcon, TLOS as TLOSIcon } from "../../components/Svg/tokens";
 import BinanceChain from "./icons/BinanceChain";
 import PolygonChain from "./icons/PolygonChain";
 import { Config } from "./types";
+import ARBITRUMIcon from "../../components/Svg/tokens/ARBITRUM";
 
 export enum ChainId {
   BSC = 56,
@@ -20,7 +21,7 @@ export const NETWORK_ICON: { [key: number]: any } = {
   [ChainId.MATIC_TESTNET]: PolygonChain,
   [ChainId.ETH]: ETHIcon,
   [ChainId.TLOS]: TLOSIcon,
-  [ChainId.ARBITRUM]: ETHIcon,
+  [ChainId.ARBITRUM]: ARBITRUMIcon,
 };
 
 export const NETWORK_LABEL: { [key: number]: any } = {

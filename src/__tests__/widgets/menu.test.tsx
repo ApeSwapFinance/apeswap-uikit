@@ -511,7 +511,7 @@ it("renders correctly", () => {
                       class="sc-gsTEea fQWPxo"
                       color="text"
                       viewBox="0 0 96 96"
-                      width="20px"
+                      width="22px"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <circle
@@ -863,7 +863,7 @@ it("renders correctly", () => {
                     class="sc-gsTEea fQWPxo"
                     color="text"
                     viewBox="0 0 96 96"
-                    width="20px"
+                    width="22px"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <circle
