@@ -10,7 +10,8 @@ const POLYGON: React.FC<SvgProps> = (props) => {
         fill="white"
       />
       <rect x="1" y="1.5" width="28" height="28" rx="14" stroke="#FAFAFA" strokeWidth="2" />
-    </svg>  );
+    </svg>
+  );
 };
 
 export default POLYGON;
