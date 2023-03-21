@@ -50,7 +50,7 @@ const Colors = {
     c2: "#EFEDE3",
     c3: "#F5F2E9",
     cShadow: "0 0 200px rgba(240, 237, 231)",
-    hideCircles: "-10px 0px 190px 170px #FDFBF5",
+    hideCircles: "-10px 100px 190px 170px #FDFBF5",
     title: "linear-gradient(286.95deg, rgba(255, 179, 0, 0.6) 33.2%, rgba(0, 0, 0, 0) 112.36%), #4E3F3F",
   },
   modes: {
