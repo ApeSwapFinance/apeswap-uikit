@@ -60,6 +60,7 @@ import {
   Audit,
 } from "./Icons";
 import { BSC, BANANA, BNB, ETH, GNANA, POLYGON, TLOS } from "./tokens";
+import { BINANCE_CHAIN, POLYGON_CHAIN, ARBITRUM_CHAIN } from "./Chains";
 import { IconStyles } from "./Icons/types";
 
 const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
@@ -191,6 +192,15 @@ const Svg: React.FC<SvgProps> = ({ icon, ...props }: any) => {
   }
   if (icon === icons.ETH_TOKEN) {
     return <ETH {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.ARBITRUM_CHAIN) {
+    return <ARBITRUM_CHAIN {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.BINANCE_CHAIN) {
+    return <BINANCE_CHAIN {...props} getStyles={getStyles} />;
+  }
+  if (icon === icons.POLYGON_CHAIN) {
+    return <POLYGON_CHAIN {...props} getStyles={getStyles} />;
   }
   if (icon === icons.GNANA_TOKEN) {
     return <GNANA {...props} getStyles={getStyles} />;
