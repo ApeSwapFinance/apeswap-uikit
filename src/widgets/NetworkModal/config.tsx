@@ -2,7 +2,7 @@ import { ETH as ETHIcon, TLOS as TLOSIcon } from "../../components/Svg/tokens";
 import BinanceChain from "./icons/BinanceChain";
 import PolygonChain from "./icons/PolygonChain";
 import { Config } from "./types";
-import ARBITRUMIcon from "../../components/Svg/tokens/ARBITRUM";
+import ARBITRUMIcon from "../../components/Svg/Chains/ARBITRUM";
 
 export enum ChainId {
   BSC = 56,
