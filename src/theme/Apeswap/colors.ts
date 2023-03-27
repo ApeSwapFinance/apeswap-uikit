@@ -83,7 +83,7 @@ const Colors = {
         c2: "#161616",
         c3: "#141312",
         cShadow: "0 0 200px rgb(19 18 17)",
-        hideCircles: "-10px 0px 190px 170px #0B0B0B",
+        hideCircles: "-40px 0px 50px 80px #0B0B0B",
         title: "linear-gradient(286.95deg, rgba(255, 179, 0, 0.6) 33.2%, rgba(0, 0, 0, 0) 112.36%), #FAFAFA",
       },
     },
