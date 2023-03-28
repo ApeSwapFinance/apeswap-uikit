@@ -45,6 +45,14 @@ const Colors = {
     auto: "#DF4141",
     max: "#38A611",
   },
+  home: {
+    c1: "#ece8de",
+    c2: "#EFEDE3",
+    c3: "#F5F2E9",
+    cShadow: "0 0 200px rgba(240, 237, 231)",
+    hideCircles: "-40px 0px 50px 80px #FDFBF5",
+    title: "linear-gradient(286.95deg, rgba(255, 179, 0, 0.6) 33.2%, rgba(0, 0, 0, 0) 112.36%), #4E3F3F",
+  },
   modes: {
     dark: {
       background: "#0B0B0B",
@@ -70,6 +78,14 @@ const Colors = {
       navMenuLogo: "#5E5E5E",
       input: "#FAFAFA",
       footer: "#0B0B0B",
+      home: {
+        c1: "#1c1c1c",
+        c2: "#161616",
+        c3: "#141312",
+        cShadow: "0 0 200px rgb(19 18 17)",
+        hideCircles: "-40px 0px 50px 80px #0B0B0B",
+        title: "linear-gradient(286.95deg, rgba(255, 179, 0, 0.6) 33.2%, rgba(0, 0, 0, 0) 112.36%), #FAFAFA",
+      },
     },
   },
 };
