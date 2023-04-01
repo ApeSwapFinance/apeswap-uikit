@@ -13,7 +13,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isNewsModal, t }) => {
   const subscribe = async (formData: { [x: string]: any }) => {
     const client = mailjet.apiConnect(mailjetApiKey, mailjetSecretKey);
 
-    console.log(formData.EMAIL)
+    console.log(formData.EMAIL);
 
     try {
       const contact = await client.post("contact", { version: "v3" }).request({
