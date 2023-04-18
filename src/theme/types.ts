@@ -62,6 +62,7 @@ export type Colors = {
   yellowHover: string;
   input: string;
   listTagBg: ListTagColors;
+  listTagTextColor?: ListTagTextColors;
 
   // Gradients
   gradients?: Gradients;
@@ -83,6 +84,15 @@ export type ListTagColors = {
   ape: string;
   uni: string;
   ark: string;
+  launch: string;
+  liquidity: string;
+  reserve: string;
   hot: string;
   new: string;
+};
+
+export type ListTagTextColors = {
+  launch: string;
+  liquidity: string;
+  reserve: string;
 };

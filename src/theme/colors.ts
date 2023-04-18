@@ -13,10 +13,18 @@ export const baseColors = {
   inputBorder: "#E6DECB",
   brown: "#A16552",
   smartGradient: "linear-gradient(94.44deg, #BA801E -9.73%, #E7CF67 40.14%, #BA801E 93.01%)",
+  listTagTextColor: {
+    launch: "#D53131",
+    reserve: "#276810",
+    liquidity: "#1955AF",
+  },
   listTagBg: {
     ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
     uni: "rgba(213, 49, 113, 0.8)",
     ark: "rgba(208, 126, 90, 0.8)",
+    launch: "rgba(233, 195, 195, 1)",
+    reserve: "rgba(90, 208, 109, 0.2)",
+    liquidity: "rgba(60, 106, 181, 0.19)",
     hot: "#DF4141",
     new: "#38A611",
     auto: "#DF4141",
