@@ -45,7 +45,7 @@ const Colors = {
     ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
     uni: "rgba(213, 49, 113, 0.8)",
     ark: "rgba(208, 126, 90, 0.8)",
-    launch: "rgba(233, 195, 195, 1)",
+    launch: "rgba(213, 49, 49, 0.2)",
     reserve: "rgba(90, 208, 109, 0.2)",
     liquidity: "rgba(60, 106, 181, 0.19)",
     hot: "#DF4141",
