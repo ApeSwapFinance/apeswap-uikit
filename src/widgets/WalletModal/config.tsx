@@ -15,6 +15,7 @@ import Bitkeep from "../../components/Svg/WalletsIcons/Bitkeep";
 import OKX from "../../components/Svg/WalletsIcons/OKX";
 import MadWallet from "../../components/Svg/WalletsIcons/MadWallet";
 import { Config, ConnectorNames } from "./types";
+import BlockWallet from "../../components/Svg/WalletsIcons/BlockWallet";
 
 const connectors: Config[] = [
   {
@@ -95,6 +96,11 @@ const connectors: Config[] = [
   {
     title: "MadWallet",
     icon: MadWallet,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "BlockWallet",
+    icon: BlockWallet,
     connectorId: ConnectorNames.Injected,
   },
 ];
