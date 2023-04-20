@@ -15,7 +15,7 @@ export const baseColors = {
   smartGradient: "linear-gradient(94.44deg, #BA801E -9.73%, #E7CF67 40.14%, #BA801E 93.01%)",
   listTagTextColor: {
     launch: "#D53131",
-    reserve: "#276810",
+    reserve: "#60974C",
     liquidity: "#1955AF",
   },
   listTagBg: {

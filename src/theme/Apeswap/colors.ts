@@ -38,8 +38,8 @@ const Colors = {
   hoveredDanger: "#DF4141B3",
   listTagTextColor: {
     launch: "#D53131",
-    reserve: "#276810",
-    liquidity: "#1955AF",
+    reserve: "#60974C",
+    liquidity: "#3B78D3",
   },
   listTagBg: {
     ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
