@@ -26,6 +26,7 @@ const langs: Language[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, langua
 const translate: (key: string) => string = (key) => key;
 const track: TrackHandler =
   // eslint-disable-next-line no-empty-pattern
+
     ({}: TrackProps) =>
     () => ({});
 const mcLink = "";
@@ -37,7 +38,7 @@ export const Connected: React.FC = (args: any) => {
     {
       id: 1,
       settings: [
-        { id: 1, label: "Raise", settings: [{ id: 1, tag: "LIVE", navItem: "Official IAO" }] },
+        { id: 1, label: "Raise", settings: [{ id: 1, tag: "LIVE", navItem: "Bonds" }] },
         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
         { id: 3, label: "Explore", settings: [{ id: 1, tag: "LIVE", navItem: "ApeStats" }] },
       ],
@@ -104,7 +105,7 @@ export const NotConnected: React.FC = () => {
     {
       id: 1,
       settings: [
-        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Bonds" }] },
         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
       ],
       published_at: "2022-04-11T18:15:41.981Z",
@@ -198,7 +199,7 @@ export const WithNoProfile: React.FC = () => {
     {
       id: 1,
       settings: [
-        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Bonds" }] },
         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
       ],
       published_at: "2022-04-11T18:15:41.981Z",
@@ -262,7 +263,7 @@ export const WithProfile: React.FC = () => {
     {
       id: 1,
       settings: [
-        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Official IAO" }] },
+        { id: 1, label: "Raise", settings: [{ id: 1, tag: "NOT", navItem: "Bonds" }] },
         { id: 2, label: "Collect", settings: [{ id: 2, tag: "LIVE", navItem: "NFA Auction" }] },
       ],
       published_at: "2022-04-11T18:15:41.981Z",
