@@ -44,8 +44,8 @@ export const links: MenuEntry[] = [
     darkIcon: "OfferingsDarkImage",
     items: [
       {
-        label: "Treasury Bills",
-        href: "/treasury-bills",
+        label: "Bonds",
+        href: "/bonds",
         isNew: false,
       },
       {

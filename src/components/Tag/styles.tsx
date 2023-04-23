@@ -35,13 +35,16 @@ export const styles: Record<"listTagCont" | "tagText", (props: { variant?: any }
   listTagCont: ({ variant = "ape" }) => ({
     alignItems: "center",
     background: (theme) => theme?.colors?.listTagBg?.[variant],
-    borderRadius: "16px",
+    borderRadius: "3px",
     display: "inline-flex",
     height: "15px",
     padding: "0 5px",
   }),
-  tagText: () => ({
-    color: (theme) => theme?.colors?.primaryBright,
+  tagText: ({ variant = "ape" }) => ({
+    color: (theme) =>
+      theme?.colors?.listTagTextColor?.[variant]
+        ? theme?.colors?.listTagTextColor?.[variant]
+        : theme?.colors?.primaryBright,
     textTransform: "uppercase",
     fontSize: "10px",
     fontWeight: 600,

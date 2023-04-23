@@ -36,10 +36,18 @@ const Colors = {
   hoveredYellow: "#FFDA00",
   hoveredSuccess: "#38A611B3",
   hoveredDanger: "#DF4141B3",
+  listTagTextColor: {
+    launch: "#D53131",
+    reserve: "#60974C",
+    liquidity: "#3B78D3",
+  },
   listTagBg: {
     ape: "linear-gradient(99.09deg, rgba(161, 101, 82, 0.8) 0%, rgba(255, 179, 0, 0.8) 106.96%)",
     uni: "rgba(213, 49, 113, 0.8)",
     ark: "rgba(208, 126, 90, 0.8)",
+    launch: "rgba(213, 49, 49, 0.2)",
+    reserve: "rgba(90, 208, 109, 0.2)",
+    liquidity: "rgba(60, 106, 181, 0.19)",
     hot: "#DF4141",
     new: "#38A611",
     auto: "#DF4141",

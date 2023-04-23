@@ -7,7 +7,7 @@ import { Flex } from "../Flex";
 const ListTag: React.FC<ListTagProps> = ({ variant }) => {
   return (
     <Flex variant={variant} sx={styles.listTagCont({ variant })}>
-      <Flex sx={styles.tagText}>
+      <Flex sx={styles.tagText({ variant })}>
         {variant} {lpTags.includes(variant) && "LP"}
       </Flex>
     </Flex>
