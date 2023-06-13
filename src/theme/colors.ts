@@ -29,7 +29,7 @@ export const baseColors = {
     new: "#38A611",
     auto: "#DF4141",
     max: "#38A611",
-    yield: "#F0B90B",
+    real_yield: "#F0B90B",
   },
 };
 

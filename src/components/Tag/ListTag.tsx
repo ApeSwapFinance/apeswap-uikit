@@ -8,7 +8,7 @@ const ListTag: React.FC<ListTagProps> = ({ variant }) => {
   return (
     <Flex variant={variant} sx={styles.listTagCont({ variant })}>
       <Flex sx={styles.tagText({ variant })}>
-        {variant} {lpTags.includes(variant) && "LP"}
+        {variant.replace("_", " ")} {lpTags.includes(variant) && "LP"}
       </Flex>
     </Flex>
   );
