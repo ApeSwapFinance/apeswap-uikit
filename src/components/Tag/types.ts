@@ -31,6 +31,7 @@ export const listTagVariants = {
   HOT: "hot",
   AUTO: "auto",
   MAX: "max",
+  yield: "yield",
 } as const;
 
 export type ListTagVariants = typeof listTagVariants[keyof typeof listTagVariants];

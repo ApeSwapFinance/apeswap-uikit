@@ -52,6 +52,7 @@ const Colors = {
     new: "#38A611",
     auto: "#DF4141",
     max: "#38A611",
+    yield: "#F0B90B",
   },
   home: {
     c1: "#ece8de",
