@@ -38,19 +38,19 @@ export const engageLinks = [
 
 export const learnLinks = [
   {
-    label: "Docs",
-    href: "https://apeswap.gitbook.io/apeswap-finance/welcome/master",
+    label: "Telos",
+    href: "https://legacy.apeswap.finance?chain=40",
   },
   {
-    label: "Merch",
-    href: "https://apeswap-unofficial.creator-spring.com/",
+    label: "Maximizers",
+    href: "https://legacy.apeswap.finance/maximizers",
   },
   {
-    label: "ApeTV Podcast",
-    href: "https://open.spotify.com/show/4nFre3hez2RKPCqkX7CZBa",
+    label: "IAO",
+    href: "https://legacy.apeswap.finance/iao",
   },
   {
-    label: "Github",
-    href: "https://github.com/ApeSwapFinance/",
+    label: "Migration",
+    href: "https://legacy.apeswap.finance/the-migration",
   },
 ];
