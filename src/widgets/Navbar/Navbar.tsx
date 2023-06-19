@@ -175,7 +175,7 @@ const Navbar: React.FC<NavProps> = ({
             isPushed={isPushed}
             togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
             isDark={isDark}
-            href={homeLink?.href ?? "/"}
+            href={homeLink?.href ?? "https://apeswap.finance/"}
           />
           {!isMobile && (
             <Flex sx={styles.rightMenu}>

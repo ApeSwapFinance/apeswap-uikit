@@ -1,6 +1,6 @@
 {
   "name": "@ape.swap/uikit",
-  "version": "1.3.62",
+  "version": "1.3.63",
   "description": "Set of UI components for apeswap projects",
   "main": "dist/index.cjs.js",
   "resolutions": {
@@ -16,7 +16,7 @@
   "scripts": {
     "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",

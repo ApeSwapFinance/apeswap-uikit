@@ -63,7 +63,7 @@ it("renders correctly", () => {
             <a
               aria-label="Apeswap home page"
               class="sc-hKgJUU dKlpup"
-              href="/"
+              href="https://apeswap.finance/"
             >
               <svg
                 class="sc-gsTEea fQWPxo"
