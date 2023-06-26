@@ -48,14 +48,29 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
+    title: "Binance Chain Wallet",
+    icon: BinanceChain,
+    connectorId: ConnectorNames.BSC,
+  },
+  {
     title: "Brave Wallet",
     icon: Brave,
     connectorId: ConnectorNames.Injected,
   },
   {
+    title: "Social Login",
+    icon: TorusWallet,
+    connectorId: ConnectorNames.Torus,
+  },
+  {
     title: "Coinbase Wallet",
     icon: Coinbase,
     connectorId: ConnectorNames.Walletlink,
+  },
+  {
+    title: "Unstoppable Domains",
+    icon: Unstoppable,
+    connectorId: ConnectorNames.Unstoppable,
   },
   {
     title: "NABOX Wallet",
