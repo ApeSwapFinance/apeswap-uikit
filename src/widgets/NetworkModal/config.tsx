@@ -47,12 +47,12 @@ const networks: Config[] = [
     symbol: NETWORK_LABEL[ChainId.MATIC],
     icon: NETWORK_ICON[ChainId.MATIC],
   },
-  // {
-  //   chainId: ChainId.TLOS,
-  //   networkName: "Telos",
-  //   symbol: NETWORK_LABEL[ChainId.TLOS],
-  //   icon: NETWORK_ICON[ChainId.TLOS],
-  // },
+  {
+    chainId: ChainId.TLOS,
+    networkName: "Telos",
+    symbol: NETWORK_LABEL[ChainId.TLOS],
+    icon: NETWORK_ICON[ChainId.TLOS],
+  },
   {
     chainId: ChainId.ETH,
     networkName: "Ethereum",

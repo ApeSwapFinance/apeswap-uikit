@@ -3,7 +3,6 @@ import Brave from "../../components/Svg/WalletsIcons/Brave";
 import MathWallet from "../../components/Svg/WalletsIcons/MathWallet";
 import TokenPocket from "../../components/Svg/WalletsIcons/TokenPocket";
 import TrustWallet from "../../components/Svg/WalletsIcons/TrustWallet";
-import WalletConnect from "../../components/Svg/WalletsIcons/WalletConnect";
 import BinanceChain from "../../components/Svg/WalletsIcons/BinanceChain";
 import OntoWallet from "../../components/Svg/WalletsIcons/OntoWallet";
 import Nabox from "../../components/Svg/WalletsIcons/Nabox";
@@ -26,11 +25,6 @@ const connectors: Config[] = [
     title: "TrustWallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
-  },
-  {
-    title: "Wallet Connect",
-    icon: WalletConnect,
-    connectorId: ConnectorNames.WalletConnect,
   },
   {
     title: "Bitkeep",
