@@ -33,7 +33,7 @@ const SelectNetworkModal: React.FC<Props> = ({ switchNetwork, chainId, t, onDism
       ))}
       <Flex sx={styles.bridge}>
         <a
-          href="https://app.multichain.org/#/router"
+          href="https://jumper.exchange/"
           target="_blank"
           rel="noopener noreferrer"
           style={{
